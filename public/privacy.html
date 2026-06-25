@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Wendygo Studio</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ink: #13151a; --surf: #1c1f26; --line: #2e343f; --text: #e7e9ee; --muted: #8b93a3; --amber: #e8a33d; --r: 9px; --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--ink); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .updated { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+    h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--amber); }
+    p { margin-bottom: 16px; color: var(--text); }
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { display: inline-block; margin-bottom: 32px; font-size: 14px; }
+    footer { text-align: center; font-size: 13px; color: var(--muted); padding: 24px; border-top: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Back to Wendygo Studio</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 21, 2026</p>
+
+    <h2>Who we are</h2>
+    <p>Wendygo Studio is an independent software publisher based in Tenerife, Canary Islands, Spain. We build browser extensions for productivity and content creation. Contact: <a href="mailto:wendygostudio@gmail.com">wendygostudio@gmail.com</a>.</p>
+
+    <h2>Data we collect</h2>
+    <p><strong>None.</strong> Our extensions (TextForge, FrameForge, ScrubForge) process all data entirely within your browser. No text, images, configurations, or personal information is sent to any server controlled by us, collected, stored, or shared — ever.</p>
+
+    <h2>Local storage</h2>
+    <p>Our extensions may use your browser's local storage (<code>localStorage</code> or <code>chrome.storage.local</code>) to save your preferences (language, theme), custom dictionaries, and, if you activate a paid license, your license key. ScrubForge also stores the API keys you provide for third-party AI providers (see "AI provider connections" below). All of this data stays on your device and is never transmitted to us.</p>
+
+    <h2>License validation</h2>
+    <p>If you purchase a paid license, the extension contacts our payment provider's API to validate your license key. This request contains only your license key and an instance identifier — no personal data, no browsing history, no content from the extension. Our payment providers are Lemon Squeezy (<a href="https://www.lemonsqueezy.com" target="_blank" rel="noopener">lemonsqueezy.com</a>) for TextForge and FrameForge, and Creem (<a href="https://www.creem.io" target="_blank" rel="noopener">creem.io</a>) for ScrubForge. Each acts as Merchant of Record for its respective products; their own privacy policies govern the purchase transaction.</p>
+
+    <h2>AI provider connections (ScrubForge only)</h2>
+    <p>ScrubForge uses a "Bring Your Own Key" (BYOK) model. When you provide an API key for a third-party AI provider (such as Anthropic, OpenAI, Google, Groq, or Mistral), the extension sends your <strong>sanitized</strong> configuration data directly from your browser to that provider's API. The original, unsanitized data never leaves your browser. We do not proxy, intercept, log, or store any of these API calls. Your relationship with the AI provider is governed by their terms and privacy policy. You can remove your API key at any time from the extension settings.</p>
+
+    <h2>Analytics and tracking</h2>
+    <p>We do not use any analytics, tracking pixels, cookies, or telemetry in our extensions or on this website.</p>
+
+    <h2>Third-party services</h2>
+    <p>TextForge and FrameForge do not integrate with any third-party services other than the license validation API described above. ScrubForge additionally connects to the AI provider you configure (see "AI provider connections" above), but only with sanitized data and only when you explicitly send a query. None of our extensions inject scripts into web pages, read your browsing history, or access data outside the extension interface.</p>
+
+    <h2>Permissions</h2>
+    <p>TextForge requests zero browser permissions beyond the default popup. FrameForge requests zero browser permissions. ScrubForge requests only the <code>storage</code> permission to persist your preferences, API keys, and custom dictionary locally via <code>chrome.storage.local</code>. If you activate a paid license, TextForge and FrameForge request host permission only for <code>api.lemonsqueezy.com</code> to validate the key; ScrubForge requests host permission only for <code>api.creem.io</code>.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Our extensions are general-purpose tools and are not directed at children under 13. We do not knowingly collect any data from anyone, including children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we update this policy, we will revise the "Last updated" date above. Since we collect no data, changes are unlikely to be material.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this policy, email us at <a href="mailto:wendygostudio@gmail.com">wendygostudio@gmail.com</a>.</p>
+  </div>
+  <footer>Wendygo Studio &middot; Tenerife, Canary Islands</footer>
+</body>
+</html>

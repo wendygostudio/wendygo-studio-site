@@ -16,10 +16,17 @@
   </url>
 
   <url>
-    <loc>https://wendygostudio.com/blog/how-to-take-full-page-screenshot-chrome/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://wendygostudio.com/privacy.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/terms.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
