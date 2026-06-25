@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Resize an Image for YouTube Thumbnails in Your Browser — Wendygo Studio</title>
+  <meta name="description" content="Resize any image to YouTube's required 1280×720 px without Photoshop or uploading to a server — using FrameForge, a free Chrome extension." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Resize an Image for YouTube Thumbnails",
+    "description": "Resize any image to the YouTube thumbnail standard (1280×720 px) using FrameForge Chrome extension.",
+    "tool": [{ "@type": "HowToTool", "name": "FrameForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install FrameForge",
+        "text": "Install FrameForge from the Chrome Web Store and pin the icon to your toolbar."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open your source image",
+        "text": "Click the FrameForge icon to open the extension, then click Open image or drag-and-drop your file onto the canvas."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Select the YouTube Thumbnail preset",
+        "text": "In the Platform dropdown, select YouTube Thumbnail. The canvas snaps to 1280×720 px with 16:9 ratio locked."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Position the crop",
+        "text": "Drag the crop overlay to frame the most important part of your image — typically the subject's face or the main visual."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Export",
+        "text": "Click Export to save the resized 1280×720 image to your Downloads folder."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    /* Specs table */
+    .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+
+    /* Step cards */
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* Tips list */
+    .tips { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .tips li {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .tips li strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* Fill options */
+    .fill-options { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .fill-option {
+      padding: 14px 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .fill-option-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .fill-option-rec { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+    .fill-option p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#privacy">Privacy</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to resize images for YouTube thumbnails
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide · FrameForge</div>
+      <h1>How to Resize an Image for YouTube Thumbnails Directly in Your Browser</h1>
+      <p class="article-intro">
+        YouTube's 1280×720 px requirement catches creators off guard. Here's how to hit the right dimensions instantly — without Photoshop and without uploading your image to a third-party server.
+      </p>
+      <div class="article-date">June 25, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>You've finished editing your video, written the title, and you're about to hit publish — then YouTube rejects your thumbnail because it's the wrong size. Or it accepts the file but crops it awkwardly, cutting off your subject's face or the text you spent time on.</p>
+
+      <p>YouTube thumbnails have a specific requirement: <strong>1280×720 pixels</strong>, 16:9 aspect ratio, under 2 MB. Most source images don't match: smartphone photos are portrait (9:16), screenshots vary by monitor resolution, stock images come in every shape imaginable.</p>
+
+      <p>The usual fix is opening Photoshop, creating a new 1280×720 document, pasting the image in, adjusting the crop, and exporting. Five to eight steps for a task that should take thirty seconds. There's a faster way that also keeps your images off third-party servers.</p>
+
+      <h2>YouTube Thumbnail Specifications</h2>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Property</th><th>Requirement</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Resolution</td><td>1280×720 px (minimum 640×360)</td></tr>
+          <tr><td>Aspect ratio</td><td>16:9</td></tr>
+          <tr><td>File format</td><td>JPG, GIF, BMP, or PNG</td></tr>
+          <tr><td>Max file size</td><td>2 MB</td></tr>
+          <tr><td>Safe zone</td><td>Keep important elements away from the bottom-right corner — YouTube overlays the video duration there</td></tr>
+        </tbody>
+      </table>
+
+      <p>The 640×360 minimum will look blurry on modern displays — always target 1280×720. Anything you put in the bottom-right corner of your thumbnail will be covered by YouTube's timestamp label in search results, so keep faces and text away from that area.</p>
+
+      <h2>Why a Browser Extension Beats Uploading</h2>
+
+      <p>Web tools like Canva and Photopea work, but they upload your image to a remote server. For client thumbnails, proprietary screenshots, or anything you'd rather not share with a third party, that's a real concern. There's also the latency — large files on slow connections can take a while.</p>
+
+      <p><strong>FrameForge processes images entirely in your browser.</strong> Nothing leaves your machine. No account required, no upload, no waiting for a remote server. Open the extension, load the image, resize, download.</p>
+
+      <h2>Step-by-Step: Resize for YouTube with FrameForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Install FrameForge</div>
+            <div class="step-desc">Install FrameForge from the Chrome Web Store. After installation, pin the icon to your toolbar from the Extensions menu so it's always one click away.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Open your source image</div>
+            <div class="step-desc">Click the FrameForge icon to open the extension. Click <strong>Open image</strong> and select your file, or drag-and-drop directly onto the canvas. Supports JPG, PNG, WebP, and most common formats.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Select the YouTube Thumbnail preset</div>
+            <div class="step-desc">In the <strong>Platform</strong> dropdown, select <strong>YouTube Thumbnail</strong>. The canvas immediately snaps to 1280×720 px with the 16:9 ratio locked — no manual dimension entry required.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Position the crop</div>
+            <div class="step-desc">Drag the crop overlay to frame the part of your image you want. For portrait photos, center over your subject's face or the main visual element. For landscape images, fine-tune to keep key details in frame.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Export</div>
+            <div class="step-desc">Click <strong>Export</strong>. FrameForge saves the resized file to your Downloads folder at exactly 1280×720 px, ready to upload directly to YouTube.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Handling Portrait and Non-Standard Images</h2>
+
+      <p>Portrait images — vertical phone photos, 9:16 video stills — are the most common source of frustration when making thumbnails. When you force a 9:16 image into a 16:9 frame, you have three options:</p>
+
+      <div class="fill-options">
+        <div class="fill-option">
+          <div class="fill-option-rec">Recommended</div>
+          <div class="fill-option-label">Crop to fill</div>
+          <p>The frame is completely filled, but some of the image is cropped off the top and bottom. Usually the right choice — drag the crop overlay to keep your subject centered and important details in frame.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Fit with padding</div>
+          <p>The entire image is visible, but you get bars on the left and right (letterboxing). Can look unpolished unless the padding color is a deliberate design choice.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Stretch to fill</div>
+          <p>Distorts the image horizontally to fill the frame. Almost always looks bad. Avoid unless you specifically want the distortion as an effect.</p>
+        </div>
+      </div>
+
+      <p>FrameForge lets you switch between fill modes before exporting so you can compare all three and pick the one that looks best for your specific image.</p>
+
+      <h2>Thumbnail Quality Tips</h2>
+
+      <p>Getting the dimensions right is the technical requirement. Getting clicks is a different challenge. A few things that reliably move the needle:</p>
+
+      <ul class="tips">
+        <li>
+          <strong>Use a face</strong>
+          YouTube's own research confirms that thumbnails featuring visible human faces get more engagement on average. If your video features a person, make their face prominent and expressive.
+        </li>
+        <li>
+          <strong>High contrast</strong>
+          Your thumbnail competes with dozens of others in a grid. A bright subject on a dark background — or vice versa — stands out more than a flat, midrange composition.
+        </li>
+        <li>
+          <strong>Readable text</strong>
+          If you add text, keep it to 3–5 words. Test readability at small size: if it's hard to read at 200×112 px, the text is too small or too light. Bold, high-contrast fonts work best.
+        </li>
+        <li>
+          <strong>Avoid the bottom-right corner</strong>
+          YouTube's timestamp overlay lives there. Faces, text, and key visuals placed in that corner will be partially covered in search results.
+        </li>
+        <li>
+          <strong>Visual consistency</strong>
+          A recognizable style across your thumbnails — consistent colors, fonts, and composition — makes your channel identifiable in subscription feeds and search results.
+        </li>
+      </ul>
+
+      <h2>Resizing for Multiple Platforms</h2>
+
+      <p>If you cross-post content to Instagram, Twitch, or X, you can use FrameForge to resize the same source image to different platform dimensions without leaving the extension. It includes presets for the major platforms, so you're not entering dimensions manually for each one.</p>
+
+      <div class="cta-box">
+        <p>FrameForge is free to install. Platform presets — including YouTube Thumbnail — are available in the free version. No account, no subscription required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Install FrameForge — free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -83,12 +83,6 @@
       padding: 2px 10px; margin-top: 10px;
     }
 
-    /* Empty state */
-    .empty-state {
-      text-align: center; padding: 60px 20px;
-      color: var(--muted); font-size: 15px;
-    }
-
     /* Footer — identical to main site */
     footer {
       padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
@@ -128,9 +122,12 @@
 
   <div class="post-list">
     <!-- Agent will add posts here as <a class="post-item"> blocks -->
-    <div class="empty-state">
-      <p>First posts coming soon. We're just getting started.</p>
-    </div>
+    <a class="post-item" href="/blog/resize-image-youtube-thumbnail-chrome/">
+      <div class="post-date">June 25, 2026</div>
+      <div class="post-title">How to Resize an Image for YouTube Thumbnails Directly in Your Browser</div>
+      <div class="post-excerpt">Hit YouTube's required 1280×720 px in seconds — using a free Chrome extension that never uploads your image to a server.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
   </div>
 
   <footer>
