@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Resize an Image for Twitch Panels in Chrome (320×160) — Wendygo Studio</title>
+  <meta name="description" content="Crop any image to Twitch's 320×160 panel format without uploading. FrameForge handles the awkward 2:1 aspect ratio in your browser in seconds." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/resize-image-for-twitch-panel-chrome/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"How to Resize an Image for Twitch Panels in Chrome"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Resize an Image for Twitch Panels in Chrome (320×160)","description":"Crop any image to Twitch's 320×160 panel format without uploading. FrameForge handles the awkward 2:1 aspect ratio in your browser in seconds.","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Resize an Image for Twitch Panels in Chrome",
+    "description": "Resize any image to 320×160 for Twitch panels using FrameForge — no upload, no server, no Photoshop.",
+    "tool": [{ "@type": "HowToTool", "name": "FrameForge Chrome extension" }],
+    "step": [
+      {"@type":"HowToStep","position":1,"name":"Install FrameForge","text":"Install FrameForge from the Chrome Web Store and pin it to your browser toolbar."},
+      {"@type":"HowToStep","position":2,"name":"Open your image","text":"Click the FrameForge icon, then click Open image or drag your file onto the canvas."},
+      {"@type":"HowToStep","position":3,"name":"Select the Twitch Panel preset","text":"In the Platform dropdown, select Twitch Panel. The canvas locks to 320×160 px with a 2:1 aspect ratio."},
+      {"@type":"HowToStep","position":4,"name":"Adjust the crop","text":"Drag the crop overlay to center your subject or logo. The ultra-wide 2:1 format requires careful cropping to avoid cutting off important details."},
+      {"@type":"HowToStep","position":5,"name":"Export","text":"Click Export. FrameForge saves the 320×160 image to your Downloads folder — ready to upload to your Twitch channel settings."}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the correct image size for Twitch panels?","acceptedAnswer":{"@type":"Answer","text":"Twitch panels are 320×160 px with a 2:1 aspect ratio. This ultra-wide format is one of the most constrained aspect ratios in streaming — it clips most vertically-oriented source images significantly."}},
+    {"@type":"Question","name":"Does FrameForge upload my images to Twitch directly?","acceptedAnswer":{"@type":"Answer","text":"No. FrameForge resizes your image locally in your browser and saves it to your Downloads folder. You then manually upload the 320×160 PNG or JPG to your Twitch channel settings — no direct API connection."}},
+    {"@type":"Question","name":"Can I use the same image for multiple Twitch panels?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many streamers use slight variations of the same image across all three panel rows (stacked vertically below the channel bio). Export once from FrameForge, duplicate it, then edit the duplicates if you want subtle variation."}},
+    {"@type":"Question","name":"What if my source photo is portrait or tall?","acceptedAnswer":{"@type":"Answer","text":"Twitch's 2:1 rectangle will show only a thin horizontal slice of a tall photo. Use FrameForge's crop overlay to select the horizontal band you want visible — often just the face or the key visual element."}},
+    {"@type":"Question","name":"Is FrameForge free?","acceptedAnswer":{"@type":"Answer","text":"Yes. FrameForge is free from the Chrome Web Store. The Twitch Panel preset and core resizing are included in the free version. No account or subscription needed."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .faq { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related { margin-top: 56px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/blog/" class="lang-switch">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to resize images for Twitch panels
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide · FrameForge</div>
+      <h1>How to Resize an Image for Twitch Panels in Chrome (320×160)</h1>
+      <p class="article-intro">
+        Twitch panels live in the narrow rectangle below your channel bio. At 320×160 px, they're one of the most constrained aspect ratios online. A source photo that looks balanced elsewhere gets mangled into a thin horizontal strip. Here's how to crop them right—without uploading to a server.
+      </p>
+      <div class="article-date">June 26, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Most streamers design their channels around the header art and profile image—the big, obvious pieces. Panels get overlooked. But they're real estate. Visitors to your channel see panels immediately after your bio. A crisp, well-composed panel looks intentional. A stretched or off-center crop looks like an afterthought.</p>
+
+      <p>The challenge: Twitch panels are <strong>320×160 px, a 2:1 aspect ratio.</strong> If your source is a portrait photo, a headshot, or even a standard widescreen image, you're losing significant vertical space. That phone photo of your face gets reduced to a thin horizontal slice. Most image resizers don't have a preset for this exact format, so you either manually crop and check dimensions, or upload to an online tool.</p>
+
+      <p><strong>FrameForge is a Chrome extension that includes a Twitch panel preset.</strong> Load your image, select the preset, and it locks the canvas to 320×160. Then drag the crop overlay to frame exactly what you want. Everything happens in your browser—no upload, no server, no account.</p>
+
+      <h2>Twitch Panel Specs</h2>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Property</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Dimensions</td><td>320×160 px</td></tr>
+          <tr><td>Aspect ratio</td><td>2:1 (ultra-wide)</td></tr>
+          <tr><td>Max file size</td><td>10 MB</td></tr>
+          <tr><td>Accepted formats</td><td>JPG, PNG, GIF, WebP</td></tr>
+          <tr><td>Typical placement</td><td>3 rows below channel bio, max 3 per row</td></tr>
+        </tbody>
+      </table>
+
+      <p>The 2:1 ratio is unique to Twitch panels. It's not landscape (16:9), not square (1:1), not portrait—it's specifically ultra-wide and short. That's why a generic resizer isn't enough. You need the exact dimensions locked in.</p>
+
+      <h2>Why Twitch Panels Matter</h2>
+
+      <p>Panels are where you direct traffic. Link to your Discord, Ko-fi, Linktree, or stream schedule. A well-designed panel stands out and encourages clicks. A poorly cropped image undermines the message.</p>
+
+      <p>Because the format is so narrow, composition matters. A panel with a logo centered, a social icon, or a single subject in focus works. A landscape scene with distributed detail across the image often looks cramped—too much information competing in too little vertical space.</p>
+
+      <h2>Step-by-Step: Resize for Twitch Panels with FrameForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Install FrameForge</div>
+            <div class="step-desc">Install FrameForge from the Chrome Web Store. Pin the icon to your toolbar so it's accessible whenever you need to resize.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Open your image</div>
+            <div class="step-desc">Click the FrameForge icon. Click <strong>Open image</strong> or drag-and-drop your source file onto the canvas. Supports JPG, PNG, WebP, and more.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Select Twitch Panel</div>
+            <div class="step-desc">In the <strong>Platform</strong> dropdown, select <strong>Twitch Panel</strong>. The canvas immediately locks to 320×160 px.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Adjust the crop</div>
+            <div class="step-desc">Drag the crop overlay to frame your subject. Because the format is so wide and short, positioning is critical. Drag horizontally to include or exclude detail on the sides, and vertically to center faces or focal points.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Export and upload</div>
+            <div class="step-desc">Click <strong>Export</strong>. FrameForge saves the 320×160 image to your Downloads folder. Go to your Twitch channel settings, click Panel settings, and upload the cropped image.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Common Twitch Panel Designs</h2>
+
+      <p>Here are a few approaches that work well at 320×160:</p>
+
+      <p><strong>Logo or icon centered.</strong> Works great if your logo or brand mark reads well horizontally. The narrow vertical space doesn't constrain a simple, bold design.</p>
+
+      <p><strong>Headshot or face portrait.</strong> Crop to show just the face against a simple background. The panel will display your eyes and mouth—enough for recognition. Anything below the chest gets cut off anyway.</p>
+
+      <p><strong>Text + icon.</strong> A Discord icon in the left third, "Join our Discord" text on the right. FrameForge resizes the base image; if you need text overlay, export from FrameForge and use another tool to add text.</p>
+
+      <p><strong>Solid color background.</strong> If you don't have a photo that fits the format well, a solid color with a centered icon or logo can look cleaner than a cropped image that feels cramped.</p>
+
+      <div class="cta-box">
+        <p>FrameForge is free to install and use. The Twitch Panel preset is included in the free version—no account or subscription required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Install FrameForge — free
+        </a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">What is the correct size for a Twitch panel?</div>
+          <div class="faq-a">320×160 px (2:1 aspect ratio). This ultra-wide, short format is specific to Twitch and requires careful cropping when using source images that aren't already in a landscape orientation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does FrameForge upload my image to Twitch?</div>
+          <div class="faq-a">No. FrameForge resizes your image locally in your browser and saves it to your Downloads folder. You then manually log into Twitch, go to your channel settings, and upload the 320×160 image to the panel section yourself.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if my photo is portrait (vertical)?</div>
+          <div class="faq-a">A portrait photo squeezed into a 320×160 panel shows only a thin horizontal band. Use FrameForge's crop overlay to select which horizontal slice you want visible—usually the eyes and upper face work well for a headshot.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I use the same image for multiple panels?</div>
+          <div class="faq-a">Yes. Export once and reuse the same 320×160 image for multiple panel rows, or create slight variations by exporting multiple crops from your source image. Consistency across panels looks polished.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is FrameForge free?</div>
+          <div class="faq-a">Yes. FrameForge is free from the Chrome Web Store. The Twitch Panel preset and all resizing features are included in the free version. No account or subscription is required.</div>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related articles</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/resize-image-for-instagram-chrome/">
+            How to Resize an Image for Instagram Posts in Chrome (1080×1080)
+            <span>FrameForge · June 26, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-youtube-thumbnail-chrome/">
+            How to Resize an Image for YouTube Thumbnails in Your Browser
+            <span>FrameForge · June 25, 2026</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
