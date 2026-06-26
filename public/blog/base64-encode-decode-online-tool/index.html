@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base64 Encode and Decode Online — No Upload, No Command Line | Wendygo Studio</title>
+  <meta name="description" content="Encode and decode Base64 in your browser without uploading anything. TextForge is a free Chrome extension with instant Base64 conversion plus 50+ other text utilities." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Encode and Decode Base64 in Your Browser",
+    "description": "Use TextForge Chrome extension to encode or decode Base64 strings locally, without uploading data to a server.",
+    "tool": [{ "@type": "HowToTool", "name": "TextForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install TextForge",
+        "text": "Install TextForge from the Chrome Web Store and pin the icon to your browser toolbar."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open the extension",
+        "text": "Click the TextForge icon in the toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Paste your text",
+        "text": "Paste the text you want to encode — or the Base64 string you want to decode — into the input area."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Select Base64 Encode or Decode",
+        "text": "Apply the Base64 Encode or Base64 Decode function from the tools menu."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Copy the result",
+        "text": "The output appears instantly. Click to copy it to your clipboard."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+
+    /* Comparison table */
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+    .comp-table td:last-child { color: var(--muted); }
+
+    /* Step cards */
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* Use case cards */
+    .use-cases { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .use-case {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .use-case strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* Example block */
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto;
+    }
+    .example-block .label {
+      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 8px; display: block;
+    }
+    .example-block .val { color: var(--text); word-break: break-all; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .comp-table td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#privacy">Privacy</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Base64 encode and decode online tool
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide · TextForge</div>
+      <h1>Base64 Encode and Decode Online — No Upload, No Command Line</h1>
+      <p class="article-intro">
+        Base64 is everywhere in development — JWT tokens, API headers, data URIs, Kubernetes secrets. Here's how to encode and decode it directly in your browser, without sending data to a server.
+      </p>
+      <div class="article-date">June 26, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Base64 crops up in awkward places: you're debugging a JWT and need to see the payload, or you have a raw secret that needs to go into a YAML config in encoded form, or you're setting up an HTTP Basic Auth header and want to verify the credentials are correct. The encoding itself is trivial — the friction is the workflow.</p>
+
+      <p>The two most common solutions are a terminal command or a web tool. Terminal commands work on macOS and Linux but are clumsy on Windows. Web tools work everywhere, but you're pasting potentially sensitive data — API keys, tokens, credentials — into an unknown server. Neither is ideal for something you do regularly.</p>
+
+      <h2>What Is Base64?</h2>
+
+      <p>Base64 is an encoding scheme that converts binary or arbitrary text into a string of 64 printable ASCII characters (A–Z, a–z, 0–9, <code>+</code>, <code>/</code>), using <code>=</code> as padding to make the length a multiple of 4. The encoded output is about 33% larger than the original.</p>
+
+      <p>It's not encryption and it's not compression. The purpose is to safely carry binary or structured data through systems that only handle plain text — HTTP headers, JSON fields, CSS <code>url()</code> values, XML attributes. Anyone with the encoded string can decode it instantly.</p>
+
+      <h2>When You Actually Need It</h2>
+
+      <div class="use-cases">
+        <div class="use-case">
+          <strong>JWT tokens</strong>
+          A JSON Web Token has three Base64url-encoded sections separated by dots. The header and payload aren't encrypted — decoding the middle section reveals the raw JSON claims: expiry, user ID, roles, scopes.
+        </div>
+        <div class="use-case">
+          <strong>HTTP Basic Auth</strong>
+          The <code>Authorization: Basic &lt;value&gt;</code> header contains a Base64-encoded <code>username:password</code> string. Decoding it is a quick way to verify what credentials a request is actually sending.
+        </div>
+        <div class="use-case">
+          <strong>Data URIs</strong>
+          Small images and SVGs can be embedded directly in CSS or HTML as <code>data:image/png;base64,…</code> URIs. You need to Base64-encode the file's binary content to produce the string you embed.
+        </div>
+        <div class="use-case">
+          <strong>Config files and secrets</strong>
+          Kubernetes secrets, CI environment variables, and many other tools store sensitive values as Base64-encoded strings in YAML or JSON manifests. You encode the raw value before pasting it into the config.
+        </div>
+        <div class="use-case">
+          <strong>Email MIME attachments</strong>
+          Email attachments are Base64-encoded in the raw message body. When debugging email delivery or parsing raw MIME messages, you'll need to decode the attachment payload.
+        </div>
+      </div>
+
+      <h2>Why Not Just Use the Terminal or a Web Tool?</h2>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Method</th><th>The friction</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>echo -n "…" | base64</td>
+            <td>Only works on macOS/Linux. Requires a terminal and the right syntax — the <code>-n</code> flag is critical. Without it you silently encode a trailing newline.</td>
+          </tr>
+          <tr>
+            <td>certutil -encode (Windows)</td>
+            <td>Adds a <code>-----BEGIN CERTIFICATE-----</code>-style header and footer you have to strip. Writes to a file instead of stdout.</td>
+          </tr>
+          <tr>
+            <td>Online web tools</td>
+            <td>Your data goes to a remote server. Fine for generic text, but a bad habit for tokens, credentials, or private keys.</td>
+          </tr>
+          <tr>
+            <td>Python one-liner</td>
+            <td>Requires Python installed and a terminal context switch — more steps than it should be for something this routine.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>A browser extension removes all of that friction: always accessible from the toolbar, no terminal required, runs entirely on your local machine.</p>
+
+      <h2>Encode and Decode Base64 with TextForge</h2>
+
+      <p>TextForge is a Chrome extension with over 50 text utility functions. Base64 encode and decode are both included in the free version. No data leaves your machine — everything runs in the extension's local context.</p>
+
+      <h3>Encoding: Text → Base64</h3>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Install TextForge</div>
+            <div class="step-desc">Install TextForge from the Chrome Web Store. Pin the icon to your toolbar from the Extensions menu so it's always one click away.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Open the extension</div>
+            <div class="step-desc">Click the TextForge icon in your browser toolbar to open the extension panel.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Paste your text</div>
+            <div class="step-desc">Paste the string you want to encode into the input area. It can be plain text, JSON, a URL, a secret value — anything you need in Base64 form.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Apply Base64 Encode</div>
+            <div class="step-desc">Select <strong>Base64 Encode</strong> from the tools menu. The encoded output appears instantly — no loading, no server round trip.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Copy the result</div>
+            <div class="step-desc">Click to copy the encoded string to your clipboard. You're done.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Decoding: Base64 → Text</h3>
+
+      <p>The process is identical in reverse: paste the Base64 string, select <strong>Base64 Decode</strong>, and copy the original text. That's the full workflow.</p>
+
+      <h2>Practical Examples</h2>
+
+      <p><strong>Inspecting a JWT payload.</strong> Take any JWT and split it at the dots. The second section is the payload — Base64url-encoded JSON. Base64url is a close variant where <code>+</code> becomes <code>-</code> and <code>/</code> becomes <code>_</code>. Paste the payload section into TextForge, decode it, and you'll see the raw claims immediately.</p>
+
+      <div class="example-block">
+        <span class="label">Base64url-encoded JWT payload (input)</span>
+        <div class="val">eyJzdWIiOiJ1c2VyXzEyMyIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc2MjAwMDAwMH0</div>
+      </div>
+      <div class="example-block">
+        <span class="label">Decoded (output)</span>
+        <div class="val">{"sub":"user_123","role":"admin","exp":1762000000}</div>
+      </div>
+
+      <p><strong>Building a Kubernetes secret.</strong> Kubernetes stores secret values as Base64-encoded strings in the manifest <code>data:</code> block. Encode your raw password or API key with TextForge and paste the result directly into your YAML.</p>
+
+      <p><strong>Verifying a Basic Auth header.</strong> Capture the <code>Authorization</code> header from the DevTools Network tab. Strip the leading <code>Basic </code> prefix, paste the rest into TextForge, decode it, and confirm the <code>username:password</code> pair matches what you expect.</p>
+
+      <h2>Other Utilities in TextForge</h2>
+
+      <p>Base64 is one of over 50 functions in the extension. If you spend time manipulating text in the browser, you'll find frequent use for the rest of the toolkit: cleaning whitespace and formatting, converting case, sorting lines, extracting email addresses or URLs from unstructured text, generating UUIDs, and creating slugs from titles. It stays useful well beyond a single use case.</p>
+
+      <div class="cta-box">
+        <p>TextForge is free to install. Base64 encode and decode are available in the free version — no account or subscription required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Install TextForge — free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
