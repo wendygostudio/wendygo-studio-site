@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Resize an Image for Instagram Posts in Chrome (1080×1080) — Wendygo Studio</title>
+  <meta name="description" content="Crop any photo to Instagram's 1080×1080 square — or portrait and landscape variants — without uploading to a server. FrameForge does it in your browser in seconds." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"How to Resize an Image for Instagram Posts in Chrome"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Resize an Image for Instagram Posts in Chrome (1080×1080)","description":"Crop any photo to Instagram's 1080×1080 square — or portrait and landscape variants — without uploading to a server. FrameForge does it in your browser in seconds.","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Resize an Image for Instagram Posts in Chrome",
+    "description": "Resize any photo to 1080×1080 for Instagram feed posts using the FrameForge Chrome extension — no upload, no Photoshop.",
+    "tool": [{ "@type": "HowToTool", "name": "FrameForge Chrome extension" }],
+    "step": [
+      {"@type":"HowToStep","position":1,"name":"Install FrameForge","text":"Install FrameForge from the Chrome Web Store and pin it to your browser toolbar."},
+      {"@type":"HowToStep","position":2,"name":"Open your image","text":"Click the FrameForge icon, then click Open image or drag your file onto the canvas."},
+      {"@type":"HowToStep","position":3,"name":"Select the Instagram Post preset","text":"In the Platform dropdown, select Instagram Post. The canvas locks to 1080×1080 px with a 1:1 ratio."},
+      {"@type":"HowToStep","position":4,"name":"Adjust the crop","text":"Drag the crop overlay to center your subject. Switch between fill modes to compare how each handles your image."},
+      {"@type":"HowToStep","position":5,"name":"Export","text":"Click Export. FrameForge saves the 1080×1080 image to your Downloads folder — ready to upload to Instagram."}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the correct image size for an Instagram post?","acceptedAnswer":{"@type":"Answer","text":"1080×1080 px for a square post (1:1 ratio). Instagram also supports portrait (1080×1350 px, 4:5 ratio) and landscape (1080×566 px, 1.91:1 ratio). Square is the safest default if you're unsure which format to use."}},
+    {"@type":"Question","name":"Does FrameForge upload my images to a server?","acceptedAnswer":{"@type":"Answer","text":"No. FrameForge is a Chrome extension that processes images entirely in your browser. Nothing is uploaded to any server, and no account is required."}},
+    {"@type":"Question","name":"What if my photo is in portrait orientation?","acceptedAnswer":{"@type":"Answer","text":"Use the crop-to-fill mode. FrameForge lets you drag the crop overlay to keep the important part of your portrait photo in the 1080×1080 square frame, trimming the top and bottom instead of distorting the image."}},
+    {"@type":"Question","name":"Can I use FrameForge for other social media platforms?","acceptedAnswer":{"@type":"Answer","text":"Yes. FrameForge includes presets for YouTube thumbnails (1280×720 px), Twitch panels, and X (Twitter) post sizes, so you can resize the same source image for different platforms without switching tools."}},
+    {"@type":"Question","name":"Is FrameForge free?","acceptedAnswer":{"@type":"Answer","text":"Yes. FrameForge is free to install from the Chrome Web Store. The free version includes platform presets and core resizing features. A Pro upgrade adds text overlay and batch processing."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .fill-options { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .fill-option {
+      padding: 14px 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .fill-option-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .fill-option-rec { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+    .fill-option p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .format-cards { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .format-card {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .format-dims {
+      flex-shrink: 0; min-width: 90px;
+      font-size: 12px; font-weight: 700; color: var(--amber); font-variant-numeric: tabular-nums;
+    }
+    .format-info { flex: 1; }
+    .format-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .format-desc { font-size: 13px; color: var(--muted); line-height: 1.45; }
+
+    .faq { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related { margin-top: 56px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/blog/" class="lang-switch">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to resize images for Instagram posts
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide · FrameForge</div>
+      <h1>How to Resize an Image for Instagram Posts in Chrome (1080×1080)</h1>
+      <p class="article-intro">
+        Your phone shoots in 9:16. Instagram's feed defaults to a 1:1 square. That mismatch is where portrait photos get mangled — faces cropped off, important details pushed to the edge. Here's how to fix it in seconds, without uploading your photo anywhere.
+      </p>
+      <div class="article-date">June 26, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Instagram is unforgiving about aspect ratios. Post a portrait photo without cropping it first and the platform will crop it for you — badly, from the center, with no control over what stays in frame. Post a landscape photo and it gets letterboxed with gray bars. The workaround most people reach for is uploading to Canva or a web resizer, which means your image hits a remote server before it reaches Instagram.</p>
+
+      <p>There's a faster option that keeps your photos local: <strong>FrameForge</strong>, a Chrome extension that resizes images entirely in your browser. Nothing uploaded, no account, no latency while a server processes your file.</p>
+
+      <h2>Instagram Image Size Requirements</h2>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Format</th><th>Dimensions</th><th>Aspect ratio</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Square post</td><td>1080×1080 px</td><td>1:1</td></tr>
+          <tr><td>Portrait post</td><td>1080×1350 px</td><td>4:5</td></tr>
+          <tr><td>Landscape post</td><td>1080×566 px</td><td>1.91:1</td></tr>
+          <tr><td>Minimum width</td><td>1080 px</td><td>—</td></tr>
+          <tr><td>Max file size</td><td>8 MB</td><td>—</td></tr>
+          <tr><td>Formats accepted</td><td>JPG, PNG</td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <p>Instagram recompresses images on upload, so always start from the highest-quality version you have. Working from an already-compressed or low-resolution source will look noticeably worse after Instagram applies its own compression layer on top.</p>
+
+      <h2>Why a Browser Extension Beats Uploading</h2>
+
+      <p>Web resizers — Canva, Adobe Express, Squoosh — all work, but they send your image to a remote server. For personal photos or client work you'd prefer to keep private, that's a real tradeoff. There's also the latency: large files on slow connections can take a while to upload, process, and download back.</p>
+
+      <p><strong>FrameForge processes images entirely in your browser.</strong> It runs on your machine using the Chrome extension APIs. There is no backend. Nothing is transmitted to any server, and FrameForge requires no account or login. Open the extension, load your image, resize, download — the whole thing stays local.</p>
+
+      <h2>Step-by-Step: Resize for Instagram with FrameForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Install FrameForge</div>
+            <div class="step-desc">Install FrameForge from the Chrome Web Store. After installation, pin the icon to your toolbar from the Extensions menu — it's faster to reach that way when you need it mid-workflow.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Open your image</div>
+            <div class="step-desc">Click the FrameForge icon to open the extension. Click <strong>Open image</strong> and select your file, or drag-and-drop directly onto the canvas. It supports JPG, PNG, WebP, and most common formats.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Select the Instagram Post preset</div>
+            <div class="step-desc">In the <strong>Platform</strong> dropdown, select <strong>Instagram Post</strong>. The canvas immediately locks to 1080×1080 px with a 1:1 ratio — no need to type dimensions manually.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Adjust the crop</div>
+            <div class="step-desc">Drag the crop overlay to frame exactly what you want. Switch between fill modes to see how each option handles your specific image before committing to an export.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Export</div>
+            <div class="step-desc">Click <strong>Export</strong>. FrameForge saves the resized 1080×1080 image to your Downloads folder — ready to upload directly to Instagram.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Handling Portrait and Landscape Source Images</h2>
+
+      <p>Portrait photos (vertical, 9:16) going into a square frame are the most common challenge. You have three options in FrameForge:</p>
+
+      <div class="fill-options">
+        <div class="fill-option">
+          <div class="fill-option-rec">Recommended</div>
+          <div class="fill-option-label">Crop to fill</div>
+          <p>The square frame is completely filled. Excess from the top and bottom is trimmed. Drag the crop overlay to decide exactly what stays in frame — center it on your subject's face or the key visual element.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Fit with padding</div>
+          <p>The entire image is visible, with horizontal bars added to the left and right to fill the square. Can look intentional if the bar color is chosen deliberately, but usually reads as an afterthought on Instagram.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Stretch to fill</div>
+          <p>The image is distorted horizontally to fill the frame. Almost always looks wrong. Avoid unless distortion is a deliberate stylistic choice for your specific photo.</p>
+        </div>
+      </div>
+
+      <p>For landscape (wide) photos going into a square: the excess is on the left and right instead of the top and bottom. Same logic applies — crop to fill, then drag the overlay to center the subject.</p>
+
+      <h2>Which Instagram Format Should You Choose?</h2>
+
+      <div class="format-cards">
+        <div class="format-card">
+          <div class="format-dims">1080×1080</div>
+          <div class="format-info">
+            <div class="format-name">Square (1:1)</div>
+            <div class="format-desc">The safest choice. Displays consistently in the grid view, explore page, and home feed. Best for cross-platform repurposing since the square crop works almost everywhere.</div>
+          </div>
+        </div>
+        <div class="format-card">
+          <div class="format-dims">1080×1350</div>
+          <div class="format-info">
+            <div class="format-name">Portrait (4:5)</div>
+            <div class="format-desc">Occupies about 20% more vertical space in the feed than a square post. Good for photos that are already vertical and where showing more of the image matters — people, fashion, food.</div>
+          </div>
+        </div>
+        <div class="format-card">
+          <div class="format-dims">1080×566</div>
+          <div class="format-info">
+            <div class="format-name">Landscape (1.91:1)</div>
+            <div class="format-desc">Best for wide scenes, panoramas, and compositions where horizontal context matters. Shows less preview in the feed but can work well for the right subject matter.</div>
+          </div>
+        </div>
+      </div>
+
+      <p>When in doubt, square (1:1) is the default. It works in every context and doesn't require any extra thought about how it will display across different feed layouts.</p>
+
+      <h2>Resizing for Multiple Platforms at Once</h2>
+
+      <p>If you cross-post the same content to YouTube, Twitch, or X on the same day, FrameForge includes presets for all of them. You can resize the same source image to different platform dimensions without leaving the extension — useful for content creators publishing across channels simultaneously.</p>
+
+      <div class="cta-box">
+        <p>FrameForge is free to install. The Instagram Post preset and core resizing features are included in the free version — no account, no subscription required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Install FrameForge — free
+        </a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">What is the correct image size for an Instagram post?</div>
+          <div class="faq-a">1080×1080 px for a square post (1:1 ratio). Instagram also supports portrait (1080×1350 px, 4:5 ratio) and landscape (1080×566 px, 1.91:1 ratio). Square is the safest default if you're posting across multiple contexts or unsure which format to use.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does FrameForge upload my images to a server?</div>
+          <div class="faq-a">No. FrameForge is a Chrome extension that processes images entirely in your browser. Nothing is uploaded to any server. No account is required, and there's no file size limit imposed by a backend.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What if my photo is in portrait orientation (vertical)?</div>
+          <div class="faq-a">Use crop-to-fill mode. FrameForge lets you drag the crop overlay to keep the important part of your portrait photo inside the 1080×1080 square frame, trimming the top and bottom rather than distorting the image. Switch between fill modes to compare results before exporting.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I use FrameForge for other social media platforms?</div>
+          <div class="faq-a">Yes. FrameForge includes presets for YouTube thumbnails (1280×720 px), Twitch panels, and X (Twitter) post sizes. You can resize the same source image for different platforms without switching tools — useful when publishing the same content across channels on the same day.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is FrameForge free?</div>
+          <div class="faq-a">Yes. FrameForge is free to install from the Chrome Web Store. The free version includes the Instagram Post preset and core resizing features. A Pro upgrade adds text overlay and batch processing for high-volume workflows.</div>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related articles</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/resize-image-youtube-thumbnail-chrome/">
+            How to Resize an Image for YouTube Thumbnails in Your Browser
+            <span>FrameForge · June 25, 2026</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
