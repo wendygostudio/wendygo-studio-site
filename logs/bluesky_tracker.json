@@ -1,0 +1,10 @@
+[
+  {
+    "date": "2026-06-26",
+    "type": "tipo_2",
+    "text": "Wrote a quick guide on encoding/decoding Base64 without uploading to sketchy web tools. JWT tokens, Kubernetes secrets, API keys — all handled locally in your browser.\n\n→ wendygostudio.com/blog/base64-encode-decode-online-tool/",
+    "url": "wendygostudio.com/blog/base64-encode-decode-online-tool/",
+    "posted": false,
+    "reason": "Promotes new Base64 article published today — technical, solves real friction point for developers"
+  }
+]
