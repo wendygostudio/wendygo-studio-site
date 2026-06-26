@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo redimensionar imágenes para Instagram en Chrome (1080×1080) — Wendygo Studio</title>
+  <meta name="description" content="Recorta cualquier foto a 1080×1080 para Instagram — formatos cuadrado, retrato y paisaje — sin subir archivos a ningún servidor. FrameForge lo hace en tu navegador en segundos." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/es/blog/"},
+    {"@type":"ListItem","position":3,"name":"Cómo redimensionar imágenes para Instagram en Chrome"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Cómo redimensionar imágenes para Instagram en Chrome (1080×1080)","description":"Recorta cualquier foto a 1080×1080 para Instagram — sin subir archivos a ningún servidor. FrameForge lo hace en tu navegador en segundos.","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Cómo redimensionar imágenes para Instagram en Chrome",
+    "description": "Redimensiona cualquier foto a 1080×1080 para publicaciones de Instagram usando la extensión FrameForge — sin subir archivos, sin Photoshop.",
+    "tool": [{ "@type": "HowToTool", "name": "Extensión FrameForge para Chrome" }],
+    "step": [
+      {"@type":"HowToStep","position":1,"name":"Instala FrameForge","text":"Instala FrameForge desde la Chrome Web Store y ancla el ícono a tu barra de herramientas."},
+      {"@type":"HowToStep","position":2,"name":"Abre tu imagen","text":"Haz clic en el ícono de FrameForge, luego en Abrir imagen o arrastra tu archivo al lienzo."},
+      {"@type":"HowToStep","position":3,"name":"Selecciona el preset de Instagram Post","text":"En el desplegable Platform, selecciona Instagram Post. El lienzo se bloquea a 1080×1080 px con una relación 1:1."},
+      {"@type":"HowToStep","position":4,"name":"Ajusta el recorte","text":"Arrastra el overlay de recorte para centrar tu asunto. Cambia entre modos de relleno para comparar cómo cada uno maneja tu imagen."},
+      {"@type":"HowToStep","position":5,"name":"Exporta","text":"Haz clic en Exportar. FrameForge guarda la imagen de 1080×1080 en tu carpeta de Descargas — lista para subir a Instagram."}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"¿Cuál es el tamaño correcto de imagen para una publicación de Instagram?","acceptedAnswer":{"@type":"Answer","text":"1080×1080 px para una publicación cuadrada (relación 1:1). Instagram también admite retrato (1080×1350 px, relación 4:5) y paisaje (1080×566 px, relación 1.91:1). El cuadrado es la opción más segura si no estás seguro de qué formato usar."}},
+    {"@type":"Question","name":"¿FrameForge sube mis imágenes a un servidor?","acceptedAnswer":{"@type":"Answer","text":"No. FrameForge es una extensión de Chrome que procesa imágenes completamente en tu navegador. Nada se sube a ningún servidor y no requiere cuenta."}},
+    {"@type":"Question","name":"¿Qué hago si mi foto está en orientación retrato?","acceptedAnswer":{"@type":"Answer","text":"Usa el modo recorte-para-llenar. FrameForge te permite arrastrar el overlay de recorte para mantener la parte importante de tu foto en el marco cuadrado de 1080×1080, recortando la parte superior e inferior en lugar de distorsionar la imagen."}},
+    {"@type":"Question","name":"¿Puedo usar FrameForge para otras redes sociales?","acceptedAnswer":{"@type":"Answer","text":"Sí. FrameForge incluye presets para miniaturas de YouTube (1280×720 px), paneles de Twitch y tamaños de publicaciones en X (Twitter), para que puedas redimensionar la misma imagen para diferentes plataformas sin cambiar de herramienta."}},
+    {"@type":"Question","name":"¿FrameForge es gratis?","acceptedAnswer":{"@type":"Answer","text":"Sí. FrameForge es gratis para instalar desde la Chrome Web Store. La versión gratuita incluye presets de plataformas y características principales de redimensionamiento. Una versión Pro añade superposición de texto y procesamiento por lotes."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .fill-options { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .fill-option {
+      padding: 14px 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .fill-option-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .fill-option-rec { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+    .fill-option p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .format-cards { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .format-card {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .format-dims {
+      flex-shrink: 0; min-width: 90px;
+      font-size: 12px; font-weight: 700; color: var(--amber); font-variant-numeric: tabular-nums;
+    }
+    .format-info { flex: 1; }
+    .format-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .format-desc { font-size: 13px; color: var(--muted); line-height: 1.45; }
+
+    .faq { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related { margin-top: 56px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/#privacy">Privacidad</a>
+      <a href="/blog/" class="lang-switch">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Cómo redimensionar imágenes para Instagram
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía práctica · FrameForge</div>
+      <h1>Cómo redimensionar imágenes para Instagram en Chrome (1080×1080)</h1>
+      <p class="article-intro">
+        Tu móvil graba en 9:16. Instagram por defecto requiere cuadrado 1:1. Esa discrepancia hace que las fotos en retrato se corten mal — caras cortadas, detalles importantes empujados al borde. Aquí te mostramos cómo arreglarlo en segundos, sin subir tu foto a ningún servidor.
+      </p>
+      <div class="article-date">26 de junio, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Instagram es implacable con las relaciones de aspecto. Publica una foto en retrato sin recortarla primero y la plataforma la recortará por ti — mal, desde el centro, sin control sobre qué permanece en el encuadre. Publica una foto en paisaje y la bloquea con barras grises. El atajo que la mayoría usa es subir a Canva o algún redimensionador online, lo que significa que tu imagen llega a un servidor remoto antes de llegar a Instagram.</p>
+
+      <p>Hay una opción más rápida que mantiene tus fotos locales: <strong>FrameForge</strong>, una extensión de Chrome que redimensiona imágenes completamente en tu navegador. Sin subida, sin cuenta, sin latencia mientras un servidor procesa tu archivo.</p>
+
+      <h2>Requisitos de tamaño de imagen en Instagram</h2>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Formato</th><th>Dimensiones</th><th>Relación de aspecto</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Publicación cuadrada</td><td>1080×1080 px</td><td>1:1</td></tr>
+          <tr><td>Publicación retrato</td><td>1080×1350 px</td><td>4:5</td></tr>
+          <tr><td>Publicación paisaje</td><td>1080×566 px</td><td>1.91:1</td></tr>
+          <tr><td>Ancho mínimo</td><td>1080 px</td><td>—</td></tr>
+          <tr><td>Tamaño máximo de archivo</td><td>8 MB</td><td>—</td></tr>
+          <tr><td>Formatos aceptados</td><td>JPG, PNG</td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <p>Instagram recomprime imágenes al subir, así que siempre comienza desde la versión de mayor calidad que tengas. Trabajar desde una fuente ya comprimida o de baja resolución se verá notoriamente peor después de que Instagram aplique su propia capa de compresión encima.</p>
+
+      <h2>Por qué una extensión del navegador supera a subir archivos</h2>
+
+      <p>Los redimensionadores online — Canva, Adobe Express, Squoosh — funcionan todos, pero envían tu imagen a un servidor remoto. Para fotos personales o trabajo de clientes que prefieres mantener privado, eso es un compromiso real. También está la latencia: archivos grandes en conexiones lentas pueden tardar un rato en subir, procesar y descargar de vuelta.</p>
+
+      <p><strong>FrameForge procesa imágenes completamente en tu navegador.</strong> Funciona en tu máquina usando las APIs de extensiones de Chrome. No hay backend. Nada se transmite a ningún servidor, y FrameForge no requiere cuenta o login. Abre la extensión, carga tu imagen, redimensiona, descarga — todo permanece local.</p>
+
+      <h2>Paso a paso: Redimensiona para Instagram con FrameForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Instala FrameForge</div>
+            <div class="step-desc">Instala FrameForge desde la Chrome Web Store. Después de la instalación, ancla el ícono a tu barra de herramientas desde el menú Extensiones — es más rápido alcanzarlo de esa forma cuando lo necesitas en medio del flujo de trabajo.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Abre tu imagen</div>
+            <div class="step-desc">Haz clic en el ícono de FrameForge para abrir la extensión. Haz clic en <strong>Abrir imagen</strong> y selecciona tu archivo, o arrastra y suelta directamente en el lienzo. Soporta JPG, PNG, WebP y la mayoría de formatos comunes.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Selecciona el preset de Instagram Post</div>
+            <div class="step-desc">En el desplegable <strong>Platform</strong>, selecciona <strong>Instagram Post</strong>. El lienzo se bloquea inmediatamente a 1080×1080 px con relación 1:1 — sin necesidad de escribir dimensiones manualmente.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Ajusta el recorte</div>
+            <div class="step-desc">Arrastra el overlay de recorte para enmarcar exactamente lo que deseas. Cambia entre modos de relleno para ver cómo cada opción maneja tu imagen específica antes de comprometerte con la exportación.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Exporta</div>
+            <div class="step-desc">Haz clic en <strong>Exportar</strong>. FrameForge guarda la imagen redimensionada 1080×1080 en tu carpeta de Descargas — lista para subir directamente a Instagram.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Manejo de imágenes en orientación retrato y paisaje</h2>
+
+      <p>Las fotos en retrato (vertical, 9:16) yendo a un marco cuadrado son el desafío más común. Tienes tres opciones en FrameForge:</p>
+
+      <div class="fill-options">
+        <div class="fill-option">
+          <div class="fill-option-rec">Recomendado</div>
+          <div class="fill-option-label">Recorte para llenar</div>
+          <p>El marco cuadrado se llena completamente. El exceso de la parte superior e inferior se recorta. Arrastra el overlay de recorte para decidir exactamente qué permanece en el encuadre — centra en la cara de tu sujeto o en el elemento visual clave.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Ajustar con relleno</div>
+          <p>La imagen completa es visible, con barras horizontales añadidas a izquierda y derecha para llenar el cuadrado. Puede parecer intencional si el color de la barra se elige deliberadamente, pero normalmente se ve como una ocurrencia tardía en Instagram.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Estirar para llenar</div>
+          <p>La imagen se distorsiona horizontalmente para llenar el marco. Casi siempre se ve mal. Evita a menos que la distorsión sea una elección estilística deliberada para tu foto específica.</p>
+        </div>
+      </div>
+
+      <p>Para fotos en paisaje (ancho) yendo a un cuadrado: el exceso está en izquierda y derecha en lugar de superior e inferior. La misma lógica se aplica — recorta para llenar, luego arrastra el overlay para centrar el sujeto.</p>
+
+      <h2>¿Qué formato de Instagram deberías elegir?</h2>
+
+      <div class="format-cards">
+        <div class="format-card">
+          <div class="format-dims">1080×1080</div>
+          <div class="format-info">
+            <div class="format-name">Cuadrado (1:1)</div>
+            <div class="format-desc">La opción más segura. Se muestra consistentemente en la vista de cuadrícula, página de exploración y feed de inicio. Mejor para reutilizar entre plataformas ya que el recorte cuadrado funciona casi en todas partes.</div>
+          </div>
+        </div>
+        <div class="format-card">
+          <div class="format-dims">1080×1350</div>
+          <div class="format-info">
+            <div class="format-name">Retrato (4:5)</div>
+            <div class="format-desc">Ocupa aproximadamente 20% más espacio vertical en el feed que una publicación cuadrada. Bueno para fotos que ya son verticales y donde mostrar más de la imagen importa — personas, moda, comida.</div>
+          </div>
+        </div>
+        <div class="format-card">
+          <div class="format-dims">1080×566</div>
+          <div class="format-info">
+            <div class="format-name">Paisaje (1.91:1)</div>
+            <div class="format-desc">Mejor para escenas amplias, panoramas y composiciones donde el contexto horizontal importa. Muestra menos vista previa en el feed pero puede funcionar bien para el tema correcto.</div>
+          </div>
+        </div>
+      </div>
+
+      <p>Cuando dudes, cuadrado (1:1) es lo predeterminado. Funciona en todo contexto y no requiere pensamiento extra sobre cómo se mostrará en diferentes diseños de feed.</p>
+
+      <h2>Redimensiona para múltiples plataformas a la vez</h2>
+
+      <p>Si compartes el mismo contenido en YouTube, Twitch o X el mismo día, FrameForge incluye presets para todos ellos. Puedes redimensionar la misma imagen fuente a diferentes dimensiones de plataforma sin salir de la extensión — útil para creadores que publican en varios canales simultáneamente.</p>
+
+      <div class="cta-box">
+        <p>FrameForge es gratis de instalar. El preset de Instagram Post y las características principales de redimensionamiento están incluidas en la versión gratuita — sin cuenta, sin suscripción necesaria.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Instala FrameForge — gratis
+        </a>
+      </div>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">¿Cuál es el tamaño correcto de imagen para una publicación de Instagram?</div>
+          <div class="faq-a">1080×1080 px para una publicación cuadrada (relación 1:1). Instagram también admite retrato (1080×1350 px, relación 4:5) y paisaje (1080×566 px, relación 1.91:1). El cuadrado es la opción más segura si publicas en múltiples contextos o no estás seguro de qué formato usar.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">¿FrameForge sube mis imágenes a un servidor?</div>
+          <div class="faq-a">No. FrameForge es una extensión de Chrome que procesa imágenes completamente en tu navegador. Nada se sube a ningún servidor. No se requiere cuenta, y no hay límite de tamaño de archivo impuesto por un backend.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">¿Qué hago si mi foto está en orientación retrato (vertical)?</div>
+          <div class="faq-a">Usa el modo recorte-para-llenar. FrameForge te permite arrastrar el overlay de recorte para mantener la parte importante de tu foto dentro del marco cuadrado 1080×1080, recortando la parte superior e inferior en lugar de distorsionar la imagen. Cambia entre modos de relleno para comparar resultados antes de exportar.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">¿Puedo usar FrameForge para otras redes sociales?</div>
+          <div class="faq-a">Sí. FrameForge incluye presets para miniaturas de YouTube (1280×720 px), paneles de Twitch y tamaños de publicaciones en X (Twitter). Puedes redimensionar la misma imagen fuente para diferentes plataformas sin cambiar de herramienta — útil cuando publicas el mismo contenido en varios canales el mismo día.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">¿FrameForge es gratis?</div>
+          <div class="faq-a">Sí. FrameForge es gratis para instalar desde la Chrome Web Store. La versión gratuita incluye el preset de Instagram Post y características principales de redimensionamiento. Una versión Pro añade superposición de texto y procesamiento por lotes para flujos de trabajo de alto volumen.</div>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Artículos relacionados</div>
+        <div class="related-links">
+          <a class="related-link" href="/es/blog/redimensionar-imagen-youtube-miniatura-chrome/">
+            Cómo redimensionar imágenes para miniaturas de YouTube en tu navegador
+            <span>FrameForge · 25 de junio, 2026</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/privacy.html">Política de privacidad</a>
+      <a href="/terms.html">Términos y condiciones</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
