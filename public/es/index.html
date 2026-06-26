@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wendygo Studio — herramientas del navegador que se quedan locales</title>
+  <meta name="description" content="Wendygo Studio crea extensiones de navegador para desarrolladores, administradores de sistemas y creadores de contenido. TextForge, FrameForge y ScrubForge se ejecutan completamente en tu navegador — sin subidas, sin permisos innecesarios, sin datos recopilados." />
+  <link rel="canonical" href="https://wendygostudio.com/es/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --good:   #6fbf73;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px; text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 780px; margin: 0 auto;
+      padding: clamp(64px,10vw,120px) clamp(20px,5vw,40px) clamp(48px,8vw,96px);
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 28px;
+    }
+    .eyebrow::before, .eyebrow::after { content: ''; flex: 1; width: 28px; height: 1px; background: var(--amber); opacity: .5; }
+    h1 {
+      font-size: clamp(38px, 7vw, 68px); font-weight: 800; line-height: 1.1;
+      letter-spacing: -1.5px; margin-bottom: 24px;
+    }
+    h1 em { font-style: normal; color: var(--amber); }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); max-width: 580px; margin: 0 auto 40px;
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12.5px; font-weight: 600; color: var(--muted);
+      border: 1px solid var(--line); border-radius: 20px; padding: 5px 13px;
+    }
+    .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); }
+
+    /* ── SECTION WRAPPER ── */
+    .section { padding: clamp(48px,8vw,80px) clamp(20px,5vw,60px); }
+    .section-inner { max-width: 1060px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 12px;
+    }
+    .section-title { font-size: clamp(26px,4vw,38px); font-weight: 750; letter-spacing: -.6px; margin-bottom: 10px; }
+    .section-sub { color: var(--muted); font-size: 16px; max-width: 520px; }
+
+    /* ── PRODUCTS ── */
+    .products { background: var(--surf); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+    .product-card {
+      background: var(--ink); border: 1px solid var(--line); border-radius: 14px;
+      padding: 28px; display: flex; flex-direction: column; gap: 18px;
+      transition: border-color .2s;
+    }
+    .product-card:hover { border-color: var(--faint); }
+    .product-head { display: flex; align-items: flex-start; gap: 14px; }
+    .product-mark {
+      width: 44px; height: 44px; border-radius: 11px; background: var(--amber);
+      display: grid; place-items: center; font-size: 22px; color: var(--on-a);
+      flex: none; font-weight: 900;
+    }
+    .product-name { font-size: 20px; font-weight: 750; letter-spacing: -.3px; }
+    .product-tagline { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+    .product-desc { font-size: 14.5px; color: var(--muted); line-height: 1.6; }
+
+    .feature-list { display: flex; flex-direction: column; gap: 7px; }
+    .feature-list li {
+      list-style: none; font-size: 13.5px; color: var(--text);
+      display: flex; align-items: baseline; gap: 9px;
+    }
+    .feature-list li::before { content: '◆'; font-size: 6px; color: var(--amber); flex: none; position: relative; top: -1px; }
+    .pro-feat { color: var(--amber); }
+    .pro-feat::before { color: var(--amber) !important; }
+
+    .product-footer { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+    .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+    .price-free { font-size: 13px; color: var(--muted); padding: 3px 9px; border: 1px solid var(--line); border-radius: 20px; }
+    .price-pro { font-size: 18px; font-weight: 750; color: var(--text); }
+    .price-once { font-size: 12px; color: var(--muted); }
+    .btn-store {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 13.5px; text-decoration: none;
+      padding: 10px 18px; border-radius: var(--r); border: none; cursor: pointer;
+      transition: filter .15s; width: 100%;
+    }
+    .btn-store:hover { filter: brightness(1.08); }
+    .btn-store.ghost {
+      background: var(--surf2); color: var(--muted); border: 1px solid var(--line); margin-top: 8px;
+    }
+    .btn-store.ghost:hover { color: var(--text); border-color: var(--faint); }
+
+    /* ── HOW IT WORKS ── */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 24px; margin-top: 48px; }
+    .step { background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+    .step-n { font-family: var(--mono); font-size: 11px; color: var(--amber); font-weight: 700; letter-spacing: .5px; margin-bottom: 10px; }
+    .step-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .step-desc { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+
+    /* ── PRIVACY ── */
+    .privacy { background: var(--surf); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; margin-top: 40px; }
+    .priv-item { display: flex; align-items: flex-start; gap: 12px; }
+    .priv-icon { font-size: 20px; flex: none; margin-top: 2px; }
+    .priv-label { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+    .priv-desc { font-size: 13px; color: var(--muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    /* ── DIVIDER ── */
+    .amber-rule { width: 48px; height: 3px; background: var(--amber); border-radius: 2px; margin-bottom: 28px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      h1 { letter-spacing: -.8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#privacidad">Privacidad</a>
+      <a href="/" class="lang-switch">EN 🌐</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow">Wendygo Studio</div>
+    <h1>Herramientas que<br><em>se quedan locales.</em></h1>
+    <p class="hero-sub">Extensiones para Chrome y Edge que transforman texto, redimensionan imágenes y sanitizan configuraciones de infraestructura — todo en tu navegador. Sin subidas, sin servidores, sin datos recopilados.</p>
+    <div class="hero-badges">
+      <span class="badge"><span class="dot"></span>Cero permisos</span>
+      <span class="badge"><span class="dot"></span>Procesamiento 100% local</span>
+      <span class="badge"><span class="dot"></span>Sin recopilación de datos</span>
+      <span class="badge"><span class="dot"></span>Chrome y Edge</span>
+    </div>
+  </section>
+
+  <section class="section products" id="productos">
+    <div class="section-inner">
+      <div class="section-label">Extensiones</div>
+      <h2 class="section-title">La familia Forge</h2>
+      <p class="section-sub">Tres herramientas, una filosofía: utilidades potentes que se ejecutan completamente en tu navegador.</p>
+      <div class="amber-rule" style="margin-top:24px;"></div>
+
+      <div class="product-grid">
+
+        <!-- TextForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <div class="product-mark">T</div>
+            <div>
+              <div class="product-name">TextForge</div>
+              <div class="product-tagline">pega · transforma · copia</div>
+            </div>
+          </div>
+          <p class="product-desc">Kit de herramientas de texto todo en uno con 50+ funciones para limpiar, convertir, extraer y manipular texto. Pega tu texto, elige una transformación y copia el resultado — busca cualquier función al instante con búsqueda global.</p>
+          <ul class="feature-list">
+            <li>Limpiar: espacios extra, saltos de línea, trim, quitar HTML, eliminar acentos</li>
+            <li>Mayúsculas: MAYÚSCULAS, minúsculas, Capitalizadas, Oración</li>
+            <li>Ordenar: A→Z, Z→A, numérico (entiende KB/MB/GB/TB), eliminar duplicados</li>
+            <li>Extraer: correos, URLs, IPs (v4 y v6), números</li>
+            <li>Desarrollo: Base64, URL, HTML, JSON, escapar regex, slugify, hex</li>
+            <li>Generar: SHA-256, UUID, contraseñas seguras, Unix ↔ fecha</li>
+            <li>Markdown: viñetas, listas numeradas, bloque de código, envolver en 80 cols</li>
+            <li class="pro-feat">Búsqueda y reemplazo con regex + filtro grep con regex (Pro)</li>
+            <li class="pro-feat">Extractor de columnas y análisis de frecuencia de palabras (Pro)</li>
+            <li class="pro-feat">Generador de tabla Markdown desde columnas (Pro)</li>
+          </ul>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Gratis</span>
+              <span class="price-pro">€3.99<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">o €19.99/año</span>
+            </div>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+            <a class="btn-store ghost" href="https://microsoftedge.microsoft.com/addons/" target="_blank" rel="noopener">
+              ↗ Edge Add-ons
+            </a>
+          </div>
+        </div>
+
+        <!-- FrameForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <div class="product-mark">▢</div>
+            <div>
+              <div class="product-name">FrameForge</div>
+              <div class="product-tagline">redimensiona · ajusta · exporta</div>
+            </div>
+          </div>
+          <p class="product-desc">Un redimensionador de imágenes y creador de miniaturas para YouTubers, streamers y creadores de contenido. Pega desde el portapapeles, arrastra un archivo o selecciona uno — recorta al tamaño exacto de la plataforma y exporta. Todo procesado en tu navegador.</p>
+          <ul class="feature-list">
+            <li>Miniaturas de YouTube, Shorts, Reels, Instagram, Twitch, encabezado X, personalizado</li>
+            <li>Relleno / Ajuste / Estiramiento con zoom y arrastrar para reposicionar</li>
+            <li>Rotar 90°, girar horizontal y vertical, recorte circular</li>
+            <li>4 efectos: gradiente, viñeta, barras cinematográficas, blanco y negro</li>
+            <li>JPEG / PNG / WebP con calidad ajustable y tamaño de archivo en vivo</li>
+            <li>Copiar al portapapeles, metadatos EXIF eliminados al exportar</li>
+            <li class="pro-feat">8 efectos adicionales: cálido, frío, dramático, vintage, resplandor... (Pro)</li>
+            <li class="pro-feat">Capas de texto y superposiciones de logo/imagen (Pro)</li>
+            <li class="pro-feat">Controles de brillo, contraste y saturación (Pro)</li>
+            <li class="pro-feat">Procesamiento por lotes y exportación de ZIP de múltiples tamaños (Pro)</li>
+            <li class="pro-feat">Compresión de tamaño objetivo — ej. máx. 2 MB (Pro)</li>
+          </ul>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Gratis</span>
+              <span class="price-pro">€9.99</span>
+              <span class="price-once">Pro · de una sola vez</span>
+            </div>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+            <a class="btn-store ghost" href="https://microsoftedge.microsoft.com/addons/" target="_blank" rel="noopener">
+              ↗ Edge Add-ons
+            </a>
+          </div>
+        </div>
+
+        <!-- ScrubForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <div class="product-mark">S</div>
+            <div>
+              <div class="product-name">ScrubForge</div>
+              <div class="product-tagline">sanitiza · comparte · pregunta</div>
+            </div>
+          </div>
+          <p class="product-desc">Un sanitizador de configuración para administradores de sistemas, ingenieros de red y consultores MSP. Pega tu configuración de Cisco, FortiGate, MikroTik o Palo Alto — ScrubForge detecta y reemplaza datos sensibles con tokens consistentes, luego pregunta a la IA sin exponer tu infraestructura.</p>
+          <ul class="feature-list">
+            <li>120 patrones en 5 categorías: red, secretos, PII, infraestructura, personalizado</li>
+            <li>12 perfiles de proveedor: Cisco, FortiGate, MikroTik, Juniper, Palo Alto, Dell…</li>
+            <li>Los tokens consistentes preservan la topología — mismo IP → mismo token</li>
+            <li>BYOK — usa tu propia clave con Claude, GPT-4o, Gemini, Groq o Mistral</li>
+            <li class="pro-feat">Tokens conscientes del formato: SHA-512 permanece SHA-512 (Pro)</li>
+            <li class="pro-feat">Chat de IA integrado con conversaciones de múltiples turnos (Pro)</li>
+            <li class="pro-feat">Diccionario personalizado para valores que regex no detecta (Pro)</li>
+            <li class="pro-feat">Los 12 perfiles de proveedor y modo auditoría (Experto)</li>
+            <li class="pro-feat">Procesamiento por lotes y ofuscación de preguntas (Experto)</li>
+          </ul>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Gratis</span>
+              <span class="price-pro">€5.99<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">o €9.99/mes Experto</span>
+            </div>
+            <span class="btn-store" style="opacity:.5;cursor:default;pointer-events:none">
+              Próximamente en Chrome Web Store
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="como">
+    <div class="section-inner">
+      <div class="section-label">Cómo funciona</div>
+      <h2 class="section-title">Sencillo por diseño</h2>
+      <p class="section-sub">Instala desde la tienda, úsalo gratis, desbloquea Pro con un pago único.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">01 — INSTALAR</div>
+          <div class="step-title">Añade a Chrome o Edge</div>
+          <div class="step-desc">Encuentra la extensión en la Chrome Web Store o Microsoft Edge Add-ons y haz clic en Agregar. Sin registro, sin cuenta.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">02 — USAR GRATIS</div>
+          <div class="step-title">Comienza de inmediato</div>
+          <div class="step-desc">El nivel gratuito es completamente funcional. Sin período de prueba, sin pantallas de molestia — úsalo todo el tiempo que quieras.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">03 — PASARSE A PRO</div>
+          <div class="step-title">Precios sencillos</div>
+          <div class="step-desc">TextForge Pro desde €3.99/mes. FrameForge Pro es €9.99 de una sola vez. ScrubForge Pro desde €5.99/mes o Experto a €9.99/mes.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">04 — CONSERVA</div>
+          <div class="step-title">Tu elección de modelo</div>
+          <div class="step-desc">FrameForge: un pago, tuyo para siempre. TextForge y ScrubForge: suscripción mensual o ahorra con anual — cancela en cualquier momento.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section privacy" id="privacidad">
+    <div class="section-inner">
+      <div class="section-label">Privacidad</div>
+      <h2 class="section-title">Tus datos se quedan contigo</h2>
+      <p class="section-sub">Todas nuestras extensiones están construidas alrededor de una única restricción: nada sale de tu navegador.</p>
+      <div class="privacy-grid">
+        <div class="priv-item">
+          <div class="priv-icon">🔒</div>
+          <div>
+            <div class="priv-label">Cero permisos</div>
+            <div class="priv-desc">El nivel gratuito no solicita ningún permiso del navegador. Ni siquiera acceso al almacenamiento.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon">📵</div>
+          <div>
+            <div class="priv-label">Sin servidor</div>
+            <div class="priv-desc">Todas las transformaciones y el procesamiento de imágenes se ejecutan completamente en tu pestaña del navegador. No hay backend.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon">🗑</div>
+          <div>
+            <div class="priv-label">Sin recopilación de datos</div>
+            <div class="priv-desc">No recopilamos, almacenamos ni transmitimos datos personales ni análisis de uso.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon">🖼</div>
+          <div>
+            <div class="priv-label">Las imágenes nunca se suben</div>
+            <div class="priv-desc">FrameForge procesa imágenes localmente. Tus fotos nunca dejan tu máquina.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon">🔑</div>
+          <div>
+            <div class="priv-label">BYOK — tu clave, tus datos</div>
+            <div class="priv-desc">ScrubForge utiliza tu propia clave de API de IA. Nunca vemos, proxy ni almacenamos tus consultas.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/privacy.html">Política de privacidad</a>
+      <a href="/terms.html">Términos y condiciones</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
