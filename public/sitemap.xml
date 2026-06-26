@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://wendygostudio.com/</loc>
@@ -10,9 +11,18 @@
 
   <url>
     <loc>https://wendygostudio.com/blog/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/"/>
   </url>
 
   <url>
@@ -20,9 +30,34 @@
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
   </url>
 
-    <url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/blog/decode-jwt-token-browser/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>

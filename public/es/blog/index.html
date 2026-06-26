@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — Wendygo Studio</title>
-  <meta name="description" content="Guides, tutorials and tips on browser productivity, image editing, text manipulation and network config management from the makers of the Forge extensions." />
-  <link rel="canonical" href="https://wendygostudio.com/blog/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/" />
+  <title>Blog en español — Wendygo Studio</title>
+  <meta name="description" content="Guías y tutoriales sobre productividad en el navegador, edición de imágenes, manipulación de texto y gestión de configuraciones de red, de los creadores de las extensiones Forge." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,7 +21,6 @@
       --amber:  #e8a33d;
       --amber2: #f0b75a;
       --on-a:   #13151a;
-      --r:      9px;
       --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
     html { scroll-behavior: smooth; }
@@ -30,8 +29,6 @@
       font-family: var(--sans); font-size: 16px; line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* Nav — identical to main site */
     nav {
       position: sticky; top: 0; z-index: 10;
       background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
@@ -41,8 +38,7 @@
     }
     .nav-brand {
       display: flex; align-items: center; gap: 10px;
-      font-weight: 700; font-size: 15px; letter-spacing: .3px;
-      text-decoration: none; color: var(--text);
+      font-weight: 700; font-size: 15px; text-decoration: none; color: var(--text);
     }
     .nav-mark {
       width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
@@ -51,8 +47,6 @@
     .nav-links { display: flex; gap: 28px; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
     .nav-links a:hover { color: var(--text); }
-
-    /* Blog header */
     .blog-header {
       max-width: 720px; margin: 0 auto;
       padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 32px;
@@ -66,8 +60,13 @@
       letter-spacing: -.8px; margin-bottom: 12px;
     }
     .blog-header p { color: var(--muted); font-size: 16px; max-width: 520px; }
-
-    /* Post list */
+    .lang-switch {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--faint);
+      background: var(--surf); border: 1px solid var(--line); border-radius: 6px;
+      padding: 6px 12px; margin-top: 16px; text-decoration: none;
+    }
+    .lang-switch:hover { color: var(--muted); }
     .post-list { max-width: 720px; margin: 0 auto; padding: 0 clamp(20px,5vw,40px) 80px; }
     .post-item {
       display: block; text-decoration: none; color: inherit;
@@ -84,8 +83,6 @@
       color: var(--amber); border: 1px solid var(--line); border-radius: 20px;
       padding: 2px 10px; margin-top: 10px;
     }
-
-    /* Footer — identical to main site */
     footer {
       padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
       display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
@@ -96,10 +93,7 @@
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
     .footer-links a:hover { color: var(--muted); }
-
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-    }
+    @media (max-width: 600px) { .nav-links { display: none; } }
   </style>
 </head>
 <body>
@@ -110,56 +104,38 @@
       Wendygo Studio
     </a>
     <div class="nav-links">
-      <a href="/#products">Extensions</a>
-      <a href="/blog/">Blog</a>
-      <a href="/#privacy">Privacy</a>
+      <a href="/#products">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/#privacy">Privacidad</a>
     </div>
   </nav>
 
   <div class="blog-header">
     <div class="section-label">Blog</div>
-    <h1>Guides &amp; tutorials</h1>
-    <p>Practical tips on browser productivity, image editing, text manipulation and network config management.</p>
+    <h1>Guías y tutoriales</h1>
+    <p>Consejos prácticos sobre productividad en el navegador, edición de imágenes, manipulación de texto y configuración de red.</p>
+    <a class="lang-switch" href="/blog/">🌐 View in English</a>
   </div>
 
   <div class="post-list">
-    <!-- Agent will add posts here as <a class="post-item"> blocks -->
-    <a class="post-item" href="/blog/decode-jwt-token-browser/">
-      <div class="post-date">June 26, 2026</div>
-      <div class="post-title">How to Decode a JWT Token Payload in Your Browser</div>
-      <div class="post-excerpt">Inspect JWT claims — user ID, expiry, roles — locally without pasting tokens into jwt.io. TextForge decodes Base64url in your browser with no data sent to any server.</div>
+    <a class="post-item" href="/es/blog/base64-codificador-decodificador-online/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Codificador Base64 Online — Sin Subir Archivos, Sin Terminal</div>
+      <div class="post-excerpt">Codifica y decodifica Base64 directamente en tu navegador — payloads JWT, secretos de Kubernetes, cabeceras Basic Auth — sin pegar datos sensibles en una herramienta web.</div>
       <span class="post-tag">TextForge</span>
-    </a>
-    <a class="post-item" href="/blog/base64-encode-kubernetes-secrets/">
-      <div class="post-date">June 26, 2026</div>
-      <div class="post-title">How to Base64 Encode Kubernetes Secrets Without a Web Tool</div>
-      <div class="post-excerpt">Kubernetes Secret data fields require Base64-encoded values. Encode your raw passwords and API keys locally — no terminal, no third-party site, no credentials sent anywhere.</div>
-      <span class="post-tag">TextForge</span>
-    </a>
-    <a class="post-item" href="/blog/base64-encode-decode-online-tool/">
-      <div class="post-date">June 26, 2026</div>
-      <div class="post-title">Base64 Encode and Decode Online — No Upload, No Command Line</div>
-      <div class="post-excerpt">Encode and decode Base64 directly in your browser — JWT payloads, Kubernetes secrets, Basic Auth headers — without pasting sensitive data into a web tool.</div>
-      <span class="post-tag">TextForge</span>
-    </a>
-    <a class="post-item" href="/blog/resize-image-youtube-thumbnail-chrome/">
-      <div class="post-date">June 25, 2026</div>
-      <div class="post-title">How to Resize an Image for YouTube Thumbnails Directly in Your Browser</div>
-      <div class="post-excerpt">Hit YouTube's required 1280×720 px in seconds — using a free Chrome extension that never uploads your image to a server.</div>
-      <span class="post-tag">FrameForge</span>
     </a>
   </div>
 
   <footer>
-    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canarias</div>
     <div class="footer-links">
       <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
-      <a href="mailto:wendygostudio@gmail.com">Contact</a>
-      <a href="/privacy.html">Privacy policy</a>
-      <a href="/terms.html">Terms and conditions</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/privacy.html">Política de privacidad</a>
+      <a href="/terms.html">Términos y condiciones</a>
     </div>
   </footer>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>

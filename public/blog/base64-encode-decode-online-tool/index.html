@@ -6,6 +6,8 @@
   <title>Base64 Encode and Decode Online — No Upload, No Command Line | Wendygo Studio</title>
   <meta name="description" content="Encode and decode Base64 in your browser without uploading anything. TextForge is a free Chrome extension with instant Base64 conversion plus 50+ other text utilities." />
   <link rel="canonical" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/" />
 
   <script type="application/ld+json">
   {
@@ -44,6 +46,80 @@
         "position": 5,
         "name": "Copy the result",
         "text": "The output appears instantly. Click to copy it to your clipboard."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Base64 Encode and Decode Online — No Upload, No Command Line"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Base64 Encode and Decode Online — No Upload, No Command Line",
+    "description": "Encode and decode Base64 in your browser without uploading anything. TextForge is a free Chrome extension with instant Base64 conversion plus 50+ other text utilities.",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Base64 encoding the same as encryption?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Base64 is an encoding scheme, not encryption. Anyone with the encoded string can decode it instantly without a key. It is used to safely carry binary data through text-only systems, not to hide information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to paste API keys into an online Base64 tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not if the tool sends your data to a server. TextForge runs entirely in your browser as a Chrome extension, so your API keys, tokens, and credentials never leave your machine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Base64 and Base64url?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Base64url is a URL-safe variant that replaces + with - and / with _ to avoid conflicts in URLs and HTTP headers. JWT tokens use Base64url for their header and payload sections."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TextForge work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TextForge processes everything locally in your browser. Base64 encode and decode functions work without an internet connection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Base64 function free in TextForge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Base64 encode and decode are included in the free version of TextForge. No account or subscription is required."
+        }
       }
     ]
   }
@@ -191,6 +267,35 @@
       text-transform: uppercase; color: var(--faint); margin-bottom: 8px; display: block;
     }
     .example-block .val { color: var(--text); word-break: break-all; }
+
+    /* FAQ */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a code {
+      font-family: var(--mono); font-size: 12px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+
+    /* Related articles */
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
 
     /* CTA box */
     .cta-box {
@@ -389,6 +494,45 @@
       <h2>Other Utilities in TextForge</h2>
 
       <p>Base64 is one of over 50 functions in the extension. If you spend time manipulating text in the browser, you'll find frequent use for the rest of the toolkit: cleaning whitespace and formatting, converting case, sorting lines, extracting email addresses or URLs from unstructured text, generating UUIDs, and creating slugs from titles. It stays useful well beyond a single use case.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Is Base64 encoding the same as encryption?</p>
+          <p class="faq-a">No. Base64 is an encoding scheme, not encryption. Anyone with the encoded string can decode it instantly without a key. It is used to safely carry binary data through text-only systems, not to hide information.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is it safe to paste API keys into an online Base64 tool?</p>
+          <p class="faq-a">Not if the tool sends your data to a server. TextForge runs entirely in your browser as a Chrome extension — your API keys, tokens, and credentials never leave your machine.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What is the difference between Base64 and Base64url?</p>
+          <p class="faq-a">Base64url is a URL-safe variant that replaces <code>+</code> with <code>-</code> and <code>/</code> with <code>_</code> to avoid conflicts in URLs and HTTP headers. JWT tokens use Base64url for their header and payload sections.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Does TextForge work offline?</p>
+          <p class="faq-a">Yes. TextForge processes everything locally in your browser. Base64 encode and decode functions work without an internet connection.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is the Base64 function free in TextForge?</p>
+          <p class="faq-a">Yes. Base64 encode and decode are included in the free version of TextForge. No account or subscription is required.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/decode-jwt-token-browser/">
+            How to Decode a JWT Token Payload in Your Browser
+            <span>Inspect JWT claims locally with TextForge — no jwt.io needed</span>
+          </a>
+          <a class="related-link" href="/blog/base64-encode-kubernetes-secrets/">
+            How to Base64 Encode Kubernetes Secrets Without a Web Tool
+            <span>Encode secret values for YAML manifests without sending data to a server</span>
+          </a>
+        </div>
+      </div>
 
       <div class="cta-box">
         <p>TextForge is free to install. Base64 encode and decode are available in the free version — no account or subscription required.</p>

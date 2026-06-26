@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codificador Base64 Online — Sin Subir Archivos, Sin Terminal | Wendygo Studio</title>
+  <meta name="description" content="Codifica y decodifica Base64 directamente en tu navegador sin enviar datos a ningún servidor. TextForge es una extensión gratuita de Chrome con conversión Base64 instantánea y más de 50 utilidades de texto." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Cómo codificar y decodificar Base64 en el navegador",
+    "description": "Usa la extensión TextForge para Chrome para codificar o decodificar cadenas Base64 de forma local, sin enviar datos a ningún servidor.",
+    "inLanguage": "es",
+    "tool": [{ "@type": "HowToTool", "name": "Extensión TextForge para Chrome" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Instala TextForge",
+        "text": "Instala TextForge desde la Chrome Web Store y fija el icono a la barra de herramientas del navegador."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Abre la extensión",
+        "text": "Haz clic en el icono de TextForge en la barra de herramientas para abrir el panel de la extensión."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Pega tu texto",
+        "text": "Pega el texto que quieres codificar, o la cadena Base64 que quieres decodificar, en el área de entrada."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Aplica Base64 Encode o Decode",
+        "text": "Selecciona la función Base64 Encode o Base64 Decode desde el menú de herramientas."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Copia el resultado",
+        "text": "El resultado aparece al instante. Haz clic para copiarlo al portapapeles."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog en español", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Codificador Base64 Online — Sin Subir Archivos, Sin Terminal"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Codificador Base64 Online — Sin Subir Archivos, Sin Terminal",
+    "description": "Codifica y decodifica Base64 directamente en tu navegador sin enviar datos a ningún servidor. TextForge es una extensión gratuita de Chrome con conversión Base64 instantánea y más de 50 utilidades de texto.",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "inLanguage": "es",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿La codificación Base64 es lo mismo que el cifrado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Base64 es un esquema de codificación, no cifrado. Cualquier persona con la cadena codificada puede decodificarla al instante sin necesitar ninguna clave. Se usa para transportar datos binarios a través de sistemas que solo manejan texto, no para ocultar información."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es seguro pegar claves de API en una herramienta Base64 online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No si la herramienta envía tus datos a un servidor. TextForge se ejecuta completamente en tu navegador como extensión de Chrome, por lo que tus claves de API, tokens y credenciales nunca salen de tu máquina."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la diferencia entre Base64 y Base64url?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Base64url es una variante segura para URLs que reemplaza + por - y / por _ para evitar conflictos en URLs y cabeceras HTTP. Los tokens JWT usan Base64url para sus secciones de cabecera y payload."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿TextForge funciona sin conexión a internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. TextForge procesa todo localmente en tu navegador. Las funciones de codificación y decodificación Base64 funcionan sin conexión a internet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La función Base64 es gratuita en TextForge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Base64 encode y decode están incluidos en la versión gratuita de TextForge. No se necesita cuenta ni suscripción."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+    .lang-notice {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--faint);
+      background: var(--surf); border: 1px solid var(--line); border-radius: 6px;
+      padding: 6px 12px; margin-bottom: 24px; text-decoration: none;
+    }
+    .lang-notice:hover { color: var(--muted); }
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .comp-table td { padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--text); vertical-align: top; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+    .comp-table td:last-child { color: var(--muted); }
+    .use-cases { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .use-case {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .use-case strong { color: var(--text); display: block; margin-bottom: 2px; }
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto;
+    }
+    .example-block .label {
+      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 8px; display: block;
+    }
+    .example-block .val { color: var(--text); word-break: break-all; }
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px; }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a code { font-family: var(--mono); font-size: 12px; background: var(--surf2); border: 1px solid var(--line); padding: 1px 5px; border-radius: 3px; color: var(--amber2); }
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .comp-table td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/#privacy">Privacidad</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Codificador Base64 online
+    </div>
+
+    <a class="lang-notice" href="/blog/base64-encode-decode-online-tool/">
+      🌐 Read this article in English
+    </a>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía práctica · TextForge</div>
+      <h1>Codificador Base64 Online — Sin Subir Archivos, Sin Terminal</h1>
+      <p class="article-intro">
+        Base64 aparece en todas partes cuando desarrollas — tokens JWT, cabeceras de autenticación, secretos de Kubernetes. Aquí te explicamos cómo codificarlo y decodificarlo directamente en tu navegador, sin enviar datos a un servidor.
+      </p>
+      <div class="article-date">26 de junio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Base64 aparece en los peores momentos: estás depurando un JWT y necesitas ver el payload, tienes un secreto que debe ir codificado en un manifiesto YAML, o estás configurando una cabecera HTTP Basic Auth y quieres verificar que las credenciales son correctas. La codificación en sí es trivial — la fricción está en el flujo de trabajo.</p>
+
+      <p>Las dos soluciones habituales son el terminal o una herramienta web. Los comandos de terminal funcionan en macOS y Linux, pero son incómodos en Windows. Las herramientas web funcionan en cualquier sistema, pero estás pegando datos potencialmente sensibles — claves de API, tokens, credenciales — en un servidor desconocido. Ninguna es ideal.</p>
+
+      <h2>¿Qué es Base64?</h2>
+
+      <p>Base64 es un esquema de codificación que convierte datos binarios o texto arbitrario en una cadena de 64 caracteres ASCII imprimibles (A–Z, a–z, 0–9, <code>+</code>, <code>/</code>), usando <code>=</code> como relleno para que la longitud sea múltiplo de 4. El resultado codificado ocupa aproximadamente un 33% más que el original.</p>
+
+      <p>No es cifrado ni compresión. Su propósito es transportar datos binarios o estructurados a través de sistemas que solo manejan texto plano — cabeceras HTTP, campos JSON, valores en CSS, atributos XML. Cualquiera con la cadena codificada puede decodificarla al instante.</p>
+
+      <h2>Cuándo lo necesitas</h2>
+
+      <div class="use-cases">
+        <div class="use-case">
+          <strong>Tokens JWT</strong>
+          Un JSON Web Token tiene tres secciones codificadas en Base64url separadas por puntos. El header y el payload no están cifrados — decodificar la sección central revela los claims en JSON crudo: expiración, ID de usuario, roles, permisos.
+        </div>
+        <div class="use-case">
+          <strong>HTTP Basic Auth</strong>
+          La cabecera <code>Authorization: Basic &lt;valor&gt;</code> contiene una cadena <code>usuario:contraseña</code> codificada en Base64. Decodificarla es una forma rápida de verificar qué credenciales está enviando realmente una petición.
+        </div>
+        <div class="use-case">
+          <strong>Data URIs</strong>
+          Las imágenes pequeñas y los SVGs se pueden incrustar directamente en CSS o HTML como <code>data:image/png;base64,…</code> URIs. Necesitas codificar en Base64 el contenido binario del archivo para generar la cadena.
+        </div>
+        <div class="use-case">
+          <strong>Archivos de configuración y secretos</strong>
+          Los secretos de Kubernetes, las variables de entorno en CI y muchas otras herramientas almacenan valores sensibles como cadenas Base64 en manifiestos YAML o JSON. Codificas el valor bruto antes de pegarlo en la configuración.
+        </div>
+        <div class="use-case">
+          <strong>Adjuntos de correo MIME</strong>
+          Los adjuntos de email están codificados en Base64 en el cuerpo del mensaje bruto. Cuando depuras la entrega de correo o parseas mensajes MIME, necesitas decodificar el payload del adjunto.
+        </div>
+      </div>
+
+      <h2>Por qué no usar el terminal o una herramienta web</h2>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Método</th><th>El problema</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>echo -n "…" | base64</td>
+            <td>Solo funciona en macOS/Linux. Requiere un terminal y la sintaxis correcta — el flag <code>-n</code> es crítico. Sin él, codificas silenciosamente un salto de línea al final.</td>
+          </tr>
+          <tr>
+            <td>certutil -encode (Windows)</td>
+            <td>Añade una cabecera y pie de estilo <code>-----BEGIN CERTIFICATE-----</code> que tienes que eliminar. Escribe en un archivo en lugar de stdout.</td>
+          </tr>
+          <tr>
+            <td>Herramientas web online</td>
+            <td>Tus datos se envían a un servidor remoto. Está bien para texto genérico, pero es un mal hábito con tokens, credenciales o claves privadas.</td>
+          </tr>
+          <tr>
+            <td>Línea de comandos con Python</td>
+            <td>Requiere Python instalado y cambiar de contexto al terminal — más pasos de los necesarios para algo tan habitual.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Una extensión de navegador elimina toda esa fricción: siempre accesible desde la barra de herramientas, sin terminal, ejecutándose completamente en tu máquina local.</p>
+
+      <h2>Codifica y decodifica Base64 con TextForge</h2>
+
+      <p>TextForge es una extensión de Chrome con más de 50 funciones de manipulación de texto. Base64 encode y decode están incluidas en la versión gratuita. Ningún dato sale de tu máquina — todo se ejecuta en el contexto local de la extensión.</p>
+
+      <h3>Codificación: Texto → Base64</h3>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Instala TextForge</div>
+            <div class="step-desc">Instala TextForge desde la Chrome Web Store. Fija el icono a tu barra de herramientas desde el menú de extensiones para tenerlo siempre a un clic.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Abre la extensión</div>
+            <div class="step-desc">Haz clic en el icono de TextForge en la barra de herramientas del navegador para abrir el panel de la extensión.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Pega tu texto</div>
+            <div class="step-desc">Pega la cadena que quieres codificar en el área de entrada. Puede ser texto plano, JSON, una URL, un valor de secreto — cualquier cosa que necesites en formato Base64.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Aplica Base64 Encode</div>
+            <div class="step-desc">Selecciona <strong>Base64 Encode</strong> del menú de herramientas. El resultado codificado aparece al instante — sin carga de página ni petición al servidor.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Copia el resultado</div>
+            <div class="step-desc">Haz clic para copiar la cadena codificada al portapapeles. Listo.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Decodificación: Base64 → Texto</h3>
+
+      <p>El proceso es idéntico a la inversa: pega la cadena Base64, selecciona <strong>Base64 Decode</strong> y copia el texto original. Ese es el flujo completo.</p>
+
+      <h2>Ejemplos prácticos</h2>
+
+      <p><strong>Inspeccionando el payload de un JWT.</strong> Toma cualquier JWT y divídelo por los puntos. La segunda sección es el payload — JSON codificado en Base64url. Base64url es una variante donde <code>+</code> se convierte en <code>-</code> y <code>/</code> en <code>_</code>. Pégala en TextForge, decodifícala y verás los claims en crudo de inmediato.</p>
+
+      <div class="example-block">
+        <span class="label">Payload JWT codificado en Base64url (entrada)</span>
+        <div class="val">eyJzdWIiOiJ1c2VyXzEyMyIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc2MjAwMDAwMH0</div>
+      </div>
+      <div class="example-block">
+        <span class="label">Decodificado (salida)</span>
+        <div class="val">{"sub":"user_123","role":"admin","exp":1762000000}</div>
+      </div>
+
+      <p><strong>Creando un secreto de Kubernetes.</strong> Kubernetes almacena los valores de secretos como cadenas codificadas en Base64 en el bloque <code>data:</code> del manifiesto. Codifica tu contraseña bruta o clave de API con TextForge y pega el resultado directamente en el YAML.</p>
+
+      <p><strong>Verificando una cabecera Basic Auth.</strong> Captura la cabecera <code>Authorization</code> desde la pestaña Network de DevTools. Elimina el prefijo <code>Basic </code>, pega el resto en TextForge, decodifícalo y confirma que el par <code>usuario:contraseña</code> es el correcto.</p>
+
+      <h2>Otras utilidades de TextForge</h2>
+
+      <p>Base64 es una de las más de 50 funciones de la extensión. Si trabajas con texto en el navegador a menudo, también encontrarás utilidad en el resto del toolkit: limpieza de espacios y formato, conversión de mayúsculas y minúsculas, ordenar líneas, extraer direcciones de correo o URLs de texto no estructurado, generar UUIDs y crear slugs a partir de títulos.</p>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿La codificación Base64 es lo mismo que el cifrado?</p>
+          <p class="faq-a">No. Base64 es un esquema de codificación, no cifrado. Cualquier persona con la cadena codificada puede decodificarla al instante sin necesitar ninguna clave. Se usa para transportar datos binarios a través de sistemas que solo manejan texto, no para ocultar información.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Es seguro pegar claves de API en una herramienta Base64 online?</p>
+          <p class="faq-a">No si la herramienta envía tus datos a un servidor. TextForge se ejecuta completamente en tu navegador como extensión de Chrome — tus claves de API, tokens y credenciales nunca salen de tu máquina.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Cuál es la diferencia entre Base64 y Base64url?</p>
+          <p class="faq-a">Base64url es una variante segura para URLs que reemplaza <code>+</code> por <code>-</code> y <code>/</code> por <code>_</code> para evitar conflictos en URLs y cabeceras HTTP. Los tokens JWT usan Base64url para sus secciones de cabecera y payload.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿TextForge funciona sin conexión a internet?</p>
+          <p class="faq-a">Sí. TextForge procesa todo localmente en tu navegador. Las funciones de codificación y decodificación Base64 funcionan sin conexión a internet.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿La función Base64 es gratuita en TextForge?</p>
+          <p class="faq-a">Sí. Base64 encode y decode están incluidos en la versión gratuita de TextForge. No se necesita cuenta ni suscripción.</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge es gratuito. Base64 encode y decode están disponibles en la versión gratuita — sin cuenta ni suscripción.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Instalar TextForge — gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/privacy.html">Política de privacidad</a>
+      <a href="/terms.html">Términos y condiciones</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
