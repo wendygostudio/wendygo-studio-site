@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Resize an Image for X (Twitter) Posts in Chrome (1200×675) — Wendygo Studio</title>
+  <meta name="description" content="Post images at the correct 1200×675 px so nothing gets cropped in the X feed. FrameForge resizes entirely in your browser — no upload, no Photoshop, no account." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/resize-image-for-x-twitter-post/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"How to Resize an Image for X (Twitter) Posts in Chrome"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Resize an Image for X (Twitter) Posts in Chrome (1200×675)","description":"Post images at the correct 1200×675 px so nothing gets cropped in the X feed. FrameForge resizes entirely in your browser — no upload, no Photoshop, no account.","datePublished":"2026-06-27","dateModified":"2026-06-27","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Resize an Image for X (Twitter) Posts in Chrome",
+    "description": "Resize any image to 1200×675 px for X (Twitter) posts using the FrameForge Chrome extension — no upload, no server, nothing sent outside your browser.",
+    "tool": [{ "@type": "HowToTool", "name": "FrameForge Chrome extension" }],
+    "step": [
+      {"@type":"HowToStep","position":1,"name":"Install FrameForge","text":"Install FrameForge from the Chrome Web Store and pin it to your browser toolbar."},
+      {"@type":"HowToStep","position":2,"name":"Open your image","text":"Click the FrameForge icon, then click Open image or drag your file onto the canvas."},
+      {"@type":"HowToStep","position":3,"name":"Select the X (Twitter) Post preset","text":"In the Platform dropdown, select X Post. The canvas locks to 1200×675 px at a 16:9 ratio."},
+      {"@type":"HowToStep","position":4,"name":"Adjust the crop","text":"Drag the crop overlay to center your subject in the 16:9 frame. Switch between fill modes to compare results before exporting."},
+      {"@type":"HowToStep","position":5,"name":"Export","text":"Click Export. FrameForge saves the resized 1200×675 image to your Downloads folder — ready to attach to your post on X."}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the best image size for an X (Twitter) post?","acceptedAnswer":{"@type":"Answer","text":"1200×675 px at a 16:9 ratio. This matches the proportions X uses when rendering inline images in the feed, so nothing gets cropped in the preview. Keep the file under 5 MB for JPG or PNG."}},
+    {"@type":"Question","name":"Does X crop images in the tweet feed?","acceptedAnswer":{"@type":"Answer","text":"Yes. X applies a center-crop to inline images, rendering them at roughly 2:1 in the feed. Images posted at 1200×675 px (16:9) fit that preview without unexpected cropping — the full image appears when the viewer expands it."}},
+    {"@type":"Question","name":"Does FrameForge upload my images to a server?","acceptedAnswer":{"@type":"Answer","text":"No. FrameForge is a Chrome extension that processes images entirely in your browser. Nothing is uploaded to any server. No account or login is required."}},
+    {"@type":"Question","name":"Can I use the same image for X and YouTube?","acceptedAnswer":{"@type":"Answer","text":"YouTube thumbnails are 1280×720 px and X posts are 1200×675 px — both are 16:9, so the crop and composition are the same. FrameForge has presets for both, so you can export two versions from the same source image without re-cropping."}},
+    {"@type":"Question","name":"Is FrameForge free?","acceptedAnswer":{"@type":"Answer","text":"Yes. FrameForge is free to install from the Chrome Web Store. The free version includes platform presets including X Post, and core resizing features. A Pro upgrade adds text overlay and batch processing."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .fill-options { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .fill-option {
+      padding: 14px 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .fill-option-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .fill-option-rec { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+    .fill-option p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .platform-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .platform-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .platform-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--text);
+    }
+    .platform-table tr:last-child td { border-bottom: none; }
+    .platform-table td:first-child { font-weight: 600; }
+    .platform-table td:nth-child(2) { color: var(--amber); font-variant-numeric: tabular-nums; font-size: 13px; }
+
+    .faq { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related { margin-top: 56px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES &#127760;</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to resize images for X (Twitter) posts
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide · FrameForge</div>
+      <h1>How to Resize an Image for X (Twitter) Posts in Chrome (1200×675)</h1>
+      <p class="article-intro">
+        X renders tweet images at a 2:1 crop in the feed preview. Square photos lose the top and bottom. Portrait shots get squeezed into a narrow center slice. The fix: post at 1200×675 px — 16:9 — and nothing gets cropped in either the feed preview or the full-size expanded view.
+      </p>
+      <div class="article-date">June 27, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>X doesn't warn you when it crops your image. You attach a square or portrait photo, hit post, and discover in the feed that your subject's face is half off-frame. The preview looked fine in the composer because X showed the full image there — the cropping only happens in the actual timeline view.</p>
+
+      <p>The solution is to size the image correctly before you post. <strong>1200×675 px at 16:9</strong> matches the proportions X uses when rendering images inline. FrameForge, a Chrome extension, resizes images entirely in your browser — nothing is uploaded, no account required.</p>
+
+      <h2>X (Twitter) Image Size Requirements</h2>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Property</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Recommended size</td><td>1200×675 px</td></tr>
+          <tr><td>Aspect ratio</td><td>16:9</td></tr>
+          <tr><td>Max file size</td><td>5 MB (JPG/PNG), 15 MB (GIF)</td></tr>
+          <tr><td>Accepted formats</td><td>JPG, PNG, WebP, GIF</td></tr>
+        </tbody>
+      </table>
+
+      <p>1200×675 is the sweet spot: it fills the feed preview proportionally and displays without letter-boxing or pillar-boxing when a viewer expands the image. A square (1:1) image gets center-cropped to 2:1 in the preview — you lose roughly a third of the image height before you even post.</p>
+
+      <h2>Why Portrait and Square Images Get Cropped</h2>
+
+      <p>X applies a center-crop when rendering inline images in the tweet timeline. The platform shows roughly a 2:1 slice from the center of whatever you attach.</p>
+
+      <p>For a square (1:1) photo at 1200×1200: X crops to the middle 1200×600-ish region, cutting the top and bottom. For a portrait shot (9:16): the horizontal center is used, cutting most of the image away. The full image is only visible when someone explicitly taps or clicks to expand it — and most people don't.</p>
+
+      <p>Sizing to 1200×675 eliminates the mismatch. The image is already 16:9, so the feed preview shows the full image at the correct proportions without any unexpected trim.</p>
+
+      <h2>Step-by-Step: Resize for X with FrameForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Install FrameForge</div>
+            <div class="step-desc">Install FrameForge from the Chrome Web Store and pin the icon to your toolbar from the Extensions menu — faster to reach during your posting workflow.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Open your image</div>
+            <div class="step-desc">Click the FrameForge icon to open the extension. Click <strong>Open image</strong> and select your file, or drag-and-drop directly onto the canvas. Supports JPG, PNG, WebP, and most common formats.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Select the X (Twitter) Post preset</div>
+            <div class="step-desc">In the <strong>Platform</strong> dropdown, select <strong>X Post</strong>. The canvas immediately locks to 1200×675 px at a 16:9 ratio — no need to type dimensions manually.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Adjust the crop</div>
+            <div class="step-desc">Drag the crop overlay to center your subject in the 16:9 frame. Switch between fill modes to compare how each option handles your specific image before committing.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Export</div>
+            <div class="step-desc">Click <strong>Export</strong>. FrameForge saves the resized 1200×675 image to your Downloads folder — ready to attach to your post on X.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Handling Portrait Source Images</h2>
+
+      <p>Portrait photos (9:16, the default from a phone camera) need the most adjustment when going into a 16:9 landscape frame. You have three options in FrameForge:</p>
+
+      <div class="fill-options">
+        <div class="fill-option">
+          <div class="fill-option-rec">Recommended</div>
+          <div class="fill-option-label">Crop to fill</div>
+          <p>The 16:9 canvas is completely filled. Excess from the top and bottom is trimmed. Drag the crop overlay to decide exactly what stays in frame — center it on the key visual element or your subject's face.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Fit with padding</div>
+          <p>The full portrait image is visible, with vertical bars on the left and right filling the 16:9 frame. Works if the bar color is chosen deliberately, but usually reads as an accident in a content feed.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Stretch to fill</div>
+          <p>The image is distorted horizontally to fill the frame. Avoid this unless horizontal distortion is a deliberate stylistic choice for your specific image.</p>
+        </div>
+      </div>
+
+      <p>For landscape source images wider than 16:9 (ultra-wide cinema crop, panoramas): excess is trimmed from the left and right instead of the top and bottom. Drag the overlay to center the subject horizontally.</p>
+
+      <h2>Resizing for Multiple Platforms at Once</h2>
+
+      <p>If you cross-post the same content to other platforms on the same day, FrameForge covers all of them from a single extension. Here are the key presets:</p>
+
+      <table class="platform-table">
+        <thead>
+          <tr><th>Platform</th><th>Target size</th><th>Aspect ratio</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>X (Twitter) post</td><td>1200×675 px</td><td>16:9</td></tr>
+          <tr><td>YouTube thumbnail</td><td>1280×720 px</td><td>16:9</td></tr>
+          <tr><td>Instagram post (square)</td><td>1080×1080 px</td><td>1:1</td></tr>
+          <tr><td>Twitch panel</td><td>320×160 px</td><td>2:1</td></tr>
+        </tbody>
+      </table>
+
+      <p>X and YouTube are both 16:9, which means the same composition works for both. You can export the X Post version at 1200×675, then switch the preset to YouTube Thumbnail at 1280×720 — same crop, different pixel count, done in one extra click.</p>
+
+      <div class="cta-box">
+        <p>FrameForge is free to install. The X Post preset and core resizing features are included in the free version — no account, no subscription required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Install FrameForge — free
+        </a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">What is the best image size for an X (Twitter) post?</div>
+          <div class="faq-a">1200×675 px at a 16:9 ratio. This matches the proportions X uses when rendering inline images in the tweet feed, so nothing gets cropped in the preview. Keep the file under 5 MB for JPG or PNG.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does X crop images in the tweet feed?</div>
+          <div class="faq-a">Yes. X applies a center-crop to inline images when displaying them in the timeline, rendering them at roughly 2:1. Images posted at 1200×675 px (16:9) fit that preview without unexpected cropping — the full image is only shown when a viewer taps or clicks to expand it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does FrameForge upload my images to a server?</div>
+          <div class="faq-a">No. FrameForge is a Chrome extension that processes images entirely in your browser. Nothing is uploaded to any server. No account or login is required, and there is no backend receiving your files.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I use the same image for X and YouTube?</div>
+          <div class="faq-a">Yes — both are 16:9. YouTube thumbnails are 1280×720 px and X posts are 1200×675 px, so the composition is identical. FrameForge has presets for both, so you can export two versions from the same source image without re-cropping or reopening the file.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is FrameForge free?</div>
+          <div class="faq-a">Yes. FrameForge is free to install from the Chrome Web Store. The free version includes the X Post preset and core resizing features. A Pro upgrade adds text overlay and batch processing for high-volume publishing workflows.</div>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related articles</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/resize-image-youtube-thumbnail-chrome/">
+            How to Resize an Image for YouTube Thumbnails in Your Browser
+            <span>FrameForge · June 25, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-for-instagram-chrome/">
+            How to Resize an Image for Instagram Posts in Chrome (1080×1080)
+            <span>FrameForge · June 26, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-for-twitch-panel-chrome/">
+            How to Resize an Image for Twitch Panels in Chrome (320×160)
+            <span>FrameForge · June 26, 2026</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

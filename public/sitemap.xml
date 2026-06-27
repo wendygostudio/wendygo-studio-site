@@ -116,4 +116,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-correos-desde-texto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-emails-from-text/"/>
   </url>
+
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-x-twitter-post/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
