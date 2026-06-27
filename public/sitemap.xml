@@ -122,6 +122,16 @@
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-x-twitter-post/"/>    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-x-twitter-post/"/>
   </url>
 
 </urlset>
