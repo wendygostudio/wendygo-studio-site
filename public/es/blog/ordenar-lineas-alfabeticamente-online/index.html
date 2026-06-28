@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Sort Lines Alphabetically Online — No Excel, No Terminal | Wendygo Studio</title>
-  <meta name="description" content="Sort any list of lines alphabetically in seconds. TextForge is a free Chrome extension that sorts text locally in your browser — no spreadsheet, no command line, no data uploaded." />
-  <link rel="canonical" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/" />
+  <title>Cómo Ordenar Líneas Alfabéticamente Online — Sin Excel, Sin Terminal | Wendygo Studio</title>
+  <meta name="description" content="Ordena cualquier lista de líneas alfabéticamente en segundos. TextForge es una extensión gratuita de Chrome que ordena texto localmente en tu navegador — sin hoja de cálculo, sin línea de comando, sin datos enviados." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/" />
 
   <script type="application/ld+json">
   {
@@ -57,8 +57,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "How to Sort Lines Alphabetically Online"}
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Cómo Ordenar Líneas Alfabéticamente Online"}
     ]
   }
   </script>
@@ -348,139 +348,139 @@
       Wendygo Studio
     </a>
     <div class="nav-links">
-      <a href="/#products">Extensions</a>
-      <a href="/blog/">Blog</a>
-      <a href="/tools/">Tools</a>
-      <a href="/#how">How it works</a>
-      <a href="/#privacy">Privacy</a>
-      <a href="/es/" class="nav-lang">ES 🌐</a>
+      <a href="/#products">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/#how">Cómo funciona</a>
+      <a href="/#privacy">Privacidad</a>
+      <a href="/blog/sort-lines-alphabetically-online/" class="nav-lang">EN 🌐</a>
     </div>
   </nav>
 
   <div class="article-wrap">
 
     <div class="breadcrumb">
-      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to sort lines alphabetically online
+      <a href="/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Cómo ordenar líneas alfabéticamente online
     </div>
 
     <div class="article-meta">
-      <div class="article-tag">How-to guide · TextForge</div>
-      <h1>How to Sort Lines Alphabetically Online — No Excel, No Terminal</h1>
+      <div class="article-tag">Guía práctica · TextForge</div>
+      <h1>Cómo Ordenar Líneas Alfabéticamente Online — Sin Excel, Sin Terminal</h1>
       <p class="article-intro">
-        You have a list of hostnames, package names, error codes, or config keys that came out in insertion order. Here's how to sort them alphabetically in seconds, locally, without opening a spreadsheet or a terminal.
+        Tienes una lista de nombres de servidor, paquetes de código, códigos de error o claves de configuración que salieron en orden de inserción. Aquí te mostramos cómo ordenarlos alfabéticamente en segundos, localmente, sin abrir una hoja de cálculo ni una terminal.
       </p>
-      <div class="article-date">June 28, 2026</div>
+      <div class="article-date">28 de junio de 2026</div>
     </div>
 
     <hr class="divider" />
 
     <div class="article-body">
 
-      <p>Lists accumulate in whatever order you added them: hostnames from a monitoring export, packages from a requirements file, environment variable names from a config dump. Sorting them alphabetically makes them easier to scan, audit, and diff.</p>
+      <p>Las listas se acumulan en el orden que las añadiste: nombres de servidor de un export de monitoreo, paquetes de un archivo de requisitos, nombres de variables de entorno de un dump de configuración. Ordenarlas alfabéticamente las hace más fáciles de escanear, auditar y comparar con diff.</p>
 
-      <p>Opening Excel or Google Sheets to sort a plain text list means pasting into a column, navigating to Data&nbsp;&gt;&nbsp;Sort, then copying the result back — more steps than the task deserves. The terminal <code>sort</code> command works but requires saving to a file and knowing the right flags. Online sorters exist, but if your lines include internal hostnames, API paths, or config keys, pasting them into a third-party site is a risk you may not want to take.</p>
+      <p>Abrir Excel o Google Sheets para ordenar una lista de texto plano significa pegar en una columna, navegar a Datos&nbsp;&gt;&nbsp;Ordenar, y copiar el resultado de vuelta — más pasos de los que la tarea merece. El comando <code>sort</code> de terminal funciona pero requiere guardar a un archivo y saber los flags correctos. Existen servicios online para ordenar, pero si tus líneas incluyen nombres de servidor internos, rutas de API o claves de configuración, pegar en un sitio de terceros es un riesgo que quizá no quieras asumir.</p>
 
-      <p>TextForge is a Chrome extension with a Sort Lines function that runs entirely in your browser. Paste the list, apply the sort, copy the result. Nothing leaves your machine.</p>
+      <p>TextForge es una extensión de Chrome con una función de Ordenar Líneas que se ejecuta completamente en tu navegador. Pega la lista, aplica la ordenación, copia el resultado. Nada sale de tu máquina.</p>
 
-      <h2>When You Need to Sort Lines</h2>
+      <h2>Cuándo Necesitas Ordenar Líneas</h2>
 
       <div class="use-cases">
         <div class="use-case">
-          <strong>Configuration files</strong>
-          Environment variable lists, import statements, and Kubernetes manifest fields grow in insertion order. Sorting them alphabetically makes files faster to scan and produces cleaner diffs — you can immediately see what was added or removed instead of hunting through arbitrary order.
+          <strong>Archivos de configuración</strong>
+          Las listas de variables de entorno, sentencias import y campos de manifiestos de Kubernetes crecen en orden de inserción. Ordenarlos alfabéticamente hace archivos más rápidos de leer y produce diffs más limpios — puedes ver inmediatamente qué se añadió o se eliminó en lugar de buscar entre un orden arbitrario.
         </div>
         <div class="use-case">
-          <strong>Package and dependency lists</strong>
-          <code>requirements.txt</code>, <code>Gemfile</code>, and similar dependency files become hard to audit when packages appear in the order they were installed. An alphabetical list makes it easy to spot duplicates, compare versions, and onboard new teammates.
+          <strong>Listas de paquetes y dependencias</strong>
+          <code>requirements.txt</code>, <code>Gemfile</code> y archivos de dependencias similares se vuelven difíciles de auditar cuando los paquetes aparecen en el orden de instalación. Una lista alfabética facilita encontrar duplicados, comparar versiones e integrar a nuevos compañeros de equipo.
         </div>
         <div class="use-case">
-          <strong>Server and hostname inventories</strong>
-          When you pull a list of hostnames or service names from a monitoring export or config dump, sorting them alphabetically groups related entries and makes the list scannable at a glance.
+          <strong>Inventarios de servidores y nombres de hosts</strong>
+          Cuando sacas una lista de nombres de servidor o servicios de un export de monitoreo o dump de configuración, ordenarlos alfabéticamente agrupa entradas relacionadas y hace la lista explorable de un vistazo.
         </div>
         <div class="use-case">
-          <strong>Log error types and status codes</strong>
-          After pulling distinct error types or HTTP status codes from a log section, sorting the list alphabetically makes patterns easier to spot — you can quickly see which errors cluster and which appear in isolation.
+          <strong>Tipos de error en logs y códigos de estado</strong>
+          Después de extraer tipos de error distintos o códigos HTTP de una sección de log, ordenar la lista alfabéticamente hace patrones más fáciles de ver — puedes saber rápidamente qué errores se agrupan y cuáles aparecen aislados.
         </div>
         <div class="use-case">
-          <strong>Word lists and data entry</strong>
-          Vocabulary lists, product SKU sets, and structured reference data are all easier to validate and extend when kept in alphabetical order.
+          <strong>Listas de palabras y entrada de datos</strong>
+          Listas de vocabulario, conjuntos de SKU de productos y datos estructurados de referencia son todos más fáciles de validar y extender cuando se mantienen en orden alfabético.
         </div>
       </div>
 
-      <h2>Why Manual Alternatives Fall Short</h2>
+      <h2>Por Qué Las Alternativas Manuales Quedan Cortas</h2>
 
       <table class="comp-table">
         <thead>
-          <tr><th>Method</th><th>The friction</th></tr>
+          <tr><th>Método</th><th>La fricción</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>Sort by eye</td>
-            <td>Error-prone for anything over 10 lines; easy to miss a transposition or misplace an entry.</td>
+            <td>Ordenar a ojo</td>
+            <td>Propenso a errores para más de 10 líneas; fácil perder una transposición o poner una entrada en el lugar incorrecto.</td>
           </tr>
           <tr>
             <td>Excel / Google Sheets</td>
-            <td>Paste into a column, navigate to Data &gt; Sort, copy the result back — more steps than the task warrants for a one-off text operation.</td>
+            <td>Pega en una columna, navega a Datos &gt; Ordenar, copia el resultado de vuelta — más pasos de los que merece una operación de texto de una sola vez.</td>
           </tr>
           <tr>
             <td>Terminal <code>sort</code></td>
-            <td>Requires saving the list to a file, running the command with the correct flags, then reading the output back into your work.</td>
+            <td>Requiere guardar la lista a un archivo, ejecutar el comando con los flags correctos, luego leer el resultado de vuelta en tu trabajo.</td>
           </tr>
           <tr>
-            <td>Online sorter sites</td>
-            <td>Your hostnames, package names, API paths, or config keys are sent to a third-party server — a risk for internal or sensitive data.</td>
+            <td>Sitios ordenadores online</td>
+            <td>Tus nombres de servidor, paquetes, rutas de API o claves de configuración se envían a un servidor de terceros — un riesgo para datos internos o sensibles.</td>
           </tr>
         </tbody>
       </table>
 
-      <p>A browser extension removes all of that friction: one click from the toolbar, no context switch, all processing stays local on your machine.</p>
+      <p>Una extensión del navegador elimina toda esa fricción: un clic desde la barra de herramientas, sin cambio de contexto, todo el procesamiento permanece local en tu máquina.</p>
 
-      <h2>How to Sort Lines Alphabetically with TextForge</h2>
+      <h2>Cómo Ordenar Líneas Alfabéticamente con TextForge</h2>
 
       <ol class="steps">
         <li class="step-card">
           <div class="step-num">1</div>
           <div class="step-content">
-            <div class="step-title">Install TextForge</div>
-            <div class="step-desc">Install TextForge from the Chrome Web Store. After installing, open the Extensions menu and pin the TextForge icon to your toolbar so it's always one click away.</div>
+            <div class="step-title">Instala TextForge</div>
+            <div class="step-desc">Instala TextForge desde la Chrome Web Store. Después de instalar, abre el menú de Extensiones y fija el icono de TextForge en tu barra de herramientas para que esté a un clic siempre.</div>
           </div>
         </li>
         <li class="step-card">
           <div class="step-num">2</div>
           <div class="step-content">
-            <div class="step-title">Open the extension</div>
-            <div class="step-desc">Click the TextForge icon in your browser toolbar. The extension panel opens immediately — no new tab, no page navigation.</div>
+            <div class="step-title">Abre la extensión</div>
+            <div class="step-desc">Haz clic en el icono de TextForge en la barra de herramientas de tu navegador. El panel de la extensión se abre inmediatamente — sin nueva pestaña, sin navegación de página.</div>
           </div>
         </li>
         <li class="step-card">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">Paste your list</div>
-            <div class="step-desc">Paste your lines into the input area — one item per line. It can be a hostname list, a set of package names, environment variable names, or any line-per-item text block.</div>
+            <div class="step-title">Pega tu lista</div>
+            <div class="step-desc">Pega tus líneas en el área de entrada — un elemento por línea. Puede ser una lista de hosts, un conjunto de nombres de paquetes, nombres de variables de entorno, o cualquier bloque de texto de un elemento por línea.</div>
           </div>
         </li>
         <li class="step-card">
           <div class="step-num">4</div>
           <div class="step-content">
-            <div class="step-title">Apply Sort Lines</div>
-            <div class="step-desc">Select <strong>Sort Lines</strong> from the tools menu. TextForge sorts all lines alphabetically (A&rarr;Z) instantly. No data leaves your browser.</div>
+            <div class="step-title">Aplica Ordenar Líneas</div>
+            <div class="step-desc">Selecciona <strong>Ordenar Líneas</strong> del menú de herramientas. TextForge ordena todas las líneas alfabéticamente (A&rarr;Z) instantáneamente. Ningún dato sale de tu navegador.</div>
           </div>
         </li>
         <li class="step-card">
           <div class="step-num">5</div>
           <div class="step-content">
-            <div class="step-title">Copy the result</div>
-            <div class="step-desc">The sorted list appears immediately. Click to copy it to your clipboard and paste it back into your file, document, or terminal.</div>
+            <div class="step-title">Copia el resultado</div>
+            <div class="step-desc">La lista ordenada aparece inmediatamente. Haz clic para copiarla a tu portapapeles y pégala de vuelta en tu archivo, documento o terminal.</div>
           </div>
         </li>
       </ol>
 
-      <h2>Practical Example</h2>
+      <h2>Ejemplo Práctico</h2>
 
-      <p>Say you pull a server inventory from a monitoring dashboard and the entries come out in uptime order:</p>
+      <p>Digamos que sacas un inventario de servidores de un panel de monitoreo y las entradas salen en orden de tiempo de actividad:</p>
 
       <div class="example-block">
-        <span class="label">Input — unsorted server list</span>
+        <span class="label">Entrada — lista de servidores sin ordenar</span>
         <div class="val">redis-cache.prod.internal
 api-gateway.prod.internal
 auth-service.prod.internal
@@ -489,10 +489,10 @@ monitoring.prod.internal
 logging.prod.internal</div>
       </div>
 
-      <p>After applying Sort Lines in TextForge, the output is:</p>
+      <p>Después de aplicar Ordenar Líneas en TextForge, el resultado es:</p>
 
       <div class="example-block">
-        <span class="label">Output — sorted alphabetically</span>
+        <span class="label">Salida — ordenado alfabéticamente</span>
         <div class="val">api-gateway.prod.internal
 auth-service.prod.internal
 logging.prod.internal
@@ -501,84 +501,84 @@ postgres-primary.prod.internal
 redis-cache.prod.internal</div>
       </div>
 
-      <p>Six hostnames sorted into a clean alphabetical list in under two seconds — ready to paste into a runbook, a config file, or a diff review. No copy-paste shuffling, no terminal, no spreadsheet.</p>
+      <p>Seis nombres de servidor ordenados en una lista alfabética limpia en menos de dos segundos — listo para pegar en un runbook, archivo de configuración o revisión de diff. Sin copiar y pegar mezclado, sin terminal, sin hoja de cálculo.</p>
 
-      <h2>Other Text Functions in TextForge</h2>
+      <h2>Otras Funciones de Texto en TextForge</h2>
 
-      <p>TextForge includes over 50 text utility functions. If you work with structured data or logs, you might also reach for:</p>
+      <p>TextForge incluye más de 50 funciones de utilidad de texto. Si trabajas con datos estructurados o logs, también podrías usar:</p>
 
       <div class="feature-list">
         <div class="feature-item">
-          <span class="fi-name">Extract Emails</span>
-          <span class="fi-desc">Pull every email address from a block of mixed text — log files, CRM exports, forwarded threads.</span>
+          <span class="fi-name">Extraer Correos</span>
+          <span class="fi-desc">Extrae cada dirección de correo de un bloque de texto mixto — archivos de log, exports de CRM, threads reenviados.</span>
         </div>
         <div class="feature-item">
-          <span class="fi-name">Extract URLs</span>
-          <span class="fi-desc">Isolate links and API endpoints from logs, configs, or copied HTML without regex.</span>
+          <span class="fi-name">Extraer URLs</span>
+          <span class="fi-desc">Aísla enlaces y endpoints de API de logs, configs o HTML copiado sin regex.</span>
         </div>
         <div class="feature-item">
-          <span class="fi-name">Extract IPs</span>
-          <span class="fi-desc">Pull IP addresses out of log output or network data in one step.</span>
+          <span class="fi-name">Extraer IPs</span>
+          <span class="fi-desc">Extrae direcciones IP de output de logs o datos de red en un paso.</span>
         </div>
         <div class="feature-item">
-          <span class="fi-name">Base64 Encode / Decode</span>
-          <span class="fi-desc">Convert values for JWT inspection, Kubernetes secrets, or Basic Auth headers — locally.</span>
+          <span class="fi-name">Base64 Codificar / Decodificar</span>
+          <span class="fi-desc">Convierte valores para inspección JWT, secretos de Kubernetes o headers de Basic Auth — localmente.</span>
         </div>
         <div class="feature-item">
-          <span class="fi-name">UUID Generate</span>
-          <span class="fi-desc">Create a UUID directly in the browser without a terminal or online generator.</span>
+          <span class="fi-name">Generar UUID</span>
+          <span class="fi-desc">Crea un UUID directamente en el navegador sin terminal o generador online.</span>
         </div>
       </div>
 
-      <p>All extraction functions, Sort Lines, Base64, and UUID are included in the free version. Regex find-and-replace is available in the Pro version.</p>
+      <p>Todas las funciones de extracción, Ordenar Líneas, Base64 y UUID están incluidas en la versión gratuita. Buscar y reemplazar con regex está disponible en la versión Pro.</p>
 
-      <h2>Frequently Asked Questions</h2>
+      <h2>Preguntas Frecuentes</h2>
 
       <div class="faq-list">
         <div class="faq-item">
-          <p class="faq-q">Does TextForge send my lines to a server to sort them?</p>
-          <p class="faq-a">No. TextForge is a Chrome extension. All processing — including Sort Lines — happens locally in your browser. Your text never leaves your machine and is not sent to Wendygo Studio servers or any third-party service.</p>
+          <p class="faq-q">¿TextForge envía mis líneas a un servidor para ordenarlas?</p>
+          <p class="faq-a">No. TextForge es una extensión de Chrome. Todo el procesamiento — incluyendo Ordenar Líneas — sucede localmente en tu navegador. Tu texto nunca sale de tu máquina y no se envía a servidores de Wendygo Studio o a ningún servicio de terceros.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">Is Sort Lines free in TextForge?</p>
-          <p class="faq-a">Yes. Sort Lines is included in the free version of TextForge. No account, subscription, or sign-in required.</p>
+          <p class="faq-q">¿Ordenar Líneas es gratuito en TextForge?</p>
+          <p class="faq-a">Sí. Ordenar Líneas está incluido en la versión gratuita de TextForge. Sin cuenta, sin suscripción, sin inicio de sesión requerido.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">How many lines can TextForge sort at once?</p>
-          <p class="faq-a">There is no fixed line limit. Typical use cases — a config file, a dependency list, a server inventory — are well within range. You can paste as many lines as fit comfortably in the extension panel.</p>
+          <p class="faq-q">¿Cuántas líneas puede ordenar TextForge a la vez?</p>
+          <p class="faq-a">No hay un límite fijo de líneas. Los casos de uso típicos — un archivo de configuración, una lista de dependencias, un inventario de servidores — están bien dentro del rango. Puedes pegar tantas líneas como quepan cómodamente en el panel de la extensión.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">Can TextForge also extract emails and URLs from text?</p>
-          <p class="faq-a">Yes. TextForge includes Extract Emails, Extract URLs, and Extract IPs in the free version — useful when a log file or export mixes several types of data and you need to isolate one type at a time.</p>
+          <p class="faq-q">¿Puede TextForge también extraer correos y URLs de texto?</p>
+          <p class="faq-a">Sí. TextForge incluye Extraer Correos, Extraer URLs y Extraer IPs en la versión gratuita — útil cuando un archivo de log o export mezcla varios tipos de datos y necesitas aislar un tipo a la vez.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">Does Sort Lines work in browsers other than Chrome?</p>
-          <p class="faq-a">TextForge is a Chrome extension published on the Chrome Web Store. It works in Chrome and other Chromium-based browsers such as Edge or Brave that support Chrome Web Store extensions.</p>
+          <p class="faq-q">¿Funciona Ordenar Líneas en navegadores que no sean Chrome?</p>
+          <p class="faq-a">TextForge es una extensión de Chrome publicada en la Chrome Web Store. Funciona en Chrome y otros navegadores basados en Chromium como Edge o Brave que soportan extensiones de Chrome Web Store.</p>
         </div>
       </div>
 
       <div class="related">
-        <div class="related-label">Related guides</div>
+        <div class="related-label">Guías relacionadas</div>
         <div class="related-links">
-          <a class="related-link" href="/blog/extract-emails-from-text/">
-            How to Extract Emails from Text Online — No Manual Hunting
-            <span>Pull every email address from any text block locally with TextForge</span>
+          <a class="related-link" href="/es/blog/extraer-correos-de-texto/">
+            Cómo Extraer Correos de Texto Online — Sin Búsqueda Manual
+            <span>Extrae cada dirección de correo de cualquier bloque de texto localmente con TextForge</span>
           </a>
-          <a class="related-link" href="/blog/extract-urls-from-text/">
-            How to Extract URLs from Text Online — No Regex, No Terminal
-            <span>Isolate links and API endpoints from logs and configs without uploading data</span>
+          <a class="related-link" href="/es/blog/extraer-urls-de-texto/">
+            Cómo Extraer URLs de Texto Online — Sin Regex, Sin Terminal
+            <span>Aísla enlaces y endpoints de API de logs y configs sin enviar datos</span>
           </a>
-          <a class="related-link" href="/blog/base64-encode-decode-online-tool/">
-            Base64 Encode and Decode Online — No Upload, No Command Line
-            <span>Convert JWT payloads, Kubernetes secrets, and Basic Auth headers in your browser</span>
+          <a class="related-link" href="/es/blog/base64-codificador-decodificador-online/">
+            Base64 Codificar y Decodificar Online — Sin Upload, Sin Línea de Comando
+            <span>Convierte payloads JWT, secretos de Kubernetes y headers de Basic Auth en tu navegador</span>
           </a>
         </div>
       </div>
 
       <div class="cta-box">
-        <p>TextForge is free to install. Sort Lines, all extraction functions, Base64, and UUID are included in the free version — no account or subscription required.</p>
+        <p>TextForge es gratuito para instalar. Ordenar Líneas, todas las funciones de extracción, Base64 y UUID están incluidos en la versión gratuita — sin cuenta ni suscripción requerida.</p>
         <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
-          Install TextForge — free
+          Instala TextForge — gratis
         </a>
       </div>
 
@@ -586,12 +586,12 @@ redis-cache.prod.internal</div>
   </div>
 
   <footer>
-    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
     <div class="footer-links">
       <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
-      <a href="mailto:wendygostudio@gmail.com">Contact</a>
-      <a href="/privacy.html">Privacy policy</a>
-      <a href="/terms.html">Terms and conditions</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/privacy.html">Política de privacidad</a>
+      <a href="/terms.html">Términos y condiciones</a>
     </div>
   </footer>
 
