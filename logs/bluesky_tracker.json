@@ -14,5 +14,13 @@
     "url": null,
     "posted": true,
     "reason": "Generic productivity tip without product mention — alternates from tipo_2 — useful for developers across platforms"
+  },
+  {
+    "date": "2026-06-28",
+    "type": "tipo_2",
+    "text": "Stop pasting lists into Excel or the terminal. TextForge's Sort Lines handles it in your browser — servers, requirements.txt, env vars, all alphabetically ordered in seconds.\n\nNo files. No uploads to sketchy sites.\n\n→ wendygostudio.com/blog/sort-lines-alphabetically-online/",
+    "url": "wendygostudio.com/blog/sort-lines-alphabetically-online/",
+    "posted": true,
+    "reason": "Promotes new sort-lines article published today — technical, solves specific dev workflow pain point (ordering lists without external tools)"
   }
 ]
