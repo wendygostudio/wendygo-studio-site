@@ -6,5 +6,13 @@
     "url": "wendygostudio.com/blog/base64-encode-decode-online-tool/",
     "posted": false,
     "reason": "Promotes new Base64 article published today — technical, solves real friction point for developers"
+  },
+  {
+    "date": "2026-06-27",
+    "type": "tipo_1",
+    "text": "💡 Keyboard shortcut: Press Ctrl+Shift+V when pasting code into any text field — it pastes plain text instead of formatted HTML.\n\nSaves you from broken code caused by hidden styling. Works in most browsers.\n\nTry it next time you're debugging.",
+    "url": null,
+    "posted": true,
+    "reason": "Generic productivity tip without product mention — alternates from tipo_2 — useful for developers across platforms"
   }
 ]
