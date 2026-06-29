@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP Address Extractor — Extract All IPs from Any Text Free</title>
+  <meta name="description" content="Paste any text and instantly extract all IPv4 and IPv6 addresses. Free browser tool — log files, config dumps, network output. Nothing uploaded to any server." />
+  <link rel="canonical" href="https://wendygostudio.com/tools/ip-extractor/" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "IP Address Extractor",
+      "url": "https://wendygostudio.com/tools/ip-extractor/",
+      "description": "Free browser-based tool to extract all IPv4 and IPv6 addresses from any text — log files, config dumps, firewall output. 100% local, no server upload.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Extracts IPv4 addresses from any text",
+        "Extracts IPv6 addresses from any text",
+        "Shows frequency count per unique IP",
+        "Classifies private, public, and loopback ranges",
+        "100% local — no server upload"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "IP Address Extractor", "item": "https://wendygostudio.com/tools/ip-extractor/" }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --green:  #4ade80;
+      --red:    #f87171;
+      --blue:   #60a5fa;
+      --purple: #a78bfa;
+      --r: 9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "Cascadia Code", "Fira Code", "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Page layout */
+    .page-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(40px,7vw,72px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 28px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Hero */
+    .tool-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(24px,4vw,36px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.6px; margin-bottom: 12px;
+    }
+    .tool-intro { font-size: 16px; color: var(--muted); line-height: 1.65; margin-bottom: 32px; }
+
+    /* Input area */
+    .input-section { margin-bottom: 16px; }
+    .input-label {
+      display: block; font-size: 13px; font-weight: 600; color: var(--muted);
+      margin-bottom: 8px; letter-spacing: .2px;
+    }
+    textarea {
+      width: 100%; background: var(--surf); border: 1px solid var(--line);
+      border-radius: 12px; color: var(--text); font-family: var(--mono);
+      font-size: 13px; line-height: 1.6; padding: 16px 18px;
+      resize: vertical; min-height: 180px; outline: none;
+      transition: border-color .15s;
+    }
+    textarea::placeholder { color: var(--faint); }
+    textarea:focus { border-color: var(--amber); }
+
+    /* Action row */
+    .action-row {
+      display: flex; gap: 12px; align-items: center;
+      margin-bottom: 32px; flex-wrap: wrap;
+    }
+    .extract-btn {
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; padding: 11px 28px;
+      border: none; border-radius: 8px; cursor: pointer;
+      transition: background .15s; white-space: nowrap;
+    }
+    .extract-btn:hover { background: var(--amber2); }
+    .extract-btn:disabled { opacity: .45; cursor: not-allowed; }
+    .char-count { font-size: 13px; color: var(--faint); margin-left: auto; }
+
+    /* Results */
+    #results { display: none; }
+
+    /* Stats row */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      padding: 14px 16px; text-align: center;
+    }
+    .stat-value { font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.1; }
+    .stat-label { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .7px; font-weight: 600; }
+    .stat-card.highlight .stat-value { color: var(--amber); }
+
+    /* Empty state */
+    .empty-state {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 40px 24px; text-align: center; margin-bottom: 24px;
+    }
+    .empty-icon { font-size: 36px; margin-bottom: 12px; display: block; filter: grayscale(1) opacity(.5); }
+    .empty-title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .empty-sub { font-size: 14px; color: var(--muted); }
+
+    /* Output block */
+    .output-block { margin-bottom: 24px; }
+    .output-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 8px; flex-wrap: wrap; gap: 8px;
+    }
+    .output-title { font-size: 14px; font-weight: 700; color: var(--text); }
+    .copy-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; border: 1px solid var(--line); color: var(--muted);
+      font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 6px;
+      cursor: pointer; transition: border-color .15s, color .15s;
+    }
+    .copy-btn:hover { border-color: var(--faint); color: var(--text); }
+    .copy-btn.copied { border-color: var(--green); color: var(--green); }
+    .output-textarea {
+      width: 100%; background: var(--surf2); border: 1px solid var(--line);
+      border-radius: 10px; color: var(--text); font-family: var(--mono);
+      font-size: 13px; line-height: 1.6; padding: 14px 16px;
+      resize: vertical; min-height: 120px; outline: none;
+      transition: border-color .15s;
+    }
+    .output-textarea:focus { border-color: var(--faint); }
+
+    /* Details table */
+    .details-block { margin-bottom: 24px; }
+    .details-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .ip-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .ip-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 10px;
+    }
+    .ip-table td {
+      padding: 10px 10px; border-bottom: 1px solid var(--line);
+      vertical-align: middle; color: var(--text);
+    }
+    .ip-table tr:last-child td { border-bottom: none; }
+    .ip-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--amber2); }
+    .ip-table td.count { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .badge {
+      display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .6px;
+      text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+    }
+    .badge-v4   { background: rgba(96,165,250,.15); color: var(--blue); }
+    .badge-v6   { background: rgba(167,139,250,.15); color: var(--purple); }
+    .badge-priv { background: rgba(139,147,163,.1); color: var(--muted); }
+    .badge-pub  { background: rgba(74,222,128,.1); color: var(--green); }
+    .badge-loop { background: rgba(248,113,113,.1); color: var(--red); }
+
+    /* Reset button */
+    .reset-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; border: 1px solid var(--line); color: var(--muted);
+      font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 7px;
+      cursor: pointer; transition: border-color .15s, color .15s; margin-bottom: 32px;
+    }
+    .reset-btn:hover { border-color: var(--faint); color: var(--text); }
+
+    /* CTA */
+    .cta-box {
+      margin-top: 8px; padding: 28px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .cta-box p { font-size: 14px; color: var(--muted); flex: 1; min-width: 200px; line-height: 1.55; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0;
+      background: var(--amber); color: var(--on-a);
+      font-size: 13px; font-weight: 700; text-decoration: none;
+      padding: 10px 20px; border-radius: 8px; transition: background .15s; white-space: nowrap;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Info section */
+    .info-section { margin-top: 56px; }
+    .info-section h2 { font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+    .info-p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
+    .range-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 24px; }
+    .range-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 10px;
+    }
+    .range-table td {
+      padding: 10px 10px; border-bottom: 1px solid var(--line); color: var(--text);
+    }
+    .range-table tr:last-child td { border-bottom: none; }
+    .range-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--amber2); }
+    .range-table td:last-child { color: var(--muted); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .cta-box { flex-direction: column; }
+      .ip-table td:nth-child(3) { display: none; }
+      .ip-table th:nth-child(3) { display: none; }
+    }
+    @media (max-width: 400px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🇪🇸</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/tools/">Tools</a><span>›</span>IP Address Extractor
+    </div>
+
+    <div class="tool-tag">Free tool · TextForge</div>
+    <h1>IP Address Extractor</h1>
+    <p class="tool-intro">Paste any text — server logs, firewall output, config dumps, network traces — and instantly extract every IPv4 and IPv6 address. Runs entirely in your browser. Nothing is sent to any server.</p>
+
+    <!-- Input -->
+    <div class="input-section">
+      <label class="input-label" for="inputText">Paste your text</label>
+      <textarea id="inputText" placeholder="Paste log files, config output, firewall rules, or any text containing IP addresses...
+
+Example:
+[2026-06-29 12:34:01] Connection from 192.168.1.105 to 10.0.0.1:443
+[2026-06-29 12:34:02] Blocked 203.0.113.42 (policy: geo-block)
+[2026-06-29 12:34:03] DNS query from ::1 for example.com
+[2026-06-29 12:34:04] Forwarding to 2001:db8::1 via eth0"></textarea>
+    </div>
+
+    <div class="action-row">
+      <button class="extract-btn" id="extractBtn">Extract IPs</button>
+      <span class="char-count" id="charCount">0 characters</span>
+    </div>
+
+    <!-- Results -->
+    <div id="results">
+
+      <div class="stats-row" id="statsRow">
+        <div class="stat-card highlight">
+          <div class="stat-value" id="statTotal">0</div>
+          <div class="stat-label">Total found</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statUnique">0</div>
+          <div class="stat-label">Unique IPs</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statV4">0</div>
+          <div class="stat-label">IPv4</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statV6">0</div>
+          <div class="stat-label">IPv6</div>
+        </div>
+      </div>
+
+      <div id="emptyState" class="empty-state" style="display:none;">
+        <span class="empty-icon">🔍</span>
+        <div class="empty-title">No IP addresses found</div>
+        <div class="empty-sub">The text you pasted doesn't contain any recognisable IPv4 or IPv6 addresses.</div>
+      </div>
+
+      <div id="foundContent" style="display:none;">
+
+        <div class="output-block">
+          <div class="output-header">
+            <span class="output-title">Unique IPs — one per line</span>
+            <button class="copy-btn" id="copyBtn">Copy all</button>
+          </div>
+          <textarea class="output-textarea" id="outputText" readonly></textarea>
+        </div>
+
+        <div class="details-block">
+          <div class="details-title">Details</div>
+          <table class="ip-table" id="ipTable">
+            <thead>
+              <tr>
+                <th>IP address</th>
+                <th>Count</th>
+                <th>Type</th>
+                <th>Scope</th>
+              </tr>
+            </thead>
+            <tbody id="ipTableBody"></tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <button class="reset-btn" id="resetBtn">← Extract from new text</button>
+
+      <div class="cta-box">
+        <p>Need to extract IPs directly from any page you're browsing? <strong>TextForge</strong> runs inside Chrome — open it, paste any text, and extract emails, URLs, and IP addresses in one click, all locally.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Try TextForge — free
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Info section -->
+    <div class="info-section">
+      <h2>What This Tool Extracts</h2>
+      <p class="info-p">The extractor finds all valid IPv4 addresses (e.g., <code style="font-family:var(--mono);font-size:12px;background:var(--surf2);border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--amber2)">203.0.113.42</code>) and IPv6 addresses (e.g., <code style="font-family:var(--mono);font-size:12px;background:var(--surf2);border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--amber2)">2001:db8::1</code>) in the text you paste. Each unique address appears once in the output list, with a count if it appears multiple times.</p>
+
+      <h2>Private IP Ranges</h2>
+      <table class="range-table">
+        <thead>
+          <tr><th>Range</th><th>CIDR</th><th>Common use</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10.0.0.0 – 10.255.255.255</td><td>10.0.0.0/8</td><td>Private networks (Class A)</td></tr>
+          <tr><td>172.16.0.0 – 172.31.255.255</td><td>172.16.0.0/12</td><td>Private networks (Class B)</td></tr>
+          <tr><td>192.168.0.0 – 192.168.255.255</td><td>192.168.0.0/16</td><td>Private networks (Class C)</td></tr>
+          <tr><td>127.0.0.0 – 127.255.255.255</td><td>127.0.0.0/8</td><td>Loopback (localhost)</td></tr>
+          <tr><td>169.254.0.0 – 169.254.255.255</td><td>169.254.0.0/16</td><td>Link-local (APIPA)</td></tr>
+        </tbody>
+      </table>
+      <p class="info-p">Public IPs are any addresses outside these reserved ranges. The tool classifies each extracted IP so you can quickly spot which ones are internal vs. internet-routable.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+  <script>
+    const inputText = document.getElementById('inputText');
+    const extractBtn = document.getElementById('extractBtn');
+    const charCount  = document.getElementById('charCount');
+    const results    = document.getElementById('results');
+    const resetBtn   = document.getElementById('resetBtn');
+    const copyBtn    = document.getElementById('copyBtn');
+    const outputText = document.getElementById('outputText');
+
+    // IPv4: strict octet validation
+    const IPv4_RE = /\b((?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?))\b/g;
+
+    // IPv6: covers full, compressed, and loopback forms
+    const IPv6_RE = /(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,7}:|(?:[0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,5}(?::[0-9a-fA-F]{1,4}){1,2}|(?:[0-9a-fA-F]{1,4}:){1,4}(?::[0-9a-fA-F]{1,4}){1,3}|(?:[0-9a-fA-F]{1,4}:){1,3}(?::[0-9a-fA-F]{1,4}){1,4}|(?:[0-9a-fA-F]{1,4}:){1,2}(?::[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:(?::[0-9a-fA-F]{1,4}){1,6}|:(?::[0-9a-fA-F]{1,4}){1,7}|::/g;
+
+    function isLoopback(ip) {
+      if (ip === '::1' || ip === '::') return true;
+      const parts = ip.split('.');
+      if (parts.length === 4) return Number(parts[0]) === 127;
+      return false;
+    }
+
+    function isPrivateIPv4(ip) {
+      const p = ip.split('.').map(Number);
+      return (
+        p[0] === 10 ||
+        (p[0] === 172 && p[1] >= 16 && p[1] <= 31) ||
+        (p[0] === 192 && p[1] === 168) ||
+        (p[0] === 169 && p[1] === 254)
+      );
+    }
+
+    function classifyIPv4(ip) {
+      if (isLoopback(ip)) return 'loopback';
+      if (isPrivateIPv4(ip)) return 'private';
+      return 'public';
+    }
+
+    function classifyIPv6(ip) {
+      const low = ip.toLowerCase();
+      if (low === '::1' || low === '::') return 'loopback';
+      if (low.startsWith('fe80:') || low.startsWith('fc') || low.startsWith('fd')) return 'private';
+      return 'public';
+    }
+
+    function isIPv4(ip) { return /^[\d.]+$/.test(ip); }
+
+    function scopeBadge(scope) {
+      if (scope === 'loopback') return '<span class="badge badge-loop">loopback</span>';
+      if (scope === 'private')  return '<span class="badge badge-priv">private</span>';
+      return '<span class="badge badge-pub">public</span>';
+    }
+
+    function typeBadge(type) {
+      return type === 'IPv4'
+        ? '<span class="badge badge-v4">IPv4</span>'
+        : '<span class="badge badge-v6">IPv6</span>';
+    }
+
+    function extract(text) {
+      const all = [];
+      let m;
+
+      // Collect IPv4
+      IPv4_RE.lastIndex = 0;
+      while ((m = IPv4_RE.exec(text)) !== null) {
+        all.push({ ip: m[1], type: 'IPv4', scope: classifyIPv4(m[1]) });
+      }
+
+      // Collect IPv6 — after stripping IPv4 matches to avoid false positives in IPv4-mapped IPv6
+      IPv6_RE.lastIndex = 0;
+      while ((m = IPv6_RE.exec(text)) !== null) {
+        const ip = m[0];
+        // Skip if already counted as IPv4 fragment (rare edge: ::ffff:192.168.1.1 — keep as IPv6)
+        all.push({ ip, type: 'IPv6', scope: classifyIPv6(ip) });
+      }
+
+      // Count frequency
+      const freq = {};
+      all.forEach(({ ip, type, scope }) => {
+        if (!freq[ip]) freq[ip] = { ip, type, scope, count: 0 };
+        freq[ip].count++;
+      });
+
+      const sorted = Object.values(freq).sort((a, b) => b.count - a.count || a.ip.localeCompare(b.ip));
+      return { all, sorted };
+    }
+
+    inputText.addEventListener('input', () => {
+      const len = inputText.value.length;
+      charCount.textContent = len.toLocaleString() + ' character' + (len === 1 ? '' : 's');
+    });
+
+    extractBtn.addEventListener('click', run);
+    inputText.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') run();
+    });
+
+    function run() {
+      const text = inputText.value;
+      if (!text.trim()) return;
+
+      const { all, sorted } = extract(text);
+
+      document.getElementById('statTotal').textContent  = all.length.toLocaleString();
+      document.getElementById('statUnique').textContent = sorted.length.toLocaleString();
+      document.getElementById('statV4').textContent     = sorted.filter(r => r.type === 'IPv4').length.toLocaleString();
+      document.getElementById('statV6').textContent     = sorted.filter(r => r.type === 'IPv6').length.toLocaleString();
+
+      const emptyState   = document.getElementById('emptyState');
+      const foundContent = document.getElementById('foundContent');
+
+      if (sorted.length === 0) {
+        emptyState.style.display   = '';
+        foundContent.style.display = 'none';
+      } else {
+        emptyState.style.display   = 'none';
+        foundContent.style.display = '';
+
+        // Output textarea
+        outputText.value = sorted.map(r => r.ip).join('\n');
+
+        // Detail table
+        const tbody = document.getElementById('ipTableBody');
+        tbody.innerHTML = '';
+        sorted.forEach(({ ip, type, scope, count }) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${escHtml(ip)}</td>
+            <td class="count">${count}×</td>
+            <td>${typeBadge(type)}</td>
+            <td>${scopeBadge(scope)}</td>`;
+          tbody.appendChild(tr);
+        });
+      }
+
+      results.style.display = '';
+      results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function escHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    copyBtn.addEventListener('click', () => {
+      if (!outputText.value) return;
+      navigator.clipboard.writeText(outputText.value).then(() => {
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy all';
+          copyBtn.classList.remove('copied');
+        }, 1800);
+      }).catch(() => {
+        outputText.select();
+        document.execCommand('copy');
+      });
+    });
+
+    resetBtn.addEventListener('click', () => {
+      results.style.display = 'none';
+      inputText.value = '';
+      charCount.textContent = '0 characters';
+      inputText.focus();
+    });
+  </script>
+</body>
+</html>
