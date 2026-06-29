@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Clean Pasted Text Formatting Online — No Upload Required | Wendygo Studio</title>
+  <meta name="description" content="Fix double spaces, broken whitespace, and case problems in pasted text instantly. TextForge is a free Chrome extension that cleans text locally in your browser — nothing uploaded." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/clean-pasted-text-formatting/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-pasted-text-formatting/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Clean Pasted Text Formatting Online",
+    "description": "Use TextForge Chrome extension to remove extra spaces, normalize whitespace, and fix case in text pasted from Word, PDFs, or email — entirely in your browser.",
+    "tool": [{ "@type": "HowToTool", "name": "TextForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install TextForge",
+        "text": "Install TextForge from the Chrome Web Store and pin the icon to your browser toolbar from the Extensions menu."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open the extension",
+        "text": "Click the TextForge icon in your browser toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Paste your dirty text",
+        "text": "Paste the text with formatting problems into the input area — double spaces, uneven whitespace, wrong case and all."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Apply Clean Spaces",
+        "text": "Select Clean Spaces from the tools menu. TextForge collapses double spaces, removes leading and trailing whitespace from each line, and normalizes the entire block."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Fix case if needed and copy",
+        "text": "If the text came in as ALL CAPS or all lowercase, apply Change Case to convert it to your target format. Then copy the clean result to your clipboard."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Clean Pasted Text Formatting Online"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Clean Pasted Text Formatting Online — No Upload Required",
+    "description": "Fix double spaces, broken whitespace, and case problems in pasted text instantly. TextForge is a free Chrome extension that cleans text locally in your browser — nothing uploaded.",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does TextForge send my text to a server when cleaning it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. TextForge is a Chrome extension. All processing — including Clean Spaces and Change Case — happens locally in your browser. Your text never leaves your machine and is not sent to Wendygo Studio servers or any third-party service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Clean Spaces free in TextForge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Clean Spaces is included in the free version of TextForge. No account, subscription, or sign-in required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use TextForge to clean text copied from a PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PDF copy-paste is a common source of extra spaces and broken whitespace. Paste the copied text into TextForge and apply Clean Spaces to normalize the result before using it anywhere else."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Clean Spaces and Sort Lines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clean Spaces normalizes whitespace within and around lines — collapsing double spaces, removing leading and trailing spaces. Sort Lines reorders the lines themselves alphabetically. Both are included in the free version and can be applied in sequence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TextForge work in Edge and Brave?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TextForge is published on the Chrome Web Store. It works in Chrome and other Chromium-based browsers — including Microsoft Edge and Brave — that support Chrome Web Store extensions."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+
+    /* Comparison table */
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-family: var(--mono); font-size: 12px; }
+    .comp-table td:last-child { color: var(--muted); }
+
+    /* Step cards */
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* Use case cards */
+    .use-cases { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .use-case {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .use-case strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* Example block */
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto;
+    }
+    .example-block .label {
+      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 8px; display: block;
+    }
+    .example-block .val { color: var(--text); white-space: pre; }
+
+    /* Feature list */
+    .feature-list { margin: 16px 0 24px; display: flex; flex-direction: column; gap: 8px; }
+    .feature-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 8px;
+      font-size: 14px;
+    }
+    .feature-item .fi-name { font-weight: 700; color: var(--text); white-space: nowrap; }
+    .feature-item .fi-desc { color: var(--muted); }
+
+    /* FAQ */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* Related articles */
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .comp-table td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🇪🇸</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to clean pasted text formatting online
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide · TextForge</div>
+      <h1>How to Clean Pasted Text Formatting Online — No Upload Required</h1>
+      <p class="article-intro">
+        Every time you paste text from Word, a PDF, or an email, you get uninvited extras: double spaces, uneven whitespace, broken lines, and wrong case. Here's how to fix all of it in seconds, without sending your text to any server.
+      </p>
+      <div class="article-date">June 29, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Copy text from a formatted document and paste it almost anywhere — a CMS, a code editor, a data entry form, a spreadsheet — and you rarely get clean output. The source document carries invisible baggage: double spaces from word processors, hyphenation from PDF renderers, all-caps headings that look wrong in context, lines padded with trailing whitespace that breaks field matching in CSVs.</p>
+
+      <p>Fixing this manually means hunting through the text character by character. Fixing it with a web tool means uploading your content to a server you don't control. TextForge offers a third option: a Chrome extension that cleans text locally, in your browser, without anything leaving your machine.</p>
+
+      <h2>What Makes Pasted Text "Dirty"</h2>
+
+      <div class="use-cases">
+        <div class="use-case">
+          <strong>Double and irregular spaces</strong>
+          Word processors and PDF renderers often output two spaces after a period, multiple spaces between words, or non-breaking spaces that don't collapse the way regular spaces do.
+        </div>
+        <div class="use-case">
+          <strong>Leading and trailing whitespace</strong>
+          Lines from formatted documents commonly carry invisible spaces at the start and end. These cause silent failures in CSV imports, template variables, and database fields that check for exact matches.
+        </div>
+        <div class="use-case">
+          <strong>Wrong or inconsistent case</strong>
+          Content copied from headings, legal documents, or old databases arrives in ALL CAPS, all lowercase, or mixed casing that doesn't match its destination format.
+        </div>
+        <div class="use-case">
+          <strong>Empty lines from paragraph breaks</strong>
+          Document paragraphs become blank lines in plain text — harmless in prose, but a parsing problem in structured data.
+        </div>
+      </div>
+
+      <h2>How TextForge Cleans Pasted Text</h2>
+
+      <p>TextForge includes two functions that handle the most common pasted formatting problems:</p>
+
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="fi-name">Clean Spaces</span>
+          <span class="fi-desc">Collapses multiple consecutive spaces into one, removes leading and trailing whitespace from every line, and strips blank lines caused by paragraph breaks in the source document.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Change Case</span>
+          <span class="fi-desc">Converts the entire text block to uppercase, lowercase, or title case in one step — useful when content arrives in the wrong casing from its source.</span>
+        </div>
+      </div>
+
+      <p>Both functions run entirely in your browser. TextForge is a Chrome extension — there is no server, no upload, and no account. The text you paste stays on your machine.</p>
+
+      <h2>How to Clean Pasted Text with TextForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Install TextForge</div>
+            <div class="step-desc">Install TextForge from the Chrome Web Store. After installing, open the Extensions menu and pin the TextForge icon to your toolbar so it's one click away.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Open the extension</div>
+            <div class="step-desc">Click the TextForge icon in your browser toolbar. The extension panel opens without navigating away from your current tab.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Paste the dirty text</div>
+            <div class="step-desc">Paste your text into the input area — double spaces, uneven whitespace, wrong case and all. You don't need to fix anything first.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Apply Clean Spaces</div>
+            <div class="step-desc">Select <strong>Clean Spaces</strong> from the tools menu. TextForge normalizes all whitespace instantly: multiple spaces collapse to one, leading and trailing spaces disappear, and stray blank lines are removed.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Fix case if needed, then copy</div>
+            <div class="step-desc">If the case is wrong, apply <strong>Change Case</strong> to convert to your target format. Then copy the clean result to your clipboard and paste it where it needs to go.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Practical Example</h2>
+
+      <p>Here's a block of text copied from a product spec document in Word. The formatting is typical: double spaces after punctuation, inconsistent spacing between fields, all-caps label text.</p>
+
+      <div class="example-block">
+        <span class="label">Input — pasted from Word</span>
+        <div class="val">Product  Name:   TextForge
+Version:   1.4
+Description:  A   text  toolkit  for  Chrome.
+STATUS:  ACTIVE</div>
+      </div>
+
+      <p>After applying <strong>Clean Spaces</strong> followed by <strong>Change Case</strong> (title case on the STATUS line, or lowercase on everything):</p>
+
+      <div class="example-block">
+        <span class="label">Output — after Clean Spaces</span>
+        <div class="val">Product Name: TextForge
+Version: 1.4
+Description: A text toolkit for Chrome.
+STATUS: ACTIVE</div>
+      </div>
+
+      <p>The double spaces are gone, the trailing whitespace is gone, and the text is ready to paste into a CMS field, a CSV row, or a code template without silent formatting issues downstream.</p>
+
+      <h2>When You Need This</h2>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Source</th><th>Typical problem</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Word / Google Docs</td>
+            <td>Double spaces, non-breaking spaces, paragraph break blank lines</td>
+          </tr>
+          <tr>
+            <td>PDF copy-paste</td>
+            <td>Hyphenation artifacts, inconsistent spacing, merged words</td>
+          </tr>
+          <tr>
+            <td>Email copy</td>
+            <td>Quoted-text padding, mixed indentation, soft-wrapped lines with trailing spaces</td>
+          </tr>
+          <tr>
+            <td>Old databases / CRM exports</td>
+            <td>ALL CAPS fields, leading spaces in values, inconsistent whitespace</td>
+          </tr>
+          <tr>
+            <td>Web page copy</td>
+            <td>Non-breaking spaces, extra whitespace from HTML layout, invisible Unicode characters</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Other TextForge Functions</h2>
+
+      <p>If you work regularly with messy text, you may also find these useful:</p>
+
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="fi-name">Sort Lines</span>
+          <span class="fi-desc">Alphabetically sort any list of lines — config keys, hostnames, package names — without a spreadsheet or terminal.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Remove Duplicate Lines</span>
+          <span class="fi-desc">Deduplicate a list of lines in one step — useful after merging exports or combining lists from multiple sources.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Extract Emails</span>
+          <span class="fi-desc">Pull every email address from a block of mixed text — log files, CRM exports, forwarded threads.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Slugify</span>
+          <span class="fi-desc">Convert a title or heading to a URL-safe slug — lowercase, hyphens, no special characters.</span>
+        </div>
+      </div>
+
+      <p>All of these functions are included in the free version of TextForge. Regex find-and-replace is available in Pro.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Does TextForge send my text to a server when cleaning it?</p>
+          <p class="faq-a">No. TextForge is a Chrome extension. All processing — including Clean Spaces and Change Case — happens locally in your browser. Your text never leaves your machine and is not sent to Wendygo Studio servers or any third-party service.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is Clean Spaces free in TextForge?</p>
+          <p class="faq-a">Yes. Clean Spaces is included in the free version of TextForge. No account, subscription, or sign-in required.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Can I use TextForge to clean text copied from a PDF?</p>
+          <p class="faq-a">Yes. PDF copy-paste is one of the most common sources of extra spaces and broken whitespace. Paste the copied text into TextForge and apply Clean Spaces to normalize the result before using it anywhere else.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What is the difference between Clean Spaces and Sort Lines?</p>
+          <p class="faq-a">Clean Spaces normalizes whitespace within and around lines — collapsing double spaces, removing leading and trailing spaces. Sort Lines reorders the lines themselves alphabetically. Both are in the free version and can be applied in sequence on the same text block.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Does TextForge work in Edge and Brave?</p>
+          <p class="faq-a">TextForge is published on the Chrome Web Store. It works in Chrome and other Chromium-based browsers — including Microsoft Edge and Brave — that support Chrome Web Store extensions.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/sort-lines-alphabetically-online/">
+            How to Sort Lines Alphabetically Online — No Excel, No Terminal
+            <span>Alphabetically sort any list of lines locally with TextForge</span>
+          </a>
+          <a class="related-link" href="/blog/remove-duplicate-lines-online/">
+            How to Remove Duplicate Lines Online — No Copy-Paste Loop
+            <span>Deduplicate any list in seconds without a spreadsheet or script</span>
+          </a>
+          <a class="related-link" href="/blog/extract-emails-from-text/">
+            How to Extract Emails from Text Online — No Manual Hunting
+            <span>Pull every email address from any text block locally with TextForge</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge is free to install. Clean Spaces, Change Case, Sort Lines, and all extraction functions are included in the free version — no account or subscription required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Install TextForge — free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
