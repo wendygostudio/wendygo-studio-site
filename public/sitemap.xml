@@ -167,4 +167,18 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-linkedin-post/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
