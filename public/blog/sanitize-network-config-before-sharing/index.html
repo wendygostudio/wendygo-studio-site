@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Sanitize Network Configs Before Sharing with AI Assistants | Wendygo Studio</title>
+  <meta name="description" content="Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Sanitize Network Configs Before Sharing with AI Assistants",
+    "description": "Use ScrubForge to replace sensitive values in a network config with consistent placeholder tokens so you can safely share the config with an AI assistant or external support.",
+    "tool": [{ "@type": "HowToTool", "name": "ScrubForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install ScrubForge",
+        "text": "Install ScrubForge from the Chrome Web Store and pin the icon to your browser toolbar from the Extensions menu."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open your config file",
+        "text": "Open your network configuration file in any text editor or terminal window."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Copy the config text",
+        "text": "Select all the configuration text and copy it to your clipboard."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Open ScrubForge",
+        "text": "Click the ScrubForge icon in your browser toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Paste and sanitize",
+        "text": "Paste the config into the input area. ScrubForge detects sensitive values and replaces each with a consistent placeholder token, locally in your browser."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Copy the sanitized output",
+        "text": "Copy the sanitized version and paste it into your AI assistant or support forum. Real credentials never leave your machine."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Sanitize Network Configs Before Sharing with AI Assistants"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Sanitize Network Configs Before Sharing with AI Assistants",
+    "description": "Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload.",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge send my config to any server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. ScrubForge is a Chrome extension that runs entirely in your browser. The text you paste is processed locally. Nothing is transmitted to Wendygo Studio servers or any external service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work with Cisco IOS, FortiGate, and AWS configs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ScrubForge is designed for infrastructure configuration files. It detects patterns common across vendor formats: IP addresses, subnet masks, pre-shared keys, SNMP community strings, and similar values. It works on plain text from any source you can copy from."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if ScrubForge misses a sensitive value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sanitizer detects known patterns. For unusual or custom secret formats, review the sanitized output before sharing. ScrubForge does not guarantee 100% coverage of every possible secret format."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ScrubForge free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ScrubForge is free to install and use from the Chrome Web Store. No account or subscription required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the sanitized output to recover the original values?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sanitized file alone cannot be reversed — ScrubForge does not upload a mapping anywhere. The mapping exists only in your original file and in the in-browser session."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+
+    /* Comparison table */
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-family: var(--mono); font-size: 12px; }
+    .comp-table td:last-child { color: var(--muted); }
+
+    /* Step cards */
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* Use case cards */
+    .use-cases { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .use-case {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .use-case strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* Example block */
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto;
+    }
+    .example-block .label {
+      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 8px; display: block;
+    }
+    .example-block .val { color: var(--text); white-space: pre; }
+    .example-block .val .token { color: var(--amber2); }
+
+    /* Warning box */
+    .warning-box {
+      padding: 16px 20px; background: var(--surf); border: 1px solid var(--amber);
+      border-radius: 10px; margin: 24px 0; font-size: 14px; color: var(--muted);
+    }
+    .warning-box strong { color: var(--amber); display: block; margin-bottom: 4px; }
+
+    /* FAQ */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a code {
+      font-family: var(--mono); font-size: 12px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+
+    /* Related articles */
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .comp-table td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES &#127758;</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>How to sanitize network configs before sharing
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide &middot; ScrubForge</div>
+      <h1>How to Sanitize Network Configs Before Sharing with AI Assistants</h1>
+      <p class="article-intro">
+        You want to paste a Cisco, FortiGate, or AWS config into ChatGPT or Claude to debug a policy issue. But the config has real IPs, shared secrets, and SNMP strings in it. ScrubForge replaces all of that with consistent placeholder tokens so the AI can help without seeing your real infrastructure.
+      </p>
+      <div class="article-date">June 29, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Network engineers and sysadmins spend a lot of time debugging configurations. AI assistants are increasingly useful for that: paste a FortiGate policy, ask why traffic isn't matching, and get a useful answer in seconds. The problem is that every real config contains data you shouldn't expose to an external service.</p>
+
+      <p>ScrubForge is a Chrome extension that sits between your config file and the AI assistant. Paste the config in, get a sanitized version out — all processed locally in your browser, nothing uploaded anywhere.</p>
+
+      <h2>Why Network Configs Are a Security Risk to Share</h2>
+
+      <p>A configuration file is not just settings. It contains a detailed map of your infrastructure:</p>
+
+      <div class="use-cases">
+        <div class="use-case">
+          <strong>Real IP addresses</strong>
+          Internal subnets, management interfaces, next-hop gateways — together they reveal your addressing scheme and topology.
+        </div>
+        <div class="use-case">
+          <strong>Shared secrets and keys</strong>
+          IPsec pre-shared keys, RADIUS shared secrets, SNMP community strings, and BGP authentication passwords appear in plaintext in most config exports.
+        </div>
+        <div class="use-case">
+          <strong>Credentials and usernames</strong>
+          Local user accounts, enable passwords, API keys for cloud-managed devices — all commonly present in exported configs.
+        </div>
+        <div class="use-case">
+          <strong>Hostnames and domain names</strong>
+          Internal naming conventions reveal how your organization names devices, sites, and services — useful reconnaissance data for an attacker.
+        </div>
+        <div class="use-case">
+          <strong>ACL and route map targets</strong>
+          Which IP ranges are permitted, denied, or routed where — effectively a map of your network segmentation policy.
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <strong>Why AI assistants specifically?</strong>
+        Unlike a support forum where you might carefully redact before posting, AI conversations feel informal and fast. It's easy to paste a raw config without thinking. Most AI providers process prompts on cloud infrastructure — even if they don't log or store your prompts, the data transits their systems.
+      </div>
+
+      <h2>How ScrubForge Works</h2>
+
+      <p>ScrubForge scans the pasted text for patterns that match known sensitive categories: IPv4 and IPv6 addresses, subnet masks, pre-shared keys, community strings, username-password pairs, and similar values. Each detected value is replaced with a consistent numbered placeholder.</p>
+
+      <p>The critical property is <strong>consistency</strong>: if the same IP address appears eight times in your config, all eight instances become the same token — <code>[IP_1]</code>. The AI reading the sanitized config sees the same logical relationships between objects. It can trace a routing decision, audit an ACL, or explain a policy — it just can't see that <code>[IP_1]</code> is actually your management interface.</p>
+
+      <p>All of this happens locally. The extension does not contact any external service. Your config text never leaves your browser tab.</p>
+
+      <h2>How to Sanitize a Config with ScrubForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Install ScrubForge</div>
+            <div class="step-desc">Install ScrubForge from the Chrome Web Store. Open the Extensions menu (<kbd>⋮</kbd> &gt; Extensions &gt; Manage extensions) and pin ScrubForge to your toolbar.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Copy your config</div>
+            <div class="step-desc">Open your config file in any text editor, SSH terminal, or web management interface. Select all the text and copy it to your clipboard.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Open ScrubForge</div>
+            <div class="step-desc">Click the ScrubForge icon in your browser toolbar. The extension panel opens immediately — no new tab, no redirect to an external site.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Paste and sanitize</div>
+            <div class="step-desc">Paste the config into the input area. ScrubForge processes the text locally and displays the sanitized version with sensitive values replaced by consistent placeholder tokens.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Copy the sanitized output</div>
+            <div class="step-desc">Copy the sanitized config and paste it into your AI assistant, support ticket, or forum post. Your real credentials and addresses stay on your machine.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Practical Example</h2>
+
+      <p>Say you're debugging a static route issue on a FortiGate device. Your config snippet looks like this:</p>
+
+      <div class="example-block">
+        <span class="label">Original config — contains real data</span>
+        <div class="val">config router static
+    edit 1
+        set dst 10.48.0.0/16
+        set gateway 192.168.100.1
+        set device "wan1"
+    next
+    edit 2
+        set dst 172.20.0.0/14
+        set gateway 192.168.100.1
+        set device "wan1"
+    next
+end</div>
+      </div>
+
+      <p>After running it through ScrubForge, the output becomes:</p>
+
+      <div class="example-block">
+        <span class="label">Sanitized output — safe to share</span>
+        <div class="val">config router static
+    edit 1
+        set dst <span class="token">[SUBNET_1]</span>
+        set gateway <span class="token">[IP_1]</span>
+        set device "wan1"
+    next
+    edit 2
+        set dst <span class="token">[SUBNET_2]</span>
+        set gateway <span class="token">[IP_1]</span>
+        set device "wan1"
+    next
+end</div>
+      </div>
+
+      <p>Notice that the gateway <code>[IP_1]</code> is the same token in both entries — because it was the same address in both. The AI can see the structure clearly: two static routes sharing the same next-hop. You can ask "why would these routes not be preferred over the default?" and get a useful answer without revealing your actual subnet ranges.</p>
+
+      <h2>When to Use ScrubForge</h2>
+
+      <div class="use-cases">
+        <div class="use-case">
+          <strong>Asking AI assistants for configuration help</strong>
+          The most common scenario — pasting a policy, ACL, or routing table into ChatGPT or Claude to get a second opinion on why something isn't working.
+        </div>
+        <div class="use-case">
+          <strong>Posting to vendor support forums</strong>
+          Cisco Community, FortiGate Forums, and similar spaces are publicly indexed. A raw config paste there is visible to anyone.
+        </div>
+        <div class="use-case">
+          <strong>Sharing with external consultants or MSPs</strong>
+          When you need a contractor to review a config but aren't ready to share live credentials, sanitize first.
+        </div>
+        <div class="use-case">
+          <strong>Internal documentation and wiki pages</strong>
+          Config examples in Confluence, Notion, or internal wikis often end up wider-shared than intended. Use sanitized examples in docs from the start.
+        </div>
+        <div class="use-case">
+          <strong>Incident response and log sharing</strong>
+          When sharing log excerpts or config sections in a ticket or chat, sanitizing prevents accidental credential exposure in Slack or Teams channels.
+        </div>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Does ScrubForge send my config to any server?</p>
+          <p class="faq-a">No. ScrubForge is a Chrome extension that runs entirely in your browser. The text you paste is processed locally on your machine. Nothing is transmitted to Wendygo Studio servers or any external service.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Does it work with Cisco IOS, FortiGate, and AWS configs?</p>
+          <p class="faq-a">ScrubForge is designed for infrastructure configuration files. It detects patterns common across vendor formats: IP addresses, subnet masks, pre-shared keys, SNMP community strings, and similar values. It works on plain text from any source you can copy from.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What if ScrubForge misses a sensitive value?</p>
+          <p class="faq-a">The sanitizer detects known patterns. For unusual or custom secret formats not matching standard patterns, review the sanitized output before sharing. ScrubForge reduces risk significantly but is not a guarantee of 100% coverage for every possible secret format.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is ScrubForge free?</p>
+          <p class="faq-a">Yes. ScrubForge is free to install and use from the Chrome Web Store. No account or subscription required.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Can I recover the original values from the sanitized output?</p>
+          <p class="faq-a">The sanitized file alone cannot be reversed — ScrubForge does not upload or store a mapping anywhere. The correspondence between tokens and real values exists only in your original file and in the in-browser session. Keep your original config for reference.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/base64-encode-decode-online-tool/">
+            Base64 Encode and Decode Online &mdash; No Upload, No Command Line
+            <span>Encode and decode Base64 locally in your browser with TextForge</span>
+          </a>
+          <a class="related-link" href="/blog/extract-urls-from-text/">
+            How to Extract URLs from Any Text Block
+            <span>Pull every URL out of logs, documents, or raw text with TextForge</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>ScrubForge is free to install. Paste your config, sanitize sensitive values locally, and share safely with AI assistants and support forums — no upload, no account required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">
+          Install ScrubForge &mdash; free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> &middot; Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
