@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Resize Image for TikTok Profile Picture — Wendygo Studio</title>
+  <meta name="description" content="TikTok profile pictures must be square (512×512 or 400×400). Learn how to resize any image to the exact dimensions in seconds using FrameForge—no upload, no account needed." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/resize-image-for-tiktok-profile-picture/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-tiktok-profile-picture/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"How to Resize Image for TikTok Profile Picture"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Resize Image for TikTok Profile Picture: Get the Perfect Square in Seconds","description":"TikTok profile pictures must be square (512×512 or 400×400). Learn how to resize any image to the exact dimensions in seconds using FrameForge—no upload, no account needed.","datePublished":"2026-06-29","dateModified":"2026-06-29","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What size should a TikTok profile picture be?","acceptedAnswer":{"@type":"Answer","text":"TikTok profile pictures are displayed as circles but must be uploaded as square images. The recommended size is 512×512 pixels for HD clarity. The minimum is 400×400 pixels. If you upload a rectangular image, TikTok will automatically crop it to a square, which may cut off important parts of your image."}},
+    {"@type":"Question","name":"Can I upload a rectangular image to TikTok?","acceptedAnswer":{"@type":"Answer","text":"Technically yes, but TikTok will crop it to a square, often cutting off the edges. To ensure your entire image appears correctly (centered, no unexpected crops), resize to a square (512×512) before uploading."}},
+    {"@type":"Question","name":"Does FrameForge upload my image to the cloud?","acceptedAnswer":{"@type":"Answer","text":"No. FrameForge is a Chrome extension that processes images entirely in your browser. Your images are never uploaded to any server or stored anywhere. Your profile picture stays completely private."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul { margin: 0 0 20px 24px; }
+    .article-body ul li { margin-bottom: 8px; }
+
+    .step-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step {
+      padding: 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0; font-size: 12px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; padding: 4px 8px; border-radius: 4px;
+      background: var(--amber); color: var(--on-a); margin-top: 0px;
+    }
+    .step-text { font-size: 14px; color: var(--text); line-height: 1.55; }
+
+    .mistake-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .mistake {
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .mistake-title { font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .mistake-result { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+    .faq { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related { margin-top: 56px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to Resize Image for TikTok Profile Picture
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to · FrameForge</div>
+      <h1>How to Resize Image for TikTok Profile Picture: Get the Perfect Square in Seconds</h1>
+      <p class="article-intro">
+        TikTok profile pictures need to be square—512×512 pixels for HD quality, or at least 400×400. If your image is rectangular, TikTok crops it automatically, which may cut off your face or logo. Resize correctly before uploading.
+      </p>
+      <div class="article-date">June 29, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Your TikTok profile picture is the first thing viewers see in the feed and on your profile. If it is blurry, off-center, or cut off at the edges, you lose credibility instantly.</p>
+
+      <p>TikTok displays profile pictures as circles but requires them to be uploaded as <strong>square images</strong>. If you give it a rectangular photo, TikTok crops it to fit, often cutting off the important parts.</p>
+
+      <p>The fix is simple: resize to the correct dimensions before uploading.</p>
+
+      <h2>TikTok Profile Picture Requirements</h2>
+
+      <p>TikTok's exact specifications for profile pictures:</p>
+      <ul>
+        <li><strong>Recommended size:</strong> 512×512 pixels (HD quality on all devices)</li>
+        <li><strong>Minimum size:</strong> 400×400 pixels (will appear blurry if smaller)</li>
+        <li><strong>Shape:</strong> Square (aspect ratio 1:1)</li>
+        <li><strong>Formats:</strong> JPG, PNG, or WebP</li>
+        <li><strong>File size:</strong> Under 10 MB (usually not an issue)</li>
+      </ul>
+
+      <p>Upload anything smaller than 400×400, and it stretches on mobile. Upload a non-square image, and TikTok crops the sides.</p>
+
+      <h2>How to Resize Using FrameForge</h2>
+
+      <p>FrameForge is a Chrome extension that resizes images to exact dimensions in your browser, with no upload or account required.</p>
+
+      <div class="step-list">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div class="step-text"><strong>Click the FrameForge icon</strong> in your browser toolbar to open the extension.</div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div class="step-text"><strong>Open your image</strong> — select the photo or graphic you want as your profile picture.</div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div class="step-text"><strong>Set custom dimensions</strong> — enter <code>512 × 512</code> in the size field (or <code>400 × 400</code> if needed).</div>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <div class="step-text"><strong>Adjust the crop</strong> — drag the crop handles to center your face or logo inside the square frame.</div>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <div class="step-text"><strong>Export the image</strong> — click Download, and the resized file goes to your Downloads folder instantly.</div>
+        </div>
+        <div class="step">
+          <span class="step-num">6</span>
+          <div class="step-text"><strong>Upload to TikTok</strong> — go to your profile, tap Edit Profile, select Change Profile Photo, and upload the resized image.</div>
+        </div>
+      </div>
+
+      <p>Total time: under one minute. No login, no upload to a server, no waiting for processing.</p>
+
+      <h2>Why Resize Before Uploading</h2>
+
+      <p>Let TikTok do the cropping, and you lose control. Center your face or brand logo in a 512×512 image first, and you guarantee it appears correctly no matter what device views your profile.</p>
+
+      <p>Creators and small brands especially benefit: a crisp, perfectly centered profile picture looks professional and encourages profile clicks in the For You feed.</p>
+
+      <h2>Common Profile Picture Mistakes</h2>
+
+      <div class="mistake-list">
+        <div class="mistake">
+          <div class="mistake-title">❌ Uploading a rectangular image</div>
+          <div class="mistake-result">TikTok crops it to square, cutting off your face or logo. Result: off-center, unprofessional appearance.</div>
+        </div>
+        <div class="mistake">
+          <div class="mistake-title">❌ Using a low-resolution image (200×200 or smaller)</div>
+          <div class="mistake-result">Looks pixelated on HD mobile screens. Your profile picture appears blurry and loses credibility.</div>
+        </div>
+        <div class="mistake">
+          <div class="mistake-title">❌ Placing important text or logos near the edges</div>
+          <div class="mistake-result">The circular display crops the edges more than you expect. Text or logos end up hidden.</div>
+        </div>
+      </div>
+
+      <h2>For Brand and Creator Accounts</h2>
+
+      <p>If you rotate your profile picture monthly or seasonally (seasonal branding, monthly themes, campaign graphics), use FrameForge each time to ensure consistency. Resize to 512×512, center your design, export in seconds, upload to TikTok. Same process every time, zero friction.</p>
+
+      <p>Your images are never uploaded or stored anywhere—they are processed entirely in your browser, then deleted. Your TikTok strategy stays private.</p>
+
+      <div class="cta-box">
+        <p>FrameForge is completely free. No account, no upload, no subscription. Resize images to any platform's exact dimensions instantly.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Install FrameForge — Free
+        </a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">What size should a TikTok profile picture be?</div>
+          <div class="faq-a">The recommended size is 512×512 pixels for HD quality. The minimum is 400×400 pixels. Anything smaller will appear blurry on modern mobile devices. TikTok displays your profile picture as a circle, but you upload it as a square image.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I upload a rectangular image to TikTok?</div>
+          <div class="faq-a">Yes, but TikTok will automatically crop it to a square, which may cut off important parts of your image. To ensure your entire image appears correctly and centered, resize to a square (512×512) before uploading.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does FrameForge upload my image to the cloud?</div>
+          <div class="faq-a">No. FrameForge is a Chrome extension that processes images entirely in your browser using local computing power. Your images are never uploaded to any server or stored anywhere. Your profile picture and any images you resize stay completely private.</div>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related Articles</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/resize-image-for-instagram-chrome/">
+            How to Resize an Image for Instagram Posts in Chrome (1080×1080)
+            <span>FrameForge · June 26, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/frameforge-vs-canva-thumbnails/">
+            FrameForge vs Canva for Quick Thumbnails: Which Is Faster?
+            <span>FrameForge · June 29, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-youtube-thumbnail-chrome/">
+            How to Resize an Image for YouTube Thumbnails in Your Browser
+            <span>FrameForge · June 25, 2026</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
