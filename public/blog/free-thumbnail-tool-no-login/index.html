@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Thumbnail Tool with No Login Required — Wendygo Studio</title>
+  <meta name="description" content="No signup, no account, no upload. FrameForge is a free thumbnail resizer that works entirely in your browser. Install once, resize forever." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/free-thumbnail-tool-no-login/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"Free Thumbnail Tool with No Login Required"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Free Thumbnail Tool with No Login Required","description":"No signup, no account, no upload. FrameForge is a free thumbnail resizer that works entirely in your browser. Install once, resize forever.","datePublished":"2026-06-29","dateModified":"2026-06-29","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Does FrameForge work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes, after installation. Resizing happens entirely in your browser using your computer's processing power. You only need internet to install the extension from the Chrome Web Store the first time."}},
+    {"@type":"Question","name":"Is my image data safe with no account?","acceptedAnswer":{"@type":"Answer","text":"Your images are processed locally on your computer and never uploaded to any server. We have no access to your files, no account to log into, and no ability to track what you create."}},
+    {"@type":"Question","name":"What is the Pro version?","acceptedAnswer":{"@type":"Answer","text":"FrameForge free includes all platform presets and core resizing. Pro adds text overlay and batch processing for users who resize 10+ images per session. Both versions keep your images offline."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul { margin: 0 0 20px 24px; }
+    .article-body ul li { margin-bottom: 8px; }
+
+    .benefit-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .benefit-item {
+      padding: 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .benefit-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 6px;
+    }
+    .benefit-text { font-size: 14px; color: var(--text); line-height: 1.55; }
+
+    .faq { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related { margin-top: 56px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES &#127760;</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Free thumbnail tool with no login
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guide · FrameForge</div>
+      <h1>Free Thumbnail Tool with No Login Required</h1>
+      <p class="article-intro">
+        No signup, no account, no upload to a cloud server. Here is why that matters when you resize images for video platforms.
+      </p>
+      <div class="article-date">June 29, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Most online design tools require an account before you can do anything. Canva, Adobe Express, Figma — they all ask for your email, a password, sometimes a credit card. Every time you publish, you log back in.</p>
+
+      <p>FrameForge works differently. Install it once. You never log in again. Your images never leave your browser.</p>
+
+      <h2>The Friction of Sign-Up</h2>
+
+      <p>Over a year of regular thumbnail work, that friction adds up. You spend hours logging in, waiting for pages to load, recovering forgotten passwords, accepting terms-of-service updates. And every time you want to use the tool, you have to authenticate again.</p>
+
+      <p>A thumbnail is a simple job: you have an image, you need it at exactly 1280×720 for YouTube or 1080×1080 for Instagram, and you want to move on. The login screen is pure overhead.</p>
+
+      <h2>Why No Account Matters</h2>
+
+      <div class="benefit-list">
+        <div class="benefit-item">
+          <div class="benefit-label">Privacy</div>
+          <div class="benefit-text">Your images stay on your computer. If your thumbnail is a screenshot of unreleased work or a client's confidential layout, you do not need to upload it to anyone's servers.</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-label">Speed</div>
+          <div class="benefit-text">No login screen. No waiting for pages to load. Click the extension, open an image, pick a platform, export. The whole job takes seconds.</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-label">Offline work</div>
+          <div class="benefit-text">Once installed, FrameForge works without an internet connection. Tools that require login cannot work offline.</div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-label">No upsell trap</div>
+          <div class="benefit-text">Canva's free tier is good until they push you toward Canva Pro ($180/year). FrameForge free is the actual free version. Pro is optional, not required.</div>
+        </div>
+      </div>
+
+      <h2>What It Does</h2>
+
+      <p>FrameForge includes presets for YouTube, Instagram, X, LinkedIn, Twitch, and more. You crop the image, pick a platform, and export directly to your Downloads folder.</p>
+
+      <p>If you are designing a thumbnail from scratch — combining images, adding text, branded layouts — Canva is the right tool. FrameForge is for the common case: you already have the image, you just need the right dimensions.</p>
+
+      <p>Install it once. Never think about accounts again.</p>
+
+      <div class="cta-box">
+        <p>FrameForge is free. No credit card, no confirmation email, no "complete your profile." Install from the Chrome Web Store and start resizing.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Install FrameForge — free
+        </a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">Does FrameForge work offline?</div>
+          <div class="faq-a">Yes, after installation. Resizing happens entirely in your browser using your computer's processing power. You only need internet to install the extension from the Chrome Web Store the first time.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is my image data safe with no account?</div>
+          <div class="faq-a">Your images are processed locally on your computer and never uploaded to any server. We have no access to your files, no account to log into, and no ability to track what you create.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the Pro version?</div>
+          <div class="faq-a">FrameForge free includes all platform presets and core resizing. Pro adds text overlay and batch processing for users who resize 10+ images per session. Both versions keep your images offline.</div>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related articles</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/frameforge-vs-canva-thumbnails/">
+            FrameForge vs Canva for Quick Thumbnails: Which Is Faster?
+            <span>FrameForge · June 29, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-youtube-thumbnail-chrome/">
+            How to Resize an Image for YouTube Thumbnails in Your Browser
+            <span>FrameForge · June 25, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-for-instagram-chrome/">
+            How to Resize an Image for Instagram Posts in Chrome (1080×1080)
+            <span>FrameForge · June 26, 2026</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
