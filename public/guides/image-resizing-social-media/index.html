@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Resize Images for Social Media — Complete Platform Guide | Wendygo Studio</title>
+  <meta name="description" content="Resize images for YouTube, Instagram, LinkedIn, Twitter/X, Twitch, and Pinterest with correct dimensions. Complete guide with FrameForge Chrome extension." />
+  <link rel="canonical" href="https://wendygostudio.com/guides/image-resizing-social-media/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://wendygostudio.com/guides/"},
+      {"@type": "ListItem", "position": 3, "name": "Image Resizing for Social Media"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://wendygostudio.com/guides/image-resizing-social-media/",
+    "headline": "How to Resize Images for Social Media — Complete Platform Guide",
+    "description": "Master image resizing for YouTube, Instagram, LinkedIn, Twitter/X, Twitch, Pinterest and more. Platform-specific dimensions and tools.",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 760px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); margin-bottom: 32px; }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .platform-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px; margin: 32px 0;
+    }
+    .platform-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 28px; display: flex; flex-direction: column; gap: 16px;
+    }
+    .platform-card h3 { margin: 0; font-size: 18px; }
+    .platform-meta { font-size: 13px; color: var(--faint); }
+    .platform-card a {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--amber); text-decoration: none; font-weight: 600; font-size: 14px;
+      margin-top: 8px;
+    }
+    .platform-card a:hover { text-decoration: underline; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span>
+      <a href="/blog/">Blog</a> <span>/</span>
+      <span>Image Resizing for Social Media</span>
+    </div>
+
+    <div>
+      <span class="article-tag">Guide</span>
+      <h1>How to Resize Images for Social Media</h1>
+      <p class="article-intro">Each platform has its own optimal dimensions. Get them wrong and your content gets cropped, stretched, or looks unprofessional. Here's the complete reference with platform-specific guides.</p>
+      <div class="article-date">Published June 29, 2026</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="article-body">
+      <h2>Quick Platform Reference</h2>
+      <p>Every social media platform expects a specific aspect ratio. Post at the wrong size and the platform either crops, stretches, or adds ugly letterboxing.</p>
+
+      <div class="platform-grid">
+        <div class="platform-card">
+          <h3>🎬 YouTube Thumbnails</h3>
+          <div class="platform-meta"><strong>1280 × 720</strong> px · 16:9</div>
+          <p style="margin: 8px 0 0; font-size: 14px;">The most important real estate in your channel. YouTube shows this across desktop, mobile, and embeds.</p>
+          <a href="/blog/resize-image-youtube-thumbnail-chrome/">Read full guide →</a>
+        </div>
+
+        <div class="platform-card">
+          <h3>📷 Instagram Feed Posts</h3>
+          <div class="platform-meta"><strong>1080 × 1080</strong> px · 1:1 (square)</div>
+          <p style="margin: 8px 0 0; font-size: 14px;">The classic Instagram square. Also works for portrait (1080×1350) and landscape (1080×566).</p>
+          <a href="/blog/resize-image-for-instagram-chrome/">Read full guide →</a>
+        </div>
+
+        <div class="platform-card">
+          <h3>💼 LinkedIn Posts</h3>
+          <div class="platform-meta"><strong>1200 × 627</strong> px · 1.91:1</div>
+          <p style="margin: 8px 0 0; font-size: 14px;">LinkedIn's sweet spot for feed images. Wide aspect ratio, no cropping or stretching in the feed.</p>
+          <a href="/blog/resize-image-for-linkedin-post/">Read full guide →</a>
+        </div>
+
+        <div class="platform-card">
+          <h3>𝕏 Twitter/X Posts</h3>
+          <div class="platform-meta"><strong>1200 × 675</strong> px · 16:9</div>
+          <p style="margin: 8px 0 0; font-size: 14px;">X uses center-crop on portrait and super-wide images. 16:9 landscape is safest.</p>
+          <a href="/blog/resize-image-for-x-twitter-post/">Read full guide →</a>
+        </div>
+
+        <div class="platform-card">
+          <h3>🎮 Twitch Panels</h3>
+          <div class="platform-meta"><strong>320 × 160</strong> px · 2:1</div>
+          <p style="margin: 8px 0 0; font-size: 14px;">Ultra-wide images for channel customization. The trickiest aspect ratio — needs precise composition.</p>
+          <a href="/blog/resize-image-for-twitch-panel-chrome/">Read full guide →</a>
+        </div>
+
+        <div class="platform-card">
+          <h3>📌 Pinterest Pins</h3>
+          <div class="platform-meta"><strong>1000 × 1500</strong> px · 2:3</div>
+          <p style="margin: 8px 0 0; font-size: 14px;">Pinterest favors tall, portrait pins. Vertical content gets better engagement.</p>
+          <a href="/blog/resize-image-for-pinterest-pin/">Read full guide →</a>
+        </div>
+      </div>
+
+      <h2>Why These Dimensions Matter</h2>
+      <p>Social platforms don't stretch or crop lightly—they crop *intelligently*. Instagram crops from center, Twitter crops landscape first, LinkedIn shows full-width. If your image doesn't match the expected ratio, you'll lose important visual information.</p>
+      <p>Using a tool like <strong>FrameForge</strong> (a free Chrome extension) lets you resize locally without uploading to Photoshop or Canva. Install it once, resize forever.</p>
+
+      <h2>The Fast Way to Resize</h2>
+      <ol style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li>Install <a href="https://chromewebstore.google.com/detail/frameforge/abdmadomfnijoiklnaklmplifmljgchj">FrameForge from the Chrome Web Store</a></li>
+        <li>Click the icon to open it</li>
+        <li>Drag your image onto the canvas</li>
+        <li>Select the platform from the preset dropdown</li>
+        <li>Position the crop and export</li>
+      </ol>
+
+      <h2>Common Mistakes</h2>
+      <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li><strong>Using a square image for Twitter:</strong> Twitter crops center-wide (1200×675). A 1:1 square loses the top and bottom third.</li>
+        <li><strong>Uploading Twitch panels at the wrong aspect:</strong> 320×160 is brutally wide (2:1). Many crop from Instagram (1:1) and it looks cramped.</li>
+        <li><strong>Ignoring platform-specific safe zones:</strong> LinkedIn leaves gutters, YouTube doesn't. Check each platform's recommendation.</li>
+        <li><strong>Uploading unoptimized images to web tools:</strong> Every upload to a third-party resizer is a privacy leak. Use a local tool instead.</li>
+      </ul>
+
+      <h2>Pro Tips</h2>
+      <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li>Use <strong>FrameForge's "Fit with Padding"</strong> mode for portrait images—it adds safe padding instead of cropping.</li>
+        <li>For video thumbnails (YouTube, TikTok), leave a <strong>20px margin</strong> from the edges for text overlays.</li>
+        <li>Test every image at the actual platform size before publishing. Phone vs desktop previews differ.</li>
+        <li>Create a local folder of resized templates for each platform—reuse them for consistency.</li>
+      </ul>
+
+      <p style="margin-top: 40px; padding: 24px; background: var(--surf); border-left: 3px solid var(--amber); border-radius: 6px;">
+        <strong>No account needed.</strong> FrameForge is a free Chrome extension that works entirely in your browser. No upload to a server, no account signup, no tracking. Install once and resize as many images as you want.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

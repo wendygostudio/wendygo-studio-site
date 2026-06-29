@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extract Text Data Online — No Regex, No Manual Work | Wendygo Studio</title>
+  <meta name="description" content="Extract emails, URLs, IP addresses, and patterns from text without regex or terminal. Local browser tool with no upload, no account required." />
+  <link rel="canonical" href="https://wendygostudio.com/guides/text-data-extraction/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://wendygostudio.com/guides/"},
+      {"@type": "ListItem", "position": 3, "name": "Text Data Extraction"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://wendygostudio.com/guides/text-data-extraction/",
+    "headline": "Extract Text Data Online — No Regex, No Manual Work",
+    "description": "Extract emails, URLs, IP addresses, and other data patterns from text without regex or terminal.",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 760px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); margin-bottom: 32px; }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .extraction-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px; margin: 32px 0;
+    }
+    .extraction-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 28px; display: flex; flex-direction: column; gap: 12px;
+    }
+    .extraction-card h3 { margin: 0; font-size: 18px; }
+    .extraction-card p { margin: 0; font-size: 14px; color: var(--muted); }
+    .extraction-card a {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--amber); text-decoration: none; font-weight: 600; font-size: 14px;
+      margin-top: 8px;
+    }
+    .extraction-card a:hover { text-decoration: underline; }
+
+    code {
+      background: var(--surf2); padding: 2px 6px; border-radius: 4px;
+      font-family: ui-monospace, monospace; font-size: 14px; color: var(--amber);
+    }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span>
+      <a href="/blog/">Blog</a> <span>/</span>
+      <span>Text Data Extraction</span>
+    </div>
+
+    <div>
+      <span class="article-tag">Guide</span>
+      <h1>Extract Data From Text — No Manual Work</h1>
+      <p class="article-intro">Whether you're pulling contact info from logs, finding URLs in configs, or scraping patterns from documents—manual hunting is slow and error-prone. Learn how to extract data in seconds using a local browser tool.</p>
+      <div class="article-date">Published June 29, 2026</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="article-body">
+      <h2>What Can You Extract?</h2>
+      <p>If you have a pattern, you can extract it. Common examples:</p>
+
+      <div class="extraction-grid">
+        <div class="extraction-card">
+          <h3>📧 Email Addresses</h3>
+          <p>Pull every email from CRM exports, logs, or email threads. No regex needed.</p>
+          <a href="/blog/extract-emails-from-text/">Read guide →</a>
+        </div>
+
+        <div class="extraction-card">
+          <h3>🔗 URLs & Links</h3>
+          <p>Extract API endpoints, config paths, and full URLs from text and config files.</p>
+          <a href="/blog/extract-urls-from-text/">Read guide →</a>
+        </div>
+
+        <div class="extraction-card">
+          <h3>🔐 IP Addresses</h3>
+          <p>Find all IPv4 and IPv6 addresses from logs, configs, and network traces.</p>
+          <p><em>Coming soon</em></p>
+        </div>
+
+        <div class="extraction-card">
+          <h3>📦 Custom Patterns</h3>
+          <p>Extract JSON properties, error codes, timestamps, or any regex pattern safely.</p>
+          <p><em>Coming soon</em></p>
+        </div>
+      </div>
+
+      <h2>Real-World Scenarios</h2>
+      <h3>CRM Cleanup</h3>
+      <p>You export 1,000 contacts from your CRM as raw text. You get a wall of text like:</p>
+      <code style="display: block; padding: 12px; background: var(--surf2); margin: 12px 0;">
+        Contact: Alice (alice@company.com, bob@company.com, charlie@example.com)...
+      </code>
+      <p><strong>Problem:</strong> Manually copy-pasting emails takes 30+ minutes.
+      <br><strong>Solution:</strong> Extract all emails in 3 seconds, paste into your new CRM.</p>
+
+      <h3>Log File Debugging</h3>
+      <p>Your app throws errors with URLs embedded in logs:</p>
+      <code style="display: block; padding: 12px; background: var(--surf2); margin: 12px 0;">
+        ERROR: Failed to reach https://api.service.com/v1/users at 14:32:15
+      </code>
+      <p><strong>Problem:</strong> Hunting through 500 log lines for URLs manually.
+      <br><strong>Solution:</strong> Extract all URLs at once, check which ones failed.</p>
+
+      <h3>Config Audits</h3>
+      <p>Your infrastructure team asks: "What IPs are whitelisted in this config file?"</p>
+      <code style="display: block; padding: 12px; background: var(--surf2); margin: 12px 0;">
+        allow_ips = ["192.168.1.5", "10.0.0.1", "203.0.113.42"]
+      </code>
+      <p><strong>Problem:</strong> Parsing nested configs manually is slow and error-prone.
+      <br><strong>Solution:</strong> Extract all IPs, load into your IP management tool.</p>
+
+      <h2>Why Not Just Use Copy/Paste or Grep?</h2>
+      <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li><strong>Grep is CLI-only:</strong> You need terminal access. What if you're on a locked machine?</li>
+        <li><strong>Copy/paste is slow:</strong> For 100+ items, manual copy is tedious.</li>
+        <li><strong>Regex is hard:</strong> Most people don't write regex confidently. Typos = missed data.</li>
+        <li><strong>Online extractors leak data:</strong> They upload your entire text to a server. Risky for configs, logs, and customer data.</li>
+      </ul>
+
+      <h2>The Local Way</h2>
+      <p><a href="https://chromewebstore.google.com/detail/textforge/cnmlojgahikinilbefkkfadkfamchlba">TextForge</a> is a free Chrome extension that extracts data locally:</p>
+      <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li>✅ Extract emails, URLs, IP addresses instantly</li>
+        <li>✅ No account, no login, no signup</li>
+        <li>✅ No data leaves your browser</li>
+        <li>✅ Works offline</li>
+        <li>✅ Copy results with one click</li>
+        <li>✅ 50+ other tools included (sort, deduplicate, decode, etc.)</li>
+      </ul>
+
+      <h2>Quick Start</h2>
+      <ol style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li>Install <a href="https://chromewebstore.google.com/detail/textforge/cnmlojgahikinilbefkkfadkfamchlba">TextForge from the Chrome Web Store</a></li>
+        <li>Click the icon in your toolbar</li>
+        <li>Paste your text</li>
+        <li>Select the extraction type (emails, URLs, etc.)</li>
+        <li>Copy the results</li>
+      </ol>
+
+      <p style="margin-top: 40px; padding: 24px; background: var(--surf); border-left: 3px solid var(--amber); border-radius: 6px;">
+        <strong>Privacy note:</strong> TextForge processes everything in your browser. Your text never leaves your machine, never reaches any server, never gets logged. It's the safest way to extract data from sensitive files, configs, and logs.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

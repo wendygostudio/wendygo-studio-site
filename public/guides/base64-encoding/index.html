@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base64 Encoding Guide — Practical Use Cases & Tools | Wendygo Studio</title>
+  <meta name="description" content="Complete guide to Base64 encoding and decoding. Learn JWT token decoding, Kubernetes secrets, Basic Auth headers, and more without uploading to third-party tools." />
+  <link rel="canonical" href="https://wendygostudio.com/guides/base64-encoding/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://wendygostudio.com/guides/"},
+      {"@type": "ListItem", "position": 3, "name": "Base64 Encoding"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://wendygostudio.com/guides/base64-encoding/",
+    "headline": "Base64 Encoding Guide — Practical Use Cases & Tools",
+    "description": "Complete guide to Base64 encoding and decoding. Learn JWT token decoding, Kubernetes secrets, Basic Auth headers, and more.",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 760px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); margin-bottom: 32px; }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .usecase-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px; margin: 32px 0;
+    }
+    .usecase-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 28px; display: flex; flex-direction: column; gap: 12px;
+    }
+    .usecase-card h3 { margin: 0; font-size: 18px; }
+    .usecase-card p { margin: 0; font-size: 14px; color: var(--muted); }
+    .usecase-card a {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--amber); text-decoration: none; font-weight: 600; font-size: 14px;
+      margin-top: 8px;
+    }
+    .usecase-card a:hover { text-decoration: underline; }
+
+    code {
+      background: var(--surf2); padding: 2px 6px; border-radius: 4px;
+      font-family: var(--mono); font-size: 14px; color: var(--amber);
+    }
+
+    .code-block {
+      background: var(--surf2); border-left: 3px solid var(--amber);
+      padding: 16px; border-radius: 6px; margin: 20px 0;
+      font-family: var(--mono); font-size: 13px; overflow-x: auto;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>/</span>
+      <a href="/blog/">Blog</a> <span>/</span>
+      <span>Base64 Encoding</span>
+    </div>
+
+    <div>
+      <span class="article-tag">Developer Guide</span>
+      <h1>Base64 Encoding — Complete Reference</h1>
+      <p class="article-intro">Base64 shows up everywhere in modern development: JWT tokens, Kubernetes secrets, HTTP Basic Auth, and data URIs. Learn what it is, when you need it, and how to encode/decode safely without uploading to third-party sites.</p>
+      <div class="article-date">Published June 29, 2026</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="article-body">
+      <h2>What Is Base64?</h2>
+      <p><strong>Base64 is an encoding scheme, not encryption.</strong> It converts binary data into a text-safe format by representing 8-bit bytes as 6-bit groups, mapped to 64 printable ASCII characters.</p>
+      <p>The key point: <strong>anyone with a Base64 string can decode it instantly without a key.</strong> It's used for transport safety (text-only protocols), not secrecy. If you need secrecy, use encryption (AES, RSA) <em>before</em> Base64.</p>
+
+      <h3>Base64 vs Base64url</h3>
+      <p><strong>Base64</strong> uses <code>+</code> and <code>/</code>, which have special meanings in URLs and MIME.</p>
+      <p><strong>Base64url</strong> (RFC 4648) replaces them with <code>-</code> and <code>_</code> for safe URL embedding. JWT tokens use Base64url for the header and payload sections.</p>
+
+      <h2>Real-World Use Cases</h2>
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <h3>🔐 JWT Token Decoding</h3>
+          <p>Inspect claims (user ID, roles, expiry) without pasting into jwt.io or third-party sites.</p>
+          <a href="/blog/decode-jwt-token-browser/">Read guide →</a>
+        </div>
+
+        <div class="usecase-card">
+          <h3>⚙️ Kubernetes Secrets</h3>
+          <p>Encode raw values for Secret <code>data:</code> fields. Decode existing secrets to debug.</p>
+          <a href="/blog/base64-encode-kubernetes-secrets/">Read guide →</a>
+        </div>
+
+        <div class="usecase-card">
+          <h3>🔑 HTTP Basic Auth</h3>
+          <p>Combine username and password: <code>user:pass</code> → Base64 → <code>Authorization</code> header.</p>
+          <a href="/blog/base64-encode-decode-online-tool/">Read guide →</a>
+        </div>
+
+        <div class="usecase-card">
+          <h3>🖼️ Data URIs</h3>
+          <p>Embed images directly in HTML/CSS: <code>&lt;img src="data:image/png;base64,..."&gt;</code></p>
+          <a href="/blog/base64-encode-decode-online-tool/">Learn more →</a>
+        </div>
+      </div>
+
+      <h2>Why Never Use Online Tools (Even "Secure" Ones)</h2>
+      <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li><strong>Data in transit:</strong> HTTPS doesn't matter if the site logs your input.</li>
+        <li><strong>Logs on the server:</strong> Many "temporary" tools keep request logs for debugging or analytics.</li>
+        <li><strong>Browser caching:</strong> Your API key might be in your browser history or cache.</li>
+        <li><strong>Zero-knowledge ≠ secure:</strong> Even zero-knowledge claims can't be verified from outside.</li>
+      </ul>
+      <p>Use a <strong>local tool instead.</strong> TextForge runs entirely in your browser—your data never leaves your machine.</p>
+
+      <h2>Quick Reference: Common Operations</h2>
+
+      <h3>Encode a string</h3>
+      <div class="code-block">Input: hello<br>Output: aGVsbG8=</div>
+
+      <h3>Decode a JWT header</h3>
+      <div class="code-block">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9<br>→<br>{"alg":"HS256","typ":"JWT"}</div>
+
+      <h3>Encode for Kubernetes Secret</h3>
+      <div class="code-block">Input: my-secret-password<br>Output: bXktc2VjcmV0LXBhc3N3b3Jk<br><br>In Secret YAML:<br>data:<br>&nbsp;&nbsp;password: bXktc2VjcmV0LXBhc3N3b3Jk</div>
+
+      <h3>Encode for Basic Auth</h3>
+      <div class="code-block">Input: admin:mypassword<br>Output: YWRtaW46bXlwYXNzd29yZA==<br><br>In HTTP header:<br>Authorization: Basic YWRtaW46bXlwYXNzd29yZA==</div>
+
+      <h2>Privacy-First Encoding</h2>
+      <p><a href="https://chromewebstore.google.com/detail/textforge/cnmlojgahikinilbefkkfadkfamchlba">TextForge</a> is a free Chrome extension that encodes and decodes Base64 locally in your browser:</p>
+      <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+        <li>✅ No account, no signup</li>
+        <li>✅ No data sent to any server</li>
+        <li>✅ Works offline</li>
+        <li>✅ Supports Base64 and Base64url</li>
+        <li>✅ 50+ other text tools included (regex, JSON, sort, extract, etc.)</li>
+      </ul>
+
+      <p style="margin-top: 40px; padding: 24px; background: var(--surf); border-left: 3px solid var(--amber); border-radius: 6px;">
+        <strong>Remember:</strong> Base64 is encoding, not encryption. <em>Always</em> assume a Base64 string can be decoded by anyone. If you're encoding sensitive data (passwords, API keys, tokens), encrypt it first, then Base64-encode the ciphertext for transport.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
