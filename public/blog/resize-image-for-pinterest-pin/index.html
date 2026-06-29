@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Resize an Image for Pinterest Pins in Chrome (1000×1500) — Wendygo Studio</title>
+  <meta name="description" content="Crop any image to Pinterest's optimal 1000×1500 px format without uploading to Photoshop or Canva. FrameForge resizes entirely in your browser in seconds." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-for-pinterest-pin/" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"How to Resize an Image for Pinterest Pins"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Resize an Image for Pinterest Pins in Chrome (1000×1500)","description":"Crop any image to Pinterest's optimal 1000×1500 px format without uploading to Photoshop or Canva. FrameForge resizes entirely in your browser in seconds.","datePublished":"2026-06-29","dateModified":"2026-06-29","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the ideal Pinterest pin size?","acceptedAnswer":{"@type":"Answer","text":"Pinterest recommends 1000×1500 px as the ideal vertical pin ratio (2:3). This format displays optimally on mobile and desktop feeds. You can also use 1000×1200 px (5:6 ratio) or 1000×1300 px — all perform well as long as the width is 1000 px."}},
+    {"@type":"Question","name":"Does FrameForge have a Pinterest preset?","acceptedAnswer":{"@type":"Answer","text":"Yes. FrameForge includes a preset for Pinterest pins at 1000×1500 px. Open the extension, select the Pinterest preset, adjust the crop, and export. No account, no upload, no third-party service."}},
+    {"@type":"Question","name":"Can I resize to other Pinterest dimensions?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you need a different size, FrameForge allows custom dimensions. You can set any width and height you need — for example, 1000×1200 for square pins or 1200×900 for horizontal pins, though vertical format typically performs best on Pinterest."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul { margin: 0 0 20px 24px; }
+    .article-body ul li { margin-bottom: 8px; }
+
+    .step-list { margin: 24px 0; display: flex; flex-direction: column; gap: 16px; }
+    .step-item {
+      padding: 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+      background: var(--amber); color: var(--on-a); min-width: 30px; text-align: center;
+    }
+    .step-text { font-size: 14px; color: var(--text); line-height: 1.55; }
+
+    .faq { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related { margin-top: 56px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 16px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES ð</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>How to Resize an Image for Pinterest Pins
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-To · FrameForge</div>
+      <h1>How to Resize an Image for Pinterest Pins in Chrome (1000×1500)</h1>
+      <p class="article-intro">
+        Pinterest pins work best in a vertical 1000×1500 px format. Here's how to crop and resize any image to Pinterest's optimal dimensions in your browser — no upload, no account, no Photoshop.
+      </p>
+      <div class="article-date">June 29, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Pinterest's algorithm favors vertical pins. When you size images for the platform, you are competing with thousands of other pins for space in users' feeds — and the wrong dimensions get cropped or stretched.</p>
+
+      <p>The standard Pinterest pin size is <strong>1000×1500 px</strong> (2:3 aspect ratio). Some creators use 1000×1200 px or 1000×1300 px, but the 1000×1500 format displays perfectly on both mobile and desktop feeds with no auto-cropping.</p>
+
+      <h2>The Fastest Way: FrameForge</h2>
+
+      <p>FrameForge is a free Chrome extension that resizes images without uploading them anywhere. Open any photo or screenshot, select the Pinterest preset, adjust the crop, and export — all in your browser in under a minute.</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-text"><strong>Install FrameForge.</strong> Add it to Chrome from the Web Store. It takes 10 seconds and needs no account.</div>
+        </div>
+        <div class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-text"><strong>Click the extension icon.</strong> Select "Open an image" and pick the photo or screenshot you want to resize.</div>
+        </div>
+        <div class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-text"><strong>Select the Pinterest preset.</strong> FrameForge includes a 1000×1500 px preset specifically for Pinterest pins. It locks the dimensions automatically.</div>
+        </div>
+        <div class="step-item">
+          <span class="step-num">4</span>
+          <div class="step-text"><strong>Adjust the crop.</strong> Drag the crop box to frame the part of the image you want. Preview updates in real time.</div>
+        </div>
+        <div class="step-item">
+          <span class="step-num">5</span>
+          <div class="step-text"><strong>Export.</strong> Click Download. The resized image goes to your Downloads folder as a PNG.</div>
+        </div>
+      </div>
+
+      <p>That is five steps with no login, no upload, and no waiting for a server to process your image. Everything happens in your browser.</p>
+
+      <h2>Why This Matters for Pinterest Creators</h2>
+
+      <p>Pinterest creators often need to produce pins in bulk — one image for your Pinterest board, one for your blog post, one for X, one for Instagram. Resizing each one to the wrong format costs time and looks unprofessional in the feed.</p>
+
+      <p>FrameForge's preset system means you pick the platform once and the dimensions lock in automatically. YouTube, Instagram, LinkedIn, Twitch, and Pinterest all have built-in presets. No need to remember if it is 1000×1500 or 1000×1200 or something else.</p>
+
+      <p>If you need a different size — for example, 1000×1200 for square pins — you can set custom dimensions in FrameForge and save that as your own preset for next time.</p>
+
+      <div class="cta-box">
+        <p>FrameForge is free. Install the extension, resize forever. No account, no subscription, no upload.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Install FrameForge — free
+        </a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">What is the ideal Pinterest pin size?</div>
+          <div class="faq-a">Pinterest recommends 1000×1500 px as the ideal vertical pin ratio (2:3). This format displays optimally on mobile and desktop feeds. You can also use 1000×1200 px (5:6 ratio) or 1000×1300 px — all perform well as long as the width is 1000 px.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does FrameForge have a Pinterest preset?</div>
+          <div class="faq-a">Yes. FrameForge includes a preset for Pinterest pins at 1000×1500 px. Open the extension, select the Pinterest preset, adjust the crop, and export. No account, no upload, no third-party service.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I resize to other Pinterest dimensions?</div>
+          <div class="faq-a">Yes. If you need a different size, FrameForge allows custom dimensions. You can set any width and height you need — for example, 1000×1200 for square pins or 1200×900 for horizontal pins, though vertical format typically performs best on Pinterest.</div>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related articles</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/frameforge-vs-canva-thumbnails/">
+            FrameForge vs Canva for Quick Thumbnails: Which Is Faster in 2026?
+            <span>FrameForge · June 29, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-for-instagram-chrome/">
+            How to Resize an Image for Instagram Posts in Chrome (1080×1080)
+            <span>FrameForge · June 26, 2026</span>
+          </a>
+          <a class="related-link" href="/blog/resize-image-youtube-thumbnail-chrome/">
+            How to Resize an Image for YouTube Thumbnails Directly in Your Browser
+            <span>FrameForge · June 25, 2026</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
