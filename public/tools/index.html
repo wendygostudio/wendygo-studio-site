@@ -131,11 +131,6 @@
     }
     .tool-cta:hover { filter: brightness(1.08); }
 
-    /* ── EMPTY STATE ── */
-    .empty-state {
-      text-align: center; color: var(--muted); padding: 80px 24px;
-    }
-
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .nav-links { display: none; }
@@ -147,7 +142,8 @@
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
-<body>  <nav>
+<body>
+  <nav>
     <a class="nav-brand" href="/">
       <div class="nav-mark">W</div>
       Wendygo Studio
@@ -158,7 +154,7 @@
       <a href="/tools/">Tools</a>
       <a href="/#how">How it works</a>
       <a href="/#privacy">Privacy</a>
-      <a href="/es/" class="nav-lang">ES ð</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
     </div>
   </nav>
 
@@ -170,6 +166,7 @@
     </div>
 
     <div class="tools-grid">
+
       <!-- YouTube Thumbnail Checker -->
       <a href="/tools/youtube-thumbnail-checker/" class="tool-card">
         <div class="tool-icon">📐</div>
@@ -180,6 +177,38 @@
           <div class="tool-feature">Checks file size (max 2 MB)</div>
           <div class="tool-feature">Verifies format (JPG/PNG)</div>
           <div class="tool-feature">Checks 16:9 aspect ratio</div>
+        </div>
+        <div class="tool-cta">
+          Use Tool →
+        </div>
+      </a>
+
+      <!-- IP Address Extractor -->
+      <a href="/tools/ip-extractor/" class="tool-card">
+        <div class="tool-icon">🌐</div>
+        <h2 class="tool-title">IP Address Extractor</h2>
+        <p class="tool-desc">Paste any text and instantly extract all IPv4 and IPv6 addresses with frequency counts and private/public classification.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Extracts IPv4 and IPv6 addresses</div>
+          <div class="tool-feature">Shows frequency count per unique IP</div>
+          <div class="tool-feature">Classifies private, public, loopback</div>
+          <div class="tool-feature">100% local — no server upload</div>
+        </div>
+        <div class="tool-cta">
+          Use Tool →
+        </div>
+      </a>
+
+      <!-- Regex Tester -->
+      <a href="/tools/regex-tester/" class="tool-card">
+        <div class="tool-icon">🔎</div>
+        <h2 class="tool-title">Regex Tester</h2>
+        <p class="tool-desc">Test regular expressions with live match highlighting, capture groups, and match positions. Supports g, i, m, s flags.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Live highlighting as you type</div>
+          <div class="tool-feature">Shows capture groups per match</div>
+          <div class="tool-feature">Match start and end positions</div>
+          <div class="tool-feature">8 quick-load common patterns</div>
         </div>
         <div class="tool-cta">
           Use Tool →
