@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Remove Sensitive Data from a Cisco IOS Config Before Sharing | Wendygo Studio</title>
+  <meta name="description" content="Cisco IOS configs contain passwords, SNMP strings, and VPN keys. Learn how to sanitize them before sharing with TAC, vendors, or AI assistants — using ScrubForge, free and local." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing",
+    "description": "Use ScrubForge to replace passwords, SNMP community strings, VPN keys, and other secrets in a Cisco IOS running-config with consistent placeholder tokens before sharing with support or AI assistants.",
+    "tool": [{ "@type": "HowToTool", "name": "ScrubForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install ScrubForge",
+        "text": "Install ScrubForge from the Chrome Web Store. No account required. Pin the icon to your toolbar from the Extensions menu."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Export your Cisco IOS running-config",
+        "text": "On your Cisco device, run 'show running-config' and copy the full output to your clipboard."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Open ScrubForge",
+        "text": "Click the ScrubForge icon in your browser toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Paste and sanitize",
+        "text": "Paste the config into ScrubForge. It processes the text locally in your browser and replaces sensitive values with consistent placeholder tokens."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Review the output",
+        "text": "Scan the sanitized output to confirm no real credentials remain. The logical structure — interfaces, ACLs, routing — stays intact."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Share safely",
+        "text": "Copy the sanitized config and paste it into your TAC ticket, vendor email, or AI assistant chat. Real credentials never leave your machine."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing",
+    "description": "Cisco IOS configs contain passwords, SNMP strings, and VPN keys. Learn how to sanitize them before sharing with TAC, vendors, or AI assistants — using ScrubForge, free and local.",
+    "datePublished": "2026-06-30",
+    "dateModified": "2026-06-30",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge upload my Cisco config to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. ScrubForge is a Chrome extension that processes text entirely in your browser. Nothing is sent to Wendygo Studio or any third-party server. Your config stays on your machine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work with Cisco IOS-XE and IOS-XR as well?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ScrubForge works on plain text from any source you can copy. It processes the text you paste regardless of the Cisco OS variant — IOS, IOS-XE, IOS-XR, or NX-OS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will the sanitized config still be useful for troubleshooting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ScrubForge replaces values with consistent tokens — the same password always becomes the same placeholder throughout the config. Interface names, IP addresses (optionally), ACL names, and routing structures remain intact so support engineers can follow the logic."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of secrets does ScrubForge detect in Cisco configs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ScrubForge sanitizes infrastructure configuration text and targets values that appear in common sensitive patterns: passwords, hash strings, community strings, pre-shared keys, and similar fields. Always review the sanitized output before sharing for any unusual custom formats."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ScrubForge free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ScrubForge is free to install and use from the Chrome Web Store. No account or subscription required."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { margin: 16px 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
+    .article-body ul li strong { color: var(--text); }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .example-wrap {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
+    }
+    @media (max-width: 600px) { .example-wrap { grid-template-columns: 1fr; } }
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; font-family: var(--mono); font-size: 12.5px;
+      line-height: 1.75; overflow-x: auto;
+    }
+    .example-block .label {
+      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 10px; display: block;
+    }
+    .example-block .val { color: var(--text); white-space: pre; display: block; }
+    .example-block .val .secret { color: #e05c6d; }
+    .example-block .val .token { color: var(--amber2); }
+
+    .warning-box {
+      padding: 16px 20px; background: var(--surf); border: 1px solid var(--amber);
+      border-radius: 10px; margin: 24px 0; font-size: 14px; line-height: 1.6;
+    }
+    .warning-box strong { color: var(--amber); display: block; margin-bottom: 6px; }
+
+    /* CTA box */
+    .cta-box {
+      margin: 56px 0 0;
+      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
+    }
+    .cta-box p {
+      font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-block; background: var(--amber); color: var(--on-a);
+      font-weight: 800; font-size: 14px; letter-spacing: .3px;
+      padding: 12px 28px; border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* FAQ */
+    .faq { margin-top: 56px; }
+    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+    .faq-item {
+      border: 1px solid var(--line); border-radius: 10px;
+      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    footer {
+      border-top: 1px solid var(--line); margin-top: 80px;
+      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span>›</span>
+    <a href="/blog/">Blog</a><span>›</span>
+    <span>Remove Sensitive Data from Cisco Config</span>
+  </nav>
+
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge · Security</div>
+    <h1>How to Remove Sensitive Data from a Cisco IOS Config Before Sharing</h1>
+    <p class="article-intro">A Cisco running-config is a goldmine for troubleshooting — and a liability when shared raw. Here's how to strip the credentials before the config leaves your machine.</p>
+    <div class="article-date">June 30, 2026</div>
+  </header>
+
+  <hr class="divider" />
+
+  <article class="article-body">
+
+    <p>Every time a network engineer opens a TAC case or asks an AI assistant to help debug a routing issue, the same thing happens: the support engineer says "can you share your running-config?" And then you have a decision to make.</p>
+
+    <p>The problem is that <code>show running-config</code> on a Cisco IOS device doesn't just show you interfaces and routes. It shows you <strong>everything</strong> — the enable password, SNMP community strings, VPN pre-shared keys, RADIUS shared secrets, BGP neighbor passwords. All of it, in one paste.</p>
+
+    <p>Sharing that config unmodified is a credential leak waiting to happen.</p>
+
+    <h2>What a Cisco IOS Config Actually Contains</h2>
+
+    <p>A typical Cisco IOS running-config includes several categories of sensitive data that most people don't think twice about when copying:</p>
+
+    <ul>
+      <li><strong>Enable password / enable secret</strong> — the hash of your privileged mode password</li>
+      <li><strong>SNMP community strings</strong> — often set to <code>public</code> or a site-wide string used across dozens of devices</li>
+      <li><strong>VPN pre-shared keys</strong> — <code>crypto isakmp key</code> lines with the actual passphrase</li>
+      <li><strong>RADIUS and TACACS+ shared secrets</strong> — <code>radius-server key</code> and <code>tacacs-server key</code></li>
+      <li><strong>Username/password pairs</strong> — local user accounts with password hashes or type-7 encoded passwords</li>
+      <li><strong>BGP neighbor passwords</strong> — MD5 authentication keys for BGP sessions</li>
+    </ul>
+
+    <p>Type-7 passwords are particularly dangerous because they use a reversible Cisco-specific encoding, not a real hash. Anyone with the encoded string and a decoder tool can recover the original password in seconds.</p>
+
+    <div class="warning-box">
+      <strong>The AI assistant problem</strong>
+      When you paste a config into ChatGPT, Claude, or any AI chat, that text may be used for model improvement, visible to support staff reviewing conversations, or stored in the platform's history. A sanitized config gives you the same troubleshooting help without the exposure.
+    </div>
+
+    <h2>Before and After: What Sanitization Looks Like</h2>
+
+    <p>Here's a snippet from a typical Cisco IOS config before and after passing through <a href="/blog/sanitize-network-config-before-sharing/">a config sanitizer</a>:</p>
+
+    <div class="example-wrap">
+      <div class="example-block">
+        <span class="label">Before — raw config</span>
+        <span class="val">username admin privilege 15
+ password 7 <span class="secret">13061E010803557878</span>
+!
+enable secret 5 <span class="secret">$1$mERr$hx5rVt7rPNoS4</span>
+!
+snmp-server community <span class="secret">corp-mon-2026</span> RO
+snmp-server community <span class="secret">corp-mon-2026</span> RW
+!
+crypto isakmp key <span class="secret">Tunnel$ecret99</span>
+ address 203.0.113.10
+!
+radius-server key <span class="secret">RAD_shared_key_42</span></span>
+      </div>
+      <div class="example-block">
+        <span class="label">After — sanitized output</span>
+        <span class="val">username admin privilege 15
+ password 7 <span class="token">[PASSWORD_1]</span>
+!
+enable secret 5 <span class="token">[SECRET_HASH_1]</span>
+!
+snmp-server community <span class="token">[COMMUNITY_1]</span> RO
+snmp-server community <span class="token">[COMMUNITY_1]</span> RW
+!
+crypto isakmp key <span class="token">[VPNKEY_1]</span>
+ address 203.0.113.10
+!
+radius-server key <span class="token">[RADIUS_KEY_1]</span></span>
+      </div>
+    </div>
+
+    <p>Notice that <code>[COMMUNITY_1]</code> appears twice in the sanitized output — the same token for the same original value. That consistency is critical: a support engineer can see that both SNMP entries use the same community string without knowing what it is. The logical structure of the config is fully preserved.</p>
+
+    <h2>How to Sanitize Your Cisco Config with ScrubForge</h2>
+
+    <p>ScrubForge is a Chrome extension that processes configuration text locally in your browser. Nothing is uploaded. Here's the workflow:</p>
+
+    <ol class="steps">
+      <li class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Install ScrubForge</div>
+          <div class="step-desc">Add ScrubForge from the Chrome Web Store. Free, no account required. Pin the icon to your toolbar so it's one click away.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Run <code>show running-config</code></div>
+          <div class="step-desc">Connect to your Cisco device via SSH or terminal. Run <code>show running-config</code> (or <code>show run</code>) and copy the full output.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Open ScrubForge and paste</div>
+          <div class="step-desc">Click the ScrubForge icon in your browser toolbar. Paste the config into the input area. ScrubForge processes the text immediately — no submit button, no server call.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Review the sanitized output</div>
+          <div class="step-desc">Scan through the output for any remaining sensitive values. ScrubForge targets known patterns — review the result before sharing, especially if your config uses custom secret formats.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Copy and share</div>
+          <div class="step-desc">Copy the sanitized text and paste it into your TAC ticket, vendor email, or AI assistant. The support engineer gets everything they need to help you. Your credentials stay on your machine.</div>
+        </div>
+      </li>
+    </ol>
+
+    <h2>Why Local Processing Matters</h2>
+
+    <p>Most "sanitizer" tools you find online work by sending your text to a server, processing it there, and sending back the cleaned version. That's fine for stripping markdown — it's not fine for network configs with active credentials.</p>
+
+    <p>ScrubForge processes everything in your browser tab. The extension has no server component. The config text you paste into it doesn't travel anywhere. This matters especially for:</p>
+
+    <ul>
+      <li><strong>Production device configs</strong> that contain credentials used across your entire network</li>
+      <li><strong>Configs shared in TAC tickets</strong> stored in Cisco's support systems indefinitely</li>
+      <li><strong>AI assistant sessions</strong> that may be logged or used for model training</li>
+      <li><strong>Slack or Teams messages</strong> where configs get pasted and forgotten</li>
+    </ul>
+
+    <h2>What to Do After Sanitizing</h2>
+
+    <p>Sanitizing before you share is a good habit. But it's also worth building it into your team's standard operating procedure for any support engagement. A few things worth documenting in your runbook:</p>
+
+    <ul>
+      <li>Always sanitize before opening external tickets — even "just to check" shares</li>
+      <li>After a TAC case closes, rotate any credentials that appeared in shared configs (sanitized or not)</li>
+      <li>Keep a note of which placeholder maps to which original value in case the support team needs clarification — the original file on your workstation is the mapping</li>
+    </ul>
+
+    <p>If you share configs with external vendors frequently, see also: <a href="/blog/sanitize-network-config-before-sharing/">How to sanitize network configs before sharing with AI assistants</a> for a broader look at multi-vendor workflows including FortiGate and AWS.</p>
+
+    <div class="cta-box">
+      <h2>Sanitize Cisco configs before they leave your machine</h2>
+      <p>ScrubForge is free to install. Paste your config, strip the credentials locally, and share safely — no upload, no account required.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Install ScrubForge — Free</a>
+    </div>
+
+  </article>
+
+  <section class="faq" aria-label="Frequently asked questions">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Does ScrubForge upload my Cisco config to a server?</div>
+      <div class="faq-a">No. ScrubForge is a Chrome extension that processes text entirely in your browser. Nothing is sent to Wendygo Studio or any third-party server. Your config stays on your machine.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does it work with Cisco IOS-XE and IOS-XR as well?</div>
+      <div class="faq-a">ScrubForge works on plain text from any source you can copy. It processes the text you paste regardless of the Cisco OS variant — IOS, IOS-XE, IOS-XR, or NX-OS.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Will the sanitized config still be useful for troubleshooting?</div>
+      <div class="faq-a">Yes. ScrubForge replaces values with consistent tokens — the same password always becomes the same placeholder throughout the config. Interface names, ACL names, and routing structures remain intact so support engineers can follow the logic without seeing the real credentials.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What types of secrets does ScrubForge detect in Cisco configs?</div>
+      <div class="faq-a">ScrubForge sanitizes infrastructure configuration text and targets values that appear in common sensitive patterns: passwords, hash strings, community strings, pre-shared keys, and similar fields. Always review the sanitized output before sharing for any unusual custom formats.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is ScrubForge free?</div>
+      <div class="faq-a">Yes. ScrubForge is free to install and use from the Chrome Web Store. No account or subscription required.</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
