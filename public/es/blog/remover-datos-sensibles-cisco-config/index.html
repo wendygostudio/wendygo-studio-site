@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Remove Sensitive Data from a Cisco IOS Config Before Sharing | Wendygo Studio</title>
-  <meta name="description" content="Cisco IOS configs contain passwords, SNMP strings, and VPN keys. Learn how to sanitize them before sharing with TAC, vendors, or AI assistants — using ScrubForge, free and local." />
-  <link rel="canonical" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/" />
+  <title>Cómo eliminar datos sensibles de una configuración de Cisco IOS antes de compartirla | Wendygo Studio</title>
+  <meta name="description" content="Las configuraciones de Cisco IOS contienen contraseñas, strings SNMP y claves VPN. Aprende a sanitizarlas antes de compartir con TAC, proveedores o asistentes de IA — usando ScrubForge, gratuito y local." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/" />
 
   <script type="application/ld+json">
   {
@@ -63,8 +63,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing"}
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Cómo eliminar datos sensibles de una configuración de Cisco IOS"}
     ]
   }
   </script>
@@ -74,7 +74,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing",
-    "description": "Cisco IOS configs contain passwords, SNMP strings, and VPN keys. Learn how to sanitize them before sharing with TAC, vendors, or AI assistants — using ScrubForge, free and local.",
+    "description": "Use ScrubForge to replace passwords, SNMP community strings, VPN keys, and other secrets in a Cisco IOS running-config with consistent placeholder tokens before sharing with support or AI assistants.",
     "datePublished": "2026-06-30",
     "dateModified": "2026-06-30",
     "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
@@ -308,63 +308,64 @@
     Wendygo Studio
   </a>
   <div class="nav-links">
-    <a href="/blog/">Blog</a>
-    <a href="/#tools">Tools</a>
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/blog/" class="lang-switch">EN 🌐</a>
   </div>
 </nav>
 
 <main class="article-wrap">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a><span>›</span>
-    <a href="/blog/">Blog</a><span>›</span>
-    <span>Remove Sensitive Data from Cisco Config</span>
+    <a href="/">Inicio</a><span>›</span>
+    <a href="/es/blog/">Blog</a><span>›</span>
+    <span>Eliminar datos sensibles de configuración Cisco</span>
   </nav>
 
   <header class="article-meta">
-    <div class="article-tag">ScrubForge · Security</div>
-    <h1>How to Remove Sensitive Data from a Cisco IOS Config Before Sharing</h1>
-    <p class="article-intro">A Cisco running-config is a goldmine for troubleshooting — and a liability when shared raw. Here's how to strip the credentials before the config leaves your machine.</p>
-    <div class="article-date">June 30, 2026</div>
+    <div class="article-tag">ScrubForge · Seguridad</div>
+    <h1>Cómo eliminar datos sensibles de una configuración de Cisco IOS antes de compartirla</h1>
+    <p class="article-intro">Una configuración de running-config en Cisco es una mina de oro para solucionar problemas — y un pasivo cuando se comparte sin filtrar. Así es cómo eliminar las credenciales antes de que la configuración salga de tu máquina.</p>
+    <div class="article-date">30 de junio de 2026</div>
   </header>
 
   <hr class="divider" />
 
   <article class="article-body">
 
-    <p>Every time a network engineer opens a TAC case or asks an AI assistant to help debug a routing issue, the same thing happens: the support engineer says "can you share your running-config?" And then you have a decision to make.</p>
+    <p>Cada vez que un ingeniero de redes abre un caso de TAC o le pide ayuda a un asistente de IA para depurar un problema de enrutamiento, ocurre lo mismo: el ingeniero de soporte dice "¿puedes compartir tu running-config?" Y entonces tienes que tomar una decisión.</p>
 
-    <p>The problem is that <code>show running-config</code> on a Cisco IOS device doesn't just show you interfaces and routes. It shows you <strong>everything</strong> — the enable password, SNMP community strings, VPN pre-shared keys, RADIUS shared secrets, BGP neighbor passwords. All of it, in one paste.</p>
+    <p>El problema es que <code>show running-config</code> en un dispositivo Cisco IOS no solo te muestra interfaces y rutas. Te muestra <strong>todo</strong> — la contraseña enable, strings de comunidad SNMP, claves VPN pre-compartidas, secretos RADIUS compartidos, contraseñas de vecinos BGP. Todo, en un solo pegado.</p>
 
-    <p>Sharing that config unmodified is a credential leak waiting to happen.</p>
+    <p>Compartir esa configuración sin modificar es una fuga de credenciales esperando suceder.</p>
 
-    <h2>What a Cisco IOS Config Actually Contains</h2>
+    <h2>Qué contiene realmente una configuración de Cisco IOS</h2>
 
-    <p>A typical Cisco IOS running-config includes several categories of sensitive data that most people don't think twice about when copying:</p>
+    <p>Una configuración típica de running-config de Cisco IOS incluye varias categorías de datos sensibles que la mayoría de la gente no considera dos veces al copiar:</p>
 
     <ul>
-      <li><strong>Enable password / enable secret</strong> — the hash of your privileged mode password</li>
-      <li><strong>SNMP community strings</strong> — often set to <code>public</code> or a site-wide string used across dozens of devices</li>
-      <li><strong>VPN pre-shared keys</strong> — <code>crypto isakmp key</code> lines with the actual passphrase</li>
-      <li><strong>RADIUS and TACACS+ shared secrets</strong> — <code>radius-server key</code> and <code>tacacs-server key</code></li>
-      <li><strong>Username/password pairs</strong> — local user accounts with password hashes or type-7 encoded passwords</li>
-      <li><strong>BGP neighbor passwords</strong> — MD5 authentication keys for BGP sessions</li>
+      <li><strong>Contraseña enable / secreto enable</strong> — el hash de tu contraseña de modo privilegiado</li>
+      <li><strong>Strings de comunidad SNMP</strong> — a menudo configurados como <code>public</code> o un string de sitio usado en docenas de dispositivos</li>
+      <li><strong>Claves VPN pre-compartidas</strong> — líneas <code>crypto isakmp key</code> con la frase de paso real</li>
+      <li><strong>Secretos compartidos RADIUS y TACACS+</strong> — <code>radius-server key</code> y <code>tacacs-server key</code></li>
+      <li><strong>Pares usuario/contraseña</strong> — cuentas de usuario locales con hashes de contraseña o contraseñas codificadas tipo-7</li>
+      <li><strong>Contraseñas de vecino BGP</strong> — claves de autenticación MD5 para sesiones BGP</li>
     </ul>
 
-    <p>Type-7 passwords are particularly dangerous because they use a reversible Cisco-specific encoding, not a real hash. Anyone with the encoded string and a decoder tool can recover the original password in seconds.</p>
+    <p>Las contraseñas tipo-7 son particularmente peligrosas porque usan una codificación reversible específica de Cisco, no un hash real. Cualquiera con el string codificado y una herramienta decodificadora puede recuperar la contraseña original en segundos.</p>
 
     <div class="warning-box">
-      <strong>The AI assistant problem</strong>
-      When you paste a config into ChatGPT, Claude, or any AI chat, that text may be used for model improvement, visible to support staff reviewing conversations, or stored in the platform's history. A sanitized config gives you the same troubleshooting help without the exposure.
+      <strong>El problema del asistente de IA</strong>
+      Cuando pegas una configuración en ChatGPT, Claude o cualquier chat de IA, ese texto puede ser usado para mejorar el modelo, visible para el personal de soporte que revisa conversaciones, o almacenado en el historial de la plataforma. Una configuración sanitizada te proporciona la misma ayuda para solucionar problemas sin la exposición.
     </div>
 
-    <h2>Before and After: What Sanitization Looks Like</h2>
+    <h2>Antes y después: cómo se ve la sanitización</h2>
 
-    <p>Here's a snippet from a typical Cisco IOS config before and after passing through <a href="/blog/sanitize-network-config-before-sharing/">a config sanitizer</a>:</p>
+    <p>Aquí hay un fragmento de una configuración típica de Cisco IOS antes y después de pasar por <a href="/es/blog/sanitize-network-config-before-sharing/">un sanitizador de configuración</a>:</p>
 
     <div class="example-wrap">
       <div class="example-block">
-        <span class="label">Before — raw config</span>
+        <span class="label">Antes — config sin filtrar</span>
         <span class="val">username admin privilege 15
  password 7 <span class="secret">13061E010803557878</span>
 !
@@ -379,7 +380,7 @@ crypto isakmp key <span class="secret">Tunnel$ecret99</span>
 radius-server key <span class="secret">RAD_shared_key_42</span></span>
       </div>
       <div class="example-block">
-        <span class="label">After — sanitized output</span>
+        <span class="label">Después — output sanitizado</span>
         <span class="val">username admin privilege 15
  password 7 <span class="token">[PASSWORD_1]</span>
 !
@@ -395,109 +396,109 @@ radius-server key <span class="token">[RADIUS_KEY_1]</span></span>
       </div>
     </div>
 
-    <p>Notice that <code>[COMMUNITY_1]</code> appears twice in the sanitized output — the same token for the same original value. That consistency is critical: a support engineer can see that both SNMP entries use the same community string without knowing what it is. The logical structure of the config is fully preserved.</p>
+    <p>Observa que <code>[COMMUNITY_1]</code> aparece dos veces en el output sanitizado — el mismo token para el mismo valor original. Esa consistencia es crítica: un ingeniero de soporte puede ver que ambas entradas SNMP usan el mismo string de comunidad sin saber cuál es. La estructura lógica de la configuración se preserva completamente.</p>
 
-    <h2>How to Sanitize Your Cisco Config with ScrubForge</h2>
+    <h2>Cómo sanitizar tu configuración de Cisco con ScrubForge</h2>
 
-    <p>ScrubForge is a Chrome extension that processes configuration text locally in your browser. Nothing is uploaded. Here's the workflow:</p>
+    <p>ScrubForge es una extensión de Chrome que procesa texto de configuración localmente en tu navegador. Nada se sube. Aquí está el flujo de trabajo:</p>
 
     <ol class="steps">
       <li class="step-card">
         <div class="step-num">1</div>
         <div class="step-content">
-          <div class="step-title">Install ScrubForge</div>
-          <div class="step-desc">Add ScrubForge from the Chrome Web Store. Free, no account required. Pin the icon to your toolbar so it's one click away.</div>
+          <div class="step-title">Instala ScrubForge</div>
+          <div class="step-desc">Añade ScrubForge desde la Chrome Web Store. Gratuito, sin cuenta requerida. Fija el icono a tu barra de herramientas para que esté a un clic de distancia.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">2</div>
         <div class="step-content">
-          <div class="step-title">Run <code>show running-config</code></div>
-          <div class="step-desc">Connect to your Cisco device via SSH or terminal. Run <code>show running-config</code> (or <code>show run</code>) and copy the full output.</div>
+          <div class="step-title">Exporta tu running-config de Cisco IOS</div>
+          <div class="step-desc">Conéctate a tu dispositivo Cisco vía SSH o terminal. Ejecuta <code>show running-config</code> (o <code>show run</code>) y copia el output completo.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">3</div>
         <div class="step-content">
-          <div class="step-title">Open ScrubForge and paste</div>
-          <div class="step-desc">Click the ScrubForge icon in your browser toolbar. Paste the config into the input area. ScrubForge processes the text immediately — no submit button, no server call.</div>
+          <div class="step-title">Abre ScrubForge y pega</div>
+          <div class="step-desc">Haz clic en el icono de ScrubForge en tu barra de herramientas del navegador. Pega la configuración en el área de entrada. ScrubForge procesa el texto inmediatamente — sin botón de envío, sin llamada al servidor.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">4</div>
         <div class="step-content">
-          <div class="step-title">Review the sanitized output</div>
-          <div class="step-desc">Scan through the output for any remaining sensitive values. ScrubForge targets known patterns — review the result before sharing, especially if your config uses custom secret formats.</div>
+          <div class="step-title">Revisa el output sanitizado</div>
+          <div class="step-desc">Escanea el output sanitizado para valores sensibles restantes. ScrubForge se enfoca en patrones conocidos — revisa el resultado antes de compartir, especialmente si tu configuración usa formatos de secreto personalizados.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">5</div>
         <div class="step-content">
-          <div class="step-title">Copy and share</div>
-          <div class="step-desc">Copy the sanitized text and paste it into your TAC ticket, vendor email, or AI assistant. The support engineer gets everything they need to help you. Your credentials stay on your machine.</div>
+          <div class="step-title">Copia y comparte</div>
+          <div class="step-desc">Copia el texto sanitizado y pégalo en tu ticket de TAC, correo del proveedor, o chat del asistente de IA. El ingeniero de soporte obtiene todo lo que necesita para ayudarte. Tus credenciales permanecen en tu máquina.</div>
         </div>
       </li>
     </ol>
 
-    <h2>Why Local Processing Matters</h2>
+    <h2>Por qué el procesamiento local es importante</h2>
 
-    <p>Most "sanitizer" tools you find online work by sending your text to a server, processing it there, and sending back the cleaned version. That's fine for stripping markdown — it's not fine for network configs with active credentials.</p>
+    <p>La mayoría de herramientas "sanitizadoras" que encuentras en línea funcionan enviando tu texto a un servidor, procesándolo allí, y devolviendo la versión limpia. Eso está bien para eliminar markdown — no está bien para configuraciones de red con credenciales activas.</p>
 
-    <p>ScrubForge processes everything in your browser tab. The extension has no server component. The config text you paste into it doesn't travel anywhere. This matters especially for:</p>
-
-    <ul>
-      <li><strong>Production device configs</strong> that contain credentials used across your entire network</li>
-      <li><strong>Configs shared in TAC tickets</strong> stored in Cisco's support systems indefinitely</li>
-      <li><strong>AI assistant sessions</strong> that may be logged or used for model training</li>
-      <li><strong>Slack or Teams messages</strong> where configs get pasted and forgotten</li>
-    </ul>
-
-    <h2>What to Do After Sanitizing</h2>
-
-    <p>Sanitizing before you share is a good habit. But it's also worth building it into your team's standard operating procedure for any support engagement. A few things worth documenting in your runbook:</p>
+    <p>ScrubForge procesa todo en tu pestaña del navegador. La extensión no tiene componente de servidor. El texto de configuración que pegas en ella no viaja a ningún lado. Esto es particularmente importante para:</p>
 
     <ul>
-      <li>Always sanitize before opening external tickets — even "just to check" shares</li>
-      <li>After a TAC case closes, rotate any credentials that appeared in shared configs (sanitized or not)</li>
-      <li>Keep a note of which placeholder maps to which original value in case the support team needs clarification — the original file on your workstation is the mapping</li>
+      <li><strong>Configuraciones de dispositivos en producción</strong> que contienen credenciales usadas en toda tu red</li>
+      <li><strong>Configuraciones compartidas en tickets de TAC</strong> almacenadas en los sistemas de soporte de Cisco indefinidamente</li>
+      <li><strong>Sesiones de asistentes de IA</strong> que pueden ser registradas o usadas para entrenamiento de modelos</li>
+      <li><strong>Mensajes de Slack o Teams</strong> donde las configuraciones se pegan y se olvidan</li>
     </ul>
 
-    <p>If you share configs with external vendors frequently, see also: <a href="/blog/sanitize-network-config-before-sharing/">How to sanitize network configs before sharing with AI assistants</a> for a broader look at multi-vendor workflows including FortiGate and AWS.</p>
+    <h2>Qué hacer después de sanitizar</h2>
+
+    <p>Sanitizar antes de compartir es un buen hábito. Pero también vale la pena incorporarlo en el procedimiento operativo estándar de tu equipo para cualquier participación de soporte. Algunas cosas que vale la pena documentar en tu runbook:</p>
+
+    <ul>
+      <li>Siempre sanitiza antes de abrir tickets externos — incluso para comparticiones "solo para verificar"</li>
+      <li>Después de que se cierre un caso de TAC, rota cualquier credencial que haya aparecido en configuraciones compartidas (sanitizadas o no)</li>
+      <li>Mantén una nota de cuál placeholder mapea a cuál valor original en caso de que el equipo de soporte necesite aclaración — el archivo original en tu workstation es el mapeo</li>
+    </ul>
+
+    <p>Si compartes configuraciones con proveedores externos frecuentemente, ve también: <a href="/es/blog/sanitize-network-config-before-sharing/">Cómo sanitizar configuraciones de red antes de compartir con asistentes de IA</a> para un vistazo más amplio a flujos de trabajo multi-vendedor incluyendo FortiGate y AWS.</p>
 
     <div class="cta-box">
-      <h2>Sanitize Cisco configs before they leave your machine</h2>
-      <p>ScrubForge is free to install. Paste your config, strip the credentials locally, and share safely — no upload, no account required.</p>
-      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Install ScrubForge — Free</a>
+      <h2>Sanitiza configuraciones de Cisco antes de que salgan de tu máquina</h2>
+      <p>ScrubForge es gratuito para instalar. Pega tu configuración, elimina las credenciales localmente, y comparte de forma segura — sin subidas, sin cuenta requerida.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Instala ScrubForge — Gratuito</a>
     </div>
 
   </article>
 
-  <section class="faq" aria-label="Frequently asked questions">
-    <h2>Frequently Asked Questions</h2>
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
 
     <div class="faq-item">
-      <div class="faq-q">Does ScrubForge upload my Cisco config to a server?</div>
-      <div class="faq-a">No. ScrubForge is a Chrome extension that processes text entirely in your browser. Nothing is sent to Wendygo Studio or any third-party server. Your config stays on your machine.</div>
+      <div class="faq-q">¿ScrubForge sube mi configuración de Cisco a un servidor?</div>
+      <div class="faq-a">No. ScrubForge es una extensión de Chrome que procesa texto completamente en tu navegador. Nada se envía a Wendygo Studio ni a ningún servidor de terceros. Tu configuración permanece en tu máquina.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Does it work with Cisco IOS-XE and IOS-XR as well?</div>
-      <div class="faq-a">ScrubForge works on plain text from any source you can copy. It processes the text you paste regardless of the Cisco OS variant — IOS, IOS-XE, IOS-XR, or NX-OS.</div>
+      <div class="faq-q">¿Funciona también con Cisco IOS-XE e IOS-XR?</div>
+      <div class="faq-a">ScrubForge funciona en texto plano de cualquier fuente que puedas copiar. Procesa el texto que pegas sin importar la variante del SO de Cisco — IOS, IOS-XE, IOS-XR, o NX-OS.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Will the sanitized config still be useful for troubleshooting?</div>
-      <div class="faq-a">Yes. ScrubForge replaces values with consistent tokens — the same password always becomes the same placeholder throughout the config. Interface names, ACL names, and routing structures remain intact so support engineers can follow the logic without seeing the real credentials.</div>
+      <div class="faq-q">¿Seguirá siendo útil la configuración sanitizada para solucionar problemas?</div>
+      <div class="faq-a">Sí. ScrubForge reemplaza valores con tokens consistentes — la misma contraseña siempre se convierte en el mismo placeholder en toda la configuración. Los nombres de interfaz, nombres de ACL, y estructuras de enrutamiento permanecen intactos para que los ingenieros de soporte puedan seguir la lógica sin ver las credenciales reales.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">What types of secrets does ScrubForge detect in Cisco configs?</div>
-      <div class="faq-a">ScrubForge sanitizes infrastructure configuration text and targets values that appear in common sensitive patterns: passwords, hash strings, community strings, pre-shared keys, and similar fields. Always review the sanitized output before sharing for any unusual custom formats.</div>
+      <div class="faq-q">¿Qué tipos de secretos detecta ScrubForge en configuraciones Cisco?</div>
+      <div class="faq-a">ScrubForge sanitiza texto de configuración de infraestructura y apunta a valores que aparecen en patrones sensibles comunes: contraseñas, strings de hash, strings de comunidad, claves pre-compartidas, y campos similares. Siempre revisa el output sanitizado antes de compartir para cualquier formato de secreto personalizado inusual.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Is ScrubForge free?</div>
-      <div class="faq-a">Yes. ScrubForge is free to install and use from the Chrome Web Store. No account or subscription required.</div>
+      <div class="faq-q">¿ScrubForge es gratuito?</div>
+      <div class="faq-a">Sí. ScrubForge es gratuito para instalar y usar desde la Chrome Web Store. Sin cuenta ni suscripción requerida.</div>
     </div>
 
   </section>
@@ -507,12 +508,12 @@ radius-server key <span class="token">[RADIUS_KEY_1]</span></span>
 <footer>
   <a class="footer-brand" href="/">Wendygo Studio</a>
   <div class="footer-links">
-    <a href="/blog/">Blog</a>
-    <a href="/#tools">Tools</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/privacy.html">Privacidad</a>
+    <a href="/terms.html">Términos</a>
   </div>
-  <div class="footer-copy">&copy; 2026 Wendygo Studio. All rights reserved.</div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. Todos los derechos reservados.</div>
 </footer>
 
 </body>

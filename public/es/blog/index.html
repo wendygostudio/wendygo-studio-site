@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog en español — Wendygo Studio</title>
-  <meta name="description" content="Guías y tutoriales sobre productividad en el navegador, edición de imágenes, manipulación de texto y gestión de configuraciones de red, de los creadores de las extensiones Forge." />
+  <title>Blog — Wendygo Studio</title>
+  <meta name="description" content="Guías, tutoriales y consejos sobre productividad en navegadores, edición de imágenes, manipulación de texto y gestión de configuración de red de los creadores de las extensiones Forge." />
   <link rel="canonical" href="https://wendygostudio.com/es/blog/" />
-  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/" />
   <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,6 +21,7 @@
       --amber:  #e8a33d;
       --amber2: #f0b75a;
       --on-a:   #13151a;
+      --r:      9px;
       --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
     html { scroll-behavior: smooth; }
@@ -29,6 +30,7 @@
       font-family: var(--sans); font-size: 16px; line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
+
     nav {
       position: sticky; top: 0; z-index: 10;
       background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
@@ -38,7 +40,8 @@
     }
     .nav-brand {
       display: flex; align-items: center; gap: 10px;
-      font-weight: 700; font-size: 15px; text-decoration: none; color: var(--text);
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
     }
     .nav-mark {
       width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
@@ -47,6 +50,7 @@
     .nav-links { display: flex; gap: 28px; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
     .nav-links a:hover { color: var(--text); }
+
     .blog-header {
       max-width: 720px; margin: 0 auto;
       padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 32px;
@@ -60,13 +64,7 @@
       letter-spacing: -.8px; margin-bottom: 12px;
     }
     .blog-header p { color: var(--muted); font-size: 16px; max-width: 520px; }
-    .lang-switch {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 13px; color: var(--faint);
-      background: var(--surf); border: 1px solid var(--line); border-radius: 6px;
-      padding: 6px 12px; margin-top: 16px; text-decoration: none;
-    }
-    .lang-switch:hover { color: var(--muted); }
+
     .post-list { max-width: 720px; margin: 0 auto; padding: 0 clamp(20px,5vw,40px) 80px; }
     .post-item {
       display: block; text-decoration: none; color: inherit;
@@ -83,6 +81,7 @@
       color: var(--amber); border: 1px solid var(--line); border-radius: 20px;
       padding: 2px 10px; margin-top: 10px;
     }
+
     footer {
       padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
       display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
@@ -93,80 +92,52 @@
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
     .footer-links a:hover { color: var(--muted); }
-    @media (max-width: 600px) { .nav-links { display: none; } }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
   </style>
 </head>
-<body>  <nav>
-    <a class="nav-brand" href="/es/">
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
       <div class="nav-mark">W</div>
       Wendygo Studio
     </a>
     <div class="nav-links">
-      <a href="/es/#productos">Extensiones</a>
+      <a href="/#products">Extensiones</a>
       <a href="/es/blog/">Blog</a>
-      <a href="/es/tools/">Herramientas</a>
-      <a href="/es/#como">Cómo funciona</a>
-      <a href="/es/#privacidad">Privacidad</a>
-      <a href="/" class="nav-lang">EN 🌐</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/#how">Cómo funciona</a>
+      <a href="/#privacy">Privacidad</a>
+      <a href="/blog/" class="nav-lang">EN 🌐</a>
     </div>
   </nav>
 
   <div class="blog-header">
     <div class="section-label">Blog</div>
     <h1>Guías y tutoriales</h1>
-    <p>Consejos prácticos sobre productividad en el navegador, edición de imágenes, manipulación de texto y configuración de red.</p>
-    <a class="lang-switch" href="/blog/">🌐 View in English</a>
+    <p>Consejos prácticos sobre productividad en navegadores, edición de imágenes, manipulación de texto y gestión de configuración de red.</p>
   </div>
 
   <div class="post-list">
-    <a class="post-item" href="/es/blog/frameforge-vs-canva-thumbnails/">
-      <div class="post-date">29 de junio de 2026</div>
-      <div class="post-title">FrameForge vs Canva para Miniaturas: ¿Cuál Es Más Rápido en 2026?</div>
-      <div class="post-excerpt">Canva es excelente para diseñar desde cero. FrameForge es más rápido cuando ya tienes una imagen y solo necesitas las dimensiones correctas. Aquí te mostramos cómo elegir la herramienta adecuada para tu flujo de trabajo.</div>
-      <span class="post-tag">FrameForge</span>
-    </a>
-    <a class="post-item" href="/es/blog/ordenar-lineas-alfabeticamente-online/">
-      <div class="post-date">28 de junio de 2026</div>
-      <div class="post-title">Cómo Ordenar Líneas Alfabéticamente Online — Sin Excel, Sin Terminal</div>
-      <div class="post-excerpt">Ordena cualquier lista de líneas alfabéticamente en segundos. TextForge ordena texto localmente en tu navegador — sin hoja de cálculo, sin línea de comando, sin datos enviados.</div>
-      <span class="post-tag">TextForge</span>
-    </a>
-    <a class="post-item" href="/es/blog/redimensionar-imagen-para-x-twitter/">
-      <div class="post-date">27 de junio de 2026</div>
-      <div class="post-title">Cómo Redimensionar una Imagen para Publicaciones en X (Twitter) — 1200×675</div>
-      <div class="post-excerpt">Publica imágenes en la dimensión correcta de 1200×675 px para que nada se recorte en el feed de X. FrameForge redimensiona completamente en tu navegador — sin subir archivos, sin Photoshop, sin cuenta.</div>
-      <span class="post-tag">FrameForge</span>
-    </a>
-    <a class="post-item" href="/es/blog/extraer-correos-desde-texto/">
-      <div class="post-date">26 de junio de 2026</div>
-      <div class="post-title">Cómo Extraer Correos desde Texto Online — Sin Búsqueda Manual</div>
-      <div class="post-excerpt">Extrae cada dirección de correo de cualquier bloque de texto en segundos. TextForge extrae localmente desde archivos de registro, exportaciones CRM y cadenas de correos — sin datos subidos, sin regex necesario.</div>
-      <span class="post-tag">TextForge</span>
-    </a>
-    <a class="post-item" href="/es/blog/base64-codificador-decodificador-online/">
-      <div class="post-date">26 de junio de 2026</div>
-      <div class="post-title">Codificador Base64 Online — Sin Subir Archivos, Sin Terminal</div>
-      <div class="post-excerpt">Codifica y decodifica Base64 directamente en tu navegador — payloads JWT, secretos de Kubernetes, cabeceras Basic Auth — sin pegar datos sensibles en una herramienta web.</div>
-      <span class="post-tag">TextForge</span>
-    </a>
-    <a class="post-item" href="/es/blog/redimensionar-imagen-instagram-chrome/">
-      <div class="post-date">26 de junio de 2026</div>
-      <div class="post-title">Cómo Redimensionar Imágenes para Instagram en Chrome (1080×1080)</div>
-      <div class="post-excerpt">Recorta cualquier foto a 1080×1080 para Instagram — formatos cuadrado, retrato y paisaje — sin subir archivos a ningún servidor. FrameForge lo hace en tu navegador en segundos.</div>
-      <span class="post-tag">FrameForge</span>
+    <a class="post-item" href="/es/blog/remover-datos-sensibles-cisco-config/">
+      <div class="post-date">30 de junio de 2026</div>
+      <div class="post-title">Cómo eliminar datos sensibles de una configuración de Cisco IOS antes de compartirla</div>
+      <div class="post-excerpt">Las configuraciones de running-config en Cisco contienen contraseñas, strings SNMP y claves VPN. Sanitízalas localmente antes de abrir un ticket de TAC o pedir ayuda a un asistente de IA — sin necesidad de subir nada.</div>
+      <span class="post-tag">ScrubForge</span>
     </a>
   </div>
 
   <footer>
-    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canarias</div>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
     <div class="footer-links">
-      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
-      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
-      <a href="/privacy.html">Política de privacidad</a>
-      <a href="/terms.html">Términos y condiciones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/privacy.html">Privacidad</a>
+      <a href="/terms.html">Términos</a>
     </div>
   </footer>
 
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>
