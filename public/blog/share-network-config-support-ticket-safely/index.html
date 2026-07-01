@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Share Network Config with Support Tickets Safely | Wendygo Studio</title>
+  <meta name="description" content="Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first — keep live credentials off support databases while sharing the structure vendors need." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Share Network Config with Support Tickets Safely"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Share Network Config with Support Tickets Safely",
+    "description": "Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first — keep live credentials off support databases while sharing the structure vendors need.",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the support engineer still troubleshoot if credentials are replaced?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Support engineers troubleshoot configuration logic — routing, VPN settings, firewall policies. None of that depends on seeing the actual credential value. The sanitized config gives them everything they need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the support ticket system stores files indefinitely?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The benefit of sanitizing before uploading is that even if the ticket is never deleted or is accessed later, there are no live credentials in it. You've broken the link between your running network and the support database."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge affect network IP addresses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. By default, ScrubForge replaces credential patterns — passwords, keys, tokens, SNMP strings — not IP addresses. Your network topology, peer IPs, and subnets stay intact, which is exactly what support engineers need to see."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { margin: 16px 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
+    .article-body ul li strong { color: var(--text); }
+    .article-body pre {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 8px;
+      padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 1.6;
+      margin: 20px 0; color: var(--amber2); font-family: var(--mono);
+    }
+
+    .callout {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.65;
+    }
+    .callout strong { color: var(--text); }
+
+    .cta-box {
+      margin: 56px 0 0;
+      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
+    }
+    .cta-box p {
+      font-size: 15px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-block; background: var(--amber); color: var(--on-a);
+      font-weight: 800; font-size: 14px; letter-spacing: .3px;
+      padding: 12px 28px; border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related-link {
+      margin-top: 24px; padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px;
+    }
+    .related-link a { color: var(--amber); text-decoration: none; }
+    .related-link a:hover { text-decoration: underline; }
+
+    .faq { margin-top: 56px; }
+    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+    .faq-item {
+      border: 1px solid var(--line); border-radius: 10px;
+      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    footer {
+      border-top: 1px solid var(--line); margin-top: 80px;
+      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span>&#8250;</span>
+    <a href="/blog/">Blog</a><span>&#8250;</span>
+    <span>Share Network Config with Support Tickets Safely</span>
+  </nav>
+
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge &middot; How-To</div>
+    <h1>How to Share Network Config with Support Tickets Safely</h1>
+    <p class="article-intro">Vendor support needs your network config to troubleshoot firewall bugs and config errors. The problem: your config contains active credentials that shouldn&rsquo;t be in a support database. Here&rsquo;s how to give support engineers what they need without exposing live credentials.</p>
+    <div class="article-date">July 1, 2026</div>
+  </header>
+
+  <hr class="divider" />
+
+  <article class="article-body">
+
+    <p>When your Cisco router goes down or your FortiGate firewall starts dropping traffic at 2 AM, the first call is to vendor support. They&rsquo;ll ask for your running config. It&rsquo;s the fastest way to diagnose the problem.</p>
+
+    <p>The catch: your config contains active credentials. VPN pre-shared keys, admin passwords, API tokens, SNMP community strings &mdash; all of them live, all of them in production, all of them in your configuration file.</p>
+
+    <p><strong>You don&rsquo;t want those in a support database.</strong> ScrubForge solves exactly this: sanitize the credentials locally before attaching to a support ticket or email.</p>
+
+    <h2>Why Raw Configs in Support Tickets Are a Risk</h2>
+
+    <p>When you email a config file or attach it to a Cisco TAC case, FortiGate support portal, or Jira ticket, that file goes into a system you don&rsquo;t fully control. Depending on the vendor&rsquo;s security practices and data retention policy, your credentials may be:</p>
+
+    <ul>
+      <li><strong>Logged</strong> in support system databases</li>
+      <li><strong>Accessible to support staff</strong> during troubleshooting</li>
+      <li><strong>Retained</strong> longer than you expect</li>
+      <li><strong>Shared internally</strong> with other teams for knowledge building</li>
+    </ul>
+
+    <p>Most enterprise support systems are reasonably secure. But a production firewall config containing live VPN keys and admin passwords does not need to be in a support database at all. The vendor&rsquo;s support engineer doesn&rsquo;t need your credentials to troubleshoot your configuration. They need the structure.</p>
+
+    <h2>The ScrubForge + Support Ticket Workflow</h2>
+
+    <ol>
+      <li><strong>Export your config</strong> &mdash; On Cisco IOS: <code>show running-config</code>. On FortiGate: System &gt; Configuration &gt; Download. Other vendors have similar CLI or web UI export options.</li>
+      <li><strong>Open ScrubForge</strong> &mdash; Click the icon in your Chrome toolbar. It opens as a local panel in your browser &mdash; no upload, no external servers.</li>
+      <li><strong>Paste and sanitize</strong> &mdash; Paste your raw config. ScrubForge detects passwords, pre-shared keys, API tokens, and SNMP strings, replacing each unique value with a consistent placeholder like <code>[PSK_1]</code> or <code>[ADMIN_PASS_1]</code>.</li>
+      <li><strong>Review</strong> &mdash; Scan the output for anything that looks like a live credential. A 30-second review before sharing is good practice.</li>
+      <li><strong>Attach to ticket</strong> &mdash; Copy the sanitized output into your support ticket email, or save it as a text file and upload to the support portal.</li>
+    </ol>
+
+    <h2>What to Include in Your Support Ticket</h2>
+
+    <p>When attaching the sanitized config, add a one-line note to the ticket:</p>
+
+    <div class="callout">
+      <strong>Example:</strong> &ldquo;Config attached. Credentials have been sanitized (replaced with consistent placeholder tokens; structure and logic are fully intact).&rdquo;
+    </div>
+
+    <p>This tells the support engineer what they&rsquo;re looking at and why they won&rsquo;t see live values. Most engineers will understand immediately. They know the structure is what matters for troubleshooting &mdash; routing protocols, VPN peer IPs, firewall policies, interface configurations. None of those are credentials.</p>
+
+    <h2>Before and After: What ScrubForge Replaces</h2>
+
+    <pre>--- BEFORE (raw) ---
+crypto isakmp key T@nn3lS3cr3t address 198.51.100.10
+username admin password cisco123
+snmp-server community public RO
+
+--- AFTER (sanitized) ---
+crypto isakmp key [PSK_1] address 198.51.100.10
+username admin password [ADMIN_PASS_1]
+snmp-server community [SNMP_RO_1] RO</pre>
+
+    <p>The peer IP, interface names, and policies stay. The live credentials don&rsquo;t. Your support engineer sees the same logical structure with zero live values in the support system.</p>
+
+    <h2>This Works with Any Vendor</h2>
+
+    <p>Whether it&rsquo;s Cisco, FortiGate, Palo Alto, Juniper, Arista, Cumulus, pfSense, or any other vendor, the principle is the same: sanitize text-based configs before sharing with external systems. ScrubForge detects common credential patterns in any text-based format.</p>
+
+    <h2>How Support Engineers Troubleshoot from Sanitized Configs</h2>
+
+    <p>Once you send a sanitized config, support engineers can troubleshoot:</p>
+
+    <ul>
+      <li><strong>Routing and BGP</strong> &mdash; checking peer configs and policy configs</li>
+      <li><strong>IPsec/VPN</strong> &mdash; reviewing IKE phase 1/phase 2 settings and DPD timers</li>
+      <li><strong>Firewall policies</strong> &mdash; finding missing allow rules, NAT order issues, policy shadowing</li>
+      <li><strong>VLAN configuration</strong> &mdash; STP issues, native VLAN mismatches, trunk misconfigurations</li>
+      <li><strong>Interface errors</strong> &mdash; speed/duplex mismatches, cable diagnostics, jumbo frame configs</li>
+    </ul>
+
+    <p>All of this depends on configuration logic and structure. None of it depends on seeing the actual credential values.</p>
+
+    <div class="cta-box">
+      <h2>Sanitize before you share</h2>
+      <p>ScrubForge is free. Paste your config, strip the credentials locally, then attach to support tickets or emails safely — no account, no upload required.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Install ScrubForge — Free</a>
+    </div>
+
+    <div class="related-link">
+      <strong>Related:</strong> <a href="/blog/scrubforge-chatgpt-network-troubleshooting/">How to Use ScrubForge with ChatGPT for Network Troubleshooting</a>
+    </div>
+
+  </article>
+
+  <section class="faq" aria-label="Frequently asked questions">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Can the support engineer still troubleshoot if credentials are replaced?</div>
+      <div class="faq-a">Yes. Support engineers troubleshoot configuration logic — routing, VPN settings, firewall policies. None of that depends on seeing the actual credential value. The sanitized config gives them everything they need.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if the support ticket system stores files indefinitely?</div>
+      <div class="faq-a">The benefit of sanitizing before uploading is that even if the ticket is never deleted or is accessed later, there are no live credentials in it. You've broken the link between your running network and the support database.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does ScrubForge affect network IP addresses?</div>
+      <div class="faq-a">No. By default, ScrubForge replaces credential patterns — passwords, keys, tokens, SNMP strings — not IP addresses. Your network topology, peer IPs, and subnets stay intact, which is exactly what support engineers need to see.</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
