@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UUID Generator Online — Bulk Generate UUID v4 Free</title>
+  <meta name="description" content="Generate UUID v4 online in bulk — 1 to 1000 UUIDs at once. Choose with or without hyphens, uppercase or lowercase. Free, 100% local, no signup required." />
+  <link rel="canonical" href="https://wendygostudio.com/tools/uuid-generator/" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "UUID Generator",
+      "url": "https://wendygostudio.com/tools/uuid-generator/",
+      "description": "Free browser-based UUID v4 batch generator. Generate 1 to 1000 UUIDs with options for hyphens, uppercase, and one-click copy. 100% local, no server upload.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Generate 1 to 1000 UUID v4 at once",
+        "Toggle hyphens on or off",
+        "Uppercase or lowercase output",
+        "One-click copy all to clipboard",
+        "Copy individual UUIDs",
+        "100% local — no server upload"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "UUID Generator", "item": "https://wendygostudio.com/tools/uuid-generator/" }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --green:  #4ade80;
+      --r: 9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "Cascadia Code", "Fira Code", "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased; min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-lang { white-space: nowrap; }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 860px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,60px) clamp(60px,8vw,100px);
+    }
+
+    /* ── HEADER ── */
+    .page-header { margin-bottom: 40px; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--muted); margin-bottom: 20px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--amber); }
+    .breadcrumb span { color: var(--faint); }
+    h1 {
+      font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.8px; margin-bottom: 12px;
+    }
+    .page-sub { font-size: 15px; color: var(--muted); max-width: 560px; }
+
+    /* ── TOOL CARD ── */
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      margin-bottom: 24px;
+    }
+
+    /* ── CONTROLS ── */
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+    .ctrl-group { display: flex; flex-direction: column; gap: 8px; }
+    .ctrl-label {
+      font-size: 12px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .ctrl-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+    /* Count input */
+    .count-input {
+      background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-family: var(--mono); font-size: 15px;
+      padding: 10px 14px; border-radius: var(--r); width: 100px;
+      outline: none; transition: border-color .15s;
+    }
+    .count-input:focus { border-color: var(--amber); }
+
+    /* Toggle buttons */
+    .toggle-group { display: flex; gap: 0; border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); }
+    .toggle-btn {
+      background: var(--surf2); border: none; color: var(--muted);
+      font-size: 13px; font-weight: 600; padding: 9px 16px; cursor: pointer;
+      transition: background .15s, color .15s; white-space: nowrap;
+    }
+    .toggle-btn:not(:last-child) { border-right: 1px solid var(--line); }
+    .toggle-btn.active { background: var(--amber); color: var(--on-a); }
+    .toggle-btn:hover:not(.active) { background: var(--line); color: var(--text); }
+
+    /* Generate button */
+    .btn-generate {
+      background: var(--amber); color: var(--on-a);
+      border: none; font-weight: 800; font-size: 14px;
+      padding: 12px 28px; border-radius: var(--r); cursor: pointer;
+      transition: filter .15s; white-space: nowrap; align-self: end;
+      letter-spacing: .2px;
+    }
+    .btn-generate:hover { filter: brightness(1.1); }
+    .btn-generate:active { filter: brightness(.95); }
+
+    /* ── OUTPUT ── */
+    .output-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .output-label {
+      font-size: 12px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .btn-copy-all {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-size: 13px; font-weight: 600;
+      padding: 7px 14px; border-radius: 7px; cursor: pointer;
+      transition: border-color .15s, color .15s;
+    }
+    .btn-copy-all:hover { border-color: var(--amber); color: var(--amber); }
+    .btn-copy-all.copied { border-color: var(--green); color: var(--green); }
+
+    .uuid-list {
+      background: var(--surf2); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 12px;
+      max-height: 420px; overflow-y: auto;
+      font-family: var(--mono); font-size: 13.5px;
+    }
+    .uuid-list:empty::before {
+      content: "Your UUIDs will appear here…";
+      color: var(--faint); font-style: italic; display: block;
+      padding: 8px 4px;
+    }
+
+    .uuid-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; padding: 6px 4px; border-radius: 6px;
+      transition: background .1s;
+    }
+    .uuid-row:hover { background: rgba(255,255,255,.04); }
+    .uuid-val { color: var(--text); flex: 1; word-break: break-all; user-select: all; }
+    .uuid-copy {
+      background: none; border: none; cursor: pointer; padding: 2px 6px;
+      color: var(--faint); font-size: 14px; border-radius: 4px;
+      transition: color .15s, background .15s; flex-shrink: 0;
+    }
+    .uuid-copy:hover { color: var(--amber); background: rgba(232,163,61,.12); }
+    .uuid-copy.copied { color: var(--green); }
+
+    /* ── STATS ── */
+    .stats-bar {
+      display: flex; gap: 20px; margin-top: 14px;
+      font-size: 12.5px; color: var(--muted);
+    }
+    .stat { display: flex; align-items: center; gap: 5px; }
+    .stat-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); }
+
+    /* ── INFO SECTION ── */
+    .info-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      margin-bottom: 24px;
+    }
+    .info-card h2 {
+      font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--text);
+    }
+    .info-card p {
+      font-size: 14.5px; color: var(--muted); line-height: 1.7; margin-bottom: 10px;
+    }
+    .info-card p:last-child { margin-bottom: 0; }
+
+    /* ── CTA ── */
+    .cta-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      display: flex; align-items: flex-start; gap: 20px;
+    }
+    .cta-icon {
+      width: 48px; height: 48px; border-radius: 12px; background: var(--amber);
+      display: grid; place-items: center; font-size: 24px;
+      color: var(--on-a); flex-shrink: 0;
+    }
+    .cta-body { flex: 1; }
+    .cta-body h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .cta-body p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .cta-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 13.5px; text-decoration: none;
+      padding: 10px 18px; border-radius: var(--r); transition: filter .15s;
+    }
+    .cta-link:hover { filter: brightness(1.1); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: clamp(32px,5vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: gap;
+      font-size: 13px; color: var(--muted); gap: 16px;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+
+    /* ── SCROLLBAR ── */
+    .uuid-list::-webkit-scrollbar { width: 6px; }
+    .uuid-list::-webkit-scrollbar-track { background: transparent; }
+    .uuid-list::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .controls { grid-template-columns: 1fr; }
+      .btn-generate { width: 100%; text-align: center; justify-content: center; }
+      .cta-card { flex-direction: column; }
+      .footer-links { flex-wrap: wrap; gap: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <a href="/tools/">Tools</a>
+        <span>›</span>
+        <span>UUID Generator</span>
+      </nav>
+      <h1>UUID v4 Generator</h1>
+      <p class="page-sub">Generate up to 1,000 UUID v4 values instantly. No signup, no upload — every UUID is created locally in your browser.</p>
+    </div>
+
+    <!-- TOOL -->
+    <div class="tool-card">
+      <div class="controls">
+        <div>
+          <div class="ctrl-group" style="margin-bottom:14px;">
+            <span class="ctrl-label">Quantity</span>
+            <div class="ctrl-row">
+              <input
+                id="count"
+                class="count-input"
+                type="number"
+                min="1" max="1000"
+                value="10"
+                aria-label="Number of UUIDs to generate"
+              />
+              <span style="font-size:13px;color:var(--muted);">max 1,000</span>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <div class="ctrl-group">
+              <span class="ctrl-label">Format</span>
+              <div class="toggle-group" role="group" aria-label="Hyphen format">
+                <button class="toggle-btn active" id="btn-hyphens" onclick="setHyphens(true)">With hyphens</button>
+                <button class="toggle-btn" id="btn-nohyphens" onclick="setHyphens(false)">No hyphens</button>
+              </div>
+            </div>
+            <div class="ctrl-group">
+              <span class="ctrl-label">Case</span>
+              <div class="toggle-group" role="group" aria-label="Case format">
+                <button class="toggle-btn active" id="btn-lower" onclick="setCase('lower')">lowercase</button>
+                <button class="toggle-btn" id="btn-upper" onclick="setCase('upper')">UPPERCASE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-generate" onclick="generate()" aria-label="Generate UUIDs">
+          Generate ↓
+        </button>
+      </div>
+
+      <div class="output-header">
+        <span class="output-label" id="output-label">Output</span>
+        <button class="btn-copy-all" id="btn-copy-all" onclick="copyAll()" aria-label="Copy all UUIDs">
+          <span id="copy-all-icon">⎘</span>
+          <span id="copy-all-text">Copy all</span>
+        </button>
+      </div>
+
+      <div class="uuid-list" id="uuid-list" role="list" aria-label="Generated UUIDs"></div>
+
+      <div class="stats-bar" id="stats-bar" style="display:none;">
+        <div class="stat"><div class="stat-dot"></div><span id="stat-count"></span></div>
+        <div class="stat"><span style="color:var(--faint);">Unique: <span id="stat-unique" style="color:var(--muted);"></span></span></div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="info-card">
+      <h2>What is a UUID v4?</h2>
+      <p>UUID (Universally Unique Identifier) v4 is a 128-bit identifier generated using cryptographically random bytes. Each UUID looks like <code style="font-family:var(--mono);color:var(--amber);font-size:13px;">550e8400-e29b-41d4-a716-446655440000</code> and has a probability of collision so low it is effectively impossible in practice.</p>
+      <p>UUID v4 is the go-to choice for primary keys in databases, session tokens, file names, correlation IDs, and any scenario where you need unique identifiers without a central registry or coordination between services.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-card">
+      <div class="cta-icon">🔤</div>
+      <div class="cta-body">
+        <h3>Need text transformation superpowers in your browser?</h3>
+        <p>TextForge is a free Chrome extension that transforms, cleans, and extracts text right from any webpage or tab — no copy-paste required.</p>
+        <a
+          class="cta-link"
+          href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba"
+          target="_blank" rel="noopener"
+        >
+          Get TextForge — Free on Chrome Web Store →
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <footer>
+    <div>© 2026 Wendygo Studio</div>
+    <div class="footer-links">
+      <a href="/tools/">All Tools</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </footer>
+
+  <script>
+    let useHyphens = true;
+    let useUpper = false;
+    let lastUUIDs = [];
+
+    function uuidv4() {
+      const buf = new Uint8Array(16);
+      crypto.getRandomValues(buf);
+      buf[6] = (buf[6] & 0x0f) | 0x40;
+      buf[8] = (buf[8] & 0x3f) | 0x80;
+      const h = Array.from(buf, b => b.toString(16).padStart(2, '0'));
+      return `${h[0]}${h[1]}${h[2]}${h[3]}-${h[4]}${h[5]}-${h[6]}${h[7]}-${h[8]}${h[9]}-${h[10]}${h[11]}${h[12]}${h[13]}${h[14]}${h[15]}`;
+    }
+
+    function formatUUID(raw) {
+      let s = useHyphens ? raw : raw.replace(/-/g, '');
+      return useUpper ? s.toUpperCase() : s;
+    }
+
+    function setHyphens(val) {
+      useHyphens = val;
+      document.getElementById('btn-hyphens').classList.toggle('active', val);
+      document.getElementById('btn-nohyphens').classList.toggle('active', !val);
+      if (lastUUIDs.length) renderList(lastUUIDs);
+    }
+
+    function setCase(val) {
+      useUpper = val === 'upper';
+      document.getElementById('btn-lower').classList.toggle('active', !useUpper);
+      document.getElementById('btn-upper').classList.toggle('active', useUpper);
+      if (lastUUIDs.length) renderList(lastUUIDs);
+    }
+
+    function generate() {
+      const raw = parseInt(document.getElementById('count').value, 10);
+      const n = Math.max(1, Math.min(1000, isNaN(raw) ? 10 : raw));
+      document.getElementById('count').value = n;
+
+      const uuids = [];
+      for (let i = 0; i < n; i++) uuids.push(uuidv4());
+      lastUUIDs = uuids;
+      renderList(uuids);
+
+      const label = document.getElementById('output-label');
+      label.textContent = `Output — ${n} UUID${n !== 1 ? 's' : ''} generated`;
+
+      const statsBar = document.getElementById('stats-bar');
+      statsBar.style.display = 'flex';
+      document.getElementById('stat-count').textContent = `${n} UUID${n !== 1 ? 's' : ''}`;
+      document.getElementById('stat-unique').textContent = new Set(uuids).size;
+
+      resetCopyAll();
+    }
+
+    function renderList(rawUUIDs) {
+      const list = document.getElementById('uuid-list');
+      list.innerHTML = '';
+      rawUUIDs.forEach((raw, i) => {
+        const formatted = formatUUID(raw);
+        const row = document.createElement('div');
+        row.className = 'uuid-row';
+        row.setAttribute('role', 'listitem');
+
+        const val = document.createElement('span');
+        val.className = 'uuid-val';
+        val.textContent = formatted;
+
+        const btn = document.createElement('button');
+        btn.className = 'uuid-copy';
+        btn.setAttribute('aria-label', `Copy UUID ${i + 1}`);
+        btn.title = 'Copy';
+        btn.textContent = '⎘';
+        btn.onclick = () => copyOne(formatted, btn);
+
+        row.appendChild(val);
+        row.appendChild(btn);
+        list.appendChild(row);
+      });
+    }
+
+    async function copyOne(text, btn) {
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = '✓';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = '⎘'; btn.classList.remove('copied'); }, 1500);
+      } catch { /* clipboard not available */ }
+    }
+
+    async function copyAll() {
+      if (!lastUUIDs.length) return;
+      const text = lastUUIDs.map(formatUUID).join('\n');
+      try {
+        await navigator.clipboard.writeText(text);
+        const btn = document.getElementById('btn-copy-all');
+        const icon = document.getElementById('copy-all-icon');
+        const label = document.getElementById('copy-all-text');
+        btn.classList.add('copied');
+        icon.textContent = '✓';
+        label.textContent = 'Copied!';
+        setTimeout(resetCopyAll, 2000);
+      } catch { /* clipboard not available */ }
+    }
+
+    function resetCopyAll() {
+      const btn = document.getElementById('btn-copy-all');
+      const icon = document.getElementById('copy-all-icon');
+      const label = document.getElementById('copy-all-text');
+      btn.classList.remove('copied');
+      icon.textContent = '⎘';
+      label.textContent = 'Copy all';
+    }
+
+    generate();
+  </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
