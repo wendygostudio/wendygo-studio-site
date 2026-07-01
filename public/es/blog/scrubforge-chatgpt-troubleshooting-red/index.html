@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Use ScrubForge with ChatGPT for Network Troubleshooting | Wendygo Studio</title>
-  <meta name="description" content="Sysadmins use ChatGPT to debug routing issues, VPN misconfigs, and firewall rules. Sanitize your config with ScrubForge first — live credentials never reach ChatGPT's servers." />
-  <link rel="canonical" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/" />
+  <title>Cómo usar ScrubForge con ChatGPT para troubleshooting de red | Wendygo Studio</title>
+  <meta name="description" content="Los sysadmins usan ChatGPT para resolver problemas de enrutamiento, configuraciones VPN incorrectas y reglas de firewall. Sanitiza tu config con ScrubForge primero — las credenciales activas nunca llegan a los servidores de ChatGPT." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/" />
 
   <script type="application/ld+json">
   {
@@ -60,8 +60,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "ScrubForge + ChatGPT for Network Troubleshooting"}
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "ScrubForge + ChatGPT para troubleshooting de red"}
     ]
   }
   </script>
@@ -301,95 +301,96 @@
     Wendygo Studio
   </a>
   <div class="nav-links">
-    <a href="/blog/">Blog</a>
-    <a href="/#tools">Tools</a>
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/blog/" class="lang-switch">EN 🌐</a>
   </div>
 </nav>
 
 <main class="article-wrap">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a><span>&#8250;</span>
-    <a href="/blog/">Blog</a><span>&#8250;</span>
-    <span>ScrubForge + ChatGPT for Network Troubleshooting</span>
+    <a href="/">Inicio</a><span>&#8250;</span>
+    <a href="/es/blog/">Blog</a><span>&#8250;</span>
+    <span>ScrubForge + ChatGPT para troubleshooting de red</span>
   </nav>
 
   <header class="article-meta">
-    <div class="article-tag">ScrubForge &middot; Workflow</div>
-    <h1>How to Use ScrubForge with ChatGPT for Network Troubleshooting</h1>
-    <p class="article-intro">AI assistants are genuinely useful for debugging routing issues, VPN misconfigs, and firewall policies. The catch: they need your config to help. Here&rsquo;s how to give them what they need without exposing live credentials.</p>
-    <div class="article-date">July 1, 2026</div>
+    <div class="article-tag">ScrubForge &middot; Flujo de trabajo</div>
+    <h1>Cómo usar ScrubForge con ChatGPT para troubleshooting de red</h1>
+    <p class="article-intro">Los asistentes de IA son genuinamente útiles para resolver problemas de enrutamiento, configuraciones VPN incorrectas y políticas de firewall. El problema: necesitan tu config para ayudarte. Aquí está cómo darles lo que necesitan sin exponer credenciales activas.</p>
+    <div class="article-date">1 de julio de 2026</div>
   </header>
 
   <hr class="divider" />
 
   <article class="article-body">
 
-    <p>ChatGPT has become a surprisingly useful tool for network troubleshooting. It can explain why a BGP neighbor goes down, suggest why your IPsec tunnel keeps resetting every four hours, and help you spot misconfigurations in firewall policies that would take you an hour to trace manually.</p>
+    <p>ChatGPT se ha convertido en una herramienta sorprendentemente útil para troubleshooting de red. Puede explicar por qué un vecino BGP se cae, sugerir por qué tu túnel IPsec se reinicia cada cuatro horas, y ayudarte a encontrar errores de configuración en políticas de firewall que te tomaría una hora rastrear manualmente.</p>
 
-    <p>The problem is the workflow. To get useful help, you need to share your config. And your config contains active VPN pre-shared keys, admin passwords, API tokens, and SNMP strings that are live right now on your production network.</p>
+    <p>El problema es el flujo de trabajo. Para obtener ayuda útil, necesitas compartir tu config. Y tu config contiene claves VPN pre-compartidas activas, contraseñas de administrador, tokens API y strings SNMP que están en vivo ahora mismo en tu red de producción.</p>
 
-    <p><strong>ScrubForge solves exactly this:</strong> sanitize the config locally before it leaves your browser, then paste the clean version anywhere.</p>
+    <p><strong>ScrubForge resuelve exactamente esto:</strong> sanitiza la config localmente antes de que salga de tu navegador, luego pega la versión limpia en cualquier lugar.</p>
 
-    <h2>Why Pasting Raw Configs into ChatGPT Is a Risk</h2>
+    <h2>Por qué pegar configs raw en ChatGPT es un riesgo</h2>
 
-    <p>When you paste a config into ChatGPT, that text goes to OpenAI&rsquo;s servers. Depending on your account settings and region, it may be:</p>
+    <p>Cuando pegas una config en ChatGPT, ese texto va a los servidores de OpenAI. Dependiendo de tus configuraciones de cuenta y región, puede ser:</p>
 
     <ul>
-      <li><strong>Stored</strong> for a period of time on OpenAI&rsquo;s infrastructure</li>
-      <li><strong>Used for model training</strong> if you have not explicitly opted out</li>
-      <li><strong>Accessible to support staff</strong> in abuse investigations</li>
+      <li><strong>Almacenado</strong> durante un período en la infraestructura de OpenAI</li>
+      <li><strong>Usado para entrenar el modelo</strong> si no has opt-out explícitamente</li>
+      <li><strong>Accesible al equipo de soporte</strong> en investigaciones de abuso</li>
     </ul>
 
-    <p>None of this is unusual &mdash; it applies to most cloud services. A production firewall config containing live credentials does not belong on an external server. The fix is not to stop using AI for troubleshooting. The fix is to sanitize first.</p>
+    <p>Esto no es inusual &mdash; se aplica a la mayoría de servicios en la nube. Una config de firewall de producción con credenciales activas no tiene lugar en un servidor externo. La solución no es dejar de usar IA para troubleshooting. La solución es sanitizar primero.</p>
 
-    <h2>The ScrubForge + ChatGPT Workflow</h2>
+    <h2>El flujo de trabajo ScrubForge + ChatGPT</h2>
 
     <ol class="steps">
       <li class="step-card">
         <div class="step-num">1</div>
         <div class="step-content">
-          <div class="step-title">Export your running config</div>
-          <div class="step-desc">On Cisco IOS: <code>show running-config</code>. On FortiGate: System &gt; Configuration &gt; Download. Most vendors have a CLI command or a web UI export option.</div>
+          <div class="step-title">Exporta tu running config</div>
+          <div class="step-desc">En Cisco IOS: <code>show running-config</code>. En FortiGate: System &gt; Configuration &gt; Download. La mayoría de vendors tienen un comando CLI o una opción de exportación en la web UI.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">2</div>
         <div class="step-content">
-          <div class="step-title">Open ScrubForge</div>
-          <div class="step-desc">Click the ScrubForge icon in your Chrome toolbar. It opens as a local panel directly in your browser &mdash; no upload, no external connection, nothing leaves your machine at this step.</div>
+          <div class="step-title">Abre ScrubForge</div>
+          <div class="step-desc">Haz clic en el ícono de ScrubForge en tu barra de herramientas de Chrome. Se abre como un panel local directamente en tu navegador &mdash; sin upload, sin conexión externa, nada sale de tu máquina en este paso.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">3</div>
         <div class="step-content">
-          <div class="step-title">Paste and sanitize</div>
-          <div class="step-desc">Paste your raw config into ScrubForge. It detects passwords, pre-shared keys, API tokens, private keys, and SNMP community strings &mdash; replacing each unique value with a consistent placeholder like <code>[PSK_1]</code> or <code>[ADMIN_PASS_1]</code>.</div>
+          <div class="step-title">Pega y sanitiza</div>
+          <div class="step-desc">Pega tu config raw en ScrubForge. Detecta contraseñas, claves pre-compartidas, tokens API, claves privadas y strings de comunidad SNMP &mdash; reemplazando cada valor único con un placeholder consistente como <code>[PSK_1]</code> o <code>[ADMIN_PASS_1]</code>.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">4</div>
         <div class="step-content">
-          <div class="step-title">Review the sanitized output</div>
-          <div class="step-desc">Scan for anything that looks like a live credential. ScrubForge catches common patterns, but a 30-second review before sharing is good practice, especially for vendor-specific or custom fields.</div>
+          <div class="step-title">Revisa el output sanitizado</div>
+          <div class="step-desc">Escanea cualquier cosa que parezca una credencial activa. ScrubForge captura patrones comunes, pero una revisión rápida de 30 segundos antes de compartir es buena práctica, especialmente para campos específicos de vendor o personalizados.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">5</div>
         <div class="step-content">
-          <div class="step-title">Paste into ChatGPT with context</div>
-          <div class="step-desc">Describe your problem clearly, then paste the sanitized config. ChatGPT can analyze the logical structure &mdash; routing, VPN settings, firewall policies &mdash; without seeing any real credentials.</div>
+          <div class="step-title">Pega en ChatGPT con contexto</div>
+          <div class="step-desc">Describe tu problema claramente, luego pega la config sanitizada. ChatGPT puede analizar la estructura lógica &mdash; enrutamiento, configuraciones VPN, políticas de firewall &mdash; sin ver ninguna credencial real.</div>
         </div>
       </li>
     </ol>
 
     <div class="callout">
-      <strong>Example prompt:</strong> &ldquo;My IPsec site-to-site tunnel drops every 4 hours. Here is my sanitized running config (credentials replaced with tokens &mdash; structure is intact). What should I check?&rdquo;
+      <strong>Ejemplo de prompt:</strong> &ldquo;Mi túnel IPsec site-to-site se cae cada 4 horas. Aquí está mi running config sanitizado (credenciales reemplazadas con tokens &mdash; la estructura está intacta). ¿Qué debería revisar?&rdquo;
     </div>
 
-    <h2>Before and After: What ScrubForge Replaces</h2>
+    <h2>Antes y después: qué reemplaza ScrubForge</h2>
 
-    <p>Here&rsquo;s a Cisco IOS snippet showing what the sanitization looks like in practice:</p>
+    <p>Aquí hay un fragmento de Cisco IOS mostrando cómo se ve la sanitización en la práctica:</p>
 
     <pre>--- BEFORE (raw) ---
 crypto isakmp key T@nn3lS3cr3t address 198.51.100.10
@@ -403,75 +404,75 @@ username netadmin password 7 [ENC_PASS_1]
 snmp-server community [SNMP_RO_1] RO
 snmp-server community [SNMP_RW_1] RW</pre>
 
-    <p>The peer IP address stays. Interface names, routing configurations, and policy structure all stay. ChatGPT sees the same logical layout with none of the live credentials. And because tokens are consistent &mdash; if the same password appears five times, all five become <code>[ADMIN_PASS_1]</code> &mdash; the AI can still reason about reuse patterns without seeing the actual value.</p>
+    <p>La dirección IP del peer se mantiene. Los nombres de interfaz, configuraciones de enrutamiento y estructura de política se mantienen. ChatGPT ve el mismo layout lógico sin ninguna credencial activa. Y porque los tokens son consistentes &mdash; si la misma contraseña aparece cinco veces, las cinco se convierten en <code>[ADMIN_PASS_1]</code> &mdash; la IA aún puede razonar sobre patrones de reutilización sin ver el valor actual.</p>
 
-    <h2>What AI Assistants Can Help With Once You Share Safely</h2>
+    <h2>Con qué pueden ayudar los asistentes de IA una vez que compartes de forma segura</h2>
 
-    <p>Once sanitized and pasted, AI troubleshooting works well for:</p>
+    <p>Una vez sanitizado y pegado, el troubleshooting con IA funciona bien para:</p>
 
     <ul>
-      <li><strong>Routing and BGP</strong> &mdash; checking peer configs, identifying missing route reflectors, spotting asymmetric paths</li>
-      <li><strong>IPsec/VPN</strong> &mdash; reviewing IKE phase 1/phase 2 settings, DPD timers, lifetime mismatches between endpoints</li>
-      <li><strong>Firewall policies</strong> &mdash; finding missing allow rules, NAT order issues, policy shadowing</li>
-      <li><strong>VLAN and switching</strong> &mdash; STP issues, native VLAN mismatches, trunk configuration errors</li>
-      <li><strong>ACL review</strong> &mdash; overlapping or conflicting access-list entries</li>
+      <li><strong>Enrutamiento y BGP</strong> &mdash; verificando configuraciones de peers, identificando route reflectors faltantes, detectando paths asimétricos</li>
+      <li><strong>IPsec/VPN</strong> &mdash; revisando configuraciones de IKE fase 1/fase 2, timers DPD, mismatches de lifetime entre endpoints</li>
+      <li><strong>Políticas de firewall</strong> &mdash; encontrando reglas allow faltantes, problemas de orden NAT, policy shadowing</li>
+      <li><strong>VLAN y switching</strong> &mdash; problemas de STP, mismatches de native VLAN, errores de configuración de trunk</li>
+      <li><strong>Revisión de ACL</strong> &mdash; entradas de access-list superpuestas o conflictivas</li>
     </ul>
 
-    <p>ChatGPT reasons about structure and logic. What it doesn&rsquo;t need &mdash; and what you should not provide &mdash; is working credentials.</p>
+    <p>ChatGPT razona sobre estructura y lógica. Lo que no necesita &mdash; y lo que no deberías proporcionar &mdash; son credenciales en funcionamiento.</p>
 
-    <h2>This Works with Any AI Assistant</h2>
+    <h2>Esto funciona con cualquier asistente de IA</h2>
 
-    <p>The same process applies whether you use Claude, Gemini, Copilot, or any other AI assistant. Sanitize with ScrubForge first, then paste anywhere. The credential exposure risk is identical regardless of which AI you use &mdash; the data goes to an external server either way.</p>
+    <p>El mismo proceso se aplica ya sea que uses Claude, Gemini, Copilot o cualquier otro asistente de IA. Sanitiza con ScrubForge primero, luego pega en cualquier lugar. El riesgo de exposición de credenciales es idéntico independientemente de cuál IA uses &mdash; los datos van a un servidor externo de todos modos.</p>
 
-    <h2>A Note on ChatGPT&rsquo;s Privacy Settings</h2>
+    <h2>Una nota sobre las configuraciones de privacidad de ChatGPT</h2>
 
-    <p>ChatGPT offers options to disable chat history and opt out of training. These are worth enabling for work contexts. But they depend on your account settings being correct and respected server-side.</p>
+    <p>ChatGPT ofrece opciones para deshabilitar el historial de chat y opt-out del entrenamiento. Vale la pena habilitarlas para contextos de trabajo. Pero dependen de que tus configuraciones de cuenta sean correctas y respetadas del lado del servidor.</p>
 
-    <p>ScrubForge gives you a guarantee that does not depend on external settings: <strong>the credentials never left your machine in the first place</strong>.</p>
+    <p>ScrubForge te da una garantía que no depende de configuraciones externas: <strong>las credenciales nunca salieron de tu máquina en primer lugar</strong>.</p>
 
     <div class="related-links">
-      <h3>Related Guides</h3>
+      <h3>Guías relacionadas</h3>
       <ul>
-        <li><a href="/blog/sanitize-network-config-before-sharing/">How to sanitize any network config before sharing</a></li>
-        <li><a href="/blog/remove-sensitive-data-cisco-config/">Remove sensitive data from Cisco configs</a></li>
-        <li><a href="/blog/sanitize-fortigate-config/">How to safely share a FortiGate config</a></li>
+        <li><a href="/es/blog/">Cómo sanitizar cualquier config de red antes de compartir</a></li>
+        <li><a href="/es/blog/remover-datos-sensibles-cisco-config/">Remover datos sensibles de configs de Cisco</a></li>
+        <li><a href="/es/blog/">Cómo compartir una config de FortiGate de forma segura</a></li>
       </ul>
     </div>
 
     <div class="cta-box">
-      <h2>Sanitize before you paste</h2>
-      <p>ScrubForge is free to install. Paste your config, strip the credentials locally, then share with ChatGPT or any AI assistant safely &mdash; no account, no upload required.</p>
-      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Install ScrubForge &mdash; Free</a>
+      <h2>Sanitiza antes de pegar</h2>
+      <p>ScrubForge es gratis para instalar. Pega tu config, elimina las credenciales localmente, luego comparte con ChatGPT o cualquier asistente de IA de forma segura &mdash; sin cuenta, sin upload requerido.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Instala ScrubForge — Gratis</a>
     </div>
 
   </article>
 
-  <section class="faq" aria-label="Frequently asked questions">
-    <h2>Frequently Asked Questions</h2>
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas frecuentes</h2>
 
     <div class="faq-item">
-      <div class="faq-q">Does ScrubForge work with any type of network config?</div>
-      <div class="faq-a">Yes. ScrubForge processes plain text, so it works with Cisco IOS, Juniper JunOS, FortiGate, Palo Alto, pfSense, and any other text-based configuration format. Detection targets common credential patterns, not vendor-specific syntax.</div>
+      <div class="faq-q">¿Funciona ScrubForge con cualquier tipo de config de red?</div>
+      <div class="faq-a">Sí. ScrubForge procesa texto plano, así que funciona con Cisco IOS, Juniper JunOS, FortiGate, Palo Alto, pfSense y cualquier otro formato de configuración basado en texto. La detección apunta a patrones de credenciales comunes, no a sintaxis específica de vendor.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Can ChatGPT still understand my config if credentials are replaced with tokens?</div>
-      <div class="faq-a">Yes. Network troubleshooting is about configuration logic, not credential values. ChatGPT analyzes your IKE phase 1 settings, routing protocol timers, and policy order &mdash; none of which are credentials. The sanitized config provides everything needed for analysis.</div>
+      <div class="faq-q">¿Puede ChatGPT aún entender mi config si las credenciales se reemplazan con tokens?</div>
+      <div class="faq-a">Sí. El troubleshooting de red se trata de lógica de configuración, no de valores de credenciales. ChatGPT analiza tus configuraciones de IKE fase 1, timers de protocolo de enrutamiento y orden de políticas &mdash; ninguno de los cuales son credenciales. La config sanitizada proporciona todo lo necesario para el análisis.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">What if I need to share the config with a vendor support engineer instead of ChatGPT?</div>
-      <div class="faq-a">Same workflow. Whether you're pasting into ChatGPT, emailing a Cisco TAC case, or posting on a network community forum &mdash; sanitize first. Support engineers don't need your live credentials to troubleshoot your config; they need the structure.</div>
+      <div class="faq-q">¿Qué si necesito compartir la config con un ingeniero de soporte de vendor en lugar de ChatGPT?</div>
+      <div class="faq-a">Mismo flujo de trabajo. Ya sea que estés pegando en ChatGPT, enviando un caso de Cisco TAC o publicando en un foro de comunidad de red &mdash; sanitiza primero. Los ingenieros de soporte no necesitan tus credenciales activas para troubleshootear tu config; necesitan la estructura.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Does the sanitization affect IP addresses?</div>
-      <div class="faq-a">By default, ScrubForge targets credential patterns &mdash; passwords, keys, and tokens &mdash; not IP addresses. Your network topology, including addresses, subnets, and peer IPs, remains intact in the sanitized output.</div>
+      <div class="faq-q">¿Afecta la sanitización a las direcciones IP?</div>
+      <div class="faq-a">Por defecto, ScrubForge apunta a patrones de credenciales &mdash; contraseñas, claves y tokens &mdash; no a direcciones IP. Tu topología de red, incluyendo direcciones, subnets e IPs de peers, permanece intacta en el output sanitizado.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Is ScrubForge free to use?</div>
-      <div class="faq-a">The core sanitization feature is free. Install from the Chrome Web Store and it works immediately &mdash; no account, no trial, no upload required.</div>
+      <div class="faq-q">¿Es ScrubForge gratis de usar?</div>
+      <div class="faq-a">La característica de sanitización principal es gratis. Instala desde la Chrome Web Store y funciona inmediatamente &mdash; sin cuenta, sin trial, sin upload requerido.</div>
     </div>
 
   </section>
@@ -481,12 +482,12 @@ snmp-server community [SNMP_RW_1] RW</pre>
 <footer>
   <a class="footer-brand" href="/">Wendygo Studio</a>
   <div class="footer-links">
-    <a href="/blog/">Blog</a>
-    <a href="/#tools">Tools</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/privacy.html">Privacidad</a>
+    <a href="/terms.html">Términos</a>
   </div>
-  <div class="footer-copy">&copy; 2026 Wendygo Studio. All rights reserved.</div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. Todos los derechos reservados.</div>
 </footer>
 
 </body>

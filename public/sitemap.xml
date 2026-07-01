@@ -258,10 +258,22 @@
   </url>
 
   <url>
+  <url>
     <loc>https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/"/>
   </url>
 
   <url>
