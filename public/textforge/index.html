@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TextForge — Text Transformation Extension for Chrome</title>
+  <meta name="description" content="TextForge is a free Chrome extension with 50+ text transformation functions. Clean, extract, convert, and manipulate text — all in your browser, no upload, no server." />
+  <link rel="canonical" href="https://wendygostudio.com/textforge/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"TextForge"}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"TextForge","description":"Text transformation extension with 50+ functions","applicationCategory":"Utility","operatingSystem":"Chrome","url":"https://wendygostudio.com/textforge/","author":{"@type":"Organization","name":"Wendygo Studio"},"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Does TextForge upload my text?","acceptedAnswer":{"@type":"Answer","text":"No. All text processing happens in your browser. Nothing is uploaded or transmitted."}},
+    {"@type":"Question","name":"Is TextForge free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Free version includes 50+ functions. Pro (€3.99/mo or €49.99 lifetime) adds regex find & replace and advanced features."}},
+    {"@type":"Question","name":"How many functions does TextForge have?","acceptedAnswer":{"@type":"Answer","text":"50+ functions: Clean, Case, Sort, Extract, Dev (Base64, JSON, etc), Generate (UUID, SHA-256, passwords), Markdown formatting."}},
+    {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No account needed. Install from Chrome Web Store and use immediately."}}
+  ]}
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #13151a; --surf: #1c1f26; --surf2: #232831; --line: #2e343f;
+      --text: #e7e9ee; --muted: #8b93a3; --faint: #4e5768;
+      --amber: #e8a33d; --amber2: #f0b75a; --on-a: #13151a; --good: #6fbf73;
+      --r: 9px; --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--ink); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(19,21,26,.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px,5vw,60px); height: 56px; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; text-decoration: none; color: var(--text); }
+    .nav-mark { width: 28px; height: 28px; border-radius: 7px; background: var(--amber); display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .hero { max-width: 780px; margin: 0 auto; padding: clamp(64px,10vw,120px) clamp(20px,5vw,40px) clamp(48px,8vw,96px); text-align: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber); margin-bottom: 28px; }
+    .eyebrow::before, .eyebrow::after { content: ''; flex: 1; width: 28px; height: 1px; background: var(--amber); opacity: .5; }
+    h1 { font-size: clamp(38px, 7vw, 68px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--amber); }
+    .hero-sub { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); max-width: 580px; margin: 0 auto 40px; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 20px; padding: 5px 13px; }
+    .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--amber); color: var(--on-a); font-weight: 700; font-size: 15px; text-decoration: none; padding: 14px 28px; border-radius: var(--r); border: none; cursor: pointer; transition: filter .15s; margin-top: 20px; }
+    .cta-button:hover { filter: brightness(1.08); }
+    .section { padding: clamp(48px,8vw,80px) clamp(20px,5vw,60px); }
+    .section-inner { max-width: 1060px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+    .section-title { font-size: clamp(26px,4vw,38px); font-weight: 750; letter-spacing: -.6px; margin-bottom: 10px; }
+    .feature-list { display: flex; flex-direction: column; gap: 10px; margin-top: 32px; }
+    .feature-list li { list-style: none; font-size: 15px; color: var(--text); display: flex; align-items: baseline; gap: 12px; }
+    .feature-list li::before { content: '◆'; font-size: 7px; color: var(--amber); flex: none; }
+    .cross-promo { background: var(--surf); border: 1px solid var(--line); border-radius: 14px; padding: 28px; margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .promo-item { display: flex; flex-direction: column; gap: 12px; }
+    .promo-icon { font-size: 28px; }
+    .promo-title { font-size: 16px; font-weight: 700; }
+    .promo-desc { font-size: 14px; color: var(--muted); }
+    .promo-link { font-size: 13px; color: var(--amber); text-decoration: none; font-weight: 600; }
+    footer { padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; max-width: 1180px; margin: 0 auto; }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+    @media (max-width: 600px) { .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/es/textforge/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow">TextForge</div>
+    <h1>Text transformation<br><em>made simple</em></h1>
+    <p class="hero-sub">50+ text functions in your browser. Clean, extract, convert, sort, and manipulate text instantly — no upload, no server, no data collected.</p>
+    <div class="hero-badges">
+      <span class="badge"><span class="dot"></span>50+ functions</span>
+      <span class="badge"><span class="dot"></span>100% local</span>
+      <span class="badge"><span class="dot"></span>No account needed</span>
+    </div>
+    <a class="cta-button" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">↗ Add to Chrome</a>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Everything you need for text</h2>
+      <ul class="feature-list">
+        <li><strong>Clean:</strong> remove extra spaces, line breaks, HTML, accents</li>
+        <li><strong>Case:</strong> UPPERCASE, lowercase, Title Case, Sentence case</li>
+        <li><strong>Sort:</strong> A-Z, Z-A, numeric with KB/MB/GB, deduplicate</li>
+        <li><strong>Extract:</strong> emails, URLs, IPv4/v6, numbers</li>
+        <li><strong>Dev:</strong> Base64, URL encode, HTML, JSON, regex escape, slugify</li>
+        <li><strong>Generate:</strong> SHA-256, UUIDs, passwords, Unix date conversion</li>
+        <li><strong>Markdown:</strong> bullet list, numbered list, code block, wrap at 80 cols</li>
+        <li><strong>Pro Only:</strong> regex find & replace, column extraction, word frequency</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Free and Pro</h2>
+      <p style="color: var(--muted); margin-top: 20px; margin-bottom: 30px;">Free forever with 50+ functions. Pro adds regex and advanced analysis.</p>
+      <div style="background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 24px; max-width: 600px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: center;">
+          <div>
+            <div style="font-weight: 700; margin-bottom: 12px;">Free</div>
+            <div style="font-size: 20px; color: var(--amber); font-weight: 700;">€0</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">50+ functions forever</div>
+          </div>
+          <div>
+            <div style="font-weight: 700; margin-bottom: 12px;">Pro Monthly</div>
+            <div style="font-size: 20px; color: var(--amber); font-weight: 700;">€3.99</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">per month</div>
+          </div>
+          <div>
+            <div style="font-weight: 700; margin-bottom: 12px;">Pro Lifetime</div>
+            <div style="font-size: 20px; color: var(--amber); font-weight: 700;">€49.99</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">pay once</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">More from Wendygo</div>
+      <h3 class="section-title">Explore other extensions</h3>
+      <div class="cross-promo">
+        <div class="promo-item">
+          <div class="promo-icon">▢</div>
+          <div class="promo-title">FrameForge</div>
+          <div class="promo-desc">Image resizer and thumbnail maker for YouTube, Instagram, Twitch and more.</div>
+          <a href="/frameforge/" class="promo-link">Learn more →</a>
+        </div>
+        <div class="promo-item">
+          <div class="promo-icon">S</div>
+          <div class="promo-title">ScrubForge</div>
+          <div class="promo-desc">Config sanitizer for sysadmins. Redact sensitive data before sharing.</div>
+          <a href="/scrubforge/" class="promo-link">Learn more →</a>
+        </div>
+        <div class="promo-item">
+          <div class="promo-icon">C</div>
+          <div class="promo-title">ClaimForge</div>
+          <div class="promo-desc">EU consumer rights assistant for warranty claims and returns.</div>
+          <a href="/claimforge/" class="promo-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
