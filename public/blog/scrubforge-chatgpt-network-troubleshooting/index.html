@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Use ScrubForge with ChatGPT for Network Troubleshooting | Wendygo Studio</title>
+  <meta name="description" content="Sysadmins use ChatGPT to debug routing issues, VPN misconfigs, and firewall rules. Sanitize your config with ScrubForge first — live credentials never reach ChatGPT's servers." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use ScrubForge with ChatGPT for Network Troubleshooting",
+    "description": "Sanitize your network config with ScrubForge before pasting it into ChatGPT. Keeps live credentials off external servers while giving AI assistants the full config context they need to help troubleshoot.",
+    "tool": [
+      { "@type": "HowToTool", "name": "ScrubForge Chrome extension" },
+      { "@type": "HowToTool", "name": "ChatGPT" }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Export your running config",
+        "text": "Pull the running config from your device. On Cisco IOS use 'show running-config'. On FortiGate, go to System > Configuration > Download. Most vendors have a CLI command or web UI export."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open ScrubForge",
+        "text": "Click the ScrubForge icon in your Chrome toolbar. It opens as a local panel in your browser — no upload, no external server."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Paste and sanitize",
+        "text": "Paste your raw config into ScrubForge. It detects passwords, pre-shared keys, API tokens, private keys, and community strings, replacing each unique value with a consistent placeholder token like [PSK_1] or [ADMIN_PASS_1]."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Review the sanitized output",
+        "text": "Scan the output for any values that look like live credentials. A 30-second review before sharing is good practice, especially for non-standard or vendor-specific fields."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Paste into ChatGPT with context",
+        "text": "Open ChatGPT, describe your problem clearly, and paste the sanitized config. ChatGPT can analyze the logical structure — routing, VPN settings, firewall policies — without seeing any real credentials."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "ScrubForge + ChatGPT for Network Troubleshooting"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Use ScrubForge with ChatGPT for Network Troubleshooting",
+    "description": "Sysadmins use ChatGPT to debug routing issues, VPN misconfigs, and firewall rules. Sanitize your config with ScrubForge first — live credentials never reach ChatGPT's servers.",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge work with any type of network config?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ScrubForge processes plain text, so it works with Cisco IOS, Juniper JunOS, FortiGate, Palo Alto, pfSense, and any other text-based configuration format. The detection targets common credential patterns, not vendor-specific syntax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ChatGPT still understand my config if credentials are replaced with tokens?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Network troubleshooting is about configuration logic, not credential values. ChatGPT cares about your IKE phase 1 settings, routing protocol timers, and policy order — none of which are credentials. The sanitized config provides everything needed for analysis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I need to share the config with a vendor support engineer instead of ChatGPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Same workflow. Whether you're pasting into ChatGPT, emailing a Cisco TAC case, or posting in a community forum — sanitize first. Support engineers don't need your live credentials to troubleshoot your config; they need the structure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the sanitization affect IP addresses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By default, ScrubForge targets credential patterns — passwords, keys, tokens — not IP addresses. Your network topology, including addresses, subnets, and peer IPs, remains intact in the sanitized output."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ScrubForge free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The core sanitization feature is free. Install from the Chrome Web Store and it works immediately — no account, no trial, no upload required."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { margin: 16px 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
+    .article-body ul li strong { color: var(--text); }
+    .article-body pre {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 8px;
+      padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 1.6;
+      margin: 20px 0; color: var(--amber2); font-family: var(--mono);
+    }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .callout {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.65;
+    }
+    .callout strong { color: var(--text); }
+
+    .related-links {
+      margin: 48px 0 0; padding: 24px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .related-links h3 { font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 14px; }
+    .related-links ul { list-style: none; margin: 0; }
+    .related-links ul li { margin-bottom: 8px; }
+    .related-links ul li a { color: var(--amber); font-size: 14px; text-decoration: none; }
+    .related-links ul li a:hover { text-decoration: underline; }
+
+    .cta-box {
+      margin: 56px 0 0;
+      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
+    }
+    .cta-box p {
+      font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-block; background: var(--amber); color: var(--on-a);
+      font-weight: 800; font-size: 14px; letter-spacing: .3px;
+      padding: 12px 28px; border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .faq { margin-top: 56px; }
+    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+    .faq-item {
+      border: 1px solid var(--line); border-radius: 10px;
+      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    footer {
+      border-top: 1px solid var(--line); margin-top: 80px;
+      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span>&#8250;</span>
+    <a href="/blog/">Blog</a><span>&#8250;</span>
+    <span>ScrubForge + ChatGPT for Network Troubleshooting</span>
+  </nav>
+
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge &middot; Workflow</div>
+    <h1>How to Use ScrubForge with ChatGPT for Network Troubleshooting</h1>
+    <p class="article-intro">AI assistants are genuinely useful for debugging routing issues, VPN misconfigs, and firewall policies. The catch: they need your config to help. Here&rsquo;s how to give them what they need without exposing live credentials.</p>
+    <div class="article-date">July 1, 2026</div>
+  </header>
+
+  <hr class="divider" />
+
+  <article class="article-body">
+
+    <p>ChatGPT has become a surprisingly useful tool for network troubleshooting. It can explain why a BGP neighbor goes down, suggest why your IPsec tunnel keeps resetting every four hours, and help you spot misconfigurations in firewall policies that would take you an hour to trace manually.</p>
+
+    <p>The problem is the workflow. To get useful help, you need to share your config. And your config contains active VPN pre-shared keys, admin passwords, API tokens, and SNMP strings that are live right now on your production network.</p>
+
+    <p><strong>ScrubForge solves exactly this:</strong> sanitize the config locally before it leaves your browser, then paste the clean version anywhere.</p>
+
+    <h2>Why Pasting Raw Configs into ChatGPT Is a Risk</h2>
+
+    <p>When you paste a config into ChatGPT, that text goes to OpenAI&rsquo;s servers. Depending on your account settings and region, it may be:</p>
+
+    <ul>
+      <li><strong>Stored</strong> for a period of time on OpenAI&rsquo;s infrastructure</li>
+      <li><strong>Used for model training</strong> if you have not explicitly opted out</li>
+      <li><strong>Accessible to support staff</strong> in abuse investigations</li>
+    </ul>
+
+    <p>None of this is unusual &mdash; it applies to most cloud services. A production firewall config containing live credentials does not belong on an external server. The fix is not to stop using AI for troubleshooting. The fix is to sanitize first.</p>
+
+    <h2>The ScrubForge + ChatGPT Workflow</h2>
+
+    <ol class="steps">
+      <li class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Export your running config</div>
+          <div class="step-desc">On Cisco IOS: <code>show running-config</code>. On FortiGate: System &gt; Configuration &gt; Download. Most vendors have a CLI command or a web UI export option.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Open ScrubForge</div>
+          <div class="step-desc">Click the ScrubForge icon in your Chrome toolbar. It opens as a local panel directly in your browser &mdash; no upload, no external connection, nothing leaves your machine at this step.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Paste and sanitize</div>
+          <div class="step-desc">Paste your raw config into ScrubForge. It detects passwords, pre-shared keys, API tokens, private keys, and SNMP community strings &mdash; replacing each unique value with a consistent placeholder like <code>[PSK_1]</code> or <code>[ADMIN_PASS_1]</code>.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Review the sanitized output</div>
+          <div class="step-desc">Scan for anything that looks like a live credential. ScrubForge catches common patterns, but a 30-second review before sharing is good practice, especially for vendor-specific or custom fields.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Paste into ChatGPT with context</div>
+          <div class="step-desc">Describe your problem clearly, then paste the sanitized config. ChatGPT can analyze the logical structure &mdash; routing, VPN settings, firewall policies &mdash; without seeing any real credentials.</div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout">
+      <strong>Example prompt:</strong> &ldquo;My IPsec site-to-site tunnel drops every 4 hours. Here is my sanitized running config (credentials replaced with tokens &mdash; structure is intact). What should I check?&rdquo;
+    </div>
+
+    <h2>Before and After: What ScrubForge Replaces</h2>
+
+    <p>Here&rsquo;s a Cisco IOS snippet showing what the sanitization looks like in practice:</p>
+
+    <pre>--- BEFORE (raw) ---
+crypto isakmp key T@nn3lS3cr3t address 198.51.100.10
+username netadmin password 7 094F471A1A0A
+snmp-server community public RO
+snmp-server community pr1vate_mon RW
+
+--- AFTER (sanitized) ---
+crypto isakmp key [PSK_1] address 198.51.100.10
+username netadmin password 7 [ENC_PASS_1]
+snmp-server community [SNMP_RO_1] RO
+snmp-server community [SNMP_RW_1] RW</pre>
+
+    <p>The peer IP address stays. Interface names, routing configurations, and policy structure all stay. ChatGPT sees the same logical layout with none of the live credentials. And because tokens are consistent &mdash; if the same password appears five times, all five become <code>[ADMIN_PASS_1]</code> &mdash; the AI can still reason about reuse patterns without seeing the actual value.</p>
+
+    <h2>What AI Assistants Can Help With Once You Share Safely</h2>
+
+    <p>Once sanitized and pasted, AI troubleshooting works well for:</p>
+
+    <ul>
+      <li><strong>Routing and BGP</strong> &mdash; checking peer configs, identifying missing route reflectors, spotting asymmetric paths</li>
+      <li><strong>IPsec/VPN</strong> &mdash; reviewing IKE phase 1/phase 2 settings, DPD timers, lifetime mismatches between endpoints</li>
+      <li><strong>Firewall policies</strong> &mdash; finding missing allow rules, NAT order issues, policy shadowing</li>
+      <li><strong>VLAN and switching</strong> &mdash; STP issues, native VLAN mismatches, trunk configuration errors</li>
+      <li><strong>ACL review</strong> &mdash; overlapping or conflicting access-list entries</li>
+    </ul>
+
+    <p>ChatGPT reasons about structure and logic. What it doesn&rsquo;t need &mdash; and what you should not provide &mdash; is working credentials.</p>
+
+    <h2>This Works with Any AI Assistant</h2>
+
+    <p>The same process applies whether you use Claude, Gemini, Copilot, or any other AI assistant. Sanitize with ScrubForge first, then paste anywhere. The credential exposure risk is identical regardless of which AI you use &mdash; the data goes to an external server either way.</p>
+
+    <h2>A Note on ChatGPT&rsquo;s Privacy Settings</h2>
+
+    <p>ChatGPT offers options to disable chat history and opt out of training. These are worth enabling for work contexts. But they depend on your account settings being correct and respected server-side.</p>
+
+    <p>ScrubForge gives you a guarantee that does not depend on external settings: <strong>the credentials never left your machine in the first place</strong>.</p>
+
+    <div class="related-links">
+      <h3>Related Guides</h3>
+      <ul>
+        <li><a href="/blog/sanitize-network-config-before-sharing/">How to sanitize any network config before sharing</a></li>
+        <li><a href="/blog/remove-sensitive-data-cisco-config/">Remove sensitive data from Cisco configs</a></li>
+        <li><a href="/blog/sanitize-fortigate-config/">How to safely share a FortiGate config</a></li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h2>Sanitize before you paste</h2>
+      <p>ScrubForge is free to install. Paste your config, strip the credentials locally, then share with ChatGPT or any AI assistant safely &mdash; no account, no upload required.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Install ScrubForge &mdash; Free</a>
+    </div>
+
+  </article>
+
+  <section class="faq" aria-label="Frequently asked questions">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Does ScrubForge work with any type of network config?</div>
+      <div class="faq-a">Yes. ScrubForge processes plain text, so it works with Cisco IOS, Juniper JunOS, FortiGate, Palo Alto, pfSense, and any other text-based configuration format. Detection targets common credential patterns, not vendor-specific syntax.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can ChatGPT still understand my config if credentials are replaced with tokens?</div>
+      <div class="faq-a">Yes. Network troubleshooting is about configuration logic, not credential values. ChatGPT analyzes your IKE phase 1 settings, routing protocol timers, and policy order &mdash; none of which are credentials. The sanitized config provides everything needed for analysis.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if I need to share the config with a vendor support engineer instead of ChatGPT?</div>
+      <div class="faq-a">Same workflow. Whether you're pasting into ChatGPT, emailing a Cisco TAC case, or posting on a network community forum &mdash; sanitize first. Support engineers don't need your live credentials to troubleshoot your config; they need the structure.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does the sanitization affect IP addresses?</div>
+      <div class="faq-a">By default, ScrubForge targets credential patterns &mdash; passwords, keys, and tokens &mdash; not IP addresses. Your network topology, including addresses, subnets, and peer IPs, remains intact in the sanitized output.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is ScrubForge free to use?</div>
+      <div class="faq-a">The core sanitization feature is free. Install from the Chrome Web Store and it works immediately &mdash; no account, no trial, no upload required.</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
