@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Wendygo Studio — We'll miss you!</title>
+  <meta name="description" content="Thanks for trying Wendygo Studio. We'd love to hear why you uninstalled." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --good:   #6fbf73;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px; text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── MAIN CONTENT ── */
+    main { flex: 1; }
+
+    /* ── FAREWELL SECTION ── */
+    .farewell {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(60px,10vw,100px) clamp(20px,5vw,40px);
+      text-align: center;
+    }
+    .farewell h1 {
+      font-size: clamp(32px, 6vw, 48px); font-weight: 800; margin-bottom: 16px; letter-spacing: -.8px;
+    }
+    .farewell-sub {
+      font-size: 16px; color: var(--muted); margin-bottom: 28px; line-height: 1.7;
+    }
+    .farewell-app {
+      display: inline-block; padding: 6px 14px; background: var(--surf2); border: 1px solid var(--line);
+      border-radius: 6px; font-size: 13px; color: var(--amber); font-weight: 600; margin-bottom: 28px;
+    }
+
+    /* ── FEEDBACK FORM ── */
+    .feedback-section {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      padding: 32px; margin: 40px 0; text-align: left;
+    }
+    .feedback-section h2 {
+      font-size: 18px; font-weight: 700; margin-bottom: 20px; text-align: center;
+    }
+    .form-group { margin-bottom: 24px; }
+    .form-label {
+      display: block; font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--text);
+    }
+    .radio-group {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .radio-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 8px; transition: background .15s; cursor: pointer;
+    }
+    .radio-item:hover { background: var(--line); }
+    .radio-item input[type="radio"] {
+      cursor: pointer; width: 16px; height: 16px; flex: none;
+      accent-color: var(--amber);
+    }
+    .radio-item label {
+      cursor: pointer; flex: 1; margin: 0; font-size: 14px;
+    }
+    textarea {
+      width: 100%; padding: 12px; background: var(--ink); color: var(--text);
+      border: 1px solid var(--line); border-radius: 8px; font-family: var(--sans);
+      font-size: 14px; resize: vertical; min-height: 100px; transition: border-color .15s;
+    }
+    textarea:focus { outline: none; border-color: var(--amber); }
+    textarea::placeholder { color: var(--faint); }
+    .form-actions {
+      display: flex; gap: 12px; margin-top: 20px; justify-content: center;
+    }
+    .btn {
+      padding: 11px 24px; border-radius: var(--r); border: none;
+      font-weight: 600; font-size: 14px; cursor: pointer; transition: filter .15s;
+    }
+    .btn-primary {
+      background: var(--amber); color: var(--on-a);
+    }
+    .btn-primary:hover { filter: brightness(1.08); }
+    .btn-secondary {
+      background: var(--line); color: var(--muted); border: 1px solid var(--faint);
+    }
+    .btn-secondary:hover { color: var(--text); border-color: var(--muted); }
+    .success-msg {
+      display: none; text-align: center; padding: 20px;
+      background: rgba(111, 191, 115, .1); border: 1px solid var(--good); border-radius: 8px;
+      color: var(--good); font-size: 14px; margin-top: 16px;
+    }
+    .success-msg.show { display: block; }
+
+    /* ── ALTERNATIVES SECTION ── */
+    .alternatives {
+      max-width: 720px; margin: 40px auto;
+      padding: 0 clamp(20px,5vw,40px);
+    }
+    .alternatives h2 {
+      font-size: 18px; font-weight: 700; margin-bottom: 24px; text-align: center;
+    }
+    .alt-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px;
+    }
+    .alt-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px; text-align: center; transition: border-color .2s;
+      display: flex; flex-direction: column;
+    }
+    .alt-card:hover { border-color: var(--faint); }
+    .alt-mark {
+      width: 40px; height: 40px; border-radius: 9px; background: var(--amber);
+      display: grid; place-items: center; font-size: 18px; color: var(--on-a);
+      font-weight: 900; margin: 0 auto 12px;
+    }
+    .alt-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .alt-desc { font-size: 12px; color: var(--muted); margin-bottom: 12px; flex: 1; line-height: 1.5; }
+    .alt-link {
+      display: inline-block; padding: 8px 14px; background: var(--amber); color: var(--on-a);
+      font-size: 12px; font-weight: 600; text-decoration: none; border-radius: 6px;
+      transition: filter .15s; align-self: center; margin-top: auto;
+    }
+    .alt-link:hover { filter: brightness(1.08); }
+
+    /* ── REINSTALL SECTION ── */
+    .reinstall {
+      text-align: center; margin: 40px 0;
+      padding: 28px; background: rgba(232, 163, 61, .08); border: 1px solid var(--amber);
+      border-radius: 12px; max-width: 720px; margin-left: auto; margin-right: auto;
+    }
+    .reinstall p {
+      font-size: 14px; color: var(--muted); margin-bottom: 14px;
+    }
+    .reinstall-btn {
+      display: inline-block; padding: 10px 20px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 600; font-size: 14px; text-decoration: none;
+      border-radius: var(--r); transition: filter .15s;
+    }
+    .reinstall-btn:hover { filter: brightness(1.08); }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: auto; padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .alt-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; text-align: left; }
+      .footer-links { flex-wrap: wrap; }
+      .form-actions { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="farewell">
+      <h1 id="farewell-title">Sorry to see you go</h1>
+      <p class="farewell-sub" id="farewell-msg">We appreciate you trying out Wendygo Studio. Your feedback helps us improve.</p>
+      <div class="farewell-app" id="app-name">Wendygo Extension</div>
+    </section>
+
+    <section class="feedback-section">
+      <h2>We'd love to know why 🤔</h2>
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label class="form-label">What's the reason?</label>
+          <div class="radio-group">
+            <div class="radio-item">
+              <input type="radio" id="reason-unnecessary" name="reason" value="No longer needed it">
+              <label for="reason-unnecessary">No longer needed it</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="reason-missing-features" name="reason" value="Missing features">
+              <label for="reason-missing-features">Missing features</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="reason-alternative" name="reason" value="Found a better alternative">
+              <label for="reason-alternative">Found a better alternative</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="reason-technical" name="reason" value="Technical issues">
+              <label for="reason-technical">Technical issues</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="reason-other" name="reason" value="Other">
+              <label for="reason-other">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="details">Anything else you'd like to tell us? (optional)</label>
+          <textarea id="details" name="details" placeholder="Your thoughts..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send feedback</button>
+          <button type="reset" class="btn btn-secondary">Clear</button>
+        </div>
+
+        <div class="success-msg" id="successMsg">
+          ✓ Thanks for the feedback! We'll use it to make our tools better.
+        </div>
+      </form>
+    </section>
+
+    <section class="alternatives">
+      <h2>Maybe one of these fits better</h2>
+      <div class="alt-grid" id="altGrid"></div>
+    </section>
+
+    <section class="reinstall" id="reinstallSection">
+      <p>Changed your mind? No problem — here's the link to reinstall.</p>
+      <a class="reinstall-btn" id="reinstallBtn" href="#">↗ Reinstall</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="privacy.html">Privacy policy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Extension data
+    const extensions = {
+      textforge: {
+        name: 'TextForge',
+        mark: 'T',
+        tagline: 'paste · transform · copy',
+        desc: 'All-in-one text toolkit with 50+ functions to clean, convert, extract and manipulate text.',
+        storeUrl: 'https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba',
+        farewell: 'TextForge will miss your text transformations!'
+      },
+      frameforge: {
+        name: 'FrameForge',
+        mark: '▢',
+        tagline: 'resize · adjust · export',
+        desc: 'Image resizer and thumbnail maker for creators. Crop, resize, and export for any platform.',
+        storeUrl: 'https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj',
+        farewell: 'FrameForge will miss your next design!'
+      },
+      scrubforge: {
+        name: 'ScrubForge',
+        mark: 'S',
+        tagline: 'sanitize · share · ask',
+        desc: 'Config sanitizer for sysadmins. Detects and replaces sensitive data with consistent tokens.',
+        storeUrl: 'https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe',
+        farewell: 'ScrubForge will keep your configs safe in memory!'
+      },
+      claimforge: {
+        name: 'ClaimForge',
+        mark: 'C',
+        tagline: 'advocate · verify · claim',
+        desc: 'EU consumer rights assistant for warranty claims, returns and right-to-repair requests.',
+        storeUrl: 'https://chromewebstore.google.com/detail/mlnjadkolgplpgbheklkdjcglojfakcg',
+        farewell: 'ClaimForge wishes you the best with your consumer rights!'
+      }
+    };
+
+    const allExtensions = [
+      { key: 'textforge', ...extensions.textforge },
+      { key: 'frameforge', ...extensions.frameforge },
+      { key: 'scrubforge', ...extensions.scrubforge },
+      { key: 'claimforge', ...extensions.claimforge }
+    ];
+
+    // Get URL parameter
+    function getAppParam() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('app') ? params.get('app').toLowerCase() : null;
+    }
+
+    // Initialize page
+    function init() {
+      const app = getAppParam();
+      const appExt = extensions[app] || null;
+
+      // Update farewell message
+      if (appExt) {
+        document.getElementById('app-name').textContent = appExt.name;
+        document.getElementById('farewell-msg').textContent = appExt.farewell;
+      }
+
+      // Populate alternatives (show other 3 extensions)
+      const others = allExtensions.filter(e => e.key !== app).slice(0, 3);
+      const altGrid = document.getElementById('altGrid');
+      others.forEach(ext => {
+        const card = document.createElement('div');
+        card.className = 'alt-card';
+        card.innerHTML = `
+          <div class="alt-mark">${ext.mark}</div>
+          <div class="alt-name">${ext.name}</div>
+          <div class="alt-desc">${ext.tagline}</div>
+          <a class="alt-link" href="${ext.storeUrl}" target="_blank" rel="noopener">View</a>
+        `;
+        altGrid.appendChild(card);
+      });
+
+      // Set reinstall button
+      if (appExt) {
+        document.getElementById('reinstallBtn').href = appExt.storeUrl;
+      }
+    }
+
+    // Form submission
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const app = getAppParam() || 'unknown';
+      const reason = document.querySelector('input[name="reason"]:checked');
+      const details = document.getElementById('details').value;
+
+      if (!reason) {
+        alert('Please select a reason');
+        return;
+      }
+
+      const subject = encodeURIComponent(`Wendygo ${app} uninstall feedback`);
+      const body = encodeURIComponent(
+        `Uninstalled: ${app}\n` +
+        `Reason: ${reason.value}\n\n` +
+        `Additional feedback:\n${details || '(none)'}`
+      );
+
+      // Open mailto
+      window.location.href = `mailto:wendygostudio@gmail.com?subject=${subject}&body=${body}`;
+
+      // Show success message
+      document.getElementById('successMsg').classList.add('show');
+      document.getElementById('feedbackForm').style.display = 'none';
+
+      setTimeout(() => {
+        document.getElementById('successMsg').classList.remove('show');
+        document.getElementById('feedbackForm').style.display = 'block';
+      }, 5000);
+    });
+
+    // Initialize on load
+    init();
+  </script>
+</body>
+</html>
