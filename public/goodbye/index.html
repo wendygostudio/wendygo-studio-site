@@ -348,7 +348,9 @@
       }
 
       // Populate alternatives (show other 3 extensions)
-      const others = allExtensions.filter(e => e.key !== app).slice(0, 3);
+      const others = app
+        ? allExtensions.filter(e => e.key !== app)
+        : allExtensions;
       const altGrid = document.getElementById('altGrid');
       others.forEach(ext => {
         const card = document.createElement('div');
@@ -365,6 +367,8 @@
       // Set reinstall button
       if (appExt) {
         document.getElementById('reinstallBtn').href = appExt.storeUrl;
+      } else {
+        document.getElementById('reinstallSection').style.display = 'none';
       }
     }
 
