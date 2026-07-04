@@ -351,11 +351,6 @@
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  <url>
-    <loc>https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/como-presentar-reclamacion-consumidor-ue/"/>
   </url>
@@ -374,6 +369,16 @@
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/"/>
   </url>
 
