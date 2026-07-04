@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Config Anonymizer for AI: Paste Safely, Troubleshoot Faster | Wendygo Studio</title>
+  <meta name="description" content="Sysadmins use AI assistants to debug network configs. ScrubForge removes passwords, SNMP strings, and IPsec keys before the config leaves your machine — so the AI gets full context without live credentials." />
+  <link rel="canonical" href="https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Network Config Anonymizer for AI: Paste Safely, Troubleshoot Faster">
+  <meta property="og:description" content="Sysadmins use AI assistants to debug network configs. ScrubForge removes passwords, SNMP strings, and IPsec keys before the config leaves your machine — so the AI gets full context without live credentials.">
+  <meta property="og:url" content="https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Network Config Anonymizer for AI: Paste Safely, Troubleshoot Faster">
+  <meta name="twitter:description" content="Sysadmins use AI assistants to debug network configs. ScrubForge removes passwords, SNMP strings, and IPsec keys before the config leaves your machine — so the AI gets full context without live credentials.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Network Config Anonymizer for AI"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Network Config Anonymizer for AI: Paste Safely, Troubleshoot Faster",
+    "description": "Sysadmins use AI assistants to debug network configs. ScrubForge removes passwords, SNMP strings, and IPsec keys before the config leaves your machine.",
+    "datePublished": "2026-07-04",
+    "dateModified": "2026-07-04",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Anonymize a Network Config Before Pasting into an AI Tool",
+    "description": "Remove passwords, SNMP strings, and IPsec keys from your network config locally, then paste the sanitized version into any AI assistant.",
+    "tool": [
+      {"@type": "HowToTool", "name": "ScrubForge Chrome extension"}
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Export your running config",
+        "text": "Pull the running config from your device. On Cisco IOS: show running-config. On FortiGate: System → Configuration → Download."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open ScrubForge",
+        "text": "Click the ScrubForge icon in your Chrome toolbar. It opens as a local panel in your browser — nothing is uploaded or transmitted."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Paste and scrub",
+        "text": "Paste your config into ScrubForge. It detects credential patterns and replaces each secret with a consistent placeholder token."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Copy the sanitized config",
+        "text": "Copy the scrubbed output. The structure is intact — interface names, IPs, routing policies — but no live credentials remain."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Paste into your AI assistant",
+        "text": "Paste the sanitized config into ChatGPT, Claude, Copilot, or a support ticket. The AI gets full context to troubleshoot without ever seeing real secrets."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge send my config to any server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. ScrubForge runs entirely in your browser using local JavaScript. Your config never leaves your machine — not even to Wendygo Studio's servers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the AI still help me troubleshoot if credentials are removed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Network issues — routing loops, ACL mismatches, VPN phase mismatches, VLAN misconfiguration — are almost never caused by the credential values themselves. The structure of the config is what the AI needs to diagnose problems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which network device formats does ScrubForge support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ScrubForge detects credential patterns in Cisco IOS/IOS-XE, FortiGate, Juniper JunOS, and generic text configs. Any file containing credential-like patterns (passwords, keys, secrets) gets sanitized."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does ScrubForge replace credentials with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ScrubForge replaces each secret with a consistent placeholder token like SCRUBBED_SECRET_1. The same token is used everywhere the same original value appeared, so the AI can still follow cross-references in the config."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .page-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(40px,8vw,72px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      display: flex; gap: 6px; align-items: center;
+      font-size: 13px; color: var(--muted); margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--faint); }
+
+    .tag {
+      display: inline-block;
+      background: rgba(232,163,61,.15); color: var(--amber);
+      border: 1px solid rgba(232,163,61,.3);
+      border-radius: 4px; padding: 2px 8px; font-size: 11px;
+      font-weight: 600; letter-spacing: .5px; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 36px); font-weight: 800;
+      line-height: 1.25; letter-spacing: -.3px;
+      color: var(--text); margin-bottom: 20px;
+    }
+    .page-intro {
+      font-size: 18px; color: var(--muted); line-height: 1.65;
+      margin-bottom: 40px; border-bottom: 1px solid var(--line); padding-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin: 40px 0 14px; line-height: 1.3;
+    }
+    p { margin-bottom: 16px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { color: var(--amber2); }
+    code {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 13px; background: var(--surf2);
+      border: 1px solid var(--line); border-radius: 4px;
+      padding: 1px 5px; color: var(--amber2);
+    }
+
+    .what-list {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px; margin: 20px 0 32px;
+    }
+    .what-item {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 12px 14px;
+      font-size: 13px; color: var(--muted);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .what-item::before {
+      content: "✕";
+      color: #e05252; font-size: 11px; font-weight: 700; flex-shrink: 0;
+    }
+
+    .steps-list {
+      display: flex; flex-direction: column; gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .step-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 18px 20px;
+      display: grid; grid-template-columns: 32px 1fr; gap: 14px; align-items: start;
+    }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(232,163,61,.15); border: 1px solid rgba(232,163,61,.3);
+      display: grid; place-items: center;
+      font-size: 13px; font-weight: 700; color: var(--amber); flex-shrink: 0;
+    }
+    .step-body h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; color: var(--text); }
+    .step-body p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+    .highlight-box {
+      background: var(--surf); border: 1px solid var(--line);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--r); padding: 18px 20px;
+      margin: 24px 0 32px;
+    }
+    .highlight-box p { margin: 0; font-size: 14px; }
+
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 18px 20px; margin: 20px 0 28px;
+    }
+    .example-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+    }
+    .example-block pre {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 12px; line-height: 1.6; overflow-x: auto;
+      margin: 0;
+    }
+    .before-after {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .ba-panel {
+      background: var(--surf2); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 14px 16px;
+    }
+    .ba-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; margin-bottom: 10px;
+    }
+    .ba-label.before { color: #e05252; }
+    .ba-label.after { color: #52b788; }
+    .ba-panel pre {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 11px; line-height: 1.6; overflow-x: auto;
+      margin: 0; color: var(--muted);
+    }
+
+    .cta-box {
+      background: var(--surf2); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 28px;
+      margin: 40px 0; text-align: center;
+    }
+    .cta-box h3 { font-size: 19px; font-weight: 800; color: var(--text); margin: 0 0 10px; }
+    .cta-box p { font-size: 14px; color: var(--muted); margin: 0 0 18px; max-width: 420px; margin-left: auto; margin-right: auto; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 14px; padding: 11px 22px;
+      border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); color: var(--on-a); }
+
+    .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .faq-item {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 20px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.55; }
+
+    .related { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .related p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px);
+      border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      max-width: 1180px; margin: 0 auto;
+    }
+    footer a { color: var(--faint); text-decoration: none; }
+    footer a:hover { color: var(--muted); }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .what-list { grid-template-columns: 1fr; }
+      .step-card { grid-template-columns: 1fr; }
+      .step-num { display: none; }
+      .before-after { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+    </div>
+  </nav>
+
+  <main class="page-wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Network Config Anonymizer for AI</span>
+    </nav>
+
+    <div class="tag">ScrubForge — Use Case</div>
+
+    <h1>Network Config Anonymizer for AI: Paste Safely, Troubleshoot Faster</h1>
+
+    <p class="page-intro">Sysadmins use AI assistants to debug routing issues, trace ACL mismatches, and untangle VPN configs. The workflow is fast — until you remember your config is full of credentials. ScrubForge removes secrets locally before the config leaves your machine.</p>
+
+    <h2>What's Actually in Your Config</h2>
+
+    <p>A typical running config contains far more sensitive data than most people stop to think about before pasting:</p>
+
+    <div class="what-list">
+      <div class="what-item">Enable secret hashes</div>
+      <div class="what-item">VTY line passwords</div>
+      <div class="what-item">SNMP community strings</div>
+      <div class="what-item">BGP neighbor MD5 keys</div>
+      <div class="what-item">OSPF authentication keys</div>
+      <div class="what-item">IPsec pre-shared keys</div>
+      <div class="what-item">RADIUS / TACACS+ secrets</div>
+      <div class="what-item">IKEv2 PSKs and profiles</div>
+    </div>
+
+    <p>None of these need to reach an AI server for troubleshooting to work. The AI needs the <strong>structure</strong> of your config — interface names, subnets, routing protocols, ACL logic. Not the actual credentials.</p>
+
+    <h2>How to Anonymize Before You Paste</h2>
+
+    <div class="steps-list">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Export your running config</h3>
+          <p>Pull the config from your device. On Cisco IOS: <code>show running-config</code>. On FortiGate: System &rarr; Configuration &rarr; Download. Most vendors have a CLI export or web UI option.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Open ScrubForge in Chrome</h3>
+          <p>Click the ScrubForge icon in your toolbar. It opens as a local panel — no upload, no external server, no account needed.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Paste your config and scrub</h3>
+          <p>Paste the raw config into ScrubForge. It detects credential patterns and replaces each secret with a consistent placeholder token like <code>SCRUBBED_SECRET_1</code>.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Copy the sanitized output</h3>
+          <p>Copy the scrubbed config. The full structure is intact — IP addresses, interface names, routing policies — but no live credential remains.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h3>Paste into your AI assistant</h3>
+          <p>Paste the sanitized config into ChatGPT, Claude, Copilot, a support ticket, or a Reddit post. The AI gets full context to troubleshoot without ever seeing real secrets.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Why Consistent Tokens Matter</h2>
+
+    <p>ScrubForge uses the <strong>same token everywhere the same secret appeared</strong>. If <code>SCRUBBED_PSK_1</code> appears in both the IKE proposal and the tunnel interface, the AI can still follow the relationship — it just cannot recover the actual value.</p>
+
+    <div class="before-after">
+      <div class="ba-panel">
+        <div class="ba-label before">Before — raw config</div>
+        <pre>username admin secret 5 $1$abc$xyz123
+snmp-server community publ1c RO
+crypto isakmp key S3cr3tK3y address 10.0.0.1</pre>
+      </div>
+      <div class="ba-panel">
+        <div class="ba-label after">After — ScrubForge output</div>
+        <pre>username admin secret 5 SCRUBBED_HASH_1
+snmp-server community SCRUBBED_SNMP_1 RO
+crypto isakmp key SCRUBBED_KEY_1 address 10.0.0.1</pre>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <p>The AI still sees the full config structure — interfaces, routing, ACLs, policy. It can identify misconfigurations, flag contradictions, and suggest fixes. It just cannot see the credentials themselves.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Anonymize configs. Keep credentials local.</h3>
+      <p>ScrubForge is a free Chrome extension. Runs entirely in your browser — no upload, no account, no server.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">
+        Install ScrubForge &rarr;
+      </a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Does ScrubForge send my config to any server?</div>
+        <p class="faq-a">No. ScrubForge runs entirely in your browser using local JavaScript. Your config never leaves your machine — not even to Wendygo Studio's servers.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can the AI still help me troubleshoot if credentials are removed?</div>
+        <p class="faq-a">Yes. Network issues — routing loops, ACL mismatches, VPN phase mismatches, VLAN misconfiguration — are almost never caused by the credential values themselves. The AI needs the structure of the config, not the secrets.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Which network device formats does ScrubForge support?</div>
+        <p class="faq-a">ScrubForge detects credential patterns in Cisco IOS/IOS-XE, FortiGate, Juniper JunOS, and generic text configs. Any file containing credential-like patterns (passwords, keys, secrets) gets sanitized.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does ScrubForge replace credentials with?</div>
+        <p class="faq-a">Each secret is replaced with a consistent placeholder token — for example <code>SCRUBBED_SECRET_1</code>. The same token is used everywhere the same original value appeared, so cross-references in the config remain meaningful to the AI.</p>
+      </div>
+    </div>
+
+    <div class="related">
+      <p>Related guides</p>
+      <a href="/blog/sanitize-network-config-before-sharing/">How to Sanitize a Network Config Before Sharing</a> &middot;
+      <a href="/blog/scrubforge-chatgpt-network-troubleshooting/">ScrubForge + ChatGPT for Network Troubleshooting</a> &middot;
+      <a href="/blog/remove-sensitive-data-cisco-config/">Remove Sensitive Data from a Cisco Config</a>
+    </div>
+  </main>
+
+  <footer>
+    <span style="color:var(--faint);font-size:13px;">&copy; 2026 Wendygo Studio</span>
+    <div style="display:flex;gap:20px;font-size:13px;">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+    </div>
+  </footer>
+</body>
+</html>
