@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subnet Calculator — CIDR, Network Address, Hosts & Ranges</title>
+  <meta name="description" content="Free online subnet calculator. Enter any IP address with CIDR prefix or subnet mask to get network address, broadcast, host range, wildcard mask, and binary breakdown. 100% local — nothing uploaded." />
+  <link rel="canonical" href="https://wendygostudio.com/tools/subnet-calculator/" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Subnet Calculator",
+      "url": "https://wendygostudio.com/tools/subnet-calculator/",
+      "description": "Free browser-based subnet calculator. Paste any IPv4 address in CIDR notation or with a subnet mask to get network address, broadcast, first/last host, wildcard mask, and binary representation. 100% local, no server upload.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Accepts CIDR notation (e.g. 192.168.1.0/24) or dotted subnet mask",
+        "Calculates network address, broadcast, first and last host",
+        "Shows usable host count",
+        "Wildcard mask and binary breakdown",
+        "IP class and private/public classification",
+        "Common subnet cheatsheet",
+        "100% local — no server upload"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "Subnet Calculator", "item": "https://wendygostudio.com/tools/subnet-calculator/" }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --green:  #4ade80;
+      --red:    #f87171;
+      --blue:   #60a5fa;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "Cascadia Code", "Fira Mono", "Consolas", monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover, .nav-links a[aria-current] { color: var(--text); }
+    .nav-lang { white-space: nowrap; }
+
+    /* ── LAYOUT ── */
+    main { flex: 1; max-width: 900px; margin: 0 auto; width: 100%; padding: clamp(40px,8vw,80px) clamp(20px,5vw,48px); }
+
+    /* ── HEADER ── */
+    .page-header { margin-bottom: 40px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 16px;
+    }
+    .eyebrow::before, .eyebrow::after { content: ''; width: 24px; height: 1px; background: var(--amber); opacity: .5; }
+    h1 { font-size: clamp(28px,5vw,42px); font-weight: 800; line-height: 1.15; letter-spacing: -.5px; margin-bottom: 10px; }
+    .page-sub { font-size: 15px; color: var(--muted); max-width: 560px; }
+
+    /* ── INPUT PANEL ── */
+    .input-panel {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      padding: 28px; margin-bottom: 24px;
+    }
+    .input-row {
+      display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap;
+    }
+    .input-group { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 200px; }
+    .input-group label { font-size: 12px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); }
+    .ip-input {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: var(--r);
+      color: var(--text); font-family: var(--mono); font-size: 18px; font-weight: 600;
+      padding: 12px 16px; outline: none; width: 100%;
+      transition: border-color .15s;
+    }
+    .ip-input:focus { border-color: var(--amber); }
+    .ip-input.error { border-color: var(--red); }
+    .ip-input::placeholder { color: var(--faint); font-weight: 400; }
+
+    .calc-btn {
+      background: var(--amber); color: var(--on-a); border: none; border-radius: var(--r);
+      font-size: 14px; font-weight: 700; padding: 13px 28px; cursor: pointer;
+      transition: filter .15s; white-space: nowrap; height: 48px; align-self: flex-end;
+    }
+    .calc-btn:hover { filter: brightness(1.1); }
+
+    .error-msg { font-size: 13px; color: var(--red); margin-top: 10px; display: none; }
+    .error-msg.visible { display: block; }
+
+    /* ── PRESETS ── */
+    .presets { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .preset-btn {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 6px;
+      color: var(--muted); font-family: var(--mono); font-size: 12px; padding: 5px 10px;
+      cursor: pointer; transition: color .15s, border-color .15s;
+    }
+    .preset-btn:hover { color: var(--text); border-color: var(--faint); }
+
+    /* ── RESULTS ── */
+    #results { display: none; }
+    #results.visible { display: block; }
+
+    .results-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;
+    }
+    .result-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .result-card.wide { grid-column: 1 / -1; }
+    .result-label { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .result-value {
+      font-family: var(--mono); font-size: 18px; font-weight: 600; color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .result-value.big { font-size: 22px; }
+    .result-value.green { color: var(--green); }
+    .result-value.amber { color: var(--amber); }
+    .result-sub { font-size: 12px; color: var(--muted); margin-top: 4px; font-family: var(--mono); }
+
+    .copy-btn {
+      background: none; border: 1px solid var(--line); border-radius: 5px;
+      color: var(--muted); font-size: 11px; padding: 3px 7px; cursor: pointer;
+      transition: color .15s, border-color .15s; font-family: var(--sans);
+    }
+    .copy-btn:hover { color: var(--amber); border-color: var(--amber); }
+    .copy-btn.copied { color: var(--green); border-color: var(--green); }
+
+    /* ── BINARY BREAKDOWN ── */
+    .binary-panel {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px 22px; margin-bottom: 20px; overflow-x: auto;
+    }
+    .binary-panel .result-label { margin-bottom: 14px; }
+    .binary-table { border-collapse: collapse; width: 100%; min-width: 500px; }
+    .binary-table th {
+      font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+      color: var(--muted); padding: 4px 8px; text-align: left; white-space: nowrap;
+    }
+    .binary-table td {
+      font-family: var(--mono); font-size: 13px; padding: 6px 8px;
+      border-top: 1px solid var(--line);
+    }
+    .binary-table td:first-child { color: var(--muted); width: 140px; }
+    .oct { display: inline-block; padding: 2px 4px; border-radius: 3px; }
+    .oct.net { color: var(--amber); }
+    .oct.host { color: var(--blue); }
+    .oct-sep { color: var(--faint); margin: 0 1px; }
+
+    /* ── BADGES ── */
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .badge {
+      font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line);
+    }
+    .badge.private { color: var(--green); border-color: color-mix(in srgb, var(--green) 30%, transparent); }
+    .badge.public { color: var(--blue); border-color: color-mix(in srgb, var(--blue) 30%, transparent); }
+    .badge.class { color: var(--amber); border-color: color-mix(in srgb, var(--amber) 30%, transparent); }
+    .badge.special { color: var(--muted); }
+
+    /* ── CHEATSHEET ── */
+    .cheatsheet { background: var(--surf); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 32px; }
+    .cheatsheet-header {
+      padding: 16px 22px; border-bottom: 1px solid var(--line);
+      font-size: 13px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--muted);
+    }
+    .cheat-table { width: 100%; border-collapse: collapse; overflow-x: auto; display: block; }
+    .cheat-table th {
+      background: var(--surf2); font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
+      color: var(--muted); padding: 10px 16px; text-align: left; white-space: nowrap;
+    }
+    .cheat-table td {
+      font-family: var(--mono); font-size: 13px; padding: 9px 16px;
+      border-top: 1px solid var(--line); white-space: nowrap;
+    }
+    .cheat-table tr { cursor: pointer; transition: background .1s; }
+    .cheat-table tbody tr:hover { background: var(--surf2); }
+    .cheat-table td:first-child { color: var(--amber); font-weight: 700; }
+
+    /* ── CTA ── */
+    .cta-box {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      padding: 28px; margin-top: 36px; text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 14px; margin-bottom: 16px; line-height: 1.6; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a); font-weight: 700; font-size: 14px;
+      text-decoration: none; padding: 12px 24px; border-radius: var(--r); transition: filter .15s;
+    }
+    .cta-btn:hover { filter: brightness(1.1); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: clamp(28px,5vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: 13px; color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .results-grid { grid-template-columns: 1fr; }
+      .result-card.wide { grid-column: 1; }
+      .input-row { flex-direction: column; }
+      .calc-btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/" aria-current="true">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <div class="eyebrow">Tools</div>
+      <h1>Subnet Calculator</h1>
+      <p class="page-sub">Enter an IPv4 address with a CIDR prefix or subnet mask. Get network address, broadcast, host range, wildcard mask, and binary breakdown — instantly, in your browser.</p>
+    </div>
+
+    <!-- Input -->
+    <div class="input-panel">
+      <div class="input-row">
+        <div class="input-group">
+          <label for="ip-input">IP address / CIDR or subnet mask</label>
+          <input
+            id="ip-input"
+            class="ip-input"
+            type="text"
+            placeholder="192.168.1.0/24 or 10.0.0.1 255.255.255.0"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+        <button class="calc-btn" id="calc-btn">Calculate →</button>
+      </div>
+      <div class="error-msg" id="error-msg"></div>
+      <div class="presets">
+        <span style="font-size:12px;color:var(--muted);align-self:center">Quick load:</span>
+        <button class="preset-btn" data-ip="10.0.0.0/8">10.0.0.0/8</button>
+        <button class="preset-btn" data-ip="172.16.0.0/12">172.16.0.0/12</button>
+        <button class="preset-btn" data-ip="192.168.1.0/24">192.168.1.0/24</button>
+        <button class="preset-btn" data-ip="192.168.1.0/25">192.168.1.0/25</button>
+        <button class="preset-btn" data-ip="10.10.50.0/26">10.10.50.0/26</button>
+        <button class="preset-btn" data-ip="172.31.0.0/30">172.31.0.0/30</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results">
+      <div class="badge-row" id="badge-row"></div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-label">Network address</div>
+          <div class="result-value big" id="r-network">—
+            <button class="copy-btn" data-target="r-network">copy</button>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Broadcast address</div>
+          <div class="result-value big" id="r-broadcast">—
+            <button class="copy-btn" data-target="r-broadcast">copy</button>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">First usable host</div>
+          <div class="result-value green" id="r-first">—
+            <button class="copy-btn" data-target="r-first">copy</button>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Last usable host</div>
+          <div class="result-value green" id="r-last">—
+            <button class="copy-btn" data-target="r-last">copy</button>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Usable hosts</div>
+          <div class="result-value amber" id="r-hosts">—</div>
+          <div class="result-sub" id="r-hosts-sub"></div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Subnet mask</div>
+          <div class="result-value" id="r-mask">—
+            <button class="copy-btn" data-target="r-mask">copy</button>
+          </div>
+          <div class="result-sub" id="r-mask-sub"></div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Wildcard mask</div>
+          <div class="result-value" id="r-wildcard">—
+            <button class="copy-btn" data-target="r-wildcard">copy</button>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">CIDR notation</div>
+          <div class="result-value" id="r-cidr">—
+            <button class="copy-btn" data-target="r-cidr">copy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Binary breakdown -->
+      <div class="binary-panel">
+        <div class="result-label">Binary breakdown</div>
+        <table class="binary-table" id="binary-table">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Octet 1</th>
+              <th>Octet 2</th>
+              <th>Octet 3</th>
+              <th>Octet 4</th>
+            </tr>
+          </thead>
+          <tbody id="binary-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cheatsheet always visible -->
+    <div class="cheatsheet">
+      <div class="cheatsheet-header">Common subnet reference — click any row to calculate</div>
+      <table class="cheat-table" id="cheat-table">
+        <thead>
+          <tr>
+            <th>CIDR</th>
+            <th>Subnet mask</th>
+            <th>Wildcard</th>
+            <th>Hosts</th>
+            <th>Typical use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-cidr="8"><td>/8</td><td>255.0.0.0</td><td>0.255.255.255</td><td>16,777,214</td><td>Class A (10.x.x.x)</td></tr>
+          <tr data-cidr="12"><td>/12</td><td>255.240.0.0</td><td>0.15.255.255</td><td>1,048,574</td><td>172.16.0.0 private block</td></tr>
+          <tr data-cidr="16"><td>/16</td><td>255.255.0.0</td><td>0.0.255.255</td><td>65,534</td><td>Class B / large campus</td></tr>
+          <tr data-cidr="20"><td>/20</td><td>255.255.240.0</td><td>0.0.15.255</td><td>4,094</td><td>Medium campus VLAN</td></tr>
+          <tr data-cidr="22"><td>/22</td><td>255.255.252.0</td><td>0.0.3.255</td><td>1,022</td><td>Large office floor</td></tr>
+          <tr data-cidr="23"><td>/23</td><td>255.255.254.0</td><td>0.0.1.255</td><td>510</td><td>Office floor</td></tr>
+          <tr data-cidr="24"><td>/24</td><td>255.255.255.0</td><td>0.0.0.255</td><td>254</td><td>Standard LAN / VLAN</td></tr>
+          <tr data-cidr="25"><td>/25</td><td>255.255.255.128</td><td>0.0.0.127</td><td>126</td><td>Split LAN</td></tr>
+          <tr data-cidr="26"><td>/26</td><td>255.255.255.192</td><td>0.0.0.63</td><td>62</td><td>Small VLAN</td></tr>
+          <tr data-cidr="27"><td>/27</td><td>255.255.255.224</td><td>0.0.0.31</td><td>30</td><td>Small segment</td></tr>
+          <tr data-cidr="28"><td>/28</td><td>255.255.255.240</td><td>0.0.0.15</td><td>14</td><td>Server cluster</td></tr>
+          <tr data-cidr="29"><td>/29</td><td>255.255.255.248</td><td>0.0.0.7</td><td>6</td><td>Small cluster</td></tr>
+          <tr data-cidr="30"><td>/30</td><td>255.255.255.252</td><td>0.0.0.3</td><td>2</td><td>Point-to-point link</td></tr>
+          <tr data-cidr="31"><td>/31</td><td>255.255.255.254</td><td>0.0.0.1</td><td>2*</td><td>P2P (RFC 3021)</td></tr>
+          <tr data-cidr="32"><td>/32</td><td>255.255.255.255</td><td>0.0.0.0</td><td>1</td><td>Host route</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <p>Working with network configs? <strong>ScrubForge</strong> removes IP addresses, passwords, and community strings before you paste configs into AI assistants or support tickets — keeping your topology private.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">
+        Try ScrubForge free — Chrome Web Store →
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> &middot; Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </footer>
+
+  <script>
+  (() => {
+    'use strict';
+
+    // ── helpers ──────────────────────────────────────────────────
+    const $ = id => document.getElementById(id);
+
+    function ipToNum(ip) {
+      const parts = ip.trim().split('.');
+      if (parts.length !== 4) throw new Error('bad_ip');
+      const n = parts.reduce((acc, p) => {
+        const v = parseInt(p, 10);
+        if (isNaN(v) || v < 0 || v > 255) throw new Error('bad_ip');
+        return (acc << 8) | v;
+      }, 0);
+      return n >>> 0;
+    }
+
+    function numToIp(n) {
+      n = n >>> 0;
+      return [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255].join('.');
+    }
+
+    function cidrToMask(prefix) {
+      if (prefix < 0 || prefix > 32) throw new Error('bad_prefix');
+      return prefix === 0 ? 0 : (0xFFFFFFFF << (32 - prefix)) >>> 0;
+    }
+
+    function maskToCidr(mask) {
+      let n = mask >>> 0;
+      let count = 0;
+      // validate contiguous mask
+      let seenZero = false;
+      for (let i = 31; i >= 0; i--) {
+        const bit = (n >>> i) & 1;
+        if (bit === 0) seenZero = true;
+        else if (seenZero) throw new Error('bad_mask');
+        count += bit;
+      }
+      return count;
+    }
+
+    function pad8(n) { return n.toString(2).padStart(8, '0'); }
+
+    function formatNum(n) { return n.toLocaleString('en-US'); }
+
+    function classify(ipNum) {
+      const a = (ipNum >>> 24) & 255;
+      const b = (ipNum >>> 16) & 255;
+      // private?
+      if (a === 10) return { scope: 'Private', cls: 'A' };
+      if (a === 172 && b >= 16 && b <= 31) return { scope: 'Private', cls: 'B' };
+      if (a === 192 && b === 168) return { scope: 'Private', cls: 'C' };
+      if (a === 127) return { scope: 'Loopback', cls: null };
+      if (a === 169 && b === 254) return { scope: 'Link-local', cls: null };
+      if (a >= 224 && a <= 239) return { scope: 'Multicast', cls: 'D' };
+      if (a >= 240) return { scope: 'Reserved', cls: 'E' };
+      // classful
+      if (a < 128) return { scope: 'Public', cls: 'A' };
+      if (a < 192) return { scope: 'Public', cls: 'B' };
+      if (a < 224) return { scope: 'Public', cls: 'C' };
+      return { scope: 'Public', cls: null };
+    }
+
+    // ── parse input ───────────────────────────────────────────────
+    function parseInput(raw) {
+      raw = raw.trim();
+
+      // CIDR: 1.2.3.4/24
+      const cidrMatch = raw.match(/^(\S+)\/(\d{1,2})$/);
+      if (cidrMatch) {
+        const ipNum = ipToNum(cidrMatch[1]);
+        const prefix = parseInt(cidrMatch[2], 10);
+        if (prefix < 0 || prefix > 32) throw new Error('Prefix must be 0–32.');
+        return { ipNum, maskNum: cidrToMask(prefix), prefix };
+      }
+
+      // IP + mask (space or comma): 1.2.3.4 255.255.255.0
+      const maskMatch = raw.match(/^(\S+)\s+(\S+)$/);
+      if (maskMatch) {
+        const ipNum = ipToNum(maskMatch[1]);
+        const maskNum = ipToNum(maskMatch[2]);
+        const prefix = maskToCidr(maskNum);
+        return { ipNum, maskNum, prefix };
+      }
+
+      // bare IP — assume /32
+      try {
+        const ipNum = ipToNum(raw);
+        return { ipNum, maskNum: 0xFFFFFFFF, prefix: 32 };
+      } catch (_) {}
+
+      throw new Error('Enter an IP with CIDR (e.g. 192.168.1.0/24) or IP + subnet mask (e.g. 10.0.0.1 255.255.255.0).');
+    }
+
+    // ── calculate ─────────────────────────────────────────────────
+    function calculate(raw) {
+      const { ipNum, maskNum, prefix } = parseInput(raw);
+
+      const networkNum   = (ipNum & maskNum) >>> 0;
+      const broadcastNum = (networkNum | (~maskNum >>> 0)) >>> 0;
+      const wildcardNum  = (~maskNum) >>> 0;
+
+      let firstNum, lastNum, hostCount;
+      if (prefix === 32) {
+        firstNum = networkNum;
+        lastNum  = networkNum;
+        hostCount = 1;
+      } else if (prefix === 31) {
+        firstNum = networkNum;
+        lastNum  = broadcastNum;
+        hostCount = 2;
+      } else {
+        firstNum = (networkNum + 1) >>> 0;
+        lastNum  = (broadcastNum - 1) >>> 0;
+        hostCount = Math.pow(2, 32 - prefix) - 2;
+      }
+
+      const info = classify(networkNum);
+
+      return {
+        ip: numToIp(ipNum),
+        network: numToIp(networkNum),
+        broadcast: numToIp(broadcastNum),
+        first: numToIp(firstNum),
+        last: numToIp(lastNum),
+        mask: numToIp(maskNum),
+        wildcard: numToIp(wildcardNum),
+        prefix,
+        hostCount,
+        totalAddresses: Math.pow(2, 32 - prefix),
+        info,
+        // raw numbers for binary
+        _ip: ipNum, _net: networkNum, _mask: maskNum, _wild: wildcardNum
+      };
+    }
+
+    // ── render ────────────────────────────────────────────────────
+    function textContent(el, val) {
+      // set first text node only (preserves child button)
+      for (const node of el.childNodes) {
+        if (node.nodeType === 3) { node.textContent = val + ' '; return; }
+      }
+      el.prepend(document.createTextNode(val + ' '));
+    }
+
+    function renderBinary(res) {
+      const rows = [
+        { label: 'IP address',   num: res._ip },
+        { label: 'Subnet mask',  num: res._mask },
+        { label: 'Network addr', num: res._net },
+        { label: 'Wildcard',     num: res._wild },
+      ];
+      const netBits = res.prefix;
+      const body = $('binary-body');
+      body.innerHTML = '';
+      rows.forEach(({ label, num }) => {
+        const octets = [(num>>>24)&255,(num>>>16)&255,(num>>>8)&255,num&255];
+        const tr = document.createElement('tr');
+        let td0 = document.createElement('td'); td0.textContent = label; tr.appendChild(td0);
+        let bitsUsed = 0;
+        octets.forEach((oct, i) => {
+          const td = document.createElement('td');
+          const bits = pad8(oct);
+          let html = '';
+          for (let b = 0; b < 8; b++) {
+            const globalBit = i * 8 + b;
+            const cls = globalBit < netBits ? 'net' : 'host';
+            html += `<span class="oct ${cls}">${bits[b]}</span>`;
+            if (b === 3) html += '<span class="oct-sep">·</span>';
+          }
+          td.innerHTML = html;
+          tr.appendChild(td);
+        });
+        body.appendChild(tr);
+      });
+    }
+
+    function renderBadges(res) {
+      const row = $('badge-row');
+      row.innerHTML = '';
+      const add = (text, cls) => {
+        const b = document.createElement('span');
+        b.className = 'badge ' + cls;
+        b.textContent = text;
+        row.appendChild(b);
+      };
+      add(`/${res.prefix}`, 'class');
+      if (res.info.cls) add(`Class ${res.info.cls}`, 'class');
+      add(res.info.scope, res.info.scope === 'Private' ? 'private' : res.info.scope === 'Public' ? 'public' : 'special');
+      if (res.prefix === 31) add('RFC 3021 P2P', 'special');
+      if (res.prefix === 32) add('Host route', 'special');
+    }
+
+    function render(res) {
+      const results = $('results');
+      results.classList.add('visible');
+
+      textContent($('r-network'),   res.network);
+      textContent($('r-broadcast'), res.broadcast);
+      textContent($('r-first'),     res.first);
+      textContent($('r-last'),      res.last);
+      textContent($('r-mask'),      res.mask);
+      textContent($('r-wildcard'),  res.wildcard);
+      textContent($('r-cidr'),      res.network + '/' + res.prefix);
+      textContent($('r-hosts'),     formatNum(res.hostCount));
+
+      $('r-mask-sub').textContent = '/' + res.prefix;
+      $('r-hosts-sub').textContent = formatNum(res.totalAddresses) + ' total addresses';
+
+      renderBadges(res);
+      renderBinary(res);
+    }
+
+    // ── copy buttons ─────────────────────────────────────────────
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+      const targetId = btn.dataset.target;
+      const el = $(targetId);
+      // get first text content
+      let val = '';
+      for (const node of el.childNodes) {
+        if (node.nodeType === 3) { val = node.textContent.trim(); break; }
+      }
+      navigator.clipboard.writeText(val).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 1500);
+      });
+    });
+
+    // ── preset buttons ───────────────────────────────────────────
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        $('ip-input').value = btn.dataset.ip;
+        run();
+      });
+    });
+
+    // ── cheatsheet rows ──────────────────────────────────────────
+    document.querySelectorAll('#cheat-table tbody tr').forEach(tr => {
+      tr.addEventListener('click', () => {
+        const prefix = tr.dataset.cidr;
+        const existing = $('ip-input').value.trim();
+        // keep existing IP if valid, else use 10.0.0.0
+        let ip = '10.0.0.0';
+        try { const m = existing.match(/^(\d+\.\d+\.\d+\.\d+)/); if (m) ip = m[1]; } catch(_) {}
+        $('ip-input').value = ip + '/' + prefix;
+        run();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // ── error display ────────────────────────────────────────────
+    function showError(msg) {
+      $('ip-input').classList.add('error');
+      const em = $('error-msg');
+      em.textContent = msg;
+      em.classList.add('visible');
+      $('results').classList.remove('visible');
+    }
+
+    function clearError() {
+      $('ip-input').classList.remove('error');
+      $('error-msg').classList.remove('visible');
+    }
+
+    // ── run ───────────────────────────────────────────────────────
+    function run() {
+      clearError();
+      const val = $('ip-input').value.trim();
+      if (!val) return;
+      try {
+        const res = calculate(val);
+        render(res);
+      } catch (e) {
+        showError(e.message || 'Invalid input. Try 192.168.1.0/24.');
+      }
+    }
+
+    $('calc-btn').addEventListener('click', run);
+    $('ip-input').addEventListener('keydown', e => { if (e.key === 'Enter') run(); });
+
+    // auto-calculate on load if hash
+    const hash = window.location.hash.slice(1);
+    if (hash) { $('ip-input').value = decodeURIComponent(hash); run(); }
+  })();
+  </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
