@@ -466,6 +466,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-text-from-image-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-text-from-image-free/"/>
   </url>
 
   <url>
