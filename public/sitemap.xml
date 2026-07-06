@@ -448,6 +448,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
   </url>
 
   <url>
