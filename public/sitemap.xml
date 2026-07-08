@@ -436,6 +436,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/"/>
   </url>
 
   <url>
