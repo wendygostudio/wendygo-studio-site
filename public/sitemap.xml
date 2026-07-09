@@ -550,6 +550,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-uuid-en-linea/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/generar-uuid-en-linea/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-uuid-en-linea/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
   </url>
 
   <url>
