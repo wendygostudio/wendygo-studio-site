@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best CyberChef Alternatives for Text Manipulation in Your Browser (2026) | Wendygo Studio</title>
+  <meta name="description" content="CyberChef is powerful but overkill for quick text tasks. These alternatives cover sorting, extracting, encoding, and cleaning text — without a steep learning curve." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/cyberchef-alternatives/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cyberchef-alternatives/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Best CyberChef Alternatives (2026)"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best CyberChef Alternatives for Text Manipulation in Your Browser (2026)",
+    "description": "CyberChef is powerful but overkill for quick text tasks. These alternatives cover sorting, extracting, encoding, and cleaning text — without a steep learning curve.",
+    "datePublished": "2026-07-12",
+    "dateModified": "2026-07-12",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is TextForge a replacement for CyberChef?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — and that is an honest answer. TextForge replaces CyberChef for everyday text manipulation tasks like sorting, extracting, encoding, and cleaning. CyberChef has capabilities (encryption, binary analysis, network protocol decoding) that TextForge does not offer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TextForge process text locally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TextForge is a Chrome extension and all operations run in your browser. Your text is not sent to Wendygo Studio servers or any third party."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can TextForge chain operations like CyberChef recipes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TextForge has its own recipe system where you can chain multiple text functions in sequence. A local Gemini Nano AI composer can build a recipe pipeline from a plain-language description of what you want to achieve."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a self-hosted version of CyberChef?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. GCHQ provides CyberChef as an open-source project. You can host it locally with Docker or download it as a static HTML file and run it fully offline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is CyberChef used for in security?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CyberChef is widely used for CTF challenges, malware analysis, encoding and decoding obfuscated payloads, and data transformation in security workflows. For those use cases, it remains the best free option available."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { padding-left: 20px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); font-size: 15px; }
+    .article-body li strong { color: var(--text); }
+
+    .alt-grid { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .alt-card {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+    }
+    .alt-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+    }
+    .alt-name { font-size: 16px; font-weight: 700; color: var(--text); }
+    .alt-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 20px; background: var(--surf2); color: var(--amber);
+      border: 1px solid var(--line);
+    }
+    .alt-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+    .alt-card .alt-fits { font-size: 13px; color: var(--faint); margin-top: 8px; font-style: italic; }
+
+    .feature-list { margin: 16px 0 24px; display: flex; flex-direction: column; gap: 8px; }
+    .feature-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 8px;
+      font-size: 14px;
+    }
+    .feature-item .fi-name { font-weight: 700; color: var(--text); white-space: nowrap; min-width: 160px; }
+    .feature-item .fi-desc { color: var(--muted); }
+
+    .comp-table-wrap { overflow-x: auto; margin: 24px 0; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 540px; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: middle;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--muted); font-size: 13px; }
+    .comp-table .yes { color: #5cba7d; }
+    .comp-table .no  { color: var(--faint); }
+    .comp-table .partial { color: var(--amber2); }
+
+    .notice {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 14px 18px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .notice strong { color: var(--text); }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .feature-item { flex-direction: column; gap: 4px; }
+      .feature-item .fi-name { min-width: unset; }
+    }
+  </style>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Best CyberChef Alternatives for Text Manipulation in Your Browser (2026) | Wendygo Studio">
+  <meta property="og:description" content="CyberChef is powerful but overkill for quick text tasks. These alternatives cover sorting, extracting, encoding, and cleaning text — without a steep learning curve.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/cyberchef-alternatives">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Best CyberChef Alternatives for Text Manipulation in Your Browser (2026) | Wendygo Studio">
+  <meta name="twitter:description" content="CyberChef is powerful but overkill for quick text tasks. These alternatives cover sorting, extracting, encoding, and cleaning text — without a steep learning curve.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES ð</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Best CyberChef alternatives (2026)
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Alternatives · TextForge</div>
+      <h1>Best CyberChef Alternatives for Text Manipulation in Your Browser (2026)</h1>
+      <p class="article-intro">
+        CyberChef handles encryption, binary analysis, and security workflows extremely well. But if you need to sort lines, extract emails, or decode a Base64 string, there are faster tools built for that specific job.
+      </p>
+      <div class="article-date">July 12, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>CyberChef is a well-known open-source tool from GCHQ for encoding, decoding, encryption, compression, and data transformations. If you work in cybersecurity or need to analyze obfuscated payloads, it is genuinely excellent. But for everyday text manipulation tasks — sorting a list of lines, pulling email addresses out of a log file, decoding a Base64 config value — it is a lot of tool to load for a two-second job.</p>
+
+      <p>The recipe builder has a learning curve. The interface is dense. And everything runs on an external web page, which means your text transits to a remote server unless you self-host it.</p>
+
+      <p>Here are the practical alternatives, organized by what you are actually trying to do.</p>
+
+      <div class="notice">
+        <strong>Honest disclaimer:</strong> this article is published by the team behind TextForge. We have tried to give fair coverage to every option listed, including cases where CyberChef or another tool is simply the better fit.
+      </div>
+
+      <h2>Alternatives by Use Case</h2>
+
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-header">
+            <div class="alt-name">TextForge</div>
+            <div class="alt-badge">Chrome Extension</div>
+          </div>
+          <p>A Chrome extension with over 58 text utility functions that run locally — sort lines, remove duplicates, extract emails, URLs, and IP addresses, encode/decode Base64, generate UUIDs, clean whitespace, format JSON, and more. Functions are chainable into recipes. A local Gemini Nano AI composer lets you describe a pipeline in plain language and it builds it for you. Forge Magic auto-detects Base64, JSON, and hex when you paste, so you can skip the "what format is this?" step.</p>
+          <p class="alt-fits">Best fit: quick text tasks without leaving your browser tab. Everything runs on-device — nothing is sent to any server.</p>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-header">
+            <div class="alt-name">regex101</div>
+            <div class="alt-badge">Web App</div>
+          </div>
+          <p>The best dedicated tool for regex work. It shows matches, groups, and capture references live as you type, with clear explanations of each part of your pattern. If your CyberChef use case is mostly Regex Extract, regex101 is sharper for that specific job.</p>
+          <p class="alt-fits">Best fit: building, testing, and debugging regular expressions interactively.</p>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-header">
+            <div class="alt-name">Browser DevTools console</div>
+            <div class="alt-badge">Built-in</div>
+          </div>
+          <p>If you are already in DevTools, you can run <code>btoa()</code>, <code>atob()</code>, <code>encodeURIComponent()</code>, and <code>decodeURIComponent()</code> with zero overhead. No tool to load, no extension required. Also useful for quick <code>JSON.parse()</code> / <code>JSON.stringify()</code> checks.</p>
+          <p class="alt-fits">Best fit: one-off encoding/decoding when you are already working in the browser console.</p>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-header">
+            <div class="alt-name">jq / Miller / awk</div>
+            <div class="alt-badge">Command Line</div>
+          </div>
+          <p>For large files or automated transformation pipelines, command-line tools give you reproducible, scriptable workflows. <code>jq</code> is the standard for JSON; Miller (<code>mlr</code>) handles CSV and TSV efficiently; <code>awk</code> covers text field extraction. These are not browser-based but are the right tools when you outgrow interactive tooling.</p>
+          <p class="alt-fits">Best fit: batch processing, scripting, or server-side transformations.</p>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-header">
+            <div class="alt-name">CyberChef (self-hosted)</div>
+            <div class="alt-badge">Open Source</div>
+          </div>
+          <p>If your concern is data privacy but you still need CyberChef's full capabilities — AES encryption, SHA hashing, binary analysis, protocol decoding — you can run it locally. GCHQ provides the source on GitHub; a static HTML download or a Docker container gets you the complete tool on localhost with no external requests.</p>
+          <p class="alt-fits">Best fit: security analysis workflows where you want CyberChef's full feature set without sending data externally.</p>
+        </div>
+
+      </div>
+
+      <h2>What TextForge Covers from CyberChef's Text Operations</h2>
+
+      <p>For the subset of CyberChef usage that is not cryptographic or binary — the everyday text tasks — TextForge covers most of it without the overhead of loading a full security toolbox:</p>
+
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="fi-name">Base64 encode / decode</span>
+          <span class="fi-desc">Locally, in one click. Forge Magic detects Base64 automatically when you paste a string.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Sort lines alphabetically</span>
+          <span class="fi-desc">A–Z sort for any line-separated list. Hostname lists, package names, config keys.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Remove duplicate lines</span>
+          <span class="fi-desc">Deduplicate any list. Keeps first occurrence, removes the rest.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Extract emails, URLs, IPs</span>
+          <span class="fi-desc">Pull structured data out of mixed text without writing a regex.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">UUID generation</span>
+          <span class="fi-desc">Generate UUIDs v4 in-browser without a terminal or external generator.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">JSON format / minify</span>
+          <span class="fi-desc">Pretty-print or compact JSON. Forge Magic auto-detects JSON when you paste.</span>
+        </div>
+        <div class="feature-item">
+          <span class="fi-name">Chainable recipes</span>
+          <span class="fi-desc">Stack operations in sequence: clean whitespace → sort → deduplicate → copy. Reusable across sessions.</span>
+        </div>
+      </div>
+
+      <p><strong>What TextForge does not do:</strong> AES or other symmetric encryption, SHA/MD5 hashing, binary file analysis, network protocol decoding, or the deep forensic operations CyberChef is built for. If those are your use cases, CyberChef (self-hosted or via cyberchef.io) is the right tool.</p>
+
+      <h2>Side-by-Side Comparison</h2>
+
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>CyberChef</th>
+              <th>TextForge</th>
+              <th>regex101</th>
+              <th>DevTools</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Base64 encode / decode</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓ local</td>
+              <td class="no">—</td>
+              <td class="yes">✓</td>
+            </tr>
+            <tr>
+              <td>Sort lines alphabetically</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓ local</td>
+              <td class="no">—</td>
+              <td class="no">—</td>
+            </tr>
+            <tr>
+              <td>Extract emails / URLs / IPs</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓ local</td>
+              <td class="partial">regex only</td>
+              <td class="no">—</td>
+            </tr>
+            <tr>
+              <td>Remove duplicate lines</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓ local</td>
+              <td class="no">—</td>
+              <td class="no">—</td>
+            </tr>
+            <tr>
+              <td>Regex test and explain</td>
+              <td class="partial">limited</td>
+              <td class="no">—</td>
+              <td class="yes">✓ best-in-class</td>
+              <td class="partial">limited</td>
+            </tr>
+            <tr>
+              <td>Chained pipelines / recipes</td>
+              <td class="yes">✓</td>
+              <td class="yes">✓</td>
+              <td class="no">—</td>
+              <td class="no">—</td>
+            </tr>
+            <tr>
+              <td>AES / SHA / crypto</td>
+              <td class="yes">✓</td>
+              <td class="no">—</td>
+              <td class="no">—</td>
+              <td class="no">—</td>
+            </tr>
+            <tr>
+              <td>Binary / file analysis</td>
+              <td class="yes">✓</td>
+              <td class="no">—</td>
+              <td class="no">—</td>
+              <td class="no">—</td>
+            </tr>
+            <tr>
+              <td>Chrome extension (no tab switch)</td>
+              <td class="no">—</td>
+              <td class="yes">✓</td>
+              <td class="no">—</td>
+              <td class="yes">built-in</td>
+            </tr>
+            <tr>
+              <td>Runs fully locally by default</td>
+              <td class="partial">self-hosted</td>
+              <td class="yes">✓</td>
+              <td class="no">—</td>
+              <td class="yes">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Is TextForge a replacement for CyberChef?</p>
+          <p class="faq-a">No — and that is an honest answer. TextForge replaces CyberChef for everyday text manipulation tasks like sorting, extracting, encoding, and cleaning. CyberChef has capabilities (encryption, binary analysis, network protocol decoding) that TextForge does not offer. If you use CyberChef for security analysis, keep using it.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Does TextForge process text locally?</p>
+          <p class="faq-a">Yes. TextForge is a Chrome extension and all operations run in your browser. Your text is not sent to Wendygo Studio servers or any third party. This is the main practical difference from the hosted version of CyberChef for everyday use.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Can TextForge chain operations like CyberChef recipes?</p>
+          <p class="faq-a">TextForge has its own recipe system where you can chain multiple text functions in sequence and save them for reuse. A local Gemini Nano AI composer can build a recipe pipeline from a plain-language description of what you want to achieve.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is there a self-hosted version of CyberChef?</p>
+          <p class="faq-a">Yes. GCHQ provides CyberChef as an open-source project on GitHub. You can run it locally with Docker or download it as a static HTML file and open it offline. This is the recommended approach if you need CyberChef's full feature set without transmitting data to a remote server.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What is CyberChef used for in security?</p>
+          <p class="faq-a">CyberChef is widely used for CTF challenges, malware analysis, decoding obfuscated payloads (Base64-encoded shellcode, XOR-encrypted strings), and data transformation in DFIR workflows. For those use cases it remains the best free option available.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/base64-encode-decode-online-tool/">
+            Base64 Encode and Decode Online — No Upload, No Command Line
+            <span>Decode JWT payloads, Kubernetes secrets, and Basic Auth headers locally with TextForge</span>
+          </a>
+          <a class="related-link" href="/blog/extract-emails-from-text/">
+            How to Extract Emails from Text Online — No Manual Hunting
+            <span>Pull every email address from any text block in seconds, fully local</span>
+          </a>
+          <a class="related-link" href="/blog/sort-lines-alphabetically-online/">
+            How to Sort Lines Alphabetically Online — No Excel, No Terminal
+            <span>Sort hostnames, packages, or config keys in one click with TextForge</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge is free to install. Base64, sort, deduplicate, extract, UUID, and JSON tools are all included in the free version — no account required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Install TextForge — free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
