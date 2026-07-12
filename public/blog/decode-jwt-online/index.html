@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decode JWT Token Online — No Server Upload, No Third-Party | Wendygo Studio</title>
+  <meta name="description" content="Decode JWT tokens locally in your browser. Read claims, expiration, and user data without uploading to any external server. Free, secure, private." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/decode-jwt-online/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-online/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Decode JWT Token Online"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Decode JWT Token Online — No Server Upload, No Third-Party",
+    "description": "Decode JWT tokens locally in your browser. Read claims, expiration, and user data without uploading to any external server. Free, secure, private.",
+    "datePublished": "2026-07-12",
+    "dateModified": "2026-07-12",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I decrypt a JWT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Decoding is not the same as decrypting. A JWT is not encrypted — it is Base64-encoded. Anyone can read the payload by decoding it. If you need the payload to be secret, you would use JWE (JSON Web Encryption), not JWT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does decoding a JWT verify it is real?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Decoding shows you what claims are inside, but it does not verify the signature. Only the server that issued the token can verify it is authentic. You can decode a fake JWT just as easily as a real one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to decode a JWT in the browser console?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The console is part of your browser; nothing is sent externally. This is one of the safest ways to decode a JWT for debugging."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { padding-left: 20px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); font-size: 15px; }
+    .article-body li strong { color: var(--text); }
+    .article-body pre {
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 16px; border-radius: 8px; margin: 20px 0; overflow-x: auto;
+      font-family: var(--mono); font-size: 13px; color: var(--text);
+      line-height: 1.5;
+    }
+
+    .notice {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 14px 18px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .notice strong { color: var(--text); }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Decode JWT Token Online — No Server Upload, No Third-Party | Wendygo Studio">
+  <meta property="og:description" content="Decode JWT tokens locally in your browser. Read claims, expiration, and user data without uploading to any external server. Free, secure, private.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/decode-jwt-online">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Decode JWT Token Online — No Server Upload, No Third-Party | Wendygo Studio">
+  <meta name="twitter:description" content="Decode JWT tokens locally in your browser. Read claims, expiration, and user data without uploading to any external server. Free, secure, private.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌎</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Decode JWT Token Online
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Tools · TextForge</div>
+      <h1>Decode JWT Token Online — No Server Upload, No Third-Party</h1>
+      <p class="article-intro">
+        JWT tokens store user claims, roles, and expiration. But most online decoders send your token to a third-party server. TextForge decodes JWT locally in your browser.
+      </p>
+      <div class="article-date">July 12, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>JWT (JSON Web Token) is the standard for stateless authentication. Every time you log into an app, your browser holds a JWT. But reading one requires decoding — and most online JWT decoders send your token to a third-party server.</p>
+
+      <p>TextForge decodes JWT locally, right in your browser, with zero upload to any server.</p>
+
+      <h2>What is a JWT and Why Decode It?</h2>
+
+      <p>A JWT is a compact three-part string:</p>
+
+      <pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIn0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</pre>
+
+      <p>The header, payload, and signature are each Base64-encoded. The payload contains user claims — <code>user_id</code>, <code>email</code>, <code>roles</code>, <code>exp</code> (expiration time). Debugging auth issues, checking token expiration, or verifying claims requires decoding that payload.</p>
+
+      <p>Most online JWT decoders run on a remote server, which means your token (potentially containing sensitive data) leaves your browser. If the token is a real authentication cookie, this is a security risk.</p>
+
+      <h2>Decode JWT with TextForge</h2>
+
+      <p>TextForge decodes JWT locally:</p>
+
+      <ol style="padding-left: 20px; margin-bottom: 20px;">
+        <li style="margin-bottom: 6px; color: var(--muted); font-size: 15px;">Copy your JWT from DevTools, an API response, or your auth header</li>
+        <li style="margin-bottom: 6px; color: var(--muted); font-size: 15px;">Paste it into TextForge</li>
+        <li style="margin-bottom: 6px; color: var(--muted); font-size: 15px;">Select <strong>Decode Base64</strong> on the payload part</li>
+        <li style="margin-bottom: 6px; color: var(--muted); font-size: 15px;">The decoded JSON appears instantly in your browser, never sent anywhere</li>
+      </ol>
+
+      <p>TextForge also includes <strong>Forge Magic</strong> — when you paste a JWT, it auto-detects the Base64 payload and offers to decode it directly, skipping the manual step-by-step.</p>
+
+      <p>The token never leaves your device. All decoding runs in your browser tab.</p>
+
+      <h2>Alternative: Browser DevTools Console</h2>
+
+      <p>If you do not want to install an extension, you can decode a JWT in the browser console in seconds:</p>
+
+      <pre>const jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.dozjgNryP4J3jVmNHl0w5N_XgL0n3I9PlFUP0THsR8U";
+const [header, payload, sig] = jwt.split('.');
+console.log(JSON.parse(atob(payload)));</pre>
+
+      <p>This prints the decoded payload directly. Zero external requests, zero setup time.</p>
+
+      <h2>When NOT to Decode a JWT Online</h2>
+
+      <ul>
+        <li><strong>Never use a public online JWT decoder</strong> (jwt.io, jwtdebugger.com, etc.) with production tokens that contain real user data, API keys, or role information. The token transits to their server.</li>
+        <li>If your JWT includes sensitive claims, decode it locally (DevTools or TextForge) only.</li>
+        <li>If your JWT is signed with a secret, decoding shows the claims but does NOT verify the signature. Only the issuing server can verify a signed JWT is real.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Can I decrypt a JWT?</p>
+          <p class="faq-a">No. Decoding is not the same as decrypting. A JWT is not encrypted — it is Base64-encoded. Anyone can read the payload by decoding it. If you need the payload to be secret, you would use JWE (JSON Web Encryption), not JWT.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Does decoding a JWT verify it is real?</p>
+          <p class="faq-a">No. Decoding shows you what claims are inside, but it does not verify the signature. Only the server that issued the token can verify it is authentic. You can decode a fake JWT just as easily as a real one.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is it safe to decode a JWT in the browser console?</p>
+          <p class="faq-a">Yes. The console is part of your browser; nothing is sent externally. This is one of the safest ways to decode a JWT for debugging.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/cyberchef-alternatives/">
+            Best CyberChef Alternatives for Text Manipulation (2026)
+            <span>JWT decoding, Base64 operations, and text tasks without uploading to a third party</span>
+          </a>
+          <a class="related-link" href="/blog/base64-encode-decode-online-tool/">
+            Base64 Encode and Decode Online — No Upload, No Command Line
+            <span>JWT tokens are Base64-encoded; decode them locally with TextForge</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge is free to install. Base64, sort, deduplicate, extract, UUID, and JSON tools are all included — no account required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Install TextForge — free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
