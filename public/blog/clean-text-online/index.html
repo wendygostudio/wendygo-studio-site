@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Text Online - Remove Whitespace, Trim Lines, Delete Blank Lines | Wendygo Studio</title>
+  <meta name="description" content="Remove extra spaces, trim lines, delete blank lines, and clean messy text online — locally with TextForge." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/clean-text-online/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-text-online/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Clean Text Online"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Clean Text Online - Remove Whitespace, Trim Lines, Delete Blank Lines",
+    "description": "Remove extra spaces, trim lines, delete blank lines, and clean messy text online — locally with TextForge.",
+    "datePublished": "2026-07-12",
+    "dateModified": "2026-07-12",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does TextForge send my text to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. TextForge is a Chrome extension and all operations run in your browser. Your text is never sent to Wendygo Studio servers or any third party."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I save my cleaning recipe for reuse?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TextForge lets you chain multiple cleaning functions together and save the recipe with a custom name. Reuse it the next time you need to clean similar text."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a limit to how much text I can clean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No hard limit. Your browser's memory is the limit. For most everyday text cleaning (log files, pasted content, CSV headers), you will not hit any practical constraint."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { padding-left: 20px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); font-size: 15px; }
+    .article-body li strong { color: var(--text); }
+
+    .notice {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 14px 18px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .notice strong { color: var(--text); }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Clean Text Online - Remove Whitespace, Trim Lines, Delete Blank Lines | Wendygo Studio">
+  <meta property="og:description" content="Remove extra spaces, trim lines, delete blank lines, and clean messy text online — locally with TextForge.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/clean-text-online/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clean Text Online - Remove Whitespace, Trim Lines, Delete Blank Lines | Wendygo Studio">
+  <meta name="twitter:description" content="Remove extra spaces, trim lines, delete blank lines, and clean messy text online — locally with TextForge.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Clean Text Online
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Text Tools · TextForge</div>
+      <h1>Clean Text Online — Remove Whitespace, Trim Lines, Delete Blank Lines</h1>
+      <p class="article-intro">
+        When you copy text from a PDF or log file, you get extra spaces, blank lines, and inconsistent indentation. Clean it locally in your browser without uploading to a server.
+      </p>
+      <div class="article-date">July 12, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>When you copy text from a PDF, web page, or log file, you often get unwanted whitespace: leading spaces on every line, trailing tabs, double blank lines between paragraphs, or inconsistent indentation.</p>
+
+      <p>Cleaning that text manually is tedious. Regex is overkill for simple cases. You need a straightforward tool that runs in your browser without sending anything to a server.</p>
+
+      <p><strong>TextForge</strong> is a Chrome extension with built-in text cleaning functions that run locally:</p>
+
+      <ul>
+        <li><strong>Trim whitespace</strong> — Remove leading and trailing spaces from each line</li>
+        <li><strong>Clean blank lines</strong> — Delete empty or whitespace-only lines</li>
+        <li><strong>Remove duplicate spaces</strong> — Collapse multiple spaces into one</li>
+        <li><strong>Normalize line endings</strong> — Convert mixed line breaks to consistent format</li>
+        <li><strong>Remove all whitespace</strong> — Strip spaces entirely when you need compact output</li>
+      </ul>
+
+      <p>All functions run in your browser. Your text never leaves your device.</p>
+
+      <h2>Common Text Cleaning Scenarios</h2>
+
+      <p><strong>Cleaning PDF paste:</strong> When you copy from a PDF, each line often has leading spaces. Trim + Clean Blank Lines fixes it in one recipe.</p>
+
+      <p><strong>Log file processing:</strong> Logs often have mixed indentation and blank lines. Remove duplicates + clean blanks makes logs readable for grepping or importing into analysis tools.</p>
+
+      <p><strong>Data prep for scripts:</strong> If you're building a list of domains, IPs, or hostnames to pass to a shell script, removing extra spaces and blank lines is essential. Do it with one click instead of manual editing.</p>
+
+      <p><strong>Email or CSV headers:</strong> Pasted headers from spreadsheets often have trailing spaces that break parsers. Trim whitespace catches those invisible problems.</p>
+
+      <h2>How It Works</h2>
+
+      <ol style="padding-left: 20px; margin-bottom: 20px;">
+        <li style="margin-bottom: 6px; color: var(--muted);">Install TextForge from the Chrome Web Store (free)</li>
+        <li style="margin-bottom: 6px; color: var(--muted);">Open your text in the extension popup</li>
+        <li style="margin-bottom: 6px; color: var(--muted);">Chain cleaning functions: Trim → Clean Blanks → Deduplicate Spaces</li>
+        <li style="margin-bottom: 6px; color: var(--muted);">Copy the clean output</li>
+        <li style="margin-bottom: 6px; color: var(--muted);">Save the recipe for reuse on similar tasks</li>
+      </ol>
+
+      <p>No upload. No server. No login. Your text stays on your device.</p>
+
+      <h2>Why TextForge Over Other Tools?</h2>
+
+      <p><strong>Regex101</strong> is powerful for complex patterns but overkill for basic whitespace cleanup.</p>
+
+      <p><strong>Browser DevTools</strong> requires JavaScript knowledge and multiple commands.</p>
+
+      <p><strong>Command line</strong> (<code>sed</code>, <code>tr</code>, <code>awk</code>) works great if you're already at the terminal, but TextForge is faster for quick ad-hoc cleaning without leaving your browser.</p>
+
+      <p><strong>Online editors</strong> often send your text to a remote server. TextForge runs everything locally.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Does TextForge send my text to a server?</p>
+          <p class="faq-a">No. TextForge is a Chrome extension and all operations run in your browser. Your text is never sent to Wendygo Studio servers or any third party.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Can I save my cleaning recipe for reuse?</p>
+          <p class="faq-a">Yes. TextForge lets you chain multiple cleaning functions together and save the recipe with a custom name. Reuse it the next time you need to clean similar text.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is there a limit to how much text I can clean?</p>
+          <p class="faq-a">No hard limit. Your browser's memory is the limit. For most everyday text cleaning (log files, pasted content, CSV headers), you will not hit any practical constraint.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/cyberchef-alternatives/">
+            Best CyberChef Alternatives for Text Manipulation
+            <span>Compare TextForge, regex101, and command-line tools for everyday text tasks</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge is free. All text cleaning functions are included — no account required.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Install TextForge — Free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
