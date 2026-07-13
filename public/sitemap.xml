@@ -759,4 +759,11 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-special-characters-from-text/"/>
   </url>
+
+  <url>
+    <loc>https://wendygostudio.com/tools/password-generator/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
