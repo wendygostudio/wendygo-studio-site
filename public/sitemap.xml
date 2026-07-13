@@ -741,4 +741,12 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-text-online/"/>
   </url>
+
+  <url>
+    <loc>https://wendygostudio.com/blog/remove-special-characters-from-text/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-special-characters-from-text/"/>
+  </url>
 </urlset>
