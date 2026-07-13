@@ -428,6 +428,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/bulk-text-cleaner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/bulk-text-cleaner/"/>
   </url>
 
   <url>
