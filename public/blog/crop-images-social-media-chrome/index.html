@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crop Images for Different Social Media Platforms in Chrome — Wendygo Studio</title>
+  <meta name="description" content="Learn how to crop images properly for YouTube, Instagram, X, and Twitch using a Chrome extension — keep your subject centered for every aspect ratio." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/" />
+
+  <!-- Schemas -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"Crop images for different social media platforms"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Crop Images for Different Social Media Platforms Using a Chrome Extension","description":"Learn how to crop images properly for YouTube, Instagram, X, and Twitch using a Chrome extension — keep your subject centered for every aspect ratio.","datePublished":"2026-07-14","dateModified":"2026-07-14","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Why is cropping important when resizing for multiple platforms?","acceptedAnswer":{"@type":"Answer","text":"Different platforms have different aspect ratios. A YouTube thumbnail (16:9) and an Instagram square (1:1) are mathematically incompatible. If you use the same crop for both, your subject will be off-center in one of them. Intentional cropping for each platform ensures your subject is properly framed."}},
+    {"@type":"Question","name":"What's the difference between resize and crop?","acceptedAnswer":{"@type":"Answer","text":"Resize changes dimensions. Crop changes composition. Both are necessary when adapting the same image across platforms. FrameForge lets you do both in one tool — resize to the platform dimensions and crop to the composition in the same operation."}},
+    {"@type":"Question","name":"How do I crop differently for landscape vs. square vs. portrait platforms?","acceptedAnswer":{"@type":"Answer","text":"Landscape (16:9, like YouTube): Crop wide to show context; your subject should be prominent but with room around it. Square (1:1, like Instagram): Crop tight and center your subject — you have no extra horizontal room. Portrait (9:16, like Instagram Stories): Crop to fill the frame vertically with your subject; center horizontally."}}
+  ]}
+  </script>
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Crop Images for Different Social Media Platforms in Chrome — Wendygo Studio">
+  <meta property="og:description" content="Learn how to crop images properly for YouTube, Instagram, X, and Twitch using a Chrome extension — keep your subject centered for every aspect ratio.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/crop-images-social-media-chrome/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crop Images for Different Social Media Platforms in Chrome — Wendygo Studio">
+  <meta name="twitter:description" content="Learn how to crop images properly for YouTube, Instagram, X, and Twitch using a Chrome extension — keep your subject centered for every aspect ratio.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    /* List styles */
+    .article-body ol, .article-body ul { margin-left: 20px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 10px; }
+
+    /* Tips list */
+    .tips { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; margin-left: 0; }
+    .tips li {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .tips li strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* FAQ */
+    .faq { margin-top: 48px; }
+    .faq h2 { font-size: 22px; font-weight: 700; letter-spacing: -.3px; margin-bottom: 20px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* Related */
+    .related { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line); }
+    .related h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-links a {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; transition: border-color .2s;
+    }
+    .related-links a:hover { border-color: var(--faint); }
+    .related-links a span { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES &#127760;</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Crop images for different social media platforms
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">How-to guide · FrameForge</div>
+      <h1>Crop Images for Different Social Media Platforms Using a Chrome Extension</h1>
+      <p class="article-intro">
+        A YouTube thumbnail and an Instagram square are mathematically incompatible aspect ratios. Here's how to adjust your crop for each platform without reloading your image.
+      </p>
+      <div class="article-date">July 14, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>When you resize the same image for multiple social platforms, the resize is only half the job. A YouTube thumbnail in 16:9 landscape and an Instagram square in 1:1 are mathematically incompatible aspect ratios — if you use the same crop for both, your subject lands off-center in one of them.</p>
+
+      <p>This is where intentional cropping becomes the difference between "the image fits the dimensions" and "the image looks composed for the platform."</p>
+
+      <h2>Why Crop Adjustment Matters More Than You Think</h2>
+
+      <p>A landscape photo optimized for YouTube's 1280×720 (16:9) puts your subject in the center-right. That same crop forced into Instagram's square (1:1) loses half your composition on the left and right — your subject is now off-center. An Instagram Story (9:16 portrait) needs a different framing entirely.</p>
+
+      <p>This isn't a technical problem — it's a design problem. The best tool doesn't auto-crop across aspect ratios because there is no "right" crop; it depends on where your subject is and what you want to emphasize.</p>
+
+      <h2>How to Crop for Each Platform</h2>
+
+      <p>A workflow that works: load your source image once, then switch platform presets and adjust the crop for each destination.</p>
+
+      <ol>
+        <li><strong>Open your image in FrameForge.</strong></li>
+        <li><strong>Switch to your first platform preset</strong> (YouTube, Instagram, Twitch, X). The canvas snaps to that platform's aspect ratio.</li>
+        <li><strong>Position the crop overlay</strong> — drag it to center your subject correctly for that specific frame. This is the crucial step. Don't just accept the default crop.</li>
+        <li><strong>Export.</strong></li>
+        <li><strong>Switch to the next preset.</strong> The image stays loaded, but the canvas reshapes. Reposition the crop for the new aspect ratio — this usually takes 10 seconds — and export again.</li>
+      </ol>
+
+      <h2>Platform Aspect Ratio Differences</h2>
+
+      <ul>
+        <li><strong>YouTube Thumbnail (16:9):</strong> Landscape. Subject usually in the center or center-right.</li>
+        <li><strong>Instagram Post (1:1):</strong> Square. Requires tighter framing; crop to the upper third for portraits.</li>
+        <li><strong>Instagram Story (9:16):</strong> Portrait. Subject fills the frame vertically.</li>
+        <li><strong>X / Twitter (16:9):</strong> Landscape, similar to YouTube but different dimensions.</li>
+      </ul>
+
+      <p>Each one wants a slightly different crop. The platform presets handle the dimensions; you handle the composition.</p>
+
+      <h2>Why FrameForge Keeps Your Image Loaded</h2>
+
+      <p>The advantage of cropping in FrameForge instead of exporting three separate images for editing: you don't reload. Your source stays on the canvas while you switch between presets. The workflow is:</p>
+
+      <ol>
+        <li>Load image</li>
+        <li>Preset A → crop → export</li>
+        <li>Preset B → crop → export (same image, no reload)</li>
+        <li>Preset C → crop → export</li>
+      </ol>
+
+      <p>Compare that to opening your desktop editor three times and you'll see why the extension approach saves time.</p>
+
+      <h2>Quick Tips for Better Crops Across Platforms</h2>
+
+      <ul class="tips">
+        <li>
+          <strong>Start from the highest-resolution source</strong>
+          — so no platform export is upscaling from a compressed baseline.
+        </li>
+        <li>
+          <strong>Crop tight for squares</strong> (Instagram 1:1) — center your subject and accept that the sides will be tight.
+        </li>
+        <li>
+          <strong>Crop wide for landscapes</strong> (YouTube, X) — you have horizontal room; use it to show context.
+        </li>
+        <li>
+          <strong>For portraits to landscape,</strong> crop the upper half and accept that the lower third will be cut. The subject (usually a face or upper body) should dominate the frame.
+        </li>
+        <li>
+          <strong>Test the export</strong> — before uploading to the platform, open each exported file to confirm the crop is actually how it appeared on the canvas. Surprises happen.
+        </li>
+      </ul>
+
+      <h2>The Difference Between Resize and Crop</h2>
+
+      <p>Resize changes dimensions. Crop changes composition. Both are necessary. FrameForge does both in one tool — you resize to the platform and crop to the composition in the same operation.</p>
+
+    </div>
+
+    <div class="cta-box">
+      <p>FrameForge is free to install. Platform presets for YouTube, Instagram, Twitch, and X are included in the free version.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+        Install FrameForge — free
+      </a>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Why is cropping important when resizing for multiple platforms?</div>
+        <div class="faq-a">Different platforms have different aspect ratios. A YouTube thumbnail (16:9) and an Instagram square (1:1) are mathematically incompatible. If you use the same crop for both, your subject will be off-center in one of them. Intentional cropping for each platform ensures your subject is properly framed.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between resize and crop?</div>
+        <div class="faq-a">Resize changes dimensions. Crop changes composition. Both are necessary when adapting the same image across platforms. FrameForge lets you do both in one tool — resize to the platform dimensions and crop to the composition in the same operation.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I crop differently for landscape vs. square vs. portrait platforms?</div>
+        <div class="faq-a">Landscape (16:9, like YouTube): Crop wide to show context; your subject should be prominent but with room around it. Square (1:1, like Instagram): Crop tight and center your subject — you have no extra horizontal room. Portrait (9:16, like Instagram Stories): Crop to fill the frame vertically with your subject; center horizontally.</div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="related">
+      <h2>Related guides</h2>
+      <div class="related-links">
+        <a href="/blog/batch-resize-images-chrome-extension/">
+          How to Batch Resize Images for Multiple Social Platforms
+          <span>Complete workflow · FrameForge</span>
+        </a>
+        <a href="/blog/resize-image-youtube-thumbnail-chrome/">
+          How to Resize an Image for YouTube Thumbnails in Your Browser
+          <span>Step-by-step guide · FrameForge</span>
+        </a>
+        <a href="/blog/resize-image-for-instagram-chrome/">
+          How to Resize an Image for Instagram in Chrome
+          <span>Square and Story formats · FrameForge</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+</body>
+</html>

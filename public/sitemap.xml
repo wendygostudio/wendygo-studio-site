@@ -774,4 +774,12 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
+
+  <url>
+    <loc>https://wendygostudio.com/blog/crop-images-social-media-chrome/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+  </url>
 </urlset>
