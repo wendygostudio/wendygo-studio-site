@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo Redimensionar Imágenes para Múltiples Redes Sociales en Chrome — Wendygo Studio</title>
+  <meta name="description" content="Redimensiona una imagen para YouTube, Instagram, Twitch y X sin subir nada a internet — usa FrameForge, una extensión de Chrome que procesa todo localmente." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/" />
+
+  <!-- Hreflang links -->
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/" />
+
+  <!-- Schemas -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/es/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/es/blog/"},
+    {"@type":"ListItem","position":3,"name":"Cómo Redimensionar Imágenes para Múltiples Redes Sociales"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Cómo Redimensionar Imágenes para Múltiples Redes Sociales Usando una Extensión de Chrome","description":"Redimensiona una imagen para YouTube, Instagram, Twitch y X sin subir nada a internet — usa FrameForge, una extensión de Chrome que procesa todo localmente.","datePublished":"2026-07-14","dateModified":"2026-07-14","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Cómo Redimensionar una Imagen para Múltiples Redes Sociales","description":"Usa FrameForge para exportar la misma imagen de origen a dimensiones de YouTube, Instagram, Twitch y X — localmente en Chrome, sin necesidad de subir nada.","tool":[{"@type":"HowToTool","name":"FrameForge Chrome extension"}],"step":[
+    {"@type":"HowToStep","position":1,"name":"Instala FrameForge","text":"Instala FrameForge desde la Chrome Web Store y fija el icono en tu barra de herramientas. No necesitas cuenta ni login."},
+    {"@type":"HowToStep","position":2,"name":"Abre tu imagen de origen","text":"Haz clic en el icono de FrameForge, luego abre tu archivo o arrastra la imagen al lienzo. Usa la versión de mayor resolución que tengas."},
+    {"@type":"HowToStep","position":3,"name":"Selecciona un preset de plataforma y exporta","text":"En el menú Plataforma, elige tu primer destino (por ejemplo YouTube Thumbnail). El lienzo se ajusta automáticamente a 1280×720 px con la proporción bloqueada. Posiciona el recorte y haz clic en Exportar."},
+    {"@type":"HowToStep","position":4,"name":"Cambia de preset y exporta de nuevo","text":"Con la misma imagen cargada, cambia al siguiente preset (por ejemplo Instagram Post → 1080×1080). Ajusta el recorte para el nuevo marco y exporta un segundo archivo. Repite para cada plataforma."}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"¿Funciona el redimensionamiento por lotes en la versión gratuita de FrameForge?","acceptedAnswer":{"@type":"Answer","text":"Los presets de plataforma están disponibles en la versión gratuita, lo que te permite redimensionar la misma imagen para diferentes plataformas manualmente una por una. El modo por lotes — procesar múltiples imágenes simultáneamente — requiere FrameForge Pro."}},
+    {"@type":"Question","name":"¿Puedo usar FrameForge para redimensionar imágenes en lote sin instalar una extensión?","acceptedAnswer":{"@type":"Answer","text":"FrameForge es una extensión de Chrome y requiere instalación. No hay versión web. La ventaja es que todo el procesamiento ocurre localmente — ningún archivo se sube a ningún servidor."}},
+    {"@type":"Question","name":"¿Qué plataformas incluyen presets FrameForge?","acceptedAnswer":{"@type":"Answer","text":"FrameForge incluye presets para YouTube, Instagram, Twitch y X (Twitter), además de la opción de ingresar dimensiones personalizadas si tu plataforma no está en la lista."}},
+    {"@type":"Question","name":"¿FrameForge soporta aumentar la escala de imágenes pequeñas?","acceptedAnswer":{"@type":"Answer","text":"Sí — FrameForge incluye un escalador de IA (ESRGAN) que puede aumentar el tamaño de imagen 2× o 4× preservando detalles mejor que la interpolación estándar. Útil cuando tu imagen de origen es más pequeña que las dimensiones requeridas por la plataforma."}}
+  ]}
+  </script>
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Cómo Redimensionar Imágenes para Múltiples Redes Sociales en Chrome — Wendygo Studio">
+  <meta property="og:description" content="Redimensiona una imagen para YouTube, Instagram, Twitch y X sin subir nada a internet — usa FrameForge, una extensión de Chrome que procesa todo localmente.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo Redimensionar Imágenes para Múltiples Redes Sociales en Chrome — Wendygo Studio">
+  <meta name="twitter:description" content="Redimensiona una imagen para YouTube, Instagram, Twitch y X sin subir nada a internet — usa FrameForge, una extensión de Chrome que procesa todo localmente.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    /* Platform specs table */
+    .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+
+    /* Step cards */
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* Tips list */
+    .tips { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .tips li {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .tips li strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* Badge */
+    .pro-badge {
+      display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px;
+      text-transform: uppercase; background: var(--amber); color: var(--on-a);
+      padding: 2px 7px; border-radius: 4px; vertical-align: middle; margin-left: 6px;
+    }
+
+    /* FAQ */
+    .faq { margin-top: 48px; }
+    .faq h2 { font-size: 22px; font-weight: 700; letter-spacing: -.3px; margin-bottom: 20px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* Related */
+    .related { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line); }
+    .related h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-links a {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; transition: border-color .2s;
+    }
+    .related-links a:hover { border-color: var(--faint); }
+    .related-links a span { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/es/#products">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/tools/">Herramientas</a>
+      <a href="/es/#how">Cómo funciona</a>
+      <a href="/es/#privacy">Privacidad</a>
+      <a href="/blog/" class="lang-switch">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Redimensionar imágenes para múltiples redes sociales
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · FrameForge</div>
+      <h1>Cómo Redimensionar Imágenes para Múltiples Redes Sociales Usando una Extensión de Chrome</h1>
+      <p class="article-intro">
+        Una imagen, cuatro plataformas, cuatro requisitos de dimensiones diferentes. Aquí te mostramos cómo manejar este flujo de trabajo completamente en tu navegador — sin subidas, sin software de escritorio, sin ingresar dimensiones manualmente.
+      </p>
+      <div class="article-date">14 de julio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Si publicas contenido en más de una plataforma, conoces este problema: tienes una imagen buena y necesitas redimensionarla a 1280×720 para YouTube, 1080×1080 para Instagram, y 1200×675 para X, todo desde el mismo archivo original. La solución tradicional es abrir un programa de escritorio, crear tres documentos nuevos en las dimensiones correctas, pegar la imagen en cada uno, ajustar el recorte y exportar tres veces. Para una sola imagen, eso son entre quince y veinte pasos.</p>
+
+      <p>Multiplica eso por cuántos posts haces por semana y se convierte en una de esas tareas que nunca dejas de hacer. Hay un camino más rápido.</p>
+
+      <h2>Requisitos de Dimensiones por Plataforma</h2>
+
+      <p>Antes de redimensionar, es útil tener los requisitos actuales en un solo lugar:</p>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Plataforma</th><th>Dimensiones recomendadas</th><th>Proporción</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>YouTube Miniatura</td><td>1280×720 px</td><td>16:9</td></tr>
+          <tr><td>Instagram Publicación (cuadrado)</td><td>1080×1080 px</td><td>1:1</td></tr>
+          <tr><td>Instagram Historia / Reels</td><td>1080×1920 px</td><td>9:16</td></tr>
+          <tr><td>X (Twitter) imagen</td><td>1200×675 px</td><td>16:9</td></tr>
+          <tr><td>Twitch</td><td>Presets específicos de plataforma</td><td>Varía</td></tr>
+        </tbody>
+      </table>
+
+      <p>El desafío no es conocer estos números — es aplicarlos rápidamente sin tener que ingresarlos cada vez. FrameForge incluye presets para YouTube, Instagram, Twitch y X para que selecciones la plataforma y el lienzo se ajuste automáticamente a las dimensiones correctas.</p>
+
+      <h2>Cómo Redimensionar una Imagen para Múltiples Plataformas</h2>
+
+      <p>Este es el flujo de trabajo central para una imagen de origen que va a varios destinos:</p>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Instala FrameForge</div>
+            <div class="step-desc">Instala FrameForge desde la Chrome Web Store y fija el icono en tu barra de herramientas. Sin cuenta, sin login, sin suscripción requerida en la versión gratuita.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Abre tu imagen de origen</div>
+            <div class="step-desc">Haz clic en el icono de FrameForge, luego abre tu archivo o arrastra la imagen al lienzo. Usa la versión de mayor resolución que tengas — la reducción es lossless, el aumento no.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Selecciona tu primer preset de plataforma y exporta</div>
+            <div class="step-desc">En el menú desplegable Plataforma, elige tu primer destino — por ejemplo, YouTube Miniatura. El lienzo se ajusta a 1280×720 px con la proporción 16:9 bloqueada. Arrastra el overlay de recorte para enmarcar tu sujeto, luego haz clic en Exportar.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Cambia de preset y exporta de nuevo</div>
+            <div class="step-desc">Con la misma imagen aún cargada, cambia al siguiente preset — por ejemplo, Instagram Publicación (1080×1080). Reposiciona el recorte para el marco cuadrado, luego exporta un segundo archivo. Repite para cada plataforma que estés utilizando.</div>
+          </div>
+        </li>
+      </ol>
+
+      <p>Cada exportación va a tu carpeta Descargas. Estás trabajando desde una imagen cargada sin tener que volver a abrir nada entre plataformas — el cambio toma alrededor de diez segundos por destino.</p>
+
+      <h2>Modo Lotes: Procesar Múltiples Imágenes a la Vez <span class="pro-badge">Pro</span></h2>
+
+      <p>El flujo de trabajo anterior maneja una imagen de origen exportada a múltiples plataformas. Cuando tienes una carpeta de imágenes que necesitan todas redimensionarse a las mismas dimensiones — fotos de productos, miniaturas de una semana, encabezados de blog — hacerlas una por una aún toma tiempo.</p>
+
+      <p>FrameForge Pro incluye modo de lotes: carga múltiples imágenes de origen, aplica un preset de plataforma y exporta todas de una vez. El caso de uso es común en pipelines de producción donde un fotógrafo entrega veinte fotos y necesitas todas redimensionadas antes de revisar. El modo de lotes colapsa veinte operaciones individuales de redimensionamiento en una.</p>
+
+      <h2>Por Qué el Ajuste del Recorte Importa Entre Plataformas</h2>
+
+      <p>Un error común al redimensionar para múltiples plataformas es usar el mismo recorte para todas. No funciona: un marco horizontal optimizado para YouTube (16:9) dejará tu sujeto descentrado cuando se fuerza en el cuadrado de Instagram (1:1). Las transiciones requieren un reposicionamiento deliberado, no solo un cambio de dimensiones.</p>
+
+      <p>Para fotos de retrato que van a formato horizontal, típicamente recortarás al tercio superior — enfocándote en la cara o sujeto principal — y dejarás ir la parte inferior. Para horizontal a cuadrado, centra en el sujeto y deja que ambos lados se compriman. FrameForge mantiene la imagen de origen cargada entre cambios de preset para que puedas hacer este ajuste sin recargar nada.</p>
+
+      <h2>Privacidad: Por Qué el Procesamiento Local Importa para el Trabajo de Imágenes</h2>
+
+      <p>Las herramientas de lotes basadas en web — incluyendo algunas populares — suben tus archivos a un servidor remoto. Para un lote de veinte imágenes, eso son veinte subidas, espera proporcional al tamaño de archivo y velocidad de conexión, y tus archivos almacenados (al menos temporalmente) en infraestructura que no controlas.</p>
+
+      <p><strong>FrameForge procesa todo en tu navegador.</strong> Ningún archivo sale nunca de tu máquina. Para trabajo de clientes, fotografía de producto no lanzada, o cualquier cosa bajo NDA, esta es la opción apropiada. La extensión se ejecuta completamente local — la instalación desde la Chrome Web Store es la única solicitud de red que hace la herramienta.</p>
+
+      <h2>Consejos para un Flujo de Trabajo Multi-Plataforma Más Rápido</h2>
+
+      <ul class="tips">
+        <li>
+          <strong>Comienza desde la fuente de mayor resolución</strong>
+          Si tu fuente es un JPG comprimido, cada exportación comienza desde esa línea base comprimida. Cuando sea posible, usa un original de alta calidad o PNG como punto de partida.
+        </li>
+        <li>
+          <strong>Asigna nombres a las exportaciones antes de subirlas</strong>
+          Múltiples exportaciones desde la misma imagen de origen caerán en tu carpeta Descargas con nombres generados automáticamente. Renómbralas — o acuerda una convención de nombres — antes de subir para evitar mezclar archivos específicos de plataforma.
+        </li>
+        <li>
+          <strong>Usa escalado ESRGAN cuando tu fuente es demasiado pequeña</strong>
+          FrameForge incluye un escalador de IA (ESRGAN) que aumenta dimensiones de imagen 2× o 4× preservando detalles mejor que la interpolación estándar. Útil cuando tu imagen de origen es más pequeña que tus dimensiones de plataforma objetivo.
+        </li>
+        <li>
+          <strong>Reposiciona el recorte intencionalmente para cada plataforma</strong>
+          No uses el mismo encuadre para exportaciones cuadradas y horizontales. Toma los diez segundos extra para centrar correctamente el sujeto en cada proporción de aspecto — hace una diferencia visible en el resultado final.
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="cta-box">
+      <p>FrameForge es gratuito para instalar. Los presets de plataforma para YouTube, Instagram, Twitch y X están incluidos en la versión gratuita. El modo de lotes y las exportaciones ilimitadas están disponibles en Pro.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+        Instala FrameForge — gratis
+      </a>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h2>Preguntas Frecuentes</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Funciona el redimensionamiento por lotes en la versión gratuita de FrameForge?</div>
+        <div class="faq-a">Los presets de plataforma están disponibles en la versión gratuita, lo que te permite redimensionar la misma imagen para diferentes plataformas manualmente una por una. El modo por lotes — procesar múltiples imágenes de origen simultáneamente — requiere FrameForge Pro.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Puedo usar FrameForge para redimensionar imágenes en lote sin instalar una extensión?</div>
+        <div class="faq-a">FrameForge es una extensión de Chrome y requiere una instalación única desde la Chrome Web Store. No hay versión web. La ventaja de ejecutarse como una extensión es que todo el procesamiento permanece completamente local — ningún archivo se sube a ningún servidor.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Qué plataformas incluyen presets FrameForge?</div>
+        <div class="faq-a">FrameForge incluye presets para YouTube, Instagram, Twitch y X (Twitter). También puedes ingresar dimensiones personalizadas manualmente si tu plataforma objetivo no está en la lista.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿FrameForge soporta escalado cuando mi imagen de origen es demasiado pequeña?</div>
+        <div class="faq-a">Sí. FrameForge incluye un escalador de IA impulsado por ESRGAN que puede aumentar dimensiones de imagen 2× o 4× preservando detalles mejor que la interpolación estándar — útil cuando tu imagen de origen es más pequeña que la resolución de plataforma objetivo.</div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="related">
+      <h2>Guías relacionadas</h2>
+      <div class="related-links">
+        <a href="/blog/resize-image-youtube-thumbnail-chrome/">
+          How to Resize an Image for YouTube Thumbnails in Your Browser
+          <span>Step-by-step guide · FrameForge</span>
+        </a>
+        <a href="/es/blog/redimensionar-imagen-instagram-chrome/">
+          Cómo Redimensionar una Imagen para Instagram en Chrome
+          <span>Formatos de cuadrado e historias · FrameForge</span>
+        </a>
+        <a href="/es/blog/frameforge-vs-canva-thumbnails/">
+          FrameForge vs Canva para Miniaturas Rápidas
+          <span>Comparación honesta · FrameForge</span>
+        </a>
+        <a href="/blog/free-thumbnail-tool-no-login/">
+          Free Thumbnail Tool With No Login Required
+          <span>FrameForge overview</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/privacy.html">Privacy policy</a>
+      <a href="/terms.html">Terms and conditions</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -773,6 +773,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
 
   <url>
