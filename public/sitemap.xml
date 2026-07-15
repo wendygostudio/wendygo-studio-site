@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://wendygostudio.com/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -122,16 +122,20 @@
 
   <url>
     <loc>https://wendygostudio.com/privacy.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy.html"/>
   </url>
 
   <url>
     <loc>https://wendygostudio.com/terms.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms.html"/>
   </url>
 
   <url>
@@ -345,6 +349,24 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/slimeforge/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/slimeforge/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
   </url>
 
   <url>
@@ -598,7 +620,7 @@
 
   <url>
     <loc>https://wendygostudio.com/es/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/"/>
@@ -792,4 +814,22 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
   </url>
+  <url>
+    <loc>https://wendygostudio.com/es/privacy.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy.html"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/terms.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms.html"/>
+  </url>
+
 </urlset>
