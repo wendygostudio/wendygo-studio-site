@@ -121,21 +121,21 @@
   </url>
 
   <url>
-    <loc>https://wendygostudio.com/privacy.html</loc>
+    <loc>https://wendygostudio.com/privacy</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
   </url>
 
   <url>
-    <loc>https://wendygostudio.com/terms.html</loc>
+    <loc>https://wendygostudio.com/terms</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
   </url>
 
   <url>
@@ -815,21 +815,21 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
   </url>
   <url>
-    <loc>https://wendygostudio.com/es/privacy.html</loc>
+    <loc>https://wendygostudio.com/es/privacy</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
   </url>
 
   <url>
-    <loc>https://wendygostudio.com/es/terms.html</loc>
+    <loc>https://wendygostudio.com/es/terms</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
   </url>
 
 </urlset>
