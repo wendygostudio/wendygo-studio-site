@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Chrome Extensions for Students in 2026 | Wendygo Studio</title>
+  <meta name="description" content="Five Chrome extensions that actually help you study: a gamified focus timer, grammar checker, ad blocker, tab manager, and research clipper — all free to start." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/best-chrome-extensions-for-students/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Best Chrome Extensions for Students in 2026"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best Chrome Extensions for Students in 2026",
+    "description": "Five Chrome extensions that actually help you study: a gamified focus timer, grammar checker, ad blocker, tab manager, and research clipper — all free to start.",
+    "datePublished": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are these Chrome extensions free for students?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — all five have free tiers. SlimeForge and uBlock Origin are free with optional paid upgrades. Grammarly's free tier covers grammar and spelling for most student needs. OneTab is fully free. Notion Web Clipper requires a free Notion account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will these extensions slow down Chrome?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "uBlock Origin actually makes most pages load faster by blocking ads and trackers. SlimeForge runs in a side panel and doesn't inject scripts into pages. Grammarly adds slight overhead on text-heavy editors. OneTab and Notion Web Clipper have minimal impact on performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SlimeForge work for long study sessions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SlimeForge offers 15, 25, 45, and 60-minute session lengths. If you write papers or study for exams in extended blocks, the 45- or 60-minute modes let you stay in flow without an interruption every 25 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which of these extensions require an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grammarly and Notion Web Clipper require accounts (both offer free tiers). SlimeForge, uBlock Origin, and OneTab work without any account — everything stays local in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use SlimeForge without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SlimeForge runs entirely locally. The timer, virtual pet, Brasas, streaks, and Gemini Nano on-device chat all work offline after installation — no connection required."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body ul { margin: 0 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); font-size: 15px; }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .alt-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 16px 0;
+    }
+    .alt-card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px; flex-wrap: wrap; gap: 8px;
+    }
+    .alt-name { font-size: 18px; font-weight: 800; color: var(--text); }
+    .alt-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .badge-neutral { background: var(--surf2); color: var(--muted); border: 1px solid var(--line); }
+    .badge-pick { background: var(--amber); color: var(--on-a); }
+    .alt-desc { font-size: 15px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+    .alt-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .pros-list, .cons-list { font-size: 13px; }
+    .pros-list .label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+    .cons-list .label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+    .pros-list ul, .cons-list ul { list-style: none; margin: 0; padding: 0; }
+    .pros-list li { color: var(--text); padding: 4px 0; padding-left: 16px; position: relative; }
+    .pros-list li::before { content: "+"; position: absolute; left: 0; color: var(--amber); font-weight: 700; }
+    .cons-list li { color: var(--muted); padding: 4px 0; padding-left: 16px; position: relative; }
+    .cons-list li::before { content: "–"; position: absolute; left: 0; color: var(--faint); }
+    .alt-best-for { font-size: 13px; color: var(--faint); margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+    .alt-best-for strong { color: var(--muted); }
+
+    .pick-table {
+      width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px;
+    }
+    .pick-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); padding: 8px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .pick-table td { padding: 12px 12px; border-bottom: 1px solid var(--line); color: var(--muted); vertical-align: top; }
+    .pick-table td:first-child { color: var(--text); font-weight: 600; }
+    .pick-table tr:last-child td { border-bottom: none; }
+    .pick-table tr.highlight td { background: rgba(232,163,61,.06); }
+    .pick-table tr.highlight td:first-child { color: var(--amber); }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .tip-box {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .tip-box strong { color: var(--text); }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .alt-pros-cons { grid-template-columns: 1fr; }
+    }
+  </style>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Best Chrome Extensions for Students in 2026 | Wendygo Studio">
+  <meta property="og:description" content="Five Chrome extensions that actually help you study: a gamified focus timer, grammar checker, ad blocker, tab manager, and research clipper — all free to start.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/best-chrome-extensions-for-students/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Best Chrome Extensions for Students in 2026 | Wendygo Studio">
+  <meta name="twitter:description" content="Five Chrome extensions that actually help you study: a gamified focus timer, grammar checker, ad blocker, tab manager, and research clipper — all free to start.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES &#127988;</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>Best Chrome Extensions for Students in 2026
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Top Extensions · SlimeForge</div>
+      <h1>Best Chrome Extensions for Students in 2026</h1>
+      <p class="article-intro">
+        Students spend more time in Chrome than in any other app — lectures, research, assignments, all of it. So are the distractions. These five extensions target the real friction points of studying: staying on task, writing better, keeping tabs under control, and protecting your attention.
+      </p>
+      <div class="article-date">July 16, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>The problem with studying in Chrome isn't the browser — it's that the same environment where you study is the same environment where everything else lives. The right extensions don't add more things to manage. They quietly remove the friction that keeps pulling you off track. All five picks here are free to start, and most work without creating an account.</p>
+
+      <h2>1. SlimeForge — Gamified Focus Timer</h2>
+
+      <div class="alt-card">
+        <div class="alt-card-header">
+          <div class="alt-name">SlimeForge</div>
+          <div class="alt-badge badge-pick">Editor's pick</div>
+        </div>
+        <p class="alt-desc">SlimeForge is a Pomodoro timer Chrome extension built around a virtual slime pet. Your slime hatches after your first completed session and grows with every focus block you finish. The gamification isn't decoration — it gives you a visible reason to open the extension again tomorrow, which is the hardest part of building any study habit.</p>
+        <div class="alt-pros-cons">
+          <div class="pros-list">
+            <div class="label">Strengths</div>
+            <ul>
+              <li>Sessions: 15, 25, 45, and 60 min</li>
+              <li>16 pet species, missions, mini-games, crafting</li>
+              <li>Brasas &#x1F525; earned per session fuel your pet's growth</li>
+              <li>Gemini Nano on-device chat, 6 languages</li>
+              <li>No account, no cloud — runs entirely locally</li>
+              <li>Ethical gacha: real money never buys random outcomes</li>
+              <li>Free to start, 5-day PRO trial</li>
+            </ul>
+          </div>
+          <div class="cons-list">
+            <div class="label">Weaknesses</div>
+            <ul>
+              <li>More layers than a plain countdown timer</li>
+              <li>Doesn't block distracting sites</li>
+              <li>Virtual pet aesthetic isn't for everyone</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alt-best-for"><strong>Best for:</strong> Students who have tried plain timers, stopped using them within a week, and want a focus habit that actually sticks.</div>
+      </div>
+
+      <p>The session length variety is worth highlighting: most Pomodoro timers default to 25 minutes and leave it there. SlimeForge's 45- and 60-minute modes are specifically useful for writing essays or studying complex material where short interruptions break your thinking more than they help.</p>
+
+      <h2>2. Grammarly — Write Without Second-Guessing</h2>
+
+      <div class="alt-card">
+        <div class="alt-card-header">
+          <div class="alt-name">Grammarly</div>
+          <div class="alt-badge badge-neutral">Writing assistant</div>
+        </div>
+        <p class="alt-desc">Grammarly checks grammar, spelling, and style inline as you type — inside Google Docs, Gmail, and most other text boxes in Chrome. For students writing papers and emails constantly, catching an agreement error in a draft before submitting is worth more than finding it during a reread.</p>
+        <div class="alt-pros-cons">
+          <div class="pros-list">
+            <div class="label">Strengths</div>
+            <ul>
+              <li>Works inside Google Docs, Gmail, and most editors</li>
+              <li>Real-time grammar and spelling suggestions</li>
+              <li>Free tier is solid for most coursework</li>
+            </ul>
+          </div>
+          <div class="cons-list">
+            <div class="label">Weaknesses</div>
+            <ul>
+              <li>Account required</li>
+              <li>Text is sent to Grammarly's servers for processing</li>
+              <li>Advanced suggestions (tone, rewrite) are paid</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alt-best-for"><strong>Best for:</strong> Students who write frequently and want a safety net for grammar and spelling errors before they submit.</div>
+      </div>
+
+      <h2>3. uBlock Origin — Remove Distractions at the Source</h2>
+
+      <div class="alt-card">
+        <div class="alt-card-header">
+          <div class="alt-name">uBlock Origin</div>
+          <div class="alt-badge badge-neutral">Content blocker</div>
+        </div>
+        <p class="alt-desc">uBlock Origin blocks ads, cookie consent pop-ups, autoplay videos, and tracking scripts. Beyond the privacy benefit, pages load measurably faster. A reference site behind a full-page overlay? Gone. An article buried in ads? Clean. It removes the friction that sends you elsewhere without deciding to go elsewhere.</p>
+        <div class="alt-pros-cons">
+          <div class="pros-list">
+            <div class="label">Strengths</div>
+            <ul>
+              <li>Free and open source</li>
+              <li>No account required</li>
+              <li>Makes most pages load faster</li>
+              <li>Configurable filter lists for fine-grained control</li>
+            </ul>
+          </div>
+          <div class="cons-list">
+            <div class="label">Weaknesses</div>
+            <ul>
+              <li>Occasionally breaks certain site features</li>
+              <li>Some sites require whitelisting to function</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alt-best-for"><strong>Best for:</strong> Every student. This is the one extension in this list that benefits all browsers unconditionally — install it first.</div>
+      </div>
+
+      <h2>4. OneTab — Stop Drowning in Research Tabs</h2>
+
+      <div class="alt-card">
+        <div class="alt-card-header">
+          <div class="alt-name">OneTab</div>
+          <div class="alt-badge badge-neutral">Tab management</div>
+        </div>
+        <p class="alt-desc">A research session in Chrome frequently ends with 15+ tabs open — one for each source you might use, a few reference pages, a notes tab. OneTab converts all open tabs into a single clickable list. Memory usage drops immediately, and you can restore individual tabs or the full session at any time. It also lets you share a tab group as a single link.</p>
+        <div class="alt-pros-cons">
+          <div class="pros-list">
+            <div class="label">Strengths</div>
+            <ul>
+              <li>Free, no account required</li>
+              <li>Saves and restores full tab sessions</li>
+              <li>Shareable tab lists for group research</li>
+              <li>Frees up significant memory immediately</li>
+            </ul>
+          </div>
+          <div class="cons-list">
+            <div class="label">Weaknesses</div>
+            <ul>
+              <li>No cloud sync — tab lists stay on that device</li>
+              <li>Minimal interface, no search within saved lists</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alt-best-for"><strong>Best for:</strong> Students who research in long sessions with many sources open simultaneously and need to preserve that context without keeping all tabs alive.</div>
+      </div>
+
+      <h2>5. Notion Web Clipper — Save Research Where You Work</h2>
+
+      <div class="alt-card">
+        <div class="alt-card-header">
+          <div class="alt-name">Notion Web Clipper</div>
+          <div class="alt-badge badge-neutral">Research &amp; notes</div>
+        </div>
+        <p class="alt-desc">Notion Web Clipper saves any web page — article, video, documentation — directly to your Notion workspace, with the title, URL, and content intact. If you already use Notion for notes and outlines, this keeps research and writing in the same place instead of toggling between a tab and a notes app.</p>
+        <div class="alt-pros-cons">
+          <div class="pros-list">
+            <div class="label">Strengths</div>
+            <ul>
+              <li>One click saves page to Notion with metadata</li>
+              <li>Works well for long-form research projects</li>
+              <li>Free Notion tier is sufficient for most students</li>
+            </ul>
+          </div>
+          <div class="cons-list">
+            <div class="label">Weaknesses</div>
+            <ul>
+              <li>Requires a Notion account</li>
+              <li>Only useful if you're already in the Notion ecosystem</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alt-best-for"><strong>Best for:</strong> Students who use Notion as their main notes system and want research integrated directly into their workspace.</div>
+      </div>
+
+      <h2>Which One Should You Install First?</h2>
+
+      <table class="pick-table">
+        <thead>
+          <tr>
+            <th>If you need&hellip;</th>
+            <th>Pick</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight">
+            <td>Focus timer + motivation to keep using it</td>
+            <td>SlimeForge</td>
+          </tr>
+          <tr>
+            <td>Grammar and spelling help while writing</td>
+            <td>Grammarly</td>
+          </tr>
+          <tr>
+            <td>Distraction-free pages, faster load times</td>
+            <td>uBlock Origin</td>
+          </tr>
+          <tr>
+            <td>Tab session management during research</td>
+            <td>OneTab</td>
+          </tr>
+          <tr>
+            <td>Research clipped into a notes workspace</td>
+            <td>Notion Web Clipper</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <strong>Start with two, not five.</strong> Install SlimeForge and uBlock Origin first — they address the two biggest study blockers (focus and ambient distractions) with zero daily maintenance. Add the others once those habits are in place.
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Are these Chrome extensions free for students?</div>
+          <div class="faq-a">Yes — all five have free tiers. SlimeForge and uBlock Origin are free with optional paid upgrades. Grammarly's free tier covers grammar and spelling for most student needs. OneTab is fully free. Notion Web Clipper requires a free Notion account.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Will these extensions slow down Chrome?</div>
+          <div class="faq-a">uBlock Origin actually makes most pages load faster by blocking ads and trackers. SlimeForge runs in a side panel and doesn't inject scripts into pages. Grammarly adds slight overhead on text-heavy editors. OneTab and Notion Web Clipper have minimal impact on performance.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does SlimeForge work for long study sessions?</div>
+          <div class="faq-a">Yes. SlimeForge offers 15, 25, 45, and 60-minute session lengths. If you write papers or study for exams in extended blocks, the 45- or 60-minute modes let you stay in flow without an interruption every 25 minutes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Which of these extensions require an account?</div>
+          <div class="faq-a">Grammarly and Notion Web Clipper require accounts (both offer free tiers). SlimeForge, uBlock Origin, and OneTab work without any account — everything stays local in your browser.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I use SlimeForge without internet?</div>
+          <div class="faq-a">Yes. SlimeForge runs entirely locally. The timer, virtual pet, Brasas, streaks, and Gemini Nano on-device chat all work offline after installation — no connection required.</div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h3>Try SlimeForge — Free</h3>
+        <p>Start your first study session. Your slime hatches after you finish it.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
+          Add to Chrome &rarr;
+        </a>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/forest-app-alternatives-chrome/">
+            Best Forest App Alternatives for Chrome in 2026
+            <span>Honest comparison of focus timer extensions — Marinara, Strict Workflow, Momentum, and SlimeForge</span>
+          </a>
+          <a class="related-link" href="/blog/pomodoro-timer-chrome-extension/">
+            Best Pomodoro Timer Chrome Extension in 2026 — With a Virtual Pet
+            <span>Complete guide to SlimeForge's session lengths, gamification layers, and virtual pet system</span>
+          </a>
+          <a class="related-link" href="/blog/pomodoro-timer-for-developers/">
+            Best Pomodoro Timer for Developers: Deep Work Sessions
+            <span>How 45- and 60-minute sessions work for coding, debugging, and extended focus work</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> &mdash; Browser tools that stay local.</div>
+    <div class="footer-links">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/blog/">Blog</a>
+      <a href="/es/">ES</a>
+    </div>
+  </footer>
+
+</body>
+</html>
