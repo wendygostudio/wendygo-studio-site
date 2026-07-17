@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compartir Configs de Red en Reddit con Seguridad | Wendygo Studio</title>
+  <meta name="description" content="¿Vas a pedir ayuda en Reddit? Sanitiza tu config con ScrubForge primero — elimina las credenciales activas." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/compartir-config-red-reddit-seguro/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-reddit-seguro/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-reddit-safely/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Share Network Configs on Reddit Without Exposing Credentials",
+    "description": "Sanitize your network config with ScrubForge before posting to Reddit. Removes all live credentials while preserving the logical configuration structure the community needs to help troubleshoot.",
+    "tool": [
+      { "@type": "HowToTool", "name": "ScrubForge Chrome extension" },
+      { "@type": "HowToTool", "name": "Reddit" }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Export and paste into ScrubForge",
+        "text": "Copy your running config from your device. On Cisco IOS use 'show running-config'. On FortiGate go to System > Configuration > Download. Paste the raw config into ScrubForge."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Review the sanitized output",
+        "text": "ScrubForge detects passwords, PSKs, API tokens, and SNMP community strings, replacing each with a consistent placeholder like [PSK_1] or [ADMIN_PASS_1]. Review for 30 seconds to ensure all credentials are replaced."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Post to Reddit with context",
+        "text": "Copy the sanitized config. Open your Reddit post, describe your problem clearly, and paste the sanitized config. The community can analyze the logical structure and help troubleshoot without seeing any live credentials."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Share Network Configs on Reddit Safely"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Share Network Configs on Reddit Without Exposing Credentials",
+    "description": "Asking for network troubleshooting help on Reddit? Sanitize your config with ScrubForge first — removes all live credentials while keeping the logical structure Reddit needs.",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Will sanitizing my config make it useless for Reddit troubleshooting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Network troubleshooting is about configuration logic — routing protocols, security policies, interface settings. None of those depend on the actual password value. Reddit can spot configuration errors with placeholders intact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is posting raw configs to Reddit dangerous?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reddit posts are public forever, indexed by Google, and searchable. Credential-scraping bots scan Reddit for API keys, passwords, and tokens. Even after deletion, your post may remain in Google Cache or Archive.org with live credentials visible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge work with all vendor configs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ScrubForge processes plain text, so it works with Cisco IOS, Juniper JunOS, FortiGate, Palo Alto, pfSense, and any other text-based configuration format. Detection targets common credential patterns."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ScrubForge free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The core sanitization feature is free. Install from the Chrome Web Store and it works immediately — no account required, no upload, no payment."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { margin: 16px 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
+    .article-body ul li strong { color: var(--text); }
+    .article-body pre {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 8px;
+      padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 1.6;
+      margin: 20px 0; color: var(--amber2); font-family: var(--mono);
+    }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .callout {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.65;
+    }
+    .callout strong { color: var(--text); }
+
+    .related-links {
+      margin: 48px 0 0; padding: 24px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .related-links h3 { font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 14px; }
+    .related-links ul { list-style: none; margin: 0; }
+    .related-links ul li { margin-bottom: 8px; }
+    .related-links ul li a { color: var(--amber); font-size: 14px; text-decoration: none; }
+    .related-links ul li a:hover { text-decoration: underline; }
+
+    .cta-box {
+      margin: 56px 0 0;
+      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
+    }
+    .cta-box p {
+      font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-block; background: var(--amber); color: var(--on-a);
+      font-weight: 800; font-size: 14px; letter-spacing: .3px;
+      padding: 12px 28px; border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .faq { margin-top: 56px; }
+    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+    .faq-item {
+      border: 1px solid var(--line); border-radius: 10px;
+      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    footer {
+      border-top: 1px solid var(--line); margin-top: 80px;
+      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+  .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/es/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/blog/share-network-config-reddit-safely/">EN 🌐</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/es/">Inicio</a><span>&#8250;</span>
+    <a href="/es/blog/">Blog</a><span>&#8250;</span>
+    <span>Compartir configs de red en Reddit de forma segura</span>
+  </nav>
+
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge &middot; Guía</div>
+    <h1>Cómo Compartir Configs de Red en Reddit Sin Exponer Credenciales</h1>
+    <p class="article-intro">¿Vas a pedir ayuda en Reddit? Tu config contiene contraseñas activas, tokens de API y claves VPN. Aquí tienes cómo sanitizarla primero — ScrubForge elimina todas las credenciales en local antes de publicar.</p>
+    <div class="article-date">1 de julio de 2026</div>
+  </header>
+
+  <hr class="divider" />
+
+  <article class="article-body">
+
+    <p>Estás atascado con un problema de red. Ya has buscado en Google y en la documentación del fabricante. Ahora necesitas consejo de sysadmins de verdad.</p>
+
+    <p>Las comunidades de redes de Reddit — <code>/r/ccna</code>, <code>/r/ccne</code>, <code>/r/homelab</code> — están llenas de gente que ha resuelto exactamente el problema que tienes delante. El truco: para recibir ayuda útil, necesitas compartir tu config. Y tu config contiene contraseñas activas, community strings de SNMP, claves precompartidas de VPN y tokens de API vivos en tu red ahora mismo.</p>
+
+    <p><strong>El riesgo:</strong> los posts de Reddit son públicos para siempre. Los indexa Google, son buscables y, aunque los borres, quedan cacheados en Archive.org. Los bots de scraping de credenciales escanean Reddit activamente en busca de contraseñas, claves de API y tokens.</p>
+
+    <p><strong>La solución:</strong> sanitiza primero con ScrubForge. Elimina todas las credenciales activas en local conservando la configuración lógica que Reddit necesita para ayudarte con el troubleshooting.</p>
+
+    <h2>Por qué una config en bruto en Reddit es pública para siempre</h2>
+
+    <p>Una config de Cisco publicada en Reddit deja de estar bajo tu control. Esto es lo que pasa:</p>
+
+    <ul>
+      <li><strong>Google la indexa de inmediato</strong> — tu config es buscable en cuestión de horas</li>
+      <li><strong>Archive.org la rastrea</strong> — aunque borres el post, vive en la Wayback Machine</li>
+      <li><strong>Los bots scrapean credenciales</strong> — herramientas automatizadas escanean Reddit en busca de patrones comunes de contraseñas, claves de API y tokens</li>
+      <li><strong>Borrar no la elimina</strong> — quedan copias y cachés de terceros</li>
+    </ul>
+
+    <p>Tus credenciales activas pueden verse comprometidas meses o incluso años después, cuando alguien ejecute una búsqueda de claves IKE comunes, strings de SNMP o formatos de contraseña específicos de cada fabricante.</p>
+
+    <h2>El flujo ScrubForge + Reddit</h2>
+
+    <ol class="steps">
+      <li class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Exporta y pega en ScrubForge</div>
+          <div class="step-desc">Copia la running config de tu dispositivo. En Cisco IOS: <code>show running-config</code>. En FortiGate: System &gt; Configuration &gt; Download. Haz clic en el icono de ScrubForge en tu barra de Chrome y pega la config en bruto.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Revisa la salida sanitizada</div>
+          <div class="step-desc">ScrubForge detecta contraseñas, PSKs, tokens de API y community strings de SNMP &mdash; sustituyendo cada uno por un placeholder consistente como <code>[PSK_1]</code>, <code>[ADMIN_PASS_1]</code> o <code>[SNMP_RO_1]</code>. Dedica 30 segundos a comprobar que todas las credenciales están reemplazadas.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Publica en Reddit con contexto</div>
+          <div class="step-desc">Copia la config sanitizada. Abre tu post de Reddit, describe tu problema con claridad y pégala. La comunidad puede analizar ahora tu configuración lógica y ayudarte con el troubleshooting &mdash; sin ver ninguna credencial activa.</div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout">
+      <strong>Ejemplo de post en Reddit:</strong> &ldquo;El túnel IPsec de mi Cisco ASA 5520 se cae cada 4 horas. Aquí va mi running config (credenciales sustituidas por tokens). ¿Alguna idea de qué revisar?&rdquo;
+    </div>
+
+    <h2>Qué te puede ayudar a depurar Reddit</h2>
+
+    <p>Una vez publicada de forma segura, la comunidad de redes puede ayudarte con:</p>
+
+    <ul>
+      <li><strong>Problemas de routing</strong> &mdash; vecinos BGP caídos, distribución de rutas incorrecta, rutas asimétricas</li>
+      <li><strong>Problemas de VPN/IPsec</strong> &mdash; desajustes de Fase 1 y Fase 2, timeouts de DPD, errores de crypto map</li>
+      <li><strong>Políticas de firewall</strong> &mdash; problemas de NAT, shadowing de ACLs, orden de políticas</li>
+      <li><strong>VLANs y switching</strong> &mdash; bucles STP, desajustes de VLAN nativa, negociación de trunks</li>
+      <li><strong>Análisis de ACLs</strong> &mdash; reglas en conflicto, entradas redundantes</li>
+    </ul>
+
+    <p>El troubleshooting de red va de lógica de configuración &mdash; protocolos de routing, políticas de seguridad, ajustes de interfaces. Nada de eso depende del valor real de la contraseña. Reddit puede detectar tus errores de configuración con los placeholders intactos.</p>
+
+    <h2>Una nota de seguridad: casos límite</h2>
+
+    <p>ScrubForge maneja los patrones estándar, pero algunas configs tienen casos límite. Haz una revisión manual rápida:</p>
+
+    <ul>
+      <li><strong>Hostnames:</strong> algunas organizaciones usan hostnames que revelan la estructura interna. Si <code>main-prod-nyc-rtr-01</code> te parece sensible, abrévialo a mano</li>
+      <li><strong>Nombres de clientes o proyectos internos:</strong> si aparecen en comentarios o descripciones, elimínalos antes de publicar</li>
+      <li><strong>Subredes IP:</strong> ScrubForge conserva las IPs intactas por defecto (tu topología es crucial para el troubleshooting). Si necesitas enmascararlas, hazlo a mano antes de pegar</li>
+    </ul>
+
+    <div class="related-links">
+      <h3>Guías relacionadas</h3>
+      <ul>
+        <li><a href="/es/blog/scrubforge-chatgpt-troubleshooting-red/">Cómo usar ScrubForge con ChatGPT para troubleshooting de red</a></li>
+        <li><a href="/es/blog/sanitizar-configuracion-red-antes-compartir/">Cómo sanitizar cualquier config de red antes de compartirla</a></li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h2>Sanitiza antes de publicar</h2>
+      <p>ScrubForge es gratis. Pega tu config, elimina las credenciales en local y comparte en Reddit con seguridad — sin cuenta, sin subidas, sin pagar nada.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Instalar ScrubForge — Gratis</a>
+    </div>
+
+  </article>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Sanitizar mi config la hará inútil para el troubleshooting en Reddit?</div>
+      <div class="faq-a">No. El troubleshooting de red va de lógica de configuración — protocolos de routing, políticas de seguridad, ajustes de interfaces. Nada de eso depende del valor real de la contraseña. Reddit puede detectar errores de configuración con los placeholders intactos.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Por qué es peligroso publicar configs en bruto en Reddit?</div>
+      <div class="faq-a">Los posts de Reddit son públicos para siempre y los indexa Google. Incluso tras borrarlos, permanecen en Archive.org y en cachés de terceros. Los bots de scraping de credenciales escanean Reddit activamente en busca de claves de API, contraseñas y tokens. Tus credenciales activas pueden verse comprometidas meses o años después.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿ScrubForge funciona con configs de todos los fabricantes?</div>
+      <div class="faq-a">Sí. ScrubForge procesa texto plano, así que funciona con Cisco IOS, Juniper JunOS, FortiGate, Palo Alto, pfSense y cualquier otro formato de configuración basado en texto. La detección apunta a patrones comunes de credenciales, no a la sintaxis de un fabricante concreto.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿ScrubForge es gratis?</div>
+      <div class="faq-a">Sí. La función principal de sanitización es gratuita. Instálalo desde la Chrome Web Store y funciona de inmediato — sin cuenta, sin subidas, sin pagar.</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/es/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/es/privacy">Privacidad</a>
+    <a href="/es/terms">Términos</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. Todos los derechos reservados.</div>
+</footer>
+
+</body>
+</html>

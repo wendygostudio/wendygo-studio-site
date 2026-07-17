@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compartir tu Config de Red en Tickets de Soporte | Wendygo Studio</title>
+  <meta name="description" content="El soporte del fabricante necesita tu config. Sanitiza las credenciales con ScrubForge primero — gratis y en local." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Compartir tu Config de Red en Tickets de Soporte | Wendygo Studio">
+  <meta property="og:description" content="El soporte del fabricante necesita tu config. Sanitiza las credenciales con ScrubForge primero — gratis y en local.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compartir tu Config de Red en Tickets de Soporte | Wendygo Studio">
+  <meta name="twitter:description" content="El soporte del fabricante necesita tu config. Sanitiza las credenciales con ScrubForge primero — gratis y en local.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Share Network Config with Support Tickets Safely"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Share Network Config with Support Tickets Safely",
+    "description": "Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first — keep live credentials off support databases while sharing the structure vendors need.",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the support engineer still troubleshoot if credentials are replaced?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Support engineers troubleshoot configuration logic — routing, VPN settings, firewall policies. None of that depends on seeing the actual credential value. The sanitized config gives them everything they need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the support ticket system stores files indefinitely?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The benefit of sanitizing before uploading is that even if the ticket is never deleted or is accessed later, there are no live credentials in it. You've broken the link between your running network and the support database."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge affect network IP addresses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. By default, ScrubForge replaces credential patterns — passwords, keys, tokens, SNMP strings — not IP addresses. Your network topology, peer IPs, and subnets stay intact, which is exactly what support engineers need to see."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { margin: 16px 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
+    .article-body ul li strong { color: var(--text); }
+    .article-body pre {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 8px;
+      padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 1.6;
+      margin: 20px 0; color: var(--amber2); font-family: var(--mono);
+    }
+
+    .callout {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.65;
+    }
+    .callout strong { color: var(--text); }
+
+    .cta-box {
+      margin: 56px 0 0;
+      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
+    }
+    .cta-box p {
+      font-size: 15px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-block; background: var(--amber); color: var(--on-a);
+      font-weight: 800; font-size: 14px; letter-spacing: .3px;
+      padding: 12px 28px; border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related-link {
+      margin-top: 24px; padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px;
+    }
+    .related-link a { color: var(--amber); text-decoration: none; }
+    .related-link a:hover { text-decoration: underline; }
+
+    .faq { margin-top: 56px; }
+    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+    .faq-item {
+      border: 1px solid var(--line); border-radius: 10px;
+      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    footer {
+      border-top: 1px solid var(--line); margin-top: 80px;
+      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+  .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/es/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/blog/share-network-config-support-ticket-safely/">EN 🌐</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/es/">Inicio</a><span>&#8250;</span>
+    <a href="/es/blog/">Blog</a><span>&#8250;</span>
+    <span>Compartir la config de red en tickets de soporte de forma segura</span>
+  </nav>
+
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge &middot; Guía</div>
+    <h1>Cómo Compartir tu Config de Red en Tickets de Soporte de Forma Segura</h1>
+    <p class="article-intro">El soporte del fabricante necesita tu config de red para diagnosticar bugs del firewall y errores de configuración. El problema: tu config contiene credenciales activas que no deberían estar en una base de datos de soporte. Aquí tienes cómo dar a los ingenieros de soporte lo que necesitan sin exponer credenciales vivas.</p>
+    <div class="article-date">1 de julio de 2026</div>
+  </header>
+
+  <hr class="divider" />
+
+  <article class="article-body">
+
+    <p>Cuando tu router Cisco se cae o tu firewall FortiGate empieza a tirar tráfico a las 2 de la mañana, la primera llamada es al soporte del fabricante. Te pedirán tu running config. Es la forma más rápida de diagnosticar el problema.</p>
+
+    <p>La pega: tu config contiene credenciales activas. Claves precompartidas de VPN, contraseñas de administrador, tokens de API, community strings de SNMP — todas vivas, todas en producción, todas en tu fichero de configuración.</p>
+
+    <p><strong>No quieres eso en una base de datos de soporte.</strong> ScrubForge resuelve exactamente esto: sanitiza las credenciales en local antes de adjuntar la config a un ticket de soporte o a un email.</p>
+
+    <h2>Por qué las configs en bruto en tickets de soporte son un riesgo</h2>
+
+    <p>Cuando envías por email un fichero de config o lo adjuntas a un caso de Cisco TAC, al portal de soporte de FortiGate o a un ticket de Jira, ese fichero entra en un sistema que no controlas del todo. Según las prácticas de seguridad y la política de retención de datos del fabricante, tus credenciales pueden quedar:</p>
+
+    <ul>
+      <li><strong>Registradas</strong> en las bases de datos del sistema de soporte</li>
+      <li><strong>Accesibles para el personal de soporte</strong> durante el diagnóstico</li>
+      <li><strong>Retenidas</strong> más tiempo del que esperas</li>
+      <li><strong>Compartidas internamente</strong> con otros equipos para construir base de conocimiento</li>
+    </ul>
+
+    <p>La mayoría de los sistemas de soporte empresariales son razonablemente seguros. Pero una config de un firewall de producción con claves VPN vivas y contraseñas de admin no tiene por qué estar en una base de datos de soporte en absoluto. El ingeniero de soporte del fabricante no necesita tus credenciales para diagnosticar tu configuración. Necesita la estructura.</p>
+
+    <h2>El flujo ScrubForge + ticket de soporte</h2>
+
+    <ol>
+      <li><strong>Exporta tu config</strong> &mdash; En Cisco IOS: <code>show running-config</code>. En FortiGate: System &gt; Configuration &gt; Download. Otros fabricantes tienen opciones similares por CLI o interfaz web.</li>
+      <li><strong>Abre ScrubForge</strong> &mdash; Haz clic en el icono en tu barra de Chrome. Se abre como panel local en tu navegador &mdash; sin subidas, sin servidores externos.</li>
+      <li><strong>Pega y sanitiza</strong> &mdash; Pega tu config en bruto. ScrubForge detecta contraseñas, claves precompartidas, tokens de API y cadenas SNMP, sustituyendo cada valor único por un placeholder consistente como <code>[PSK_1]</code> o <code>[ADMIN_PASS_1]</code>.</li>
+      <li><strong>Revisa</strong> &mdash; Repasa la salida en busca de cualquier cosa que parezca una credencial viva. Una revisión de 30 segundos antes de compartir es buena práctica.</li>
+      <li><strong>Adjunta al ticket</strong> &mdash; Copia la salida sanitizada en el email del ticket de soporte, o guárdala como fichero de texto y súbela al portal de soporte.</li>
+    </ol>
+
+    <h2>Qué incluir en tu ticket de soporte</h2>
+
+    <p>Al adjuntar la config sanitizada, añade una línea de nota al ticket:</p>
+
+    <div class="callout">
+      <strong>Ejemplo:</strong> &laquo;Adjunto la config. Las credenciales han sido sanitizadas (sustituidas por tokens placeholder consistentes; la estructura y la lógica están totalmente intactas).&raquo;
+    </div>
+
+    <p>Esto le dice al ingeniero de soporte qué está mirando y por qué no verá valores vivos. La mayoría lo entenderá al momento. Saben que lo que importa para el diagnóstico es la estructura &mdash; protocolos de enrutamiento, IPs de los peers VPN, políticas de firewall, configuración de interfaces. Nada de eso son credenciales.</p>
+
+    <h2>Antes y después: qué sustituye ScrubForge</h2>
+
+    <pre>--- ANTES (en bruto) ---
+crypto isakmp key T@nn3lS3cr3t address 198.51.100.10
+username admin password cisco123
+snmp-server community public RO
+
+--- DESPUÉS (sanitizada) ---
+crypto isakmp key [PSK_1] address 198.51.100.10
+username admin password [ADMIN_PASS_1]
+snmp-server community [SNMP_RO_1] RO</pre>
+
+    <p>La IP del peer, los nombres de las interfaces y las políticas se quedan. Las credenciales vivas no. Tu ingeniero de soporte ve la misma estructura lógica con cero valores vivos en el sistema de soporte.</p>
+
+    <h2>Funciona con cualquier fabricante</h2>
+
+    <p>Sea Cisco, FortiGate, Palo Alto, Juniper, Arista, Cumulus, pfSense o cualquier otro fabricante, el principio es el mismo: sanitiza las configs en texto antes de compartirlas con sistemas externos. ScrubForge detecta los patrones de credenciales habituales en cualquier formato basado en texto.</p>
+
+    <h2>Cómo diagnostican los ingenieros de soporte con configs sanitizadas</h2>
+
+    <p>Una vez envías una config sanitizada, los ingenieros de soporte pueden diagnosticar:</p>
+
+    <ul>
+      <li><strong>Enrutamiento y BGP</strong> &mdash; revisando configs de peers y de políticas</li>
+      <li><strong>IPsec/VPN</strong> &mdash; revisando ajustes de fase 1/fase 2 de IKE y temporizadores DPD</li>
+      <li><strong>Políticas de firewall</strong> &mdash; encontrando reglas allow que faltan, problemas de orden de NAT, políticas ensombrecidas</li>
+      <li><strong>Configuración de VLANs</strong> &mdash; problemas de STP, discrepancias de VLAN nativa, trunks mal configurados</li>
+      <li><strong>Errores de interfaces</strong> &mdash; discrepancias de velocidad/dúplex, diagnósticos de cableado, configs de jumbo frames</li>
+    </ul>
+
+    <p>Todo esto depende de la lógica y la estructura de la configuración. Nada depende de ver los valores reales de las credenciales.</p>
+
+    <div class="cta-box">
+      <h2>Sanitiza antes de compartir</h2>
+      <p>ScrubForge es gratis. Pega tu config, elimina las credenciales en local y adjúntala a tickets de soporte o emails con seguridad — sin cuenta, sin subidas.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Instalar ScrubForge — Gratis</a>
+    </div>
+
+    <div class="related-link">
+      <strong>Relacionado:</strong> <a href="/es/blog/scrubforge-chatgpt-troubleshooting-red/">Cómo usar ScrubForge con ChatGPT para diagnosticar problemas de red</a>
+    </div>
+
+  </article>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">¿El ingeniero de soporte puede seguir diagnosticando si las credenciales están sustituidas?</div>
+      <div class="faq-a">Sí. Los ingenieros de soporte diagnostican la lógica de la configuración — enrutamiento, ajustes de VPN, políticas de firewall. Nada de eso depende de ver el valor real de la credencial. La config sanitizada les da todo lo que necesitan.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Y si el sistema de tickets almacena los ficheros indefinidamente?</div>
+      <div class="faq-a">La ventaja de sanitizar antes de subir es que, aunque el ticket nunca se borre o se acceda a él más tarde, no contiene credenciales vivas. Has roto el vínculo entre tu red en producción y la base de datos de soporte.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿ScrubForge afecta a las direcciones IP de la red?</div>
+      <div class="faq-a">No. Por defecto, ScrubForge sustituye patrones de credenciales — contraseñas, claves, tokens, cadenas SNMP — no direcciones IP. Tu topología de red, las IPs de los peers y las subredes quedan intactas, que es exactamente lo que los ingenieros de soporte necesitan ver.</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/es/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/es/privacy">Privacidad</a>
+    <a href="/es/terms">Términos</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. Todos los derechos reservados.</div>
+</footer>
+
+</body>
+</html>

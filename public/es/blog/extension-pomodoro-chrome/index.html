@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mejor Extensión de Pomodoro para Chrome (2026) | Wendygo Studio</title>
+  <meta name="description" content="SlimeForge añade una mascota virtual y gamificación para mantenerte concentrado. Gratis para empezar." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/extension-pomodoro-chrome/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extension-pomodoro-chrome/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use SlimeForge as a Pomodoro Timer Chrome Extension",
+    "description": "Set up SlimeForge, choose your session length, and grow your virtual slime pet by completing focus sessions.",
+    "tool": [{ "@type": "HowToTool", "name": "SlimeForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install SlimeForge",
+        "text": "Install SlimeForge from the Chrome Web Store and pin the icon to your browser toolbar from the Extensions menu."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open the extension and choose your session length",
+        "text": "Click the SlimeForge icon. Select 15, 25, 45, or 60 minutes depending on the task you're tackling."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Start your session",
+        "text": "Click Start and work until the timer ends. Avoid switching to distracting tabs during the session."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Take your break",
+        "text": "When the session ends, SlimeForge prompts you to take a short break. After four sessions, take a longer break."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Watch your slime grow",
+        "text": "After your first completed session your slime hatches. Each subsequent session earns Brasas that help your slime grow and unlock new features."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Best Pomodoro Timer Chrome Extension in 2026"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best Pomodoro Timer Chrome Extension in 2026 — With a Virtual Pet",
+    "description": "SlimeForge is a Pomodoro timer Chrome extension that adds a virtual pet and gamification to keep you focused. Your slime hatches and grows with every session you complete.",
+    "datePublished": "2026-07-15",
+    "dateModified": "2026-07-15",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is SlimeForge free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The free version includes the Pomodoro timer, streaks, and the virtual pet. A 5-day PRO trial unlocks the full feature set including all missions, crafting, and extended companion features."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SlimeForge work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The timer and pet run entirely locally in your browser. Gemini Nano chat is also on-device, so nothing requires an internet connection after installation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I chat with my slime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, via Gemini Nano running on your device. The conversation is local and available in 6 languages: English, Spanish, French, German, Italian, and Portuguese."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Brasas in SlimeForge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Brasas (🔥) are the in-extension currency you earn by completing focus sessions. They are used for crafting and growing your slime. Brasas cannot be purchased with real money — they are earned only through focus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the gacha in SlimeForge require real money?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SlimeForge's gacha mechanic never requires real money. Any real-money purchase gives you a known item — random outcomes are reserved for Brasas earned through your focus sessions."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .feature-grid { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .feature-card {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .feature-card strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    .session-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px;
+      margin: 20px 0;
+    }
+    .session-card {
+      padding: 14px 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      text-align: center;
+    }
+    .session-mins {
+      font-size: 26px; font-weight: 800; color: var(--amber); display: block; margin-bottom: 4px;
+    }
+    .session-label { font-size: 12px; color: var(--muted); }
+
+    .tip-box {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .tip-box strong { color: var(--text); }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a a { color: var(--amber); text-decoration: none; }
+    .faq-a a:hover { text-decoration: underline; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .session-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/pomodoro-timer-chrome-extension/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Mejor extensión de Pomodoro para Chrome en 2026
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · SlimeForge</div>
+      <h1>Mejor Extensión de Pomodoro para Chrome en 2026 — Con Mascota Virtual</h1>
+      <p class="article-intro">
+        La mayoría de los temporizadores Pomodoro caen en el olvido al tercer día. SlimeForge es diferente: te da una mascota slime virtual que eclosiona tras tu primera sesión y crece cada vez que te concentras. El temporizador se convierte en algo que de verdad quieres abrir.
+      </p>
+      <div class="article-date">15 de julio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>La Técnica Pomodoro funciona sobre el papel. Pones 25 minutos, te concentras, descansas, repites. Pero la mayoría de las apps de Pomodoro fallan en el mismo punto: no hay ningún motivo para abrirlas mañana. Sonó la alarma, cerraste la pestaña y ahí quedó todo.</p>
+
+      <p>SlimeForge consigue que vuelvas haciendo que tus sesiones de concentración le importen a alguien — tu mascota slime virtual. Cada sesión completada gana Brasas 🔥 que hacen crecer a tu slime. Si te saltas un día, a la mascota no le pasa nada, pero tampoco crece nada. Ese único bucle de feedback cambia la dinámica por completo.</p>
+
+      <h2>¿Qué es la Técnica Pomodoro?</h2>
+
+      <p>La Técnica Pomodoro divide el trabajo en intervalos cronometrados — normalmente 25 minutos de trabajo concentrado seguidos de un descanso de 5 minutos. Tras cuatro intervalos, tomas un descanso más largo de 15 a 30 minutos. La estructura hace que las sesiones largas de trabajo parezcan abordables porque nunca te comprometes a más de un intervalo cada vez.</p>
+
+      <p>La técnica tiene décadas de investigación detrás. La parte difícil no es entenderla — es mantener un temporizador que de verdad uses con constancia.</p>
+
+      <h2>Duraciones de sesión en SlimeForge</h2>
+
+      <p>SlimeForge soporta cuatro duraciones de sesión para adaptarse a distintos tipos de trabajo:</p>
+
+      <div class="session-grid">
+        <div class="session-card">
+          <span class="session-mins">15</span>
+          <div class="session-label">Modo sprint — tareas pequeñas, respuestas rápidas</div>
+        </div>
+        <div class="session-card">
+          <span class="session-mins">25</span>
+          <div class="session-label">Pomodoro clásico — trabajo concentrado general</div>
+        </div>
+        <div class="session-card">
+          <span class="session-mins">45</span>
+          <div class="session-label">Trabajo profundo — escribir, programar, leer</div>
+        </div>
+        <div class="session-card">
+          <span class="session-mins">60</span>
+          <div class="session-label">Estado de flow — sesiones creativas extendidas</div>
+        </div>
+      </div>
+
+      <p>Los descansos cortos y largos vienen integrados. SlimeForge registra tus rachas y tu historial de sesiones para que veas lo consistentes que han sido tus semanas.</p>
+
+      <h2>Cómo empezar</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Instala SlimeForge desde la Chrome Web Store</div>
+            <div class="step-desc">Añade la extensión y fija el icono a tu barra desde el menú de Extensiones para tenerlo siempre a un clic.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Abre la extensión y elige la duración de tu sesión</div>
+            <div class="step-desc">Haz clic en el icono de SlimeForge. Elige 15, 25, 45 o 60 minutos — 25 es un buen valor por defecto si eres nuevo en el Pomodoro.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Inicia tu sesión y trabaja</div>
+            <div class="step-desc">Haz clic en Iniciar. Concéntrate hasta que termine el temporizador. La sesión solo cuenta si la completas — cerrar la pestaña a mitad detiene el reloj.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Tómate el descanso cuando te avise</div>
+            <div class="step-desc">SlimeForge te avisa cuando termina la sesión. Descansa y luego inicia la siguiente. Tras cuatro sesiones, se recomienda un descanso más largo.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Mira a tu slime eclosionar y crecer</div>
+            <div class="step-desc">Tu slime eclosiona tras la primera sesión completada. Cada sesión posterior gana Brasas 🔥 que le ayudan a crecer y a desbloquear nuevas interacciones.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>La mascota virtual que mantiene viva la racha</h2>
+
+      <p>Tras tu primera sesión de Pomodoro completada, un slime eclosiona dentro de la extensión. No exige atención — simplemente crece cuando te concentras. Esa pequeña inversión sin presión resulta ser sorprendentemente eficaz para que abras la extensión al día siguiente.</p>
+
+      <p>Hay 16 especies de slime por descubrir. Las especies no se compran — se encuentran con trabajo concentrado. La extensión sigue un enfoque ético: el dinero real nunca compra resultados aleatorios. Si compras algo, recibes exactamente lo que has pagado. La aleatoriedad se reserva para las Brasas ganadas en sesiones.</p>
+
+      <div class="tip-box">
+        <strong>Consejo:</strong> activa el modo compañero en los ajustes para que tu slime pasee por las páginas que navegas. Es un pequeño recordatorio visual de mantenerte en la tarea. Fácil de desactivar si te distrae.
+      </div>
+
+      <h2>Gamificación más allá del temporizador</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <strong>Misiones</strong>
+          Objetivos opcionales — completar X sesiones esta semana, alcanzar una racha, terminar un conjunto de sesiones en un día. Metas a corto plazo para quien necesita más que un contador de rachas.
+        </div>
+        <div class="feature-card">
+          <strong>Crafteo</strong>
+          Combina objetos ganados en sesiones para crear cosas nuevas para tu slime. Una capa ligera de idle-game con la que puedes interactuar tanto o tan poco como quieras.
+        </div>
+        <div class="feature-card">
+          <strong>Minijuegos</strong>
+          Juegos cortos disponibles como parte de la experiencia SlimeForge. Diseñados para los descansos, no para las sesiones.
+        </div>
+        <div class="feature-card">
+          <strong>Visitas de amigos</strong>
+          Tu slime puede visitar páginas donde hay otros usuarios de SlimeForge activos — un pequeño elemento social sin necesidad de crear ninguna cuenta social.
+        </div>
+        <div class="feature-card">
+          <strong>Chat con Gemini Nano</strong>
+          Ten una conversación corta con tu slime vía Gemini Nano, ejecutándose completamente en tu dispositivo. Disponible en 6 idiomas. Sin llamadas a APIs externas — completamente local.
+        </div>
+      </div>
+
+      <h2>¿Para quién es SlimeForge?</h2>
+
+      <p>SlimeForge funciona mejor para quien ya ha probado temporizadores Pomodoro planos y los ha encontrado olvidables. Si has instalado tres apps de temporizador distintas y has dejado de usarlas todas en una semana, el problema normalmente no es la técnica — es la falta de un gancho que haga que abrir la app merezca la pena.</p>
+
+      <p>Encaja muy bien con estudiantes, desarrolladores, escritores y cualquiera que haga trabajo largo frente a la pantalla donde la distracción es el principal obstáculo. La capa de gamificación es lo bastante ligera para no convertirse ella misma en una distracción, pero lo bastante sustancial para dar a las sesiones una sensación de progresión.</p>
+
+      <p>La extensión se ejecuta completamente en local — sin cuenta, sin enviar datos a ningún servidor, con el chat de Gemini Nano en el dispositivo. Privacidad por diseño.</p>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿SlimeForge es gratis?</p>
+          <p class="faq-a">Sí. La versión gratuita incluye el temporizador Pomodoro, las rachas y la mascota virtual. Una prueba PRO de 5 días desbloquea el conjunto completo de funciones, incluidas todas las misiones, el crafteo y las funciones extendidas del modo compañero.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿SlimeForge funciona sin conexión?</p>
+          <p class="faq-a">Sí. El temporizador y la mascota se ejecutan completamente en local, en tu navegador. El chat de Gemini Nano también corre en el dispositivo, así que nada requiere conexión a internet tras la instalación.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Puedo chatear con mi slime?</p>
+          <p class="faq-a">Sí, vía Gemini Nano ejecutándose en tu dispositivo. La conversación es local y está disponible en 6 idiomas: inglés, español, francés, alemán, italiano y portugués.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Qué son las Brasas en SlimeForge?</p>
+          <p class="faq-a">Las Brasas 🔥 son la moneda de la extensión, ganada al completar sesiones de concentración. Se usan para el crafteo y para hacer crecer a tu slime. Las Brasas no se pueden comprar con dinero real — solo se ganan concentrándote.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿El gacha de SlimeForge requiere dinero real?</p>
+          <p class="faq-a">No. La mecánica gacha de SlimeForge nunca requiere dinero real. Cualquier compra con dinero real te da un objeto conocido — los resultados aleatorios se reservan para las Brasas ganadas en tus sesiones de concentración. El dinero real nunca compra azar.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Guías relacionadas</div>
+        <div class="related-links">
+          <a class="related-link" href="/es/blog/temporizador-pomodoro-offline-chrome/">
+            Temporizador Pomodoro sin conexión para Chrome — Privado y local
+            <span>SlimeForge funciona 100% offline: temporizador, mascota y chat en tu dispositivo</span>
+          </a>
+          <a class="related-link" href="/es/blog/pomodoro-para-programadores/">
+            Pomodoro para programadores — Sesiones largas sin perder el hilo
+            <span>Cómo adaptar las sesiones de 45 y 60 minutos al trabajo de desarrollo</span>
+          </a>
+          <a class="related-link" href="/es/blog/alternativas-forest-chrome/">
+            Alternativas a Forest para Chrome
+            <span>Compara SlimeForge con otras extensiones de concentración gamificadas</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>SlimeForge es una extensión de temporizador Pomodoro para Chrome con mascota virtual, rachas, misiones, crafteo y chat Gemini Nano en el dispositivo — todo ejecutándose en local, en tu navegador, sin subir nada a ningún servidor.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
+          Añadir SlimeForge a Chrome — Gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> — extensiones de navegador que respetan tu privacidad</div>
+    <div class="footer-links">
+      <a href="/es/">Inicio</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#privacidad">Privacidad</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temporizador Pomodoro Offline para Chrome | Wendygo Studio</title>
+  <meta name="description" content="Un temporizador Pomodoro que funciona sin conexión en Chrome. Configura sesiones y construye hábitos de enfoque." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Temporizador Pomodoro Offline para Chrome | Wendygo Studio">
+  <meta property="og:description" content="Un temporizador Pomodoro que funciona sin conexión en Chrome. Configura sesiones y construye hábitos de enfoque.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Temporizador Pomodoro Offline para Chrome | Wendygo Studio">
+  <meta name="twitter:description" content="Un temporizador Pomodoro que funciona sin conexión en Chrome. Configura sesiones y construye hábitos de enfoque.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Offline Pomodoro Timer Chrome Extension"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Offline Pomodoro Timer Chrome Extension — Works Without Internet",
+    "description": "A Pomodoro timer that works offline in Chrome — no WiFi required. Set sessions, track streaks, and build focus habits whether you're remote, traveling, or in a café.",
+    "datePublished": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do Pomodoro timers really need an internet connection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. A Pomodoro timer is just a countdown — it doesn't need to sync data to the cloud. Many extensions require internet to track stats, sync to a cloud account, or load features. A true offline timer runs entirely locally: start the session, get notified when time's up, track your streaks — all without WiFi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use a Pomodoro timer offline on a plane or train?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if it's built to work offline. Once installed, the extension doesn't need an internet connection to operate. Sessions, break timers, streaks, and all data stay local on your device. This makes offline timers especially useful for remote workers, digital nomads, and anyone who spends time in places without reliable WiFi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Pomodoro timer works offline without an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SlimeForge runs entirely offline with no account required. Once installed, the timer, virtual pet, streaks, missions, and mini-games all work without internet. Data is stored locally in your browser — nothing is uploaded to any server. That also means your focus data stays private."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body ul { margin: 0 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); font-size: 15px; }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .highlight-box {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .highlight-box p { margin-bottom: 12px; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a a { color: var(--amber); text-decoration: none; }
+    .faq-a a:hover { text-decoration: underline; }
+
+    .tip-box {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .tip-box strong { color: var(--text); }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/offline-pomodoro-timer-chrome/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Temporizador Pomodoro offline para Chrome
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Productividad · SlimeForge</div>
+      <h1>Temporizador Pomodoro Offline para Chrome — Funciona Sin Internet</h1>
+      <p class="article-intro">
+        ¿Trabajas en remoto, viajas o estás en una cafetería con WiFi caprichoso? Un temporizador Pomodoro offline te mantiene concentrado estés donde estés. Sin cuenta, sin sincronización, sin internet.
+      </p>
+      <div class="article-date">16 de julio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Las apps de productividad suelen exigir conexión a la nube: sincronizar tus sesiones, seguir estadísticas entre dispositivos, enviar notificaciones a tu móvil. Pero un temporizador no necesita nada de eso. Un temporizador Pomodoro offline de verdad corre completamente en tu navegador — sin internet, sin login, sin enviar datos a ninguna parte.</p>
+
+      <p>Esto importa cuando estás:</p>
+
+      <ul>
+        <li><strong>Trabajando en remoto en sitios sin WiFi fiable</strong> — una cafetería, una biblioteca o un coworking</li>
+        <li><strong>De viaje</strong> — en un avión, un tren o una ruta en coche con conectividad limitada</li>
+        <li><strong>Preocupado por la privacidad</strong> — no quieres que tus datos de concentración se sincronicen con un servidor en la nube</li>
+        <li><strong>Trabajando offline por elección</strong> — desconectarte como estrategia de concentración</li>
+      </ul>
+
+      <h2>Por qué lo offline importa para concentrarse</h2>
+
+      <p>La mayoría de las extensiones de navegador piden conexión a internet para verificar tu sesión, enviar analíticas o sincronizar rachas. Eso crea fricción: si el WiFi se cae, tu sesión se rompe. Si los servidores de la empresa se caen, tu temporizador se rompe. Una extensión offline-first elimina esa dependencia.</p>
+
+      <p>Un temporizador offline también significa que tus sesiones de concentración siguen siendo privadas — ninguna empresa sabe cuándo trabajas, cuánto te concentras ni cuáles son tus patrones. Los datos se quedan en tu dispositivo, y punto.</p>
+
+      <h2>Qué necesita un temporizador offline</h2>
+
+      <p>Un buen temporizador Pomodoro offline debería incluir:</p>
+
+      <ul>
+        <li><strong>Duraciones de sesión configurables</strong> — 15, 25, 45, 60 minutos (cada trabajo pide un ritmo distinto)</li>
+        <li><strong>Seguimiento de descansos</strong> — pausas cortas entre sesiones, pausas largas cada N sesiones</li>
+        <li><strong>Persistencia</strong> — tus rachas y el conteo de sesiones se mantienen aunque cierres el navegador</li>
+        <li><strong>Aviso visual y sonoro</strong> — notificación clara al acabar el tiempo, tengas la pestaña en primer plano o no</li>
+        <li><strong>Sin dependencias ocultas</strong> — el temporizador funciona desde el instante en que lo instalas</li>
+      </ul>
+
+      <h2>SlimeForge: temporizador offline + mascota</h2>
+
+      <p>SlimeForge es una extensión de Chrome de temporizador Pomodoro construida completamente offline. Tras tu primera sesión, eclosiona una mascota slime virtual. Cada sesión que completas gana Brasas 🔥 que la ayudan a crecer. Hay 16 especies por descubrir, misiones y minijuegos para los descansos — todo corriendo en local, en tu navegador.</p>
+
+      <p>Las sesiones son de 15, 25, 45 o 60 minutos. Tus rachas se actualizan al instante. Si pierdes el WiFi a mitad de sesión, el temporizador sigue corriendo. Cuando termina, la notificación salta aunque hayas cambiado de pestaña. Y tu mascota crece estés online o no.</p>
+
+      <div class="highlight-box">
+        <p><strong>Claves offline:</strong> El temporizador funciona sin conexión. La mascota crece sin conexión. Las rachas persisten sin conexión. Sin cuenta. Sin subir datos. Gratis para empezar; prueba PRO de 5 días para explorar el crafteo y las funciones más profundas.</p>
+      </div>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿Los temporizadores Pomodoro necesitan realmente conexión a internet?</p>
+          <p class="faq-a">No. Un temporizador Pomodoro no es más que una cuenta atrás — no necesita sincronizar datos con la nube. Muchas extensiones requieren internet para seguir estadísticas, sincronizar con una cuenta en la nube o cargar funciones. Un temporizador offline de verdad corre completamente en local: inicias la sesión, recibes el aviso al acabar el tiempo y sigues tus rachas — todo sin WiFi.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Puedo usar un temporizador Pomodoro offline en un avión o un tren?</p>
+          <p class="faq-a">Sí, si está construido para funcionar offline. Una vez instalada, la extensión no necesita conexión a internet para operar. Las sesiones, los temporizadores de descanso, las rachas y todos los datos se quedan en local, en tu dispositivo. Esto hace que los temporizadores offline sean especialmente útiles para trabajadores remotos, nómadas digitales y cualquiera que pase tiempo en sitios sin WiFi fiable.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Qué temporizador Pomodoro funciona offline sin cuenta?</p>
+          <p class="faq-a">SlimeForge corre completamente offline y sin necesidad de cuenta. Una vez instalado, el temporizador, la mascota virtual, las rachas, las misiones y los minijuegos funcionan sin internet. Los datos se guardan en local, en tu navegador — no se sube nada a ningún servidor. Eso también significa que tus datos de concentración siguen siendo privados.</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>Consejo:</strong> si pasas la mayor parte de tu tiempo de trabajo concentrado en un solo sitio (despacho en casa, cafetería habitual), un temporizador offline te sobra. Pero si te mueves entre ubicaciones o viajas con frecuencia, la fiabilidad de una herramienta offline-first se hace evidente la primera vez que pierdes el WiFi a mitad de sesión.
+      </div>
+
+      <div class="related">
+        <div class="related-label">Guías relacionadas</div>
+        <div class="related-links">
+          <a class="related-link" href="/es/blog/alternativas-forest-chrome/">
+            Mejores alternativas a Forest para Chrome en 2026
+            <span>Compara extensiones de temporizador de enfoque — desde cronómetros minimalistas hasta opciones gamificadas con mascota virtual</span>
+          </a>
+          <a class="related-link" href="/es/blog/extension-pomodoro-chrome/">
+            Mejor extensión de temporizador Pomodoro para Chrome en 2026 — Con mascota virtual
+            <span>Cómo funciona SlimeForge como temporizador y cómo el sistema de mascota construye hábitos de concentración</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>SlimeForge es un temporizador Pomodoro offline para Chrome con mascota virtual. Sesiones (15/25/45/60 min), rachas, misiones, crafteo — todo funciona sin internet ni cuenta.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
+          Añadir SlimeForge a Chrome — Gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> — extensiones de navegador que respetan tu privacidad</div>
+    <div class="footer-links">
+      <a href="/es/">Inicio</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#privacidad">Privacidad</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,1145 @@
+{
+  "extName": {
+    "message": "SlimeForge — Timer Pomodoro con mascotte del focus"
+  },
+  "extDesc": {
+    "message": "Un timer pomodoro con una mascotte che cresce con il tuo focus. Lavora alla sua scrivania e ti richiama se ti distrai."
+  },
+  "born": {
+    "message": "È nato $NAME, la tua nuova creatura della Fucina ($LABEL, $TEMPADJ)!"
+  },
+  "rarity": {
+    "message": "Rarità $R!"
+  },
+  "feed_fish": {
+    "message": "Gnam, pesciolino fresco."
+  },
+  "feed_apple": {
+    "message": "Gnam. +30 fame"
+  },
+  "clean": {
+    "message": "Pulito. +2 legame"
+  },
+  "shower_done": {
+    "message": "Splendente"
+  },
+  "focus_start": {
+    "message": "La Brace batte con te. $M min di concentrazione!"
+  },
+  "focus_done": {
+    "message": "Sessione completata: +$N 🔥$X e +10 crescita"
+  },
+  "focus_break": {
+    "message": "Pausa di 5 min. Te la sei meritata."
+  },
+  "focus_break_end": {
+    "message": "Pausa finita. Un'altra sessione?"
+  },
+  "focus_abandon": {
+    "message": "Sessione abbandonata. $N sospira."
+  },
+  "streak_lbl": {
+    "message": "🔥 Serie: $D giorno/i · bonus +$B"
+  },
+  "streak_none": {
+    "message": "Completa una sessione ogni giorno per accendere la tua serie."
+  },
+  "stats_week": {
+    "message": "📊 Settimana: $N sess. · $M min · record: $R giorni"
+  },
+  "stats_none": {
+    "message": "📊 Questa settimana ancora nessuna sessione."
+  },
+  "invoke": {
+    "message": "Evocata in questa scheda"
+  },
+  "invoke_fail": {
+    "message": "Impossibile evocare su questa pagina"
+  },
+  "always_on": {
+    "message": "La tua creatura passeggerà su tutti i siti"
+  },
+  "always_off": {
+    "message": "Modalità su schermo disattivata"
+  },
+  "pack_on": {
+    "message": "Le tue creature passeggiano insieme."
+  },
+  "pack_off": {
+    "message": "Passeggia solo quella attiva."
+  },
+  "pack_lock": {
+    "message": "La passeggiata in branco è una funzione Pro"
+  },
+  "forge_lock": {
+    "message": "La Fucina è una funzione Pro (3 riforgiature/mese)."
+  },
+  "forge_limit": {
+    "message": "La Fucina riposa: hai usato le tue 3 riforgiature."
+  },
+  "forge_done": {
+    "message": "Riforgiato nella Fucina"
+  },
+  "visit_code": {
+    "message": "Codice copiato."
+  },
+  "visit_invalid": {
+    "message": "Codice non valido"
+  },
+  "visit_self": {
+    "message": "Questa è la tua stessa creatura"
+  },
+  "visit_arrive": {
+    "message": "$N viene a trovarti!"
+  },
+  "sick_msg": {
+    "message": "$N si è ammalato. Servono 💊 e 3 coccole."
+  },
+  "cure_meds": {
+    "message": "Medicina presa. Servono 3 coccole 🤍"
+  },
+  "cure_done": {
+    "message": "$N è guarito! L'affetto funziona."
+  },
+  "egg_cost_msg": {
+    "message": "Costa $N 🔥. Le Braci si guadagnano giocando, mai con soldi."
+  },
+  "egg_new": {
+    "message": "Un nuovo uovo aspetta i tuoi tocchi."
+  },
+  "rename_prompt": {
+    "message": "Nuovo nome per la tua creatura:"
+  },
+  "renamed": {
+    "message": "Ora si chiama $N ✨"
+  },
+  "gift_msg": {
+    "message": "🎁 Ti ha portato un regalo: $G"
+  },
+  "gift_say": {
+    "message": "L'ho trovato in giro. È per te. 🤍"
+  },
+  "daily_feed": {
+    "message": "Dagli da mangiare"
+  },
+  "daily_focus": {
+    "message": "Sessione di concentrazione"
+  },
+  "daily_play": {
+    "message": "Gioca a un minigioco"
+  },
+  "daily_done": {
+    "message": "🏆 Giornata completa! +6 🔥 e +1 materiale"
+  },
+  "pro_active": {
+    "message": "⭐ Pro attivo"
+  },
+  "pro_pitch": {
+    "message": "Con Pro: la Fucina, 3 creature insieme, cosmetici e x1.5 🔥."
+  },
+  "pro_activated": {
+    "message": "⭐ Pro attivato! Grazie per sostenere la Fucina."
+  },
+  "pro_deact": {
+    "message": "Licenza disattivata."
+  },
+  "pro_test": {
+    "message": "🧪 Build di prova: Pro sbloccato."
+  },
+  "reserve_full": {
+    "message": "Riserva piena ($N)."
+  },
+  "stored": {
+    "message": "📦 $N passa alla Riserva."
+  },
+  "released": {
+    "message": "🕊️ $N torna libero alla Fucina."
+  },
+  "swap_msg": {
+    "message": "$N torna con te."
+  },
+  "craft_done": {
+    "message": "⚒️ $N forgiato nell'Officina"
+  },
+  "bond_1": {
+    "message": "Conoscenti"
+  },
+  "bond_2": {
+    "message": "Amici"
+  },
+  "bond_3": {
+    "message": "Grandi amici"
+  },
+  "bond_4": {
+    "message": "Inseparabili"
+  },
+  "bond_5": {
+    "message": "Anima gemella"
+  },
+  "h_focus": {
+    "message": "⏱️ Concentrazione"
+  },
+  "h_screen": {
+    "message": "🪄 Sullo schermo"
+  },
+  "h_craft": {
+    "message": "⚒️ Officina"
+  },
+  "h_visit": {
+    "message": "🧬 Visite"
+  },
+  "h_daily": {
+    "message": "🎯 Oggi"
+  },
+  "h_pets": {
+    "message": "🏠 Le mie creature"
+  },
+  "h_pro": {
+    "message": "⭐ SlimeForge Pro"
+  },
+  "h_ai": {
+    "message": "🧠 IA locale (Gemini Nano)"
+  },
+  "ai_active": {
+    "message": "Attiva: i dialoghi vengono generati sul tuo dispositivo."
+  },
+  "ai_download": {
+    "message": "Pronta da scaricare (una sola volta, diversi GB)."
+  },
+  "ai_unavail": {
+    "message": "Non disponibile — uso la banca delle frasi."
+  },
+  "ai_ready": {
+    "message": "🧠 IA locale pronta."
+  },
+  "lbl_size": {
+    "message": "Dimensione"
+  },
+  "lbl_invoke": {
+    "message": "Evoca in questa scheda"
+  },
+  "lbl_always": {
+    "message": "Sempre, su tutti i siti"
+  },
+  "lbl_pack": {
+    "message": "Passeggiano insieme (tutte le tue creature)"
+  },
+  "lbl_demo": {
+    "message": "Modalità demo (x120)"
+  },
+  "upsell": {
+    "message": "💡 Con Pro, le tue creature passeggiano e chiacchierano insieme."
+  },
+  "poop_corner": {
+    "message": "Nel mio angolino, come mi hai insegnato. 😌"
+  },
+  "comedero": {
+    "message": "🛢️ La ciotola ha servito un 🐟 (ne restano $N)."
+  },
+  "lbl_hambre": {
+    "message": "Fame"
+  },
+  "lbl_higiene": {
+    "message": "Igiene"
+  },
+  "lbl_animo": {
+    "message": "Umore"
+  },
+  "lbl_vinculo": {
+    "message": "Legame"
+  },
+  "lbl_educacion": {
+    "message": "Educazione"
+  },
+  "visit_code_btn": {
+    "message": "Copia il mio codice"
+  },
+  "visit_invite_btn": {
+    "message": "Invita"
+  },
+  "nano_lang": {
+    "message": "italiano"
+  },
+  "ai_checking": {
+    "message": "Controllo disponibilità…"
+  },
+  "ai_downloading": {
+    "message": "Scaricamento del modello…"
+  },
+  "pets_active": {
+    "message": "Attiva ora"
+  },
+  "pets_withyou": {
+    "message": "Con te"
+  },
+  "pets_resting": {
+    "message": "Riposa vicino alla Fucina"
+  },
+  "pets_swap": {
+    "message": "Scambia"
+  },
+  "pets_free": {
+    "message": "Posto libero"
+  },
+  "pets_prolock": {
+    "message": "Funzione Pro"
+  },
+  "pets_newegg_cost": {
+    "message": "Nuovo uovo · $N 🔥"
+  },
+  "pets_newegg_btn": {
+    "message": "Nuovo uovo"
+  },
+  "egg_word": {
+    "message": "Uovo"
+  },
+  "egg_meta": {
+    "message": "Un uovo della Fucina"
+  },
+  "stage_lbl": {
+    "message": "Fase"
+  },
+  "hint_egg": {
+    "message": "Il calore di una sessione di focus farà schiudere l'uovo 🔥"
+  },
+  "res_head": {
+    "message": "Riserva ($N/$C)"
+  },
+  "res_pro_note": {
+    "message": "con Pro si amplia a 25"
+  },
+  "res_unhatched": {
+    "message": "Non schiuso"
+  },
+  "res_bring": {
+    "message": "Riporta"
+  },
+  "res_empty": {
+    "message": "Vuota. Archivia creature con 📦 per allevare più uova."
+  },
+  "daily_done_row": {
+    "message": "Giornata completa! Ricompensa ritirata."
+  },
+  "trial_active": {
+    "message": "Prova Pro gratuita: $D giorno/i rimanenti."
+  },
+  "trial_over": {
+    "message": "Prova finita. Passa a Pro da 1,99 €/mese."
+  },
+  "lbl_growth": {
+    "message": "Crescita"
+  },
+  "act_shower": {
+    "message": "Doccia"
+  },
+  "act_pet": {
+    "message": "Accarezza"
+  },
+  "act_meds": {
+    "message": "Medicina (10🔥)"
+  },
+  "focus_btn": {
+    "message": "Inizia"
+  },
+  "focus_cancel": {
+    "message": "Abbandona"
+  },
+  "focus_note": {
+    "message": "Completa la sessione → +15 Braci e +10 crescita (Pro: x1.5 🔥). Continua anche se chiudi il popup — la Brace non si arrende."
+  },
+  "h_minis": {
+    "message": "Minigiochi"
+  },
+  "mg_pesca": {
+    "message": "Pesca"
+  },
+  "mg_ovillo": {
+    "message": "Gomitolo"
+  },
+  "minis_note": {
+    "message": "Max 3 partite al giorno per gioco. La pesca riempie la dispensa di 🐟; col gomitolo gioca la tua creatura."
+  },
+  "pets_note": {
+    "message": "Le creature a passeggio possono uscire insieme sul tuo schermo. La Riserva 📦 conserva le altre col tempo fermo; liberare 🕊️ è per sempre."
+  },
+  "screen_note": {
+    "message": "\"Evoca\" agisce solo sulla scheda attuale. \"Sempre\" chiederà il permesso per tutti i siti e la tua creatura passeggerà su ogni pagina. Disattivabile quando vuoi."
+  },
+  "visit_ph": {
+    "message": "Incolla qui il codice della creatura di un amico…"
+  },
+  "plan_m": {
+    "message": "1,99 €/mese"
+  },
+  "plan_a": {
+    "message": "9,99 €/anno"
+  },
+  "plan_l": {
+    "message": "19,99 € · per sempre"
+  },
+  "pro_key_ph": {
+    "message": "Chiave di licenza (dall'email di acquisto)"
+  },
+  "pro_act_btn": {
+    "message": "Attiva"
+  },
+  "pro_deact_btn": {
+    "message": "Disattiva su questo dispositivo"
+  },
+  "feed_btn": {
+    "message": "Nutri (2🔥)"
+  },
+  "feed_btn_fish": {
+    "message": "Nutri (x$N)"
+  },
+  "growth_max": {
+    "message": "MASSIMO! 🎉"
+  },
+  "focus_break_cancel": {
+    "message": "Pausa annullata."
+  },
+  "poop_1": {
+    "message": "💩 Ops. $N guarda altrove facendo finta di niente."
+  },
+  "poop_2": {
+    "message": "💩 $N si sente molto meglio ora!"
+  },
+  "poop_3": {
+    "message": "💩 Non è stato $N. È stato il vento. Giuro."
+  },
+  "poop_4": {
+    "message": "💩 $N ti osserva. Sai cosa devi fare."
+  },
+  "ev_loaf": {
+    "message": "Modalità pagnotta attivata."
+  },
+  "ev_hiccup": {
+    "message": "Hic! ...hic!"
+  },
+  "cure_pet": {
+    "message": "Coccola curativa $N/3"
+  },
+  "say_cured": {
+    "message": "Come nuova! Grazie 🤍"
+  },
+  "say_meds": {
+    "message": "Bleah… sa di terribile. 🤒"
+  },
+  "evolved": {
+    "message": "✨ $N si è evoluto in $S!"
+  },
+  "mg_pesca_title": {
+    "message": "Pesca alla Fucina"
+  },
+  "mg_pesca_result": {
+    "message": "Risultato: +$B 🔥, $F 🐟 e $E scaglie (+6 umore)."
+  },
+  "mg_collect": {
+    "message": "Raccogli"
+  },
+  "mg_pesca_toast": {
+    "message": "+$B Braci e $F pesci"
+  },
+  "mg_cast": {
+    "message": "Lancia ($N/$M)"
+  },
+  "mg_bite": {
+    "message": "Abbocca!"
+  },
+  "mg_pesca_note": {
+    "message": "Premi quando l'ago è nella zona ambra. Il centro brillante = pesce raro."
+  },
+  "mg_fish_rare": {
+    "message": "Pesce raro!"
+  },
+  "mg_fish_ok": {
+    "message": "Pescato!"
+  },
+  "mg_fish_miss": {
+    "message": "È scappato…"
+  },
+  "mg_ovillo_title": {
+    "message": "Il gomitolo"
+  },
+  "mg_ovillo_note": {
+    "message": "Muovi il filo e tieni la tua creatura agganciata: fai punti quando insegue da vicino e il filo si muove."
+  },
+  "mg_ovillo_result": {
+    "message": "$P punti → +$B 🔥$H, +10 umore e +1 legame. $N si spaparanza, esausta e felice."
+  },
+  "mg_done": {
+    "message": "Fine"
+  },
+  "mg_ovillo_toast": {
+    "message": "+$B Braci"
+  },
+  "visit_alias": {
+    "message": "Il tuo nome o alias (lo vedrà il tuo amico):"
+  },
+  "visit_r2": {
+    "message": "Sono diventate grandi amiche! 💕"
+  },
+  "visit_r1": {
+    "message": "Si piacciono 🙂"
+  },
+  "visit_r0": {
+    "message": "Cordialità diplomatica 😐"
+  },
+  "visit_rm1": {
+    "message": "Non hanno legato… 😾"
+  },
+  "visit_rm2": {
+    "message": "⚡ Scontro totale di personalità"
+  },
+  "visit_bff": {
+    "message": "$A e $B sono migliori amiche!"
+  },
+  "visit_mems": {
+    "message": "Ricordi:"
+  },
+  "visit_none": {
+    "message": "Non ha ancora conosciuto nessuno. Scambia codici con un amico."
+  },
+  "forge_title": {
+    "message": "La Fucina ($N rimaste questo mese)"
+  },
+  "fk_none": {
+    "message": "Senza macchie"
+  },
+  "fk_patches": {
+    "message": "Macchie"
+  },
+  "fk_belly": {
+    "message": "Pancia chiara"
+  },
+  "fk_pb": {
+    "message": "Macchie + pancia"
+  },
+  "acc_none": {
+    "message": "Nessun accessorio"
+  },
+  "acc_lazo": {
+    "message": "Fiocchetto"
+  },
+  "acc_buf": {
+    "message": "Sciarpa"
+  },
+  "acc_gorro": {
+    "message": "Cappellino"
+  },
+  "acc_mono": {
+    "message": "Monocolo"
+  },
+  "g_f": {
+    "message": "Femmina"
+  },
+  "g_m": {
+    "message": "Maschio"
+  },
+  "forge_name_ph": {
+    "message": "Nome"
+  },
+  "forge_btn": {
+    "message": "Riforgia"
+  },
+  "forge_note": {
+    "message": "La Fucina cambia aspetto e temperamento conservando i progressi (fase, legame, Braci)."
+  },
+  "forge_confirm": {
+    "message": "Riforgiare $N? Aspetto e temperamento cambieranno; i progressi restano."
+  },
+  "pro_from": {
+    "message": "Da 1,99 €/mese."
+  },
+  "mat_lbl": {
+    "message": "Materiali: 🐟 scaglie $E · 🧵 filo $H · 🧦 calzini $C · 🌸 petali $P"
+  },
+  "tool_ducha": {
+    "message": "Soffione turbo"
+  },
+  "tool_ducha_d": {
+    "message": "Doccia istantanea"
+  },
+  "tool_cana": {
+    "message": "Canna della Fucina"
+  },
+  "tool_cana_d": {
+    "message": "4 lanci e pesce raro più facile"
+  },
+  "tool_ovillo": {
+    "message": "Gomitolo dorato"
+  },
+  "tool_ovillo_d": {
+    "message": "25 s di gioco e raggio maggiore"
+  },
+  "tool_comedero": {
+    "message": "Mangiatoia a botte"
+  },
+  "tool_comedero_d": {
+    "message": "Nutre automaticamente 🐟 se ha fame"
+  },
+  "craft_owned": {
+    "message": "Fatto"
+  },
+  "ai_dl_fail": {
+    "message": "Il download non è partito su questo dispositivo."
+  },
+  "confirm_deact": {
+    "message": "Disattivare la licenza su questo dispositivo? Potrai attivarla su un altro."
+  },
+  "confirm_release": {
+    "message": "Liberare $N? Tornerà libera alla Fucina. Non si può annullare."
+  },
+  "confirm_newegg": {
+    "message": "Spendere $P 🔥 per un uovo misterioso? Si incuberà nella scuderia con il tuo prossimo focus."
+  },
+  "bring_full": {
+    "message": "I posti a passeggio sono pieni. Archivia prima una creatura."
+  },
+  "bring_pro": {
+    "message": "Il secondo posto a passeggio è Pro"
+  },
+  "bring_back": {
+    "message": "$N torna a passeggio."
+  },
+  "multi_pro": {
+    "message": "Più di una creatura è una funzione Pro."
+  },
+  "say_back": {
+    "message": "Sei tornato!! Mi sei mancato 🤍"
+  },
+  "say_hello": {
+    "message": "Ciao! 👋 Mi mancavi già."
+  },
+  "tier_m": {
+    "message": "mensile"
+  },
+  "tier_a": {
+    "message": "annuale"
+  },
+  "tier_l": {
+    "message": "a vita"
+  },
+  "poop_edu": {
+    "message": "💩 $N è andato nel suo angolino, come gli hai insegnato."
+  },
+  "sp_slime": {
+    "message": "Slime puro"
+  },
+  "sp_gato": {
+    "message": "Gatto"
+  },
+  "sp_perro": {
+    "message": "Cane"
+  },
+  "sp_conejo": {
+    "message": "Coniglio"
+  },
+  "sp_dragon": {
+    "message": "Drago"
+  },
+  "sp_fantasma": {
+    "message": "Fantasmino"
+  },
+  "sp_zorro": {
+    "message": "Volpe"
+  },
+  "sp_panda": {
+    "message": "Panda"
+  },
+  "sp_axolotl": {
+    "message": "Axolotl"
+  },
+  "sp_pinguino": {
+    "message": "Pinguino"
+  },
+  "sp_buho": {
+    "message": "Gufo"
+  },
+  "sp_fenix": {
+    "message": "Fenice"
+  },
+  "sp_kitsune": {
+    "message": "Kitsune"
+  },
+  "sp_unicornio": {
+    "message": "Unicorno"
+  },
+  "sp_hada": {
+    "message": "Fata"
+  },
+  "sp_kraken": {
+    "message": "Kraken"
+  },
+  "tmp_jugueton": {
+    "message": "Giocherellone"
+  },
+  "tmp_tranquilo": {
+    "message": "Tranquillo"
+  },
+  "tmp_grunon": {
+    "message": "Brontolone"
+  },
+  "tmp_timido": {
+    "message": "Timido"
+  },
+  "tmp_caotico": {
+    "message": "Caotico"
+  },
+  "st_chispa": {
+    "message": "Scintilla"
+  },
+  "st_cria": {
+    "message": "Cucciolo"
+  },
+  "st_joven": {
+    "message": "Giovane"
+  },
+  "st_adulto": {
+    "message": "Adulto"
+  },
+  "st_colosal": {
+    "message": "Colossale"
+  },
+  "h_best": {
+    "message": "📖 Bestiario"
+  },
+  "best_note": {
+    "message": "Ogni specie si sblocca la prima volta che nasce o viene riforgiata. Le creature fantastiche sono più rare."
+  },
+  "best_count": {
+    "message": "Scoperte: $N / $T"
+  },
+  "lic_empty": {
+    "message": "Inserisci una chiave di licenza."
+  },
+  "lic_permission": {
+    "message": "Ci serve il tuo permesso per contattare il server delle licenze. Premi di nuovo Attiva e concedilo."
+  },
+  "lic_rejected": {
+    "message": "Chiave non valida o scaduta (controlla l'email di acquisto)."
+  },
+  "lic_server_error": {
+    "message": "Impossibile contattare il server. Riprova tra un momento."
+  },
+  "lic_wrong_product": {
+    "message": "Questa chiave appartiene a un altro prodotto di Wendygo Studio."
+  },
+  "lic_inactive": {
+    "message": "Questa licenza non è attiva ($status)."
+  },
+  "lic_network": {
+    "message": "Nessuna connessione. L'attivazione richiede internet una volta sola."
+  },
+  "h_save": {
+    "message": "💾 Salvataggio"
+  },
+  "exp_btn": {
+    "message": "Esporta partita"
+  },
+  "imp_btn": {
+    "message": "Importa"
+  },
+  "exp_ok": {
+    "message": "Partita esportata 📤"
+  },
+  "imp_confirm": {
+    "message": "Sostituire la partita attuale con quella del file? Azione irreversibile."
+  },
+  "imp_bad": {
+    "message": "Quel file non sembra un salvataggio di SlimeForge."
+  },
+  "save_note": {
+    "message": "Copia locale della tua partita in un file JSON. Tutto resta sul tuo dispositivo — niente cloud, niente account."
+  },
+  "wit_count": {
+    "message": "Repliche imparate: $N/$T — tocca per vederle"
+  },
+  "wit_title": {
+    "message": "Repliche da duello"
+  },
+  "wit_none": {
+    "message": "Nessuna replica imparata ancora. Occhio allo slime selvatico sfidante sulla pagina…"
+  },
+  "report_line": {
+    "message": "Ieri: $N sessioni di focus ($M min). Serie: $R 🔥 Oggi di più!"
+  },
+  "tab_focus": {
+    "message": "Focus"
+  },
+  "tab_play": {
+    "message": "Gioca"
+  },
+  "tab_col": {
+    "message": "Collezione"
+  },
+  "tab_more": {
+    "message": "Altro"
+  },
+  "h_dev": {
+    "message": "🧪 Modalità test"
+  },
+  "dev_lbl": {
+    "message": "Accelera il gioco ×10 e attiva le scorciatoie in pagina"
+  },
+  "dev_note": {
+    "message": "Con la creatura su una pagina: Alt+Maiusc + D duello · W slime selvatico · L laser · Z zoomies · B scatola · M incontro di branco · P pensiero · G annaffiatura dell'orto. Eventi ogni 25-60 s, la creatura non dorme."
+  },
+  "h_huerto": {
+    "message": "🌱 Orto"
+  },
+  "huerto_note": {
+    "message": "Le gocce 💧 si raccolgono toccando le pozze che la tua creatura lascia passeggiando. Ogni fase richiede un'annaffiatura; senza acqua la pianta aspetta, non muore mai."
+  },
+  "huerto_gotas_lbl": {
+    "message": "Hai $N 💧 · tocca una parcella libera per piantare"
+  },
+  "huerto_empty": {
+    "message": "Parcella libera"
+  },
+  "huerto_need_water": {
+    "message": "💧 Ha bisogno d'acqua"
+  },
+  "huerto_growing": {
+    "message": "Fase $S/3 · $T"
+  },
+  "huerto_ready": {
+    "message": "✨ Pronta!"
+  },
+  "huerto_pick": {
+    "message": "Scegli un seme ($N 💧 disponibili):"
+  },
+  "huerto_planted": {
+    "message": "Piantata: $S"
+  },
+  "huerto_watered": {
+    "message": "Annaffiata. Cresci bene."
+  },
+  "huerto_harvested": {
+    "message": "Raccolto: $N × $S"
+  },
+  "huerto_no_gotas": {
+    "message": "Ti mancano gocce 💧: porta a spasso la tua creatura e tocca le sue pozze"
+  },
+  "huerto_eat": {
+    "message": "$S Gnam! Dall'orto alla pancia."
+  },
+  "huerto_screen_lbl": {
+    "message": "Orto sullo schermo (accanto alla creatura)"
+  },
+  "huerto_op_lbl": {
+    "message": "Opacità dell'orto"
+  },
+  "despensa_lbl": {
+    "message": "🧺 Dispensa"
+  },
+  "eat_btn": {
+    "message": "Mangia"
+  },
+  "seed_baya": {
+    "message": "Bacca di rugiada"
+  },
+  "seed_baya_d": {
+    "message": "6 💧 · 4 h · dà 2 bacche (+18 fame, +4 umore)"
+  },
+  "seed_baya_fx": {
+    "message": "+18 fame · +4 umore · gratis"
+  },
+  "seed_zanahoria": {
+    "message": "Carota slime"
+  },
+  "seed_zanahoria_d": {
+    "message": "10 💧 · 9 h · dà 1 carota (+40 fame)"
+  },
+  "seed_zanahoria_fx": {
+    "message": "+40 fame · gratis"
+  },
+  "seed_flor": {
+    "message": "Fiore di brace"
+  },
+  "seed_flor_d": {
+    "message": "14 💧 · 14 h · 3 petali 🌸 per l'Officina · aura di umore passiva mentre cresce"
+  },
+  "seed_flor_fx": {
+    "message": "materiale dell'Officina"
+  },
+  "tool_regadera": {
+    "message": "Annaffiatoio di rugiada"
+  },
+  "tool_regadera_d": {
+    "message": "Annaffiare una parcella annaffia TUTTE quelle in attesa"
+  },
+  "focus_social_note": {
+    "message": "👀 Se visiti i social durante una sessione di focus, la tua creatura ti richiamerà (se sta passeggiando sulla pagina)."
+  },
+  "focus_hud_lbl": {
+    "message": "Timer sullo schermo (con pulsante di avvio rapido)"
+  },
+  "focus_hud_op": {
+    "message": "Opacità del timer"
+  },
+  "h_vestidor": {
+    "message": "🎽 Guardaroba"
+  },
+  "cos_note": {
+    "message": "I pezzi gratuiti si guadagnano giocando (focus, duelli, orto, gocce, collezione). I pezzi 🔒 dorati sono Pro. Niente si compra con il caso."
+  },
+  "cos_pro_lock": {
+    "message": "Pezzo esclusivo SlimeForge PRO"
+  },
+  "cos_slot_cabeza": {
+    "message": "Testa"
+  },
+  "cos_slot_cara": {
+    "message": "Viso"
+  },
+  "cos_slot_cuerpo": {
+    "message": "Corpo"
+  },
+  "cos_slot_aura": {
+    "message": "Aura"
+  },
+  "cos_slot_ascua": {
+    "message": "Brace"
+  },
+  "cos_slot_fondo": {
+    "message": "Sfondo"
+  },
+  "cosn_laurel": {
+    "message": "Corona d'alloro"
+  },
+  "cosn_paja": {
+    "message": "Cappello di paglia"
+  },
+  "cosn_orejasconejo": {
+    "message": "Orecchie da coniglio"
+  },
+  "cosn_cuernos": {
+    "message": "Corna di drago"
+  },
+  "cosn_halo": {
+    "message": "Aureola"
+  },
+  "cosn_estrella": {
+    "message": "Stella sulla guancia"
+  },
+  "cosn_gafaslectura": {
+    "message": "Occhiali da studio"
+  },
+  "cosn_gafassol": {
+    "message": "Occhiali da sole"
+  },
+  "cosn_capa": {
+    "message": "Mantello eroico"
+  },
+  "cosn_mariposa": {
+    "message": "Ali di farfalla"
+  },
+  "cosn_colazorro": {
+    "message": "Coda di volpe"
+  },
+  "cosn_alasmurci": {
+    "message": "Ali di pipistrello"
+  },
+  "cosn_aurarocio": {
+    "message": "Aura di rugiada"
+  },
+  "cosn_auradorada": {
+    "message": "Aura dorata"
+  },
+  "cosn_auracorazones": {
+    "message": "Aura di cuori"
+  },
+  "cosn_ascuagemela": {
+    "message": "Fiamma gemella"
+  },
+  "cosn_ascuaazul": {
+    "message": "Brace blu"
+  },
+  "cosn_fondopradera": {
+    "message": "Prateria"
+  },
+  "cosn_fondobosque": {
+    "message": "Bosco notturno"
+  },
+  "cosn_fondocosmos": {
+    "message": "Cosmo"
+  },
+  "cosc_duels10": {
+    "message": "Vinci 10 duelli d'ingegno"
+  },
+  "cosc_harvest1": {
+    "message": "Raccogli la tua prima pianta"
+  },
+  "cosc_harvest10": {
+    "message": "Raccogli 10 piante"
+  },
+  "cosc_species8": {
+    "message": "Scopri 8 specie"
+  },
+  "cosc_focus25": {
+    "message": "Completa 25 sessioni di focus"
+  },
+  "cosc_streak7": {
+    "message": "Serie di focus di 7 giorni"
+  },
+  "cosc_streak14": {
+    "message": "Serie di focus di 14 giorni"
+  },
+  "cosc_seeds3": {
+    "message": "Pianta i 3 tipi di semi"
+  },
+  "cosc_gotas50": {
+    "message": "Raccogli 50 gocce"
+  },
+  "cosc_colosal": {
+    "message": "Raggiungi Colossale per la prima volta"
+  },
+  "cos_slot_paleta": {
+    "message": "Palette"
+  },
+  "h_logros": {
+    "message": "🏅 Traguardi"
+  },
+  "logros_note": {
+    "message": "Ogni traguardo sblocca un pezzo del Guardaroba. Si guadagnano giocando, mai con il caso."
+  },
+  "cosn_paletadorada": {
+    "message": "Palette dorata"
+  },
+  "cosn_paletamedianoche": {
+    "message": "Palette mezzanotte"
+  },
+  "cosn_paletasakura": {
+    "message": "Palette sakura"
+  },
+  "cosn_paletacarbon": {
+    "message": "Palette carbone"
+  },
+  "cosn_paletasangria": {
+    "message": "Palette sangria"
+  },
+  "perks_head_trial": {
+    "message": "In questo momento hai tutto Pro:"
+  },
+  "perks_head_lost": {
+    "message": "Con la prova finita, questi sono in pausa:"
+  },
+  "perks_head_free": {
+    "message": "Cosa include Pro:"
+  },
+  "perk_will_pause": {
+    "message": "· lo stai usando ora; andrà in pausa a fine prova"
+  },
+  "perks_safe": {
+    "message": "Niente viene cancellato: a fine prova le tue creature, i cosmetici e i progressi restano salvati. Solo le funzioni Pro vanno in pausa finché non attivi una licenza; a quel punto tornano esattamente come erano."
+  },
+  "perk_multi": {
+    "message": "Più creature"
+  },
+  "perkd_multi": {
+    "message": "Fino a 3 creature nella stalla insieme."
+  },
+  "perk_pack": {
+    "message": "Modalità branco"
+  },
+  "perkd_pack": {
+    "message": "Le creature della stalla passeggiano insieme sul web."
+  },
+  "perk_reserve": {
+    "message": "Riserva ampliata"
+  },
+  "perkd_reserve": {
+    "message": "Conserva fino a 25 creature invece di 10."
+  },
+  "perk_cos": {
+    "message": "Cosmetici Pro"
+  },
+  "perkd_cos": {
+    "message": "Parti d'animale, aure, braci e palette esclusive del Guardaroba."
+  },
+  "perk_focus": {
+    "message": "Focus potenziato"
+  },
+  "perkd_focus": {
+    "message": "Guadagni ×1,5 di braci 🔥 completando le sessioni di focus (la moneta per forgiare nuove creature)."
+  },
+  "perk_acc": {
+    "message": "Accessori Pro"
+  },
+  "perkd_acc": {
+    "message": "Cappello e monocolo per la tua creatura."
+  },
+  "perk_forge": {
+    "message": "La Forgia"
+  },
+  "perkd_forge": {
+    "message": "Ridisegna completamente l'aspetto della tua creatura (specie, colori, motivi, accessori…) con anteprima. 3 forgiature al mese."
+  },
+  "perk_forge_left": {
+    "message": "· te ne restano $N questo mese"
+  },
+  "lic_activating": {
+    "message": "Attivazione…"
+  },
+  "pro_renews": {
+    "message": "si rinnova il $DATE"
+  },
+  "egg_focus_hint": {
+    "message": "Ha bisogno del calore della tua concentrazione. Avvia un focus!"
+  },
+  "egg_inc_note": {
+    "message": "La tua prima sessione completata farà schiudere l'uovo. Continua anche a popup chiuso."
+  },
+  "ob_t1": {
+    "message": "Un uovo misterioso!"
+  },
+  "ob_d1": {
+    "message": "Dentro dorme una creatura unica — una di 16 specie. Nessuno sa quale."
+  },
+  "ob_t2": {
+    "message": "Il focus lo cova"
+  },
+  "ob_d2": {
+    "message": "Completa la tua prima sessione pomodoro e si schiuderà. La tua concentrazione è il suo calore."
+  },
+  "ob_next": {
+    "message": "Avanti"
+  },
+  "ob_go": {
+    "message": "🔥 Avviare il mio primo focus"
+  },
+  "dnd_title": {
+    "message": "🔕 Non disturbare"
+  },
+  "dnd_empty": {
+    "message": "Nessun sito silenziato. Usa il pulsante 🔕 del timer in pagina."
+  },
+  "dnd_resume": {
+    "message": "Riprendi ora"
+  },
+  "dnd_until": {
+    "message": "In pausa fino alle $T"
+  },
+  "hatch_roam_t": {
+    "message": "$NAME passeggia con te?"
+  },
+  "hatch_roam_d": {
+    "message": "Può accompagnarti sulle tue pagine mentre lavori: monta la scrivania nel focus e ti richiama se ti distrai. Disattivabile quando vuoi."
+  },
+  "roam_yes": {
+    "message": "🐾 Sì, passeggia con me"
+  },
+  "roam_later": {
+    "message": "Forse più tardi"
+  },
+  "roam_next_page": {
+    "message": "Fatto — apparirà sul prossimo sito che apri 🐾"
+  },
+  "born_stable": {
+    "message": "L’uovo nella scuderia si è schiuso: è $NAME!"
+  },
+  "egg_stable_hint": {
+    "message": "L’uovo aspetta nella scuderia: la tua prossima sessione di focus completata lo farà schiudere."
+  }
+}

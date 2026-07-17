@@ -7,10 +7,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Share Network Config with Support Tickets Safely | Wendygo Studio</title>
-  <meta name="description" content="Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first — keep live credentials off support databases." />
+  <title>Share Network Configs Safely with Support | Wendygo Studio</title>
+  <meta name="description" content="Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first." />
   <link rel="canonical" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/" />
   <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/" />
 
   <script type="application/ld+json">
   {
@@ -217,16 +218,37 @@
     .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
     .footer-links a:hover { color: var(--text); }
     .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
-  </style>
+  .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+    </style>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Wendygo Studio">
-<meta property="og:title" content="How to Share Network Config with Support Tickets Safely | Wendygo Studio">
-<meta property="og:description" content="Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first — keep live credentials off support databases while sharing the structure vendors need.">
+<meta property="og:title" content="Share Network Configs Safely with Support | Wendygo Studio">
+<meta property="og:description" content="Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first.">
 <meta property="og:url" content="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/">
 <meta property="og:image" content="https://wendygostudio.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How to Share Network Config with Support Tickets Safely | Wendygo Studio">
-<meta name="twitter:description" content="Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first — keep live credentials off support databases while sharing the structure vendors need.">
+<meta name="twitter:title" content="Share Network Configs Safely with Support | Wendygo Studio">
+<meta name="twitter:description" content="Vendor support needs your network config to help troubleshoot. Sanitize credentials with ScrubForge first.">
 <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
 </head>
 <body>
@@ -236,7 +258,9 @@
     <div class="nav-mark">W</div>
     Wendygo Studio
   </a>
-  <div class="nav-links">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
     <a href="/blog/">Blog</a>
     <a href="/#tools">Tools</a>
   </div>

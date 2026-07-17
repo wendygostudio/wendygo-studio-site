@@ -7,8 +7,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FrameForge vs Canva para miniaturas: ¿Cuál es más rápido en 2026? — Wendygo Studio</title>
-  <meta name="description" content="Canva es excelente para diseñar desde cero. FrameForge es más rápido cuando ya tienes una imagen y solo necesitas las dimensiones correctas. Aquí te." />
+  <title>FrameForge vs Canva para Miniaturas | Wendygo Studio</title>
+  <meta name="description" content="Canva es ideal para diseñar desde cero. FrameForge es más rápido cuando ya tienes la imagen y solo faltan las medidas." />
   <link rel="canonical" href="https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/" />
   <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/" />
@@ -207,20 +207,38 @@
     .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
     .footer-links a:hover { color: var(--muted); }
 
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
     @media (max-width: 600px) {
-      .nav-links { display: none; }
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
       .verdict-grid { grid-template-columns: 1fr; }
     }
   </style>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Wendygo Studio">
-<meta property="og:title" content="FrameForge vs Canva para miniaturas: ¿Cuál es más rápido en 2026? — Wendygo Studio">
-<meta property="og:description" content="Canva es excelente para diseñar desde cero. FrameForge es más rápido cuando ya tienes una imagen y solo necesitas las dimensiones correctas. Aquí te mostramos cómo elegir la herramienta adecuada para tu flujo de trabajo.">
+<meta property="og:title" content="FrameForge vs Canva para Miniaturas | Wendygo Studio">
+<meta property="og:description" content="Canva es ideal para diseñar desde cero. FrameForge es más rápido cuando ya tienes la imagen y solo faltan las medidas.">
 <meta property="og:url" content="https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/">
 <meta property="og:image" content="https://wendygostudio.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FrameForge vs Canva para miniaturas: ¿Cuál es más rápido en 2026? — Wendygo Studio">
-<meta name="twitter:description" content="Canva es excelente para diseñar desde cero. FrameForge es más rápido cuando ya tienes una imagen y solo necesitas las dimensiones correctas. Aquí te mostramos cómo elegir la herramienta adecuada para tu flujo de trabajo.">
+<meta name="twitter:title" content="FrameForge vs Canva para Miniaturas | Wendygo Studio">
+<meta name="twitter:description" content="Canva es ideal para diseñar desde cero. FrameForge es más rápido cuando ya tienes la imagen y solo faltan las medidas.">
 <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
 </head>
 <body>  <nav>
@@ -228,6 +246,8 @@
       <div class="nav-mark">W</div>
       Wendygo Studio
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="nav-links">
       <a href="/es/#products">Extensiones</a>
       <a href="/es/blog/">Blog</a>

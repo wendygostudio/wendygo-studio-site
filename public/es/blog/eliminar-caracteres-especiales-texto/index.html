@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eliminar Caracteres Especiales de un Texto | TextForge</title>
+  <meta name="description" content="Quita puntuación, símbolos y caracteres especiales de un texto en lote — todo en local, con TextForge." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-special-characters-from-text/" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Eliminar Caracteres Especiales de un Texto | TextForge">
+  <meta property="og:description" content="Quita puntuación, símbolos y caracteres especiales de un texto en lote — todo en local, con TextForge.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eliminar Caracteres Especiales de un Texto | TextForge">
+  <meta name="twitter:description" content="Quita puntuación, símbolos y caracteres especiales de un texto en lote — todo en local, con TextForge.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Remove Special Characters from Text Online"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Remove Special Characters from Text Online: Bulk Sanitizer for TextForge",
+    "description": "Strip punctuation, symbols, and special characters from text in bulk. Sanitize email lists, clean URLs, format usernames, and more — all locally in your browser with TextForge.",
+    "datePublished": "2026-07-13",
+    "dateModified": "2026-07-13",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why remove special characters from text?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Special characters can break workflows: emails with invalid syntax, usernames with forbidden symbols, URLs with extra punctuation, or data that fails validation. Removing them in bulk ensures consistency and compatibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I choose which characters to remove?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TextForge includes functions to remove punctuation, remove numbers, remove non-alphanumeric characters, and more. Chain multiple operations to create a custom sanitization pipeline tailored to your data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this work on large files?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TextForge processes text locally in your browser, so there is no file size limit imposed by a server. Thousands of lines clean instantly."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .page-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(40px,8vw,72px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      display: flex; gap: 6px; align-items: center;
+      font-size: 13px; color: var(--muted); margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--faint); }
+
+    .tag {
+      display: inline-block;
+      background: rgba(232,163,61,.15); color: var(--amber);
+      border: 1px solid rgba(232,163,61,.3);
+      border-radius: 4px; padding: 2px 8px; font-size: 11px;
+      font-weight: 600; letter-spacing: .5px; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 36px); font-weight: 800;
+      line-height: 1.25; letter-spacing: -.3px;
+      color: var(--text); margin-bottom: 20px;
+    }
+    .page-intro {
+      font-size: 18px; color: var(--muted); line-height: 1.65;
+      margin-bottom: 40px; border-bottom: 1px solid var(--line); padding-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin: 40px 0 14px; line-height: 1.3;
+    }
+    p { margin-bottom: 16px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { color: var(--amber2); }
+    code {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 13px; background: var(--surf2);
+      border: 1px solid var(--line); border-radius: 4px;
+      padding: 1px 5px; color: var(--amber2);
+    }
+
+    .ops-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px; margin: 20px 0 32px;
+    }
+    .op-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 14px 16px;
+    }
+    .op-name {
+      font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .op-desc {
+      font-size: 13px; color: var(--muted); line-height: 1.5;
+    }
+
+    .steps-list {
+      display: flex; flex-direction: column; gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .step-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 18px 20px;
+      display: grid; grid-template-columns: 32px 1fr; gap: 14px; align-items: start;
+    }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(232,163,61,.15); border: 1px solid rgba(232,163,61,.3);
+      display: grid; place-items: center;
+      font-size: 13px; font-weight: 700; color: var(--amber); flex-shrink: 0;
+    }
+    .step-body h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; color: var(--text); }
+    .step-body p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+    .before-after {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .ba-panel {
+      background: var(--surf2); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 14px 16px;
+    }
+    .ba-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; margin-bottom: 10px;
+    }
+    .ba-label.before { color: #e05252; }
+    .ba-label.after { color: #52b788; }
+    .ba-panel pre {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 11px; line-height: 1.6; overflow-x: auto;
+      margin: 0; color: var(--muted);
+    }
+
+    .highlight-box {
+      background: var(--surf); border: 1px solid var(--line);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--r); padding: 18px 20px;
+      margin: 24px 0 32px;
+    }
+    .highlight-box p { margin: 0; font-size: 14px; }
+
+    .cta-box {
+      background: var(--surf2); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 28px;
+      margin: 40px 0; text-align: center;
+    }
+    .cta-box h3 { font-size: 19px; font-weight: 800; color: var(--text); margin: 0 0 10px; }
+    .cta-box p { font-size: 14px; color: var(--muted); margin: 0 0 18px; max-width: 420px; margin-left: auto; margin-right: auto; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 14px; padding: 11px 22px;
+      border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); color: var(--on-a); }
+
+    .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .faq-item {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 20px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.55; }
+
+    .related { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .related p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px);
+      border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      max-width: 1180px; margin: 0 auto;
+    }
+    footer a { color: var(--faint); text-decoration: none; }
+    footer a:hover { color: var(--muted); }
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .ops-grid { grid-template-columns: 1fr; }
+      .step-card { grid-template-columns: 1fr; }
+      .step-num { display: none; }
+      .before-after { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/es/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/">Inicio</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/blog/remove-special-characters-from-text/">EN 🌐</a>
+    </div>
+  </nav>
+
+  <main class="page-wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/es/">Inicio</a>
+      <span>/</span>
+      <a href="/es/blog/">Blog</a>
+      <span>/</span>
+      <span>Eliminar caracteres especiales de un texto</span>
+    </nav>
+
+    <div class="tag">TextForge — Blog</div>
+
+    <h1>Eliminar Caracteres Especiales de un Texto Online</h1>
+
+    <p class="page-intro">Cuando pegas una lista de emails, nombres de usuario o URLs, suele venir con caracteres no deseados: puntuación, símbolos, guiones, guiones bajos o marcas especiales que rompen la validación o el formato. TextForge elimina esos caracteres en lote — sanitizando cientos o miles de líneas en segundos.</p>
+
+    <h2>¿Por qué eliminar caracteres especiales?</h2>
+
+    <p>Los caracteres especiales causan problemas reales:</p>
+    <ul style="margin: 16px 0 16px 20px; color: var(--text);">
+      <li><strong>Listas de emails</strong> — La puntuación o los guiones finales invalidan las direcciones.</li>
+      <li><strong>Nombres de usuario</strong> — Muchos sistemas rechazan caracteres como <code>@</code>, <code>#</code>, <code>!</code>.</li>
+      <li><strong>URLs</strong> — La puntuación o los parámetros sobrantes ensucian el dominio.</li>
+      <li><strong>Importaciones de datos</strong> — Los parsers de CSV se atragantan con símbolos inesperados.</li>
+      <li><strong>Seguridad</strong> — Sanitizar la entrada del usuario previene ataques de inyección.</li>
+    </ul>
+
+    <h2>Opciones de eliminación de caracteres en TextForge</h2>
+
+    <p>TextForge incluye 58 funciones de texto. Estas son las más útiles para quitar caracteres:</p>
+
+    <div class="ops-grid">
+      <div class="op-card">
+        <div class="op-name">Eliminar puntuación</div>
+        <div class="op-desc">Quita comas, puntos, puntos y comas y otros signos de puntuación de cada línea.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-name">Eliminar números</div>
+        <div class="op-desc">Borra todos los dígitos si tu texto tiene que quedarse solo con letras.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-name">Eliminar no alfanuméricos</div>
+        <div class="op-desc">Conserva solo letras y números; elimina todo lo demás.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-name">Eliminar espacios</div>
+        <div class="op-desc">Borra espacios, tabuladores y saltos de línea para compactar el texto.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-name">Recortar espacios (trim)</div>
+        <div class="op-desc">Elimina los espacios al inicio y al final de cada línea.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-name">Decodificar Base64</div>
+        <div class="op-desc">Decodifica contenido en Base64 para revelar el texto subyacente.</div>
+      </div>
+    </div>
+
+    <h2>Ejemplo real: limpiar una importación de emails</h2>
+
+    <p>Exportas una lista de contactos desde un sistema antiguo. Los nombres traen comas y puntos, y las direcciones de email llevan puntuación final:</p>
+
+    <div class="before-after">
+      <div class="ba-panel">
+        <div class="ba-label before">Antes — exportación sucia</div>
+        <pre>John, Smith | john.smith@example.com.
+Dr. Jane (Sarah) Johnson - jane_johnson@example.com!
+Mark O'Brien; mark.obrien@example.com?</pre>
+      </div>
+      <div class="ba-panel">
+        <div class="ba-label after">Después — sanitizada</div>
+        <pre>john.smith@example.com
+jane_johnson@example.com
+mark.obrien@example.com</pre>
+      </div>
+    </div>
+
+    <p>Con TextForge: <strong>Extraer emails → Recortar espacios → Eliminar líneas en blanco</strong>.</p>
+
+    <h2>Cómo limpiar caracteres especiales en lote</h2>
+
+    <div class="steps-list">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Pega tu texto en TextForge</h3>
+          <p>Haz clic en el icono de TextForge en tu barra de Chrome y pega el texto en bruto con los caracteres no deseados.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Selecciona las funciones de eliminación</h3>
+          <p>Elige entre Eliminar puntuación, Eliminar números, Eliminar no alfanuméricos u otras funciones de sanitización.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Encadena operaciones extra si hace falta</h3>
+          <p>Añade Extraer emails, Recortar espacios o Eliminar líneas duplicadas para refinar aún más la salida.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Copia tu texto limpio</h3>
+          <p>Copia la salida sanitizada directamente. Todo ha ocurrido en local, en tu navegador — sin subidas, sin almacenamiento.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Elimina caracteres especiales gratis</h3>
+      <p>TextForge es una extensión de Chrome gratuita con 58 funciones de texto. Sanitiza texto en lote, en local, en segundos.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+        Instalar TextForge &rarr;
+      </a>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">¿Por qué eliminar caracteres especiales de un texto?</div>
+        <p class="faq-a">Los caracteres especiales pueden romper flujos de trabajo: emails con sintaxis inválida, nombres de usuario con símbolos prohibidos, URLs con puntuación sobrante o datos que no pasan la validación. Eliminarlos en lote garantiza consistencia y compatibilidad.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Puedo elegir qué caracteres eliminar?</div>
+        <p class="faq-a">Sí. TextForge incluye funciones para eliminar puntuación, eliminar números, eliminar caracteres no alfanuméricos y más. Encadena varias operaciones para crear un pipeline de sanitización a medida de tus datos.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Funciona con archivos grandes?</div>
+        <p class="faq-a">Sí. TextForge procesa el texto en local, en tu navegador, así que no hay límite de tamaño impuesto por ningún servidor. Miles de líneas se limpian al instante.</p>
+      </div>
+    </div>
+
+    <div class="related">
+      <p>Guías relacionadas</p>
+      <a href="/es/use-cases/limpiador-de-texto-en-lote/">Limpiador de texto en lote — Procesa y transforma grandes volúmenes de texto</a> &middot;
+      <a href="/es/blog/limpiar-texto-online/">Limpiar texto online — Eliminar espacios y líneas en blanco</a> &middot;
+      <a href="/es/blog/extraer-correos-desde-texto/">Cómo extraer emails de un texto</a>
+    </div>
+  </main>
+
+  <footer>
+    <span style="color:var(--faint);font-size:13px;">&copy; 2026 Wendygo Studio</span>
+    <div style="display:flex;gap:20px;font-size:13px;">
+      <a href="/es/">Inicio</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+    </div>
+  </footer>
+</body>
+</html>

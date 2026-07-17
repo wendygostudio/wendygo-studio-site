@@ -1,0 +1,1261 @@
+{
+  "extName": {
+    "message": "SlimeForge — Pomodoro Timer & Focus Pet"
+  },
+  "extDesc": {
+    "message": "A pomodoro timer with a tiny pet that grows with your focus. It works at its desk while you work — and catches you slacking."
+  },
+  "born": {
+    "message": "$NAME is born — $ART $LABEL $TEMPADJ!",
+    "placeholders": {
+      "NAME": {
+        "content": "$1"
+      },
+      "ART": {
+        "content": "$2"
+      },
+      "LABEL": {
+        "content": "$3"
+      },
+      "TEMPADJ": {
+        "content": "$4"
+      }
+    }
+  },
+  "rarity": {
+    "message": "$R rarity!",
+    "placeholders": {
+      "R": {
+        "content": "$1"
+      }
+    }
+  },
+  "feed_fish": {
+    "message": "Yum, fresh fish."
+  },
+  "feed_apple": {
+    "message": "Yum. +30 hunger"
+  },
+  "clean": {
+    "message": "All clean! +2 bond"
+  },
+  "shower_done": {
+    "message": "Sparkling!"
+  },
+  "focus_start": {
+    "message": "The Ember beats with you. Focus for $M min!",
+    "placeholders": {
+      "M": {
+        "content": "$1"
+      }
+    }
+  },
+  "focus_done": {
+    "message": "Session done: +$N 🔥$X and +10 growth",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      },
+      "X": {
+        "content": "$2"
+      }
+    }
+  },
+  "focus_break": {
+    "message": "5-min break. You earned it."
+  },
+  "focus_break_end": {
+    "message": "Break over. Another session?"
+  },
+  "focus_abandon": {
+    "message": "Session abandoned. $N sighs.",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "streak_lbl": {
+    "message": "🔥 Streak: $D day(s) · bonus +$B",
+    "placeholders": {
+      "D": {
+        "content": "$1"
+      },
+      "B": {
+        "content": "$2"
+      }
+    }
+  },
+  "streak_none": {
+    "message": "Complete a daily session to start your streak."
+  },
+  "stats_week": {
+    "message": "📊 Week: $N ses. · $M min · record: $R days",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      },
+      "M": {
+        "content": "$2"
+      },
+      "R": {
+        "content": "$3"
+      }
+    }
+  },
+  "stats_none": {
+    "message": "📊 No sessions this week yet."
+  },
+  "invoke": {
+    "message": "Summoned to this tab"
+  },
+  "invoke_fail": {
+    "message": "Can't summon on this page"
+  },
+  "always_on": {
+    "message": "Your creature will roam every website"
+  },
+  "always_off": {
+    "message": "On-screen mode disabled"
+  },
+  "pack_on": {
+    "message": "Your creatures roam together."
+  },
+  "pack_off": {
+    "message": "Only the active one roams."
+  },
+  "pack_lock": {
+    "message": "Pack mode is a Pro feature"
+  },
+  "forge_lock": {
+    "message": "The Forge is a Pro feature (3/month)."
+  },
+  "forge_limit": {
+    "message": "Forge rests: used your 3 reforges."
+  },
+  "forge_done": {
+    "message": "Reforged in the Forge"
+  },
+  "visit_code": {
+    "message": "Code copied."
+  },
+  "visit_invalid": {
+    "message": "Invalid code"
+  },
+  "visit_self": {
+    "message": "That's your own creature"
+  },
+  "visit_arrive": {
+    "message": "$N is visiting!",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "sick_msg": {
+    "message": "$N got sick. Needs 💊 and 3 cuddles.",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "cure_meds": {
+    "message": "Medicine taken. Needs 3 cuddles 🤍"
+  },
+  "cure_done": {
+    "message": "$N is cured! Love works.",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "egg_cost_msg": {
+    "message": "Costs $N 🔥. Embers are earned, never bought.",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "egg_new": {
+    "message": "A new egg awaits your taps."
+  },
+  "rename_prompt": {
+    "message": "New name for your creature:"
+  },
+  "renamed": {
+    "message": "Now named $N ✨",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "gift_msg": {
+    "message": "🎁 Brought you a gift: $G",
+    "placeholders": {
+      "G": {
+        "content": "$1"
+      }
+    }
+  },
+  "gift_say": {
+    "message": "Found this. It's for you. 🤍"
+  },
+  "daily_feed": {
+    "message": "Feed your creature"
+  },
+  "daily_focus": {
+    "message": "Focus session"
+  },
+  "daily_play": {
+    "message": "Play a minigame"
+  },
+  "daily_done": {
+    "message": "🏆 Day complete! +6 🔥 and +1 material"
+  },
+  "pro_active": {
+    "message": "⭐ Pro active"
+  },
+  "pro_pitch": {
+    "message": "With Pro: The Forge, 3 creatures together, cosmetics and x1.5 🔥. Eggs are NEVER bought with real money."
+  },
+  "pro_activated": {
+    "message": "⭐ Pro activated! Thanks for supporting the Forge."
+  },
+  "pro_deact": {
+    "message": "License deactivated."
+  },
+  "pro_test": {
+    "message": "🧪 Test build: Pro unlocked."
+  },
+  "reserve_full": {
+    "message": "Reserve full ($N).",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "stored": {
+    "message": "📦 $N moved to Reserve.",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "released": {
+    "message": "🕊️ $N returned to the wild.",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "swap_msg": {
+    "message": "$N is back with you.",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "craft_done": {
+    "message": "⚒️ $N crafted in Workshop",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "bond_1": {
+    "message": "Acquaintances"
+  },
+  "bond_2": {
+    "message": "Friends"
+  },
+  "bond_3": {
+    "message": "Close friends"
+  },
+  "bond_4": {
+    "message": "Inseparable"
+  },
+  "bond_5": {
+    "message": "Soulmates"
+  },
+  "h_focus": {
+    "message": "⏱️ Focus"
+  },
+  "h_screen": {
+    "message": "🪄 On screen"
+  },
+  "h_craft": {
+    "message": "⚒️ Workshop"
+  },
+  "h_visit": {
+    "message": "🧬 Visits"
+  },
+  "h_daily": {
+    "message": "🎯 Today"
+  },
+  "h_pets": {
+    "message": "🏠 My creatures"
+  },
+  "h_pro": {
+    "message": "⭐ SlimeForge Pro"
+  },
+  "h_ai": {
+    "message": "🧠 Local AI (Gemini Nano)"
+  },
+  "ai_active": {
+    "message": "Active: dialogues run on your device."
+  },
+  "ai_download": {
+    "message": "Ready to download (one-time, several GB)."
+  },
+  "ai_unavail": {
+    "message": "Unavailable — using phrase bank."
+  },
+  "ai_ready": {
+    "message": "🧠 Local AI ready."
+  },
+  "lbl_size": {
+    "message": "Size"
+  },
+  "lbl_invoke": {
+    "message": "Summon to this tab"
+  },
+  "lbl_always": {
+    "message": "Always, on every website"
+  },
+  "lbl_pack": {
+    "message": "Roam together (all creatures)"
+  },
+  "lbl_demo": {
+    "message": "Demo mode (x120)"
+  },
+  "upsell": {
+    "message": "💡 With Pro, your creatures roam and chat together daily."
+  },
+  "poop_corner": {
+    "message": "To my corner, as you taught me. 😌"
+  },
+  "comedero": {
+    "message": "🛢️ Feeder served a 🐟 ($N left).",
+    "placeholders": {
+      "N": {
+        "content": "$1"
+      }
+    }
+  },
+  "lbl_hambre": {
+    "message": "Hunger"
+  },
+  "lbl_higiene": {
+    "message": "Hygiene"
+  },
+  "lbl_animo": {
+    "message": "Mood"
+  },
+  "lbl_vinculo": {
+    "message": "Bond"
+  },
+  "lbl_educacion": {
+    "message": "Education"
+  },
+  "visit_code_btn": {
+    "message": "Copy my code"
+  },
+  "visit_invite_btn": {
+    "message": "Invite"
+  },
+  "nano_lang": {
+    "message": "English"
+  },
+  "ai_checking": {
+    "message": "Checking availability…"
+  },
+  "ai_downloading": {
+    "message": "Downloading the model…"
+  },
+  "pets_active": {
+    "message": "Active now"
+  },
+  "pets_withyou": {
+    "message": "With you"
+  },
+  "pets_resting": {
+    "message": "Resting by the Forge"
+  },
+  "pets_swap": {
+    "message": "Swap"
+  },
+  "pets_free": {
+    "message": "Free slot"
+  },
+  "pets_prolock": {
+    "message": "Pro feature"
+  },
+  "pets_newegg_cost": {
+    "message": "New egg · $N 🔥"
+  },
+  "pets_newegg_btn": {
+    "message": "New egg"
+  },
+  "egg_word": {
+    "message": "Egg"
+  },
+  "egg_meta": {
+    "message": "An egg from the Forge"
+  },
+  "stage_lbl": {
+    "message": "Stage"
+  },
+  "hint_egg": {
+    "message": "The warmth of a focus session will hatch the egg 🔥"
+  },
+  "res_head": {
+    "message": "Reserve ($N/$C)"
+  },
+  "res_pro_note": {
+    "message": "Pro expands it to 25"
+  },
+  "res_unhatched": {
+    "message": "Unhatched"
+  },
+  "res_bring": {
+    "message": "Bring back"
+  },
+  "res_empty": {
+    "message": "Empty. Archive creatures with 📦 to raise more eggs."
+  },
+  "daily_done_row": {
+    "message": "Full day! Reward collected."
+  },
+  "trial_active": {
+    "message": "Free Pro trial: $D day(s) left."
+  },
+  "trial_over": {
+    "message": "Trial over. Go Pro from €1.99/mo."
+  },
+  "lbl_growth": {
+    "message": "Growth"
+  },
+  "act_shower": {
+    "message": "Shower"
+  },
+  "act_pet": {
+    "message": "Pet"
+  },
+  "act_meds": {
+    "message": "Medicine (10🔥)"
+  },
+  "focus_btn": {
+    "message": "Start"
+  },
+  "focus_cancel": {
+    "message": "Give up"
+  },
+  "focus_note": {
+    "message": "Finish the session → +15 Embers and +10 growth (Pro: x1.5 🔥). It keeps running even if you close the popup — the Ember never gives up."
+  },
+  "h_minis": {
+    "message": "Minigames"
+  },
+  "mg_pesca": {
+    "message": "Fishing"
+  },
+  "mg_ovillo": {
+    "message": "Yarn ball"
+  },
+  "minis_note": {
+    "message": "Max 3 rounds of each per day. Fishing stocks the pantry with 🐟; in the yarn ball your own creature plays."
+  },
+  "pets_note": {
+    "message": "Strolling creatures can roam your screen together. The Reserve 📦 keeps the rest with time frozen; releasing 🕊️ is forever."
+  },
+  "screen_note": {
+    "message": "\"Summon\" only acts on the current tab. \"Always\" will ask permission for all sites and your creature will roam every page you visit. You can turn it off anytime."
+  },
+  "visit_ph": {
+    "message": "Paste a friend's creature code here…"
+  },
+  "plan_m": {
+    "message": "€1.99/mo"
+  },
+  "plan_a": {
+    "message": "€9.99/yr"
+  },
+  "plan_l": {
+    "message": "€19.99 · forever"
+  },
+  "pro_key_ph": {
+    "message": "License key (from your purchase email)"
+  },
+  "pro_act_btn": {
+    "message": "Activate"
+  },
+  "pro_deact_btn": {
+    "message": "Deactivate on this device"
+  },
+  "feed_btn": {
+    "message": "Feed (2🔥)"
+  },
+  "feed_btn_fish": {
+    "message": "Feed (x$N)"
+  },
+  "growth_max": {
+    "message": "MAX! 🎉"
+  },
+  "focus_break_cancel": {
+    "message": "Break cancelled."
+  },
+  "poop_1": {
+    "message": "💩 Oops. $N looks away, whistling innocently."
+  },
+  "poop_2": {
+    "message": "💩 $N feels much better now!"
+  },
+  "poop_3": {
+    "message": "💩 That wasn't $N. It was the wind. Honest."
+  },
+  "poop_4": {
+    "message": "💩 $N is watching you. You know what to do."
+  },
+  "ev_loaf": {
+    "message": "Loaf mode activated."
+  },
+  "ev_hiccup": {
+    "message": "Hic! ...hic!"
+  },
+  "cure_pet": {
+    "message": "Healing pet $N/3"
+  },
+  "say_cured": {
+    "message": "Good as new! Thank you 🤍"
+  },
+  "say_meds": {
+    "message": "Yuck… tastes awful. 🤒"
+  },
+  "evolved": {
+    "message": "✨ $N evolved into $S!"
+  },
+  "mg_pesca_title": {
+    "message": "Fishing at the Forge"
+  },
+  "mg_pesca_result": {
+    "message": "Result: +$B 🔥, $F 🐟 and $E scales (+6 mood)."
+  },
+  "mg_collect": {
+    "message": "Collect"
+  },
+  "mg_pesca_toast": {
+    "message": "+$B Embers and $F fish"
+  },
+  "mg_cast": {
+    "message": "Cast ($N/$M)"
+  },
+  "mg_bite": {
+    "message": "Hook it!"
+  },
+  "mg_pesca_note": {
+    "message": "Press when the needle is in the amber zone. The bright center = rare fish."
+  },
+  "mg_fish_rare": {
+    "message": "Rare fish!"
+  },
+  "mg_fish_ok": {
+    "message": "Caught one!"
+  },
+  "mg_fish_miss": {
+    "message": "It got away…"
+  },
+  "mg_ovillo_title": {
+    "message": "The yarn ball"
+  },
+  "mg_ovillo_note": {
+    "message": "Move the yarn and keep your creature hooked: you score while it chases closely and the yarn moves."
+  },
+  "mg_ovillo_result": {
+    "message": "$P points → +$B 🔥$H, +10 mood and +1 bond. $N sprawls out, exhausted and happy."
+  },
+  "mg_done": {
+    "message": "Finish"
+  },
+  "mg_ovillo_toast": {
+    "message": "+$B Embers"
+  },
+  "visit_alias": {
+    "message": "Your name or alias (your friend will see it):"
+  },
+  "visit_r2": {
+    "message": "They became great friends! 💕"
+  },
+  "visit_r1": {
+    "message": "They like each other 🙂"
+  },
+  "visit_r0": {
+    "message": "Diplomatic cordiality 😐"
+  },
+  "visit_rm1": {
+    "message": "They didn't hit it off… 😾"
+  },
+  "visit_rm2": {
+    "message": "⚡ Total personality clash"
+  },
+  "visit_bff": {
+    "message": "$A and $B are best friends!"
+  },
+  "visit_mems": {
+    "message": "Memories:"
+  },
+  "visit_none": {
+    "message": "Hasn't met anyone yet. Exchange codes with a friend."
+  },
+  "forge_title": {
+    "message": "The Forge ($N left this month)"
+  },
+  "fk_none": {
+    "message": "No markings"
+  },
+  "fk_patches": {
+    "message": "Patches"
+  },
+  "fk_belly": {
+    "message": "Light belly"
+  },
+  "fk_pb": {
+    "message": "Patches + belly"
+  },
+  "acc_none": {
+    "message": "No accessory"
+  },
+  "acc_lazo": {
+    "message": "Bow"
+  },
+  "acc_buf": {
+    "message": "Scarf"
+  },
+  "acc_gorro": {
+    "message": "Beanie"
+  },
+  "acc_mono": {
+    "message": "Monocle"
+  },
+  "g_f": {
+    "message": "Female"
+  },
+  "g_m": {
+    "message": "Male"
+  },
+  "forge_name_ph": {
+    "message": "Name"
+  },
+  "forge_btn": {
+    "message": "Reforge"
+  },
+  "forge_note": {
+    "message": "The Forge changes looks and temperament while keeping progress (stage, bond, Embers)."
+  },
+  "forge_confirm": {
+    "message": "Reforge $N? Looks and temperament will change; progress is kept."
+  },
+  "pro_from": {
+    "message": "From €1.99/mo."
+  },
+  "mat_lbl": {
+    "message": "Materials: 🐟 scales $E · 🧵 yarn $H · 🧦 socks $C · 🌸 petals $P"
+  },
+  "tool_ducha": {
+    "message": "Turbo showerhead"
+  },
+  "tool_ducha_d": {
+    "message": "Instant shower"
+  },
+  "tool_cana": {
+    "message": "Forge fishing rod"
+  },
+  "tool_cana_d": {
+    "message": "4 casts and easier rare fish"
+  },
+  "tool_ovillo": {
+    "message": "Golden yarn ball"
+  },
+  "tool_ovillo_d": {
+    "message": "25 s of play and bigger radius"
+  },
+  "tool_comedero": {
+    "message": "Barrel feeder"
+  },
+  "tool_comedero_d": {
+    "message": "Auto-feeds 🐟 when hungry"
+  },
+  "craft_owned": {
+    "message": "Done"
+  },
+  "ai_dl_fail": {
+    "message": "The download couldn't start on this device."
+  },
+  "confirm_deact": {
+    "message": "Deactivate the license on this device? You can activate it on another."
+  },
+  "confirm_release": {
+    "message": "Release $N? It will return free to the Forge. This can't be undone."
+  },
+  "confirm_newegg": {
+    "message": "Spend $P 🔥 on a mystery egg? It will incubate in the stable with your next focus."
+  },
+  "bring_full": {
+    "message": "Stroll slots are full. Archive one first."
+  },
+  "bring_pro": {
+    "message": "The second stroll slot is Pro"
+  },
+  "bring_back": {
+    "message": "$N is back on the stroll."
+  },
+  "multi_pro": {
+    "message": "More than one creature is a Pro feature."
+  },
+  "say_back": {
+    "message": "You're back!! I missed you 🤍"
+  },
+  "say_hello": {
+    "message": "Hi! 👋 I was missing you already."
+  },
+  "tier_m": {
+    "message": "monthly"
+  },
+  "tier_a": {
+    "message": "annual"
+  },
+  "tier_l": {
+    "message": "lifetime"
+  },
+  "poop_edu": {
+    "message": "💩 $N went to its corner, like you taught it."
+  },
+  "sp_slime": {
+    "message": "Pure slime"
+  },
+  "sp_gato": {
+    "message": "Cat"
+  },
+  "sp_perro": {
+    "message": "Dog"
+  },
+  "sp_conejo": {
+    "message": "Rabbit"
+  },
+  "sp_dragon": {
+    "message": "Dragon"
+  },
+  "sp_fantasma": {
+    "message": "Little ghost"
+  },
+  "sp_zorro": {
+    "message": "Fox"
+  },
+  "sp_panda": {
+    "message": "Panda"
+  },
+  "sp_axolotl": {
+    "message": "Axolotl"
+  },
+  "sp_pinguino": {
+    "message": "Penguin"
+  },
+  "sp_buho": {
+    "message": "Owl"
+  },
+  "sp_fenix": {
+    "message": "Phoenix"
+  },
+  "sp_kitsune": {
+    "message": "Kitsune"
+  },
+  "sp_unicornio": {
+    "message": "Unicorn"
+  },
+  "sp_hada": {
+    "message": "Fairy"
+  },
+  "sp_kraken": {
+    "message": "Kraken"
+  },
+  "tmp_jugueton": {
+    "message": "Playful"
+  },
+  "tmp_tranquilo": {
+    "message": "Calm"
+  },
+  "tmp_grunon": {
+    "message": "Grumpy"
+  },
+  "tmp_timido": {
+    "message": "Shy"
+  },
+  "tmp_caotico": {
+    "message": "Chaotic"
+  },
+  "st_chispa": {
+    "message": "Spark"
+  },
+  "st_cria": {
+    "message": "Hatchling"
+  },
+  "st_joven": {
+    "message": "Young"
+  },
+  "st_adulto": {
+    "message": "Adult"
+  },
+  "st_colosal": {
+    "message": "Colossal"
+  },
+  "h_best": {
+    "message": "📖 Bestiary"
+  },
+  "best_note": {
+    "message": "Each species unlocks the first time it is born or reforged. Fantastical creatures are rarer."
+  },
+  "best_count": {
+    "message": "Discovered: $N / $T"
+  },
+  "lic_empty": {
+    "message": "Enter a license key."
+  },
+  "lic_permission": {
+    "message": "We need your permission to reach the license server. Press Activate again and accept it."
+  },
+  "lic_rejected": {
+    "message": "Invalid or expired key (check your purchase email)."
+  },
+  "lic_server_error": {
+    "message": "Could not reach the server. Try again in a moment."
+  },
+  "lic_wrong_product": {
+    "message": "This key belongs to another Wendygo Studio product."
+  },
+  "lic_inactive": {
+    "message": "This license isn't active ($status)."
+  },
+  "lic_network": {
+    "message": "No connection. Activation needs internet once."
+  },
+  "h_save": {
+    "message": "💾 Save file"
+  },
+  "exp_btn": {
+    "message": "Export save"
+  },
+  "imp_btn": {
+    "message": "Import"
+  },
+  "exp_ok": {
+    "message": "Save exported 📤"
+  },
+  "imp_confirm": {
+    "message": "Replace your current save with the file? This cannot be undone."
+  },
+  "imp_bad": {
+    "message": "That file doesn't look like a SlimeForge save."
+  },
+  "save_note": {
+    "message": "Local copy of your save as a JSON file. Everything stays on your device — no cloud, no accounts."
+  },
+  "wit_count": {
+    "message": "Comebacks learned: $N/$T — tap to view"
+  },
+  "wit_title": {
+    "message": "Duel comebacks"
+  },
+  "wit_none": {
+    "message": "No comebacks learned yet. Watch for the challenging wild slime on the page…"
+  },
+  "report_line": {
+    "message": "Yesterday: $N focus sessions ($M min). Streak: $R 🔥 More today!"
+  },
+  "tab_focus": {
+    "message": "Focus"
+  },
+  "tab_play": {
+    "message": "Play"
+  },
+  "tab_col": {
+    "message": "Collection"
+  },
+  "tab_more": {
+    "message": "More"
+  },
+  "h_dev": {
+    "message": "🧪 Test mode"
+  },
+  "dev_lbl": {
+    "message": "Speeds the game ×10 and enables page shortcuts"
+  },
+  "dev_note": {
+    "message": "With the creature on a page: Alt+Shift + D duel · W wild slime · L laser · Z zoomies · B box · M pack encounter · P thought · G garden watering. Events every 25-60 s, the creature never sleeps."
+  },
+  "h_huerto": {
+    "message": "🌱 Garden"
+  },
+  "huerto_note": {
+    "message": "Drops 💧 are collected by tapping the puddles your creature leaves while strolling. Each stage needs one watering; without water the plant waits, it never dies."
+  },
+  "huerto_gotas_lbl": {
+    "message": "You have $N 💧 · tap an empty plot to plant"
+  },
+  "huerto_empty": {
+    "message": "Empty plot"
+  },
+  "huerto_need_water": {
+    "message": "💧 Needs water"
+  },
+  "huerto_growing": {
+    "message": "Stage $S/3 · $T"
+  },
+  "huerto_ready": {
+    "message": "✨ Ready!"
+  },
+  "huerto_pick": {
+    "message": "Pick a seed ($N 💧 available):"
+  },
+  "huerto_planted": {
+    "message": "Planted: $S"
+  },
+  "huerto_watered": {
+    "message": "Watered. Grow, little one."
+  },
+  "huerto_harvested": {
+    "message": "Harvest: $N × $S"
+  },
+  "huerto_no_gotas": {
+    "message": "You need more drops 💧: walk your creature and tap its puddles"
+  },
+  "huerto_eat": {
+    "message": "$S Yum! From the garden to the belly."
+  },
+  "huerto_screen_lbl": {
+    "message": "Garden on screen (next to your creature)"
+  },
+  "huerto_op_lbl": {
+    "message": "Garden opacity"
+  },
+  "despensa_lbl": {
+    "message": "🧺 Pantry"
+  },
+  "eat_btn": {
+    "message": "Eat"
+  },
+  "seed_baya": {
+    "message": "Dew berry"
+  },
+  "seed_baya_d": {
+    "message": "6 💧 · 4 h · yields 2 berries (+18 hunger, +4 mood)"
+  },
+  "seed_baya_fx": {
+    "message": "+18 hunger · +4 mood · free"
+  },
+  "seed_zanahoria": {
+    "message": "Slime carrot"
+  },
+  "seed_zanahoria_d": {
+    "message": "10 💧 · 9 h · yields 1 carrot (+40 hunger)"
+  },
+  "seed_zanahoria_fx": {
+    "message": "+40 hunger · free"
+  },
+  "seed_flor": {
+    "message": "Ember flower"
+  },
+  "seed_flor_d": {
+    "message": "14 💧 · 14 h · 3 petals 🌸 for the Workshop · passive mood aura while growing"
+  },
+  "seed_flor_fx": {
+    "message": "Workshop material"
+  },
+  "tool_regadera": {
+    "message": "Dew watering can"
+  },
+  "tool_regadera_d": {
+    "message": "Watering one plot waters ALL pending ones"
+  },
+  "focus_social_note": {
+    "message": "👀 If you visit social media during a focus session, your creature will call you out (if it's strolling on the page)."
+  },
+  "focus_hud_lbl": {
+    "message": "On-screen timer (with quick-start button)"
+  },
+  "focus_hud_op": {
+    "message": "Timer opacity"
+  },
+  "h_vestidor": {
+    "message": "🎽 Wardrobe"
+  },
+  "cos_note": {
+    "message": "Free pieces are earned by playing (focus, duels, garden, drops, collection). Golden 🔒 pieces are Pro. Nothing is bought with randomness."
+  },
+  "cos_pro_lock": {
+    "message": "SlimeForge PRO exclusive piece"
+  },
+  "cos_slot_cabeza": {
+    "message": "Head"
+  },
+  "cos_slot_cara": {
+    "message": "Face"
+  },
+  "cos_slot_cuerpo": {
+    "message": "Body"
+  },
+  "cos_slot_aura": {
+    "message": "Aura"
+  },
+  "cos_slot_ascua": {
+    "message": "Ember"
+  },
+  "cos_slot_fondo": {
+    "message": "Backdrop"
+  },
+  "cosn_laurel": {
+    "message": "Laurel crown"
+  },
+  "cosn_paja": {
+    "message": "Straw hat"
+  },
+  "cosn_orejasconejo": {
+    "message": "Bunny ears"
+  },
+  "cosn_cuernos": {
+    "message": "Dragon horns"
+  },
+  "cosn_halo": {
+    "message": "Halo"
+  },
+  "cosn_estrella": {
+    "message": "Cheek star"
+  },
+  "cosn_gafaslectura": {
+    "message": "Study glasses"
+  },
+  "cosn_gafassol": {
+    "message": "Sunglasses"
+  },
+  "cosn_capa": {
+    "message": "Hero cape"
+  },
+  "cosn_mariposa": {
+    "message": "Butterfly wings"
+  },
+  "cosn_colazorro": {
+    "message": "Fox tail"
+  },
+  "cosn_alasmurci": {
+    "message": "Bat wings"
+  },
+  "cosn_aurarocio": {
+    "message": "Dew aura"
+  },
+  "cosn_auradorada": {
+    "message": "Golden aura"
+  },
+  "cosn_auracorazones": {
+    "message": "Hearts aura"
+  },
+  "cosn_ascuagemela": {
+    "message": "Twin flame"
+  },
+  "cosn_ascuaazul": {
+    "message": "Blue ember"
+  },
+  "cosn_fondopradera": {
+    "message": "Meadow"
+  },
+  "cosn_fondobosque": {
+    "message": "Night forest"
+  },
+  "cosn_fondocosmos": {
+    "message": "Cosmos"
+  },
+  "cosc_duels10": {
+    "message": "Win 10 wit duels"
+  },
+  "cosc_harvest1": {
+    "message": "Harvest your first plant"
+  },
+  "cosc_harvest10": {
+    "message": "Harvest 10 plants"
+  },
+  "cosc_species8": {
+    "message": "Discover 8 species"
+  },
+  "cosc_focus25": {
+    "message": "Complete 25 focus sessions"
+  },
+  "cosc_streak7": {
+    "message": "7-day focus streak"
+  },
+  "cosc_streak14": {
+    "message": "14-day focus streak"
+  },
+  "cosc_seeds3": {
+    "message": "Plant all 3 seed types"
+  },
+  "cosc_gotas50": {
+    "message": "Collect 50 drops"
+  },
+  "cosc_colosal": {
+    "message": "Reach Colossal for the first time"
+  },
+  "cos_slot_paleta": {
+    "message": "Palette"
+  },
+  "h_logros": {
+    "message": "🏅 Milestones"
+  },
+  "logros_note": {
+    "message": "Each milestone unlocks a Wardrobe piece. Earned by playing, never by chance."
+  },
+  "cosn_paletadorada": {
+    "message": "Golden palette"
+  },
+  "cosn_paletamedianoche": {
+    "message": "Midnight palette"
+  },
+  "cosn_paletasakura": {
+    "message": "Sakura palette"
+  },
+  "cosn_paletacarbon": {
+    "message": "Charcoal palette"
+  },
+  "cosn_paletasangria": {
+    "message": "Sangria palette"
+  },
+  "perks_head_trial": {
+    "message": "Right now you have all of Pro:"
+  },
+  "perks_head_lost": {
+    "message": "With the trial over, these are paused:"
+  },
+  "perks_head_free": {
+    "message": "What Pro includes:"
+  },
+  "perk_will_pause": {
+    "message": "· you're using it now; it'll pause when the trial ends"
+  },
+  "perks_safe": {
+    "message": "Nothing is deleted: when the trial ends your creatures, cosmetics and progress stay saved. Only Pro features pause until you activate a license; when you do, they return exactly as they were."
+  },
+  "perk_multi": {
+    "message": "Multiple creatures"
+  },
+  "perkd_multi": {
+    "message": "Up to 3 creatures in the stable at once."
+  },
+  "perk_pack": {
+    "message": "Pack mode"
+  },
+  "perkd_pack": {
+    "message": "Your stable creatures stroll the web together."
+  },
+  "perk_reserve": {
+    "message": "Bigger reserve"
+  },
+  "perkd_reserve": {
+    "message": "Store up to 25 creatures instead of 10."
+  },
+  "perk_cos": {
+    "message": "Pro cosmetics"
+  },
+  "perkd_cos": {
+    "message": "Animal parts, auras, embers and exclusive palettes in the Wardrobe."
+  },
+  "perk_focus": {
+    "message": "Boosted focus"
+  },
+  "perkd_focus": {
+    "message": "Earn ×1.5 embers 🔥 when you complete focus sessions (the currency for forging new creatures)."
+  },
+  "perk_acc": {
+    "message": "Pro accessories"
+  },
+  "perkd_acc": {
+    "message": "Hat and monocle for your creature."
+  },
+  "perk_forge": {
+    "message": "The Forge"
+  },
+  "perkd_forge": {
+    "message": "Completely redesign your creature's look (species, colors, markings, accessories…) with live preview. 3 forges a month."
+  },
+  "perk_forge_left": {
+    "message": "· $N left this month"
+  },
+  "lic_activating": {
+    "message": "Activating…"
+  },
+  "pro_renews": {
+    "message": "renews $DATE"
+  },
+  "egg_focus_hint": {
+    "message": "It needs the warmth of your focus. Start a session!"
+  },
+  "egg_inc_note": {
+    "message": "Your first completed session will hatch the egg. It keeps running even if you close the popup."
+  },
+  "ob_t1": {
+    "message": "A mysterious egg!"
+  },
+  "ob_d1": {
+    "message": "A unique creature sleeps inside — one of 16 species. No one knows which."
+  },
+  "ob_t2": {
+    "message": "Focus hatches it"
+  },
+  "ob_d2": {
+    "message": "Complete your first pomodoro session and it will hatch. Your focus is its warmth."
+  },
+  "ob_next": {
+    "message": "Next"
+  },
+  "ob_go": {
+    "message": "🔥 Start my first focus"
+  },
+  "dnd_title": {
+    "message": "🔕 Do not disturb"
+  },
+  "dnd_empty": {
+    "message": "No muted sites. Use the 🔕 button on the on-page timer."
+  },
+  "dnd_resume": {
+    "message": "Resume now"
+  },
+  "dnd_until": {
+    "message": "Paused until $T"
+  },
+  "hatch_roam_t": {
+    "message": "Let $NAME roam with you?"
+  },
+  "hatch_roam_d": {
+    "message": "It can join you on your pages while you work: it sets up its desk during focus and calls you out if you slack. You can turn it off anytime."
+  },
+  "roam_yes": {
+    "message": "🐾 Yes, roam with me"
+  },
+  "roam_later": {
+    "message": "Maybe later"
+  },
+  "roam_next_page": {
+    "message": "Done — it will appear on the next website you open 🐾"
+  },
+  "born_stable": {
+    "message": "The egg in the stable hatched: it’s $NAME!"
+  },
+  "egg_stable_hint": {
+    "message": "The egg waits in the stable: your next completed focus session will hatch it."
+  }
+}

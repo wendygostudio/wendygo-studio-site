@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redimensionar Imagen para Miniaturas de YouTube | Wendygo Studio</title>
+  <meta name="description" content="Redimensiona cualquier imagen a 1280×720 px para YouTube, sin Photoshop y sin subirla. Con FrameForge." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Redimensionar Imagen para Miniaturas de YouTube | Wendygo Studio">
+  <meta property="og:description" content="Redimensiona cualquier imagen a 1280×720 px para YouTube, sin Photoshop y sin subirla. Con FrameForge.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Redimensionar Imagen para Miniaturas de YouTube | Wendygo Studio">
+  <meta name="twitter:description" content="Redimensiona cualquier imagen a 1280×720 px para YouTube, sin Photoshop y sin subirla. Con FrameForge.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Resize an Image for YouTube Thumbnails",
+    "description": "Resize any image to the YouTube thumbnail standard (1280×720 px) using FrameForge Chrome extension.",
+    "tool": [{ "@type": "HowToTool", "name": "FrameForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install FrameForge",
+        "text": "Install FrameForge from the Chrome Web Store and pin the icon to your toolbar."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open your source image",
+        "text": "Click the FrameForge icon to open the extension, then click Open image or drag-and-drop your file onto the canvas."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Select the YouTube Thumbnail preset",
+        "text": "In the Platform dropdown, select YouTube Thumbnail. The canvas snaps to 1280×720 px with 16:9 ratio locked."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Position the crop",
+        "text": "Drag the crop overlay to frame the most important part of your image — typically the subject's face or the main visual."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Export",
+        "text": "Click Export to save the resized 1280×720 image to your Downloads folder."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    /* Specs table */
+    .specs-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+
+    /* Step cards */
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* Tips list */
+    .tips { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .tips li {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .tips li strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* Fill options */
+    .fill-options { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .fill-option {
+      padding: 14px 16px; background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .fill-option-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .fill-option-rec { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+    .fill-option p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  </style>
+</head>
+<body>  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/resize-image-youtube-thumbnail-chrome/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Cómo redimensionar imágenes para miniaturas de YouTube
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · FrameForge</div>
+      <h1>Cómo Redimensionar una Imagen para Miniaturas de YouTube Directamente en tu Navegador</h1>
+      <p class="article-intro">
+        El requisito de 1280×720 px de YouTube pilla a los creadores por sorpresa. Aquí tienes cómo clavar las dimensiones correctas al instante — sin Photoshop y sin subir tu imagen a un servidor de terceros.
+      </p>
+      <div class="article-date">25 de junio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Has terminado de editar el vídeo, has escrito el título y estás a punto de publicar — y entonces YouTube rechaza tu miniatura porque tiene el tamaño equivocado. O acepta el archivo pero lo recorta de mala manera, cortando la cara de tu protagonista o el texto en el que invertiste tiempo.</p>
+
+      <p>Las miniaturas de YouTube tienen un requisito concreto: <strong>1280×720 píxeles</strong>, relación de aspecto 16:9, menos de 2 MB. La mayoría de las imágenes de origen no encajan: las fotos de móvil son verticales (9:16), las capturas varían según la resolución del monitor y las imágenes de stock vienen en todas las formas imaginables.</p>
+
+      <p>El arreglo habitual es abrir Photoshop, crear un documento nuevo de 1280×720, pegar la imagen, ajustar el recorte y exportar. De cinco a ocho pasos para una tarea que debería llevar treinta segundos. Hay una forma más rápida que además mantiene tus imágenes fuera de servidores de terceros.</p>
+
+      <h2>Especificaciones de las miniaturas de YouTube</h2>
+
+      <table class="specs-table">
+        <thead>
+          <tr><th>Propiedad</th><th>Requisito</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Resolución</td><td>1280×720 px (mínimo 640×360)</td></tr>
+          <tr><td>Relación de aspecto</td><td>16:9</td></tr>
+          <tr><td>Formato de archivo</td><td>JPG, GIF, BMP o PNG</td></tr>
+          <tr><td>Tamaño máximo</td><td>2 MB</td></tr>
+          <tr><td>Zona segura</td><td>Mantén los elementos importantes lejos de la esquina inferior derecha — YouTube superpone ahí la duración del vídeo</td></tr>
+        </tbody>
+      </table>
+
+      <p>El mínimo de 640×360 se verá borroso en las pantallas modernas — apunta siempre a 1280×720. Cualquier cosa que pongas en la esquina inferior derecha de tu miniatura quedará tapada por la etiqueta de duración de YouTube en los resultados de búsqueda, así que mantén caras y texto lejos de esa zona.</p>
+
+      <h2>Por qué una extensión de navegador gana a subir la imagen</h2>
+
+      <p>Las herramientas web como Canva y Photopea funcionan, pero suben tu imagen a un servidor remoto. Para miniaturas de clientes, capturas confidenciales o cualquier cosa que prefieras no compartir con un tercero, eso es una preocupación real. También está la latencia — los archivos grandes en conexiones lentas tardan lo suyo.</p>
+
+      <p><strong>FrameForge procesa las imágenes completamente en tu navegador.</strong> Nada sale de tu máquina. Sin cuenta, sin subidas, sin esperar a un servidor remoto. Abre la extensión, carga la imagen, redimensiona, descarga.</p>
+
+      <h2>Paso a paso: redimensionar para YouTube con FrameForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Instala FrameForge</div>
+            <div class="step-desc">Instala FrameForge desde la Chrome Web Store. Tras la instalación, fija el icono a tu barra desde el menú de Extensiones para tenerlo siempre a un clic.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Abre tu imagen de origen</div>
+            <div class="step-desc">Haz clic en el icono de FrameForge para abrir la extensión. Pulsa <strong>Abrir imagen</strong> y selecciona tu archivo, o arrástralo directamente al lienzo. Soporta JPG, PNG, WebP y la mayoría de formatos comunes.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Selecciona el preset Miniatura de YouTube</div>
+            <div class="step-desc">En el desplegable <strong>Plataforma</strong>, selecciona <strong>Miniatura de YouTube</strong>. El lienzo salta al instante a 1280×720 px con la relación 16:9 bloqueada — sin introducir dimensiones a mano.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Coloca el recorte</div>
+            <div class="step-desc">Arrastra la superposición de recorte para encuadrar la parte de la imagen que quieres. En fotos verticales, centra sobre la cara del protagonista o el elemento visual principal. En imágenes horizontales, afina para dejar los detalles clave dentro del encuadre.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Exporta</div>
+            <div class="step-desc">Haz clic en <strong>Exportar</strong>. FrameForge guarda el archivo redimensionado en tu carpeta de Descargas a exactamente 1280×720 px, listo para subir directamente a YouTube.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Manejar imágenes verticales y no estándar</h2>
+
+      <p>Las imágenes verticales — fotos de móvil, fotogramas de vídeo 9:16 — son la fuente de frustración más común al hacer miniaturas. Cuando fuerzas una imagen 9:16 dentro de un marco 16:9, tienes tres opciones:</p>
+
+      <div class="fill-options">
+        <div class="fill-option">
+          <div class="fill-option-rec">Recomendada</div>
+          <div class="fill-option-label">Recortar para rellenar</div>
+          <p>El marco queda completamente lleno, pero se recorta parte de la imagen por arriba y por abajo. Suele ser la opción correcta — arrastra la superposición de recorte para mantener a tu protagonista centrado y los detalles importantes dentro del encuadre.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Encajar con relleno</div>
+          <p>La imagen entera es visible, pero te quedan barras a izquierda y derecha (letterboxing). Puede parecer poco pulido salvo que el color del relleno sea una decisión de diseño deliberada.</p>
+        </div>
+        <div class="fill-option">
+          <div class="fill-option-label">Estirar para rellenar</div>
+          <p>Distorsiona la imagen horizontalmente para llenar el marco. Casi siempre queda mal. Evítalo salvo que busques la distorsión como efecto.</p>
+        </div>
+      </div>
+
+      <p>FrameForge te deja cambiar entre modos de relleno antes de exportar, para comparar las tres opciones y elegir la que mejor le siente a tu imagen concreta.</p>
+
+      <h2>Consejos de calidad para miniaturas</h2>
+
+      <p>Clavar las dimensiones es el requisito técnico. Conseguir clics es otro reto distinto. Algunas cosas que mueven la aguja de forma fiable:</p>
+
+      <ul class="tips">
+        <li>
+          <strong>Usa una cara</strong>
+          La propia investigación de YouTube confirma que las miniaturas con caras humanas visibles consiguen más engagement de media. Si en tu vídeo sale una persona, haz que su cara sea prominente y expresiva.
+        </li>
+        <li>
+          <strong>Alto contraste</strong>
+          Tu miniatura compite con docenas más en una cuadrícula. Un sujeto brillante sobre fondo oscuro — o al revés — destaca más que una composición plana de tonos medios.
+        </li>
+        <li>
+          <strong>Texto legible</strong>
+          Si añades texto, quédate en 3–5 palabras. Prueba la legibilidad en pequeño: si cuesta leerlo a 200×112 px, el texto es demasiado pequeño o demasiado fino. Las tipografías gruesas y de alto contraste funcionan mejor.
+        </li>
+        <li>
+          <strong>Evita la esquina inferior derecha</strong>
+          Ahí vive la etiqueta de duración de YouTube. Las caras, el texto y los elementos clave colocados en esa esquina quedarán parcialmente tapados en los resultados de búsqueda.
+        </li>
+        <li>
+          <strong>Consistencia visual</strong>
+          Un estilo reconocible en todas tus miniaturas — colores, tipografías y composición consistentes — hace que tu canal sea identificable en los feeds de suscripciones y en los resultados de búsqueda.
+        </li>
+      </ul>
+
+      <h2>Redimensionar para varias plataformas</h2>
+
+      <p>Si publicas contenido también en Instagram, Twitch o X, puedes usar FrameForge para redimensionar la misma imagen de origen a las dimensiones de cada plataforma sin salir de la extensión. Incluye presets para las plataformas principales, así que no toca introducir dimensiones a mano en cada una.</p>
+
+
+      <h2>Comprueba tu miniatura antes de subirla</h2>
+
+      <p>Antes de subirla, puedes verificar que tu miniatura cumple todos los requisitos de YouTube — dimensiones, tamaño de archivo y formato — con nuestro <a href='/tools/youtube-thumbnail-checker/'>YouTube Thumbnail Checker</a> gratuito. Suelta la imagen y te muestra al instante exactamente qué pasa la validación y qué hay que arreglar. No se sube nada a ningún servidor.</p>
+
+      <div class="cta-box">
+        <p>FrameForge es gratis. Los presets de plataformas — incluida la Miniatura de YouTube — están disponibles en la versión gratuita. Sin cuenta ni suscripción.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Instalar FrameForge — gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/es/privacy">Política de privacidad</a>
+      <a href="/es/terms">Términos y condiciones</a>
+    </div>
+  </footer>
+
+</body>
+</html>

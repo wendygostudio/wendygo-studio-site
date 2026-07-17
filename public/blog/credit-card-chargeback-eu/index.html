@@ -8,9 +8,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to File a Credit Card Chargeback in the EU | Wendygo Studio</title>
-  <meta name="description" content="Step-by-step guide to disputing a credit card charge and getting your money back in the EU. File a chargeback directly with your bank—no lawyer needed." />
+  <meta name="description" content="Step-by-step guide to disputing a card charge and getting your money back in the EU. File directly with your bank." />
   <link rel="canonical" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/" />
   <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/" />
 
   <script type="application/ld+json">
   {
@@ -269,16 +270,37 @@
       .nav-links { gap: 16px; }
       .step-box-title { flex-wrap: wrap; }
     }
-  </style>
+  .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+    </style>
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Wendygo Studio">
   <meta property="og:title" content="How to File a Credit Card Chargeback in the EU | Wendygo Studio">
-  <meta property="og:description" content="Step-by-step guide to disputing a credit card charge and getting your money back in the EU. File a chargeback directly with your bank—no lawyer needed.">
+  <meta property="og:description" content="Step-by-step guide to disputing a card charge and getting your money back in the EU. File directly with your bank.">
   <meta property="og:url" content="https://wendygostudio.com/blog/credit-card-chargeback-eu/">
   <meta property="og:image" content="https://wendygostudio.com/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to File a Credit Card Chargeback in the EU | Wendygo Studio">
-  <meta name="twitter:description" content="Step-by-step guide to disputing a credit card charge and getting your money back in the EU. File a chargeback directly with your bank—no lawyer needed.">
+  <meta name="twitter:description" content="Step-by-step guide to disputing a card charge and getting your money back in the EU. File directly with your bank.">
   <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
 </head>
 <body>
@@ -288,7 +310,9 @@
     <div class="nav-mark">W</div>
     Wendygo Studio
   </a>
-  <div class="nav-links">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
     <a href="/">Home</a>
     <a href="/blog/">Blog</a>
   </div>

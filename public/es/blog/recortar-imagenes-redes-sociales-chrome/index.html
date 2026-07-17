@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recortar Imágenes para Redes Sociales en Chrome | Wendygo Studio</title>
+  <meta name="description" content="Aprende a recortar imágenes para YouTube, Instagram, X y Twitch — centrado perfecto en cada relación de aspecto." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Recortar Imágenes para Redes Sociales en Chrome | Wendygo Studio">
+  <meta property="og:description" content="Aprende a recortar imágenes para YouTube, Instagram, X y Twitch — centrado perfecto en cada relación de aspecto.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recortar Imágenes para Redes Sociales en Chrome | Wendygo Studio">
+  <meta name="twitter:description" content="Aprende a recortar imágenes para YouTube, Instagram, X y Twitch — centrado perfecto en cada relación de aspecto.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/es/blog/"},
+    {"@type":"ListItem","position":3,"name":"Crop images for different social media platforms"}
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Crop Images for Different Social Media Platforms Using a Chrome Extension","description":"Learn how to crop images properly for YouTube, Instagram, X, and Twitch using a Chrome extension — keep your subject centered for every aspect ratio.","datePublished":"2026-07-14","dateModified":"2026-07-14","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Why is cropping important when resizing for multiple platforms?","acceptedAnswer":{"@type":"Answer","text":"Different platforms have different aspect ratios. A YouTube thumbnail (16:9) and an Instagram square (1:1) are mathematically incompatible. If you use the same crop for both, your subject will be off-center in one of them. Intentional cropping for each platform ensures your subject is properly framed."}},
+    {"@type":"Question","name":"What's the difference between resize and crop?","acceptedAnswer":{"@type":"Answer","text":"Resize changes dimensions. Crop changes composition. Both are necessary when adapting the same image across platforms. FrameForge lets you do both in one tool — resize to the platform dimensions and crop to the composition in the same operation."}},
+    {"@type":"Question","name":"How do I crop differently for landscape vs. square vs. portrait platforms?","acceptedAnswer":{"@type":"Answer","text":"Landscape (16:9, like YouTube): Crop wide to show context; your subject should be prominent but with room around it. Square (1:1, like Instagram): Crop tight and center your subject — you have no extra horizontal room. Portrait (9:16, like Instagram Stories): Crop to fill the frame vertically with your subject; center horizontally."}}
+  ]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 13px; color: var(--faint); margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    /* List styles */
+    .article-body ol, .article-body ul { margin-left: 20px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 10px; }
+
+    /* Tips list */
+    .tips { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; margin-left: 0; }
+    .tips li {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .tips li strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* FAQ */
+    .faq { margin-top: 48px; }
+    .faq h2 { font-size: 22px; font-weight: 700; letter-spacing: -.3px; margin-bottom: 20px; }
+    .faq-item {
+      padding: 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* Related */
+    .related { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line); }
+    .related h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-links a {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; transition: border-color .2s;
+    }
+    .related-links a:hover { border-color: var(--faint); }
+    .related-links a span { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/crop-images-social-media-chrome/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Recortar imágenes para distintas redes sociales
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · FrameForge</div>
+      <h1>Recortar Imágenes para Distintas Redes Sociales con una Extensión de Chrome</h1>
+      <p class="article-intro">
+        Una miniatura de YouTube y un cuadrado de Instagram son relaciones de aspecto matemáticamente incompatibles. Aquí tienes cómo ajustar el recorte para cada plataforma sin recargar tu imagen.
+      </p>
+      <div class="article-date">14 de julio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Cuando redimensionas la misma imagen para varias redes sociales, el redimensionado es solo la mitad del trabajo. Una miniatura de YouTube en horizontal 16:9 y un cuadrado de Instagram en 1:1 son relaciones de aspecto matemáticamente incompatibles — si usas el mismo recorte para ambas, tu sujeto acaba descentrado en una de ellas.</p>
+
+      <p>Aquí es donde el recorte intencionado marca la diferencia entre "la imagen cabe en las dimensiones" y "la imagen parece compuesta para la plataforma".</p>
+
+      <h2>Por qué ajustar el recorte importa más de lo que crees</h2>
+
+      <p>Una foto horizontal optimizada para el 1280×720 (16:9) de YouTube coloca a tu sujeto en el centro-derecha. Ese mismo recorte forzado en el cuadrado (1:1) de Instagram pierde la mitad de tu composición por los lados — tu sujeto queda ahora descentrado. Una Story de Instagram (9:16 vertical) necesita un encuadre completamente distinto.</p>
+
+      <p>No es un problema técnico — es un problema de diseño. La mejor herramienta no auto-recorta entre relaciones de aspecto porque no existe un recorte "correcto"; depende de dónde está tu sujeto y qué quieres enfatizar.</p>
+
+      <h2>Cómo recortar para cada plataforma</h2>
+
+      <p>Un flujo que funciona: carga tu imagen de origen una vez, y luego ve cambiando de preset de plataforma y ajustando el recorte para cada destino.</p>
+
+      <ol>
+        <li><strong>Abre tu imagen en FrameForge.</strong></li>
+        <li><strong>Cambia a tu primer preset de plataforma</strong> (YouTube, Instagram, Twitch, X). El lienzo salta a la relación de aspecto de esa plataforma.</li>
+        <li><strong>Posiciona la superposición de recorte</strong> — arrástrala para centrar tu sujeto correctamente en ese encuadre concreto. Este es el paso crucial. No te limites a aceptar el recorte por defecto.</li>
+        <li><strong>Exporta.</strong></li>
+        <li><strong>Cambia al siguiente preset.</strong> La imagen sigue cargada, pero el lienzo cambia de forma. Reposiciona el recorte para la nueva relación de aspecto — suele llevar 10 segundos — y exporta de nuevo.</li>
+      </ol>
+
+      <h2>Diferencias de relación de aspecto entre plataformas</h2>
+
+      <ul>
+        <li><strong>Miniatura de YouTube (16:9):</strong> horizontal. El sujeto suele ir en el centro o en el centro-derecha.</li>
+        <li><strong>Publicación de Instagram (1:1):</strong> cuadrada. Requiere un encuadre más ajustado; recorta al tercio superior en retratos.</li>
+        <li><strong>Story de Instagram (9:16):</strong> vertical. El sujeto llena el encuadre verticalmente.</li>
+        <li><strong>X / Twitter (16:9):</strong> horizontal, similar a YouTube pero con otras dimensiones.</li>
+      </ul>
+
+      <p>Cada una pide un recorte ligeramente distinto. Los presets de plataforma se encargan de las dimensiones; tú te encargas de la composición.</p>
+
+      <h2>Por qué FrameForge mantiene tu imagen cargada</h2>
+
+      <p>La ventaja de recortar en FrameForge en vez de exportar tres imágenes separadas para editar: no recargas. Tu origen se queda en el lienzo mientras cambias entre presets. El flujo es:</p>
+
+      <ol>
+        <li>Cargar imagen</li>
+        <li>Preset A → recortar → exportar</li>
+        <li>Preset B → recortar → exportar (misma imagen, sin recargar)</li>
+        <li>Preset C → recortar → exportar</li>
+      </ol>
+
+      <p>Compáralo con abrir tu editor de escritorio tres veces y verás por qué el enfoque de la extensión ahorra tiempo.</p>
+
+      <h2>Consejos rápidos para recortar mejor entre plataformas</h2>
+
+      <ul class="tips">
+        <li>
+          <strong>Parte del origen de mayor resolución</strong>
+          — para que ninguna exportación de plataforma esté escalando hacia arriba desde una base comprimida.
+        </li>
+        <li>
+          <strong>Recorta ajustado para cuadrados</strong> (Instagram 1:1) — centra tu sujeto y acepta que los lados quedarán justos.
+        </li>
+        <li>
+          <strong>Recorta amplio para horizontales</strong> (YouTube, X) — tienes espacio horizontal; úsalo para mostrar contexto.
+        </li>
+        <li>
+          <strong>De vertical a horizontal,</strong> recorta la mitad superior y acepta que el tercio inferior se pierde. El sujeto (normalmente una cara o el torso) debe dominar el encuadre.
+        </li>
+        <li>
+          <strong>Comprueba la exportación</strong> — antes de subirla a la plataforma, abre cada archivo exportado para confirmar que el recorte es realmente el que veías en el lienzo. Las sorpresas ocurren.
+        </li>
+      </ul>
+
+      <h2>La diferencia entre redimensionar y recortar</h2>
+
+      <p>Redimensionar cambia las dimensiones. Recortar cambia la composición. Ambas cosas son necesarias. FrameForge hace las dos en una sola herramienta — redimensionas a la plataforma y recortas a la composición en la misma operación.</p>
+
+    </div>
+
+    <div class="cta-box">
+      <p>FrameForge es gratis. Los presets de plataforma para YouTube, Instagram, Twitch y X están incluidos en la versión gratuita.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+        Instalar FrameForge — gratis
+      </a>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Por qué es importante el recorte al redimensionar para varias plataformas?</div>
+        <div class="faq-a">Cada plataforma tiene una relación de aspecto distinta. Una miniatura de YouTube (16:9) y un cuadrado de Instagram (1:1) son matemáticamente incompatibles. Si usas el mismo recorte para ambas, tu sujeto quedará descentrado en una de ellas. Recortar intencionadamente para cada plataforma garantiza que tu sujeto quede bien encuadrado.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Cuál es la diferencia entre redimensionar y recortar?</div>
+        <div class="faq-a">Redimensionar cambia las dimensiones. Recortar cambia la composición. Ambas son necesarias al adaptar la misma imagen a varias plataformas. FrameForge te deja hacer las dos en una herramienta — redimensionas a las dimensiones de la plataforma y recortas la composición en la misma operación.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Cómo recorto distinto para plataformas horizontales, cuadradas y verticales?</div>
+        <div class="faq-a">Horizontal (16:9, como YouTube): recorta amplio para mostrar contexto; tu sujeto debe ser prominente pero con aire alrededor. Cuadrado (1:1, como Instagram): recorta ajustado y centra tu sujeto — no tienes espacio horizontal extra. Vertical (9:16, como las Stories de Instagram): recorta para llenar el encuadre verticalmente con tu sujeto; céntralo en horizontal.</div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="related">
+      <h2>Guías relacionadas</h2>
+      <div class="related-links">
+        <a href="/es/blog/redimensionar-imagenes-lote-extension-chrome/">
+          Cómo redimensionar imágenes en lote para varias redes sociales
+          <span>Flujo completo · FrameForge</span>
+        </a>
+        <a href="/es/blog/redimensionar-imagen-miniatura-youtube/">
+          Cómo redimensionar una imagen para miniaturas de YouTube en tu navegador
+          <span>Guía paso a paso · FrameForge</span>
+        </a>
+        <a href="/es/blog/redimensionar-imagen-instagram-chrome/">
+          Cómo redimensionar una imagen para Instagram en Chrome
+          <span>Formatos cuadrado y Story · FrameForge</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/es/privacy">Política de privacidad</a>
+      <a href="/es/terms">Términos y condiciones</a>
+    </div>
+  </footer>
+
+</body>
+</html>

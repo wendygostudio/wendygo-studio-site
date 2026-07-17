@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codificar en Base64 Secretos de Kubernetes | Wendygo Studio</title>
+  <meta name="description" content="Los Secrets de Kubernetes requieren valores en Base64. Codifícalos en local, en tu navegador, con TextForge — sin terminal." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Base64 Encode Kubernetes Secrets Without a Web Tool",
+    "description": "Use TextForge Chrome extension to encode raw secret values for Kubernetes Secret manifests, locally and without transmitting data to any server.",
+    "tool": [{ "@type": "HowToTool", "name": "TextForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Open TextForge",
+        "text": "Click the TextForge icon in your browser toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Paste the raw secret value",
+        "text": "Paste your password, API key, connection string, or any value that needs to be Base64-encoded for the Kubernetes manifest."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Apply Base64 Encode",
+        "text": "Select Base64 Encode from the tools menu. The encoded string appears immediately."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Copy and paste into YAML",
+        "text": "Copy the encoded output and paste it into the data: block of your Kubernetes Secret manifest."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Base64 Encode Kubernetes Secrets Without a Web Tool"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Base64 Encode Kubernetes Secrets Without a Web Tool",
+    "description": "Kubernetes Secret data fields require Base64-encoded values. Encode your raw secrets locally in your browser using TextForge — no terminal, no third-party site, no data leaks.",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Base64 encoding required for all Kubernetes secrets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only for the data: field. If you use stringData:, Kubernetes handles the encoding automatically. The data: field is what you see in most examples and exported manifests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I encode multi-line values like TLS certificates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Paste the full certificate including the BEGIN and END header lines into TextForge and encode it. The resulting Base64 string goes into the data: field."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Base64 encryption for Kubernetes secrets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Base64 is not encryption — anyone with the manifest can decode the values. Kubernetes secrets provide access control at the cluster level. For encryption at rest, you need to configure etcd encryption separately."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(24px,4vw,36px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.5px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 { font-size: 22px; font-weight: 700; letter-spacing: -.3px; margin: 40px 0 14px; }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800; display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .code-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto; color: var(--text); white-space: pre;
+    }
+    .callout {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: var(--muted);
+    }
+    .callout strong { color: var(--text); }
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px; }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .related { margin: 48px 0 0; }
+    .related-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) { nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); } }
+  </style>
+</head>
+<body>  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/base64-encode-kubernetes-secrets/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Codificar en Base64 los secretos de Kubernetes
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · TextForge</div>
+      <h1>Cómo Codificar en Base64 los Secretos de Kubernetes Sin Herramientas Web</h1>
+      <p class="article-intro">
+        Los manifiestos Secret de Kubernetes requieren valores codificados en Base64 en el bloque <code>data:</code>. Aquí tienes cómo codificar tus secretos en bruto en local — sin terminal, sin sitios de terceros, sin que ningún dato salga de tu máquina.
+      </p>
+      <div class="article-date">26 de junio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Cuando construyes un manifiesto Secret de Kubernetes, el bloque <code>data:</code> requiere valores codificados en Base64. Muchos desarrolladores lo resuelven pegando contraseñas y claves de API en bruto en un codificador Base64 online — lo que envía esas credenciales a un servidor de terceros. Hay una forma más segura.</p>
+
+      <h2>Por qué Kubernetes usa Base64</h2>
+
+      <p>Un manifiesto Secret de Kubernetes tiene esta pinta:</p>
+
+      <div class="code-block">apiVersion: v1
+kind: Secret
+metadata:
+  name: db-credentials
+type: Opaque
+data:
+  password: c3VwZXJzZWNyZXQ=
+  api-key: c2tfdGVzdF84YzhiNDU2MA==</div>
+
+      <p>Los valores bajo <code>data:</code> son cadenas codificadas en Base64. Los valores en bruto — <code>supersecret</code>, <code>sk_test_8c8b4560</code> — no se guardan en el manifiesto directamente.</p>
+
+      <div class="callout">
+        <strong>Importante:</strong> Base64 no es cifrado. Cualquiera con acceso al manifiesto puede decodificar los valores al instante. Los secretos de Kubernetes aportan control de acceso a nivel de clúster — la codificación es un requisito de formato de la API de Kubernetes, no una capa de seguridad.
+      </div>
+
+      <h2>Codificar valores de secretos con TextForge</h2>
+
+      <p>TextForge es una extensión de Chrome con más de 50 utilidades de texto. Codificar en Base64 se ejecuta completamente en local en la versión gratuita — ningún dato sale de tu navegador.</p>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Abre TextForge</div>
+            <div class="step-desc">Haz clic en el icono de TextForge en la barra del navegador para abrir el panel de la extensión.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Pega el valor del secreto en bruto</div>
+            <div class="step-desc">Pega tu contraseña, clave de API, cadena de conexión o cualquier valor que necesites en forma codificada. Codifica un valor cada vez.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Aplica Codificar Base64</div>
+            <div class="step-desc">Selecciona <strong>Codificar Base64</strong> en el menú de herramientas. La cadena codificada aparece de inmediato.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Pégala en tu manifiesto YAML</div>
+            <div class="step-desc">Copia la salida codificada y pégala como valor bajo la clave apropiada en el bloque <code>data:</code>.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Usar stringData en su lugar</h2>
+
+      <p>Kubernetes también soporta un campo <code>stringData:</code> que acepta texto plano — la API se encarga de la codificación Base64 automáticamente:</p>
+
+      <div class="code-block">stringData:
+  password: supersecret</div>
+
+      <p><code>stringData</code> va bien para los secretos que creas desde cero. Pero cuando estás leyendo un manifiesto existente o uno generado por una herramienta, los valores estarán en <code>data:</code> en formato Base64 — y ahí es cuando necesitas decodificarlos para inspeccionarlos. Para eso, pega el valor codificado en TextForge y aplica Decodificar Base64.</p>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿La codificación Base64 es obligatoria para todos los secretos de Kubernetes?</p>
+          <p class="faq-a">Solo para el campo <code>data:</code>. Si usas <code>stringData:</code>, Kubernetes se encarga de la codificación automáticamente. El campo <code>data:</code> es lo que ves en la mayoría de los ejemplos y en los secretos exportados con <code>kubectl get secret -o yaml</code>.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Puedo codificar valores multilínea como certificados TLS?</p>
+          <p class="faq-a">Sí. Pega el certificado completo — incluyendo las líneas <code>-----BEGIN CERTIFICATE-----</code> y <code>-----END CERTIFICATE-----</code> — en TextForge y aplica Codificar Base64. La cadena resultante va en el campo <code>data:</code> de un Secret TLS.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿El Base64 cifra los secretos de Kubernetes?</p>
+          <p class="faq-a">No. Base64 no es cifrado — cualquiera con el manifiesto puede decodificar los valores al instante con cualquier decodificador Base64. Los secretos de Kubernetes aportan control de acceso. Para cifrado en reposo, necesitas configurar el cifrado de etcd por separado a nivel de clúster.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Guías relacionadas</div>
+        <div class="related-links">
+          <a class="related-link" href="/es/blog/base64-codificador-decodificador-online/">
+            Codificar y decodificar Base64 online — Sin subidas, sin línea de comandos
+            <span>Guía completa de todos los casos de uso de Base64 en el navegador</span>
+          </a>
+          <a class="related-link" href="/es/blog/decodificar-token-jwt-navegador/">
+            Cómo decodificar el payload de un token JWT en tu navegador
+            <span>Inspecciona los claims de un JWT en local sin pegar tokens en jwt.io</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge es gratis. Codificar Base64 — y más de 50 utilidades de texto — están disponibles sin cuenta ni suscripción.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Instalar TextForge — gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/es/privacy">Política de privacidad</a>
+      <a href="/es/terms">Términos y condiciones</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

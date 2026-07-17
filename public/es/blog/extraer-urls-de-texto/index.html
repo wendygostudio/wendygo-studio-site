@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extraer URLs de un Texto Online | Wendygo Studio</title>
+  <meta name="description" content="Saca todas las URLs de cualquier bloque de texto en segundos, en local, con TextForge." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/extraer-urls-de-texto/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-urls-de-texto/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-urls-from-text/" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Extraer URLs de un Texto Online | Wendygo Studio">
+  <meta property="og:description" content="Saca todas las URLs de cualquier bloque de texto en segundos, en local, con TextForge.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/extraer-urls-de-texto/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Extraer URLs de un Texto Online | Wendygo Studio">
+  <meta name="twitter:description" content="Saca todas las URLs de cualquier bloque de texto en segundos, en local, con TextForge.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Extract URLs from Text Online",
+    "description": "Use TextForge Chrome extension to extract all URLs from any text block locally, without uploading data to a server.",
+    "tool": [{ "@type": "HowToTool", "name": "TextForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install TextForge",
+        "text": "Install TextForge from the Chrome Web Store and pin the icon to your browser toolbar from the Extensions menu."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open the extension",
+        "text": "Click the TextForge icon in your browser toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Paste your text",
+        "text": "Paste the raw text block containing URLs into the input area — log files, HTML exports, config dumps, anything."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Apply Extract URLs",
+        "text": "Select Extract URLs from the tools menu. TextForge scans the text and returns every URL found, one per line."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Copy the result",
+        "text": "The extracted list appears instantly. Click to copy it to your clipboard."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Extract URLs from Text Online"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Extract URLs from Text Online — No Regex, No Terminal",
+    "description": "Pull every URL out of any text block in seconds. TextForge is a free Chrome extension that extracts URLs locally — no data uploaded, no regex required.",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does TextForge extract URLs from inside HTML tags?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. URLs inside href=, src=, and other HTML attributes are matched, as are plain URLs in text."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can TextForge handle URLs with query parameters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The entire URL including path, query string, and fragment (#) is extracted as one unit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Extract URLs free in TextForge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All extraction functions — emails, URLs, IP addresses — are included in the free version. No account required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my URLs when I use TextForge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nothing leaves your browser. TextForge is a Chrome extension that processes text locally on your machine. No data is sent anywhere."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I extract URLs from a live web page I'm viewing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TextForge works on text you paste into its input area. To extract links from a page, select all the text (Ctrl+A), copy it, and paste it into TextForge. The extension then extracts every URL in that text."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Article layout */
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Article header */
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    /* Divider */
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Body text */
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+
+    /* Comparison table */
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-family: var(--mono); font-size: 12px; }
+    .comp-table td:last-child { color: var(--muted); }
+
+    /* Step cards */
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* Use case cards */
+    .use-cases { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .use-case {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .use-case strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* Example block */
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto;
+    }
+    .example-block .label {
+      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 8px; display: block;
+    }
+    .example-block .val { color: var(--text); word-break: break-all; }
+
+    /* FAQ */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a code {
+      font-family: var(--mono); font-size: 12px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+
+    /* Related articles */
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    /* CTA box */
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .comp-table td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/extract-urls-from-text/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Cómo extraer URLs de un texto online
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · TextForge</div>
+      <h1>Cómo Extraer URLs de un Texto Online — Sin Regex, Sin Terminal</h1>
+      <p class="article-intro">
+        Tienes logs de una API, un volcado de un fichero de configuración o un documento lleno de enlaces mezclados con texto. Aquí tienes cómo sacar todas las URLs en segundos, en local, sin subir tus datos a ninguna parte.
+      </p>
+      <div class="article-date">26 de junio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Las URLs se esconden por todas partes en el texto técnico: incrustadas en logs de API junto a timestamps y códigos de estado, repartidas por ficheros de configuración entre claves y comentarios, enterradas en HTML copiado mezclado con texto. Leerlo todo a mano para encontrarlas es lento. Usar una regex requiere acordarse del patrón. Subirlo a una herramienta online significa poner URLs potencialmente sensibles — endpoints de APIs internas, dashboards privados, entornos de desarrollo — en el servidor de otro.</p>
+
+      <p>TextForge es una extensión de Chrome con una función Extraer URLs que se ejecuta completamente en tu navegador. Pegas el texto, aplicas la función, copias la lista. Nada sale de tu máquina.</p>
+
+      <h2>Cuándo necesitas extraer URLs</h2>
+
+      <div class="use-cases">
+        <div class="use-case">
+          <strong>Logs de API y trazas de peticiones</strong>
+          Las respuestas de API, los logs de peticiones y las salidas de tests suelen contener URLs incrustadas junto a códigos de estado, timestamps y payloads. Cuando necesitas aislar las URLs de los endpoints para depurar o testear, extraerlas es más rápido que buscarlas a mano.
+        </div>
+        <div class="use-case">
+          <strong>Ficheros de configuración y exportaciones</strong>
+          Los manifiestos de Kubernetes, los ficheros de Docker Compose, los exports de variables de entorno y los .env a veces contienen URLs mezcladas con claves, rutas y comentarios. Extrae las URLs para auditar los endpoints con los que habla tu servicio sin tocar el resto de la config.
+        </div>
+        <div class="use-case">
+          <strong>HTML copiado o scrapeado</strong>
+          Cuando copias HTML de una página web a un editor de texto, te llevas un muro de enlaces enterrados en marcado y texto. Extrae las URLs de los href para construir una lista de todos los destinos de una página, útil para auditar enlaces o detectar enlaces rotos.
+        </div>
+        <div class="use-case">
+          <strong>Documentación y runbooks</strong>
+          La documentación interna, los runbooks y los informes de incidentes acumulan enlaces en el texto, en tablas y en notas al pie. Extrae el conjunto completo para ver todos los recursos referenciados en el documento sin escanear línea a línea.
+        </div>
+      </div>
+
+      <h2>Por qué las alternativas manuales se quedan cortas</h2>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Método</th><th>La fricción</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Escanear a ojo</td>
+            <td>Lento para cualquier cosa de más de una página; es fácil saltarse una URL o teclearla mal.</td>
+          </tr>
+          <tr>
+            <td>Regex en VS Code</td>
+            <td>Requiere conocer el patrón de URL y cambiar al modo buscar-y-reemplazar.</td>
+          </tr>
+          <tr>
+            <td>re.findall en Python</td>
+            <td>Requiere una terminal, tener Python instalado y escribir un patrón que cubra las variantes http/https/ftp.</td>
+          </tr>
+          <tr>
+            <td>Extractor de URLs online</td>
+            <td>Tus APIs internas, URLs de desarrollo y endpoints de configuración se envían a un servidor de terceros.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Una extensión de navegador elimina toda esa fricción: un clic desde la barra de herramientas, sin terminal, y todo el procesamiento ocurre en local, en tu máquina.</p>
+
+      <h2>Cómo extraer URLs con TextForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Instala TextForge</div>
+            <div class="step-desc">Instala TextForge desde la Chrome Web Store. Después, abre el menú de Extensiones y fija el icono de TextForge a tu barra para tenerlo siempre a mano.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Abre la extensión</div>
+            <div class="step-desc">Haz clic en el icono de TextForge en la barra del navegador. El panel de la extensión se abre al instante — sin pestaña nueva, sin redirecciones.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Pega tu texto</div>
+            <div class="step-desc">Pega el bloque de texto en bruto en el área de entrada. Pueden ser logs de API, un fichero de configuración, HTML copiado, documentación o cualquier texto con URLs que necesites extraer.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Aplica Extraer URLs</div>
+            <div class="step-desc">Selecciona <strong>Extraer URLs</strong> en el menú de herramientas. TextForge escanea toda la entrada y devuelve cada URL que encuentra, una por línea.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Copia el resultado</div>
+            <div class="step-desc">La lista extraída aparece al instante. Haz clic para copiarla al portapapeles. Sin esperas, sin viajes al servidor.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Ejemplo práctico</h2>
+
+      <p>Imagina que estás depurando y recibes este bloque de texto de un log de API:</p>
+
+      <div class="example-block">
+        <span class="label">Entrada — log y documentación mezclados</span>
+        <div class="val">Error at 12:34:05: request to https://api.internal.example.com/v1/users failed.<br>See runbook at https://wiki.company.net/incidents/api-failures<br>Fallback endpoint: https://api-backup.example.com/v1/users (untested)<br>Contact: admin@example.com</div>
+      </div>
+
+      <p>Tras aplicar Extraer URLs en TextForge, la salida es:</p>
+
+      <div class="example-block">
+        <span class="label">Salida — URLs extraídas</span>
+        <div class="val">https://api.internal.example.com/v1/users<br>https://wiki.company.net/incidents/api-failures<br>https://api-backup.example.com/v1/users</div>
+      </div>
+
+      <p>Tres URLs sacadas de un texto mezclado que contenía un email, timestamps y lenguaje natural — todos los formatos de URL extraídos, sin regex, y con los endpoints internos sensibles sin salir de tu máquina.</p>
+
+      <h2>Otras funciones de extracción en TextForge</h2>
+
+      <p>TextForge también puede extraer <strong>direcciones de email</strong> y <strong>direcciones IP</strong> de un bloque de texto — útil cuando los logs mezclan varios tipos de datos y necesitas aislarlos de uno en uno. Las tres funciones de extracción están incluidas en la versión gratuita.</p>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿TextForge extrae URLs de dentro de etiquetas HTML?</p>
+          <p class="faq-a">Sí. Las URLs dentro de <code>href=</code>, <code>src=</code> y otros atributos HTML se detectan, igual que las URLs sueltas en el texto.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿TextForge maneja URLs con parámetros de consulta?</p>
+          <p class="faq-a">Sí. La URL completa, incluyendo ruta, query string y fragmento (#), se extrae como una sola unidad.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Extraer URLs es gratis en TextForge?</p>
+          <p class="faq-a">Sí. Todas las funciones de extracción — emails, URLs, direcciones IP — están incluidas en la versión gratuita. Sin cuenta ni suscripción.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Qué pasa con mis URLs cuando uso TextForge?</p>
+          <p class="faq-a">Nada sale de tu navegador. TextForge es una extensión de Chrome que procesa el texto en local, en tu máquina. No se envía ningún dato a los servidores de Wendygo Studio ni a ningún servicio de terceros.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Puedo extraer las URLs de una página web que estoy viendo?</p>
+          <p class="faq-a">TextForge trabaja sobre el texto que pegas en su área de entrada. Para extraer los enlaces de una página, selecciona todo el texto de la página (<code>Ctrl+A</code>), cópialo y pégalo en TextForge. La extensión extrae entonces todas las URLs de ese texto.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Guías relacionadas</div>
+        <div class="related-links">
+          <a class="related-link" href="/es/blog/extraer-correos-desde-texto/">
+            Cómo extraer emails de un texto online — Sin caza manual
+            <span>Extrae direcciones de email en local, en tu navegador, con TextForge</span>
+          </a>
+          <a class="related-link" href="/es/blog/base64-codificador-decodificador-online/">
+            Codificar y decodificar Base64 online — Sin subidas, sin línea de comandos
+            <span>Codifica y decodifica Base64 en local, en tu navegador, con TextForge</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge es gratis. Extraer URLs, Extraer emails y Extraer IPs están incluidas en la versión gratuita — sin cuenta ni suscripción.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Instalar TextForge — gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/es/privacy">Política de privacidad</a>
+      <a href="/es/terms">Términos y condiciones</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

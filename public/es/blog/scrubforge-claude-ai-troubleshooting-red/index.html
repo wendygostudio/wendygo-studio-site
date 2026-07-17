@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScrubForge con Claude AI para Redes | Wendygo Studio</title>
+  <meta name="description" content="La gran ventana de contexto de Claude ayuda con configs de red extensas. Sanitiza primero con ScrubForge." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use ScrubForge with Claude AI for Network Troubleshooting",
+    "description": "Sanitize your network config with ScrubForge before pasting it into Claude AI. Keeps live credentials off Anthropic's servers while giving the AI the full config context needed to troubleshoot.",
+    "tool": [
+      { "@type": "HowToTool", "name": "ScrubForge Chrome extension" },
+      { "@type": "HowToTool", "name": "Claude AI" }
+    ],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Export your running config",
+        "text": "Use your standard export method: show running-config on Cisco IOS, get system config on FortiGate CLI, or a configuration download from your management UI."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open ScrubForge",
+        "text": "Click the ScrubForge icon in your Chrome toolbar. The extension opens locally — nothing is uploaded at this step."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Paste and sanitize",
+        "text": "Paste the raw config into ScrubForge. It detects passwords, pre-shared keys, API tokens, private keys, and SNMP strings — replacing each unique value with a consistent placeholder token like [PSK_1] or [ADMIN_PASS_1]."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Review the sanitized output",
+        "text": "Spend 30 seconds scanning for anything that looks like a live credential. ScrubForge covers 120+ patterns across 12 vendors, but a quick review is good practice."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Paste into Claude with context",
+        "text": "Open Claude, describe your problem, and paste the sanitized config. Claude can analyze the full logical structure without seeing any real credentials."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "ScrubForge + Claude AI for Network Troubleshooting"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Use ScrubForge with Claude AI for Network Troubleshooting",
+    "description": "Claude's long context window makes it useful for analyzing large network configs. Sanitize with ScrubForge first — live credentials stay off Anthropic's servers.",
+    "datePublished": "2026-07-12",
+    "dateModified": "2026-07-12",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ScrubForge work the same way with Claude as with ChatGPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ScrubForge sanitizes locally regardless of which AI assistant you use afterward. The sanitization step is identical — paste config, scrub credentials, copy clean output. Where you paste that output is up to you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Claude has a large context window — does that help with big configs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It helps. Claude can ingest a complete, multi-thousand-line config without requiring you to truncate it. This is useful when the issue spans multiple sections of a large configuration file. Sanitize the full export and paste it whole."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Claude Projects to store a sanitized config for reference?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, and it's a reasonable workflow for ongoing infrastructure work. Add the sanitized config as a context file in a Project. Because credentials are replaced with tokens, it's safe to store in a cloud-hosted Project. Storing a raw config there would be the equivalent of emailing it in plaintext."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Anthropic train on my Claude conversations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anthropic's data handling policies vary by plan and API usage. Check the current Anthropic privacy policy for specifics. For sensitive configurations, the safest approach is to ensure credentials never reach the server in the first place — which is what ScrubForge handles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the free version of ScrubForge enough for this workflow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The core sanitization feature works for free — paste a config, get a sanitized version with credentials replaced by tokens. The Pro version adds custom dictionary import/export, context profiles for different vendor types, and unlimited saved replacements."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .article-body ul { margin: 16px 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
+    .article-body ul li strong { color: var(--text); }
+    .article-body pre {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 8px;
+      padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 1.6;
+      margin: 20px 0; color: var(--amber2); font-family: var(--mono);
+    }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .callout {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 8px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.65;
+    }
+    .callout strong { color: var(--text); }
+
+    .related-links {
+      margin: 48px 0 0; padding: 24px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .related-links h3 { font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 14px; }
+    .related-links ul { list-style: none; margin: 0; }
+    .related-links ul li { margin-bottom: 8px; }
+    .related-links ul li a { color: var(--amber); font-size: 14px; text-decoration: none; }
+    .related-links ul li a:hover { text-decoration: underline; }
+
+    .cta-box {
+      margin: 56px 0 0;
+      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
+    }
+    .cta-box p {
+      font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-block; background: var(--amber); color: var(--on-a);
+      font-weight: 800; font-size: 14px; letter-spacing: .3px;
+      padding: 12px 28px; border-radius: 8px; text-decoration: none;
+      transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .faq { margin-top: 56px; }
+    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
+    .faq-item {
+      border: 1px solid var(--line); border-radius: 10px;
+      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    footer {
+      border-top: 1px solid var(--line); margin-top: 80px;
+      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+  .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/es/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/blog/scrubforge-claude-ai-network-troubleshooting/">EN 🌐</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/es/">Inicio</a><span>&#8250;</span>
+    <a href="/es/blog/">Blog</a><span>&#8250;</span>
+    <span>ScrubForge + Claude AI para troubleshooting de red</span>
+  </nav>
+
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge &middot; Flujo de trabajo</div>
+    <h1>Cómo Usar ScrubForge con Claude AI para Troubleshooting de Red</h1>
+    <p class="article-intro">La gran ventana de contexto de Claude maneja bien las configs de red completas. El truco: pegar una config en bruto envía credenciales activas a los servidores de Anthropic. Sanitiza con ScrubForge primero &mdash; el arreglo lleva menos de un minuto.</p>
+    <div class="article-date">12 de julio de 2026</div>
+  </header>
+
+  <hr class="divider" />
+
+  <article class="article-body">
+
+    <p>Claude, el asistente de IA de Anthropic, se ha ganado un público fiel entre ingenieros por su razonamiento preciso y su gran ventana de contexto. Los sysadmins lo usan para analizar configuraciones BGP, depurar políticas de VPN y desentrañar lógicas complejas de reglas de firewall &mdash; exactamente el tipo de razonamiento estructurado en el que Claude rinde bien.</p>
+
+    <p>El problema de las credenciales es idéntico al de cualquier otro asistente de IA. Cuando pegas una config de red en Claude, ese texto va a los servidores de Anthropic. Tus claves precompartidas de VPN activas, contraseñas de administrador, tokens de API y community strings de SNMP van con él.</p>
+
+    <p><strong>ScrubForge lo resuelve:</strong> sanitiza la config en local, en Chrome, y luego pega la versión limpia en Claude sin ninguna credencial activa adjunta.</p>
+
+    <h2>Por qué los sysadmins usan Claude para configs de red</h2>
+
+    <p>Claude maneja bien el texto denso y estructurado. Una config de FortiGate de 1.500 líneas o un export de Cisco IOS-XR con múltiples VRFs cabe en su ventana de contexto &mdash; Claude puede analizarlo como documento completo en vez de como fragmento truncado.</p>
+
+    <p>Casos de uso comunes donde Claude aporta valor:</p>
+
+    <ul>
+      <li><strong>Depuración de IPsec e IKEv2</strong> &mdash; identificar parámetros de fase 1/fase 2 desajustados, inconsistencias en los timers de DPD o un orden de propuestas incorrecto</li>
+      <li><strong>Análisis de políticas BGP</strong> &mdash; explicar la lógica de route-maps, revisar el manejo de community tags, señalar configuraciones de peers ausentes</li>
+      <li><strong>Revisión de políticas de firewall</strong> &mdash; encontrar reglas en shadow, detectar denys ausentes, revisar el orden del NAT</li>
+      <li><strong>VLANs y spanning-tree</strong> &mdash; detectar desajustes de trunks, inconsistencias de VLAN nativa, problemas de topología STP</li>
+    </ul>
+
+    <p>Claude también soporta sesiones largas de troubleshooting de ida y vuelta en las que puedes compartir contexto adicional de forma incremental &mdash; útil cuando el análisis inicial destapa preguntas de seguimiento.</p>
+
+    <h2>El riesgo de credenciales es el mismo</h2>
+
+    <p>La ventana de contexto de Claude no cambia el problema de privacidad subyacente. Cuando envías un mensaje a Claude, el texto va a la infraestructura de Anthropic. Según el tipo de cuenta y la configuración de uso, puede retenerse para revisión de abusos, monitorización de seguridad o mejora del producto.</p>
+
+    <p>Una config de firewall de producción con credenciales activas no pinta nada en ningún servidor externo &mdash; da igual qué asistente de IA uses.</p>
+
+    <h2>El flujo ScrubForge + Claude</h2>
+
+    <p>El paso de sanitización lleva menos de un minuto. El resto del flujo es idéntico a lo que harías con cualquier asistente de IA.</p>
+
+    <ol class="steps">
+      <li class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Exporta tu running config</div>
+          <div class="step-desc">Usa tu método habitual: <code>show running-config</code> en Cisco IOS, <code>get system config</code> en la CLI de FortiGate, o una descarga de configuración desde tu interfaz de gestión.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Abre ScrubForge</div>
+          <div class="step-desc">Haz clic en el icono de ScrubForge en tu barra de Chrome. La extensión se abre en local &mdash; en este paso no se sube nada.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Pega y sanitiza</div>
+          <div class="step-desc">Pega la config en bruto. ScrubForge detecta contraseñas, claves precompartidas, tokens de API, claves privadas y strings de SNMP &mdash; sustituyendo cada valor único por un placeholder consistente como <code>[PSK_1]</code> o <code>[ADMIN_PASS_1]</code>. La topología de red queda intacta.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Revisa la salida sanitizada</div>
+          <div class="step-desc">Dedica 30 segundos a buscar cualquier cosa que parezca una credencial activa. ScrubForge cubre más de 120 patrones de 12 fabricantes, pero una revisión rápida antes de compartir es buena práctica.</div>
+        </div>
+      </li>
+      <li class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Pega en Claude con contexto</div>
+          <div class="step-desc">Abre Claude, describe tu problema y pega la config sanitizada. Claude puede analizar toda la estructura lógica sin ver ninguna credencial real.</div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout">
+      <strong>Ejemplo de prompt:</strong> &ldquo;Aquí va una config de Cisco IOS sanitizada (credenciales sustituidas por tokens placeholder &mdash; la estructura de red está intacta). Mi túnel IPsec site-to-site hacia 198.51.100.10 se cae cada 6 horas y no se recupera automáticamente. ¿Puedes identificar causas probables a partir de la config?&rdquo;
+    </div>
+
+    <h2>Antes y después: qué recibe Claude</h2>
+
+    <p>Un fragmento que muestra cómo queda la sanitización en la práctica:</p>
+
+    <pre>--- ANTES (en bruto) ---
+crypto isakmp key MyS3cr3tK3y address 203.0.113.5
+username admin password 7 0822455D0A16
+snmp-server community C0mmun1ty! RO
+ip vrf MGMT
+ rd 65001:100
+
+--- DESPUÉS (sanitizado por ScrubForge) ---
+crypto isakmp key [PSK_1] address 203.0.113.5
+username admin password 7 [ENC_PASS_1]
+snmp-server community [SNMP_RO_1] RO
+ip vrf MGMT
+ rd 65001:100</pre>
+
+    <p>La IP del peer, el identificador de routing y el nombre del VRF se quedan en su sitio. Claude ve la estructura lógica completa sin ninguna credencial activa. Y como los tokens son consistentes &mdash; la misma contraseña que aparece cinco veces se convierte en <code>[ADMIN_PASS_1]</code> en todas ellas &mdash; Claude aún puede razonar sobre patrones de reutilización sin ver el valor real.</p>
+
+    <h2>Qué hace bien Claude con configs sanitizadas</h2>
+
+    <p>Los puntos fuertes de Claude encajan bien con las tareas de troubleshooting de red:</p>
+
+    <ul>
+      <li><strong>Análisis de configs extensas.</strong> Claude puede ingerir un export completo sin obligarte a truncarlo. Esto importa cuando el fallo está en la interacción entre políticas y no en un bloque aislado.</li>
+      <li><strong>Razonamiento estructurado.</strong> Claude tiende a explicar <em>por qué</em> algo está mal, no solo a señalarlo &mdash; útil cuando necesitas entender la causa raíz en vez de aplicar un parche a ciegas.</li>
+      <li><strong>Sesiones iterativas.</strong> Puedes seguir con contexto adicional (&ldquo;aquí va la salida de <code>show ip bgp summary</code>&rdquo; o &ldquo;esto es lo que cambió en las últimas 48 horas&rdquo;) dentro de la misma conversación.</li>
+      <li><strong>Configs multi-fabricante.</strong> Si estás depurando un camino que cruza un router Cisco, un firewall FortiGate y un Palo Alto, puedes pegar varias configs sanitizadas en una sola sesión y pedir a Claude que busque inconsistencias entre dispositivos.</li>
+    </ul>
+
+    <h2>Usar Proyectos de Claude para análisis de config continuado</h2>
+
+    <p>La función de Proyectos de Claude te permite organizar conversaciones relacionadas bajo un contexto compartido. Para troubleshooting de red, puedes añadir una config base sanitizada a un Proyecto una vez y referenciarla en múltiples sesiones sin volver a pegarla cada vez.</p>
+
+    <p>Aplica la misma regla: añade a un Proyecto solo configs sanitizadas. Un Proyecto sigue estando alojado en la nube. Una config sanitizada con tokens placeholder es segura de almacenar ahí; una config en bruto con credenciales activas, no.</p>
+
+    <h2>Esto funciona con cualquier asistente de IA</h2>
+
+    <p>El flujo de ScrubForge es agnóstico de la IA. Uses Claude, ChatGPT, Gemini o Copilot, el paso de sanitización es idéntico &mdash; pega la config, limpia las credenciales, copia la salida limpia. El riesgo de credenciales es el mismo sea cual sea la IA que lo reciba; el arreglo también.</p>
+
+    <div class="related-links">
+      <h3>Guías relacionadas</h3>
+      <ul>
+        <li><a href="/es/blog/scrubforge-chatgpt-troubleshooting-red/">ScrubForge + ChatGPT para troubleshooting de red</a></li>
+        <li><a href="/es/blog/sanitizar-configuracion-red-antes-compartir/">Cómo sanitizar cualquier config de red antes de compartirla</a></li>
+        <li><a href="/es/blog/remover-datos-sensibles-cisco-config/">Eliminar datos sensibles de configs de Cisco</a></li>
+        <li><a href="/es/blog/sanitizar-config-fortigate/">Cómo compartir una config de FortiGate de forma segura</a></li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h2>Sanitiza antes de pegar</h2>
+      <p>ScrubForge es gratis. Pega tu config, elimina las credenciales en local y comparte con Claude o cualquier asistente de IA con seguridad &mdash; sin cuenta, sin subidas.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Instalar ScrubForge &mdash; Gratis</a>
+    </div>
+
+  </article>
+
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">¿ScrubForge funciona igual con Claude que con ChatGPT?</div>
+      <div class="faq-a">Sí. ScrubForge sanitiza en local independientemente del asistente de IA que uses después. El paso de sanitización es idéntico &mdash; pegar config, limpiar credenciales, copiar salida limpia. Dónde pegues esa salida depende de ti.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Claude tiene una ventana de contexto grande &mdash; ¿ayuda con configs grandes?</div>
+      <div class="faq-a">Ayuda. Claude puede ingerir una config completa de varios miles de líneas sin obligarte a truncarla. Es útil cuando el problema abarca varias secciones de un fichero de configuración grande. Sanitiza el export completo y pégalo entero.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo usar los Proyectos de Claude para guardar una config sanitizada como referencia?</div>
+      <div class="faq-a">Sí, y es un flujo razonable para trabajo de infraestructura continuado. Añade la config sanitizada como fichero de contexto en un Proyecto. Como las credenciales están sustituidas por tokens, es seguro guardarla en un Proyecto alojado en la nube. Guardar ahí una config en bruto sería el equivalente a enviarla por email en texto plano.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Anthropic entrena con mis conversaciones de Claude?</div>
+      <div class="faq-a">Las políticas de manejo de datos de Anthropic varían según el plan y el uso de la API. Consulta la política de privacidad vigente de Anthropic para los detalles. Para configuraciones sensibles, lo más seguro es garantizar que las credenciales no lleguen nunca al servidor &mdash; que es justo lo que hace ScrubForge.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿La versión gratuita de ScrubForge basta para este flujo?</div>
+      <div class="faq-a">La función principal de sanitización funciona gratis &mdash; pegas una config y obtienes una versión sanitizada con las credenciales sustituidas por tokens. La versión Pro añade importación/exportación de diccionarios personalizados, perfiles de contexto para distintos tipos de fabricante y reemplazos guardados ilimitados.</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/es/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/#tools">Herramientas</a>
+    <a href="/es/privacy">Privacidad</a>
+    <a href="/es/terms">Términos</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. Todos los derechos reservados.</div>
+</footer>
+
+</body>
+</html>

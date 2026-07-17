@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contracargo de Tarjeta de Crédito en la UE | Wendygo Studio</title>
+  <meta name="description" content="Guía paso a paso para disputar un cargo y recuperar tu dinero en la UE. Contracargo directo con tu banco, sin abogado." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to File a Credit Card Chargeback in the EU"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to File a Credit Card Chargeback in the EU",
+    "description": "Step-by-step guide to disputing a credit card charge and getting your money back in the EU. File a chargeback directly with your bank—no lawyer needed.",
+    "datePublished": "2026-07-04",
+    "dateModified": "2026-07-04",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a chargeback and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A chargeback is a dispute filed directly with your bank to reverse a fraudulent or unauthorized transaction. Your bank investigates and either credits your account or rejects the claim. The merchant then has the chance to respond."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do I have to file a chargeback in the EU?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EU rules require you to file within 120 days of the transaction date. Most banks allow filing within this period, though some enforce shorter deadlines (check with your bank). File as soon as you notice the problem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will the seller know I filed a chargeback?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Your bank notifies the merchant's bank, which alerts the merchant to the dispute. They can then provide evidence to defend themselves. This is why documentation from your side (emails, screenshots, delivery proof) matters."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(40px,8vw,72px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      display: flex; gap: 6px; align-items: center;
+      font-size: 13px; color: var(--muted); margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--faint); }
+
+    .article-meta {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(232,163,61,.15); color: var(--amber);
+      border: 1px solid rgba(232,163,61,.3);
+      border-radius: 4px; padding: 2px 8px; font-size: 11px;
+      font-weight: 600; letter-spacing: .5px; text-transform: uppercase;
+    }
+    .article-date { font-size: 13px; color: var(--muted); }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 36px); font-weight: 800;
+      line-height: 1.25; letter-spacing: -.3px;
+      color: var(--text); margin-bottom: 20px;
+    }
+    .article-intro {
+      font-size: 18px; color: var(--muted); line-height: 1.65;
+      margin-bottom: 40px; border-bottom: 1px solid var(--line); padding-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin: 40px 0 14px; line-height: 1.3;
+    }
+    h3 {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      margin: 28px 0 10px;
+    }
+    p { margin-bottom: 16px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 0 0 16px 0; padding-left: 0;
+      list-style: none;
+    }
+    ul li, ol li {
+      position: relative; padding-left: 20px; margin-bottom: 8px;
+      color: var(--text);
+    }
+    ul li::before {
+      content: "–"; position: absolute; left: 0; color: var(--amber);
+    }
+    ol { counter-reset: step; }
+    ol li::before {
+      counter-increment: step;
+      content: counter(step) ".";
+      position: absolute; left: 0; color: var(--amber); font-weight: 700;
+    }
+
+    strong { color: var(--text); font-weight: 600; }
+
+    .highlight-box {
+      background: var(--surf); border: 1px solid var(--line);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--r); padding: 18px 20px;
+      margin: 28px 0;
+    }
+    .highlight-box p { margin: 0; }
+
+    .step-box {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 20px 22px;
+      margin: 16px 0;
+    }
+    .step-box-title {
+      font-weight: 700; color: var(--text); margin-bottom: 8px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .step-number {
+      display: flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(232,163,61,.2); color: var(--amber);
+      font-weight: 700; font-size: 13px; flex-shrink: 0;
+    }
+    .step-box p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+    .faq-section { margin-top: 56px; }
+    .faq-section h2 { margin-bottom: 20px; }
+    .faq-item {
+      border-top: 1px solid var(--line); padding: 20px 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid var(--line); }
+    .faq-q {
+      font-size: 15px; font-weight: 600; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+    .cta-box {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 12px; padding: 32px 28px;
+      margin: 48px 0; text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; margin: 0 0 10px;
+    }
+    .cta-box p {
+      color: var(--muted); font-size: 15px; margin: 0 0 22px;
+      max-width: 480px; margin-left: auto; margin-right: auto;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 15px;
+      padding: 11px 24px; border-radius: 7px;
+      text-decoration: none; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related-section { margin-top: 64px; }
+    .related-section h2 { font-size: 18px; margin-bottom: 16px; }
+    .related-list { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 14px 16px;
+      text-decoration: none; color: var(--text); font-size: 14px;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--amber); }
+    .related-link span { color: var(--muted); font-size: 12px; display: block; margin-top: 2px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px clamp(20px,5vw,60px);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand {
+      font-size: 13px; font-weight: 700; color: var(--muted);
+      text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: var(--faint); font-size: 13px; text-decoration: none; }
+    .footer-links a:hover { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 16px; }
+      .step-box-title { flex-wrap: wrap; }
+    }
+  .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/es/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+    <a href="/es/">Inicio</a>
+    <a href="/es/blog/">Blog</a>
+    <a href="/blog/credit-card-chargeback-eu/">EN 🌐</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/es/">Inicio</a>
+    <span>›</span>
+    <a href="/es/blog/">Blog</a>
+    <span>›</span>
+    <span>Cómo presentar un contracargo de tarjeta en la UE</span>
+  </nav>
+
+  <div class="article-meta">
+    <span class="tag">ClaimForge</span>
+    <span class="article-date">4 de julio de 2026</span>
+  </div>
+
+  <h1>Cómo Presentar un Contracargo de Tarjeta de Crédito en la UE</h1>
+
+  <p class="article-intro">
+    Tu pedido online nunca llegó, o recibiste algo completamente distinto. Presentar un contracargo (chargeback) ante tu banco suele ser la forma más rápida de recuperar tu dinero — normalmente en días, no en meses.
+  </p>
+
+  <h2>¿Qué es un contracargo?</h2>
+  <p>Un contracargo es una disputa iniciada directamente con tu banco para revertir una transacción. Le estás diciendo a tu banco: "este cargo no debería haberse producido" o "pagué por algo que no recibí". Tu banco investiga la reclamación, te pide pruebas y, o abona el importe en tu cuenta, o da la razón al comercio. Es simple, directo y no requiere organismos de resolución alternativa ni abogados.</p>
+  <p>En la UE, los contracargos se rigen por el esquema de tu tarjeta (Visa, Mastercard, etc.) y por la normativa bancaria europea. El proceso es el mismo tanto si pagaste en tu país como si fue una compra transfronteriza.</p>
+
+  <h2>Cuándo presentar un contracargo</h2>
+  <p>El contracargo funciona mejor para:</p>
+  <ul>
+    <li><strong>No entrega:</strong> pagaste pero el artículo nunca llegó</li>
+    <li><strong>Producto no conforme con la descripción:</strong> el producto no se parece en nada al anuncio (talla equivocada, roto, artículo completamente distinto)</li>
+    <li><strong>Cargos no autorizados:</strong> alguien usó tu tarjeta sin permiso</li>
+    <li><strong>Comercio que no responde:</strong> has intentado contactar con el vendedor sin recibir respuesta</li>
+  </ul>
+  <p>Los contracargos son más lentos para disputas sobre <strong>calidad del servicio</strong> o quejas subjetivas — el comercio puede argumentar que el producto coincidía con la descripción, aunque no estés satisfecho. Para esas, la resolución alternativa (ADR) o las autoridades de consumo nacionales suelen ser más eficaces.</p>
+
+  <h2>Los plazos del contracargo en la UE</h2>
+
+  <div class="highlight-box">
+    <p><strong>Presenta la disputa dentro de los 120 días desde la fecha de la transacción.</strong> Es el plazo a nivel de la UE. Algunos bancos aplican plazos más cortos (60–90 días), así que presenta la disputa en cuanto detectes el problema. Cerrada la ventana de 120 días, la mayoría de los bancos rechazarán la disputa.</p>
+  </div>
+
+  <p>El proceso completo suele llevar de 4 a 6 semanas una vez presentado, aunque muchos casos se resuelven antes. Tu banco normalmente abonará el importe en tu cuenta en 7–10 días como abono provisional mientras investiga, y finalizará la decisión más adelante.</p>
+
+  <h2>Cómo presentar un contracargo: 4 pasos</h2>
+
+  <div class="step-box">
+    <div class="step-box-title">
+      <div class="step-number">1</div>
+      Contacta con tu banco
+    </div>
+    <p>Llama a tu banco o entra en tu banca online y notifica la disputa. También puedes acudir a una sucursal en persona. Diles: la fecha de la transacción, el importe, el nombre del comercio y por qué la disputas (no entrega, producto no conforme, etc.). Pídeles que inicien un contracargo. La mayoría de los bancos lo confirmarán por escrito y te darán un número de referencia de la disputa.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-box-title">
+      <div class="step-number">2</div>
+      Reúne pruebas
+    </div>
+    <p>Prepara documentación que respalde tu reclamación: la confirmación de pedido original (email o captura), la comunicación con el comercio (emails, mensajes, tickets de soporte), la información de seguimiento que muestre la no entrega, fotos del artículo recibido (si llegó dañado o equivocado) y tu extracto bancario mostrando el cargo. Cuanto más detalladas sean tus pruebas, más fuerte será tu caso.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-box-title">
+      <div class="step-number">3</div>
+      Envía tus documentos
+    </div>
+    <p>Tu banco te pedirá las pruebas en un plazo de 7–14 días desde la presentación. Envía todo lo que hayas reunido por su portal seguro, por email o en persona. Sé claro y ordenado: etiqueta cada documento con lo que muestra y por qué respalda tu reclamación. Una explicación de una línea no suele bastar — sé concreto sobre qué salió mal y por qué el incumplimiento del comercio violó tus derechos.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-box-title">
+      <div class="step-number">4</div>
+      Espera la resolución
+    </div>
+    <p>Tu banco investiga y normalmente decide en 4–6 semanas. Contactará con el banco del comercio, que reenvía la disputa al comercio. El comercio puede responder con sus propias pruebas (confirmación de pedido, prueba de envío, etc.). Tu banco decide entonces quién tiene razón. Recibirás una decisión final por escrito.</p>
+  </div>
+
+  <h2>¿Qué pasa si ganas o pierdes?</h2>
+  <p><strong>Si ganas:</strong> tu banco abona el importe completo en tu cuenta, normalmente tras un abono provisional que ya apareció a los pocos días del proceso. El banco del comercio recupera el importe de la cuenta del vendedor.</p>
+  <p><strong>Si pierdes:</strong> el cargo se queda en tu cuenta. Suele ocurrir si el comercio aporta una prueba de entrega (recibo firmado, confirmación del transportista) o una prueba de que recibiste el producto. No es el final — todavía puedes acudir a <a href="/es/blog/alternativas-reclamar-sin-abogado-ue/">otras vías como la resolución alternativa o las autoridades de consumo nacionales</a>.</p>
+
+  <h2>Motivos comunes por los que fallan los contracargos</h2>
+  <ul>
+    <li>Presentaste la disputa demasiado tarde (pasados 120 días desde la transacción)</li>
+    <li>El comercio tiene prueba de entrega con firma</li>
+    <li>El comercio tiene la prueba de tu confirmación de compra</li>
+    <li>Tus pruebas son vagas o incompletas</li>
+    <li>La disputa va de calidad del servicio, no de entrega o fraude — los contracargos no son ideales para quejas subjetivas</li>
+  </ul>
+
+  <h2>Contracargo vs. otras opciones</h2>
+  <p>El contracargo es rápido pero no la única opción. Si tu contracargo falla, o si quieres una segunda opinión antes de presentarlo:</p>
+  <ul>
+    <li><strong>ADR (resolución alternativa de litigios):</strong> tarda hasta 90 días, pero suele tener más éxito en disputas de calidad</li>
+    <li><strong>Plataforma ODR de la UE:</strong> mejor para disputas transfronterizas; canaliza tu reclamación a la autoridad correcta</li>
+    <li><strong>Autoridad de consumo nacional:</strong> puede presionar al comercio si es reincidente; presentar la queja es gratis</li>
+    <li><strong>Juicio de escasa cuantía:</strong> último recurso, pero los vendedores suelen llegar a acuerdos antes de la sentencia</li>
+  </ul>
+
+  <div class="cta-box">
+    <h2>Conoce tus derechos como consumidor en cada disputa</h2>
+    <p>ClaimForge es una extensión de Chrome gratuita que identifica qué derecho del consumidor de la UE aplica a tu situación — reembolso, garantía, entrega o derechos de datos — y te dice la vía más rápida hacia la resolución.</p>
+    <a class="cta-btn" href="https://chromewebstore.google.com/detail/mlnjadkolgplpgbheklkdjcglojfakcg" target="_blank" rel="noopener">Instalar ClaimForge gratis →</a>
+  </div>
+
+  <section class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Qué es un contracargo y cómo funciona?</p>
+      <p class="faq-a">Un contracargo es una disputa presentada directamente ante tu banco para revertir una transacción fraudulenta o no autorizada. Tu banco investiga y, o abona el importe en tu cuenta, o rechaza la reclamación. El comercio tiene entonces la oportunidad de responder con pruebas.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Cuánto tiempo tengo para presentar un contracargo en la UE?</p>
+      <p class="faq-a">Las reglas de la UE exigen presentarlo dentro de los 120 días desde la fecha de la transacción. La mayoría de los bancos permiten hacerlo en ese periodo, aunque algunos aplican plazos más cortos (consulta con tu banco). Presenta la disputa en cuanto detectes el problema.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿El vendedor sabrá que presenté un contracargo?</p>
+      <p class="faq-a">Sí. Tu banco notifica al banco del comercio, que alerta al comercio de la disputa. Entonces puede aportar pruebas para defenderse. Por eso importa la documentación de tu lado (emails, capturas, prueba de entrega).</p>
+    </div>
+
+  </section>
+
+  <section class="related-section">
+    <h2>Artículos relacionados</h2>
+    <div class="related-list">
+      <a class="related-link" href="/es/guides/derechos-consumidor-ue/">
+        Derechos del consumidor en la UE: la guía completa para compradores en Europa
+        <span>ClaimForge — todos tus derechos de la UE en un solo sitio: garantía, reclamaciones, RGPD, contracargos</span>
+      </a>
+      <a class="related-link" href="/es/blog/alternativas-reclamar-sin-abogado-ue/">
+        Alternativas a contratar un abogado para reclamaciones de consumo en la UE
+        <span>Cuándo funcionan mejor los contracargos, la ADR y otras vías gratuitas</span>
+      </a>
+      <a class="related-link" href="/es/blog/como-presentar-reclamacion-consumidor-ue/">
+        Cómo presentar una reclamación de consumo en la UE: guía paso a paso
+        <span>Cuando el contracargo no funciona, escala a la ADR o a las autoridades nacionales</span>
+      </a>
+      <a class="related-link" href="/es/blog/garantia-legal-ue-explicada/">
+        La garantía legal de 2 años en la UE, explicada: qué te corresponde
+        <span>La garantía legal para productos defectuosos comprados en la UE</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/es/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/es/privacy">Privacidad</a>
+  </div>
+</footer>
+
+</body>
+</html>

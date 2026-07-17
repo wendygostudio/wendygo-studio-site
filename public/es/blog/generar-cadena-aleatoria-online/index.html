@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generar una Cadena Aleatoria Online | Wendygo Studio</title>
+  <meta name="description" content="Genera una cadena aleatoria en tu navegador — sin registro, sin que ningún dato salga de tu máquina. Con TextForge." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-random-string-online/" />
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Generar una Cadena Aleatoria Online | Wendygo Studio">
+  <meta property="og:description" content="Genera una cadena aleatoria en tu navegador — sin registro, sin que ningún dato salga de tu máquina. Con TextForge.">
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Generar una Cadena Aleatoria Online | Wendygo Studio">
+  <meta name="twitter:description" content="Genera una cadena aleatoria en tu navegador — sin registro, sin que ningún dato salga de tu máquina. Con TextForge.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Generate a Random String in Your Browser",
+    "description": "Use TextForge Chrome extension to generate a random string locally in your browser without sending any data to a server.",
+    "tool": [{ "@type": "HowToTool", "name": "TextForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install TextForge",
+        "text": "Install TextForge from the Chrome Web Store and pin the icon to your browser toolbar from the Extensions menu."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open the extension",
+        "text": "Click the TextForge icon in your browser toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Apply Generate Random String",
+        "text": "Select Generate Random String from the tools menu. TextForge produces a secure random string instantly in the output area."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Copy the result",
+        "text": "Click to copy the random string to your clipboard. No server request, no wait time."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Generate a Random String in Your Browser"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Generate a Random String in Your Browser — Free &amp; Private",
+    "description": "Generate a random string directly in your browser — no online service, no signup, no data leaving your machine. TextForge includes random string generation as one of its 58 built-in text functions.",
+    "datePublished": "2026-07-09",
+    "dateModified": "2026-07-09",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is random string generation free in TextForge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Generate Random String is included in the free version of TextForge. No account or subscription is required to use it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TextForge send my data to a server when generating random strings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. TextForge is a Chrome extension that runs entirely in your browser. No data is sent to Wendygo Studio servers or any third-party service. Random string generation uses the browser's built-in cryptographic random number generator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I customize the length and character set?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TextForge lets you configure the string length (typically 8–32 characters) and choose which character types to include: lowercase letters, uppercase letters, numbers, special characters, hyphens, and underscores."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between random strings and UUIDs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Random strings are shorter and flexible — you control the length and character set. UUIDs are always 36 characters (with hyphens) and follow a standardized format. For API tokens and session IDs, random strings are often preferred; for database primary keys, UUIDs are more reliable."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+
+    .use-cases { margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .use-case {
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; color: var(--muted); line-height: 1.5;
+    }
+    .use-case strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-family: var(--mono); font-size: 12px; }
+    .comp-table td:last-child { color: var(--muted); }
+
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800;
+      display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .example-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto;
+    }
+    .example-block .label {
+      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 8px; display: block;
+    }
+    .example-block .val { color: var(--text); word-break: break-all; }
+
+    .tip-box {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .tip-box strong { color: var(--text); }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a code {
+      font-family: var(--mono); font-size: 12px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+    .faq-a a { color: var(--amber); text-decoration: none; }
+    .faq-a a:hover { text-decoration: underline; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .comp-table td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/generate-random-string-online/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Cómo generar una cadena aleatoria en tu navegador
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · TextForge</div>
+      <h1>Cómo Generar una Cadena Aleatoria en tu Navegador — Gratis y Privado</h1>
+      <p class="article-intro">
+        ¿Necesitas una cadena aleatoria para un token de API, un ID de sesión o un nonce de seguridad? Si ya estás en Chrome, no necesitas abrir una web generadora de cadenas aleatorias. TextForge trae la generación de cadenas aleatorias integrada — un clic, sin servidor, nada sale de tu máquina.
+      </p>
+      <div class="article-date">9 de julio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Las cadenas aleatorias son esenciales en desarrollo: tokens de API para autenticación, identificadores de sesión para seguimiento de usuarios, tokens CSRF para seguridad, códigos de acceso temporales, contraseñas de un solo uso, enlaces de restablecimiento de contraseña. Cuando necesitas una rápido, el reflejo es buscar "generar cadena aleatoria online" y usar el primer resultado — pero eso significa cargar una pestaña nueva, a veces esperar anuncios y, en algunos casos, enviar una petición a un servidor de terceros. Si lo que realmente necesitas es una <a href="/tools/password-generator/">contraseña segura</a> en vez de un token de desarrollo, también hay un generador gratuito para eso — mismo principio, nada sale de tu navegador.</p>
+
+      <p>Hay un camino más rápido si ya estás en Chrome. TextForge es una extensión de navegador con más de 58 funciones de texto integradas, la generación de cadenas aleatorias entre ellas. Abres el panel, aplicas la función, configuras longitud y juego de caracteres, copias el resultado. Listo.</p>
+
+      <h2>Cuándo necesitas generar una cadena aleatoria</h2>
+
+      <div class="use-cases">
+        <div class="use-case">
+          <strong>Tokens de API y claves de autenticación</strong>
+          Muchas APIs propias requieren tokens bearer o claves de API. Generar una cadena aleatoria en local durante el desarrollo o los tests evita depender de un servicio de terceros para valores sensibles de seguridad.
+        </div>
+        <div class="use-case">
+          <strong>Identificadores de sesión y códigos temporales</strong>
+          Las aplicaciones web usan cadenas aleatorias como IDs de sesión, tokens de restablecimiento de contraseña y códigos de verificación de email. Generarlos en tu navegador durante el prototipado es más limpio que usar un generador online.
+        </div>
+        <div class="use-case">
+          <strong>Tokens CSRF y nonces de seguridad</strong>
+          Los tokens de validación de formularios y los nonces de peticiones previenen ataques cross-site. Tener un generador local rápido significa no depender de un servicio externo.
+        </div>
+        <div class="use-case">
+          <strong>Testing y fixtures de pruebas</strong>
+          Al escribir tests que requieren tokens o claves únicas, generar un lote en local, en tu navegador, es más rápido que fabricarlos a mano o usar un servicio online.
+        </div>
+      </div>
+
+      <h2>Cadenas aleatorias vs. UUIDs</h2>
+
+      <table class="comp-table">
+        <thead>
+          <tr><th>Tipo</th><th>Cuándo usarlo</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cadena aleatoria</td>
+            <td>Tokens de API, IDs de sesión, códigos temporales, contraseñas. Tú controlas la longitud (típicamente 8–32 caracteres) y el juego de caracteres. Más corta y flexible que un UUID.</td>
+          </tr>
+          <tr>
+            <td>UUID</td>
+            <td>Claves primarias de bases de datos, identificadores distribuidos, IDs únicos de recursos. Formato estandarizado de 128 bits, siempre 36 caracteres (con guiones). Sin riesgo de colisiones entre sistemas.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Cómo generar una cadena aleatoria con TextForge</h2>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Instala TextForge</div>
+            <div class="step-desc">Instala TextForge desde la Chrome Web Store. Después, abre el menú de Extensiones y fija el icono de TextForge a tu barra para tenerlo siempre a un clic.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Abre el panel de la extensión</div>
+            <div class="step-desc">Haz clic en el icono de TextForge en la barra del navegador. El panel se abre al instante — sin pestaña nueva, sin cargas de página.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Aplica Generar cadena aleatoria</div>
+            <div class="step-desc">Selecciona <strong>Generar cadena aleatoria</strong> en el menú de herramientas. Configura la longitud (típicamente 8–32 caracteres) y el juego de caracteres (letras, números, caracteres especiales, etc.). TextForge genera una cadena aleatoria segura al instante.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Copia el resultado</div>
+            <div class="step-desc">Haz clic para copiar la cadena aleatoria al portapapeles. Sin peticiones de red, sin viajes al servidor — solo un identificador generado en local, listo para pegarlo donde lo necesites.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Ejemplo de salida</h2>
+
+      <div class="example-block">
+        <span class="label">Generar cadena aleatoria — 16 caracteres, alfanumérica</span>
+        <div class="val">kJ9mPqRwL2vXyZaB</div>
+      </div>
+
+      <div class="example-block">
+        <span class="label">Generar cadena aleatoria — 24 caracteres, con especiales</span>
+        <div class="val">kJ9m!Pq@RwL#2vX$yZa%B7aX</div>
+      </div>
+
+      <p>TextForge genera valores aleatorios criptográficamente seguros — sin patrones, sin predictibilidad, sin componentes secuenciales.</p>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿Generar cadenas aleatorias es gratis en TextForge?</p>
+          <p class="faq-a">Sí. Generar cadena aleatoria está incluido en la versión gratuita de TextForge. No se requiere cuenta ni suscripción para usarlo.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿TextForge envía mis datos a un servidor al generar cadenas aleatorias?</p>
+          <p class="faq-a">No. TextForge es una extensión de Chrome que corre completamente en tu navegador. No se envía ningún dato a los servidores de Wendygo Studio ni a ningún servicio de terceros. La generación usa el generador criptográfico de números aleatorios integrado del navegador.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Puedo personalizar la longitud y el juego de caracteres?</p>
+          <p class="faq-a">Sí. TextForge te permite configurar la longitud de la cadena (típicamente 8–32 caracteres) y elegir qué tipos de caracteres incluir: minúsculas, mayúsculas, números, caracteres especiales, guiones y guiones bajos.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Cuál es la diferencia entre cadenas aleatorias y UUIDs?</p>
+          <p class="faq-a">Las cadenas aleatorias son más cortas y flexibles — tú controlas la longitud y el juego de caracteres. Los <a href="/es/blog/generar-uuid-en-linea/">UUIDs</a> tienen siempre 36 caracteres (con guiones) y siguen un formato estandarizado. Para tokens de API e IDs de sesión, suelen preferirse las cadenas aleatorias; para claves primarias de bases de datos, los UUIDs son más fiables.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Guías relacionadas</div>
+        <div class="related-links">
+          <a class="related-link" href="/es/blog/generar-uuid-en-linea/">
+            Cómo generar un UUID en tu navegador — Gratis y privado
+            <span>Genera identificadores estandarizados de 128 bits con TextForge</span>
+          </a>
+          <a class="related-link" href="/es/blog/base64-codificador-decodificador-online/">
+            Codificar y decodificar Base64 online — Sin subidas, sin línea de comandos
+            <span>Codifica y decodifica Base64 en local, en tu navegador, con TextForge</span>
+          </a>
+          <a class="related-link" href="/es/blog/extraer-correos-desde-texto/">
+            Cómo extraer emails de un texto online — Sin caza manual
+            <span>Saca todas las direcciones de email de un bloque de texto en segundos con TextForge</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge incluye la generación de cadenas aleatorias junto a otras 57 utilidades de texto — todas corriendo en local, en tu navegador, sin subir nada a ningún servidor.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Añadir TextForge a Chrome — Gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> — extensiones de navegador que respetan tu privacidad</div>
+    <div class="footer-links">
+      <a href="/es/">Inicio</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#privacidad">Privacidad</a>
+    </div>
+  </footer>
+
+</body>
+</html>

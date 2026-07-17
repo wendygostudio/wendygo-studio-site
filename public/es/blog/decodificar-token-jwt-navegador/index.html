@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decodificar un Token JWT en tu Navegador | Wendygo Studio</title>
+  <meta name="description" content="Inspecciona los claims de un JWT — usuario, expiración, roles — en local, sin pegar tokens en jwt.io." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Decode a JWT Token Payload in Your Browser",
+    "description": "Use TextForge Chrome extension to decode JWT payload sections locally, without pasting tokens into a third-party site.",
+    "tool": [{ "@type": "HowToTool", "name": "TextForge Chrome extension" }],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Copy the JWT",
+        "text": "Copy the full JWT from DevTools Network tab, your API client, or an environment variable."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Identify the payload section",
+        "text": "The JWT has three sections separated by dots. The payload is the second section, between the first and second dots."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Open TextForge",
+        "text": "Click the TextForge icon in your browser toolbar to open the extension panel."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Paste and decode",
+        "text": "Paste the payload section into the input area and apply Base64 Decode."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Read the claims",
+        "text": "The decoded JSON claims appear immediately — user ID, expiry, roles, and any other fields in the token."
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "How to Decode a JWT Token Payload in Your Browser"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Decode a JWT Token Payload in Your Browser",
+    "description": "Inspect JWT claims — user ID, expiry, roles — directly in your browser without pasting tokens into jwt.io. TextForge decodes Base64url locally, no data sent to a server.",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I decode the JWT signature this way?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The signature section is Base64url-encoded, but decoding it gives raw binary — not readable JSON. The payload (second section) is what you want for inspecting claims."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TextForge verify the JWT signature?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. TextForge decodes the payload for inspection only. Signature verification requires the secret key and is handled server-side."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Base64 decode runs locally in the extension with no network connection required."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,38px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.6px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 { font-size: 22px; font-weight: 700; letter-spacing: -.3px; margin: 40px 0 14px; }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body code {
+      font-family: var(--mono); font-size: 13px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+    }
+    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .step-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
+      color: var(--on-a); font-size: 13px; font-weight: 800; display: grid; place-items: center;
+    }
+    .step-content { flex: 1; }
+    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .code-block {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
+      line-height: 1.7; overflow-x: auto; color: var(--text);
+    }
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px; }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .related { margin: 48px 0 0; }
+    .related-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) { nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); } }
+  </style>
+</head>
+<body>  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/blog/decode-jwt-token-browser/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a><span>›</span><a href="/es/blog/">Blog</a><span>›</span>Decodificar un token JWT en el navegador
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Guía paso a paso · TextForge</div>
+      <h1>Cómo Decodificar el Payload de un Token JWT en tu Navegador</h1>
+      <p class="article-intro">
+        Los payloads de un JWT son JSON codificado en Base64url — legibles sin ninguna clave secreta. Aquí tienes cómo decodificarlos en local, en tu navegador, sin pegar tokens en jwt.io ni en ninguna herramienta externa.
+      </p>
+      <div class="article-date">26 de junio de 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Los JWT parecen tres bloques de caracteres aleatorios unidos por puntos. Pero la sección del medio — el payload — es simplemente JSON codificado en Base64url. No necesitas la clave de firma para leerlo; solo la necesitas para verificar que no ha sido manipulado. Decodificar el payload es una operación de solo lectura que puede hacer cualquiera.</p>
+
+      <p>Cuando estás depurando flujos de autenticación, comprobando la caducidad de un token o verificando qué claims envía un servicio, decodificar el payload es la forma más rápida de conseguir esa información.</p>
+
+      <h2>Qué hay dentro de un JWT</h2>
+
+      <p>Un JWT tiene tres secciones separadas por puntos:</p>
+
+      <div class="code-block">HEADER.PAYLOAD.SIGNATURE</div>
+
+      <p>La <strong>cabecera</strong> contiene el tipo de token y el algoritmo de firma. El <strong>payload</strong> contiene los claims como JSON codificado en Base64url. La <strong>firma</strong> verifica la autenticidad del token — pero no hace falta para leer el payload.</p>
+
+      <h2>Decodificar el payload con TextForge</h2>
+
+      <p>TextForge es una extensión de Chrome con más de 50 utilidades de texto. Decodificar Base64 está en la versión gratuita y se ejecuta completamente en local — no se transmite nada.</p>
+
+      <ol class="steps">
+        <li class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Copia el JWT completo</div>
+            <div class="step-desc">Consigue el token desde las DevTools (pestaña Network → cabecera Authorization, sin el prefijo "Bearer "), tu cliente de API o una variable de entorno.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Extrae la sección del payload</div>
+            <div class="step-desc">El JWT tiene tres secciones divididas por puntos. Copia solo la segunda — todo lo que hay entre el primer y el segundo punto.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Abre TextForge</div>
+            <div class="step-desc">Haz clic en el icono de TextForge en la barra del navegador para abrir la extensión.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Pega y aplica Decodificar Base64</div>
+            <div class="step-desc">Pega la sección del payload en el área de entrada y selecciona Decodificar Base64 en el menú de herramientas.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <div class="step-title">Lee los claims</div>
+            <div class="step-desc">El JSON decodificado aparece de inmediato. Verás el ID de usuario, el timestamp de expiración, los roles y cualquier otro claim que lleve el token.</div>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Qué pinta tiene el payload decodificado</h2>
+
+      <div class="code-block">{"sub":"user_123","email":"user@example.com","role":"admin","exp":1762000000,"iat":1750000000,"aud":"api.example.com"}</div>
+
+      <p>Claims clave a revisar: <code>exp</code> es un timestamp Unix — si está en el pasado, el token ha caducado. <code>sub</code> identifica al usuario. <code>aud</code> te dice para qué servicio se emitió el token. Si una petición está siendo rechazada con un 401, estos tres campos suelen decirte el porqué.</p>
+
+      <h2>¿Por qué no usar jwt.io?</h2>
+
+      <p>jwt.io es cómodo y el recurso estándar. Pero envía tu token a un servidor para decodificarlo. Para tokens que contienen IDs de usuario reales, direcciones de email o claims de scope internos, es una costumbre que conviene replantearse — especialmente al depurar incidencias de producción donde los tokens llevan datos vivos.</p>
+
+      <p>TextForge decodifica en el contexto local de la extensión de tu navegador. El token nunca sale de tu máquina.</p>
+
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿Puedo decodificar la firma del JWT de esta forma?</p>
+          <p class="faq-a">La firma también va codificada en Base64url, pero decodificarla te da binario en bruto — no contenido legible. El payload (la segunda sección) es lo que contiene los claims que quieres inspeccionar.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿TextForge verifica la firma del JWT?</p>
+          <p class="faq-a">No. TextForge decodifica el payload solo para inspección. La verificación de la firma requiere la clave secreta o pública y se hace en el lado del servidor. Para depurar, leer los claims suele ser todo lo que necesitas.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Funciona sin conexión?</p>
+          <p class="faq-a">Sí. Decodificar Base64 se ejecuta en local, dentro de la extensión. No se requiere conexión a internet.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Guías relacionadas</div>
+        <div class="related-links">
+          <a class="related-link" href="/es/blog/base64-codificador-decodificador-online/">
+            Codificar y decodificar Base64 online — Sin subidas, sin línea de comandos
+            <span>Guía completa de los flujos de codificación y decodificación Base64 en el navegador</span>
+          </a>
+          <a class="related-link" href="/es/blog/codificar-base64-secretos-kubernetes/">
+            Cómo codificar en Base64 los secretos de Kubernetes sin herramientas web
+            <span>Codifica valores de secretos para manifiestos YAML en local</span>
+          </a>
+          <a class="related-link" href="/tools/uuid-generator/">
+            Generador de UUID v4 — Herramienta online gratuita
+            <span>Genera de 1 a 1.000 UUIDs al instante — sin registro, 100% local</span>
+          </a>
+          <a class="related-link" href="/tools/json-formatter/">
+            Formateador y validador de JSON — Herramienta online gratuita
+            <span>Embellece, valida y minifica JSON con resaltado de sintaxis — 100% local</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>TextForge es gratis. Decodificar Base64 — y más de 50 utilidades de texto — están disponibles sin cuenta ni suscripción.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Instalar TextForge — gratis
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/es/privacy">Política de privacidad</a>
+      <a href="/es/terms">Términos y condiciones</a>
+    </div>
+  </footer>
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

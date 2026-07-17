@@ -97,8 +97,26 @@
     .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
     .footer-links a:hover { color: var(--muted); }
 
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
     @media (max-width: 600px) {
-      .nav-links { display: none; }
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     }
   </style>
 <meta property="og:type" content="website">
@@ -118,6 +136,8 @@
       <div class="nav-mark">W</div>
       Wendygo Studio
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="nav-links">
       <a href="/#products">Extensiones</a>
       <a href="/es/blog/">Blog</a>
@@ -135,6 +155,258 @@
   </div>
 
   <div class="post-list">
+    <a class="post-item" href="/es/blog/mejores-extensiones-chrome-estudiantes/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Mejores Extensiones de Chrome para Estudiantes en 2026</div>
+      <div class="post-excerpt">Cinco extensiones de Chrome que de verdad ayudan a estudiar: un temporizador de concentración gamificado, corrector gramatical, bloqueador de anuncios, gestor de pestañas y recorte de investigación — todas gratis para empezar.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/pomodoro-para-programadores/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Mejor Temporizador Pomodoro para Programadores: Sesiones de Trabajo Profundo</div>
+      <div class="post-excerpt">Los programadores necesitan temporizadores Pomodoro con sesiones de 45–60 min para trabajo profundo, no solo descansos de 25 minutos. Por qué SlimeForge funciona para programar, la gamificación y cómo ayuda la IA en el dispositivo.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/solicitud-acceso-datos-rgpd/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Cómo Solicitar Tus Datos Personales con el RGPD (Artículo 15)</div>
+      <div class="post-excerpt">Guía paso a paso para solicitar a cualquier empresa todos tus datos personales según el Artículo 15 del RGPD. Gratis, simple y exigible por ley. Descubre qué datos tienen sobre ti.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/temporizador-pomodoro-offline-chrome/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Temporizador Pomodoro Offline para Chrome — Funciona Sin Internet</div>
+      <div class="post-excerpt">Un temporizador Pomodoro que funciona sin conexión en Chrome — sin WiFi. Configura sesiones, sigue tus rachas y construye hábitos de concentración estés en remoto, de viaje o en una cafetería.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/derecho-desistimiento-14-dias-ue/">
+      <div class="post-date">15 de julio de 2026</div>
+      <div class="post-title">Derecho de Desistimiento de 14 Días en la UE: Cómo Devolver Compras Online Sin Dar Motivos</div>
+      <div class="post-excerpt">La ley de la UE te da 14 días para devolver cualquier compra online, sin necesidad de dar motivos. Aprende cómo funciona el derecho de desistimiento, sus excepciones y cómo ejercerlo.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/extension-pomodoro-chrome/">
+      <div class="post-date">15 de julio de 2026</div>
+      <div class="post-title">Mejor Extensión de Pomodoro para Chrome en 2026 — Con Mascota Virtual</div>
+      <div class="post-excerpt">SlimeForge es una extensión de temporizador Pomodoro para Chrome que añade una mascota virtual y gamificación para mantenerte concentrado. Tu slime eclosiona y crece con cada sesión que completas.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/recortar-imagenes-redes-sociales-chrome/">
+      <div class="post-date">14 de julio de 2026</div>
+      <div class="post-title">Recortar Imágenes para Distintas Redes Sociales con una Extensión de Chrome</div>
+      <div class="post-excerpt">Aprende a recortar imágenes correctamente para YouTube, Instagram, X y Twitch con una extensión de Chrome — mantén tu sujeto centrado en cada relación de aspecto.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/eliminar-caracteres-especiales-texto/">
+      <div class="post-date">13 de julio de 2026</div>
+      <div class="post-title">Eliminar Caracteres Especiales de un Texto Online</div>
+      <div class="post-excerpt">Quita puntuación, símbolos y caracteres especiales de un texto en lote. Sanitiza listas de emails, limpia URLs, formatea nombres de usuario y más — todo en local, en tu navegador, con TextForge.</div>
+      <span class="post-tag">TextForge — Blog</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/decodificar-jwt-online/">
+      <div class="post-date">12 de julio de 2026</div>
+      <div class="post-title">Decodificar JWT Online — Sin Subir a Servidores, Sin Terceros</div>
+      <div class="post-excerpt">Decodifica tokens JWT en local, en tu navegador. Lee claims, expiración y datos de usuario sin subir nada a ningún servidor externo. Gratis, seguro, privado.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/limpiar-texto-online/">
+      <div class="post-date">12 de julio de 2026</div>
+      <div class="post-title">Limpiar Texto Online — Eliminar Espacios, Recortar Líneas, Borrar Líneas Vacías</div>
+      <div class="post-excerpt">Elimina espacios sobrantes, recorta líneas, borra líneas en blanco y limpia texto desordenado online — en local con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/scrubforge-claude-ai-troubleshooting-red/">
+      <div class="post-date">12 de julio de 2026</div>
+      <div class="post-title">Cómo Usar ScrubForge con Claude AI para Troubleshooting de Red</div>
+      <div class="post-excerpt">La gran ventana de contexto de Claude lo hace útil para analizar configs de red extensas. Sanitiza con ScrubForge primero — las credenciales activas se quedan fuera de los servidores de Anthropic.</div>
+      <span class="post-tag">Flujo de trabajo</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/generar-cadena-aleatoria-online/">
+      <div class="post-date">9 de julio de 2026</div>
+      <div class="post-title">Cómo Generar una Cadena Aleatoria en tu Navegador — Gratis y Privado</div>
+      <div class="post-excerpt">Genera una cadena aleatoria directamente en tu navegador — sin servicios online, sin registro, sin que ningún dato salga de tu máquina. TextForge incluye la generación de cadenas aleatorias entre sus 58 funciones de texto.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/alternativas-convertio/">
+      <div class="post-date">8 de julio de 2026</div>
+      <div class="post-title">Mejores Alternativas a Convertio Que No Suben Tus Archivos (2026)</div>
+      <div class="post-excerpt">¿Buscas alternativas a Convertio? Compara las mejores opciones gratuitas — incluidas herramientas que procesan archivos en local sin subir nada. Encuentra el conversor adecuado para tu flujo de trabajo.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-csv-a-json-gratis/">
+      <div class="post-date">8 de julio de 2026</div>
+      <div class="post-title">Convertir CSV a JSON Gratis (Local, Sin Conexión)</div>
+      <div class="post-excerpt">Convierte archivos CSV a formato JSON completamente en tu navegador, sin subir nada a un servidor. Procesamiento local, funciona sin conexión, sin límites de tamaño.</div>
+      <span class="post-tag">ConvertForge  Guía</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/guardar-audio-video-mp3/">
+      <div class="post-date">7 de julio de 2026</div>
+      <div class="post-title">Guardar el Audio de un Vídeo como MP3 Gratis — Formato Portable, Sin Subidas</div>
+      <div class="post-excerpt">Extrae el audio de un vídeo en formato MP3 completamente en tu navegador. ConvertForge guarda la pista de audio como MP3 en local — sin subidas, sin límites de tamaño, reproducible en cualquier dispositivo.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/extraer-texto-de-imagen-gratis/">
+      <div class="post-date">6 de julio de 2026</div>
+      <div class="post-title">Extraer Texto de Imagen JPG Gratis — OCR Local, Sin Subidas</div>
+      <div class="post-excerpt">Extrae texto de archivos JPG, PNG e imágenes completamente en tu navegador. ConvertForge usa OCR local (Tesseract) — sin servicio en la nube, sin cuenta, sin archivos enviados a ningún servidor.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-heic-a-png-gratis/">
+      <div class="post-date">5 de julio de 2026</div>
+      <div class="post-title">Cómo Convertir HEIC a PNG Gratis — Calidad Sin Pérdida</div>
+      <div class="post-excerpt">Convierte fotos HEIC de tu iPhone a PNG completamente en tu navegador. ConvertForge se ejecuta en tu dispositivo — sin subir nada, conserva la transparencia y la calidad sin pérdida.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/contracargo-tarjeta-credito-ue/">
+      <div class="post-date">4 de julio de 2026</div>
+      <div class="post-title">Cómo Presentar un Contracargo de Tarjeta de Crédito en la UE</div>
+      <div class="post-excerpt">Guía paso a paso para disputar un cargo de tarjeta de crédito y recuperar tu dinero en la UE. Presenta un contracargo directamente con tu banco — sin necesidad de abogado.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/escalar-reclamacion-escasa-cuantia-ue/">
+      <div class="post-date">3 de julio de 2026</div>
+      <div class="post-title">Cómo Escalar una Reclamación de Consumo en la UE al Proceso de Escasa Cuantía</div>
+      <div class="post-excerpt">El vendedor ignoró tu reclamación ADR. Aquí tienes cómo presentar una demanda de escasa cuantía en la UE, ejecutar la sentencia y hacer que el vendedor cumpla incluso entre fronteras de la UE.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/compartir-config-red-reddit-seguro/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">Cómo Compartir Configs de Red en Reddit Sin Exponer Credenciales</div>
+      <div class="post-excerpt">¿Vas a pedir ayuda de troubleshooting de red en Reddit? Sanitiza tu config con ScrubForge primero — elimina todas las credenciales activas conservando la estructura lógica que Reddit necesita para ayudarte.</div>
+      <span class="post-tag">Guía</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/compartir-config-red-ticket-soporte/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">Cómo Compartir tu Config de Red en Tickets de Soporte de Forma Segura</div>
+      <div class="post-excerpt">El soporte del fabricante necesita tu config de red para resolver el problema. Sanitiza las credenciales con ScrubForge primero — mantén las credenciales activas fuera de las bases de datos de soporte.</div>
+      <span class="post-tag">Guía</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/garantia-legal-ue-explicada/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">La Garantía Legal de 2 Años en la UE, Explicada: Qué Te Corresponde y Cómo Reclamarla</div>
+      <div class="post-excerpt">La ley de la UE te garantiza un mínimo de 2 años de garantía en cualquier producto que compres. Aprende exactamente qué cubre, qué debe hacer el vendedor y cómo reclamar la garantía si se niega.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/sanitizar-config-fortigate/">
+      <div class="post-date">30 de junio de 2026</div>
+      <div class="post-title">Cómo Compartir una Config de FortiGate Sin Exponer Credenciales</div>
+      <div class="post-excerpt">Las configs de FortiGate contienen claves VPN, tokens de API y contraseñas de admin. Aprende a sanitizarlas antes de compartirlas con el soporte de Fortinet o con asistentes de IA — con ScrubForge, gratis y en local.</div>
+      <span class="post-tag">Seguridad</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/frameforge-vs-canva-thumbnails/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">FrameForge vs Canva para miniaturas: ¿Cuál es más rápido en 2026?</div>
+      <div class="post-excerpt">Canva es excelente para diseñar desde cero. FrameForge es más rápido cuando ya tienes una imagen y solo necesitas las dimensiones correctas. Compara ambas herramientas.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/herramienta-miniaturas-gratis-sin-registro/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Herramienta de Miniaturas Gratis Sin Registro</div>
+      <div class="post-excerpt">Sin registro, sin cuenta, sin subir archivos. FrameForge es un redimensionador de miniaturas gratuito que funciona completamente en tu navegador. Instálalo una vez, redimensiona para siempre.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/limpiar-formato-texto-pegado/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Cómo Limpiar el Formato del Texto Pegado Online — Sin Subir Nada</div>
+      <div class="post-excerpt">Arregla espacios dobles, espaciado roto y problemas de mayúsculas en texto pegado al instante. TextForge es una extensión de Chrome gratuita que limpia el texto en local, en tu navegador — sin subir nada.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-perfil-tiktok/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Cómo Redimensionar una Imagen para la Foto de Perfil de TikTok: el Cuadrado Perfecto en Segundos</div>
+      <div class="post-excerpt">Las fotos de perfil de TikTok deben ser cuadradas (512×512 o 400×400). Aprende a redimensionar cualquier imagen a las dimensiones exactas en segundos con FrameForge — sin subidas, sin cuenta.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-pinterest/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Cómo Redimensionar una Imagen para Pines de Pinterest en Chrome (1000×1500)</div>
+      <div class="post-excerpt">Recorta cualquier imagen al formato óptimo de Pinterest de 1000×1500 px sin subirla a Photoshop ni Canva. FrameForge redimensiona completamente en tu navegador en segundos.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/sanitizar-configuracion-red-antes-compartir/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Cómo Sanitizar Configuraciones de Red Antes de Compartirlas con Asistentes de IA</div>
+      <div class="post-excerpt">Comparte configs de Cisco, FortiGate o AWS con asistentes de IA sin exponer credenciales reales. ScrubForge sustituye IPs, contraseñas y secretos por tokens consistentes — en local, sin subir nada.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/eliminar-lineas-duplicadas-online/">
+      <div class="post-date">28 de junio de 2026</div>
+      <div class="post-title">Eliminar Líneas Duplicadas Online — Limpia Texto al Instante</div>
+      <div class="post-excerpt">Elimina líneas duplicadas de cualquier lista en segundos. TextForge es una extensión de Chrome gratuita que deduplica texto en local, en tu navegador — sin subidas, sin servidores de terceros.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-linkedin/">
+      <div class="post-date">27 de junio de 2026</div>
+      <div class="post-title">Cómo Redimensionar una Imagen para Publicaciones de LinkedIn en Chrome (1200×627)</div>
+      <div class="post-excerpt">Publica imágenes a los 1200×627 px correctos para que nada quede recortado en el feed de LinkedIn. FrameForge redimensiona completamente en tu navegador — sin subidas, sin Photoshop, sin cuenta.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/codificar-base64-secretos-kubernetes/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Cómo Codificar en Base64 los Secretos de Kubernetes Sin Herramientas Web</div>
+      <div class="post-excerpt">Los campos data de un Secret de Kubernetes requieren valores codificados en Base64. Codifica tus secretos en bruto en local, en tu navegador, con TextForge — sin terminal, sin sitios de terceros, sin fugas de datos.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/decodificar-token-jwt-navegador/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Cómo Decodificar el Payload de un Token JWT en tu Navegador</div>
+      <div class="post-excerpt">Inspecciona los claims de un JWT — ID de usuario, expiración, roles — directamente en tu navegador sin pegar tokens en jwt.io. TextForge decodifica Base64url en local, sin enviar datos a ningún servidor.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/extraer-urls-de-texto/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Cómo Extraer URLs de un Texto Online — Sin Regex, Sin Terminal</div>
+      <div class="post-excerpt">Saca todas las URLs de cualquier bloque de texto en segundos. TextForge es una extensión de Chrome gratuita que extrae URLs en local — sin subir datos, sin regex.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-panel-twitch/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Cómo Redimensionar una Imagen para Paneles de Twitch en Chrome (320×160)</div>
+      <div class="post-excerpt">Recorta cualquier imagen al formato de panel de Twitch de 320×160 sin subirla a ningún sitio. FrameForge maneja la incómoda relación 2:1 en tu navegador en segundos.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-miniatura-youtube/">
+      <div class="post-date">25 de junio de 2026</div>
+      <div class="post-title">Cómo Redimensionar una Imagen para Miniaturas de YouTube Directamente en tu Navegador</div>
+      <div class="post-excerpt">Redimensiona cualquier imagen a los 1280×720 px que exige YouTube, sin Photoshop y sin subirla a ningún servidor — con FrameForge, una extensión de Chrome gratuita.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
     <a class="post-item" href="/es/blog/alternativas-forest-chrome/">
       <div class="post-date">16 de julio de 2026</div>
       <div class="post-title">Mejores Alternativas a Forest para Chrome en 2026</div>
@@ -219,12 +491,6 @@
       <div class="post-title">Cómo Extraer Correos desde Texto Online — Sin Búsqueda Manual</div>
       <div class="post-excerpt">Extrae cada dirección de correo electrónico de cualquier bloque de texto en segundos. TextForge es una extensión de Chrome gratuita que extrae correos localmente — sin subir datos, sin regex necesario.</div>
       <span class="post-tag">TextForge</span>
-    </a>
-    <a class="post-item" href="/es/blog/frameforge-vs-canva-miniaturas/">
-      <div class="post-date">29 de junio de 2026</div>
-      <div class="post-title">FrameForge vs Canva para Miniaturas: ¿Cuál es Más Rápido en 2026?</div>
-      <div class="post-excerpt">Canva es excelente para diseñar desde cero. FrameForge es más rápido cuando ya tienes una imagen y solo necesitas las dimensiones correctas. Así es cómo elegir la herramienta correcta para tu flujo de trabajo.</div>
-      <span class="post-tag">FrameForge</span>
     </a>
     <a class="post-item" href="/es/blog/ordenar-lineas-alfabeticamente-online/">
       <div class="post-date">28 de junio de 2026</div>
