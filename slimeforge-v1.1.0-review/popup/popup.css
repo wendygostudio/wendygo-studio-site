@@ -76,7 +76,6 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .ritualrow button { flex:0 0 auto; padding:7px 10px; }
 .todaycompact { margin-top:8px; padding:8px 10px; border:1px solid var(--card-edge); border-radius:10px; color:var(--muted); font-size:.72rem; cursor:pointer; }
 .todaycompact:hover { border-color:var(--amber); color:var(--text); }
-.speed-badge { position:fixed; top:8px; left:50%; transform:translateX(-50%); z-index:80; background:#7b3fe4; color:white; border-radius:999px; padding:4px 10px; font-size:.7rem; font-weight:800; box-shadow:0 3px 12px rgba(0,0,0,.35); }
 .memory-list { display:flex; flex-direction:column; gap:7px; max-height:340px; overflow:auto; }
 .memory-item { padding:8px 10px; border-left:3px solid var(--amber); background:#181b21; border-radius:4px 9px 9px 4px; font-size:.73rem; }
 .memory-item small { display:block; color:var(--muted); margin-top:3px; }

@@ -184,7 +184,7 @@ export function sanitizeImportedState(raw, current = freshState()) {
   if (!['egg','pet'].includes(raw.phase)) throw new Error('save_bad_phase');
   const s = freshState();
   for (const [k, v] of Object.entries(raw)) if (TOP_LEVEL.has(k)) s[k] = v;
-  s.schema = SAVE_SCHEMA; s.v = 1; s.demoMode = false; s.writerId = '';
+  s.schema = SAVE_SCHEMA; s.v = 1; s.writerId = '';
   s.phase = raw.phase;
   s.dna = raw.phase === 'pet' ? sanitizeDna(raw.dna) : null;
   if (raw.phase === 'pet' && !s.dna) throw new Error('save_bad_dna');
@@ -196,7 +196,6 @@ export function sanitizeImportedState(raw, current = freshState()) {
   s.uiLang = LANGS.has(raw.uiLang) ? raw.uiLang : (LANGS.has(current.uiLang) ? current.uiLang : 'es');
   s.uiTab = ['foco','jugar','col','mas'].includes(raw.uiTab) ? raw.uiTab : 'foco';
   s.ownerAlias = cleanText(raw.ownerAlias, 32);
-  s.speedMode = raw.speedMode === 10 ? 10 : 1;
   s.focusGoal = cleanText(raw.focusGoal, 120);
   s.rituals = (Array.isArray(raw.rituals) ? raw.rituals : []).slice(0, 8).map((r, i) => ({
     id: cleanText(r && r.id, 30) || 'ritual-' + i,
@@ -270,10 +269,6 @@ export const RATES = {
   offlineCap: 36 * H        // tope de decaimiento offline (vacaciones sin drama)
 };
 export const FOCUS_REAL_MS = 25 * 60 * 1000;
-export const FOCUS_DEMO_MS = 30 * 1000;
-export const DEMO_MULT = 120;
-
-export function speedFactor(s) { return s && s.speedMode === 10 ? 10 : 1; }
 export function addMemory(s, type, text, now = Date.now(), meta = null) {
   if (!s.memories) s.memories = [];
   const safeMeta = meta && typeof meta === 'object' ? {
@@ -315,7 +310,7 @@ export function freshState() {
     experienceMode: 'coach', experienceChosen: false,
     focusShield: { enabled: false, mode: 'gentle', sites: [], ritualSites: {}, attempts: 0, recovered: 0, recoveredMin: 0, snoozes: {}, schedule: { enabled: false, start: '09:00', end: '17:00', days: [1,2,3,4,5] }, later: [] },
     trialStart: 0, trialSeen: 0, trialDays: [],
-    demoMode: false, speedMode: 1, soundOn: true,
+    soundOn: true,
     pendingToasts: [], pendingReactions: [],
     discovered: [],              // especies vistas alguna vez → desbloquea el Bestiario
     bonds: {},                   // 'seedA_seedB' -> nº de encuentros de manada/visita entre esa pareja
@@ -485,7 +480,7 @@ export function addGrowth(s, n) {
 }
 
 /* Una sola fuente de verdad para las recompensas de foco. Se calculan a
-   partir de minutos nominales, de modo que ×10 solo acelera la prueba. */
+   partir de minutos nominales para que pausas e interrupciones no alteren la economía. */
 export function focusValue(minutes) {
   const m = finite(minutes, 25, 1, 240);
   return Math.max(1, Math.round(m / 5));
@@ -497,7 +492,6 @@ export function focusValue(minutes) {
 const NOCTURNAS = ['buho', 'fantasma', 'kitsune'];
 export function isAsleep(s, now) {
   now = now || Date.now();
-  if (s.demoMode) return false;                       // en demo nunca duerme (testing)
   if (s.phase !== 'pet' || !s.dna) return false;
   if (s.wokeUntil && now < s.wokeUntil) return false; // despertada por su humano
   const h = new Date(now).getHours();
@@ -544,7 +538,7 @@ export function applyElapsed(s, msReal) {
     }
   }
   if (s.phase !== 'pet') { s.lastTick = Date.now(); return s; }
-  let ms = msReal * (s.demoMode ? DEMO_MULT : speedFactor(s));
+  let ms = msReal;
   ms = Math.min(ms, RATES.offlineCap);
 
   // reset diario de minijuegos
@@ -816,8 +810,10 @@ export async function loadState() {
   if (!s.huerto) s.huerto = { plots: [null, null, null, null], op: 70, show: true };
   if (!s.focusHud) s.focusHud = { op: 85, show: true };
   if (!s.dnd) s.dnd = { sites: [], until: 0 };   // No molestar (v0.46)
-  s.demoMode = false;
-  s.speedMode = s.speedMode === 10 ? 10 : 1;
+  // Las versiones de prueba anteriores guardaban estos campos. Se eliminan al
+  // cargar para que ninguna partida heredada conserve aceleración o atajos QA.
+  delete s.demoMode;
+  delete s.speedMode;
   if (!s.despensa) s.despensa = { baya: 0, zanahoria: 0 };
   if (s.dna && !s.dna.cos) s.dna.cos = {};   // cosméticos (v0.40)
   if (s.sick === undefined) { s.sick = false; s.sickMeds = false; s.sickMimos = 0; s.neglectMs = 0; }

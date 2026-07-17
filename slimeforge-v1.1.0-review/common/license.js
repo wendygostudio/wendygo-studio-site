@@ -31,9 +31,6 @@ async function ensureCreemHostPermission() {
   return requestCreemHostPermission();
 }
 
-/* Build de pruebas: true = todo Pro desbloqueado (extensión TEST aparte) */
-export const FORCE_PRO = false;
-
 export const PRODUCTS = {
   'prod_6KBdpNxPbsAjjyOamWyzHH': 'monthly',
   'prod_2yqU11EKofeL3cdXsSOAPn': 'annual',
@@ -93,12 +90,10 @@ export function markTrialUse(s) {
 const HARD_REJECT = [400, 401, 403, 404, 410, 422];
 
 export function proActive(s) {
-  if (FORCE_PRO) return true;
   if (s && s.pro && s.pro.active) return true;
   return trialStatus(s).active;
 }
 export function proTier(s) {
-  if (FORCE_PRO) return 'test';
   return (s && s.pro && s.pro.active) ? s.pro.tier : null;
 }
 

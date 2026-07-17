@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { freshState, sanitizeImportedState, sanitizeVisitPayload, mergeConcurrentValue, speedFactor, addMemory, applyElapsed, focusValue, SAVE_SCHEMA, recordMissionProgress, startExpedition, advanceExpedition, claimExpedition, featureUnlocked, awardRelics, relicUniqueCount } from '../common/logic.js';
+import { freshState, sanitizeImportedState, sanitizeVisitPayload, mergeConcurrentValue, addMemory, applyElapsed, focusValue, SAVE_SCHEMA, recordMissionProgress, startExpedition, advanceExpedition, claimExpedition, featureUnlocked, awardRelics, relicUniqueCount } from '../common/logic.js';
 import { startTrial, trialStatus, markTrialUse } from '../common/license.js';
 
 const dna = (name = 'Mochi') => ({
@@ -26,7 +26,7 @@ test('normaliza límites y elimina propiedades desconocidas', () => {
   assert.equal(imported.stageIdx, 4);
   assert.equal(imported.reserve.length, 25);
   assert.equal(imported.dna.name, 'Michi');
-  assert.equal(imported.demoMode, false);
+  assert.equal('demoMode' in imported, false);
   assert.equal('unknownPayload' in imported, false);
 });
 
@@ -69,19 +69,15 @@ test('la fusión concurrente conserva recompensas independientes', () => {
   assert.deepEqual(mergeConcurrentValue(base, popup, worker), { brasas: 16, mats: { hilo: 1, escama: 1 } });
 });
 
-test('el modo x10 acelera la simulación sin alterar los minutos nominales', () => {
-  const normal = freshState(), fast = freshState();
-  for (const s of [normal, fast]) { s.phase = 'pet'; s.dna = dna(); s.lastTick = Date.now(); }
-  fast.speedMode = 10;
-  const oldRandom = Math.random; Math.random = () => 1;
-  try { applyElapsed(normal, 60000); applyElapsed(fast, 60000); } finally { Math.random = oldRandom; }
-  assert.equal(speedFactor(fast), 10);
-  assert.ok((100 - fast.hambre) > (100 - normal.hambre) * 9);
+test('las partidas antiguas no pueden reactivar campos de aceleración', () => {
+  const imported = sanitizeImportedState({ phase: 'egg', speedMode: 10, demoMode: true }, freshState());
+  assert.equal('speedMode' in imported, false);
+  assert.equal('demoMode' in imported, false);
 });
 
 test('la primera sesión conserva objetivo, minutos y recuerdo al eclosionar', () => {
-  const s = freshState(); s.speedMode = 10;
-  s.focus = { kind: 'work', goal: 'Preparar informe', nominalMinutes: 25, duration: 150000, endsAt: Date.now() - 1 };
+  const s = freshState();
+  s.focus = { kind: 'work', goal: 'Preparar informe', nominalMinutes: 25, duration: 1500000, endsAt: Date.now() - 1 };
   const oldRandom = Math.random; Math.random = () => 0.5;
   try { applyElapsed(s, 1000); } finally { Math.random = oldRandom; }
   assert.equal(s.phase, 'pet');
@@ -116,9 +112,9 @@ test('la migración v1.6 conserva el porcentaje dentro de la etapa', () => {
 });
 
 test('rituales y recuerdos importados quedan acotados', () => {
-  const raw = { phase: 'egg', speedMode: 10, rituals: new Array(20).fill(0).map((_, i) => ({ id: 'r'+i, name: 'Ritual '+i, min: 999, breakMin: -2 })), memories: [] };
+  const raw = { phase: 'egg', rituals: new Array(20).fill(0).map((_, i) => ({ id: 'r'+i, name: 'Ritual '+i, min: 999, breakMin: -2 })), memories: [] };
   const s = sanitizeImportedState(raw, freshState());
-  assert.equal(s.speedMode, 10); assert.equal(s.rituals.length, 8); assert.equal(s.rituals[0].min, 180); assert.equal(s.rituals[0].breakMin, 1);
+  assert.equal(s.rituals.length, 8); assert.equal(s.rituals[0].min, 180); assert.equal(s.rituals[0].breakMin, 1);
   for (let i = 0; i < 130; i++) addMemory(s, 'focus', 'M' + i, i);
   assert.equal(s.memories.length, 120);
 });

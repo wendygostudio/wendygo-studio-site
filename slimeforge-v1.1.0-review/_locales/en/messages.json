@@ -229,9 +229,6 @@
   "pro_deact": {
     "message": "License deactivated."
   },
-  "pro_test": {
-    "message": "🧪 Test build: Pro unlocked."
-  },
   "reserve_full": {
     "message": "Reserve full ($N).",
     "placeholders": {
@@ -892,15 +889,6 @@
   "tab_more": {
     "message": "More"
   },
-  "h_dev": {
-    "message": "🧪 Test mode"
-  },
-  "dev_lbl": {
-    "message": "Speeds the game ×10 and enables page shortcuts"
-  },
-  "dev_note": {
-    "message": "With the creature on a page: Alt+Shift + D duel · W wild slime · L laser · Z zoomies · B box · M pack encounter · P thought · G garden watering. Events every 25-60 s, the creature never sleeps."
-  },
   "h_huerto": {
     "message": "🌱 Garden"
   },
@@ -1291,13 +1279,8 @@
   "memory_title":{"message":"📖 Memories"},
   "memory_open":{"message":"Open life book"},
   "memory_empty":{"message":"Your first memories will appear as you focus and evolve."},
-  "test_title":{"message":"🧪 Test mode"},
   "minis_note_early":{"message":"Fish for food from birth. New games will appear as you complete focus sessions."},
   "birth_title":{"message":"$NAME is born!"},"birth_copy":{"message":"Your creature is now a Spark. Every focus session will help it and its forest grow."},"birth_progress":{"message":"Growth: $N/$T"},"birth_meet":{"message":"Meet $NAME"},
-  "test_x10":{"message":"×10 speed"},
-  "test_note":{"message":"Speeds up timers and simulation. Do not use for real statistics."},
-  "test_on":{"message":"×10 mode enabled"},
-  "test_off":{"message":"Normal speed restored"},
   "language_title":{"message":"Language"},"theme_title":{"message":"Change theme"},"popout_title":{"message":"Open in a window"},"sound_title":{"message":"Toggle sound"},"rename_title":{"message":"Click to rename"},"forge_button_title":{"message":"The Forge"},"main_nav_label":{"message":"Main sections"},"goal_plan_title":{"message":"Plan with local AI"},"duration_title":{"message":"Duration"},"break_title":{"message":"Start break"},"pack_label":{"message":"Walk together (all your creatures)"},"ai_checking":{"message":"Checking availability…"},"ai_download":{"message":"Download"},"diagnostic_title":{"message":"Diagnostics"},"forge_family":{"message":"🔥 Forge family"},
   "rarity_common":{"message":"COMMON"},"rarity_rare":{"message":"RARE"},"rarity_epic":{"message":"EPIC"},"rarity_legendary":{"message":"LEGENDARY"},"lore_generic":{"message":"A unique Forge creature with its own way of keeping you company and focused."},
   "journey_title":{"message":"🧭 Today’s journey"},"routine_title":{"message":"Care routine"},"mission_daily":{"message":"Daily mission · Free"},"mission_focus_sessions":{"message":"Complete $N focus sessions"},"mission_focus_minutes":{"message":"Accumulate $N focus minutes"},"mission_care":{"message":"Care for your creature $N times"},"mission_play":{"message":"Complete $N minigame"},"mission_reward":{"message":"Reward: 4🔥 + 1 material"},"mission_complete_toast":{"message":"Daily mission complete! +4🔥 and +1 material"},
@@ -1306,14 +1289,13 @@
   "route_forest":{"message":"Ember Forest"},"route_ruins":{"message":"Resonant Ruins"},"route_lagoon":{"message":"Moon Lagoon"},"route_desc_forest":{"message":"Short route · $N sessions · petals and one relic"},"route_desc_ruins":{"message":"Medium route · $N sessions · scales and two relics"},"route_desc_lagoon":{"message":"Long route · $N sessions · thread and three relics"},
   "weekly_open":{"message":"📊 Weekly report"},"weekly_title":{"message":"Weekly report"},"weekly_sessions":{"message":"sessions"},"weekly_minutes":{"message":"minutes"},"weekly_completion":{"message":"goals completed"},"weekly_average":{"message":"average per session"},"weekly_best_day":{"message":"Best day: $D"},"weekly_best_ritual":{"message":"Most used ritual: $R"},"weekly_nano_title":{"message":"Your creature’s advice · Local Nano"},"weekly_analyzing":{"message":"Analyzing your week…"},"weekly_tip_consistency":{"message":"Keep the same schedule: your consistency is already working."},"weekly_tip_small":{"message":"Reduce your next goal to one small, verifiable step."},"weekly_tip_start":{"message":"Complete a first session to discover your weekly pattern."},"weekly_pro_lock":{"message":"The smart weekly report is a PRO feature"},
   "reaction_expedition":{"message":"I knew they would return with something shiny!"},"reaction_streak_saved":{"message":"The shield kept our streak alive!"},"reaction_streak_record":{"message":"New best streak! This is becoming a tradition."},"reaction_mission":{"message":"Mission complete! Great teamwork."},
-  "test_complete_mission":{"message":"Complete mission"},"test_advance_expedition":{"message":"Advance expedition"},"test_prepare_streak":{"message":"Prepare shield"},"test_need_expedition":{"message":"Start an expedition first"},"test_streak_ready":{"message":"Case prepared: complete a focus session to test the shield"},
   "perk_expedition":{"message":"Expanded expeditions"},"perkd_expedition":{"message":"Three unlimited routes, affinities, loot and relics."},"perk_weekly":{"message":"Weekly intelligence"},"perkd_weekly":{"message":"Private Nano interpretation, patterns and trends."},"pro_free_compare":{"message":"Free includes focus, Nano goal planning, basic Shield, 3 projects, report and one weekly expedition. PRO expands capacity, analysis and world."},
   "expedition_free_ready":{"message":"Your free weekly Forest expedition is available"},"expedition_free_wait":{"message":"The free expedition returns in $N day(s)"},"expedition_free_note":{"message":"Free: one Forest journey a week, 6 Embers and one material."},"expedition_affinity_pro":{"message":"PRO unlocks affinities, relics and all three routes."},"expedition_claimed_free":{"message":"Free loot: +$B🔥 · +1 material"},"route_desc_forest_free":{"message":"Free weekly route · $N sessions · 6 Embers and one petal"},
   "weekly_nano_locked":{"message":"The summary is free. PRO adds private Nano interpretation and trends."},"project_paused":{"message":"$N PRO project(s) are paused, not deleted."},"ritual_pro_note":{"message":"Free includes 1 ritual. PRO raises the limit to 8."},
   "retouch_title":{"message":"Maturity retouch"},"retouch_body":{"message":"Body color"},"retouch_marks":{"message":"Marking color"},"retouch_note":{"message":"Your adult creature gets one free visual retouch."},"retouch_pro":{"message":"PRO: species and full redesign"},"retouch_btn":{"message":"Apply my retouch"},"retouch_done":{"message":"Maturity retouch applied"},
   "expedition_relics":{"message":"Relics: $N"},
   "memory_expedition":{"message":"$N returned from $R with a new relic."},"memory_birth":{"message":"$N was born during a focus session."},"memory_evolution":{"message":"$N reached the $S stage."},"memory_focus":{"message":"$G · $R"},"memory_generic":{"message":"A new Forge memory."},
-  "diag_title":{"message":"Nano diagnostics"},"diag_no_response":{"message":"No response from the service worker."},"diag_model":{"message":"LanguageModel in the service worker"},"diag_availability":{"message":"Availability"},"diag_first_line":{"message":"First response"},"diag_response":{"message":"Response"},"diag_error":{"message":"Error"},"yes":{"message":"Yes"},"no":{"message":"No"},"pro_test_build":{"message":"Test build: PRO unlocked."},
+  "diag_title":{"message":"Nano diagnostics"},"diag_no_response":{"message":"No response from the service worker."},"diag_model":{"message":"LanguageModel in the service worker"},"diag_availability":{"message":"Availability"},"diag_first_line":{"message":"First response"},"diag_response":{"message":"Response"},"diag_error":{"message":"Error"},"yes":{"message":"Yes"},"no":{"message":"No"},
   "quiet_title":{"message":"Quiet mode"},"quiet_on":{"message":"Quiet mode on"},"quiet_off":{"message":"Quiet mode off"},"share_open":{"message":"📸 Share progress"},"share_week":{"message":"My focus week"},"share_streak":{"message":"streak"},"share_local":{"message":"Created on your device · no personal data"},"share_title":{"message":"Progress card"},"share_copy":{"message":"Copy image"},"share_save":{"message":"Save PNG"},"share_copied":{"message":"Image copied"},"share_copy_fail":{"message":"Could not copy it; you can save it"},
   "unlock_next":{"message":"Next unlock in $N session(s): $F"},"unlock_complete":{"message":"Path complete · all tools discovered"},"unlock_ok":{"message":"Discover"},"unlock_journey_title":{"message":"Journey and streak"},"unlock_journey_desc":{"message":"You can now see missions, your streak and daily progress."},"unlock_play_title":{"message":"Play and roaming"},"unlock_play_desc":{"message":"Minigames open and your creature can join you on the web."},"unlock_collection_title":{"message":"Collection and memories"},"unlock_collection_desc":{"message":"Discover species, creatures and the life book."},"unlock_shield_title":{"message":"Projects and Focus Shield"},"unlock_shield_desc":{"message":"Group sessions into projects and protect focus on sites you choose."},"unlock_craft_title":{"message":"Garden and workshop"},"unlock_craft_desc":{"message":"Grow, craft and customize with rewards earned by playing."},"unlock_expeditions_title":{"message":"Expeditions and report"},"unlock_expeditions_desc":{"message":"The weekly report and a free Forest journey open. PRO adds routes, affinities and Nano analysis."},"unlock_mastery_title":{"message":"Forge mastery"},"unlock_mastery_desc":{"message":"Visits, the Forge and advanced tools are now open."},
   "project_active":{"message":"Active project"},"project_manage":{"message":"📁 Projects"},"project_none":{"message":"No project"},"project_title":{"message":"Focus projects"},"project_limit":{"message":"You can keep up to $N projects."},"project_new_ph":{"message":"Project name"},"project_add":{"message":"Add"},"project_limit_reached":{"message":"Project limit reached"},

@@ -7,3 +7,7 @@
 - Nueva revelación de botín y colección completa por rutas.
 - Migración compatible de los contadores de reliquias de versiones anteriores.
 - Textos del Relicario disponibles en español, inglés, alemán, francés, italiano y portugués.
+- Retirados de la versión pública el modo ×10, los atajos QA y los controles de simulación.
+- Las partidas creadas con versiones de prueba vuelven automáticamente a tiempos reales.
+- Eliminada la vía interna de desbloqueo PRO usada por las compilaciones de pruebas.
+- La comprobación de Nano ya no puede quedarse indefinidamente en «Comprobando disponibilidad» y consulta el service worker como respaldo.

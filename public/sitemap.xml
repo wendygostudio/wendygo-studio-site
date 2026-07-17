@@ -1064,4 +1064,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/"/>
   </url>
+
+  <url>
+    <loc>https://wendygostudio.com/blog/pomodoro-vs-time-blocking/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
+  </url>
 </urlset>

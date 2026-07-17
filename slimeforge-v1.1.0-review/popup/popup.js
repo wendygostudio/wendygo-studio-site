@@ -10,10 +10,10 @@ import {
   SEEDS, seedStageMs, buildPlot, COS, COS_SLOTS
 } from '../common/engine.js';
 import { isAsleep } from '../common/logic.js';
-import { proActive, proTier, FORCE_PRO, PAY_LINKS, activateLicense, revalidateLicense, deactivateLicense, trialStatus, startTrial, markTrialUse } from '../common/license.js';
+import { proActive, proTier, PAY_LINKS, activateLicense, revalidateLicense, deactivateLicense, trialStatus, startTrial, markTrialUse } from '../common/license.js';
 import {
   loadState, saveState, importState, sanitizeVisitPayload, freshState, applyElapsed, markDiscovered,
-  huertoOp, cosUnlocked, cosProgress, speedFactor, addMemory, FOCUS_REAL_MS, FOCUS_DEMO_MS, dayKey,
+  huertoOp, cosUnlocked, cosProgress, addMemory, FOCUS_REAL_MS, dayKey,
   ensureDailyMission, recordMissionProgress, EXPEDITION_ROUTES, startExpedition, advanceExpedition, claimExpedition, freeExpeditionReady, FREE_EXPEDITION_COOLDOWN,
   FEATURE_UNLOCKS, featureUnlocked, RELIC_CATALOG, RELIC_MILESTONES, relicUniqueCount
 } from '../common/logic.js';
@@ -270,11 +270,17 @@ let nanoProgress = 0;
 function getLM() {
   return self.LanguageModel || (self.ai && self.ai.languageModel) || null;
 }
+function normalizeNanoAvailability(value) {
+  if (value === 'available' || value === 'readily') return 'available';
+  if (value === 'downloadable' || value === 'after-download') return 'downloadable';
+  if (value === 'downloading') return 'downloading';
+  return 'unavailable';
+}
 async function nanoAvailability() {
   const LM = getLM();
   if (!LM) return 'unavailable';
   try {
-    if (LM.availability) return await LM.availability();          // API moderna
+    if (LM.availability) return normalizeNanoAvailability(await LM.availability()); // API moderna
     if (LM.capabilities) {                                        // API antigua (compat)
       const c = await LM.capabilities();
       if (c.available === 'readily') return 'available';
@@ -300,7 +306,22 @@ function renderNanoUI() {
   $('aiBar').style.width = nanoProgress + '%';
 }
 async function refreshNano() {
-  nanoState = await nanoAvailability();
+  // Algunos Chrome dejan availability() pendiente en el popup aunque Nano
+  // funcione correctamente en el service worker. Evitamos el spinner eterno y
+  // usamos ese segundo contexto como fuente de respaldo.
+  nanoState = await Promise.race([
+    nanoAvailability(),
+    new Promise(resolve => setTimeout(() => resolve('unavailable'), 3500))
+  ]);
+  if (nanoState === 'unavailable') {
+    try {
+      const swState = await Promise.race([
+        chrome.runtime.sendMessage({ type: 'sf-nano-availability' }),
+        new Promise(resolve => setTimeout(() => resolve(null), 2500))
+      ]);
+      if (swState) nanoState = normalizeNanoAvailability(swState);
+    } catch (e) {}
+  }
   renderNanoUI();
 }
 $('aiDiag').addEventListener('click', async () => {
@@ -401,14 +422,14 @@ async function speak() {
 
 /* ═══ SLIMEFORGE PRO (Creem · contrato de familia v2.0) ═══ */
 const TIER_KEYS = { monthly: 'tier_m', annual: 'tier_a', lifetime: 'tier_l' };
-function tierName(tier) { return tier === 'test' ? 'TEST' : (TIER_KEYS[tier] ? t(TIER_KEYS[tier]) : tier); }
+function tierName(tier) { return TIER_KEYS[tier] ? t(TIER_KEYS[tier]) : tier; }
 function renderPro() {
   const st = $('proStatus');
   const tb = $('trialBanner');
   const start = $('btnTrialStart');
   const trial = trialStatus(G);
   start.style.display = 'none';
-  if (!FORCE_PRO && !(G.pro && G.pro.active)) {
+  if (!(G.pro && G.pro.active)) {
     if (trial.active) {
       tb.style.display = '';
       tb.textContent = '🎁 ' + t('trial_active', { D: trial.remaining });
@@ -425,11 +446,6 @@ function renderPro() {
   tm.style.display = ((trial.active || G.trialStart) && tb.style.display !== 'none' && G.phase === 'pet') ? '' : 'none';
   tm.textContent = tb.textContent;
   renderProPerks();
-  if (FORCE_PRO) {
-    st.innerHTML = '🧪 <b style="color:var(--amber)">' + esc(t('pro_test_build')) + '</b>';
-    $('proBuy').style.display = 'none'; $('proManage').style.display = 'none';
-    return;
-  }
   if (G.pro && G.pro.active) {
     const exp = G.pro.expiresAt ? ' · ' + t('pro_renews', { DATE: new Date(G.pro.expiresAt).toLocaleDateString() }) : '';
     st.innerHTML = '<b style="color:var(--amber)">' + t('pro_active') + '</b> · ' + tierName(G.pro.tier) + exp;
@@ -454,7 +470,6 @@ const PRO_PERKS = [
 ];
 function renderProPerks() {
   const box = $('proPerks');
-  if (FORCE_PRO) { box.innerHTML = ''; return; }
   const pro = !!(G.pro && G.pro.active);
   const trialing = !pro && trialStatus(G).active;
   const expired = !pro && !trialing && G.trialStart;
@@ -543,7 +558,7 @@ function renderPets() {
     const locked = !proActive(G);
     if (p) {
       const mini = p.phase === 'pet'
-        ? '<svg viewBox="0 0 200 200" width="50" height="50">' + buildCreature(p.dna, p.stageIdx, { dirtLvl: 0, poops: 0, focusing: false, mood: 80, sleeping: isAsleep({ demoMode: G.demoMode, phase: 'pet', dna: p.dna, wokeUntil: 0 }) }).split('bodyclip').join('bodyclipSl' + i) + '</svg>'
+        ? '<svg viewBox="0 0 200 200" width="50" height="50">' + buildCreature(p.dna, p.stageIdx, { dirtLvl: 0, poops: 0, focusing: false, mood: 80, sleeping: isAsleep({ phase: 'pet', dna: p.dna, wokeUntil: 0 }) }).split('bodyclip').join('bodyclipSl' + i) + '</svg>'
         : '🥚';
       const canStore = (G.reserve || []).length < resCap();
       rows.push('<div class="petslot"><div class="mini">' + mini + '</div><div class="pnm"><b>' + esc(p.dna ? p.dna.name : t('egg_word')) + '</b><small>' + t('pets_resting') + '</small></div><input type="range" class="psz" min="10" max="100" data-psize="' + i + '" value="' + (p.sizePct == null ? 100 : p.sizePct) + '" title="' + t('lbl_size') + ' ' + (p.sizePct == null ? 100 : p.sizePct) + '%" style="width:56px"><button data-swap="' + i + '">' + t('pets_swap') + '</button><button data-store="' + i + '" title="📦"' + (canStore ? '' : ' disabled') + '>📦</button></div>');
@@ -603,7 +618,7 @@ function renderReserve() {
   const emptySlot = !G.stable[0] || !G.stable[1];
   $('resList').innerHTML = res.map((p, j) => {
     const mini = (p.phase === 'pet' && p.dna)
-      ? '<svg viewBox="0 0 200 200" width="40" height="40">' + buildCreature(p.dna, p.stageIdx, { dirtLvl: 0, poops: 0, focusing: false, mood: 75, sleeping: isAsleep({ demoMode: G.demoMode, phase: 'pet', dna: p.dna, wokeUntil: 0 }) }).split('bodyclip').join('bodyclipR' + j) + '</svg>'
+      ? '<svg viewBox="0 0 200 200" width="40" height="40">' + buildCreature(p.dna, p.stageIdx, { dirtLvl: 0, poops: 0, focusing: false, mood: 75, sleeping: isAsleep({ phase: 'pet', dna: p.dna, wokeUntil: 0 }) }).split('bodyclip').join('bodyclipR' + j) + '</svg>'
       : '🥚';
     return '<div class="petslot"><div class="mini" style="width:44px;height:44px">' + mini + '</div><div class="pnm"><b>' + esc(p.dna ? p.dna.name : t('egg_word')) + '</b><small>' + (p.dna ? spName(p.dna.species) + ' · ' + stName(STAGES[p.stageIdx].id) : t('res_unhatched')) + '</small></div>' +
       '<button data-bring="' + j + '"' + (emptySlot ? '' : ' disabled') + '>' + t('res_bring') + '</button>' +
@@ -1195,7 +1210,7 @@ function updateFocusUI() {
     $('btnFocus').style.display = 'none';
     $('btnFocusCancel').style.display = '';
   } else {
-    $('ftimer').textContent = fmt((G.focusMin || 25) * 60000 / speedFactor(G));
+    $('ftimer').textContent = fmt((G.focusMin || 25) * 60000);
     $('btnFocus').style.display = '';
     $('btnFocusCancel').style.display = 'none';
   }
@@ -1751,35 +1766,6 @@ $('cname').addEventListener('click', () => {
     toast(t('renamed', { N: G.dna.name }));
   }
 });
-function renderSpeedMode() {
-  const on = speedFactor(G) === 10;
-  $('chkSpeed10').checked = on; $('chkSpeed10').disabled = !!G.focus;
-  let badge = document.querySelector('.speed-badge');
-  if (on && !badge) { badge = document.createElement('div'); badge.className = 'speed-badge'; badge.textContent = '🧪 ×10'; document.body.appendChild(badge); }
-  if (!on && badge) badge.remove();
-  $('testJourneyTools').style.display = on ? '' : 'none';
-}
-$('chkSpeed10').addEventListener('change', e => {
-  if (G.focus) { e.target.checked = speedFactor(G) === 10; return; }
-  G.speedMode = e.target.checked ? 10 : 1;
-  renderSpeedMode(); updateFocusUI(); persist();
-  toast(e.target.checked ? t('test_on') : t('test_off'));
-});
-$('btnTestMission').addEventListener('click', () => {
-  const m = ensureDailyMission(G); recordMissionProgress(G, m.type, m.target);
-  drainToasts(); drainReactions(); renderJourney(); updateHUD(); persist();
-});
-$('btnTestExpedition').addEventListener('click', () => {
-  if (!G.expedition) { toast(t('test_need_expedition')); return; }
-  advanceExpedition(G); drainToasts(); drainReactions(); renderJourney(); persist();
-});
-$('btnTestStreak').addEventListener('click', () => {
-  const d = new Date(); d.setDate(d.getDate() - 2);
-  G.streak = G.streak || { count: 3, best: 3 };
-  G.streak.count = Math.max(3, G.streak.count || 0); G.streak.best = Math.max(G.streak.best || 0, G.streak.count);
-  G.streak.last = d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate(); G.streak.shield = true;
-  toast(t('test_streak_ready')); renderJourney(); persist();
-});
 $('chkPack').addEventListener('change', e => {
   if (!proActive(G)) {
     e.target.checked = false;
@@ -1988,7 +1974,7 @@ $('btnFocus').addEventListener('click', async () => {
   if (ritual && ritual.goalRequired && !goal) { $('focusGoal').focus(); toast(t('goal_required')); return; }
   markTrialUse(G);
   const nominalMinutes = G.focusMin || 25;
-  const dur = nominalMinutes * 60000 / speedFactor(G);
+  const dur = nominalMinutes * 60000;
   G.focusGoal = goal;
   const projectId = (ritual && projects.some(p => p.id === ritual.projectId) && ritual.projectId) || (projects.some(p => p.id === G.activeProjectId) ? G.activeProjectId : '');
   G.focus = { startedAt: Date.now(), endsAt: Date.now() + dur, duration: dur, nominalMinutes, goal, ritualId: ritual ? ritual.id : '', projectId, kind: 'work' };
@@ -2001,7 +1987,7 @@ $('btnBreak').addEventListener('click', async () => {
   const rituals = proActive(G) ? (G.rituals || []).slice(0, 8) : (G.rituals || []).slice(0, 1);
   const ritual = rituals.find(r => r.id === G.activeRitualId);
   const nominalMinutes = ritual ? ritual.breakMin : 5;
-  const dur = nominalMinutes * 60000 / speedFactor(G);
+  const dur = nominalMinutes * 60000;
   G.focus = { startedAt: Date.now(), endsAt: Date.now() + dur, duration: dur, nominalMinutes, kind: 'break' };
   await chrome.alarms.create('focusEnd', { when: G.focus.endsAt + 500 });
   toast('☕ ' + t('focus_break'));
@@ -2298,11 +2284,11 @@ $('btnForge').addEventListener('click', () => {
   }
   const mk = monthKey();
   if (!G.forjas || G.forjas.month !== mk) G.forjas = { month: mk, used: 0 };
-  if (!FORCE_PRO && G.forjas.used >= 3) {
+  if (G.forjas.used >= 3) {
     toast(t('forge_limit'));
     return;
   }
-  openModal('🔨 ' + t('forge_title', { N: FORCE_PRO ? '∞' : (3 - G.forjas.used) }));
+  openModal('🔨 ' + t('forge_title', { N: 3 - G.forjas.used }));
   const d = G.dna;
   const spOpts = Object.keys(SP_LABEL).map(k => '<option value="' + k + '"' + (k === d.species ? ' selected' : '') + '>' + spName(k) + '</option>').join('');
   const tpOpts = Object.keys(TEMP_INFO).map(k => '<option value="' + k + '"' + (k === d.temperament ? ' selected' : '') + '>' + tmpName(k) + '</option>').join('');
@@ -2491,7 +2477,6 @@ stageEl.addEventListener('mousemove', e => {
   if (G.phase === 'egg' && !G.obSeen) setTimeout(showOnboarding, 400);
   else if (G.phase === 'pet' && !G.experienceChosen) setTimeout(showExperienceChoice, 500);
   renderDnd();
-  renderSpeedMode();
   stageAmbient();
   renderVisits();
   await persist();

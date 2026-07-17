@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomodoro vs Time Blocking: How to Choose | Wendygo Studio</title>
+  <meta name="description" content="Compare Pomodoro and time blocking side by side. Which focus method fits your work style — and when gamification tips the scales." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Pomodoro vs Time Blocking: How to Choose"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Pomodoro vs Time Blocking: Which Focus Method Works Best?",
+    "description": "Compare Pomodoro and time blocking side by side. Which focus method fits your work style — and when gamification tips the scales.",
+    "datePublished": "2026-07-17",
+    "dateModified": "2026-07-17",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I combine Pomodoro and time blocking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, and it's often more effective than either alone. Block your calendar for deep work periods and run Pomodoro sessions within those blocks. The calendar protects the time; the timer protects the focus within it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which method is better for ADHD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pomodoro tends to work better for ADHD because the external timer provides structure without requiring sustained internal discipline. The countdown creates urgency and the short sessions make starting less daunting. Time blocking requires more self-regulation to maintain throughout the day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should a Pomodoro session be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the task. 15 minutes works for admin or light review; 25 minutes for moderate focus tasks; 45–60 minutes for deep flow work like coding or writing. Experiment across a week and notice where the session felt like it ended at the right time versus too early or too late."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes gamified Pomodoro different from regular Pomodoro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A regular Pomodoro timer counts down and notifies you. A gamified one adds a reward system — completing sessions earns something, such as a growing virtual pet, missions, or unlockable content. This creates an additional incentive to start sessions and to complete them rather than stopping early."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is time blocking better for remote workers than Pomodoro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. Remote workers often struggle with boundary-setting more than schedule-setting. Time blocking can help by making deep work windows visible. But Pomodoro addresses in-session distraction — the problem of staying focused once you've started — which time blocking doesn't touch."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body ul { margin: 0 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); font-size: 15px; }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
+    }
+    .compare-col {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px;
+    }
+    .compare-col h3 {
+      font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px;
+      color: var(--amber); margin: 0 0 14px !important;
+    }
+    .compare-col ul { margin: 0; list-style: none; }
+    .compare-col ul li {
+      font-size: 14px; color: var(--muted); padding: 6px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .compare-col ul li:last-child { border-bottom: none; }
+    @media (max-width: 520px) { .compare-grid { grid-template-columns: 1fr; } }
+
+    .highlight-box {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .highlight-box p { margin-bottom: 12px; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a a { color: var(--amber); text-decoration: none; }
+    .faq-a a:hover { text-decoration: underline; }
+
+    .tip-box {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .tip-box strong { color: var(--text); }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  </style>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Pomodoro vs Time Blocking: How to Choose | Wendygo Studio">
+  <meta property="og:description" content="Compare Pomodoro and time blocking side by side. Which focus method fits your work style — and when gamification tips the scales.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pomodoro vs Time Blocking: How to Choose | Wendygo Studio">
+  <meta name="twitter:description" content="Compare Pomodoro and time blocking side by side. Which focus method fits your work style — and when gamification tips the scales.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES &#127988;</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Pomodoro vs Time Blocking
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Productivity · SlimeForge</div>
+      <h1>Pomodoro vs Time Blocking: Which Focus Method Works Best?</h1>
+      <p class="article-intro">
+        Both methods help you work with more intention — but they protect against different failure modes. Here's a clear side-by-side so you can pick the right tool, or decide when to use both.
+      </p>
+      <div class="article-date">July 17, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <p>Pomodoro and time blocking are the two most popular structured productivity methods. They're often compared as if you have to pick one — but they operate at different levels. Understanding the difference helps you use each where it actually works.</p>
+
+      <h2>What Is the Pomodoro Technique?</h2>
+
+      <p>The Pomodoro technique breaks work into timed sessions — classically 25 minutes of focused work followed by a 5-minute break. After four sessions, a longer break resets you. The key insight: the timer is external. You're not relying on willpower to stop distracted browsing; there's a countdown running, and when it hits zero, you stop.</p>
+
+      <p>Common session lengths vary by task depth: 15 minutes for admin or light review, 25 minutes for the classic Pomodoro, 45 or 60 minutes for deep flow work. If you want to try a <a href="/slimeforge/">gamified Pomodoro timer</a> that builds a virtual pet as you complete sessions, SlimeForge supports all four lengths out of the box.</p>
+
+      <p><strong>Best for:</strong> single, well-defined tasks; deep focus work; people who lose track of time or struggle to start.</p>
+
+      <h2>What Is Time Blocking?</h2>
+
+      <p>Time blocking means assigning tasks to specific slots in your calendar. From 9–11am: write the quarterly report. From 2–3pm: answer emails. Your day is structured in advance. There's no built-in timer — you decide when to stop based on the clock and what's left.</p>
+
+      <p>The structure happens at the day level, not the session level. Time blocking is most useful when you have many different task types to juggle, when external meetings constrain your schedule, or when you need to make priorities visible to yourself and others.</p>
+
+      <p><strong>Best for:</strong> managers and executives; days that mix meetings with deep work; planning-heavy roles; workflows with many task types.</p>
+
+      <h2>Key Differences</h2>
+
+      <div class="compare-grid">
+        <div class="compare-col">
+          <h3>Pomodoro</h3>
+          <ul>
+            <li>Controls depth of a session</li>
+            <li>Breaks built in automatically</li>
+            <li>External timer enforces stops</li>
+            <li>Metric: sessions completed</li>
+            <li>Tool needed: timer</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h3>Time Blocking</h3>
+          <ul>
+            <li>Controls structure of the day</li>
+            <li>Breaks are up to you</li>
+            <li>Calendar visibility enforces stops</li>
+            <li>Metric: hours scheduled</li>
+            <li>Tool needed: calendar</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Pomodoro protects against in-session distraction. Time blocking protects against under-scheduling and task-switching at the day level. They solve different problems.</p>
+
+      <h2>When Pomodoro Works Better</h2>
+
+      <p>Use the Pomodoro technique when you're doing deep, single-task work: writing, coding, studying, designing. It's especially effective if you tend to get pulled into rabbit holes or have trouble starting. The timer creates a forcing function — even if you're not in flow, the session ending gives you a natural moment to assess and reset.</p>
+
+      <p>The <a href="/blog/pomodoro-timer-chrome-extension/">best Pomodoro timer Chrome extensions</a> add on-screen presence so you feel the countdown without switching tabs. Streaks and session counts give you a daily metric that doesn't require manual tracking.</p>
+
+      <h2>When Time Blocking Works Better</h2>
+
+      <p>Use time blocking when your day includes many task types, or when external meetings and commitments already constrain your schedule. It works well for project managers who need to defend focus time in a calendar that others can view, and for anyone who loses mornings to reactive work because there was no plan.</p>
+
+      <p>Time blocking at the calendar level makes prioritization visible: if it's not on the calendar, it probably won't happen. It doesn't help you focus within a block — just that you've reserved the block.</p>
+
+      <h2>Combining Both Methods</h2>
+
+      <p>Many practitioners use both. Time blocking sets the structure for the day — "10am–12pm: deep coding work." Pomodoro breaks that block into sprints — "25 minutes on, 5 off, repeat." The calendar block protects the time from meetings or admin; the timer protects the focus within it.</p>
+
+      <p>If you already use a calendar app for scheduling and a Pomodoro timer for sessions, you're running a hybrid approach. The two tools complement each other because they operate at different granularities.</p>
+
+      <h2>The Gamification Edge</h2>
+
+      <p>Regular Pomodoro timers are effective but passive — a countdown, a notification, done. Gamified Pomodoro adds a reward loop on top of the same timer mechanics. This matters most for motivation to start: the hardest part of any focus method is the first two minutes of a session.</p>
+
+      <p>SlimeForge adds a virtual slime pet that hatches after your first session and grows as you complete sprints. Each session earns Brasas 🔥 that fuel 16 species to discover, missions, and mini-games during breaks — all running locally without an account or internet connection. A growing pet changes how it feels to complete a session, not the session itself.</p>
+
+      <p>For people who find regular Pomodoro boring or easy to abandon mid-sprint, the gamification layer adds just enough pull. For <a href="/blog/offline-pomodoro-timer-chrome/">offline-capable focus timers</a> that work anywhere without WiFi, SlimeForge keeps the pet and sessions going even when you close the tab or lose connectivity.</p>
+
+      <div class="highlight-box">
+        <p><strong>Summary:</strong> Use time blocking to protect focus hours in your calendar. Use Pomodoro to protect focus within those hours. Add gamification if motivation to start is the real obstacle.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Can I combine Pomodoro and time blocking?</p>
+          <p class="faq-a">Yes, and it's often more effective than either alone. Block your calendar for deep work periods, then run Pomodoro sessions within those blocks. The calendar protects the time; the timer protects the focus within it.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Which method is better for ADHD?</p>
+          <p class="faq-a">Pomodoro tends to work better for ADHD because the external timer provides structure without requiring sustained internal discipline. The countdown creates urgency and the short sessions make starting less daunting. Time blocking requires more self-regulation to maintain throughout the day.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">How long should a Pomodoro session be?</p>
+          <p class="faq-a">It depends on the task: 15 minutes for admin or light review, 25 minutes for moderate focus tasks, 45–60 minutes for deep flow work like coding or writing. Experiment across a week and notice where sessions felt like they ended at the right moment versus too early or too late.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What makes gamified Pomodoro different from regular Pomodoro?</p>
+          <p class="faq-a">A regular Pomodoro timer counts down and notifies you. A gamified one adds a reward system — completing sessions earns something, like a growing virtual pet, missions, or unlockable content. This creates an additional incentive to start sessions and to complete them rather than stopping early.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is time blocking better for remote workers than Pomodoro?</p>
+          <p class="faq-a">Not necessarily. Remote workers often struggle with boundary-setting more than schedule-setting. Time blocking can help by making deep work windows visible. But Pomodoro addresses in-session distraction — the problem of staying focused once you've started — which time blocking doesn't touch.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/pomodoro-timer-chrome-extension/">
+            Best Pomodoro Timer Chrome Extension in 2026 — With a Virtual Pet
+            <span>How SlimeForge works as a timer, plus how the pet system builds focus habits over time</span>
+          </a>
+          <a class="related-link" href="/blog/offline-pomodoro-timer-chrome/">
+            Offline Pomodoro Timer for Chrome — Works Without Internet
+            <span>A Pomodoro timer that keeps sessions and streaks going whether you're online or not</span>
+          </a>
+          <a class="related-link" href="/blog/forest-app-alternatives-chrome/">
+            Best Forest App Alternatives for Chrome in 2026
+            <span>Compare focus timer extensions — from minimal timers to gamified options with a virtual pet</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>SlimeForge is a gamified Pomodoro timer for Chrome. Sessions (15/25/45/60 min), a virtual slime pet, streaks, missions, and mini-games — all running locally without an account or internet connection.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
+          Add SlimeForge to Chrome — Free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> — privacy-first browser extensions</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#privacy">Privacy</a>
+    </div>
+  </footer>
+
+</body>
+</html>

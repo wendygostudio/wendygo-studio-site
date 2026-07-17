@@ -1557,14 +1557,12 @@ function rollDNA() {
   let bubbleUntil = 0;
 
   function eventDelay() {
-    const demo = S && S.demoMode;
-    return demo ? 25000 + Math.random() * 35000 : 140000 + Math.random() * 200000;   // v0.37: 2,3-5,6 min (antes 4-9)
+    return 140000 + Math.random() * 200000;   // v0.37: 2,3-5,6 min (antes 4-9)
   }
   function soloDelay() {
-    const demo = S && S.demoMode;
     // Pensamientos en solitario: más espaciados que los eventos, para que
     // sigan siendo una sorpresa y no una muletilla de "algo tenía que decir".
-    return demo ? 20000 + Math.random() * 20000 : 180000 + Math.random() * 240000;
+    return 180000 + Math.random() * 240000;
   }
   async function soloThought(now) {
     nextSoloAt = now + soloDelay();
@@ -1912,7 +1910,6 @@ function rollDNA() {
   function dayKeyC() { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
   function canDuel() {
     if (!S || !S.dna) return false;
-    if (S.demoMode) return true;   // en pruebas: sin cap diario ni bloqueo por foco
     if (S.focus) return false;
     return !(S.duelDay && S.duelDay.d === dayKeyC() && S.duelDay.n >= 2);   // máx. 2 duelos/día
   }
@@ -2073,7 +2070,7 @@ function rollDNA() {
   function isSlime() { return S && S.dna && S.dna.species === 'slime'; }
   function locoProf() { return (S && S.dna && LOCO[S.dna.species]) || LOCO.slime; }
   function isAsleepC() {
-    if (!S || S.demoMode || S.phase !== 'pet' || !S.dna) return false;
+    if (!S || S.phase !== 'pet' || !S.dna) return false;
     if (S.wokeUntil && Date.now() < S.wokeUntil) return false;
     const h = new Date().getHours();
     return ['buho', 'fantasma', 'kitsune'].includes(S.dna.species) ? (h >= 10 && h < 18) : (h < 7);
@@ -2213,7 +2210,7 @@ function rollDNA() {
     if (!gardenRun) {
       if (!nextGardenAt) nextGardenAt = now + 20000;
       if (now > nextGardenAt) {
-        nextGardenAt = now + (S.demoMode ? 25000 + Math.random() * 20000 : 100000 + Math.random() * 140000);
+        nextGardenAt = now + 100000 + Math.random() * 140000;
         // regar sola: con vínculo alto, el huerto es de toda la familia (v0.41:
         // también las compañeras de manada pueden encargarse)
         const wi = (S.vinculo || 0) >= 50 ? S.huerto.plots.findIndex(p => p && !p.w && !p.done) : -1;
@@ -2787,7 +2784,7 @@ function rollDNA() {
       : score === -1 ? 'You barely stand each other.' : 'You clash completely.';
   }
   function sayAs(p, line, ms) { chipBubble(pX(p), pSz(p) + 12, pDna(p).name + ': «' + line + '»', ms || 3200); }
-  function packDelay() { return (S && S.demoMode) ? 16000 + Math.random() * 20000 : 65000 + Math.random() * 95000; }   // v0.37: 1,1-2,7 min
+  function packDelay() { return 65000 + Math.random() * 95000; }   // v0.37: 1,1-2,7 min
 
   function bondRecord(dA, dB) {
     if (!S || !S.bonds || typeof dA.seed !== 'number' || typeof dB.seed !== 'number') return { n: 0, warmth: 0, tag: '' };
@@ -3556,40 +3553,6 @@ function rollDNA() {
     applyDnd();
   });
   window.addEventListener('pagehide', savePos);   // último apunte antes de recargar/navegar (v0.45.3)
-  /* ── Atajos de Modo pruebas (Alt+Mayús+tecla, solo con demoMode) ── */
-  window.addEventListener('keydown', e => {
-    if (!S || !S.demoMode || !wrap || !e.altKey || !e.shiftKey) return;
-    const tag = e.target && e.target.tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || (e.target && e.target.isContentEditable)) return;
-    const k = e.code;
-    const force = fn => { e.preventDefault(); if (ev) endEvent(); fn(); };
-    if (k === 'KeyD') force(() => evDuel());
-    else if (k === 'KeyW') force(() => evWildSlime());
-    else if (k === 'KeyL') force(() => evLaser());
-    else if (k === 'KeyZ') force(() => evZoomies());
-    else if (k === 'KeyB') force(() => evBox());
-    else if (k === 'KeyP') { e.preventDefault(); soloThought(performance.now()); }
-    else if (k === 'KeyG') {
-      e.preventDefault();
-      const idx = S.huerto && S.huerto.plots ? S.huerto.plots.findIndex(pp => pp && !pp.w && !pp.done) : -1;
-      if (idx >= 0) { gardenRun = { i: idx, kind: 'water', actor: { kind: 'main' }, acted: false, started: performance.now() }; mode = 'walk'; targetX = gardenX(idx); dir = targetX > x ? 1 : -1; modeUntil = performance.now() + 30000; }
-      else say('Nada pendiente de riego en el huerto.', 2600);
-    }
-    else if (k === 'KeyE') {
-      // demo (v0.46): cicla la pieza del escritorio para capturas de la CWS
-      e.preventDefault();
-      deskForce = deskForce == null ? 2 : deskForce === 0 ? null : deskForce - 1;   // café → libro → portátil → auto
-      say(deskForce == null ? 'Escritorio: auto' : 'Escritorio: ' + ['portátil', 'libro', 'café'][deskForce], 1600);
-      render(true);
-      comps.forEach(c => { c.gBand = -1; });   // fuerza respawn (conserva posición desde v0.45.1)
-      syncComps();
-    }
-    else if (k === 'KeyM') {
-      e.preventDefault();
-      if (comps.length >= 1 && !packEv) { nextPackAt = 0; startPackEv(performance.now()); }
-      else say(comps.length ? 'Ya hay un encuentro en marcha.' : 'Necesito compañía: activa «Pasean juntas» con 2+ criaturas.', 3200);
-    }
-  }, true);
   chrome.storage.onChanged.addListener((changes, area) => {
     if (area !== 'local' || !changes[STORAGE_KEY]) return;
     const prevFocusEnd = S && S.focus ? S.focus.endsAt : 0;

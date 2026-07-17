@@ -229,9 +229,6 @@
   "pro_deact": {
     "message": "Licencia desactivada."
   },
-  "pro_test": {
-    "message": "🧪 Build de pruebas: Pro desbloqueado."
-  },
   "reserve_full": {
     "message": "Reserva llena ($N).",
     "placeholders": {
@@ -892,15 +889,6 @@
   "tab_more": {
     "message": "Más"
   },
-  "h_dev": {
-    "message": "🧪 Modo pruebas"
-  },
-  "dev_lbl": {
-    "message": "Acelera el juego ×10 y activa atajos en página"
-  },
-  "dev_note": {
-    "message": "Con la criatura en una página: Alt+Mayús + D duelo · W slime salvaje · L láser · Z zoomies · B caja · M encuentro de manada · P pensamiento · G riego del huerto. Eventos cada 25-60 s, la criatura no duerme."
-  },
   "h_huerto": {
     "message": "🌱 Huerto"
   },
@@ -1291,13 +1279,8 @@
   "memory_title":{"message":"📖 Recuerdos"},
   "memory_open":{"message":"Abrir libro de vida"},
   "memory_empty":{"message":"Los primeros recuerdos aparecerán al enfocar y evolucionar."},
-  "test_title":{"message":"🧪 Modo de pruebas"},
   "minis_note_early":{"message":"Pesca alimento desde el nacimiento. Nuevos juegos aparecerán a medida que completes focos."},
   "birth_title":{"message":"¡$NAME ha nacido!"},"birth_copy":{"message":"Ahora es una Chispa. Cada sesión de foco hará crecer a tu criatura y su bosque."},"birth_progress":{"message":"Crecimiento: $N/$T"},"birth_meet":{"message":"Conocer a $NAME"},
-  "test_x10":{"message":"Velocidad ×10"},
-  "test_note":{"message":"Acelera temporizadores y simulación. No usar para estadísticas reales."},
-  "test_on":{"message":"Modo ×10 activado"},
-  "test_off":{"message":"Velocidad normal restaurada"},
   "language_title":{"message":"Idioma"},"theme_title":{"message":"Cambiar tema"},"popout_title":{"message":"Abrir en ventana"},"sound_title":{"message":"Activar o desactivar sonido"},"rename_title":{"message":"Clic para renombrar"},"forge_button_title":{"message":"La Forja"},"main_nav_label":{"message":"Secciones principales"},"goal_plan_title":{"message":"Planificar con IA local"},"duration_title":{"message":"Duración"},"break_title":{"message":"Iniciar descanso"},"pack_label":{"message":"Pasean juntas (todas tus criaturas)"},"ai_checking":{"message":"Comprobando disponibilidad…"},"ai_download":{"message":"Descargar"},"diagnostic_title":{"message":"Diagnóstico"},"forge_family":{"message":"🔥 Familia Forge"},
   "rarity_common":{"message":"COMÚN"},"rarity_rare":{"message":"RARO"},"rarity_epic":{"message":"ÉPICO"},"rarity_legendary":{"message":"LEGENDARIO"},"lore_generic":{"message":"Una criatura única de la Fragua, con su propia forma de acompañarte y concentrarse."},
   "journey_title":{"message":"🧭 Jornada de hoy"},"routine_title":{"message":"Rutina de cuidado"},"mission_daily":{"message":"Misión diaria · Gratis"},"mission_focus_sessions":{"message":"Completa $N sesiones de foco"},"mission_focus_minutes":{"message":"Acumula $N minutos de foco"},"mission_care":{"message":"Cuida a tu criatura $N veces"},"mission_play":{"message":"Completa $N minijuego"},"mission_reward":{"message":"Recompensa: 4🔥 + 1 material"},"mission_complete_toast":{"message":"¡Misión diaria completada! +4🔥 y +1 material"},
@@ -1306,14 +1289,13 @@
   "route_forest":{"message":"Bosque de Ascuas"},"route_ruins":{"message":"Ruinas Resonantes"},"route_lagoon":{"message":"Laguna Lunar"},"route_desc_forest":{"message":"Ruta breve · $N sesiones · pétalos y una reliquia"},"route_desc_ruins":{"message":"Ruta media · $N sesiones · escamas y dos reliquias"},"route_desc_lagoon":{"message":"Ruta larga · $N sesiones · hilo y tres reliquias"},
   "weekly_open":{"message":"📊 Informe semanal"},"weekly_title":{"message":"Informe semanal"},"weekly_sessions":{"message":"sesiones"},"weekly_minutes":{"message":"minutos"},"weekly_completion":{"message":"objetivos completados"},"weekly_average":{"message":"media por sesión"},"weekly_best_day":{"message":"Mejor día: $D"},"weekly_best_ritual":{"message":"Ritual más usado: $R"},"weekly_nano_title":{"message":"Consejo de tu criatura · Nano local"},"weekly_analyzing":{"message":"Analizando tu semana…"},"weekly_tip_consistency":{"message":"Mantén el mismo horario: tu constancia ya está funcionando."},"weekly_tip_small":{"message":"Reduce el próximo objetivo a un paso pequeño y comprobable."},"weekly_tip_start":{"message":"Completa una primera sesión para descubrir tu patrón semanal."},"weekly_pro_lock":{"message":"El informe semanal inteligente es una función PRO"},
   "reaction_expedition":{"message":"¡Sabía que volvería con algo brillante!"},"reaction_streak_saved":{"message":"¡El escudo mantuvo viva nuestra racha!"},"reaction_streak_record":{"message":"¡Nueva mejor racha! Esto ya parece una tradición."},"reaction_mission":{"message":"¡Misión cumplida! Buen trabajo en equipo."},
-  "test_complete_mission":{"message":"Completar misión"},"test_advance_expedition":{"message":"Avanzar expedición"},"test_prepare_streak":{"message":"Preparar escudo"},"test_need_expedition":{"message":"Inicia primero una expedición"},"test_streak_ready":{"message":"Caso preparado: completa un foco para probar el escudo"},
   "perk_expedition":{"message":"Expediciones ampliadas"},"perkd_expedition":{"message":"Tres rutas ilimitadas, afinidades, botín y reliquias."},"perk_weekly":{"message":"Inteligencia semanal"},"perkd_weekly":{"message":"Interpretación privada con Nano, patrones y tendencias."},"pro_free_compare":{"message":"Gratis incluye foco, Nano para objetivos, Escudo básico, 3 proyectos, informe y una expedición semanal. PRO amplía capacidad, análisis y mundo."},
   "expedition_free_ready":{"message":"Tu expedición semanal gratuita al Bosque está disponible"},"expedition_free_wait":{"message":"La expedición gratuita volverá en $N día(s)"},"expedition_free_note":{"message":"Gratis: un viaje al Bosque por semana, 6 Brasas y un material."},"expedition_affinity_pro":{"message":"PRO desbloquea afinidades, reliquias y las tres rutas."},"expedition_claimed_free":{"message":"Botín gratuito: +$B🔥 · +1 material"},"route_desc_forest_free":{"message":"Ruta gratuita semanal · $N sesiones · 6 Brasas y un pétalo"},
   "weekly_nano_locked":{"message":"El resumen es gratis. PRO añade interpretación privada con Nano y tendencias."},"project_paused":{"message":"$N proyecto(s) PRO están pausados, no borrados."},"ritual_pro_note":{"message":"Gratis incluye 1 ritual. PRO amplía el límite a 8."},
   "retouch_title":{"message":"Retoque de madurez"},"retouch_body":{"message":"Color del cuerpo"},"retouch_marks":{"message":"Color de las marcas"},"retouch_note":{"message":"Tu criatura adulta recibe un retoque visual gratuito."},"retouch_pro":{"message":"PRO: especie y diseño completo"},"retouch_btn":{"message":"Aplicar mi retoque"},"retouch_done":{"message":"Retoque de madurez aplicado"},
   "expedition_relics":{"message":"Reliquias: $N"},
   "memory_expedition":{"message":"$N regresó de $R con una nueva reliquia."},"memory_birth":{"message":"$N nació durante una sesión de foco."},"memory_evolution":{"message":"$N alcanzó la etapa $S."},"memory_focus":{"message":"$G · $R"},"memory_generic":{"message":"Un nuevo recuerdo de la Fragua."},
-  "diag_title":{"message":"Nano · diagnóstico"},"diag_no_response":{"message":"Sin respuesta del service worker."},"diag_model":{"message":"LanguageModel en el service worker"},"diag_availability":{"message":"Disponibilidad"},"diag_first_line":{"message":"Primera respuesta"},"diag_response":{"message":"Respuesta"},"diag_error":{"message":"Error"},"yes":{"message":"Sí"},"no":{"message":"No"},"pro_test_build":{"message":"Build de pruebas: PRO desbloqueado."},
+  "diag_title":{"message":"Nano · diagnóstico"},"diag_no_response":{"message":"Sin respuesta del service worker."},"diag_model":{"message":"LanguageModel en el service worker"},"diag_availability":{"message":"Disponibilidad"},"diag_first_line":{"message":"Primera respuesta"},"diag_response":{"message":"Respuesta"},"diag_error":{"message":"Error"},"yes":{"message":"Sí"},"no":{"message":"No"},
   "quiet_title":{"message":"Modo tranquilo"},"quiet_on":{"message":"Modo tranquilo activado"},"quiet_off":{"message":"Modo tranquilo desactivado"},
   "share_open":{"message":"📸 Compartir progreso"},"share_week":{"message":"Mi semana de foco"},"share_streak":{"message":"racha"},"share_local":{"message":"Creado en tu equipo · sin datos personales"},"share_title":{"message":"Tarjeta de progreso"},"share_copy":{"message":"Copiar imagen"},"share_save":{"message":"Guardar PNG"},"share_copied":{"message":"Imagen copiada"},"share_copy_fail":{"message":"No se pudo copiar; puedes guardarla"},
   "unlock_next":{"message":"Próximo desbloqueo en $N sesión(es): $F"},"unlock_complete":{"message":"Senda completa · todas las herramientas descubiertas"},"unlock_ok":{"message":"Descubrir"},

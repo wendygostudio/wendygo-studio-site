@@ -3,7 +3,7 @@
    caricias, Brasas de eventos, limpieza de popó y RELAY de diálogos
    Gemini Nano (la Prompt API no existe en los content scripts). */
 
-import { loadState, saveState, mergeConcurrentValue, speedFactor, applyElapsed, attentionNeeded, isAsleep, dayKey, huertoOp, FOCUS_DEMO_MS } from './common/logic.js';
+import { loadState, saveState, mergeConcurrentValue, applyElapsed, attentionNeeded, isAsleep, dayKey, huertoOp } from './common/logic.js';
 import { markTrialUse, proActive } from './common/license.js';
 import { SP_FLAVOR, genderedLabel, tempAdj, duelBank } from './common/engine.js';
 
@@ -262,13 +262,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
           const ritual = rituals.find(r => r.id === s.activeRitualId);
           const projectId = (ritual && projects.some(p => p.id === ritual.projectId) && ritual.projectId) || (projects.some(p => p.id === s.activeProjectId) ? s.activeProjectId : '');
           const nominalMinutes = isBreak ? (ritual ? ritual.breakMin : 5) : (s.focusMin || 25);
-          const dur = nominalMinutes * 60000 / speedFactor(s);
+          const dur = nominalMinutes * 60000;
           s.focus = { startedAt: Date.now(), endsAt: Date.now() + dur, duration: dur, nominalMinutes, goal: isBreak ? '' : (s.focusGoal || ''), ritualId: ritual ? ritual.id : '', projectId, kind: isBreak ? 'break' : 'work' };
           await chrome.alarms.create('focusEnd', { when: s.focus.endsAt + 500 });
           await saveState(s); updateBadge(s); sendResponse({ ok: true }); return;
         }
         if (msg.op === 'extend' && s.focus && s.focus.kind !== 'break') {
-          const extra = 5 * 60000 / speedFactor(s);
+          const extra = 5 * 60000;
           s.focus.endsAt += extra; s.focus.duration += extra; s.focus.nominalMinutes = (s.focus.nominalMinutes || s.focusMin || 25) + 5;
           await chrome.alarms.create('focusEnd', { when: s.focus.endsAt + 500 });
           await saveState(s); sendResponse({ ok: true }); return;
@@ -373,6 +373,14 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         const uiL = nanoUiLang(s);
         (msg.dnas || []).forEach(d => { if (d) getNanoSession(d, uiL).catch(() => {}); });
         sendResponse(true);
+        return;
+      }
+      case 'sf-nano-availability': {
+        try {
+          const LM = self.LanguageModel;
+          const avail = LM && LM.availability ? await LM.availability() : 'unavailable';
+          sendResponse(avail || 'unavailable');
+        } catch (e) { sendResponse('unavailable'); }
         return;
       }
       case 'sf-nano-diag': {
