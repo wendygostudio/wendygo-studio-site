@@ -1032,4 +1032,11 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertio/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convertio-alternatives/"/>
   </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/right-to-repair-eu-law/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
+  </url>
 </urlset>

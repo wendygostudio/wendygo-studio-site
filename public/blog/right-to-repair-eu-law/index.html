@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EU Right to Repair Law Explained | Wendygo Studio</title>
+  <meta name="description" content="The EU Right to Repair Directive gives you the right to have products fixed instead of replaced. Here's what it covers and how to use it." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/right-to-repair-eu-law/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "EU Right to Repair Law Explained"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "EU Right to Repair Law: What Every Consumer Needs to Know",
+    "description": "The EU Right to Repair Directive gives you the right to have products fixed instead of replaced. Here's what it covers and how to use it.",
+    "datePublished": "2026-07-17",
+    "dateModified": "2026-07-17",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does the EU right to repair mean repairs are free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You generally pay for out-of-warranty repairs. What the law guarantees is access to repair — spare parts, authorized service, and no artificial blocks on independent repairers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I choose any repair shop I want?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Manufacturers cannot restrict you to their own service centers. Independent repairers must have access to spare parts and tools at fair prices under the 2024 Directive."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the right to repair apply to products bought outside the EU?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It applies if you bought from an EU-based seller and the product is in a covered category. If you bought from a non-EU seller shipping internationally, your rights may differ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the manufacturer says repair is economically unviable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is a common tactic but has legal limits. The Directive restricts the use of unviability as a blanket excuse. Request the refusal in writing and escalate to your national consumer authority."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the EU Right to Repair Directive already in force?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Directive entered into force in July 2024. EU member states have until mid-2026 to fully transpose it into national law. Coverage and enforcement vary by country during the transition."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(40px,8vw,72px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb {
+      display: flex; gap: 6px; align-items: center;
+      font-size: 13px; color: var(--muted); margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--faint); }
+
+    .article-meta {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(232,163,61,.15); color: var(--amber);
+      border: 1px solid rgba(232,163,61,.3);
+      border-radius: 4px; padding: 2px 8px; font-size: 11px;
+      font-weight: 600; letter-spacing: .5px; text-transform: uppercase;
+    }
+    .article-date { font-size: 13px; color: var(--muted); }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 36px); font-weight: 800;
+      line-height: 1.25; letter-spacing: -.3px;
+      color: var(--text); margin-bottom: 20px;
+    }
+    .article-intro {
+      font-size: 18px; color: var(--muted); line-height: 1.65;
+      margin-bottom: 40px; border-bottom: 1px solid var(--line); padding-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin: 40px 0 14px; line-height: 1.3;
+    }
+    h3 {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      margin: 28px 0 10px;
+    }
+    p { margin-bottom: 16px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 0 0 16px 0; padding-left: 0;
+      list-style: none;
+    }
+    ul li, ol li {
+      position: relative; padding-left: 20px; margin-bottom: 8px;
+      color: var(--text);
+    }
+    ul li::before {
+      content: "–"; position: absolute; left: 0; color: var(--amber);
+    }
+    ol { counter-reset: ol-counter; }
+    ol li { counter-increment: ol-counter; }
+    ol li::before {
+      content: counter(ol-counter) ".";
+      position: absolute; left: 0; color: var(--amber); font-weight: 600;
+    }
+
+    strong { color: var(--text); font-weight: 600; }
+
+    .highlight-box {
+      background: var(--surf); border: 1px solid var(--line);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--r); padding: 18px 20px;
+      margin: 28px 0;
+    }
+    .highlight-box p { margin: 0; }
+
+    .cta-box {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 12px; padding: 32px 28px;
+      margin: 48px 0; text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 20px; margin: 0 0 10px;
+    }
+    .cta-box p {
+      color: var(--muted); font-size: 15px; margin: 0 0 22px;
+      max-width: 480px; margin-left: auto; margin-right: auto;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 15px;
+      padding: 11px 24px; border-radius: 7px;
+      text-decoration: none; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    .related-section { margin-top: 64px; }
+    .related-section h2 { font-size: 18px; margin-bottom: 16px; }
+    .related-list { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; background: var(--surf); border: 1px solid var(--line);
+      border-radius: var(--r); padding: 14px 16px;
+      text-decoration: none; color: var(--text); font-size: 14px;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--amber); }
+    .related-link span { color: var(--muted); font-size: 12px; display: block; margin-top: 2px; }
+
+    .faq-section { margin-top: 56px; }
+    .faq-section h2 { margin-bottom: 20px; }
+    .faq-item {
+      border-top: 1px solid var(--line); padding: 20px 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid var(--line); }
+    .faq-q {
+      font-size: 15px; font-weight: 600; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px clamp(20px,5vw,60px);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-brand {
+      font-size: 13px; font-weight: 700; color: var(--muted);
+      text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: var(--faint); font-size: 13px; text-decoration: none; }
+    .footer-links a:hover { color: var(--muted); }
+
+    a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    a:hover { text-decoration-color: var(--amber); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  </style>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="EU Right to Repair Law Explained | Wendygo Studio">
+  <meta property="og:description" content="The EU Right to Repair Directive gives you the right to have products fixed instead of replaced. Here's what it covers and how to use it.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/right-to-repair-eu-law/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EU Right to Repair Law Explained | Wendygo Studio">
+  <meta name="twitter:description" content="The EU Right to Repair Directive gives you the right to have products fixed instead of replaced. Here's what it covers and how to use it.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">
+    <div class="nav-mark">W</div>
+    Wendygo Studio
+  </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+  </div>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span>›</span>
+    <a href="/blog/">Blog</a>
+    <span>›</span>
+    <span>EU Right to Repair Law Explained</span>
+  </nav>
+
+  <div class="article-meta">
+    <span class="tag">ClaimForge</span>
+    <span class="article-date">July 17, 2026</span>
+  </div>
+
+  <h1>EU Right to Repair Law: What Every Consumer Needs to Know</h1>
+
+  <p class="article-intro">
+    Something broke. The manufacturer says it's out of warranty and you should just buy a new one. EU law now says that's not always their call to make — the Right to Repair Directive gives you enforceable rights to get products fixed.
+  </p>
+
+  <h2>What Is the EU Right to Repair?</h2>
+  <p>The Right to Repair refers to EU regulations that require manufacturers and sellers to support repair over replacement. The core idea: extending product lifespans benefits consumers, the environment, and competition in repair markets.</p>
+  <p>The <strong>EU Right to Repair Directive (Directive 2024/1799)</strong>, adopted in April 2024, is the centerpiece of this framework. It creates enforceable consumer rights around repair — not just voluntary manufacturer promises.</p>
+  <p>This is separate from the standard <a href="/blog/eu-warranty-rights-explained/">EU 2-year legal warranty</a>, which requires sellers to fix or replace defective products during the warranty period. The Right to Repair goes further: it imposes obligations on manufacturers <em>after</em> the warranty expires too.</p>
+
+  <h2>What Changed with the 2024 Directive?</h2>
+  <p>Before 2024, EU rights around repair were fragmented. Manufacturers had no legal obligation to maintain repair infrastructure beyond the warranty period, and many used software locks or spare-parts restrictions to funnel customers toward buying new.</p>
+  <p>The 2024 Directive introduced concrete, binding obligations:</p>
+
+  <p><strong>During the 2-year warranty period:</strong></p>
+  <ul>
+    <li>Sellers must offer repair as an alternative to replacement when repair is no more expensive or equally available.</li>
+  </ul>
+
+  <p><strong>After warranty expiry:</strong></p>
+  <ul>
+    <li>Producers of covered products must provide repair services for a fixed number of years — typically 5 to 10 years depending on product category.</li>
+    <li>Spare parts and repair tools must be available to independent repairers at fair, non-discriminatory prices.</li>
+    <li>Manufacturers cannot use software locks or contractual clauses to block independent repair.</li>
+    <li>Using refurbished or 3D-printed parts is explicitly allowed, provided safety standards are met.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p><strong>New: EU Repair Platform.</strong> A free online directory where consumers can find certified local repairers — available across all EU member states as part of the Directive's rollout.</p>
+  </div>
+
+  <h2>Which Products Are Covered?</h2>
+  <p>The Directive applies to product categories regulated under EU ecodesign rules. Covered products include:</p>
+  <ul>
+    <li>Smartphones and tablets</li>
+    <li>Laptops and computers</li>
+    <li>Televisions</li>
+    <li>Washing machines and washer-dryers</li>
+    <li>Dishwashers</li>
+    <li>Refrigerators and freezers</li>
+    <li>Vacuum cleaners (including robot vacuums)</li>
+    <li>Certain power tools and agricultural machinery</li>
+    <li>Welding equipment</li>
+    <li>Servers and storage products</li>
+  </ul>
+  <p>Not every product is covered. If yours isn't on the list, you may still have rights under the standard 2-year legal warranty if the defect appeared within that period.</p>
+
+  <h2>How to Exercise Your Right to Repair</h2>
+  <p>If your product breaks during the warranty period:</p>
+  <ol>
+    <li><strong>Contact the seller in writing</strong> — email creates a traceable paper trail. Don't just call.</li>
+    <li><strong>State that you want repair</strong> and cite EU Directive 2011/83/EU and 2024/1799 as your legal basis.</li>
+    <li><strong>If the seller pushes replacement instead</strong>, ask them in writing to explain why repair is not being offered.</li>
+    <li><strong>If repair is refused without valid reason</strong>, you have grounds to escalate to a consumer authority.</li>
+  </ol>
+  <p>If you're outside the warranty period but the manufacturer is still obligated under the 2024 Directive, contact them directly. Request repair service citing Directive 2024/1799, specify your product category, and ask for a written timeline and cost estimate.</p>
+  <p><a href="/claimforge/">ClaimForge</a> includes a seller-response analyzer that flags when manufacturers use illegal excuses to avoid repair, and generates formal complaint letters tailored to your country's national implementation of EU law.</p>
+
+  <h2>What If the Seller or Manufacturer Refuses?</h2>
+  <p>Refusals happen. Here's how to respond systematically:</p>
+  <ol>
+    <li><strong>Request the refusal in writing.</strong> A seller who refuses repair without citing a valid legal exception is creating evidence against themselves.</li>
+    <li><strong>Contact your national consumer authority.</strong> Every EU country has an enforcement body that investigates violations and can compel compliance.</li>
+    <li><strong>File a formal complaint.</strong> Our guide on <a href="/blog/how-to-file-consumer-complaint-eu/">how to file a consumer complaint in the EU</a> walks through national and EU-level escalation step by step.</li>
+  </ol>
+
+  <div class="cta-box">
+    <h2>Fight Back with ClaimForge</h2>
+    <p>Paste the seller's response and ClaimForge analyzes it for illegal excuses — then generates a formal letter citing the exact EU law that applies in your country. Works offline, no uploads, available in 6 languages.</p>
+    <a class="cta-btn" href="https://chromewebstore.google.com/detail/mlnjadkolgplpgbheklkdjcglojfakcg" target="_blank" rel="noopener">Install ClaimForge Free</a>
+  </div>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Does the EU right to repair mean repairs are free?</div>
+      <div class="faq-a">No. You generally pay for out-of-warranty repairs. What the law guarantees is <em>access</em> to repair — spare parts availability, authorized service, and no artificial blocks on independent repairers who can offer competitive prices.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I choose any repair shop I want?</div>
+      <div class="faq-a">Yes. Manufacturers cannot restrict you to their own service centers. Under the 2024 Directive, independent repairers must have access to spare parts and repair tools at fair prices — so your local shop has the same legal access as an authorized service center.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does this apply to products bought outside the EU?</div>
+      <div class="faq-a">It applies if you bought from an EU-based seller and the product is in a covered category. If you bought from a non-EU seller shipping internationally, your consumer rights may differ — check your national consumer authority for guidance.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What if the manufacturer says repair is "economically unviable"?</div>
+      <div class="faq-a">This is a common tactic but has legal limits. The Directive restricts the use of "economic unviability" as a blanket refusal. Ask for the refusal in writing and escalate to your national consumer authority — they can assess whether the refusal is legally justified.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is the Right to Repair Directive fully in force?</div>
+      <div class="faq-a">The Directive entered into force in July 2024. EU member states have until mid-2026 to fully transpose it into national law. Enforcement varies by country during this transition — check your national consumer authority's website for current status.</div>
+    </div>
+
+  </section>
+
+  <section class="related-section">
+    <h2>Related Guides</h2>
+    <div class="related-list">
+      <a class="related-link" href="/blog/eu-warranty-rights-explained/">
+        EU 2-Year Warranty Rights Explained
+        <span>What you're entitled to during the legal warranty period — before right to repair kicks in</span>
+      </a>
+      <a class="related-link" href="/blog/how-to-file-consumer-complaint-eu/">
+        How to File a Consumer Complaint in the EU
+        <span>Step-by-step process to escalate when a seller refuses your legal rights</span>
+      </a>
+      <a class="related-link" href="/blog/escalate-consumer-complaint-small-claims-court-eu/">
+        Escalating to Small Claims Court in the EU
+        <span>When informal complaints don't work, here's how to go further</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="footer-brand" href="/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </div>
+</footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
