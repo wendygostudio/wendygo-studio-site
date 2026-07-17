@@ -1038,12 +1038,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/"/>
   </url>
 </urlset>
