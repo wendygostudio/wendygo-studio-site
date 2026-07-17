@@ -81,44 +81,34 @@ function specimen(c, idx) {
   </article>`;
 }
 
-const fragment = `<div id="sf-hybrid-preview" class="sf-wrap sf-mode-hybrid">
+const fragment = `<div id="sf-light-hybrid-preview" class="sf-mode-hybrid">
   <style>
-    #sf-hybrid-preview{--sf-bg:var(--color-background-primary,#11161d);--sf-panel:var(--color-background-secondary,#1a2029);--sf-text:var(--color-text-primary,#f5f2eb);--sf-muted:var(--color-text-secondary,#aeb7c4);--sf-line:var(--color-border-secondary,#343d49);--sf-amber:#f0a638;color:var(--sf-text);font:14px/1.35 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--sf-bg);border:1px solid var(--sf-line);border-radius:18px;overflow:hidden;max-width:920px;margin:0 auto}
-    #sf-hybrid-preview *{box-sizing:border-box}
-    #sf-hybrid-preview .sf-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px 14px;border-bottom:1px solid var(--sf-line)}
-    #sf-hybrid-preview .sf-title{margin:0;font-size:18px;letter-spacing:-.02em}
-    #sf-hybrid-preview .sf-sub{margin:4px 0 0;color:var(--sf-muted);font-size:12px}
-    #sf-hybrid-preview .sf-controls{display:flex;gap:4px;padding:4px;background:var(--sf-panel);border:1px solid var(--sf-line);border-radius:11px;flex:0 0 auto}
-    #sf-hybrid-preview .btn{appearance:none;border:0;border-radius:8px;padding:8px 12px;color:var(--sf-muted);background:transparent;font:700 12px/1 inherit;cursor:pointer}
-    #sf-hybrid-preview .btn[aria-pressed="true"]{background:var(--sf-amber);color:#1b1408;box-shadow:0 2px 9px #0004}
-    #sf-hybrid-preview .sf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--sf-line)}
-    #sf-hybrid-preview .sf-specimen{min-width:0;background:var(--sf-bg);padding:12px 10px 13px}
-    #sf-hybrid-preview .sf-creature-stage{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:14px;background:radial-gradient(circle at 50% 80%,#344a3d 0 3%,transparent 35%),linear-gradient(#1b2631,#17211d 66%,#25342b);box-shadow:inset 0 0 0 1px #ffffff0e}
-    #sf-hybrid-preview .sf-creature-stage:before{content:"";position:absolute;inset:auto 12% 8% 12%;height:13%;background:radial-gradient(ellipse,#0b100dc7,transparent 67%);filter:blur(3px)}
-    #sf-hybrid-preview .sf-creature{position:absolute;inset:2%;width:96%;height:96%;overflow:visible;filter:drop-shadow(0 9px 8px #0007)}
-    #sf-hybrid-preview .sf-current{display:none}
-    #sf-hybrid-preview.sf-mode-current .sf-current{display:block}
-    #sf-hybrid-preview.sf-mode-current .sf-hybrid{display:none}
-    #sf-hybrid-preview .sf-hybrid .eyes{transform-box:view-box;transform-origin:100px 101px;transform:scale(1.075)}
-    #sf-hybrid-preview .sf-hybrid .sf-inner-life{animation:sf-breathe 2.8s ease-in-out infinite;transform-origin:100px 145px}
-    #sf-hybrid-preview .sf-hybrid .sf-inner-life circle{animation:sf-bubble 3.2s ease-in-out infinite alternate}
-    #sf-hybrid-preview .sf-name{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:9px 4px 0}
-    #sf-hybrid-preview .sf-name strong{font-size:14px}
-    #sf-hybrid-preview .sf-name span{color:var(--sf-muted);font-size:11px}
-    #sf-hybrid-preview .sf-note{display:flex;gap:8px;align-items:flex-start;padding:13px 18px;color:var(--sf-muted);font-size:12px;border-top:1px solid var(--sf-line)}
-    #sf-hybrid-preview .sf-note i{width:9px;height:9px;border-radius:50%;background:var(--sf-amber);box-shadow:0 0 12px #f0a638b8;margin-top:3px;flex:0 0 auto}
-    @keyframes sf-breathe{50%{transform:scale(.95);opacity:.86}}
+    #sf-light-hybrid-preview{color:var(--foreground);width:100%}
+    #sf-light-hybrid-preview *{box-sizing:border-box}
+    #sf-light-hybrid-preview .sf-controls{justify-content:center;margin-bottom:var(--space-4)}
+    #sf-light-hybrid-preview .sf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-3)}
+    #sf-light-hybrid-preview .sf-specimen{min-width:0}
+    #sf-light-hybrid-preview .sf-creature-stage{position:relative;aspect-ratio:1/1;overflow:hidden;background:radial-gradient(ellipse at 50% 82%,color-mix(in srgb,var(--muted) 72%,transparent) 0 10%,transparent 48%),linear-gradient(color-mix(in srgb,var(--background) 74%,var(--muted)),var(--background))}
+    #sf-light-hybrid-preview .sf-creature-stage:before{content:"";position:absolute;inset:auto 14% 8% 14%;height:11%;background:radial-gradient(ellipse,color-mix(in srgb,var(--foreground) 18%,transparent),transparent 68%);filter:blur(3px)}
+    #sf-light-hybrid-preview .sf-creature{position:absolute;inset:2%;width:96%;height:96%;overflow:visible;filter:drop-shadow(0 7px 7px color-mix(in srgb,var(--foreground) 18%,transparent))}
+    #sf-light-hybrid-preview .sf-current{display:none}
+    #sf-light-hybrid-preview.sf-mode-current .sf-current{display:block}
+    #sf-light-hybrid-preview.sf-mode-current .sf-hybrid{display:none}
+    #sf-light-hybrid-preview .sf-hybrid .eyes{transform-box:view-box;transform-origin:100px 101px;transform:scale(1.075)}
+    #sf-light-hybrid-preview .sf-hybrid .sf-inner-life{animation:sf-breathe 2.8s ease-in-out infinite;transform-origin:100px 145px}
+    #sf-light-hybrid-preview .sf-hybrid .sf-inner-life circle{animation:sf-bubble 3.2s ease-in-out infinite alternate}
+    #sf-light-hybrid-preview .sf-name{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-2);padding-top:var(--space-2)}
+    #sf-light-hybrid-preview .sf-name strong{font-weight:500}
+    #sf-light-hybrid-preview .sf-name span{color:var(--muted-foreground)}
+    @keyframes sf-breathe{50%{transform:scale(.96);opacity:.88}}
     @keyframes sf-bubble{to{transform:translateY(-4px)}}
-    @media(max-width:700px){#sf-hybrid-preview .sf-head{align-items:flex-start;flex-direction:column}#sf-hybrid-preview .sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#sf-hybrid-preview .sf-controls{align-self:stretch}#sf-hybrid-preview .btn{flex:1}}
+    @media(max-width:620px){#sf-light-hybrid-preview .sf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(prefers-reduced-motion:reduce){#sf-light-hybrid-preview .sf-hybrid .sf-inner-life,#sf-light-hybrid-preview .sf-hybrid .sf-inner-life circle{animation:none}}
   </style>
-  <div class="sf-head">
-    <div><h2 class="sf-title">Las criaturas actuales, con tratamiento híbrido</h2><p class="sf-sub">Misma silueta, especies y ADN procedural. Cambia el material, la mirada y el núcleo.</p></div>
-    <div class="sf-controls" aria-label="Comparar estilos"><button class="btn" type="button" data-mode="current" aria-pressed="false">Actual</button><button class="btn" type="button" data-mode="hybrid" aria-pressed="true">Híbrido</button></div>
-  </div>
+  <div class="viz-controls sf-controls" aria-label="Comparar estilos"><button class="btn" type="button" data-mode="current" aria-pressed="false">Actual</button><button class="btn btn-primary" type="button" data-mode="hybrid" aria-pressed="true">Gel luminoso</button></div>
   <div class="sf-grid">${creatures.map(specimen).join('')}</div>
-  <div class="sf-note"><i></i><span>La llama ya no está pintada sobre la barriga: queda detrás del gel como una ascua viva, menos literal y menos dominante.</span></div>
   <script>
-    (()=>{const root=document.getElementById('sf-hybrid-preview');if(!root)return;root.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{const mode=button.dataset.mode;root.classList.toggle('sf-mode-current',mode==='current');root.classList.toggle('sf-mode-hybrid',mode==='hybrid');root.querySelectorAll('[data-mode]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));}));})();
+    (()=>{const root=document.getElementById('sf-light-hybrid-preview');if(!root)return;root.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{const mode=button.dataset.mode;root.classList.toggle('sf-mode-current',mode==='current');root.classList.toggle('sf-mode-hybrid',mode==='hybrid');root.querySelectorAll('[data-mode]').forEach(item=>{const active=item===button;item.setAttribute('aria-pressed',String(active));item.classList.toggle('btn-primary',active);});}));})();
   </script>
 </div>`;
 

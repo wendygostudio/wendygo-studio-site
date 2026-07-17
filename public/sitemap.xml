@@ -1039,4 +1039,11 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
   </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/"/>
+  </url>
 </urlset>
