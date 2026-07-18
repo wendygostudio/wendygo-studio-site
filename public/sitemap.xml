@@ -1088,6 +1088,17 @@
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
   </url>
 
   <url>
@@ -1095,6 +1106,17 @@
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
   </url>
 
 </urlset>
