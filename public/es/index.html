@@ -59,6 +59,76 @@
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
     .nav-links a:hover { color: var(--text); }
 
+    /* ── Forge glow & embers (2026-07-17) ── */
+    .hero { position: relative; overflow: visible; }
+    .hero::before {
+      content: ''; position: absolute; left: 50%; bottom: -40px; transform: translateX(-50%);
+      width: min(560px, 80vw); height: 220px; pointer-events: none;
+      background: radial-gradient(ellipse at center bottom, rgba(232,163,61,.14), transparent 65%);
+    }
+    .embers { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .embers span {
+      position: absolute; bottom: 8%; width: 4px; height: 4px; border-radius: 50%;
+      background: var(--amber); opacity: 0;
+      animation: ember-rise 7s linear infinite;
+    }
+    .embers span:nth-child(1) { left: 16%; animation-delay: 0s;   animation-duration: 8s;  width: 3px; height: 3px; }
+    .embers span:nth-child(2) { left: 30%; animation-delay: 2.4s; animation-duration: 9.5s; }
+    .embers span:nth-child(3) { left: 47%; animation-delay: 1.1s; animation-duration: 7.5s; width: 5px; height: 5px; }
+    .embers span:nth-child(4) { left: 62%; animation-delay: 3.8s; animation-duration: 10s; width: 3px; height: 3px; }
+    .embers span:nth-child(5) { left: 76%; animation-delay: 0.7s; animation-duration: 8.5s; }
+    .embers span:nth-child(6) { left: 88%; animation-delay: 5.2s; animation-duration: 9s;  width: 3px; height: 3px; }
+    @keyframes ember-rise {
+      0%   { transform: translateY(0) translateX(0) scale(1);      opacity: 0; }
+      8%   { opacity: .55; }
+      55%  { opacity: .3; }
+      100% { transform: translateY(-420px) translateX(22px) scale(.4); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .embers span { animation: none; opacity: 0; }
+    }
+
+    .hero-term {
+      display: inline-block; font-family: var(--mono); font-size: 13px;
+      color: var(--muted); border: 1px solid var(--line); border-radius: 8px;
+      background: rgba(16,18,22,.6); padding: 8px 14px; margin-bottom: 34px;
+    }
+    .hero-term b { color: var(--good); font-weight: 600; }
+    .hero-term .prompt { color: var(--amber); }
+
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; }
+    .cta-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a); font-weight: 700; font-size: 14.5px;
+      padding: 12px 24px; border-radius: var(--r); text-decoration: none;
+      transition: transform .15s ease, filter .15s;
+    }
+    .cta-primary:hover { filter: brightness(1.07); transform: translateY(-1px); }
+    .cta-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--text); font-weight: 600; font-size: 14.5px;
+      padding: 12px 24px; border-radius: var(--r); text-decoration: none;
+      border: 1px solid var(--line); transition: border-color .15s, transform .15s ease;
+    }
+    .cta-ghost:hover { border-color: var(--faint); transform: translateY(-1px); }
+
+    .hero-stats {
+      display: flex; justify-content: center; gap: clamp(18px, 4vw, 44px); flex-wrap: wrap;
+      font-family: var(--mono); font-size: 12.5px; color: var(--faint);
+      border-top: 1px solid var(--line); margin-top: 8px; padding-top: 26px;
+    }
+    .hero-stats b { color: var(--amber); font-weight: 700; margin-right: 5px; }
+
+    .product-card { transition: border-color .2s, transform .2s ease, box-shadow .2s ease; }
+    .product-card:hover {
+      border-color: rgba(232,163,61,.45); transform: translateY(-3px);
+      box-shadow: 0 14px 34px -18px rgba(0,0,0,.65);
+    }
+
+    .priv-icon svg { display: block; }
+    .product-mark-img { width: 44px; height: 44px; border-radius: 11px; flex: none; display: block; }
+
+
     /* ── HERO ── */
     .hero {
       max-width: 780px; margin: 0 auto;
@@ -107,7 +177,7 @@
       padding: 28px; display: flex; flex-direction: column; gap: 18px;
       transition: border-color .2s;
     }
-    .product-card:hover { border-color: var(--faint); }
+    
     .product-head { display: flex; align-items: flex-start; gap: 14px; }
     .product-mark {
       width: 44px; height: 44px; border-radius: 11px; background: var(--amber);
@@ -117,6 +187,50 @@
     .product-name { font-size: 20px; font-weight: 750; letter-spacing: -.3px; }
     .product-tagline { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
     .product-desc { font-size: 14.5px; color: var(--muted); line-height: 1.6; }
+    /* ── Product mockups & expandable details (2026-07-17 redesign) ── */
+    .product-shot {
+      border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+      background: #16181d; font-size: 11px; user-select: none;
+    }
+    .shot-bar { display:flex; align-items:center; gap:5px; padding: 7px 10px; border-bottom: 1px solid var(--line); background: #1b1e24; }
+    .shot-dot { width:7px; height:7px; border-radius:50%; background: var(--line); }
+    .shot-title { margin-left: 4px; color: var(--muted); font-size: 10px; letter-spacing: .3px; }
+    .shot-body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .shot-input { background:#101216; border:1px solid var(--line); border-radius:6px; padding:6px 8px; color:var(--muted); font-family: ui-monospace, monospace; font-size: 10.5px; white-space: pre; overflow: hidden; }
+    .shot-output { background:#101216; border:1px solid rgba(232,163,61,.35); border-radius:6px; padding:6px 8px; color:var(--amber); font-family: ui-monospace, monospace; font-size: 10.5px; }
+    .shot-chips { display:flex; gap:5px; flex-wrap:wrap; }
+    .shot-chip { border:1px solid var(--line); border-radius:20px; padding:2.5px 8px; color:var(--muted); font-size:10px; }
+    .shot-chip.on { border-color: var(--amber); color: var(--amber); }
+    .shot-mono { font-family: ui-monospace, monospace; font-size: 10.5px; line-height: 1.75; color: var(--muted); white-space: pre; overflow: hidden; }
+    .shot-mono .tk { color: var(--amber); background: rgba(232,163,61,.12); border-radius: 3px; padding: 0 3px; }
+    .shot-canvas { position: relative; height: 74px; border-radius: 6px; background: linear-gradient(120deg, #2c3e50, #4b6584 55%, #786fa6); }
+    .shot-crop { position:absolute; inset: 9px 22px; border: 1.5px dashed var(--amber); border-radius: 3px; }
+    .shot-crop::after { content:'1280 × 720'; position:absolute; right:5px; bottom:3px; font-size:9px; color:var(--amber); }
+    .shot-drop { border: 1.5px dashed var(--line); border-radius: 8px; padding: 10px; text-align:center; color: var(--muted); font-size: 10.5px; }
+    .shot-arrow { text-align:center; color: var(--faint); font-size: 12px; line-height: 1; }
+    .shot-row { display:flex; align-items:center; gap:8px; }
+    .shot-timer { font-size: 19px; font-weight: 800; color: var(--text); letter-spacing: .5px; font-variant-numeric: tabular-nums; }
+    .shot-embers { color: var(--amber); font-size: 11px; font-weight: 700; }
+    .shot-stat { display:flex; align-items:center; gap:6px; font-size: 9.5px; color: var(--muted); }
+    .shot-stat .strack { flex:1; height:4px; border-radius:3px; background:#101216; overflow:hidden; }
+    .shot-stat .sfill { height:100%; border-radius:3px; background: var(--amber); }
+    .shot-steps { display:flex; align-items:center; gap:6px; }
+    .shot-step { width:18px; height:18px; border-radius:50%; border:1px solid var(--line); display:grid; place-items:center; color:var(--muted); font-size:10px; flex:none; }
+    .shot-step.on { background: var(--amber); border-color: var(--amber); color: var(--on-a); font-weight:700; }
+    .shot-step-line { flex:1; height:1px; background: var(--line); }
+    .shot-badge { display:inline-block; border:1px solid rgba(111,191,138,.5); color:#6fbf8a; border-radius:20px; padding:2.5px 8px; font-size:9.5px; }
+
+    .product-more summary {
+      cursor: pointer; list-style: none; font-size: 13px; font-weight: 600;
+      color: var(--amber); display: flex; align-items: center; gap: 7px;
+      padding: 2px 0;
+    }
+    .product-more summary::-webkit-details-marker { display: none; }
+    .product-more summary::before { content: '▸'; font-size: 11px; transition: transform .18s ease; }
+    .product-more[open] summary::before { transform: rotate(90deg); }
+    .product-more summary:hover { color: var(--amber2, var(--amber)); }
+    .product-more .feature-list { margin-top: 12px; }
+
 
     .feature-list { display: flex; flex-direction: column; gap: 7px; }
     .feature-list li {
@@ -229,14 +343,27 @@
   </nav>
 
   <section class="hero">
+    <div class="embers" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     <div class="eyebrow">Wendygo Studio</div>
-    <h1>Herramientas que<br><em>se quedan locales.</em></h1>
-    <p class="hero-sub">Seis extensiones para Chrome y Edge que transforman texto, redimensionan imágenes, convierten archivos, sanitizan configuraciones de infraestructura, defienden tus derechos como consumidor UE — y te mantienen en foco con una mascota pomodoro. Todo en tu navegador. Sin subidas, sin servidores, sin datos recopilados.</p>
+    <h1>Extensiones de Chrome <em>gratis y privadas</em></h1>
+    <p class="hero-sub">Seis extensiones para Chrome y Edge que transforman texto, redimensionan imágenes, convierten archivos, sanitizan configs de infraestructura, defienden tus derechos de consumidor en la UE — y te mantienen concentrado con una mascota Pomodoro.</p>
+    <div class="hero-term"><span class="prompt">$</span> ¿a dónde van mis datos? <b>→ a ningún sitio. nunca salen de tu navegador.</b></div>
+    <div class="hero-ctas">
+      <a class="cta-primary" href="#productos">Descubre las seis Forges ↓</a>
+      <a class="cta-ghost" href="/es/blog/">Lee el blog</a>
+    </div>
     <div class="hero-badges">
       <span class="badge"><span class="dot"></span>Permisos mínimos</span>
       <span class="badge"><span class="dot"></span>Procesamiento 100% local</span>
-      <span class="badge"><span class="dot"></span>Sin recopilación de datos</span>
+      <span class="badge"><span class="dot"></span>Cero datos recopilados</span>
       <span class="badge"><span class="dot"></span>Chrome y Edge</span>
+    </div>
+    <div class="hero-stats">
+      <span><b>6</b>extensiones</span>
+      <span><b>0</b>servidores</span>
+      <span><b>0</b>rastreadores</span>
+      <span><b>2</b>IAs en tu dispositivo</span>
+      <span><b>6</b>idiomas</span>
     </div>
   </section>
 
@@ -252,33 +379,50 @@
         <!-- TextForge -->
         <div class="product-card">
           <div class="product-head">
-            <div class="product-mark">T</div>
+            <img class="product-mark-img" src="/images/icons/textforge.png" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="product-name">TextForge</div>
               <div class="product-tagline">pega · transforma · copia</div>
             </div>
           </div>
-          <p class="product-desc">Kit de texto todo en uno con 58 funciones más recetas encadenables y un compositor IA local. Describe lo que quieres — "elimina duplicados, ordena y slugifica" — y Gemini Nano construye el pipeline, 100% en tu equipo.</p>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">TextForge</span></div>
+            <div class="shot-body">
+              <div class="shot-input">  Juan,, GARCÍA   
+  ana  lópez ;;
+  Juan,, GARCÍA   </div>
+              <div class="shot-chips"><span class="shot-chip on">Trim</span><span class="shot-chip on">Deduplicar</span><span class="shot-chip on">Slugify</span><span class="shot-chip">＋ 55 más</span></div>
+              <div class="shot-output">juan-garcia
+ana-lopez</div>
+            </div>
+          </div>
+          <p class="product-desc">58 funciones de texto, recetas encadenables y un compositor con IA local: describe la transformación con tus palabras y Gemini Nano construye el pipeline — 100% en tu dispositivo.</p>
           <ul class="feature-list">
-            <li>Limpiar: espacios extra, saltos de línea, trim, quitar HTML, eliminar acentos</li>
-            <li>Mayúsculas: MAYÚSCULAS, minúsculas, Capitalizadas, Oración</li>
-            <li>Ordenar: A→Z, Z→A, numérico (entiende KB/MB/GB/TB), eliminar duplicados</li>
-            <li>Extraer: correos, URLs, IPs (v4 y v6), números</li>
-            <li>Desarrollo: Base64, URL, HTML, JSON, escapar regex, slugify, hex</li>
-            <li>Generar: SHA-256, UUID, contraseñas seguras, Unix ↔ fecha</li>
-            <li>Markdown: viñetas, listas numeradas, bloque de código, envolver en 80 cols</li>
+            <li>Limpia, ordena, deduplica y cambia mayúsculas en un clic</li>
+            <li>Extrae emails, URLs, IPs; Base64, JSON, UUID, SHA-256</li>
             <li>✨ Recetas: encadena transformaciones en pipelines reutilizables</li>
-            <li>✨ Compositor IA: lenguaje natural → receta vía Gemini Nano local</li>
-            <li>Forge Magic: pega JSON/Base64/hex y recibe sugerencias de 1 clic</li>
-            <li class="pro-feat">Búsqueda y reemplazo con regex + filtro grep con regex (Pro)</li>
-            <li class="pro-feat">Recetas guardadas y composiciones IA ilimitadas (Pro)</li>
-            <li class="pro-feat">Generador de tabla Markdown desde columnas (Pro)</li>
+            <li>✨ Compositor IA: lenguaje natural → receta, en tu dispositivo</li>
           </ul>
+          <details class="product-more">
+            <summary>Todo lo que incluye</summary>
+            <ul class="feature-list">
+              <li>Limpieza: espacios extra, saltos de línea, trim, quitar HTML, quitar acentos</li>
+              <li>Mayúsculas: MAYÚSCULAS, minúsculas, Tipo Título, Tipo frase</li>
+              <li>Ordenar: A→Z, Z→A, numérico (entiende KB/MB/GB/TB), deduplicar</li>
+              <li>Dev: Base64, URL, HTML, JSON, escape regex, slugify, hex</li>
+              <li>Generar: SHA-256, UUID, contraseñas seguras, Unix ↔ fecha</li>
+              <li>Markdown: viñetas, listas numeradas, bloque de código, ajuste a 80 col</li>
+              <li>Forge Magic: pega JSON/Base64/hex y recibe sugerencias con 1 clic</li>
+              <li class="pro-feat">Buscar y reemplazar con regex + filtro grep regex (Pro)</li>
+              <li class="pro-feat">Recetas guardadas y composiciones IA ilimitadas (Pro)</li>
+              <li class="pro-feat">Generador de tablas Markdown desde columnas (Pro)</li>
+            </ul>
+          </details>
           <div class="product-footer">
             <div class="price-row">
               <span class="price-free">Gratis</span>
-              <span class="price-pro">€3.99<small style="font-size:12px;font-weight:400">/mes</small></span>
-              <span class="price-once">· €24.99/año · €59.99 lifetime</span>
+              <span class="price-pro">3,99 €<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">· 24,99 €/año · 59,99 € de por vida</span>
             </div>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
               ↗ Chrome Web Store
@@ -289,32 +433,45 @@
         <!-- FrameForge -->
         <div class="product-card">
           <div class="product-head">
-            <div class="product-mark">▢</div>
+            <img class="product-mark-img" src="/images/icons/frameforge.png" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="product-name">FrameForge</div>
               <div class="product-tagline">redimensiona · ajusta · exporta</div>
             </div>
           </div>
-          <p class="product-desc">Un redimensionador de imágenes y creador de miniaturas con dos IAs locales: eliminación de fondos y ampliación 2×/4× — sin subidas, sin créditos, sin cuentas. Recorta al tamaño exacto de la plataforma y exporta, todo procesado en tu navegador.</p>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">FrameForge</span></div>
+            <div class="shot-body">
+              <div class="shot-canvas"><div class="shot-crop"></div></div>
+              <div class="shot-chips"><span class="shot-chip on">YouTube</span><span class="shot-chip">Instagram</span><span class="shot-chip">Twitch</span><span class="shot-chip">Cabecera X</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Redimensionador de imágenes y creador de miniaturas con dos IAs locales: eliminación de fondo y escalado 2×/4×. Sin subidas, sin créditos, sin cuentas.</p>
           <ul class="feature-list">
-            <li>🪄 Eliminación de fondos con IA — U²-Net ejecutándose localmente, ilimitado</li>
-            <li>🔍 Ampliación IA 2×/4× — ESRGAN en tu equipo</li>
-            <li>Miniaturas de YouTube, Shorts, Reels, Instagram, Twitch, encabezado X, personalizado</li>
-            <li>Relleno / Ajuste / Estiramiento con zoom y arrastrar para reposicionar</li>
-            <li>12 efectos: gradiente, viñeta, barras de cine, duotono, vintage…</li>
-            <li>JPEG / PNG / WebP con calidad ajustable y tamaño de archivo en vivo</li>
-            <li>Copiar al portapapeles, metadatos EXIF eliminados al exportar</li>
-            <li class="pro-feat">8 efectos adicionales: cálido, frío, dramático, vintage, resplandor... (Pro)</li>
-            <li class="pro-feat">Capas de texto y superposiciones de logo/imagen (Pro)</li>
-            <li class="pro-feat">Controles de brillo, contraste y saturación (Pro)</li>
-            <li class="pro-feat">Procesamiento por lotes y exportación de ZIP de múltiples tamaños (Pro)</li>
-            <li class="pro-feat">Compresión de tamaño objetivo — ej. máx. 2 MB (Pro)</li>
+            <li>🪄 Eliminación de fondo con IA — ilimitada, en tu dispositivo</li>
+            <li>🔍 Escalado IA 2×/4× — ESRGAN, en local</li>
+            <li>Presets para YouTube, Shorts, Instagram, Twitch, X y más</li>
+            <li>Exporta JPEG / PNG / WebP, EXIF eliminado</li>
           </ul>
+          <details class="product-more">
+            <summary>Todo lo que incluye</summary>
+            <ul class="feature-list">
+              <li>Rellenar / Ajustar / Estirar con zoom y arrastre para reposicionar</li>
+              <li>12 efectos: degradado, viñeta, barras de cine, duotono, vintage…</li>
+              <li>Calidad ajustable con vista previa del tamaño de archivo</li>
+              <li>Copiar al portapapeles, metadatos EXIF eliminados al exportar</li>
+              <li class="pro-feat">8 efectos extra: cálido, frío, dramático, brillo… (Pro)</li>
+              <li class="pro-feat">Capas de texto y superposición de logos/imágenes (Pro)</li>
+              <li class="pro-feat">Controles de brillo, contraste y saturación (Pro)</li>
+              <li class="pro-feat">Procesamiento por lotes y export ZIP multi-tamaño (Pro)</li>
+              <li class="pro-feat">Compresión a tamaño objetivo — p. ej. máx 2 MB (Pro)</li>
+            </ul>
+          </details>
           <div class="product-footer">
             <div class="price-row">
               <span class="price-free">Gratis</span>
-              <span class="price-pro">€4.99<small style="font-size:12px;font-weight:400">/mes</small></span>
-              <span class="price-once">· €29.99/año · €59.99 lifetime</span>
+              <span class="price-pro">4,99 €<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">· 29,99 €/año · 59,99 € de por vida</span>
             </div>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
               ↗ Chrome Web Store
@@ -325,31 +482,45 @@
         <!-- ScrubForge -->
         <div class="product-card">
           <div class="product-head">
-            <div class="product-mark">S</div>
+            <img class="product-mark-img" src="/images/icons/scrubforge.png" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="product-name">ScrubForge</div>
               <div class="product-tagline">sanitiza · comparte · pregunta</div>
             </div>
           </div>
-          <p class="product-desc">Un sanitizador de configuración para administradores de sistemas, ingenieros de red y consultores MSP. Pega tu configuración de Cisco, FortiGate, MikroTik o Palo Alto — ScrubForge detecta y reemplaza datos sensibles con tokens consistentes, luego pregunta a la IA sin exponer tu infraestructura.</p>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">ScrubForge</span></div>
+            <div class="shot-body">
+              <div class="shot-mono">crypto isakmp key <span class="tk">[PSK_1]</span> addr 203.0.113.5
+username admin password 7 <span class="tk">[ENC_PASS_1]</span>
+snmp-server community <span class="tk">[SNMP_RO_1]</span> RO</div>
+              <div class="shot-chips"><span class="shot-chip on">✓ 3 secretos sanitizados</span><span class="shot-chip">Preguntar a IA</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Sanitizador de configs para sysadmins e ingenieros de red. Pega tu config, los datos sensibles se convierten en tokens consistentes — y pregunta a la IA sin exponer tu infraestructura.</p>
           <ul class="feature-list">
-            <li>120 patrones en 5 categorías: red, secretos, PII, infraestructura, personalizado</li>
-            <li>12 perfiles de proveedor: Cisco, FortiGate, MikroTik, Juniper, Palo Alto, Dell…</li>
-            <li>Los tokens consistentes preservan la topología — mismo IP → mismo token</li>
-            <li>BYOK — usa tu propia clave con Claude, GPT-4o, Gemini, Groq o Mistral</li>
-            <li>Tokens conscientes del formato: SHA-512 permanece SHA-512</li>
-            <li class="pro-feat">Chat de IA integrado con conversaciones de múltiples turnos (Pro)</li>
-            <li>🔍 Revisar antes de sanear: clic en cualquier detección para excluirla</li>
-            <li>Perfiles de contexto: auditoría de firewall, revisión de logs, infra genérica</li>
-            <li class="pro-feat">Diccionario personalizado con importación/exportación (Pro)</li>
-            <li class="pro-feat">Deep scan y modo auditoría (Pro)</li>
-            <li class="pro-feat">Procesamiento por lotes y ofuscación de preguntas (Pro)</li>
+            <li>120 patrones: secretos, PII, red, infraestructura, personalizados</li>
+            <li>12 perfiles de fabricante: Cisco, FortiGate, MikroTik, Palo Alto…</li>
+            <li>Tokens consistentes que preservan la topología — misma IP → mismo token</li>
+            <li>BYOK — Claude, GPT-4o, Gemini, Groq o Mistral</li>
           </ul>
+          <details class="product-more">
+            <summary>Todo lo que incluye</summary>
+            <ul class="feature-list">
+              <li>Tokens conscientes del formato: un SHA-512 sigue siendo SHA-512</li>
+              <li>🔍 Revisión previa: haz clic en cualquier detección para excluirla</li>
+              <li>Perfiles de contexto: auditoría de firewall, revisión de logs, infra genérica</li>
+              <li class="pro-feat">Chat IA integrado con conversaciones multi-turno (Pro)</li>
+              <li class="pro-feat">Diccionario personalizado con import/export (Pro)</li>
+              <li class="pro-feat">Escaneo profundo y modo auditoría (Pro)</li>
+              <li class="pro-feat">Procesamiento por lotes y ofuscación de preguntas (Pro)</li>
+            </ul>
+          </details>
           <div class="product-footer">
             <div class="price-row">
               <span class="price-free">Gratis</span>
-              <span class="price-pro">€5.99<small style="font-size:12px;font-weight:400">/mes</small></span>
-              <span class="price-once">· €34.99/año · €69.99 lifetime</span>
+              <span class="price-pro">5,99 €<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">· 34,99 €/año · 69,99 € de por vida</span>
             </div>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">
               ↗ Chrome Web Store
@@ -360,34 +531,45 @@
         <!-- ClaimForge -->
         <div class="product-card">
           <div class="product-head">
-            <div class="product-mark">C</div>
+            <img class="product-mark-img" src="/images/icons/claimforge.png" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="product-name">ClaimForge</div>
               <div class="product-tagline">defiende · verifica · reclama</div>
             </div>
           </div>
-          <p class="product-desc">Un asistente de derechos del consumidor UE para reclamaciones de garantía, devoluciones de productos y solicitudes de derecho a reparación. ClaimForge te ayuda a entender tus derechos bajo la ley de protección del consumidor de la UE y te guía a través del proceso de reclamación.</p>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">ClaimForge</span></div>
+            <div class="shot-body">
+              <div class="shot-steps"><span class="shot-step on">1</span><span class="shot-step-line"></span><span class="shot-step on">2</span><span class="shot-step-line"></span><span class="shot-step">3</span></div>
+              <div class="shot-input">El portátil dejó de funcionar a los 14 meses.
+El vendedor dice que la garantía es "solo 1 año"…</div>
+              <div class="shot-row"><span class="shot-badge">✓ Aplica la garantía legal de la UE</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Asistente de derechos del consumidor de la UE para garantías, devoluciones y derecho a reparar. Entiende tus derechos, genera la carta, controla el plazo.</p>
           <ul class="feature-list">
-            <li>Derechos del consumidor bajo la ley de la UE: garantías, devoluciones, reparaciones, reembolsos</li>
-            <li>Derecho a reparación: electrodomésticos, electrónica, vehículos cubiertos por directivas de la UE</li>
-            <li>Plantillas de reclamación de garantía y generadores de cartas</li>
-            <li>Búsqueda de contactos del vendedor y fabricante por producto</li>
-            <li>Evaluación de defectos de producto y guía de documentación de daños</li>
-            <li>Seguimiento de cronograma de devoluciones y reembolsos</li>
-            <li>🔎 Analizador de respuestas del vendedor: pega la respuesta de la tienda, detecta excusas ilegales y recibe el contraargumento legal</li>
-            <li>✨ Redacción de cartas con IA local — describe tu caso y Gemini Nano la escribe</li>
-            <li class="pro-feat">Escáner de políticas pre-compra (Pro)</li>
-            <li class="pro-feat">Seguimiento del plazo de respuesta con guía de escalado (Pro)</li>
-            <li class="pro-feat">Exportación PDF/CSV de reclamaciones y compras (Pro)</li>
+            <li>Garantías, devoluciones, reparaciones y reembolsos según la ley de la UE</li>
+            <li>🔎 Analizador de respuestas del vendedor: detecta excusas ilegales</li>
+            <li>✨ Redacción de cartas con IA local vía Gemini Nano</li>
+            <li>Plantillas de reclamación y generadores de cartas</li>
           </ul>
+          <details class="product-more">
+            <summary>Todo lo que incluye</summary>
+            <ul class="feature-list">
+              <li>Derecho a reparar: electrodomésticos, electrónica y vehículos bajo directivas UE</li>
+              <li>Búsqueda de contacto de vendedor y fabricante por producto</li>
+              <li>Guía de evaluación de defectos y documentación de daños</li>
+              <li>Seguimiento de plazos de devolución y reembolso</li>
+              <li class="pro-feat">Escáner de políticas antes de comprar (Pro)</li>
+              <li class="pro-feat">Seguimiento de plazos de respuesta con guía de escalado (Pro)</li>
+              <li class="pro-feat">Export PDF/CSV de reclamaciones y compras (Pro)</li>
+            </ul>
+          </details>
           <div class="product-footer">
             <div class="price-row">
               <span class="price-free">Gratis</span>
-            </div>
-            <div class="price-row">
-              <span style="font-size: 13px; color: var(--muted);">Pro</span>
-              <span class="price-pro">€3.99<small style="font-size:12px;font-weight:400">/mes</small></span>
-              <span class="price-once">· €24.99/año · €49.99 lifetime</span>
+              <span class="price-pro">3,99 €<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">· 24,99 €/año · 49,99 € de por vida</span>
             </div>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/mlnjadkolgplpgbheklkdjcglojfakcg" target="_blank" rel="noopener">
               ↗ Chrome Web Store
@@ -398,29 +580,44 @@
         <!-- ConvertForge -->
         <div class="product-card">
           <div class="product-head">
-            <div class="product-mark">⟲</div>
+            <img class="product-mark-img" src="/images/icons/convertforge.png" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="product-name">ConvertForge</div>
               <div class="product-tagline">suelta · convierte · listo</div>
             </div>
           </div>
-          <p class="product-desc">Un conversor de archivos local para imágenes, documentos, audio y datos. Suelta cualquier archivo y ConvertForge lo enruta al conversor correcto — OCR incluido. Cada conversión se ejecuta en tu equipo: sin subidas, sin cuentas, sin esperas.</p>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">ConvertForge</span></div>
+            <div class="shot-body">
+              <div class="shot-drop">📄 foto.heic</div>
+              <div class="shot-arrow">↓</div>
+              <div class="shot-chips"><span class="shot-chip on">JPG</span><span class="shot-chip">PNG</span><span class="shot-chip">WebP</span><span class="shot-chip">PDF</span><span class="shot-chip">MP3</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Conversor de archivos local para imágenes, documentos, audio y datos. Suelta cualquier archivo y lo dirige al conversor correcto — todo se ejecuta en tu dispositivo.</p>
           <ul class="feature-list">
-            <li>Imágenes: HEIC, PNG, JPG, WebP, GIF, BMP, ICO, AVIF, SVG → PNG/JPG/WebP/ICO</li>
-            <li>Audio: MP3, WAV, OGG, FLAC, M4A — o extrae el audio de MP4/WebM</li>
-            <li>Documentos: imágenes ↔ PDF, PDF → texto, Markdown ↔ HTML</li>
-            <li>Datos: JSON, JSONL, CSV, YAML, XML, XLSX, Base64</li>
-            <li>Router universal de arrastrar y soltar: suelta cualquier cosa y funciona</li>
-            <li class="pro-feat">🔍 OCR local — PDF escaneado → texto buscable (Pro)</li>
-            <li class="pro-feat">Conversión por lotes ilimitada, carpetas enteras (Pro)</li>
-            <li class="pro-feat">Generador de pack de favicons — 6 archivos de una imagen (Pro)</li>
-            <li class="pro-feat">Interceptor de descargas: convierte .webp/.avif a JPG (Pro)</li>
+            <li>Imágenes: HEIC, PNG, JPG, WebP, AVIF, SVG y más</li>
+            <li>Audio: MP3, WAV, FLAC — o extrae el audio de un vídeo</li>
+            <li>Datos: JSON, CSV, YAML, XML, XLSX, Base64</li>
+            <li>Router universal de arrastrar y soltar: suelta lo que sea</li>
           </ul>
+          <details class="product-more">
+            <summary>Todo lo que incluye</summary>
+            <ul class="feature-list">
+              <li>Imágenes: HEIC, PNG, JPG, WebP, GIF, BMP, ICO, AVIF, SVG → PNG/JPG/WebP/ICO</li>
+              <li>Audio: MP3, WAV, OGG, FLAC, M4A — o extrae audio de MP4/WebM</li>
+              <li>Documentos: imágenes ↔ PDF, PDF → texto, Markdown ↔ HTML</li>
+              <li class="pro-feat">🔍 OCR local — PDF escaneado → texto buscable (Pro)</li>
+              <li class="pro-feat">Conversión por lotes ilimitada, carpetas enteras (Pro)</li>
+              <li class="pro-feat">Generador de pack de favicons — 6 archivos de una imagen (Pro)</li>
+              <li class="pro-feat">Interceptor de descargas: auto-convierte .webp/.avif a JPG (Pro)</li>
+            </ul>
+          </details>
           <div class="product-footer">
             <div class="price-row">
               <span class="price-free">Gratis</span>
-              <span class="price-pro">€4.99<small style="font-size:12px;font-weight:400">/mes</small></span>
-              <span class="price-once">· €29.99/año · €69.99 lifetime</span>
+              <span class="price-pro">4,99 €<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">· 29,99 €/año · 69,99 € de por vida</span>
             </div>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/mjmamnnhophdhccknmgnppcdkojkpagj" target="_blank" rel="noopener">
               ↗ Chrome Web Store
@@ -431,31 +628,55 @@
         <!-- SlimeForge -->
         <div class="product-card">
           <div class="product-head">
-            <div class="product-mark">🔥</div>
+            <img class="product-mark-img" src="/images/icons/slimeforge.png" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="product-name">SlimeForge</div>
-              <div class="product-tagline">enfoca · eclosiona · crea vínculo</div>
+              <div class="product-tagline">enfócate · eclosiona · vincula</div>
             </div>
           </div>
-          <p class="product-desc">Un temporizador pomodoro con una mascota virtual que crece con tu trabajo. Completa sesiones de foco para ganar Brasas, eclosiona y cría una criatura slime que pasea por tus páginas web — y te hace volver a concentrarte.</p>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">SlimeForge</span></div>
+            <div class="shot-body">
+              <div class="shot-row">
+                <svg viewBox="18 6 178 168" width="52" height="48" aria-hidden="true" style="flex:none"><path d="M152,138 Q186,128 180,96 Q177,82 165,81" fill="none" stroke="#6b4a16" stroke-width="13" stroke-linecap="round"/><path d="M152,138 Q186,128 180,96 Q177,82 165,81" fill="none" stroke="#f0b46a" stroke-width="8.5" stroke-linecap="round"/><path d="M60,72 Q48,34 52,30 Q57,26 92,54 Q80,68 60,72 Z" fill="#f7cd8e" stroke="#6b4a16" stroke-width="5" stroke-linejoin="round"/><path d="M140,72 Q152,34 148,30 Q143,26 108,54 Q120,68 140,72 Z" fill="#f0b46a" stroke="#6b4a16" stroke-width="5" stroke-linejoin="round"/><path d="M138,62 Q145,42 142,38 Q128,46 118,56 Z" fill="#f0b4ac"/><path d="M100,58 C140,58 158,90 156,122 C155,144 148,156 134,160 Q128,168 116,162 Q108,170 94,163 Q82,170 72,161 Q56,158 48,142 C42,132 42,120 44,110 C48,80 66,58 100,58 Z" fill="#f0b46a" stroke="#6b4a16" stroke-width="5" stroke-linejoin="round"/><circle cx="82" cy="109" r="10" fill="#33302b"/><circle cx="118" cy="109" r="10" fill="#33302b"/><circle cx="85.2" cy="106" r="3.2" fill="#fff"/><circle cx="121.2" cy="106" r="3.2" fill="#fff"/><path d="M94.5,124 Q97.2,127.6 100,124 Q102.8,127.6 105.5,124" fill="none" stroke="#6b4a16" stroke-width="3" stroke-linecap="round"/><path d="M50,114 L36,110 M50,121 L37,124 M150,114 L164,110 M150,121 L163,124" stroke="#6b4a16" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="64" cy="122" rx="6.5" ry="4" fill="#f0a8a0" opacity="0.9"/><ellipse cx="136" cy="122" rx="6.5" ry="4" fill="#f0a8a0" opacity="0.9"/></svg>
+                <div style="flex:1">
+                  <div class="shot-timer">25:00</div>
+                  <div class="shot-embers">🔥 142 Brasas · racha ×5</div>
+                </div>
+              </div>
+              <div class="shot-stat"><span>Vínculo</span><span class="strack"><span class="sfill" style="width:72%"></span></span></div>
+              <div class="shot-stat"><span>Ánimo</span><span class="strack"><span class="sfill" style="width:85%"></span></span></div>
+            </div>
+          </div>
+          <p class="product-desc">Un temporizador Pomodoro con una mascota virtual que crías de verdad: aliméntala, edúcala, vístela, cultiva un huerto con ella. Tu criatura crece con cada sesión de foco — y pasea por tus páginas web mientras trabajas.</p>
           <ul class="feature-list">
-            <li>Pomodoro completo: sesiones de 15/25/45/60 min, descansos, stats semanales, racha con bonus</li>
-            <li>Tu primer huevo eclosiona con tu primera sesión de foco completada</li>
-            <li>16 especies animal-slime en 4 rarezas — cada huevo es una sorpresa</li>
-            <li>Sistema de cuidados: alimenta, limpia, juega, enseña — tu mascota te recuerda</li>
-            <li>Charla de mascota vía Gemini Nano, 100% en tu dispositivo, en 6 idiomas</li>
-            <li>Misiones diarias, minijuegos, taller de crafteo, ciclo día/noche</li>
-            <li>Visita los slimes de tus amigos con códigos — química, memorias, BFFs</li>
-            <li>Ético por diseño: el dinero real jamás compra azar</li>
-            <li class="pro-feat">Modo manada: hasta 3 criaturas interactuando en pantalla (Pro)</li>
-            <li class="pro-feat">La Forja: diseña tu propia criatura, 3/mes (Pro)</li>
-            <li class="pro-feat">Cosméticos, ×1.5 Brasas por sesión de foco, Reserva de 25 (Pro)</li>
+            <li>Pomodoro completo: 15/25/45/60 min, descansos, rachas, informe semanal</li>
+            <li>Cuidado real: hambre, higiene, ánimo, vínculo y educación</li>
+            <li>✨ Planificación de objetivos con IA local — escribe tu meta, recibe el plan</li>
+            <li>16 especies, jornada diaria con misiones y expediciones</li>
           </ul>
+          <details class="product-more">
+            <summary>Todo lo que incluye</summary>
+            <ul class="feature-list">
+              <li>Tu primer huevo eclosiona con tu primera sesión de foco completada</li>
+              <li>Proyectos y rituales de foco — agrupa sesiones por lo que estés trabajando</li>
+              <li>Escudo de foco: bloquea sitios que distraen durante las sesiones</li>
+              <li>Huerto, vestidor, bestiario, recuerdos y taller de crafteo</li>
+              <li>Minijuegos para los descansos: pesca y persecución de ovillo</li>
+              <li>Visita a los slimes de tus amigos con códigos — química, mejores amigos</li>
+              <li>Charla con tu mascota vía Gemini Nano, 100% en tu dispositivo, en 6 idiomas</li>
+              <li>Modo tranquilo, no molestar, tema claro/oscuro, ventana emergente</li>
+              <li>Ético por diseño: el dinero real nunca compra azar</li>
+              <li class="pro-feat">Modo manada: hasta 3 criaturas interactuando en pantalla (Pro)</li>
+              <li class="pro-feat">La Forja: diseña tu propia criatura, 3/mes (Pro)</li>
+              <li class="pro-feat">Cosméticos, ×1,5 Brasas por sesión, Reserva de 25 (Pro)</li>
+            </ul>
+          </details>
           <div class="product-footer">
             <div class="price-row">
               <span class="price-free">Gratis</span>
-              <span class="price-pro">€1.99<small style="font-size:12px;font-weight:400">/mes</small></span>
-              <span class="price-once">· €9.99/año · €19.99 lifetime</span>
+              <span class="price-pro">1,99 €<small style="font-size:12px;font-weight:400">/mes</small></span>
+              <span class="price-once">· 9,99 €/año · 19,99 € de por vida</span>
             </div>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
               ↗ Chrome Web Store
@@ -504,35 +725,35 @@
       <p class="section-sub">Todas nuestras extensiones están construidas alrededor de una única restricción: nada sale de tu navegador.</p>
       <div class="privacy-grid">
         <div class="priv-item">
-          <div class="priv-icon">🔒</div>
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4" fill="var(--amber)" stroke="none"/></svg></div>
           <div>
             <div class="priv-label">Permisos mínimos</div>
             <div class="priv-desc">Cada extensión solicita solo lo necesario para funcionar. La validación de pago es un permiso opcional, pedido solo al pulsar Activar.</div>
           </div>
         </div>
         <div class="priv-item">
-          <div class="priv-icon">📵</div>
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="6" rx="1.6"/><rect x="3.5" y="13.5" width="17" height="6" rx="1.6"/><circle cx="7" cy="7.5" r=".9" fill="var(--amber)" stroke="none"/><circle cx="7" cy="16.5" r=".9" fill="var(--amber)" stroke="none"/><path d="M3 3l18 18"/></svg></div>
           <div>
             <div class="priv-label">Sin servidor</div>
             <div class="priv-desc">Todas las transformaciones y el procesamiento de imágenes se ejecutan completamente en tu pestaña del navegador. No hay backend.</div>
           </div>
         </div>
         <div class="priv-item">
-          <div class="priv-icon">🗑</div>
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6"/><path d="M4.5 12v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"/><path d="M16 16l5 5m0-5l-5 5"/></svg></div>
           <div>
             <div class="priv-label">Sin recopilación de datos</div>
             <div class="priv-desc">No recopilamos, almacenamos ni transmitimos datos personales ni análisis de uso.</div>
           </div>
         </div>
         <div class="priv-item">
-          <div class="priv-icon">🖼</div>
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.2"/><circle cx="9" cy="9.5" r="1.6"/><path d="M4.5 17l4.5-4.5 3 3 4-4 3.5 3.5"/></svg></div>
           <div>
             <div class="priv-label">Las imágenes nunca se suben</div>
             <div class="priv-desc">FrameForge procesa imágenes localmente. Tus fotos nunca dejan tu máquina.</div>
           </div>
         </div>
         <div class="priv-item">
-          <div class="priv-icon">🔑</div>
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="14.5" r="4"/><path d="M11 11.5L20 3m-4 1.5l2.5 2.5M13.5 6l2 2"/></svg></div>
           <div>
             <div class="priv-label">BYOK — tu clave, tus datos</div>
             <div class="priv-desc">ScrubForge utiliza tu propia clave de API de IA. Nunca vemos, proxy ni almacenamos tus consultas.</div>
