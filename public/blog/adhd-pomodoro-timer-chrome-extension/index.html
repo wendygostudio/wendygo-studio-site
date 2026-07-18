@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADHD Pomodoro Timer Chrome Extension | Wendygo Studio</title>
+  <meta name="description" content="How gamified Pomodoro timers help ADHD brains start tasks: external rewards, short sessions, and a virtual pet that makes focus feel worth it." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "ADHD Pomodoro Timer Chrome Extension"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ADHD Pomodoro Timer: Why Gamification Helps You Start (and Finish) Sessions",
+    "description": "How gamified Pomodoro timers help ADHD brains start tasks: external rewards, short sessions, and a virtual pet that makes focus feel worth it.",
+    "datePublished": "2026-07-18",
+    "dateModified": "2026-07-18",
+    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
+    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Pomodoro good for ADHD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, particularly because it externalizes the structure that ADHD brains struggle to maintain internally. The timer removes the 'when to start, when to stop' decisions, short sessions reduce overwhelm, and a session count provides concrete daily progress."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should ADHD Pomodoro sessions be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with 15 minutes on difficult days and 25 minutes when you have momentum. Reserve 45–60 minute sessions for days when you're already in flow. Matching session length to your actual state matters more than following a fixed formula."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes gamified Pomodoro different for ADHD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gamification adds an immediate reward that doesn't depend on the task itself. Completing a session earns something visible — a growing pet, currency, unlockable content — which gives the ADHD reward system a concrete dopamine signal in the near term, not just after hours of work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use a Pomodoro timer without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SlimeForge runs entirely locally in your browser. Sessions, streaks, your pet, and all earned progress work offline. There's no account required — everything is stored in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is SlimeForge free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The core Pomodoro timer, virtual pet, basic sessions, and stats are free. A Pro trial runs for 5 days and includes additional features. After that, free features remain available indefinitely."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use a Gamified Pomodoro Timer for ADHD Focus",
+    "description": "Step-by-step guide to setting up SlimeForge as a gamified Pomodoro timer that helps ADHD brains build and maintain focus sessions.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Install SlimeForge",
+        "text": "Add SlimeForge to Chrome from the Chrome Web Store. No account or sign-up required."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Choose your session length",
+        "text": "Start with 15 minutes on difficult days, 25 minutes when you have momentum. SlimeForge supports 15, 25, 45, and 60-minute sessions."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Start your first session",
+        "text": "Click start. A slime egg appears. The timer counts down with a visible progress indicator."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Complete the session to hatch your pet",
+        "text": "Finishing your first session hatches your slime. Each subsequent session grows the pet and earns Brasas — the in-extension currency."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Use your break for a mini-game",
+        "text": "Breaks give your ADHD brain a bounded reward — a mini-game or checking on your slime — instead of uncontrolled tab-jumping."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Track your streak and Brasas",
+        "text": "Session counts and Brasas accumulate over time, unlocking 16 slime species and missions. Missing a day doesn't reset your pet — progress pauses, not resets."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body ul { margin: 0 0 20px 20px; }
+    .article-body ul li { margin-bottom: 8px; color: var(--muted); font-size: 15px; }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+
+    .session-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0;
+    }
+    .session-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      padding: 16px 12px; text-align: center;
+    }
+    .session-card .s-time {
+      font-size: 24px; font-weight: 800; color: var(--amber); margin-bottom: 6px;
+    }
+    .session-card .s-label {
+      font-size: 12px; color: var(--muted); line-height: 1.4;
+    }
+    @media (max-width: 520px) { .session-grid { grid-template-columns: 1fr 1fr; } }
+
+    .highlight-box {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .highlight-box p { margin-bottom: 12px; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+
+    .tip-box {
+      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
+      border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+    }
+    .tip-box strong { color: var(--text); }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a a { color: var(--amber); text-decoration: none; }
+    .faq-a a:hover { text-decoration: underline; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  </style>
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="ADHD Pomodoro Timer Chrome Extension | Wendygo Studio">
+  <meta property="og:description" content="How gamified Pomodoro timers help ADHD brains start tasks: external rewards, short sessions, and a virtual pet that makes focus feel worth it.">
+  <meta property="og:url" content="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ADHD Pomodoro Timer Chrome Extension | Wendygo Studio">
+  <meta name="twitter:description" content="How gamified Pomodoro timers help ADHD brains start tasks: external rewards, short sessions, and a virtual pet that makes focus feel worth it.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/" class="nav-lang">ES &#127988;</a>
+    </div>
+  </nav>
+
+  <div class="article-wrap">
+
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>ADHD Pomodoro Timer Chrome Extension
+    </div>
+
+    <div class="article-meta">
+      <div class="article-tag">Focus &amp; ADHD · SlimeForge</div>
+      <h1>ADHD Pomodoro Timer: Why Gamification Helps You Start (and Finish) Sessions</h1>
+      <p class="article-intro">
+        The hardest part of a focus session for an ADHD brain isn't the work — it's starting. Standard productivity advice ignores the role of dopamine in initiation. The Pomodoro technique removes one barrier. Gamification removes another.
+      </p>
+      <div class="article-date">July 18, 2026</div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="article-body">
+
+      <h2>Why Traditional Focus Advice Fails ADHD Brains</h2>
+
+      <p>ADHD is characterized by executive dysfunction and dopamine dysregulation — not laziness or lack of desire to work. The brain's reward system doesn't release dopamine in anticipation of future rewards the same way a neurotypical brain does. "Just think of how good you'll feel when it's done" doesn't create the chemical signal needed to begin.</p>
+
+      <p>Long sessions make this worse. A two-hour work block feels impossible before you start, so you don't start. The internal reward from completing the task comes too late and too abstractly to drive initiation behavior in the first place.</p>
+
+      <h2>How the Pomodoro Technique Addresses ADHD Challenges</h2>
+
+      <p>The Pomodoro technique moves structure outside your head. An external timer removes the "when do I start" and "when do I stop" decisions — both of which are points where ADHD brains reliably get stuck. Twenty-five minutes is short enough to feel survivable even on low-energy days. And the session count gives you a visible metric instead of a vague feeling of having worked hard.</p>
+
+      <p>A <a href="/slimeforge/">gamified Pomodoro timer for Chrome like SlimeForge</a> supports four session lengths — 15, 25, 45, and 60 minutes — so you can match the timer to your actual capacity that day. Starting with 15 minutes on hard days isn't giving up; it's removing the barrier to the first session, which is almost always the hardest one.</p>
+
+      <p>Structured breaks matter too. A 5-minute break every 25 minutes reduces the decision fatigue that compounds across a workday, and it gives your ADHD brain a socially acceptable reason to stop before hyperfocus pulls you off your intended task entirely.</p>
+
+      <h2>Choosing the Right Session Length for ADHD</h2>
+
+      <div class="session-grid">
+        <div class="session-card">
+          <div class="s-time">15m</div>
+          <div class="s-label">Overwhelming days. Just get started.</div>
+        </div>
+        <div class="session-card">
+          <div class="s-time">25m</div>
+          <div class="s-label">Classic. Works when you have momentum.</div>
+        </div>
+        <div class="session-card">
+          <div class="s-time">45m</div>
+          <div class="s-label">Deep work. Use when already in flow.</div>
+        </div>
+        <div class="session-card">
+          <div class="s-time">60m</div>
+          <div class="s-label">Max depth. Established flow only.</div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>Practical rule:</strong> if you're dreading starting, set 15 minutes. The goal of the first session is only to begin. Subsequent sessions can be longer once the momentum exists.
+      </div>
+
+      <h2>What Gamification Adds on Top</h2>
+
+      <p>A standard Pomodoro timer does one thing: it counts down and notifies you. That's useful. But it doesn't address the other half of the ADHD problem — staying motivated across a full week of sessions when novelty wears off.</p>
+
+      <p>Gamification adds a reward loop that doesn't depend on the task itself being rewarding. In SlimeForge, your first completed session hatches a virtual slime pet. That pet grows as you complete more sessions, earning Brasas 🔥 that unlock 16 different slime species, missions, and mini-games. The pet can also wander your browser tabs and chat in six languages — something to look forward to during breaks instead of uncontrolled tab-jumping.</p>
+
+      <p>This changes the math: instead of "I should do another session because I have more work," it becomes "I want to do another session because my slime is close to evolving." For ADHD brains that respond to immediate, concrete rewards, the pet is a better motivator than the abstract benefit of completing a task hours from now.</p>
+
+      <p>When comparing <a href="/blog/pomodoro-timer-chrome-extension/">Pomodoro timer Chrome extensions</a>, the ones that add on-screen presence during the countdown — and something to look forward to after — consistently work better for ADHD users than silent background timers.</p>
+
+      <h2>Building Focus Habits Without Burnout</h2>
+
+      <p>Streaks help ADHD brains see progress — but the "don't break the chain" pressure can backfire badly. Missing one day creates guilt, guilt creates avoidance, and avoidance breaks the habit entirely. This is a well-documented ADHD pattern, not a character flaw.</p>
+
+      <p>SlimeForge handles this by tracking Brasas 🔥 per session rather than per perfect week. Missing a day doesn't reset your pet's species or your earned progress — it just pauses growth. This matters because the "I already broke my streak, why bother" spiral is a genuine ADHD failure mode that a good focus tool should actively prevent.</p>
+
+      <p>If you've tried focus apps built around negative motivation — guilt about your dying virtual tree, binary streak resets — <a href="/blog/forest-app-alternatives-chrome/">Forest app alternatives built on positive reward loops</a> may fit better with how ADHD brains actually respond to habit systems over time.</p>
+
+      <div class="highlight-box">
+        <p><strong>The core insight:</strong> ADHD brains need the reward to come before or during the work, not only after it. A gamified timer that makes each session feel worth starting — not just finishing — addresses this at the right level.</p>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Is Pomodoro good for ADHD?</p>
+          <p class="faq-a">Yes, particularly because it externalizes structure that ADHD brains struggle to maintain internally. The timer removes the "when to start, when to stop" decisions, short sessions reduce overwhelm, and a session count provides concrete daily progress rather than a vague sense of effort.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">How long should ADHD Pomodoro sessions be?</p>
+          <p class="faq-a">Start with 15 minutes on difficult days and 25 minutes when you have momentum. Reserve 45–60 minute sessions for days when you're already in flow. Matching session length to your actual state matters more than following a fixed formula.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What makes gamified Pomodoro different for ADHD?</p>
+          <p class="faq-a">Gamification adds an immediate reward that doesn't depend on the task being enjoyable. Completing a session earns something visible — a growing pet, currency, unlockable content — which gives the ADHD reward system a concrete near-term dopamine signal, not just a delayed one after hours of work.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Can I use a Pomodoro timer without internet?</p>
+          <p class="faq-a">Yes. SlimeForge runs entirely locally in your browser. Sessions, streaks, your pet, and all earned progress work offline. There's no account required — everything is stored in your browser without any data being sent externally.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is SlimeForge free?</p>
+          <p class="faq-a">The core Pomodoro timer, virtual pet, basic sessions, and stats are free. A Pro trial runs for 5 days. After that, the free features remain available indefinitely — no forced upgrade.</p>
+        </div>
+      </div>
+
+      <div class="related">
+        <div class="related-label">Related guides</div>
+        <div class="related-links">
+          <a class="related-link" href="/blog/pomodoro-timer-chrome-extension/">
+            Best Pomodoro Timer Chrome Extension in 2026 — With a Virtual Pet
+            <span>How SlimeForge works as a timer, plus how the pet system builds focus habits</span>
+          </a>
+          <a class="related-link" href="/blog/forest-app-alternatives-chrome/">
+            Best Forest App Alternatives for Chrome in 2026
+            <span>Focus timer extensions compared — from minimal timers to gamified options with a virtual pet</span>
+          </a>
+          <a class="related-link" href="/blog/pomodoro-vs-time-blocking/">
+            Pomodoro vs Time Blocking: Which Focus Method Works Best?
+            <span>Side-by-side comparison of the two most popular focus methods — and when to combine them</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <p>SlimeForge is a gamified Pomodoro timer for Chrome — 15/25/45/60-minute sessions, a virtual slime pet that hatches and grows with every session, streaks, missions, and mini-games. Works offline, no account needed.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
+          Add SlimeForge to Chrome — Free
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> — privacy-first browser extensions</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#privacy">Privacy</a>
+    </div>
+  </footer>
+
+</body>
+</html>

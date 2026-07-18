@@ -1083,4 +1083,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
   </url>
 
+  <url>
+    <loc>https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
