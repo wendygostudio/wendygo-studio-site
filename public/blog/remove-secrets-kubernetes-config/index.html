@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Remove Secrets from Kubernetes Config Files | Wendygo Studio</title>
+<meta name="description" content="Sanitize Kubernetes YAML files before pasting into support tickets or AI assistants. Remove API keys, credentials, and tokens locally with ScrubForge — no upload needed." />
+<link rel="canonical" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/" />
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"Remove Secrets from Kubernetes Config Files"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Remove Secrets from Kubernetes Config Files","description":"Sanitize Kubernetes YAML files before pasting into support tickets or AI assistants. Remove API keys, credentials, and tokens locally with ScrubForge — no upload needed.","datePublished":"2026-07-19","dateModified":"2026-07-19","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What secrets are stored in Kubernetes YAML files?","acceptedAnswer":{"@type":"Answer","text":"Kubernetes Secrets are base64-encoded values embedded in YAML manifests — database passwords, API tokens, Docker registry credentials, TLS certificates, and OAuth tokens. Base64 is not encryption. Anyone with the YAML file can decode it in seconds. Kubernetes also stores credentials in environment variables within pod specs, which appear in plaintext in the manifest."}},{"@type":"Question","name":"Can I use ScrubForge to sanitize Kubernetes YAML?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paste your YAML file into ScrubForge. It detects and replaces base64-encoded Kubernetes Secrets, plaintext API keys, JWT tokens, and database URLs with consistent placeholder tokens like [K8S_SECRET_1], [API_KEY_1], etc. The logical structure of your manifests is preserved, so support engineers and AI assistants can still understand what's happening without seeing the actual credentials."}},{"@type":"Question","name":"What if my Kubernetes secret is base64-encoded?","acceptedAnswer":{"@type":"Answer","text":"ScrubForge detects and sanitizes base64-encoded values in Kubernetes Secrets. It identifies patterns like YWRtaW4= or aWQtMTIzNA== that are commonly found in Kubernetes YAML and replaces them with consistent tokens. The decoded values themselves are also detected — so a plaintext password and its base64 representation get mapped to the same placeholder."}},{"@type":"Question","name":"Is it safe to paste Kubernetes YAML into an AI assistant?","acceptedAnswer":{"@type":"Answer","text":"Not without sanitization. Kubernetes YAML often contains credentials — both in Secrets and in environment variables. Always sanitize first with ScrubForge or a similar tool, then paste the clean version. This lets you ask for debugging help without exposing live API keys, database passwords, or authentication tokens."}}]}
+</script>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Remove Secrets from Kubernetes Config Files | Wendygo Studio" />
+<meta property="og:description" content="Sanitize Kubernetes YAML files before pasting into support tickets or AI assistants. Remove API keys, credentials, and tokens locally with ScrubForge — no upload needed." />
+<meta property="og:url" content="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/" />
+<meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Remove Secrets from Kubernetes Config Files | Wendygo Studio" />
+<meta name="twitter:description" content="Sanitize Kubernetes YAML files before pasting into support tickets or AI assistants. Remove API keys, credentials, and tokens locally with ScrubForge — no upload needed." />
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #13151a; --surf: #1c1f26; --surf2: #232831; --line: #2e343f;
+  --text: #e7e9ee; --muted: #8b93a3; --faint: #4e5768;
+  --amber: #e8a33d; --amber2: #f0b75a; --on-a: #13151a;
+  --r: 9px;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--ink); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+nav { position: sticky; top: 0; z-index: 10; background: rgba(19,21,26,.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px,5vw,60px); height: 56px; }
+.nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; letter-spacing: .3px; text-decoration: none; color: var(--text); }
+.nav-mark { width: 28px; height: 28px; border-radius: 7px; background: var(--amber); display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+.nav-links a:hover { color: var(--text); }
+.nav-toggle { display: none; }
+.nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+.nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+@media (max-width: 600px) {
+  nav { position: relative; flex-wrap: wrap; }
+  .nav-burger { display: flex; }
+  .nav-links { display: flex; flex-direction: column; align-items: stretch; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: var(--ink); border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden; opacity: 0; transition: max-height .3s ease, opacity .25s ease, padding .3s ease; }
+  .nav-links a { padding: 14px clamp(20px,5vw,60px); border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+.article-wrap { max-width: 720px; margin: 0 auto; padding: clamp(32px,5vw,64px) clamp(20px,5vw,40px); }
+.breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 28px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+.breadcrumb a:hover { color: var(--muted); }
+.article-meta { margin-bottom: 32px; }
+.article-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+.article-meta h1 { font-size: clamp(22px,4vw,34px); font-weight: 800; line-height: 1.15; letter-spacing: -.4px; margin-bottom: 16px; }
+.article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+.article-date { font-size: 13px; color: var(--faint); }
+hr.divider { border: none; border-top: 1px solid var(--line); margin: 0 0 36px; }
+.article-body { line-height: 1.75; }
+.article-body p { margin-bottom: 20px; }
+.article-body h2 { font-size: 20px; font-weight: 700; letter-spacing: -.2px; margin: 36px 0 14px; color: var(--text); }
+.article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+.article-body a:hover { text-decoration-color: var(--amber); }
+.article-body code { font-family: var(--mono); font-size: 13px; background: var(--surf2); border: 1px solid var(--line); padding: 1px 6px; border-radius: 4px; color: var(--amber2); }
+.article-body pre { background: var(--surf2); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 20px 0; color: var(--amber2); font-family: var(--mono); }
+.article-body ul { margin: 16px 0 20px 20px; }
+.article-body li { margin-bottom: 8px; color: var(--muted); }
+.article-body li strong { color: var(--text); }
+.callout { background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber); border-radius: 8px; padding: 16px 20px; margin: 24px 0; font-size: 14px; color: var(--muted); line-height: 1.65; }
+.callout strong { color: var(--text); }
+.cta-box { margin: 48px 0 0; padding: 28px 32px; background: var(--surf); border: 1px solid var(--line); border-radius: var(--r); text-align: center; }
+.cta-box h2 { font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.2px; }
+.cta-box p { font-size: 15px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+.cta-btn { display: inline-block; background: var(--amber); color: var(--on-a); font-weight: 800; font-size: 14px; letter-spacing: .3px; border-radius: 7px; padding: 12px 24px; text-decoration: none; transition: background .15s; }
+.cta-btn:hover { background: var(--amber2); }
+.faq { margin-top: 56px; }
+.faq h2 { font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+.faq-item { border: 1px solid var(--line); border-radius: 8px; margin-bottom: 12px; padding: 18px 20px; background: var(--surf); }
+.faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+footer { border-top: 1px solid var(--line); margin-top: 80px; padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-brand" href="/"><div class="nav-mark">W</div> Wendygo Studio</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+  </div>
+</nav>
+<main class="article-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span>&#8250;</span>
+    <a href="/blog/">Blog</a><span>&#8250;</span>
+    <span>Remove Secrets from Kubernetes Config Files</span>
+  </nav>
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge · DevOps</div>
+    <h1>Remove Secrets from Kubernetes Config Files</h1>
+    <p class="article-intro">Your Kubernetes YAML manifests contain database passwords, API keys, and OAuth tokens. Before pasting them into a support ticket or AI assistant for debugging, strip those secrets locally — with ScrubForge.</p>
+    <div class="article-date">July 19, 2026</div>
+  </header>
+  <hr class="divider" />
+  <article class="article-body">
+    <p>Kubernetes Secrets are base64-encoded — but base64 is not encryption. Anyone with your YAML file can decode your secrets in seconds using <code>base64 -d</code> or an online tool. Yet DevOps teams routinely paste YAML into Slack, support tickets, and AI assistants without thinking about it.</p>
+    <p>The problem: a single YAML export often contains your entire credential set. Database passwords, Docker registry tokens, OAuth secrets, API keys, and TLS certificates all live in the same file. If you paste it unsanitized, a malicious actor — or even an overzealous support vendor — now has access to your infrastructure.</p>
+    <p>This is especially risky when debugging with AI assistants. You want to ask Claude or ChatGPT about a pod crash or networking issue, but you can't paste the actual manifest because it contains live credentials. <a href="/blog/free-config-sanitizer-alternatives/">Sanitizing before sharing</a> solves this without losing the technical context the AI needs.</p>
+    <h2>What You're Protecting</h2>
+    <p>Kubernetes manifests contain secrets in three places:</p>
+    <ul>
+      <li><strong>Secret objects:</strong> Base64-encoded values in the <code>data</code> field. Example: a database password stored as <code>db_password: cGFzc3dvcmQxMjM=</code></li>
+      <li><strong>Environment variables:</strong> Credentials referenced from Secrets and embedded directly in pod specs. Often plaintext in the manifest itself.</li>
+      <li><strong>Registry credentials:</strong> Docker registry authentication tokens stored in <code>imagePullSecrets</code> or inline in image pull configurations.</li>
+    </ul>
+    <p>Manual editing is slow and error-prone. You have to remember every secret field, find every reference, and verify nothing was missed. This is where a tool like <a href="/scrubforge/">ScrubForge</a> comes in.</p>
+    <h2>How to Sanitize Kubernetes YAML</h2>
+    <p>Install ScrubForge from the <a href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe">Chrome Web Store</a>, then:</p>
+    <ol style="margin: 16px 0 20px 20px; color: var(--muted);">
+      <li>Export your Kubernetes manifests: <code style="background: var(--surf2); border: 1px solid var(--line); padding: 1px 6px; border-radius: 4px; color: var(--amber2);">kubectl get deployment,secret -o yaml > manifest.yaml</code></li>
+      <li>Copy the entire YAML and paste it into ScrubForge</li>
+      <li>Review the sanitized output (credentials are replaced with consistent tokens like <code>[K8S_SECRET_1]</code>, <code>[API_KEY_1]</code>)</li>
+      <li>Copy the clean version and paste it into your support ticket, Slack, or AI chat</li>
+    </ol>
+    <div class="callout"><strong>Key benefit:</strong> The logical structure is preserved. Support engineers and AI assistants can still understand <em>what</em> credentials are being used and <em>where</em> they're referenced — without seeing the actual values. If the same password appears five times in your manifest, every instance becomes <code>[DB_PASSWORD_1]</code>, preserving that relationship.</div>
+    <p>ScrubForge detects over 120 credential patterns, including Kubernetes base64-encoded secrets, plaintext API keys, JWT tokens, database URLs, and service account tokens. It works entirely offline — your manifests never leave your browser.</p>
+    <div class="cta-box">
+      <h2>Sanitize Kubernetes YAML safely</h2>
+      <p>Remove secrets from manifests before sharing. 120+ patterns, fully local, no upload required.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Install ScrubForge — Free</a>
+    </div>
+  </article>
+  <section class="faq" aria-label="Frequently asked questions">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What secrets are stored in Kubernetes YAML files?</div>
+      <div class="faq-a">Kubernetes Secrets are base64-encoded values embedded in YAML manifests — database passwords, API tokens, Docker registry credentials, TLS certificates, and OAuth tokens. Base64 is not encryption. Anyone with the YAML file can decode it in seconds. Kubernetes also stores credentials in environment variables within pod specs, which appear in plaintext in the manifest.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I use ScrubForge to sanitize Kubernetes YAML?</div>
+      <div class="faq-a">Yes. Paste your YAML file into ScrubForge. It detects and replaces base64-encoded Kubernetes Secrets, plaintext API keys, JWT tokens, and database URLs with consistent placeholder tokens like <code>[K8S_SECRET_1]</code>, <code>[API_KEY_1]</code>, etc. The logical structure of your manifests is preserved, so support engineers and AI assistants can still understand what's happening without seeing the actual credentials.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if my Kubernetes secret is base64-encoded?</div>
+      <div class="faq-a">ScrubForge detects and sanitizes base64-encoded values in Kubernetes Secrets. It identifies patterns like <code>YWRtaW4=</code> or <code>aWQtMTIzNA==</code> that are commonly found in Kubernetes YAML and replaces them with consistent tokens. The decoded values themselves are also detected — so a plaintext password and its base64 representation get mapped to the same placeholder.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is it safe to paste Kubernetes YAML into an AI assistant?</div>
+      <div class="faq-a">Not without sanitization. Kubernetes YAML often contains credentials — both in Secrets and in environment variables. Always sanitize first with ScrubForge or a similar tool, then paste the clean version. This lets you ask for debugging help without exposing live API keys, database passwords, or authentication tokens.</div>
+    </div>
+  </section>
+</main>
+<footer>
+  <a class="footer-brand" href="/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/blog/">Blog</a>
+    <a href="/#tools">Tools</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Wendygo Studio. All rights reserved.</div>
+</footer>
+</body>
+</html>
