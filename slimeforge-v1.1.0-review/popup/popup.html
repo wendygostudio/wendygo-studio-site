@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="i18n-pending">
+<head>
+<meta charset="UTF-8">
+<title>SlimeForge</title>
+<style>.i18n-pending body{visibility:hidden}</style>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="toolbar">
+  <div class="tbrand">🔥 <b>SlimeForge</b></div>
+  <div class="tright">
+    <select id="selLang" title="Idioma" class="tsel" data-i18n-title="language_title" data-i18n-aria="language_title">
+      <option value="es">ES</option><option value="en">EN</option>
+      <option value="de">DE</option><option value="fr">FR</option>
+      <option value="pt_PT">PT</option><option value="it">IT</option>
+    </select>
+    <button id="btnQuiet" class="tbtn" title="Modo tranquilo" aria-label="Modo tranquilo" data-i18n-title="quiet_title" data-i18n-aria="quiet_title">🌿</button>
+    <button id="btnTheme" class="tbtn" title="Cambiar tema" aria-label="Cambiar tema" data-i18n-title="theme_title" data-i18n-aria="theme_title">🌙</button>
+    <button id="btnPopout" class="tbtn" title="Abrir en ventana" aria-label="Abrir en ventana" data-i18n-title="popout_title" data-i18n-aria="popout_title">↗️</button>
+  </div>
+</div>
+
+
+<div class="stagecard">
+  <div class="topbar">
+    <div class="brasas">🔥 <span id="brasas">10</span></div>
+    <div class="brasas" id="gotasWrap" style="display:none">💧 <span id="gotas">0</span></div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <div class="stagelbl" id="stagelbl">Etapa: <b>Huevo</b></div>
+      <button class="iconbtn" id="btnSound" title="Sonido" aria-label="Activar o desactivar sonido" data-i18n-title="sound_title" data-i18n-aria="sound_title">🔊</button>
+    </div>
+  </div>
+  <div class="stage" id="stage">
+    <svg id="stageDiorama" class="stage-diorama" viewBox="0 0 360 252" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="bubble" id="bubble"></div>
+    <div class="hint" id="hint">Toca el huevo para ayudarle a nacer (3 toques)</div>
+    <svg id="world" viewBox="0 0 200 200" width="240" height="240"></svg>
+  </div>
+  <div class="namebar">
+    <div><div class="cname" id="cname" title="Clic para renombrar" data-i18n-title="rename_title">???</div><div class="cmeta" id="cmeta">Un huevo de la Fragua</div></div>
+    <button class="iconbtn has-pro" id="btnForge" title="La Forja" data-i18n-title="forge_button_title" data-i18n-aria="forge_button_title" style="display:none;font-size:1.1rem">🔨</button>
+  </div>
+  <div class="bars" id="bars" style="display:none">
+    <div class="bar"><label data-i18n="lbl_hambre">Hambre <b id="vHambre">100</b></label><div class="track"><div class="fill" id="bHambre"></div></div></div>
+    <div class="bar"><label data-i18n="lbl_higiene">Higiene <b id="vHigiene">100</b></label><div class="track"><div class="fill" id="bHigiene"></div></div></div>
+    <div class="bar"><label data-i18n="lbl_animo">Ánimo <b id="vAnimo">80</b></label><div class="track"><div class="fill" id="bAnimo"></div></div></div>
+    <div class="bar"><label data-i18n="lbl_vinculo">Vínculo <b id="vVinculo">0</b></label><div class="track"><div class="fill" id="bVinculo"></div></div></div>
+    <div class="bar"><label data-i18n="lbl_educacion">Educación <b id="vEducacion">30</b></label><div class="track"><div class="fill" id="bEducacion"></div></div></div>
+  </div>
+  <div class="growth" id="growth" style="display:none">
+    <label><span data-i18n="lbl_growth">Crecimiento</span> <span id="gLbl">0 / 10</span></label>
+    <div class="gtrack"><div class="gfill" id="gFill" style="width:0%"></div></div>
+  </div>
+</div>
+
+<div class="actions" id="actions" style="display:none">
+  <button id="btnFeed">🍎 Alimentar (2🔥)</button>
+  <button id="btnShower">🚿 <span data-i18n="act_shower">Ducha</span></button>
+  <button id="btnPet">🤍 <span data-i18n="act_pet">Acariciar</span></button>
+  <button id="btnMeds" style="display:none">💊 <span data-i18n="act_meds">Medicina (10🔥)</span></button>
+</div>
+
+<div class="trialmini" id="trialMini" style="display:none"></div>
+
+<nav class="tabbar" id="tabbar" style="display:none" aria-label="Secciones principales" data-i18n-aria="main_nav_label">
+  <button class="tab" data-goto="foco"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12,3 C15,7 17.5,9.5 17.5,13.5 a5.5,5.5 0 1,1 -11,0 C6.5,9.5 9,7 12,3 Z"/><path d="M12,11 c1.4,1.3 2,2.2 2,3.4 a2,2 0 1,1 -4,0 c0,-1.2 0.6,-2.1 2,-3.4 Z"/></svg><span data-i18n="tab_focus">Foco</span></button>
+  <button class="tab" data-goto="jugar"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M5.5,9.5 Q12,6 18.5,9.5 M4.5,13 Q12,10 19.5,13 M6.5,16.5 Q12,14 17.5,16.5"/></svg><span data-i18n="tab_play">Jugar</span></button>
+  <button class="tab" data-goto="col"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12,5.5 C10,4 7,3.8 4.5,4.5 V18.5 C7,17.8 10,18 12,19.5 C14,18 17,17.8 19.5,18.5 V4.5 C17,3.8 14,4 12,5.5 Z"/><path d="M12,5.5 V19.5"/></svg><span data-i18n="tab_col">Colección</span></button>
+  <button class="tab" data-goto="mas"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.4"/><path d="M12,3.5 V6 M12,18 V20.5 M3.5,12 H6 M18,12 H20.5 M6,6 L7.8,7.8 M16.2,16.2 L18,18 M18,6 L16.2,7.8 M7.8,16.2 L6,18"/></svg><span data-i18n="tab_more">Más</span></button>
+</nav>
+
+<div class="focusbox journeybox" id="dailybox" data-tab="foco" style="display:none">
+  <h3 data-i18n="journey_title">🧭 Jornada de hoy</h3>
+  <div id="unlockPath" class="unlock-path"></div>
+  <div id="missionCard"></div>
+  <div id="streakCard"></div>
+  <div id="expeditionCard"></div>
+  <div class="mrow journey-actions">
+    <button id="btnExpedition" class="has-pro" data-i18n="expedition_open">🗺️ Expediciones</button>
+    <button id="btnRelicarium" data-i18n="relicarium_open">🏺 Relicario</button>
+    <button id="btnWeeklyReport" class="has-pro" data-i18n="weekly_open">📊 Informe semanal</button>
+    <button id="btnShareCard" data-i18n="share_open">📸 Compartir progreso</button>
+  </div>
+  <details class="routine-details"><summary data-i18n="routine_title">Rutina de cuidado</summary>
+  <div id="dailyList" class="mnote" style="margin:0"></div>
+  </details>
+</div>
+
+<div class="focusbox" id="focusbox" data-tab="foco" style="display:none">
+  <h3 data-i18n="h_focus">⏱️ Foco</h3>
+  <div class="goalbox">
+    <label for="focusGoal" data-i18n="goal_label">¿Qué quieres completar?</label>
+    <div class="goalrow">
+      <input id="focusGoal" maxlength="120" data-i18n-ph="goal_ph" placeholder="Ej.: terminar la introducción">
+      <button id="btnGoalPlan" title="Planificar con IA local" data-i18n-title="goal_plan_title" data-i18n-aria="goal_plan_title">✨</button>
+    </div>
+    <div id="goalPlan" class="fnote" style="display:none"></div>
+    <div class="projectrow" id="projectRow">
+      <select id="selProject" data-i18n-aria="project_active"><option value="">Sin proyecto</option></select>
+      <button id="btnProjects" class="has-pro" data-i18n="project_manage">📁 Proyectos</button>
+    </div>
+  </div>
+  <div class="focusrow">
+    <div class="ftimer" id="ftimer">25:00</div>
+    <select id="selMin" title="Duración" data-i18n-title="duration_title" data-i18n-aria="duration_title">
+      <option value="15">15 min</option>
+      <option value="25" selected>25 min</option>
+      <option value="45">45 min</option>
+      <option value="60">60 min</option>
+    </select>
+    <button class="primary" id="btnFocus" data-i18n="focus_btn">Empezar</button>
+    <button id="btnBreak" title="Descanso" data-i18n-title="break_title" data-i18n-aria="break_title">☕</button>
+    <button id="btnFocusCancel" style="display:none" data-i18n="focus_cancel">Abandonar</button>
+  </div>
+  <div class="fpresets" id="fpresets"></div>
+  <div class="ritualrow">
+    <select id="selRitual" aria-label="Ritual de foco" data-i18n-aria="ritual_title"><option value="">Ritual rápido</option></select>
+    <button id="btnRitual" class="has-pro" data-i18n="ritual_manage">⚙️ Ritual</button>
+  </div>
+  <div class="fnote" id="eggIncNote" data-i18n="egg_inc_note" style="display:none">Tu primera sesión completada incubará el huevo. Sigue corriendo aunque cierres el popup.</div>
+  <div class="fnote" id="streakLbl" style="margin-top:6px;color:var(--amber)"></div>
+  <div class="fbars" id="fbars"></div>
+  <div class="todaycompact" id="fstatsLbl" role="button" tabindex="0" data-i18n="today_empty">Hoy: todavía sin sesiones</div>
+  <div class="fnote" data-i18n="focus_social_note">👀 Si visitas redes sociales durante el foco, tu criatura te llamará la atención (si está paseando por la página).</div>
+  <div class="journey-card shield-card" id="shieldCard">
+    <div><b data-i18n="shield_name">🛡️ Escudo de Foco</b><div id="shieldSummary" class="mnote"></div></div>
+    <button id="btnFocusShield" class="has-pro" data-i18n="shield_config">Configurar</button>
+  </div>
+  <label class="demolbl" style="margin-top:8px"><input type="checkbox" id="chkFocusHud" data-i18n-after="focus_hud_lbl"> Temporizador en pantalla (con botón de inicio rápido)</label>
+  <div class="sizerow">
+    <span class="mnote" style="margin:0" data-i18n="focus_hud_op">Opacidad del temporizador</span>
+    <input type="range" id="rngFocusOp" min="30" max="100" value="85">
+    <div class="sizeval" id="focusOpVal">85%</div>
+  </div>
+  <div class="fnote" data-i18n="focus_note">Cada 5 minutos completados → +1 Brasa y +1 crecimiento (Pro: x1.5 🔥). Sigue corriendo aunque cierres el popup.</div>
+</div>
+
+<div class="focusbox" id="minis" data-tab="jugar" style="display:none">
+  <h3 data-i18n="h_minis">Minijuegos</h3>
+  <div class="mrow">
+    <button id="btnPesca">🎣 <span data-i18n="mg_pesca">Pesca</span> <span class="cnt" id="cntPesca">0/3</span></button>
+    <button id="btnOvillo">🧶 <span data-i18n="mg_ovillo">Ovillo</span> <span class="cnt" id="cntOvillo">0/3</span></button>
+  </div>
+  <div class="mnote" id="minisNote" data-i18n="minis_note">Máx. 3 partidas de cada al día. La pesca llena la despensa de 🐟; en el ovillo juega tu propia criatura.</div>
+</div>
+
+<div class="focusbox" id="petsbox" data-tab="col" style="display:none">
+  <h3 data-i18n="h_pets">🏠 Mis criaturas</h3>
+  <div id="petSlots"></div>
+  <div class="mnote" id="resHead" style="margin-top:10px"></div>
+  <div id="resList"></div>
+  <div class="mnote" data-i18n="pets_note">Las criaturas de paseo pueden salir juntas a tu pantalla. La Reserva 📦 guarda a las demás con su tiempo detenido; liberar 🕊️ es para siempre.</div>
+</div>
+
+<div class="focusbox" id="bestbox" data-tab="col" style="display:none">
+  <h3 data-i18n="h_best">📖 Bestiario</h3>
+  <div id="bestCount" class="mnote" style="margin:0 0 8px"></div>
+  <div id="witsLbl" class="mnote witslbl" style="margin:0 0 8px;cursor:pointer"></div>
+  <div id="bestGrid" class="bestgrid"></div>
+  <div class="mnote" data-i18n="best_note">Cada especie se desbloquea la primera vez que nace o se reforja. Las criaturas fantásticas son más raras.</div>
+</div>
+
+<div class="focusbox" id="huertoBox" data-tab="jugar" style="display:none">
+  <h3 data-i18n="h_huerto">🌱 Huerto</h3>
+  <div class="mnote" id="huertoGotas" style="margin:0 0 8px"></div>
+  <div class="hplots" id="huertoPlots"></div>
+  <div class="mnote" id="despLbl" style="margin-top:10px;font-weight:600"></div>
+  <div id="despList"></div>
+  <div class="mnote" data-i18n="huerto_note">Las gotas 💧 se recogen tocando los charcos que deja tu criatura al pasear. Cada etapa necesita un riego; sin agua la planta espera, nunca muere.</div>
+</div>
+
+<div class="focusbox" id="screenbox" data-tab="jugar" style="display:none">
+  <h3 data-i18n="h_screen">🪄 En pantalla</h3>
+  <div class="mrow">
+    <button id="btnInvoke" data-i18n="lbl_invoke">Invocar en esta pestaña</button>
+  </div>
+  <label class="demolbl" style="margin-top:8px"><input type="checkbox" id="chkAlways" data-i18n-after="lbl_always"> Siempre, en todas las webs</label>
+  <label class="demolbl" style="margin-top:6px"><input type="checkbox" id="chkPack"> 🐾 <span data-i18n="pack_label">Pasean juntas (todas tus criaturas)</span> <span id="packLock"></span></label>
+  <div class="sizerow">
+    <span class="mnote" style="margin:0" data-i18n="lbl_size">Tamaño</span>
+    <input type="range" id="rngSize" min="10" max="100" value="100">
+    <div class="sizeval" id="sizeval">100%</div>
+  </div>
+  <label class="demolbl" style="margin-top:8px"><input type="checkbox" id="chkGarden" data-i18n-after="huerto_screen_lbl"> 🌱 Huerto en pantalla (junto a la criatura)</label>
+  <div class="sizerow">
+    <span class="mnote" style="margin:0" data-i18n="huerto_op_lbl">Opacidad del huerto</span>
+    <input type="range" id="rngGardenOp" min="30" max="100" value="70">
+    <div class="sizeval" id="gardenOpVal">70%</div>
+  </div>
+  <div class="mnote" data-i18n="screen_note">"Invocar" actúa solo en la pestaña actual. "Siempre" te pedirá permiso para todas las webs y tu criatura paseará por cada página que visites. Puedes desactivarlo cuando quieras.</div>
+</div>
+
+<div class="focusbox" id="cosBox" data-tab="col" style="display:none">
+  <h3 data-i18n="h_vestidor">🎽 Vestidor</h3>
+  <div class="mnote" data-i18n="cos_note">Las piezas gratis se ganan jugando (foco, duelos, huerto, gotas, colección). Las 🔒 doradas son Pro. Nada se compra con azar.</div>
+  <div id="cosSlots"></div>
+</div>
+
+<div class="focusbox" id="logrosBox" data-tab="col" style="display:none">
+  <h3 data-i18n="h_logros">🏅 Hitos</h3>
+  <div class="mnote" data-i18n="logros_note">Cada hito desbloquea una pieza del Vestidor. Se ganan jugando, nunca con azar.</div>
+  <div id="logrosList"></div>
+</div>
+
+<div class="focusbox" id="memoryBox" data-tab="col" style="display:none">
+  <h3 data-i18n="memory_title">📖 Recuerdos</h3>
+  <button id="btnMemories" data-i18n="memory_open">Abrir libro de vida</button>
+</div>
+
+<div class="focusbox" id="craftbox" data-tab="col" style="display:none">
+  <h3 data-i18n="h_craft">⚒️ Taller</h3>
+  <div class="mnote" id="matLbl" style="margin:0 0 6px"></div>
+  <div id="craftList"></div>
+</div>
+
+<div class="focusbox" id="visitbox" data-tab="jugar" style="display:none">
+  <h3 data-i18n="h_visit">🧬 Visitas</h3>
+  <div class="mrow">
+    <button id="btnMyCode" data-i18n="visit_code_btn">Copiar mi código</button>
+    <button id="btnVisit" class="primary" data-i18n="visit_invite_btn">Invitar</button>
+  </div>
+  <textarea id="visitCode" data-i18n-ph="visit_ph" placeholder="Pega aquí el código de la criatura de un amigo…" style="width:100%;height:52px;margin-top:8px;background:#14161b;color:var(--text);border:1px solid var(--card-edge);border-radius:9px;padding:8px;font-family:ui-monospace,monospace;font-size:0.7rem;resize:vertical"></textarea>
+  <div id="visitMems" class="mnote"></div>
+</div>
+
+<div class="focusbox" id="probox" data-tab="mas">
+  <h3 data-i18n="h_pro">⭐ SlimeForge Pro</h3>
+  <div id="trialBanner" class="trialbanner" style="display:none"></div>
+  <div id="proStatus" class="mnote" style="margin:0 0 8px"></div>
+  <button id="btnTrialStart" class="primary trial-start" style="display:none" data-i18n="trial_start_btn">Start my 5 PRO days</button>
+  <div id="proPerks"></div>
+  <div id="proBuy" style="display:none">
+    <div class="mrow" style="flex-wrap:wrap">
+      <button data-plan="monthly" data-i18n="plan_m">1,99 €/mes</button>
+      <button data-plan="annual" data-i18n="plan_a">9,99 €/año</button>
+      <button data-plan="lifetime" data-i18n="plan_l">19,99 € · para siempre</button>
+    </div>
+    <div class="mrow" style="margin-top:8px">
+      <input type="text" id="proKey" data-i18n-ph="pro_key_ph" placeholder="Clave de licencia (del email de compra)" style="flex:1;background:#14161b;color:var(--text);border:1px solid var(--card-edge);border-radius:9px;padding:8px;font-size:0.76rem">
+      <button class="primary" id="proAct" data-i18n="pro_act_btn">Activar</button>
+    </div>
+    <div class="mnote" id="proMsg" style="margin-top:6px"></div>
+  </div>
+  <div id="proManage" style="display:none" class="mrow">
+    <button id="proDeact" data-i18n="pro_deact_btn">Desactivar en este equipo</button>
+  </div>
+</div>
+
+<details class="advanced" id="advancedBox" data-tab="mas">
+<summary data-i18n="h_advanced">⚙️ Ajustes, IA y datos</summary>
+<div class="focusbox experience-box" data-tab="mas">
+  <h3 data-i18n="experience_title">Your experience</h3>
+  <label class="fieldlbl"><span data-i18n="experience_label">How you want SlimeForge to accompany you</span>
+    <select id="selExperience">
+      <option value="calm" data-i18n="experience_calm">Focus without distractions</option>
+      <option value="coach" data-i18n="experience_coach">Accompany and encourage me</option>
+      <option value="game" data-i18n="experience_game">Turn it into a game</option>
+      <option value="strict" data-i18n="experience_strict">Don't let me escape</option>
+    </select>
+  </label>
+  <div class="fnote" data-i18n="experience_note">Change it whenever you want. Focus tools are never locked.</div>
+</div>
+<div class="focusbox" id="aibox" data-tab="mas">
+  <h3 data-i18n="h_ai">🧠 IA local (Gemini Nano)</h3>
+  <div class="mrow">
+    <span id="aiDot" style="font-size:0.9rem">⏳</span>
+    <span id="aiTxt" class="mnote" style="margin:0;flex:1" data-i18n="ai_checking">Comprobando disponibilidad…</span>
+    <button id="aiBtn" style="display:none;flex:initial" data-i18n="ai_download">Descargar</button>
+    <button id="aiDiag" style="flex:initial" title="Diagnóstico" data-i18n-title="diagnostic_title" data-i18n-aria="diagnostic_title">🔬</button>
+  </div>
+  <div class="gtrack" id="aiBarWrap" style="display:none;margin-top:8px"><div class="gfill" id="aiBar" style="width:0%"></div></div>
+</div>
+
+<div class="focusbox" id="dndBox" data-tab="mas">
+  <h3 data-i18n="dnd_title">🔕 No molestar</h3>
+  <div id="dndList"></div>
+</div>
+
+<div class="focusbox" id="savebox" data-tab="mas" style="display:none">
+  <h3 data-i18n="h_save">💾 Guardado</h3>
+  <div class="mrow">
+    <button id="btnExport" data-i18n="exp_btn">Exportar partida</button>
+    <button id="btnImport" data-i18n="imp_btn">Importar</button>
+  </div>
+  <input type="file" id="fileImport" accept="application/json" style="display:none">
+  <div class="mnote" data-i18n="save_note">Copia local de tu partida en un archivo JSON. Todo queda en tu equipo.</div>
+</div>
+
+<div class="forge-family" id="forgeFamily" data-tab="mas">
+  <div class="mnote" style="margin:0 0 6px;font-weight:600" data-i18n="forge_family">🔥 Familia Forge</div>
+  <div class="flinks">
+    <a href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank">📝 TextForge</a>
+    <a href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank">🖼️ FrameForge</a>
+    <a href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank">🧹 ScrubForge</a>
+    <a href="https://chromewebstore.google.com/detail/convertforge-local-file-c/mjmamnnhophdhccknmgnppcdkojkpagj" target="_blank">🔄 ConvertForge</a>
+    <a href="https://chromewebstore.google.com/detail/claimforge-derechos-recla/mlnjadkolgplpgbheklkdjcglojfakcg" target="_blank">⚖️ ClaimForge</a>
+    <a href="https://wendygostudio.com" target="_blank">🌐 wendygostudio.com</a>
+  </div>
+</div>
+</details>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+  <div class="mcard">
+    <div class="mhead"><h3 id="mtitle">—</h3><button class="mclose" id="mclose">✕</button></div>
+    <div id="mbody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="popup.js"></script>
+</body>
+</html>
