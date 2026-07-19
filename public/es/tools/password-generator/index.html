@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -7,40 +7,40 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Password Generator — Free, Secure &amp; Private | Wendygo Studio</title>
-  <meta name="description" content="Generate strong, random passwords in your browser — set length, character sets, and quantity. No server, no account, nothing sent anywhere. 100% local." />
-  <link rel="canonical" href="https://wendygostudio.com/tools/password-generator/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/password-generator/" />
+  <title>Generador de Contraseñas — Gratis, Seguro y Privado | Wendygo Studio</title>
+  <meta name="description" content="Genera contraseñas fuertes y aleatorias en tu navegador — configura longitud, conjuntos de caracteres y cantidad. Sin servidor, sin cuenta, nada se envía a ningún sitio. 100% local." />
+  <link rel="canonical" href="https://wendygostudio.com/es/tools/password-generator/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/password-generator/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/password-generator/" />
 
   <script type="application/ld+json">
   [
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Password Generator",
-      "url": "https://wendygostudio.com/tools/password-generator/",
-      "description": "Free browser-based secure password generator. Configure length (8–128), character sets, and quantity. Uses crypto.getRandomValues() — nothing is sent to any server.",
+      "name": "Generador de Contraseñas",
+      "url": "https://wendygostudio.com/es/tools/password-generator/",
+      "description": "Generador de contraseñas seguras basado en navegador y gratuito. Configura longitud (8–128), conjuntos de caracteres y cantidad. Usa crypto.getRandomValues() — nada se envía a ningún servidor.",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "Any",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "featureList": [
-        "Configurable length 8 to 128 characters",
-        "Toggle uppercase, lowercase, numbers, symbols",
-        "Exclude ambiguous characters option",
-        "Generate 1 to 100 passwords at once",
-        "Entropy-based strength meter",
-        "One-click copy each or copy all",
-        "100% local — crypto.getRandomValues(), no server"
+        "Longitud configurable de 8 a 128 caracteres",
+        "Activa mayúsculas, minúsculas, números, símbolos",
+        "Opción para excluir caracteres ambiguos",
+        "Genera de 1 a 100 contraseñas a la vez",
+        "Medidor de fortaleza basado en entropía",
+        "Copia individual o copia todo con un clic",
+        "100% local — crypto.getRandomValues(), sin servidor"
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
-        { "@type": "ListItem", "position": 3, "name": "Password Generator", "item": "https://wendygostudio.com/tools/password-generator/" }
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://wendygostudio.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://wendygostudio.com/es/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "Generador de Contraseñas", "item": "https://wendygostudio.com/es/tools/password-generator/" }
       ]
     },
     {
@@ -49,34 +49,34 @@
           "mainEntity": [
                 {
                       "@type": "Question",
-                      "name": "Are generated passwords stored or sent anywhere?",
+                      "name": "¿Se almacenan o envían a algún sitio las contraseñas generadas?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "No. Passwords are generated and displayed entirely in your browser using crypto.getRandomValues() — nothing is transmitted to any server or logged anywhere."
+                            "text": "No. Las contraseñas se generan y muestran íntegramente en tu navegador usando crypto.getRandomValues() — nada se transmite a ningún servidor ni se registra en ningún sitio."
                       }
                 },
                 {
                       "@type": "Question",
-                      "name": "What makes a password secure?",
+                      "name": "¿Qué hace que una contraseña sea segura?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Length matters more than complexity tricks: aim for at least 16 characters mixing uppercase, lowercase, numbers, and symbols. That gives well over 100 bits of entropy, which is effectively uncrackable with current hardware."
+                            "text": "La longitud importa más que los trucos de complejidad: apunta a al menos 16 caracteres mezclando mayúsculas, minúsculas, números y símbolos. Eso da bastante más de 100 bits de entropía, lo cual es efectivamente imposible de descifrar con el hardware actual."
                       }
                 },
                 {
                       "@type": "Question",
-                      "name": "Can I choose which character sets to include?",
+                      "name": "¿Puedo elegir qué conjuntos de caracteres incluir?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes, you can configure length and toggle uppercase, lowercase, numbers, and symbols to match a site's specific password rules."
+                            "text": "Sí, puedes configurar la longitud y activar mayúsculas, minúsculas, números y símbolos para ajustarte a las reglas de contraseña específicas de cada sitio."
                       }
                 },
                 {
                       "@type": "Question",
-                      "name": "Is this safe to use for banking or other sensitive passwords?",
+                      "name": "¿Es seguro usarlo para contraseñas bancarias u otras contraseñas sensibles?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Yes — the generation happens locally using the browser's cryptographic RNG, the same one used for TLS. As always, store the result in a dedicated password manager rather than reusing it across sites."
+                            "text": "Sí — la generación ocurre localmente usando el generador de números aleatorios criptográfico del navegador, el mismo que se usa para TLS. Como siempre, guarda el resultado en un gestor de contraseñas dedicado en lugar de reutilizarlo en varios sitios."
                       }
                 }
           ]
@@ -441,96 +441,96 @@
   </style>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Wendygo Studio">
-  <meta property="og:title" content="Password Generator — Free, Secure &amp; Private">
-  <meta property="og:description" content="Generate strong, random passwords in your browser — set length, character sets, and quantity. No server, no account, nothing sent anywhere.">
-  <meta property="og:url" content="https://wendygostudio.com/tools/password-generator/">
+  <meta property="og:title" content="Generador de Contraseñas — Gratis, Seguro y Privado">
+  <meta property="og:description" content="Genera contraseñas fuertes y aleatorias en tu navegador — configura longitud, conjuntos de caracteres y cantidad. Sin servidor, sin cuenta.">
+  <meta property="og:url" content="https://wendygostudio.com/es/tools/password-generator/">
   <meta property="og:image" content="https://wendygostudio.com/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Password Generator — Free, Secure &amp; Private">
-  <meta name="twitter:description" content="Generate strong, random passwords in your browser — set length, character sets, and quantity. No server, no account, nothing sent anywhere.">
+  <meta name="twitter:title" content="Generador de Contraseñas — Gratis, Seguro y Privado">
+  <meta name="twitter:description" content="Genera contraseñas fuertes y aleatorias en tu navegador — configura longitud, conjuntos de caracteres y cantidad. Sin servidor, sin cuenta.">
   <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
 </head>
 <body>
 
   <nav>
-    <a class="nav-brand" href="/">
+    <a class="nav-brand" href="/es/">
       <div class="nav-mark">W</div>
       Wendygo Studio
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <label for="nav-toggle" class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></label>
     <div class="nav-links">
-      <a href="/#products">Extensions</a>
-      <a href="/blog/">Blog</a>
-      <a href="/tools/">Tools</a>
-      <a href="/#how">How it works</a>
-      <a href="/#privacy">Privacy</a>
-      <a href="/es/" class="nav-lang">ES 🌐</a>
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/tools/">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/tools/password-generator/" class="nav-lang">EN 🌐</a>
     </div>
   </nav>
 
   <div class="page-wrap">
 
     <div class="page-header">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="/es/">Inicio</a>
         <span>›</span>
-        <a href="/tools/">Tools</a>
+        <a href="/es/tools/">Herramientas</a>
         <span>›</span>
-        <span>Password Generator</span>
+        <span>Generador de Contraseñas</span>
       </nav>
-      <h1>Password Generator</h1>
-      <p class="page-sub">Create strong, random passwords with your chosen length and character sets. Everything runs in your browser — no server, no account, nothing sent anywhere.</p>
+      <h1>Generador de Contraseñas</h1>
+      <p class="page-sub">Crea contraseñas fuertes y aleatorias con la longitud y los conjuntos de caracteres que elijas. Todo se ejecuta en tu navegador — sin servidor, sin cuenta, nada se envía a ningún sitio.</p>
     </div>
 
     <!-- TOOL -->
     <div class="tool-card">
 
       <!-- Length -->
-      <label class="ctrl-label" for="pw-length">Length — <span id="length-display">20</span> characters</label>
+      <label class="ctrl-label" for="pw-length">Longitud — <span id="length-display">20</span> caracteres</label>
       <div class="length-row">
         <input type="range" id="pw-length-range" min="8" max="128" value="20"
-          aria-label="Password length slider" />
+          aria-label="Control deslizante de longitud" />
         <input type="number" id="pw-length" class="length-input"
-          min="8" max="128" value="20" aria-label="Password length" />
+          min="8" max="128" value="20" aria-label="Longitud de la contraseña" />
       </div>
 
       <!-- Character sets -->
-      <label class="ctrl-label">Character sets</label>
+      <label class="ctrl-label">Conjuntos de caracteres</label>
       <div class="checks-grid" id="checks-grid">
         <label class="check-label active" id="lbl-upper">
           <input type="checkbox" id="cb-upper" checked onchange="syncLabel('upper')">
           <div>
-            <div class="check-name">Uppercase</div>
+            <div class="check-name">Mayúsculas</div>
             <div class="check-chars">A – Z</div>
           </div>
         </label>
         <label class="check-label active" id="lbl-lower">
           <input type="checkbox" id="cb-lower" checked onchange="syncLabel('lower')">
           <div>
-            <div class="check-name">Lowercase</div>
+            <div class="check-name">Minúsculas</div>
             <div class="check-chars">a – z</div>
           </div>
         </label>
         <label class="check-label active" id="lbl-numbers">
           <input type="checkbox" id="cb-numbers" checked onchange="syncLabel('numbers')">
           <div>
-            <div class="check-name">Numbers</div>
+            <div class="check-name">Números</div>
             <div class="check-chars">0 – 9</div>
           </div>
         </label>
         <label class="check-label active" id="lbl-symbols">
           <input type="checkbox" id="cb-symbols" checked onchange="syncLabel('symbols')">
           <div>
-            <div class="check-name">Symbols</div>
+            <div class="check-name">Símbolos</div>
             <div class="check-chars">! @ # $ % ^ &amp; *</div>
           </div>
         </label>
-        <label class="check-label" id="lbl-ambiguous" title="Excludes: 0, O, l, 1, I">
+        <label class="check-label" id="lbl-ambiguous" title="Excluye: 0, O, l, 1, I">
           <input type="checkbox" id="cb-ambiguous" onchange="syncLabel('ambiguous')">
           <div>
-            <div class="check-name">Exclude ambiguous</div>
-            <div class="check-chars">no 0 O l 1 I</div>
+            <div class="check-name">Excluir ambiguos</div>
+            <div class="check-chars">sin 0 O l 1 I</div>
           </div>
         </label>
       </div>
@@ -538,18 +538,18 @@
       <!-- Quantity + generate -->
       <div class="options-row">
         <div class="opt-group">
-          <label class="ctrl-label" for="pw-qty">Quantity</label>
+          <label class="ctrl-label" for="pw-qty">Cantidad</label>
           <input type="number" id="pw-qty" class="qty-input"
-            min="1" max="100" value="1" aria-label="Number of passwords" />
+            min="1" max="100" value="1" aria-label="Número de contraseñas" />
         </div>
-        <button class="btn-generate" onclick="generate()" aria-label="Generate passwords">
-          Generate ↓
+        <button class="btn-generate" onclick="generate()" aria-label="Generar contraseñas">
+          Generar ↓
         </button>
       </div>
 
       <!-- Error -->
       <div class="error-banner" id="error-banner">
-        Select at least one character set to generate a password.
+        Selecciona al menos un conjunto de caracteres para generar una contraseña.
       </div>
 
       <!-- Strength meter -->
@@ -563,77 +563,77 @@
 
       <!-- Output header -->
       <div class="output-header">
-        <span class="output-lbl" id="output-lbl">Output</span>
-        <button class="btn-copy-all" id="btn-copy-all" onclick="copyAll()" aria-label="Copy all passwords">
+        <span class="output-lbl" id="output-lbl">Salida</span>
+        <button class="btn-copy-all" id="btn-copy-all" onclick="copyAll()" aria-label="Copiar todas las contraseñas">
           <span id="copy-all-icon">⎘</span>
-          <span id="copy-all-text">Copy all</span>
+          <span id="copy-all-text">Copiar todo</span>
         </button>
       </div>
 
       <!-- Password list -->
-      <div class="pw-list" id="pw-list" role="list" aria-label="Generated passwords"></div>
+      <div class="pw-list" id="pw-list" role="list" aria-label="Contraseñas generadas"></div>
 
     </div><!-- /tool-card -->
 
     <!-- INFO -->
     <div class="info-card">
-      <h2>What makes a strong password?</h2>
-      <p>Password strength is measured in <strong>entropy</strong> — the number of bits needed to guess it by brute force. A 20-character password mixing uppercase, lowercase, numbers, and symbols has roughly 131 bits of entropy, making it effectively uncrackable with current hardware.</p>
-      <p>As a rule of thumb: use at least 16 characters, always include multiple character types, never reuse passwords across sites, and store them in a dedicated password manager. This tool uses <code style="font-family:var(--mono);font-size:13px;color:var(--amber2);background:var(--surf2);padding:1px 6px;border-radius:4px;">crypto.getRandomValues()</code> — the same cryptographic RNG your browser uses for TLS — so every password generated here is genuinely random.</p>
+      <h2>¿Qué hace fuerte a una contraseña?</h2>
+      <p>La fortaleza de una contraseña se mide en <strong>entropía</strong> — el número de bits necesarios para adivinarla por fuerza bruta. Una contraseña de 20 caracteres mezclando mayúsculas, minúsculas, números y símbolos tiene unos 131 bits de entropía, lo que la hace efectivamente indescifrable con el hardware actual.</p>
+      <p>Como norma general: usa al menos 16 caracteres, incluye siempre varios tipos de caracteres, nunca reutilices contraseñas entre sitios, y guárdalas en un gestor de contraseñas dedicado. Esta herramienta usa <code style="font-family:var(--mono);font-size:13px;color:var(--amber2);background:var(--surf2);padding:1px 6px;border-radius:4px;">crypto.getRandomValues()</code> — el mismo generador de números aleatorios criptográfico que tu navegador usa para TLS — así que cada contraseña generada aquí es genuinamente aleatoria.</p>
       <div class="tips-grid">
         <div class="tip-item">
-          <strong>Minimum 16 characters</strong>
-          <span>Adds exponentially more combinations for every extra character you add.</span>
+          <strong>Mínimo 16 caracteres</strong>
+          <span>Añade exponencialmente más combinaciones por cada carácter extra que agregues.</span>
         </div>
         <div class="tip-item">
-          <strong>Mix all character types</strong>
-          <span>Including symbols raises the charset from 62 to ~94, multiplying entropy per character.</span>
+          <strong>Mezcla todos los tipos de caracteres</strong>
+          <span>Incluir símbolos eleva el conjunto de 62 a ~94, multiplicando la entropía por carácter.</span>
         </div>
         <div class="tip-item">
-          <strong>One password per account</strong>
-          <span>A breach at one site can't be used on others if every password is unique.</span>
+          <strong>Una contraseña por cuenta</strong>
+          <span>Una filtración en un sitio no puede usarse en otros si cada contraseña es única.</span>
         </div>
         <div class="tip-item">
-          <strong>Use a password manager</strong>
-          <span>Bitwarden, 1Password, or your browser's built-in manager can store and autofill these safely.</span>
+          <strong>Usa un gestor de contraseñas</strong>
+          <span>Bitwarden, 1Password, o el gestor integrado de tu navegador pueden guardarlas y autocompletarlas de forma segura.</span>
         </div>
       </div>
     </div>
 
         <!-- FAQ -->
     <div class="info-card">
-      <h2>Frequently asked questions</h2>
+      <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
         <div class="faq-item">
-          <p class="faq-q">Are generated passwords stored or sent anywhere?</p>
-          <p class="faq-a">No. Passwords are generated and displayed entirely in your browser using crypto.getRandomValues() — nothing is transmitted to any server or logged anywhere.</p>
+          <p class="faq-q">¿Se almacenan o envían a algún sitio las contraseñas generadas?</p>
+          <p class="faq-a">No. Las contraseñas se generan y muestran íntegramente en tu navegador usando crypto.getRandomValues() — nada se transmite a ningún servidor ni se registra en ningún sitio.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">What makes a password secure?</p>
-          <p class="faq-a">Length matters more than complexity tricks: aim for at least 16 characters mixing uppercase, lowercase, numbers, and symbols. That gives well over 100 bits of entropy, which is effectively uncrackable with current hardware.</p>
+          <p class="faq-q">¿Qué hace que una contraseña sea segura?</p>
+          <p class="faq-a">La longitud importa más que los trucos de complejidad: apunta a al menos 16 caracteres mezclando mayúsculas, minúsculas, números y símbolos. Eso da bastante más de 100 bits de entropía, lo cual es efectivamente imposible de descifrar con el hardware actual.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">Can I choose which character sets to include?</p>
-          <p class="faq-a">Yes, you can configure length and toggle uppercase, lowercase, numbers, and symbols to match a site's specific password rules.</p>
+          <p class="faq-q">¿Puedo elegir qué conjuntos de caracteres incluir?</p>
+          <p class="faq-a">Sí, puedes configurar la longitud y activar mayúsculas, minúsculas, números y símbolos para ajustarte a las reglas de contraseña específicas de cada sitio.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">Is this safe to use for banking or other sensitive passwords?</p>
-          <p class="faq-a">Yes — the generation happens locally using the browser's cryptographic RNG, the same one used for TLS. As always, store the result in a dedicated password manager rather than reusing it across sites.</p>
+          <p class="faq-q">¿Es seguro usarlo para contraseñas bancarias u otras contraseñas sensibles?</p>
+          <p class="faq-a">Sí — la generación ocurre localmente usando el generador de números aleatorios criptográfico del navegador, el mismo que se usa para TLS. Como siempre, guarda el resultado en un gestor de contraseñas dedicado en lugar de reutilizarlo en varios sitios.</p>
         </div>
       </div>
     </div>
 
     <!-- RELATED -->
     <div class="related">
-      <div class="related-label">Related tools</div>
+      <div class="related-label">Herramientas relacionadas</div>
       <div class="related-links">
-          <a class="related-link" href="/tools/uuid-generator/">
-            UUID v4 Generator
-            <span>Same cryptographic RNG, for generating unique IDs instead of passwords</span>
+          <a class="related-link" href="/es/tools/uuid-generator/">
+            Generador de UUID v4
+            <span>El mismo generador criptográfico, para generar IDs únicos en lugar de contraseñas</span>
           </a>
-          <a class="related-link" href="/tools/json-formatter/">
-            JSON Formatter &amp; Validator
-            <span>Format config files where credentials often need to be checked</span>
+          <a class="related-link" href="/es/tools/json-formatter/">
+            Formateador y Validador de JSON
+            <span>Formatea ficheros de configuración donde a menudo hay que revisar credenciales</span>
           </a>
       </div>
     </div>
@@ -642,14 +642,14 @@
     <div class="cta-card">
       <div class="cta-icon">🔤</div>
       <div class="cta-body">
-        <h3>Need to generate random strings, UUIDs, or tokens in your browser?</h3>
-        <p>TextForge is a free Chrome extension with 58+ text utilities — random string generation, UUID v4, Base64 encode/decode, regex testing, and much more. All local, no server.</p>
+        <h3>¿Necesitas generar cadenas aleatorias, UUIDs o tokens en tu navegador?</h3>
+        <p>TextForge es una extensión gratuita de Chrome con más de 58 utilidades de texto — generación de cadenas aleatorias, UUID v4, codificación/decodificación Base64, pruebas de regex, y mucho más. Todo local, sin servidor.</p>
         <a
           class="cta-link"
           href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba"
           target="_blank" rel="noopener"
         >
-          Get TextForge — Free on Chrome Web Store →
+          Consigue TextForge — Gratis en Chrome Web Store →
         </a>
       </div>
     </div>
@@ -659,10 +659,10 @@
   <footer>
     <div>© 2026 Wendygo Studio</div>
     <div class="footer-links">
-      <a href="/tools/">All Tools</a>
-      <a href="/blog/">Blog</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
+      <a href="/es/tools/">Todas las Herramientas</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/privacy">Privacidad</a>
+      <a href="/es/terms">Términos</a>
     </div>
   </footer>
 
@@ -739,10 +739,10 @@
     }
 
     function strengthLevel(bits) {
-      if (bits < 40) return { label: 'Weak',      color: '#ef4444', pct: 15 };
-      if (bits < 60) return { label: 'Fair',      color: '#f97316', pct: 38 };
-      if (bits < 80) return { label: 'Strong',    color: '#e8a33d', pct: 65 };
-                     return { label: 'Very Strong', color: '#4ade80', pct: 100 };
+      if (bits < 40) return { label: 'Débil',      color: '#ef4444', pct: 15 };
+      if (bits < 60) return { label: 'Aceptable', color: '#f97316', pct: 38 };
+      if (bits < 80) return { label: 'Fuerte',    color: '#e8a33d', pct: 65 };
+                     return { label: 'Muy fuerte', color: '#4ade80', pct: 100 };
     }
 
     function generate() {
@@ -791,8 +791,8 @@
 
         const btn  = document.createElement('button');
         btn.className = 'pw-copy';
-        btn.setAttribute('aria-label', 'Copy password ' + (i + 1));
-        btn.title = 'Copy';
+        btn.setAttribute('aria-label', 'Copiar contraseña ' + (i + 1));
+        btn.title = 'Copiar';
         btn.textContent = '⎘';
         btn.onclick = () => copyOne(pw, btn);
 
@@ -804,8 +804,8 @@
       /* output label */
       document.getElementById('output-lbl').textContent =
         qty === 1
-          ? `Output — ${length}-character password`
-          : `Output — ${qty} passwords, ${length} chars each`;
+          ? `Salida — contraseña de ${length} caracteres`
+          : `Salida — ${qty} contraseñas de ${length} caracteres cada una`;
 
       resetCopyAll();
     }
@@ -828,7 +828,7 @@
         const lbl  = document.getElementById('copy-all-text');
         btn.classList.add('copied');
         icon.textContent = '✓';
-        lbl.textContent  = 'Copied!';
+        lbl.textContent  = '¡Copiado!';
         setTimeout(resetCopyAll, 2000);
       } catch { /* clipboard unavailable */ }
     }
@@ -839,7 +839,7 @@
       const lbl  = document.getElementById('copy-all-text');
       btn.classList.remove('copied');
       icon.textContent = '⎘';
-      lbl.textContent  = 'Copy all';
+      lbl.textContent  = 'Copiar todo';
     }
 
     /* auto-generate on load */

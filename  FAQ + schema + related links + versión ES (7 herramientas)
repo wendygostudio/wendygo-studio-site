@@ -1,0 +1,19 @@
+warning: in the working copy of 'public/es/tools/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/sitemap.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/tools/ip-extractor/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/tools/json-formatter/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/tools/password-generator/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/tools/regex-tester/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/tools/subnet-calculator/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/tools/uuid-generator/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/tools/youtube-thumbnail-checker/index.html', LF will be replaced by CRLF the next time Git touches it
+ public/es/tools/index.html                        |  72 [32m+++++++++++++[m[31m-[m
+ public/sitemap.xml                                |  84 [32m++++++++++++++++[m
+ public/tools/ip-extractor/index.html              | 111 [32m+++++++++++++++++++++[m
+ public/tools/json-formatter/index.html            | 110 [32m+++++++++++++++++++++[m
+ public/tools/password-generator/index.html        | 107 [32m++++++++++++++++++++[m
+ public/tools/regex-tester/index.html              | 107 [32m++++++++++++++++++++[m
+ public/tools/subnet-calculator/index.html         | 107 [32m++++++++++++++++++++[m
+ public/tools/uuid-generator/index.html            | 111 [32m+++++++++++++++++++++[m
+ public/tools/youtube-thumbnail-checker/index.html | 113 [32m+++++++++++++++++++++[m[31m-[m
+ 9 files changed, 917 insertions(+), 5 deletions(-)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -7,40 +7,40 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subnet Calculator — CIDR, Network Address, Hosts & Ranges</title>
-  <meta name="description" content="Free online subnet calculator. Enter any IP address with CIDR prefix or subnet mask to get network address, broadcast, host range, wildcard mask, and binary breakdown. 100% local — nothing uploaded." />
-  <link rel="canonical" href="https://wendygostudio.com/tools/subnet-calculator/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/subnet-calculator/" />
+  <title>Calculadora de Subredes — CIDR, Dirección de Red, Hosts y Rangos</title>
+  <meta name="description" content="Calculadora de subredes online y gratuita. Introduce cualquier dirección IP con prefijo CIDR o máscara de subred para obtener dirección de red, broadcast, rango de hosts, máscara wildcard y desglose binario. 100% local — nada se sube." />
+  <link rel="canonical" href="https://wendygostudio.com/es/tools/subnet-calculator/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/subnet-calculator/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/subnet-calculator/" />
 
   <script type="application/ld+json">
   [
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Subnet Calculator",
-      "url": "https://wendygostudio.com/tools/subnet-calculator/",
-      "description": "Free browser-based subnet calculator. Paste any IPv4 address in CIDR notation or with a subnet mask to get network address, broadcast, first/last host, wildcard mask, and binary representation. 100% local, no server upload.",
+      "name": "Calculadora de Subredes",
+      "url": "https://wendygostudio.com/es/tools/subnet-calculator/",
+      "description": "Calculadora de subredes basada en navegador y gratuita. Pega cualquier dirección IPv4 en notación CIDR o con máscara de subred para obtener dirección de red, broadcast, primer/último host, máscara wildcard y representación binaria. 100% local, sin subida al servidor.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "featureList": [
-        "Accepts CIDR notation (e.g. 192.168.1.0/24) or dotted subnet mask",
-        "Calculates network address, broadcast, first and last host",
-        "Shows usable host count",
-        "Wildcard mask and binary breakdown",
-        "IP class and private/public classification",
-        "Common subnet cheatsheet",
-        "100% local — no server upload"
+        "Admite notación CIDR (p.ej. 192.168.1.0/24) o máscara de subred con puntos",
+        "Calcula dirección de red, broadcast, primer y último host",
+        "Muestra el número de hosts utilizables",
+        "Máscara wildcard y desglose binario",
+        "Clase de IP y clasificación privada/pública",
+        "Chuleta de subredes comunes",
+        "100% local — sin subida al servidor"
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
-        { "@type": "ListItem", "position": 3, "name": "Subnet Calculator", "item": "https://wendygostudio.com/tools/subnet-calculator/" }
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://wendygostudio.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://wendygostudio.com/es/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "Calculadora de Subredes", "item": "https://wendygostudio.com/es/tools/subnet-calculator/" }
       ]
     },
     {
@@ -49,34 +49,34 @@
           "mainEntity": [
                 {
                       "@type": "Question",
-                      "name": "What is CIDR notation?",
+                      "name": "¿Qué es la notación CIDR?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "CIDR (Classless Inter-Domain Routing) notation appends a slash and a number to an IP address — like 192.168.1.0/24 — to indicate how many bits of the address are the network portion versus the host portion."
+                            "text": "La notación CIDR (Classless Inter-Domain Routing) añade una barra y un número a una dirección IP — como 192.168.1.0/24 — para indicar cuántos bits de la dirección son la parte de red frente a la parte de host."
                       }
                 },
                 {
                       "@type": "Question",
-                      "name": "How do I calculate usable hosts in a subnet?",
+                      "name": "¿Cómo calculo los hosts utilizables en una subred?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Enter your IPv4 address with its CIDR prefix or subnet mask and the tool instantly shows the network address, broadcast address, host range, wildcard mask, and total usable hosts."
+                            "text": "Introduce tu dirección IPv4 con su prefijo CIDR o máscara de subred y la herramienta muestra al instante la dirección de red, dirección de broadcast, rango de hosts, máscara wildcard y total de hosts utilizables."
                       }
                 },
                 {
                       "@type": "Question",
-                      "name": "Does this tool support IPv6?",
+                      "name": "¿Admite esta herramienta IPv6?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Not currently — this calculator is built for IPv4 subnetting (CIDR prefixes and subnet masks)."
+                            "text": "Actualmente no — esta calculadora está pensada para subredes IPv4 (prefijos CIDR y máscaras de subred)."
                       }
                 },
                 {
                       "@type": "Question",
-                      "name": "What's the difference between the network address and broadcast address?",
+                      "name": "¿Cuál es la diferencia entre la dirección de red y la dirección de broadcast?",
                       "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "The network address is the first address in a subnet and identifies the subnet itself; it can't be assigned to a host. The broadcast address is the last address in the subnet and is reserved for sending to every host on that subnet."
+                            "text": "La dirección de red es la primera dirección de una subred e identifica la subred en sí; no puede asignarse a un host. La dirección de broadcast es la última dirección de la subred y está reservada para enviar a todos los hosts de esa subred."
                       }
                 }
           ]
@@ -355,48 +355,48 @@
 <body>
 
   <nav>
-    <a class="nav-brand" href="/">
+    <a class="nav-brand" href="/es/">
       <div class="nav-mark">W</div>
       Wendygo Studio
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <label for="nav-toggle" class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></label>
     <div class="nav-links">
-      <a href="/#products">Extensions</a>
-      <a href="/blog/">Blog</a>
-      <a href="/tools/" aria-current="true">Tools</a>
-      <a href="/#how">How it works</a>
-      <a href="/#privacy">Privacy</a>
-      <a href="/es/" class="nav-lang">ES 🌐</a>
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/tools/" aria-current="true">Herramientas</a>
+      <a href="/es/#como-funciona">Cómo funciona</a>
+      <a href="/es/#privacidad">Privacidad</a>
+      <a href="/tools/subnet-calculator/" class="nav-lang">EN 🌐</a>
     </div>
   </nav>
 
   <main>
     <div class="page-header">
-      <div class="eyebrow">Tools</div>
-      <h1>Subnet Calculator</h1>
-      <p class="page-sub">Enter an IPv4 address with a CIDR prefix or subnet mask. Get network address, broadcast, host range, wildcard mask, and binary breakdown — instantly, in your browser.</p>
+      <div class="eyebrow">Herramientas</div>
+      <h1>Calculadora de Subredes</h1>
+      <p class="page-sub">Introduce una dirección IPv4 con un prefijo CIDR o máscara de subred. Obtén la dirección de red, broadcast, rango de hosts, máscara wildcard y desglose binario — al instante, en tu navegador.</p>
     </div>
 
     <!-- Input -->
     <div class="input-panel">
       <div class="input-row">
         <div class="input-group">
-          <label for="ip-input">IP address / CIDR or subnet mask</label>
+          <label for="ip-input">Dirección IP / CIDR o máscara de subred</label>
           <input
             id="ip-input"
             class="ip-input"
             type="text"
-            placeholder="192.168.1.0/24 or 10.0.0.1 255.255.255.0"
+            placeholder="192.168.1.0/24 o 10.0.0.1 255.255.255.0"
             autocomplete="off"
             spellcheck="false"
           />
         </div>
-        <button class="calc-btn" id="calc-btn">Calculate →</button>
+        <button class="calc-btn" id="calc-btn">Calcular →</button>
       </div>
       <div class="error-msg" id="error-msg"></div>
       <div class="presets">
-        <span style="font-size:12px;color:var(--muted);align-self:center">Quick load:</span>
+        <span style="font-size:12px;color:var(--muted);align-self:center">Carga rápida:</span>
         <button class="preset-btn" data-ip="10.0.0.0/8">10.0.0.0/8</button>
         <button class="preset-btn" data-ip="172.16.0.0/12">172.16.0.0/12</button>
         <button class="preset-btn" data-ip="192.168.1.0/24">192.168.1.0/24</button>
@@ -412,66 +412,66 @@
 
       <div class="results-grid">
         <div class="result-card">
-          <div class="result-label">Network address</div>
+          <div class="result-label">Dirección de red</div>
           <div class="result-value big" id="r-network">—
-            <button class="copy-btn" data-target="r-network">copy</button>
+            <button class="copy-btn" data-target="r-network">copiar</button>
           </div>
         </div>
         <div class="result-card">
-          <div class="result-label">Broadcast address</div>
+          <div class="result-label">Dirección de broadcast</div>
           <div class="result-value big" id="r-broadcast">—
-            <button class="copy-btn" data-target="r-broadcast">copy</button>
+            <button class="copy-btn" data-target="r-broadcast">copiar</button>
           </div>
         </div>
         <div class="result-card">
-          <div class="result-label">First usable host</div>
+          <div class="result-label">Primer host utilizable</div>
           <div class="result-value green" id="r-first">—
-            <button class="copy-btn" data-target="r-first">copy</button>
+            <button class="copy-btn" data-target="r-first">copiar</button>
           </div>
         </div>
         <div class="result-card">
-          <div class="result-label">Last usable host</div>
+          <div class="result-label">Último host utilizable</div>
           <div class="result-value green" id="r-last">—
-            <button class="copy-btn" data-target="r-last">copy</button>
+            <button class="copy-btn" data-target="r-last">copiar</button>
           </div>
         </div>
         <div class="result-card">
-          <div class="result-label">Usable hosts</div>
+          <div class="result-label">Hosts utilizables</div>
           <div class="result-value amber" id="r-hosts">—</div>
           <div class="result-sub" id="r-hosts-sub"></div>
         </div>
         <div class="result-card">
-          <div class="result-label">Subnet mask</div>
+          <div class="result-label">Máscara de subred</div>
           <div class="result-value" id="r-mask">—
-            <button class="copy-btn" data-target="r-mask">copy</button>
+            <button class="copy-btn" data-target="r-mask">copiar</button>
           </div>
           <div class="result-sub" id="r-mask-sub"></div>
         </div>
         <div class="result-card">
-          <div class="result-label">Wildcard mask</div>
+          <div class="result-label">Máscara wildcard</div>
           <div class="result-value" id="r-wildcard">—
-            <button class="copy-btn" data-target="r-wildcard">copy</button>
+            <button class="copy-btn" data-target="r-wildcard">copiar</button>
           </div>
         </div>
         <div class="result-card">
-          <div class="result-label">CIDR notation</div>
+          <div class="result-label">Notación CIDR</div>
           <div class="result-value" id="r-cidr">—
-            <button class="copy-btn" data-target="r-cidr">copy</button>
+            <button class="copy-btn" data-target="r-cidr">copiar</button>
           </div>
         </div>
       </div>
 
       <!-- Binary breakdown -->
       <div class="binary-panel">
-        <div class="result-label">Binary breakdown</div>
+        <div class="result-label">Desglose binario</div>
         <table class="binary-table" id="binary-table">
           <thead>
             <tr>
-              <th>Field</th>
-              <th>Octet 1</th>
-              <th>Octet 2</th>
-              <th>Octet 3</th>
-              <th>Octet 4</th>
+              <th>Campo</th>
+              <th>Octeto 1</th>
+              <th>Octeto 2</th>
+              <th>Octeto 3</th>
+              <th>Octeto 4</th>
             </tr>
           </thead>
           <tbody id="binary-body"></tbody>
@@ -481,92 +481,92 @@
 
     <!-- Cheatsheet always visible -->
     <div class="cheatsheet">
-      <div class="cheatsheet-header">Common subnet reference — click any row to calculate</div>
+      <div class="cheatsheet-header">Referencia de subredes comunes — haz clic en una fila para calcular</div>
       <table class="cheat-table" id="cheat-table">
         <thead>
           <tr>
             <th>CIDR</th>
-            <th>Subnet mask</th>
+            <th>Máscara de subred</th>
             <th>Wildcard</th>
             <th>Hosts</th>
-            <th>Typical use</th>
+            <th>Uso típico</th>
           </tr>
         </thead>
         <tbody>
-          <tr data-cidr="8"><td>/8</td><td>255.0.0.0</td><td>0.255.255.255</td><td>16,777,214</td><td>Class A (10.x.x.x)</td></tr>
-          <tr data-cidr="12"><td>/12</td><td>255.240.0.0</td><td>0.15.255.255</td><td>1,048,574</td><td>172.16.0.0 private block</td></tr>
-          <tr data-cidr="16"><td>/16</td><td>255.255.0.0</td><td>0.0.255.255</td><td>65,534</td><td>Class B / large campus</td></tr>
-          <tr data-cidr="20"><td>/20</td><td>255.255.240.0</td><td>0.0.15.255</td><td>4,094</td><td>Medium campus VLAN</td></tr>
-          <tr data-cidr="22"><td>/22</td><td>255.255.252.0</td><td>0.0.3.255</td><td>1,022</td><td>Large office floor</td></tr>
-          <tr data-cidr="23"><td>/23</td><td>255.255.254.0</td><td>0.0.1.255</td><td>510</td><td>Office floor</td></tr>
-          <tr data-cidr="24"><td>/24</td><td>255.255.255.0</td><td>0.0.0.255</td><td>254</td><td>Standard LAN / VLAN</td></tr>
-          <tr data-cidr="25"><td>/25</td><td>255.255.255.128</td><td>0.0.0.127</td><td>126</td><td>Split LAN</td></tr>
-          <tr data-cidr="26"><td>/26</td><td>255.255.255.192</td><td>0.0.0.63</td><td>62</td><td>Small VLAN</td></tr>
-          <tr data-cidr="27"><td>/27</td><td>255.255.255.224</td><td>0.0.0.31</td><td>30</td><td>Small segment</td></tr>
-          <tr data-cidr="28"><td>/28</td><td>255.255.255.240</td><td>0.0.0.15</td><td>14</td><td>Server cluster</td></tr>
-          <tr data-cidr="29"><td>/29</td><td>255.255.255.248</td><td>0.0.0.7</td><td>6</td><td>Small cluster</td></tr>
-          <tr data-cidr="30"><td>/30</td><td>255.255.255.252</td><td>0.0.0.3</td><td>2</td><td>Point-to-point link</td></tr>
+          <tr data-cidr="8"><td>/8</td><td>255.0.0.0</td><td>0.255.255.255</td><td>16.777.214</td><td>Clase A (10.x.x.x)</td></tr>
+          <tr data-cidr="12"><td>/12</td><td>255.240.0.0</td><td>0.15.255.255</td><td>1.048.574</td><td>Bloque privado 172.16.0.0</td></tr>
+          <tr data-cidr="16"><td>/16</td><td>255.255.0.0</td><td>0.0.255.255</td><td>65.534</td><td>Clase B / campus grande</td></tr>
+          <tr data-cidr="20"><td>/20</td><td>255.255.240.0</td><td>0.0.15.255</td><td>4.094</td><td>VLAN de campus mediano</td></tr>
+          <tr data-cidr="22"><td>/22</td><td>255.255.252.0</td><td>0.0.3.255</td><td>1.022</td><td>Planta de oficina grande</td></tr>
+          <tr data-cidr="23"><td>/23</td><td>255.255.254.0</td><td>0.0.1.255</td><td>510</td><td>Planta de oficina</td></tr>
+          <tr data-cidr="24"><td>/24</td><td>255.255.255.0</td><td>0.0.0.255</td><td>254</td><td>LAN / VLAN estándar</td></tr>
+          <tr data-cidr="25"><td>/25</td><td>255.255.255.128</td><td>0.0.0.127</td><td>126</td><td>LAN dividida</td></tr>
+          <tr data-cidr="26"><td>/26</td><td>255.255.255.192</td><td>0.0.0.63</td><td>62</td><td>VLAN pequeña</td></tr>
+          <tr data-cidr="27"><td>/27</td><td>255.255.255.224</td><td>0.0.0.31</td><td>30</td><td>Segmento pequeño</td></tr>
+          <tr data-cidr="28"><td>/28</td><td>255.255.255.240</td><td>0.0.0.15</td><td>14</td><td>Clúster de servidores</td></tr>
+          <tr data-cidr="29"><td>/29</td><td>255.255.255.248</td><td>0.0.0.7</td><td>6</td><td>Clúster pequeño</td></tr>
+          <tr data-cidr="30"><td>/30</td><td>255.255.255.252</td><td>0.0.0.3</td><td>2</td><td>Enlace punto a punto</td></tr>
           <tr data-cidr="31"><td>/31</td><td>255.255.255.254</td><td>0.0.0.1</td><td>2*</td><td>P2P (RFC 3021)</td></tr>
-          <tr data-cidr="32"><td>/32</td><td>255.255.255.255</td><td>0.0.0.0</td><td>1</td><td>Host route</td></tr>
+          <tr data-cidr="32"><td>/32</td><td>255.255.255.255</td><td>0.0.0.0</td><td>1</td><td>Ruta de host</td></tr>
         </tbody>
       </table>
     </div>
 
         <!-- FAQ -->
     <div class="info-card">
-      <h2>Frequently asked questions</h2>
+      <h2>Preguntas frecuentes</h2>
       <div class="faq-list">
         <div class="faq-item">
-          <p class="faq-q">What is CIDR notation?</p>
-          <p class="faq-a">CIDR (Classless Inter-Domain Routing) notation appends a slash and a number to an IP address — like 192.168.1.0/24 — to indicate how many bits of the address are the network portion versus the host portion.</p>
+          <p class="faq-q">¿Qué es la notación CIDR?</p>
+          <p class="faq-a">La notación CIDR (Classless Inter-Domain Routing) añade una barra y un número a una dirección IP — como 192.168.1.0/24 — para indicar cuántos bits de la dirección son la parte de red frente a la parte de host.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">How do I calculate usable hosts in a subnet?</p>
-          <p class="faq-a">Enter your IPv4 address with its CIDR prefix or subnet mask and the tool instantly shows the network address, broadcast address, host range, wildcard mask, and total usable hosts.</p>
+          <p class="faq-q">¿Cómo calculo los hosts utilizables en una subred?</p>
+          <p class="faq-a">Introduce tu dirección IPv4 con su prefijo CIDR o máscara de subred y la herramienta muestra al instante la dirección de red, dirección de broadcast, rango de hosts, máscara wildcard y total de hosts utilizables.</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">Does this tool support IPv6?</p>
-          <p class="faq-a">Not currently — this calculator is built for IPv4 subnetting (CIDR prefixes and subnet masks).</p>
+          <p class="faq-q">¿Admite esta herramienta IPv6?</p>
+          <p class="faq-a">Actualmente no — esta calculadora está pensada para subredes IPv4 (prefijos CIDR y máscaras de subred).</p>
         </div>
         <div class="faq-item">
-          <p class="faq-q">What's the difference between the network address and broadcast address?</p>
-          <p class="faq-a">The network address is the first address in a subnet and identifies the subnet itself; it can't be assigned to a host. The broadcast address is the last address in the subnet and is reserved for sending to every host on that subnet.</p>
+          <p class="faq-q">¿Cuál es la diferencia entre la dirección de red y la dirección de broadcast?</p>
+          <p class="faq-a">La dirección de red es la primera dirección de una subred e identifica la subred en sí; no puede asignarse a un host. La dirección de broadcast es la última dirección de la subred y está reservada para enviar a todos los hosts de esa subred.</p>
         </div>
       </div>
     </div>
 
     <!-- RELATED -->
     <div class="related">
-      <div class="related-label">Related tools</div>
+      <div class="related-label">Herramientas relacionadas</div>
       <div class="related-links">
-          <a class="related-link" href="/tools/ip-extractor/">
-            IP Address Extractor
-            <span>Pull IPs out of logs before running them through the subnet calculator</span>
+          <a class="related-link" href="/es/tools/ip-extractor/">
+            Extractor de Direcciones IP
+            <span>Extrae IPs de logs antes de pasarlas por la calculadora de subredes</span>
           </a>
           <a class="related-link" href="/blog/sanitize-network-config-before-sharing/">
             How to Sanitize a Network Config Before Sharing It
-            <span>Strip real IPs and subnets from configs before posting them for help</span>
+            <span>Elimina IPs y subredes reales de las configs antes de publicarlas para pedir ayuda</span>
           </a>
       </div>
     </div>
 
     <!-- CTA -->
     <div class="cta-box">
-      <p>Working with network configs? <strong>ScrubForge</strong> removes IP addresses, passwords, and community strings before you paste configs into AI assistants or support tickets — keeping your topology private.</p>
+      <p>¿Trabajas con configuraciones de red? <strong>ScrubForge</strong> elimina direcciones IP, contraseñas y community strings antes de pegar configs en asistentes de IA o tickets de soporte — manteniendo tu topología privada.</p>
       <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">
-        Try ScrubForge free — Chrome Web Store →
+        Prueba ScrubForge gratis — Chrome Web Store →
       </a>
     </div>
   </main>
 
   <footer>
-    <div class="footer-brand"><strong>Wendygo Studio</strong> &middot; Tenerife, Canary Islands</div>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> &middot; Tenerife, Islas Canarias</div>
     <div class="footer-links">
-      <a href="/#products">Extensions</a>
-      <a href="/blog/">Blog</a>
-      <a href="/tools/">Tools</a>
-      <a href="/privacy">Privacy policy</a>
-      <a href="/terms">Terms</a>
+      <a href="/es/#productos">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/tools/">Herramientas</a>
+      <a href="/es/privacy">Política de privacidad</a>
+      <a href="/es/terms">Términos</a>
     </div>
   </footer>
 
@@ -614,24 +614,24 @@
 
     function pad8(n) { return n.toString(2).padStart(8, '0'); }
 
-    function formatNum(n) { return n.toLocaleString('en-US'); }
+    function formatNum(n) { return n.toLocaleString('es-ES'); }
 
     function classify(ipNum) {
       const a = (ipNum >>> 24) & 255;
       const b = (ipNum >>> 16) & 255;
       // private?
-      if (a === 10) return { scope: 'Private', cls: 'A' };
-      if (a === 172 && b >= 16 && b <= 31) return { scope: 'Private', cls: 'B' };
-      if (a === 192 && b === 168) return { scope: 'Private', cls: 'C' };
+      if (a === 10) return { scope: 'Privada', cls: 'A' };
+      if (a === 172 && b >= 16 && b <= 31) return { scope: 'Privada', cls: 'B' };
+      if (a === 192 && b === 168) return { scope: 'Privada', cls: 'C' };
       if (a === 127) return { scope: 'Loopback', cls: null };
       if (a === 169 && b === 254) return { scope: 'Link-local', cls: null };
       if (a >= 224 && a <= 239) return { scope: 'Multicast', cls: 'D' };
-      if (a >= 240) return { scope: 'Reserved', cls: 'E' };
+      if (a >= 240) return { scope: 'Reservada', cls: 'E' };
       // classful
-      if (a < 128) return { scope: 'Public', cls: 'A' };
-      if (a < 192) return { scope: 'Public', cls: 'B' };
-      if (a < 224) return { scope: 'Public', cls: 'C' };
-      return { scope: 'Public', cls: null };
+      if (a < 128) return { scope: 'Pública', cls: 'A' };
+      if (a < 192) return { scope: 'Pública', cls: 'B' };
+      if (a < 224) return { scope: 'Pública', cls: 'C' };
+      return { scope: 'Pública', cls: null };
     }
 
     // ── parse input ───────────────────────────────────────────────
@@ -662,7 +662,7 @@
         return { ipNum, maskNum: 0xFFFFFFFF, prefix: 32 };
       } catch (_) {}
 
-      throw new Error('Enter an IP with CIDR (e.g. 192.168.1.0/24) or IP + subnet mask (e.g. 10.0.0.1 255.255.255.0).');
+      throw new Error('Introduce una IP con CIDR (p.ej. 192.168.1.0/24) o IP + máscara de subred (p.ej. 10.0.0.1 255.255.255.0).');
     }
 
     // ── calculate ─────────────────────────────────────────────────
@@ -718,9 +718,9 @@
 
     function renderBinary(res) {
       const rows = [
-        { label: 'IP address',   num: res._ip },
-        { label: 'Subnet mask',  num: res._mask },
-        { label: 'Network addr', num: res._net },
+        { label: 'Dirección IP',  num: res._ip },
+        { label: 'Máscara subred', num: res._mask },
+        { label: 'Dir. de red',  num: res._net },
         { label: 'Wildcard',     num: res._wild },
       ];
       const netBits = res.prefix;
@@ -759,7 +759,7 @@
       };
       add(`/${res.prefix}`, 'class');
       if (res.info.cls) add(`Class ${res.info.cls}`, 'class');
-      add(res.info.scope, res.info.scope === 'Private' ? 'private' : res.info.scope === 'Public' ? 'public' : 'special');
+      add(res.info.scope, res.info.scope === 'Privada' ? 'private' : res.info.scope === 'Pública' ? 'public' : 'special');
       if (res.prefix === 31) add('RFC 3021 P2P', 'special');
       if (res.prefix === 32) add('Host route', 'special');
     }
@@ -778,7 +778,7 @@
       textContent($('r-hosts'),     formatNum(res.hostCount));
 
       $('r-mask-sub').textContent = '/' + res.prefix;
-      $('r-hosts-sub').textContent = formatNum(res.totalAddresses) + ' total addresses';
+      $('r-hosts-sub').textContent = formatNum(res.totalAddresses) + ' direcciones en total';
 
       renderBadges(res);
       renderBinary(res);
@@ -796,9 +796,9 @@
         if (node.nodeType === 3) { val = node.textContent.trim(); break; }
       }
       navigator.clipboard.writeText(val).then(() => {
-        btn.textContent = 'copied!';
+        btn.textContent = '¡copiado!';
         btn.classList.add('copied');
-        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 1500);
+        setTimeout(() => { btn.textContent = 'copiar'; btn.classList.remove('copied'); }, 1500);
       });
     });
 
@@ -847,7 +847,7 @@
         const res = calculate(val);
         render(res);
       } catch (e) {
-        showError(e.message || 'Invalid input. Try 192.168.1.0/24.');
+        showError(e.message || 'Entrada no válida. Prueba con 192.168.1.0/24.');
       }
     }
 
