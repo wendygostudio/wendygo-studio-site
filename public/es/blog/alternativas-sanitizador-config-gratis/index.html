@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alternativas a Sanitizador de Config Gratis (2026) | Wendygo Studio</title>
+<meta name="description" content="Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge." />
+<link rel="canonical" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/" />
+<link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/" />
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://wendygostudio.com/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/es/blog/"},{"@type":"ListItem","position":3,"name":"Alternativas a Sanitizador de Config Gratis (2026)"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Alternativas a Sanitizador de Config Gratis (2026)","description":"Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge.","datePublished":"2026-07-19","dateModified":"2026-07-19","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Es CyberChef seguro para sanitizar configuraciones de red?","acceptedAnswer":{"@type":"Answer","text":"CyberChef estándar (bake.gchq.github.io) se ejecuta en el navegador, pero el sitio es servido por infraestructura de GCHQ. La mayoría de profesionales de seguridad tratan las herramientas basadas en web igual que cualquier servidor de terceros. Si ejecutas CyberChef en tu propia infraestructura, se convierte en una herramienta local. De lo contrario, para configuraciones de producción sensibles, un enfoque solo local es más seguro."}},{"@type":"Question","name":"¿Puedo escribir mi propio script bash para sanitizar configuraciones de Cisco?","acceptedAnswer":{"@type":"Answer","text":"Sí. Un script sed o awk puede eliminar patrones conocidos de un archivo de configuración sin enviar nada a un servidor externo. El problema: tienes que mantener la lista de patrones tú mismo. Las nuevas versiones de firmware a menudo cambian ligeramente la sintaxis de credenciales. Si tu script falla en un patrón, la credencial se envía en texto plano sin advertencia."}},{"@type":"Question","name":"¿Qué detecta ScrubForge que los scripts manuales generalmente pierden?","acceptedAnswer":{"@type":"Answer","text":"ScrubForge cubre más de 120 patrones incluyendo contraseñas cifradas tipo 7 de Cisco, hashes ENC de FortiGate, cadenas de comunidad SNMP, contraseñas de vecinos BGP, claves de acceso AWS, tokens de GitHub, tokens de Slack y secretos JWT. Los scripts manuales típicamente capturan palabras clave obvias de contraseña y secreto pero pierden formatos codificados y credenciales de servicio integradas en sintaxis específica del proveedor."}},{"@type":"Question","name":"¿Funciona ScrubForge sin conexión?","acceptedAnswer":{"@type":"Answer","text":"Sí. ScrubForge es una extensión Chrome que se ejecuta completamente en el dispositivo. No se carga ningún dato de configuración. La coincidencia de patrones sucede localmente en tu navegador sin solicitudes de red. Esto lo hace adecuado para entornos restringidos donde puedes instalar extensiones de Chrome pero no puedes enviar datos de configuración externamente."}},{"@type":"Question","name":"¿Cuál es la diferencia entre las versiones gratuita y Pro de ScrubForge?","acceptedAnswer":{"@type":"Answer","text":"La versión gratuita cubre sanitización principal: pega una configuración, detecta y reemplaza credenciales con tokens de marcador de posición consistentes, copia la salida sanitizada. Pro añade importación/exportación de diccionario personalizado (trae tus propios patrones para formatos de proveedor inusuales), perfiles de contexto para diferentes entornos de proveedor e integración BYOK AI con cinco proveedores de IA para análisis en la extensión."}}]}
+</script>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Alternativas a Sanitizador de Config Gratis (2026) | Wendygo Studio" />
+<meta property="og:description" content="Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge." />
+<meta property="og:url" content="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/" />
+<meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Alternativas a Sanitizador de Config Gratis (2026) | Wendygo Studio" />
+<meta name="twitter:description" content="Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge." />
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #13151a; --surf: #1c1f26; --surf2: #232831; --line: #2e343f;
+  --text: #e7e9ee; --muted: #8b93a3; --faint: #4e5768;
+  --amber: #e8a33d; --amber2: #f0b75a; --on-a: #13151a;
+  --r: 9px;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--ink); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+nav { position: sticky; top: 0; z-index: 10; background: rgba(19,21,26,.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px,5vw,60px); height: 56px; }
+.nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; letter-spacing: .3px; text-decoration: none; color: var(--text); }
+.nav-mark { width: 28px; height: 28px; border-radius: 7px; background: var(--amber); display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+.nav-links a:hover { color: var(--text); }
+.nav-toggle { display: none; }
+.nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+.nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+@media (max-width: 600px) {
+  nav { position: relative; flex-wrap: wrap; }
+  .nav-burger { display: flex; }
+  .nav-links { display: flex; flex-direction: column; align-items: stretch; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: var(--ink); border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden; opacity: 0; transition: max-height .3s ease, opacity .25s ease, padding .3s ease; }
+  .nav-links a { padding: 14px clamp(20px,5vw,60px); border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+.article-wrap { max-width: 720px; margin: 0 auto; padding: clamp(32px,5vw,64px) clamp(20px,5vw,40px); }
+.breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 28px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+.breadcrumb a:hover { color: var(--muted); }
+.article-meta { margin-bottom: 32px; }
+.article-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+.article-meta h1 { font-size: clamp(22px,4vw,34px); font-weight: 800; line-height: 1.15; letter-spacing: -.4px; margin-bottom: 16px; }
+.article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+.article-date { font-size: 13px; color: var(--faint); }
+hr.divider { border: none; border-top: 1px solid var(--line); margin: 0 0 36px; }
+.article-body { line-height: 1.75; }
+.article-body p { margin-bottom: 20px; }
+.article-body h2 { font-size: 20px; font-weight: 700; letter-spacing: -.2px; margin: 36px 0 14px; color: var(--text); }
+.article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+.article-body a:hover { text-decoration-color: var(--amber); }
+.article-body code { font-family: var(--mono); font-size: 13px; background: var(--surf2); border: 1px solid var(--line); padding: 1px 6px; border-radius: 4px; color: var(--amber2); }
+.article-body pre { background: var(--surf2); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 20px 0; color: var(--amber2); font-family: var(--mono); }
+.article-body ul { margin: 16px 0 20px 20px; }
+.article-body li { margin-bottom: 8px; color: var(--muted); }
+.article-body li strong { color: var(--text); }
+.comparison-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.comparison-table th { background: var(--surf); color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 10px 14px; text-align: left; border-bottom: 2px solid var(--line); }
+.comparison-table td { padding: 10px 14px; border-bottom: 1px solid var(--line); color: var(--muted); vertical-align: top; }
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table td:first-child { color: var(--text); font-weight: 600; }
+.good { color: #5fb365; }
+.bad { color: #e05252; }
+.callout { background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber); border-radius: 8px; padding: 16px 20px; margin: 24px 0; font-size: 14px; color: var(--muted); line-height: 1.65; }
+.callout strong { color: var(--text); }
+.cta-box { margin: 48px 0 0; padding: 28px 32px; background: var(--surf); border: 1px solid var(--line); border-radius: var(--r); text-align: center; }
+.cta-box h2 { font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.2px; }
+.cta-box p { font-size: 15px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+.cta-btn { display: inline-block; background: var(--amber); color: var(--on-a); font-weight: 800; font-size: 14px; letter-spacing: .3px; border-radius: 7px; padding: 12px 24px; text-decoration: none; transition: background .15s; }
+.cta-btn:hover { background: var(--amber2); }
+.faq { margin-top: 56px; }
+.faq h2 { font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+.faq-item { border: 1px solid var(--line); border-radius: 8px; margin-bottom: 12px; padding: 18px 20px; background: var(--surf); }
+.faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+footer { border-top: 1px solid var(--line); margin-top: 80px; padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-brand" href="/es/"><div class="nav-mark">W</div> Wendygo Studio</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></label>
+  <div class="nav-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/es/#tools">Herramientas</a>
+    <a href="/blog/" class="nav-lang">EN 🌐</a>
+  </div>
+</nav>
+<main class="article-wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/es/">Inicio</a><span>›</span>
+    <a href="/es/blog/">Blog</a><span>›</span>
+    <span>Alternativas a Sanitizador de Config Gratis (2026)</span>
+  </nav>
+  <header class="article-meta">
+    <div class="article-tag">ScrubForge · Comparativa</div>
+    <h1>Alternativas a Sanitizador de Config Gratis (2026)</h1>
+    <p class="article-intro">Necesitas compartir una configuración de red sin filtrar contraseñas, PSK y cadenas SNMP. Aquí están las herramientas reales que usan los administradores de sistemas — desde líneas de bash hasta extensiones de Chrome — y dónde cada una falla.</p>
+    <div class="article-date">19 de julio de 2026</div>
+  </header>
+  <hr class="divider" />
+  <article class="article-body">
+    <p>Compartir una configuración de red es una parte normal del trabajo: tickets de soporte, publicaciones en Reddit, wikis de equipo, resolución de problemas asistida por IA. El problema es que las configuraciones de producción están llenas de credenciales. Una configuración de ejecución de Cisco IOS típicamente contiene contraseñas cifradas, claves precompartidas para cada túnel IPsec, cadenas de comunidad SNMP y a veces contraseñas BGP en texto plano. Envía ese archivo sin sanitizar y has efectivamente enviado por correo electrónico las credenciales de tu infraestructura a un extraño.</p>
+    <p>No hay una única herramienta oficial para esto. Los administradores de sistemas recurren a lo que ya está en su flujo de trabajo. Aquí hay cómo se comparan los enfoques comunes — y dónde cada uno falla.</p>
+    <h2>Opción 1: Líneas de Bash (sed / awk)</h2>
+    <p>Un <a href="/blog/sanitize-network-config-before-sharing/">script de sanitización basado en sed</a> es el enfoque más común para ingenieros cómodos en la línea de comandos. La idea central es sustitución de expresión regular aplicada al archivo de configuración exportado antes de compartirlo:</p>
+<pre># Eliminar contraseñas de Cisco IOS y cadenas SNMP
+sed -E \
+  -e 's/(password|secret) [0-9]+ [^ ]+/\1 7 [REDACTED]/g' \
+  -e 's/(snmp-server community) [^ ]+/\1 [SNMP_STRING]/g' \
+  running.cfg</pre>
+    <p><strong>Funciona bien cuando:</strong> tus configuraciones siguen un formato de proveedor consistente que conoces bien, mantienes una lista de patrones seleccionados para tus dispositivos específicos y las configuraciones se comparten ocasionalmente en lugar de constantemente.</p>
+    <p><strong>Dónde falla:</strong> Cisco IOS por sí sola tiene múltiples formatos de codificación de contraseña (tipo 0, 4, 5, 7, 8, 9). FortiGate usa hashes con prefijo <code>ENC</code> con una estructura diferente. Las contraseñas de vecino BGP se encuentran en su propia línea con una palabra clave no obvia. Un script que maneja IOS perfectamente perderá la mitad de lo que contiene una configuración de FortiGate. El riesgo más profundo es el silencio: si tu patrón falla al coincidir, nada te advierte — la credencial se envía en la salida.</p>
+    <h2>Opción 2: Notepad++ o VSCode Buscar y Reemplazar</h2>
+    <p>Ambos editores soportan búsqueda y reemplazo en modo regex, que te permite sustituir patrones interactivamente. El flujo de trabajo: abre la configuración, ejecuta un reemplazo para cada tipo de credencial, escanea visualmente, guarda la versión sanitizada.</p>
+    <p><strong>Funciona bien cuando:</strong> estás haciendo una sanitización única de una configuración pequeña y quieres control visual sobre cada sustitución.</p>
+    <p><strong>Dónde falla:</strong> es completamente manual. Tienes que recordar cada patrón relevante para ese proveedor, ejecutar reemplazos uno por uno y verificar que nada fue omitido. Con una exportación de cortafuegos de 2.000 líneas esto toma quince minutos y aún depende de tener un modelo mental completo de dónde aparecen las credenciales en la sintaxis de ese proveedor. La mayoría de las personas se detienen después de tres o cuatro patrones y lo dan por hecho.</p>
+    <h2>Opción 3: Tubería de Regex de CyberChef</h2>
+    <p>CyberChef es una poderosa herramienta de transformación de datos que soporta operaciones de regex encadenadas. Puedes construir una receta que aplique múltiples patrones de sustitución en secuencia, guardarla y reutilizarla entre sesiones.</p>
+    <div class="callout"><strong>Nota de privacidad:</strong> La instancia pública de CyberChef (bake.gchq.github.io) sirve la app desde infraestructura externa. Tus datos de configuración pasan por ese servidor cuando la página carga. Para credenciales de producción, trata cualquier herramienta basada en web igual que enviar por correo electrónico la configuración — úsala solo si ejecutas una instancia auto-alojada en tu propia red.</div>
+    <p><strong>Funciona bien cuando:</strong> tienes una instancia auto-alojada de CyberChef en tu propia infraestructura y una receta cuidadosamente mantenida para tu mezcla de proveedores.</p>
+    <p><strong>Dónde falla:</strong> sin patrones de proveedor de red integrados, sin paso de pre-revisión y la instancia pública no es apropiada para configuraciones sensibles. El auto-alojamiento resuelve el problema de privacidad pero añade sobrecarga operativa que la mayoría de los equipos preferiría evitar.</p>
+    <h2>Opción 4: Extensión ScrubForge Chrome</h2>
+    <p><a href="/es/scrubforge/">ScrubForge</a> es una extensión Chrome construida específicamente para sanitización de configuraciones de red. Pega una configuración, sanitiza, revisa la salida, copia la versión limpia. Nada se carga — toda la coincidencia de patrones se ejecuta localmente en tu navegador.</p>
+    <p>Se envía con más de 120 patrones de detección en 12 proveedores de red. Reemplaza cada credencial única con un token consistente — <code>[PSK_1]</code>, <code>[ADMIN_PASS_1]</code>, <code>[SNMP_RO_1]</code> — para que la estructura lógica de la configuración se preserve. Si la misma contraseña aparece en cinco lugares, cada instancia se convierte en <code>[ADMIN_PASS_1]</code>, lo que significa que un asistente de IA aún puede razonar sobre reutilización de credenciales sin ver el valor real. Esto se empareja naturalmente con <a href="/blog/remove-sensitive-data-cisco-config/">eliminar datos sensibles de configuraciones de Cisco</a> antes de sesiones de resolución de problemas asistidas por IA.</p>
+    <p>El nivel gratuito cubre sanitización principal. Pro añade importación/exportación de diccionario personalizado para formatos de proveedor inusuales, perfiles de contexto e integración BYOK AI con cinco proveedores.</p>
+    <h2>Comparación Lado a Lado</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Herramienta</th>
+          <th>¿Solo local?</th>
+          <th>¿Patrones preconstruidos?</th>
+          <th>¿Paso de revisión?</th>
+          <th>Esfuerzo por uso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bash / sed</td>
+          <td class="good">Sí</td>
+          <td class="bad">No — mantén tú mismo</td>
+          <td class="bad">Ninguno</td>
+          <td class="good">Bajo (una vez que se construye el script)</td>
+        </tr>
+        <tr>
+          <td>VSCode / Notepad++</td>
+          <td class="good">Sí</td>
+          <td class="bad">No — manual por config</td>
+          <td class="good">Visual</td>
+          <td class="bad">Alto cada vez</td>
+        </tr>
+        <tr>
+          <td>CyberChef (auto-alojado)</td>
+          <td class="good">Sí</td>
+          <td class="bad">No — construye tu propia receta</td>
+          <td class="good">Parcial</td>
+          <td class="good">Bajo (una vez que se construye la receta)</td>
+        </tr>
+        <tr>
+          <td>CyberChef (público)</td>
+          <td class="bad">No</td>
+          <td class="bad">No — construye tu propia receta</td>
+          <td class="good">Parcial</td>
+          <td class="good">Bajo</td>
+        </tr>
+        <tr>
+          <td>ScrubForge (gratuito)</td>
+          <td class="good">Sí</td>
+          <td class="good">120+ patrones integrados</td>
+          <td class="good">Revisión integrada</td>
+          <td class="good">Bajo</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>¿Cuál Deberías Usar?</h2>
+    <ul>
+      <li><strong>Equipo cómodo con scripts, entorno de proveedor consistente:</strong> un script bash mantenido funciona bien. Presupuesta tiempo para actualizar patrones cuando los cambios de firmware cambian formatos de palabra clave.</li>
+      <li><strong>Sanitización urgente única, sin trasfondo de scripting:</strong> regex de VSCode es un respaldo razonable — ve lentamente y escanea la salida manualmente antes de enviar.</li>
+      <li><strong>Equipo con CyberChef auto-alojado ya ejecutándose:</strong> construye una receta y documéntala en tus runbooks.</li>
+      <li><strong>Compartición regular de configuración, entorno multi-proveedor o resolución de problemas asistida por IA:</strong> ScrubForge es la opción de menor fricción. La biblioteca de patrones preconstruida cubre la mezcla de proveedores que la mayoría de los equipos se encuentran y el paso de revisión integrado antes de copiar atrapa cualquier cosa inusual.</li>
+    </ul>
+    <p>Ninguna de estas herramientas garantiza que una salida sanitizada sea segura — esa responsabilidad permanece con el ingeniero que la comparte. Dedica treinta segundos a leer la configuración sanitizada antes de enviar, independientemente de qué herramienta la produjo.</p>
+    <div class="cta-box">
+      <h2>Prueba ScrubForge gratis</h2>
+      <p>120+ patrones, 12 proveedores, completamente local. Sin carga, sin cuenta requerida para usar la característica de sanitización principal.</p>
+      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Instalar ScrubForge — Gratuito</a>
+    </div>
+  </article>
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <div class="faq-q">¿Es CyberChef seguro para sanitizar configuraciones de red?</div>
+      <div class="faq-a">CyberChef estándar (bake.gchq.github.io) se ejecuta en el navegador, pero el sitio es servido por infraestructura de GCHQ. La mayoría de profesionales de seguridad tratan las herramientas basadas en web igual que cualquier servidor de terceros. Si ejecutas CyberChef en tu propia infraestructura, se convierte en una herramienta local. De lo contrario, para configuraciones de producción sensibles, un enfoque solo local es más seguro.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo escribir mi propio script bash para sanitizar configuraciones de Cisco?</div>
+      <div class="faq-a">Sí. Un script sed o awk puede eliminar patrones conocidos de un archivo de configuración sin enviar nada a un servidor externo. El problema: tienes que mantener la lista de patrones tú mismo. Las nuevas versiones de firmware a menudo cambian ligeramente la sintaxis de credenciales. Si tu script falla en un patrón, la credencial se envía en texto plano sin advertencia.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué detecta ScrubForge que los scripts manuales generalmente pierden?</div>
+      <div class="faq-a">ScrubForge cubre más de 120 patrones incluyendo contraseñas cifradas tipo 7 de Cisco, hashes ENC de FortiGate, cadenas de comunidad SNMP, contraseñas de vecinos BGP, claves de acceso AWS, tokens de GitHub, tokens de Slack y secretos JWT. Los scripts manuales típicamente capturan palabras clave obvias de contraseña y secreto pero pierden formatos codificados y credenciales de servicio integradas en sintaxis específica del proveedor.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Funciona ScrubForge sin conexión?</div>
+      <div class="faq-a">Sí. ScrubForge es una extensión Chrome que se ejecuta completamente en el dispositivo. No se carga ningún dato de configuración. La coincidencia de patrones sucede localmente en tu navegador sin solicitudes de red. Esto lo hace adecuado para entornos restringidos donde puedes instalar extensiones de Chrome pero no puedes enviar datos de configuración externamente.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Cuál es la diferencia entre las versiones gratuita y Pro de ScrubForge?</div>
+      <div class="faq-a">La versión gratuita cubre sanitización principal: pega una configuración, detecta y reemplaza credenciales con tokens de marcador de posición consistentes, copia la salida sanitizada. Pro añade importación/exportación de diccionario personalizado (trae tus propios patrones para formatos de proveedor inusual), perfiles de contexto para diferentes entornos de proveedor e integración BYOK AI con cinco proveedores de IA para análisis en la extensión.</div>
+    </div>
+  </section>
+</main>
+<footer>
+  <a class="footer-brand" href="/es/">Wendygo Studio</a>
+  <div class="footer-links">
+    <a href="/es/blog/">Blog</a>
+    <a href="/es/#tools">Herramientas</a>
+    <a href="/privacy">Privacidad</a>
+    <a href="/terms">Términos</a>
+  </div>
+  <div class="footer-copy">© 2026 Wendygo Studio. Todos los derechos reservados.</div>
+</footer>
+</body>
+</html>

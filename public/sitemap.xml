@@ -1225,6 +1225,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomofocus-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomofocus-alternatives/"/>
   </url>
 
   <url>
@@ -1232,6 +1242,16 @@
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
   </url>
 
