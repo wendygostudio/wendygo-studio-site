@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Slug Generator — Convert Text to SEO-Friendly Slugs Free</title>
+  <meta name="description" content="Convert any text to a URL-friendly slug instantly. Handles accents, spaces, and special characters. Supports hyphen or underscore separator. Free, 100% local — nothing leaves your browser." />
+  <link rel="canonical" href="https://wendygostudio.com/tools/slug-generator/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "URL Slug Generator",
+      "url": "https://wendygostudio.com/tools/slug-generator/",
+      "description": "Free browser-based slug generator. Converts any text into a URL-friendly slug by normalizing accents, replacing spaces, and removing special characters. Choose hyphen or underscore separator. 100% local — nothing sent to any server.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Converts accented characters (á, ü, ñ, etc.) to their ASCII equivalents",
+        "Hyphen or underscore separator",
+        "Optional max-length limit with clean truncation",
+        "Lowercase or preserve original case",
+        "Live generation as you type",
+        "One-click copy to clipboard",
+        "100% local — no server upload"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "Slug Generator", "item": "https://wendygostudio.com/tools/slug-generator/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my text processed on a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The entire conversion runs in your browser using JavaScript. Your text never leaves your device and is never sent to any server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which special characters does it remove?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any character that is not a letter, digit, or the chosen separator is removed. Accented characters (á, é, ü, ñ, ç, etc.) are first converted to their closest ASCII equivalent before the rest of the cleanup runs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it handle accented or non-Latin characters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The tool normalizes Unicode (NFD) to decompose accented characters into base letters plus combining marks, then strips the combining marks. So 'café' becomes 'cafe' and 'año' becomes 'ano'. Characters without a Latin equivalent (e.g. Arabic, Chinese) are removed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a slug and a URL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A URL is the full web address (e.g. https://example.com/blog/my-post/). A slug is just the human-readable, URL-safe segment that identifies the page — in this case 'my-post'. Slugs are typically the last path segment and are generated from a page's title."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a character limit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not by default. You can set an optional max-length in the options and the tool will truncate cleanly at a word boundary (no trailing separator)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I use underscore instead of hyphen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For public-facing URLs and SEO, hyphens are the standard and recommended by Google. Underscores are sometimes used in internal identifiers, database keys, or Python/Ruby variable conventions where a slug is used as a code-safe string rather than a URL path."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --green:  #4ade80;
+      --r: 9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "Cascadia Code", "Fira Code", "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased; min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-lang { white-space: nowrap; }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 860px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,60px) clamp(60px,8vw,100px);
+    }
+
+    /* ── HEADER ── */
+    .page-header { margin-bottom: 40px; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--muted); margin-bottom: 20px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--amber); }
+    .breadcrumb span { color: var(--faint); }
+    h1 {
+      font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.8px; margin-bottom: 12px;
+    }
+    .page-sub { font-size: 15px; color: var(--muted); max-width: 580px; }
+
+    /* ── TOOL CARD ── */
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      margin-bottom: 24px;
+    }
+
+    /* ── INPUT ── */
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+      display: block;
+    }
+    .slug-input {
+      width: 100%; background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-family: var(--sans); font-size: 15px;
+      padding: 12px 16px; border-radius: var(--r);
+      outline: none; resize: vertical; min-height: 80px; line-height: 1.5;
+      transition: border-color .15s;
+    }
+    .slug-input:focus { border-color: var(--amber); }
+    .slug-input::placeholder { color: var(--faint); }
+
+    /* ── OPTIONS ── */
+    .options-row {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      margin: 18px 0;
+    }
+    .opt-group { display: flex; flex-direction: column; gap: 8px; }
+
+    .toggle-group {
+      display: flex; gap: 0; border-radius: var(--r);
+      overflow: hidden; border: 1px solid var(--line);
+    }
+    .toggle-btn {
+      background: var(--surf2); border: none; color: var(--muted);
+      font-size: 13px; font-weight: 600; padding: 9px 16px; cursor: pointer;
+      transition: background .15s, color .15s; white-space: nowrap;
+    }
+    .toggle-btn:not(:last-child) { border-right: 1px solid var(--line); }
+    .toggle-btn.active { background: var(--amber); color: var(--on-a); }
+    .toggle-btn:hover:not(.active) { background: var(--line); color: var(--text); }
+
+    .maxlen-input {
+      background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-family: var(--mono); font-size: 14px;
+      padding: 9px 12px; border-radius: var(--r); width: 90px;
+      outline: none; transition: border-color .15s;
+    }
+    .maxlen-input:focus { border-color: var(--amber); }
+
+    /* ── OUTPUT ── */
+    .output-row {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .slug-output {
+      flex: 1; background: var(--surf2); border: 1px solid var(--line);
+      color: var(--amber2); font-family: var(--mono); font-size: 15px;
+      padding: 12px 16px; border-radius: var(--r);
+      min-height: 48px; word-break: break-all; line-height: 1.5;
+      user-select: all;
+    }
+    .slug-output.empty { color: var(--faint); font-family: var(--sans); font-size: 14px; font-style: italic; }
+
+    .btn-copy {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-size: 13px; font-weight: 600;
+      padding: 10px 16px; border-radius: var(--r); cursor: pointer;
+      transition: border-color .15s, color .15s; flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .btn-copy:hover { border-color: var(--amber); color: var(--amber); }
+    .btn-copy.copied { border-color: var(--green); color: var(--green); }
+
+    /* ── STATS ── */
+    .stats-bar {
+      display: flex; gap: 20px; margin-top: 14px;
+      font-size: 12.5px; color: var(--muted); flex-wrap: wrap;
+    }
+    .stat { display: flex; align-items: center; gap: 5px; }
+    .stat-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); }
+
+    /* ── INFO ── */
+    .info-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      margin-bottom: 24px;
+    }
+    .info-card h2 {
+      font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--text);
+    }
+    .info-card p {
+      font-size: 14.5px; color: var(--muted); line-height: 1.7; margin-bottom: 10px;
+    }
+    .info-card p:last-child { margin-bottom: 0; }
+    code {
+      font-family: var(--mono); font-size: 12.5px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+
+    /* ── FAQ ── */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ── RELATED ── */
+    .related { margin: 32px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    /* ── CTA ── */
+    .cta-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      display: flex; align-items: flex-start; gap: 20px; margin-top: 24px;
+    }
+    .cta-icon {
+      width: 48px; height: 48px; border-radius: 12px; background: var(--amber);
+      display: grid; place-items: center; font-size: 24px;
+      color: var(--on-a); flex-shrink: 0;
+    }
+    .cta-body { flex: 1; }
+    .cta-body h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .cta-body p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .cta-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 13.5px; text-decoration: none;
+      padding: 10px 18px; border-radius: var(--r); transition: filter .15s;
+    }
+    .cta-link:hover { filter: brightness(1.1); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: clamp(32px,5vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; color: var(--muted); gap: 16px; flex-wrap: wrap;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+
+    /* ── RESPONSIVE ── */
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .output-row { flex-direction: column; align-items: stretch; }
+      .btn-copy { justify-content: center; }
+      .cta-card { flex-direction: column; }
+      .footer-links { flex-wrap: wrap; gap: 12px; }
+      .options-row { gap: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="URL Slug Generator — Convert Text to SEO-Friendly Slugs Free">
+  <meta property="og:description" content="Convert any text to a URL-friendly slug instantly. Handles accents, spaces, and special characters. Free, 100% local — nothing leaves your browser.">
+  <meta property="og:url" content="https://wendygostudio.com/tools/slug-generator/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="URL Slug Generator — Convert Text to SEO-Friendly Slugs Free">
+  <meta name="twitter:description" content="Convert any text to a URL-friendly slug instantly. Handles accents, spaces, and special characters. Free, 100% local — nothing leaves your browser.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">How it works</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/es/tools/slug-generator/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>›</span>
+        <a href="/tools/">Tools</a>
+        <span>›</span>
+        <span>Slug Generator</span>
+      </nav>
+      <h1>URL Slug Generator</h1>
+      <p class="page-sub">Type any text and get a clean, URL-friendly slug instantly. Handles accents, spaces, and special characters. Nothing sent to any server.</p>
+    </div>
+
+    <!-- TOOL -->
+    <div class="tool-card">
+
+      <label class="section-label" for="input-text">Input text</label>
+      <textarea
+        id="input-text"
+        class="slug-input"
+        placeholder="e.g. My Article Title: 10 Tips for Café Owners!"
+        aria-label="Text to convert to slug"
+        rows="3"
+      ></textarea>
+
+      <div class="options-row">
+        <div class="opt-group">
+          <span class="section-label" style="margin-bottom:0">Separator</span>
+          <div class="toggle-group" role="group" aria-label="Separator character">
+            <button class="toggle-btn active" id="btn-hyphen" onclick="setSeparator('-')">hyphen  -</button>
+            <button class="toggle-btn" id="btn-underscore" onclick="setSeparator('_')">underscore  _</button>
+          </div>
+        </div>
+
+        <div class="opt-group">
+          <span class="section-label" style="margin-bottom:0">Case</span>
+          <div class="toggle-group" role="group" aria-label="Output case">
+            <button class="toggle-btn active" id="btn-lower" onclick="setCase('lower')">lowercase</button>
+            <button class="toggle-btn" id="btn-preserve" onclick="setCase('preserve')">Preserve</button>
+          </div>
+        </div>
+
+        <div class="opt-group">
+          <span class="section-label" style="margin-bottom:0">Max length <span style="font-weight:400;text-transform:none;letter-spacing:0">(0 = none)</span></span>
+          <input
+            id="maxlen"
+            class="maxlen-input"
+            type="number"
+            min="0" max="500"
+            value="0"
+            aria-label="Maximum slug length"
+          />
+        </div>
+      </div>
+
+      <label class="section-label" for="slug-output">Generated slug</label>
+      <div class="output-row">
+        <div id="slug-output" class="slug-output empty" aria-live="polite" aria-label="Generated slug output">
+          Your slug will appear here…
+        </div>
+        <button class="btn-copy" id="btn-copy" onclick="copySlug()" aria-label="Copy slug to clipboard">
+          <span id="copy-icon">⎘</span>
+          <span id="copy-text">Copy</span>
+        </button>
+      </div>
+
+      <div class="stats-bar" id="stats-bar" style="display:none;">
+        <div class="stat"><div class="stat-dot"></div><span id="stat-chars"></span></div>
+        <div class="stat"><span style="color:var(--faint)">Words: <span id="stat-words" style="color:var(--muted)"></span></span></div>
+      </div>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="info-card">
+      <h2>What is a URL slug?</h2>
+      <p>A slug is the URL-friendly version of a string of text — typically a page title. It uses only lowercase letters, digits, and hyphens (or underscores), making it safe to use in a URL without percent-encoding.</p>
+      <p>For example, the title <code>My Café Review: 5 Best Spots!</code> becomes the slug <code>my-cafe-review-5-best-spots</code>. Most CMSs (WordPress, Ghost, Contentful) generate these automatically, but this tool lets you preview or customize one before publishing.</p>
+      <p>Google recommends using hyphens over underscores in slugs because hyphens are treated as word separators, which improves keyword recognition in search results.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="info-card">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">Is my text processed on a server?</p>
+          <p class="faq-a">No. The entire conversion runs in your browser using JavaScript. Your text never leaves your device and is never sent to any server.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Which special characters does it remove?</p>
+          <p class="faq-a">Any character that is not a letter, digit, or the chosen separator is removed. Accented characters (á, é, ü, ñ, ç, etc.) are first converted to their closest ASCII equivalent before the rest of the cleanup runs.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Does it handle accented or non-Latin characters?</p>
+          <p class="faq-a">Yes. The tool normalizes Unicode (NFD) to decompose accented characters into base letters plus combining marks, then strips the combining marks. So "café" becomes "cafe" and "año" becomes "ano". Characters without a Latin equivalent (e.g. Arabic, Chinese) are removed.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What is the difference between a slug and a URL?</p>
+          <p class="faq-a">A URL is the full web address (e.g. https://example.com/blog/my-post/). A slug is just the human-readable, URL-safe segment that identifies the page — in this case "my-post". Slugs are typically the last path segment and are generated from a page's title.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is there a character limit?</p>
+          <p class="faq-a">Not by default. You can set an optional max-length in the options and the tool will truncate cleanly at a word boundary (no trailing separator).</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">When should I use underscore instead of hyphen?</p>
+          <p class="faq-a">For public-facing URLs and SEO, hyphens are the standard and recommended by Google. Underscores are sometimes used in internal identifiers, database keys, or Python/Ruby variable conventions where a slug is used as a code-safe string rather than a URL path.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <div class="related-label">Related tools</div>
+      <div class="related-links">
+        <a class="related-link" href="/tools/uuid-generator/">
+          UUID v4 Generator
+          <span>Generate unique identifiers for database records — a common pairing with slugs for URL routing</span>
+        </a>
+        <a class="related-link" href="/tools/json-formatter/">
+          JSON Formatter &amp; Validator
+          <span>Format the JSON payloads where your slugs will live as keys or values</span>
+        </a>
+        <a class="related-link" href="/tools/regex-tester/">
+          Regex Tester Online
+          <span>Validate your slug format with a regex pattern like <code>^[a-z0-9]+(?:-[a-z0-9]+)*$</code></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-card">
+      <div class="cta-icon">🔤</div>
+      <div class="cta-body">
+        <h3>Need text transformation superpowers in your browser?</h3>
+        <p>TextForge is a free Chrome extension that transforms, cleans, and extracts text right from any webpage or tab — no copy-paste required.</p>
+        <a
+          class="cta-link"
+          href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba"
+          target="_blank" rel="noopener"
+        >
+          Get TextForge — Free on Chrome Web Store →
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <footer>
+    <div>© 2026 Wendygo Studio</div>
+    <div class="footer-links">
+      <a href="/tools/">All Tools</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </footer>
+
+  <script>
+    let separator = '-';
+    let lowercase = true;
+    let currentSlug = '';
+    let debounceTimer;
+
+    function escRe(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function generateSlug(text) {
+      const sep = separator;
+      const sepRe = escRe(sep);
+      const maxLen = parseInt(document.getElementById('maxlen').value, 10) || 0;
+
+      let slug = text
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .replace(/&/g, 'and')
+        .replace(/[^a-zA-Z0-9]+/g, sep)
+        .replace(new RegExp('^' + sepRe + '+|' + sepRe + '+$', 'g'), '')
+        .replace(new RegExp(sepRe + '+', 'g'), sep);
+
+      if (!lowercase) {
+        /* preserve case — do nothing */
+      } else {
+        slug = slug.toLowerCase();
+      }
+
+      if (maxLen > 0 && slug.length > maxLen) {
+        slug = slug.substring(0, maxLen);
+        slug = slug.replace(new RegExp(sepRe + '+$'), '');
+      }
+
+      return slug;
+    }
+
+    function update() {
+      const text = document.getElementById('input-text').value;
+      const out = document.getElementById('slug-output');
+      const statsBar = document.getElementById('stats-bar');
+
+      if (!text.trim()) {
+        out.textContent = 'Your slug will appear here…';
+        out.classList.add('empty');
+        statsBar.style.display = 'none';
+        currentSlug = '';
+        return;
+      }
+
+      const slug = generateSlug(text);
+      currentSlug = slug;
+
+      if (slug === '') {
+        out.textContent = '(no output — all characters were removed)';
+        out.classList.add('empty');
+        statsBar.style.display = 'none';
+        return;
+      }
+
+      out.textContent = slug;
+      out.classList.remove('empty');
+
+      const wordCount = slug.split(separator).filter(Boolean).length;
+      statsBar.style.display = 'flex';
+      document.getElementById('stat-chars').textContent = slug.length + ' character' + (slug.length !== 1 ? 's' : '');
+      document.getElementById('stat-words').textContent = wordCount;
+
+      resetCopy();
+    }
+
+    function setSeparator(val) {
+      separator = val;
+      document.getElementById('btn-hyphen').classList.toggle('active', val === '-');
+      document.getElementById('btn-underscore').classList.toggle('active', val === '_');
+      update();
+    }
+
+    function setCase(val) {
+      lowercase = val === 'lower';
+      document.getElementById('btn-lower').classList.toggle('active', lowercase);
+      document.getElementById('btn-preserve').classList.toggle('active', !lowercase);
+      update();
+    }
+
+    async function copySlug() {
+      if (!currentSlug) return;
+      try {
+        await navigator.clipboard.writeText(currentSlug);
+        const btn = document.getElementById('btn-copy');
+        btn.classList.add('copied');
+        document.getElementById('copy-icon').textContent = '✓';
+        document.getElementById('copy-text').textContent = 'Copied!';
+        setTimeout(resetCopy, 2000);
+      } catch { /* clipboard not available */ }
+    }
+
+    function resetCopy() {
+      const btn = document.getElementById('btn-copy');
+      btn.classList.remove('copied');
+      document.getElementById('copy-icon').textContent = '⎘';
+      document.getElementById('copy-text').textContent = 'Copy';
+    }
+
+    document.getElementById('input-text').addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(update, 120);
+    });
+
+    document.getElementById('maxlen').addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(update, 120);
+    });
+  </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

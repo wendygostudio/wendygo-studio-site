@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Slugs URL — Convierte Texto en Slugs SEO Gratis</title>
+  <meta name="description" content="Convierte cualquier texto en un slug URL amigable al instante. Gestiona acentos, espacios y caracteres especiales. Guión o guión bajo como separador. Gratis, 100% local — nada sale de tu navegador." />
+  <link rel="canonical" href="https://wendygostudio.com/es/tools/slug-generator/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Generador de Slugs URL",
+      "url": "https://wendygostudio.com/es/tools/slug-generator/",
+      "description": "Generador de slugs gratuito que funciona en el navegador. Convierte cualquier texto en un slug URL amigable normalizando acentos, reemplazando espacios y eliminando caracteres especiales. Elige guión o guión bajo como separador. 100% local — nada se envía al servidor.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "featureList": [
+        "Convierte caracteres acentuados (á, ü, ñ, etc.) a su equivalente ASCII",
+        "Separador guión o guión bajo",
+        "Límite de longitud máxima opcional con truncado limpio",
+        "Minúsculas o conservar mayúsculas originales",
+        "Generación en tiempo real mientras escribes",
+        "Copia al portapapeles con un clic",
+        "100% local — sin subida al servidor"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://wendygostudio.com/es/" },
+        { "@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://wendygostudio.com/es/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "Generador de Slugs", "item": "https://wendygostudio.com/es/tools/slug-generator/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Mi texto se procesa en un servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La conversión completa se ejecuta en tu navegador mediante JavaScript. Tu texto nunca sale de tu dispositivo y nunca se envía a ningún servidor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué caracteres especiales elimina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cualquier carácter que no sea una letra, un dígito o el separador elegido es eliminado. Los caracteres acentuados (á, é, ü, ñ, ç, etc.) se convierten primero a su equivalente ASCII antes de que se ejecute el resto del proceso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Gestiona caracteres acentuados o no latinos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La herramienta normaliza Unicode (NFD) para descomponer los caracteres acentuados en letras base más marcas diacríticas, y luego elimina las marcas. Así, \"café\" se convierte en \"cafe\" y \"año\" en \"ano\". Los caracteres sin equivalente latino (árabe, chino, etc.) son eliminados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre un slug y una URL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una URL es la dirección web completa (p. ej. https://ejemplo.com/blog/mi-articulo/). Un slug es solo el segmento legible y seguro para URL que identifica la página — en este caso, \"mi-articulo\". Los slugs suelen ser el último segmento de la ruta y se generan a partir del título de la página."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay un límite de caracteres?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No por defecto. Puedes establecer una longitud máxima opcional en las opciones y la herramienta truncará limpiamente sin dejar un separador al final."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo debo usar guión bajo en lugar de guión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para URLs públicas y SEO, el guión es el estándar recomendado por Google. El guión bajo se usa a veces en identificadores internos, claves de bases de datos o convenciones de código en Python o Ruby, donde el slug se usa como cadena compatible con código y no como ruta URL."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --green:  #4ade80;
+      --r: 9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "Cascadia Code", "Fira Code", "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased; min-height: 100vh;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-lang { white-space: nowrap; }
+    .page-wrap {
+      max-width: 860px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,60px) clamp(60px,8vw,100px);
+    }
+    .page-header { margin-bottom: 40px; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--muted); margin-bottom: 20px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--amber); }
+    .breadcrumb span { color: var(--faint); }
+    h1 {
+      font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.8px; margin-bottom: 12px;
+    }
+    .page-sub { font-size: 15px; color: var(--muted); max-width: 580px; }
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      margin-bottom: 24px;
+    }
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+      display: block;
+    }
+    .slug-input {
+      width: 100%; background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-family: var(--sans); font-size: 15px;
+      padding: 12px 16px; border-radius: var(--r);
+      outline: none; resize: vertical; min-height: 80px; line-height: 1.5;
+      transition: border-color .15s;
+    }
+    .slug-input:focus { border-color: var(--amber); }
+    .slug-input::placeholder { color: var(--faint); }
+    .options-row {
+      display: flex; gap: 20px; flex-wrap: wrap; margin: 18px 0;
+    }
+    .opt-group { display: flex; flex-direction: column; gap: 8px; }
+    .toggle-group {
+      display: flex; gap: 0; border-radius: var(--r);
+      overflow: hidden; border: 1px solid var(--line);
+    }
+    .toggle-btn {
+      background: var(--surf2); border: none; color: var(--muted);
+      font-size: 13px; font-weight: 600; padding: 9px 16px; cursor: pointer;
+      transition: background .15s, color .15s; white-space: nowrap;
+    }
+    .toggle-btn:not(:last-child) { border-right: 1px solid var(--line); }
+    .toggle-btn.active { background: var(--amber); color: var(--on-a); }
+    .toggle-btn:hover:not(.active) { background: var(--line); color: var(--text); }
+    .maxlen-input {
+      background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-family: var(--mono); font-size: 14px;
+      padding: 9px 12px; border-radius: var(--r); width: 90px;
+      outline: none; transition: border-color .15s;
+    }
+    .maxlen-input:focus { border-color: var(--amber); }
+    .output-row { display: flex; align-items: center; gap: 12px; }
+    .slug-output {
+      flex: 1; background: var(--surf2); border: 1px solid var(--line);
+      color: var(--amber2); font-family: var(--mono); font-size: 15px;
+      padding: 12px 16px; border-radius: var(--r);
+      min-height: 48px; word-break: break-all; line-height: 1.5;
+      user-select: all;
+    }
+    .slug-output.empty { color: var(--faint); font-family: var(--sans); font-size: 14px; font-style: italic; }
+    .btn-copy {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surf2); border: 1px solid var(--line);
+      color: var(--text); font-size: 13px; font-weight: 600;
+      padding: 10px 16px; border-radius: var(--r); cursor: pointer;
+      transition: border-color .15s, color .15s; flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .btn-copy:hover { border-color: var(--amber); color: var(--amber); }
+    .btn-copy.copied { border-color: var(--green); color: var(--green); }
+    .stats-bar {
+      display: flex; gap: 20px; margin-top: 14px;
+      font-size: 12.5px; color: var(--muted); flex-wrap: wrap;
+    }
+    .stat { display: flex; align-items: center; gap: 5px; }
+    .stat-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); }
+    .info-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px); margin-bottom: 24px;
+    }
+    .info-card h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .info-card p { font-size: 14.5px; color: var(--muted); line-height: 1.7; margin-bottom: 10px; }
+    .info-card p:last-child { margin-bottom: 0; }
+    code {
+      font-family: var(--mono); font-size: 12.5px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px; }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .related { margin: 32px 0 0; }
+    .related-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); margin-bottom: 14px; }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+    .cta-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 4vw, 36px);
+      display: flex; align-items: flex-start; gap: 20px; margin-top: 24px;
+    }
+    .cta-icon {
+      width: 48px; height: 48px; border-radius: 12px; background: var(--amber);
+      display: grid; place-items: center; font-size: 24px; color: var(--on-a); flex-shrink: 0;
+    }
+    .cta-body { flex: 1; }
+    .cta-body h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .cta-body p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+    .cta-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 13.5px; text-decoration: none;
+      padding: 10px 18px; border-radius: var(--r); transition: filter .15s;
+    }
+    .cta-link:hover { filter: brightness(1.1); }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: clamp(32px,5vw,48px) clamp(20px,5vw,60px);
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; color: var(--muted); gap: 16px; flex-wrap: wrap;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .output-row { flex-direction: column; align-items: stretch; }
+      .btn-copy { justify-content: center; }
+      .cta-card { flex-direction: column; }
+      .footer-links { flex-wrap: wrap; gap: 12px; }
+      .options-row { gap: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wendygo Studio">
+  <meta property="og:title" content="Generador de Slugs URL — Convierte Texto en Slugs SEO Gratis">
+  <meta property="og:description" content="Convierte cualquier texto en un slug URL amigable al instante. Gestiona acentos, espacios y caracteres especiales. Gratis, 100% local.">
+  <meta property="og:url" content="https://wendygostudio.com/es/tools/slug-generator/">
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Generador de Slugs URL — Convierte Texto en Slugs SEO Gratis">
+  <meta name="twitter:description" content="Convierte cualquier texto en un slug URL amigable al instante. Gestiona acentos, espacios y caracteres especiales. Gratis, 100% local.">
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/es/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#products">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/tools/">Herramientas</a>
+      <a href="/es/#how">Cómo funciona</a>
+      <a href="/es/#privacy">Privacidad</a>
+      <a href="/tools/slug-generator/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="/es/">Inicio</a>
+        <span>›</span>
+        <a href="/es/tools/">Herramientas</a>
+        <span>›</span>
+        <span>Generador de Slugs</span>
+      </nav>
+      <h1>Generador de Slugs URL</h1>
+      <p class="page-sub">Escribe cualquier texto y obtén un slug URL limpio al instante. Gestiona acentos, espacios y caracteres especiales. Nada sale de tu navegador.</p>
+    </div>
+
+    <!-- HERRAMIENTA -->
+    <div class="tool-card">
+
+      <label class="section-label" for="input-text">Texto de entrada</label>
+      <textarea
+        id="input-text"
+        class="slug-input"
+        placeholder="Ej. Mi Artículo: 10 Consejos para Dueños de Cafeterías!"
+        aria-label="Texto a convertir en slug"
+        rows="3"
+      ></textarea>
+
+      <div class="options-row">
+        <div class="opt-group">
+          <span class="section-label" style="margin-bottom:0">Separador</span>
+          <div class="toggle-group" role="group" aria-label="Carácter separador">
+            <button class="toggle-btn active" id="btn-hyphen" onclick="setSeparator('-')">guión  -</button>
+            <button class="toggle-btn" id="btn-underscore" onclick="setSeparator('_')">guión bajo  _</button>
+          </div>
+        </div>
+
+        <div class="opt-group">
+          <span class="section-label" style="margin-bottom:0">Mayúsculas</span>
+          <div class="toggle-group" role="group" aria-label="Capitalización de salida">
+            <button class="toggle-btn active" id="btn-lower" onclick="setCase('lower')">minúsculas</button>
+            <button class="toggle-btn" id="btn-preserve" onclick="setCase('preserve')">Conservar</button>
+          </div>
+        </div>
+
+        <div class="opt-group">
+          <span class="section-label" style="margin-bottom:0">Longitud máx. <span style="font-weight:400;text-transform:none;letter-spacing:0">(0 = sin límite)</span></span>
+          <input
+            id="maxlen"
+            class="maxlen-input"
+            type="number"
+            min="0" max="500"
+            value="0"
+            aria-label="Longitud máxima del slug"
+          />
+        </div>
+      </div>
+
+      <label class="section-label" for="slug-output">Slug generado</label>
+      <div class="output-row">
+        <div id="slug-output" class="slug-output empty" aria-live="polite" aria-label="Slug generado">
+          Tu slug aparecerá aquí…
+        </div>
+        <button class="btn-copy" id="btn-copy" onclick="copySlug()" aria-label="Copiar slug al portapapeles">
+          <span id="copy-icon">⎘</span>
+          <span id="copy-text">Copiar</span>
+        </button>
+      </div>
+
+      <div class="stats-bar" id="stats-bar" style="display:none;">
+        <div class="stat"><div class="stat-dot"></div><span id="stat-chars"></span></div>
+        <div class="stat"><span style="color:var(--faint)">Palabras: <span id="stat-words" style="color:var(--muted)"></span></span></div>
+      </div>
+
+    </div>
+
+    <!-- INFORMACIÓN -->
+    <div class="info-card">
+      <h2>¿Qué es un slug URL?</h2>
+      <p>Un slug es la versión de un texto adaptada para ser usada en una URL — normalmente el título de una página. Solo utiliza letras minúsculas, dígitos y guiones (o guiones bajos), lo que lo hace seguro para incluir en una URL sin necesitar codificación por porcentaje.</p>
+      <p>Por ejemplo, el título <code>Mi Reseña del Café: ¡Los 5 Mejores Sitios!</code> se convierte en el slug <code>mi-resena-del-cafe-los-5-mejores-sitios</code>. La mayoría de los CMS (WordPress, Ghost, Contentful) los generan automáticamente, pero esta herramienta te permite previsualizarlo o personalizarlo antes de publicar.</p>
+      <p>Google recomienda usar guiones en lugar de guiones bajos en los slugs, ya que los guiones se tratan como separadores de palabras, lo que mejora el reconocimiento de palabras clave en los resultados de búsqueda.</p>
+    </div>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <div class="info-card">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">¿Mi texto se procesa en un servidor?</p>
+          <p class="faq-a">No. La conversión completa se ejecuta en tu navegador mediante JavaScript. Tu texto nunca sale de tu dispositivo y nunca se envía a ningún servidor.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Qué caracteres especiales elimina?</p>
+          <p class="faq-a">Cualquier carácter que no sea una letra, un dígito o el separador elegido es eliminado. Los caracteres acentuados (á, é, ü, ñ, ç, etc.) se convierten primero a su equivalente ASCII antes de que se ejecute el resto del proceso.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Gestiona caracteres acentuados o no latinos?</p>
+          <p class="faq-a">Sí. La herramienta normaliza Unicode (NFD) para descomponer los caracteres acentuados en letras base más marcas diacríticas, y luego elimina las marcas. Así, "café" se convierte en "cafe" y "año" en "ano". Los caracteres sin equivalente latino (árabe, chino, etc.) son eliminados.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Qué diferencia hay entre un slug y una URL?</p>
+          <p class="faq-a">Una URL es la dirección web completa (p. ej. https://ejemplo.com/blog/mi-articulo/). Un slug es solo el segmento legible y seguro para URL que identifica la página — en este caso, "mi-articulo". Los slugs suelen ser el último segmento de la ruta y se generan a partir del título de la página.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Hay un límite de caracteres?</p>
+          <p class="faq-a">No por defecto. Puedes establecer una longitud máxima opcional en las opciones y la herramienta truncará limpiamente sin dejar un separador al final.</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">¿Cuándo debo usar guión bajo en lugar de guión?</p>
+          <p class="faq-a">Para URLs públicas y SEO, el guión es el estándar recomendado por Google. El guión bajo se usa a veces en identificadores internos, claves de bases de datos o convenciones de código en Python o Ruby, donde el slug se usa como cadena compatible con código y no como ruta URL.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERRAMIENTAS RELACIONADAS -->
+    <div class="related">
+      <div class="related-label">Herramientas relacionadas</div>
+      <div class="related-links">
+        <a class="related-link" href="/es/tools/uuid-generator/">
+          Generador de UUID v4
+          <span>Genera identificadores únicos para registros de base de datos — combinación habitual con slugs en el enrutamiento URL</span>
+        </a>
+        <a class="related-link" href="/es/tools/json-formatter/">
+          Formateador de JSON
+          <span>Formatea los payloads JSON donde tus slugs vivirán como claves o valores</span>
+        </a>
+        <a class="related-link" href="/es/tools/regex-tester/">
+          Probador de Regex
+          <span>Valida el formato de tu slug con un patrón regex como <code>^[a-z0-9]+(?:-[a-z0-9]+)*$</code></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-card">
+      <div class="cta-icon">🔤</div>
+      <div class="cta-body">
+        <h3>¿Necesitas superpoderes de transformación de texto en tu navegador?</h3>
+        <p>TextForge es una extensión gratuita de Chrome que transforma, limpia y extrae texto directamente desde cualquier página web o pestaña, sin necesidad de copiar y pegar.</p>
+        <a
+          class="cta-link"
+          href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba"
+          target="_blank" rel="noopener"
+        >
+          Obtener TextForge — Gratis en Chrome Web Store →
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <footer>
+    <div>© 2026 Wendygo Studio</div>
+    <div class="footer-links">
+      <a href="/es/tools/">Todas las herramientas</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/es/privacy">Privacidad</a>
+      <a href="/es/terms">Términos</a>
+    </div>
+  </footer>
+
+  <script>
+    let separator = '-';
+    let lowercase = true;
+    let currentSlug = '';
+    let debounceTimer;
+
+    function escRe(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function generateSlug(text) {
+      const sep = separator;
+      const sepRe = escRe(sep);
+      const maxLen = parseInt(document.getElementById('maxlen').value, 10) || 0;
+
+      let slug = text
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .replace(/&/g, 'and')
+        .replace(/[^a-zA-Z0-9]+/g, sep)
+        .replace(new RegExp('^' + sepRe + '+|' + sepRe + '+$', 'g'), '')
+        .replace(new RegExp(sepRe + '+', 'g'), sep);
+
+      if (lowercase) slug = slug.toLowerCase();
+
+      if (maxLen > 0 && slug.length > maxLen) {
+        slug = slug.substring(0, maxLen);
+        slug = slug.replace(new RegExp(sepRe + '+$'), '');
+      }
+
+      return slug;
+    }
+
+    function update() {
+      const text = document.getElementById('input-text').value;
+      const out = document.getElementById('slug-output');
+      const statsBar = document.getElementById('stats-bar');
+
+      if (!text.trim()) {
+        out.textContent = 'Tu slug aparecerá aquí…';
+        out.classList.add('empty');
+        statsBar.style.display = 'none';
+        currentSlug = '';
+        return;
+      }
+
+      const slug = generateSlug(text);
+      currentSlug = slug;
+
+      if (slug === '') {
+        out.textContent = '(sin resultado — todos los caracteres fueron eliminados)';
+        out.classList.add('empty');
+        statsBar.style.display = 'none';
+        return;
+      }
+
+      out.textContent = slug;
+      out.classList.remove('empty');
+
+      const wordCount = slug.split(separator).filter(Boolean).length;
+      statsBar.style.display = 'flex';
+      document.getElementById('stat-chars').textContent = slug.length + ' carácter' + (slug.length !== 1 ? 'es' : '');
+      document.getElementById('stat-words').textContent = wordCount;
+
+      resetCopy();
+    }
+
+    function setSeparator(val) {
+      separator = val;
+      document.getElementById('btn-hyphen').classList.toggle('active', val === '-');
+      document.getElementById('btn-underscore').classList.toggle('active', val === '_');
+      update();
+    }
+
+    function setCase(val) {
+      lowercase = val === 'lower';
+      document.getElementById('btn-lower').classList.toggle('active', lowercase);
+      document.getElementById('btn-preserve').classList.toggle('active', !lowercase);
+      update();
+    }
+
+    async function copySlug() {
+      if (!currentSlug) return;
+      try {
+        await navigator.clipboard.writeText(currentSlug);
+        const btn = document.getElementById('btn-copy');
+        btn.classList.add('copied');
+        document.getElementById('copy-icon').textContent = '✓';
+        document.getElementById('copy-text').textContent = '¡Copiado!';
+        setTimeout(resetCopy, 2000);
+      } catch { /* portapapeles no disponible */ }
+    }
+
+    function resetCopy() {
+      const btn = document.getElementById('btn-copy');
+      btn.classList.remove('copied');
+      document.getElementById('copy-icon').textContent = '⎘';
+      document.getElementById('copy-text').textContent = 'Copiar';
+    }
+
+    document.getElementById('input-text').addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(update, 120);
+    });
+
+    document.getElementById('maxlen').addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(update, 120);
+    });
+  </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

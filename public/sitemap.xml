@@ -830,6 +830,24 @@
   </url>
 
   <url>
+    <loc>https://wendygostudio.com/tools/slug-generator/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/tools/slug-generator/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/"/>
+  </url>
+
+  <url>
     <loc>https://wendygostudio.com/goodbye/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
