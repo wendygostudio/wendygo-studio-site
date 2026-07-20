@@ -1191,6 +1191,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-xlsx-to-csv-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-xlsx-a-csv-gratis/"/>
   </url>
 
   <url>
@@ -1269,6 +1270,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cloudconvert-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cloudconvert/"/>
   </url>
 
   <url>
@@ -1277,6 +1279,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pdf-converter-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertidor-pdf/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-cloudconvert/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cloudconvert/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cloudconvert-alternatives/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-convertidor-pdf/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertidor-pdf/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pdf-converter-alternatives/"/>
+  </url>
+
+  <url>
+    <loc>https://wendygostudio.com/es/blog/convertir-xlsx-a-csv-gratis/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-xlsx-a-csv-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-xlsx-to-csv-free/"/>
   </url>
 
 </urlset>
