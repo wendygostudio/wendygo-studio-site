@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}" />
+  <link rel="canonical" href="{{canonical}}" />
+  {{alternates}}
+  <script type="application/ld+json">{{articleSchema}}</script>
+  <script type="application/ld+json">{{breadcrumbSchema}}</script>
+  {{faqSchema}}
+  <style>{{styles}}</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:url" content="{{canonical}}" />
+  <meta property="og:image" content="{{ogImage}}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{title}}" />
+  <meta name="twitter:description" content="{{description}}" />
+  <meta name="twitter:image" content="{{ogImage}}" />
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="{{homePath}}"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="{{menuLabel}}"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="{{homePath}}#products">{{extensionsLabel}}</a><a href="{{blogPath}}">Blog</a><a href="{{toolsPath}}">{{toolsLabel}}</a><a href="{{homePath}}#privacy">{{privacyLabel}}</a>{{languageLink}}
+    </div>
+  </nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="{{homePath}}">{{homeLabel}}</a><span>&#8250;</span><a href="{{blogPath}}">Blog</a><span>&#8250;</span>{{shortTitle}}</div>
+    <div class="article-meta"><div class="article-tag">{{contentType}} · {{productName}}</div><h1>{{heading}}</h1><p class="article-intro">{{intro}}</p><div class="article-date">{{displayDate}}</div></div>
+    <hr class="divider" />
+    <div class="article-body">{{content}}</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, {{regionLabel}}</div><div class="footer-links"><a href="{{homePath}}">{{homeLabel}}</a><a href="{{blogPath}}">Blog</a><a href="{{toolsPath}}">{{toolsLabel}}</a><a href="{{privacyPath}}">{{privacyLabel}}</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

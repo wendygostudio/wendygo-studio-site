@@ -29,6 +29,7 @@ let titles=0, descriptions=0, analytics=0;
 for (const file of files) {
   if(generatedOutputs.has(path.resolve(file))) continue;
   let html=fs.readFileSync(file,'utf8');
+  if(html.includes('content="Wendygo structured content"')) continue;
   const rel=path.relative(root,file).replaceAll('\\','/');
   const tm=html.match(/<title>([\s\S]*?)<\/title>/i);
   if (tm) { const next=shorten(tm[1].trim(),60); if(next!==tm[1].trim()){html=html.replace(tm[0],`<title>${next}</title>`); titles++; html=html.replace(/(<meta\s+(?:property|name)=["'](?:og:title|twitter:title)["']\s+content=["'])[^"']*(["'])/gi,`$1${next}$2`);} }

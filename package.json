@@ -5,7 +5,14 @@
     "seo:fix": "node scripts/render-product-pages.mjs && node scripts/critical-seo-fix.mjs && node scripts/generate-sitemap.mjs",
     "product:render": "node scripts/render-product-pages.mjs",
     "product:check": "node scripts/render-product-pages.mjs --check",
-    "validate": "node scripts/render-product-pages.mjs --check && node scripts/validate-content.mjs && node scripts/validate-site.mjs",
-    "build": "node scripts/render-product-pages.mjs && node scripts/build.mjs"
+    "blog:render": "node scripts/render-blog.mjs",
+    "blog:check": "node scripts/render-blog.mjs --check",
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node scripts/render-product-pages.mjs --check && node scripts/render-blog.mjs --check && node scripts/validate-content.mjs && node scripts/validate-site.mjs",
+    "build": "node scripts/render-product-pages.mjs && node scripts/render-blog.mjs && node scripts/build.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.7"
   }
 }

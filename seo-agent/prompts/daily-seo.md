@@ -161,6 +161,7 @@ Cómo usar nuestras extensiones con otras herramientas populares.
 1. **Archivo fuente:** `content/blog/YYYY-MM-DD-slug.md`. Su frontmatter obligatorio es:
    ```yaml
    ---
+   schemaVersion: 1
    title: "Título SEO"
    description: "Descripción SEO"
    date: YYYY-MM-DD
