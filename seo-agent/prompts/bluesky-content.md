@@ -68,13 +68,13 @@ I'll go first: TextForge — 50+ text transforms without leaving the browser tab
 5. Si el post incluye un link, ejecútalo con DOS argumentos:
 
 ```bash
-node {{AGENT_DIR}}/scripts/bluesky-tools.js "TEXTO DEL POST" "URL_OPCIONAL"
+node {{AGENT_DIR}}/scripts/bluesky-tools.js post "TEXTO DEL POST" "URL_OPCIONAL"
 ```
 
 Si no incluye link:
 
 ```bash
-node {{AGENT_DIR}}/scripts/bluesky-tools.js "TEXTO DEL POST"
+node {{AGENT_DIR}}/scripts/bluesky-tools.js post "TEXTO DEL POST"
 ```
 
 6. Guarda un registro en `logs/bluesky_tracker.json`:

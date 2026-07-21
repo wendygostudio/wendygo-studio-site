@@ -3,6 +3,7 @@
 // Wendygo Studio — Dev.to Post Script
 // ============================================================
 // Usage: node devto-post.js "Title" "markdown_content" "tag1,tag2,tag3"
+//        node devto-post.js --file "Title" body.md "tag1,tag2" canonical_url
 //
 // Get your free API key at: https://dev.to/settings/extensions
 // Set DEVTO_API_KEY in config/agent.env (NOT the repo root)
@@ -27,9 +28,12 @@ if (!DEVTO_API_KEY) {
   process.exit(1);
 }
 
-const title = process.argv[2];
-const body = process.argv[3];
-const tags = process.argv[4] || '';
+const fileMode = process.argv[2] === '--file';
+const title = process.argv[fileMode ? 3 : 2];
+const bodyArg = process.argv[fileMode ? 4 : 3];
+const tags = process.argv[fileMode ? 5 : 4] || '';
+const explicitCanonical = process.argv[fileMode ? 6 : 5] || '';
+const body = fileMode ? require('fs').readFileSync(bodyArg, 'utf8') : bodyArg;
 
 if (!title || !body) {
   console.error('Usage: node devto-post.js "Title" "markdown_body" "tag1,tag2,tag3"');
@@ -49,7 +53,7 @@ async function post() {
       body_markdown: body,
       published: true,
       tags: tagList,
-      canonical_url: '', // Will be set by the agent if cross-posting
+      canonical_url: explicitCanonical,
     },
   };
 
@@ -57,7 +61,7 @@ async function post() {
   const canonicalMatch = body.match(
     /\[wendygostudio\.com\]\((https:\/\/wendygostudio\.com\/[^\)]+)\)/
   );
-  if (canonicalMatch) {
+  if (!article.article.canonical_url && canonicalMatch) {
     article.article.canonical_url = canonicalMatch[1];
   }
 

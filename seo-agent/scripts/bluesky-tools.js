@@ -10,8 +10,19 @@
 //   node bluesky-tools.js find-people "query" [limit]
 // ============================================================
 
-const BLUESKY_HANDLE = process.env.BLUESKY_HANDLE || 'wendygostudio.bsky.social';
-const BLUESKY_APP_PASSWORD = process.env.BLUESKY_APP_PASSWORD;
+let BLUESKY_HANDLE = process.env.BLUESKY_HANDLE || '';
+let BLUESKY_APP_PASSWORD = process.env.BLUESKY_APP_PASSWORD || '';
+if (!BLUESKY_HANDLE || !BLUESKY_APP_PASSWORD) {
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const content = fs.readFileSync(path.join(__dirname, '..', 'config', 'agent.env'), 'utf8');
+    const read = (key) => (content.match(new RegExp(`^${key}=["']?([^"'\\r\\n]+)["']?`, 'm')) || [])[1] || '';
+    BLUESKY_HANDLE ||= read('BLUESKY_HANDLE');
+    BLUESKY_APP_PASSWORD ||= read('BLUESKY_APP_PASSWORD');
+  } catch (error) { /* handled by the check below */ }
+}
+BLUESKY_HANDLE ||= 'wendygostudio.bsky.social';
 const API = 'https://bsky.social/xrpc';
 const PUBLIC_API = 'https://public.api.bsky.app/xrpc';
 

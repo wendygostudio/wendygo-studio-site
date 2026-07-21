@@ -16,7 +16,7 @@ Hoy es {{TODAY}}. Adapta el artículo principal de hoy y publícalo en Dev.to.
 5. Publica con el script:
 
 ```bash
-node {{AGENT_DIR}}/scripts/devto-post.js "TITULO" "CONTENIDO_MARKDOWN" "tag1,tag2,tag3,tag4"
+node {{AGENT_DIR}}/scripts/devto-post.js --file "TITULO" "RUTA_AL_MARKDOWN" "tag1,tag2,tag3,tag4" "URL_CANONICA"
 ```
 
 6. Documenta en el journal qué publicaste en Dev.to.
