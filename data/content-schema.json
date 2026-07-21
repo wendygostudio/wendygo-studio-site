@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "requiredFrom": "2026-07-21",
+  "requiredFields": ["title", "description", "date", "slug", "locale", "translationKey", "product", "contentType", "primaryKeyword", "relatedPages"],
+  "locales": ["en", "es"],
+  "contentTypes": ["how-to", "comparison", "tutorial", "top-of-funnel", "use-case", "alternatives", "workflow"],
+  "products": ["textforge", "frameforge", "convertforge", "scrubforge", "claimforge", "slimeforge"]
+}
