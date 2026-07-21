@@ -111,6 +111,7 @@ El sitio usa un diseño dark con estos tokens. **Todo el contenido que generes D
 - Cards: fondo `var(--ink)` con borde `var(--line)`
 - Links: `var(--amber)`, hover `var(--amber2)`
 - Tipografía: system-ui, sin Google Fonts
+- Artículos estructurados: sigue `src/blog/EDITORIAL_STYLE.md`. Alterna texto con destacados, listas/tablas y tarjetas reutilizables; evita que una guía de 600-900 palabras sea una pared de párrafos.
 
 ### Nav — OBLIGATORIO incluir el menú móvil (17-jul-2026)
 

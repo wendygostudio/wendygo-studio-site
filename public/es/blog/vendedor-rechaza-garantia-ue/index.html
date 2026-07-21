@@ -96,6 +96,48 @@
     .article-body li { margin-bottom: 6px; color: var(--muted); }
     .article-body li strong { color: var(--text); }
 
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
     .tool-card {
       background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
       padding: 24px; margin: 24px 0;
@@ -227,6 +269,9 @@
       .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
       .decision-row { flex-direction: column; }
       .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
     }
 </style>
   <meta property="og:type" content="article" />
@@ -255,12 +300,16 @@
     <hr class="divider" />
     <div class="article-body"><p>El primer “no” de un vendedor no determina si tu reclamación es válida. Muchas respuestas de atención al cliente hablan de la garantía del fabricante, de un plazo interno de devolución o de la política de la tienda. Esas condiciones no son necesariamente lo mismo que la <strong>garantía legal de la UE</strong>, que protege al consumidor cuando un bien es defectuoso, no funciona como se anunció o no coincide con su descripción.</p>
 <p>Esta guía ofrece un flujo práctico para responder. Es información general, no asesoramiento jurídico individual; las normas nacionales y los hechos de cada compra pueden cambiar el resultado.</p>
+<blockquote>
+<p><strong>Distinción clave</strong>
+El plazo de devolución de una tienda, la garantía comercial del fabricante y tu garantía legal son tres cosas distintas.</p>
+</blockquote>
 <h2>1. Conserva las pruebas antes de responder</h2>
 <p>Guarda la confirmación del pedido, factura, anuncio del producto y documentos de garantía. Fotografía o graba el defecto y conserva todos los mensajes intercambiados. Anota cuándo recibiste el artículo, cuándo apareció el problema y qué comprobaciones realizaste.</p>
-<p>Crea una cronología breve en lugar de enviar un relato emocional. Por ejemplo: “Recibido el 3 de marzo; la pantalla empezó a parpadear el 18 de junio; restablecimiento realizado el 19; contacto con la tienda el 20; reclamación rechazada el 22”. Así facilitas que un responsable, organismo de consumo o tribunal comprenda el caso.</p>
+<p>Crea una cronología breve en lugar de enviar un relato emocional. Por ejemplo: “Recibido el 3 de marzo; la pantalla empezó a parpadear el 18 de junio; restablecimiento realizado el 19; contacto con la tienda el 20; reclamación rechazada el 22”.</p>
 <p>Si necesitas repasar las reglas básicas, consulta nuestra explicación sobre la <a href="/es/blog/garantia-legal-ue-explicada/">garantía legal de dos años en la UE</a> antes de redactar la respuesta.</p>
 <h2>2. Identifica qué ha rechazado realmente</h2>
-<p>Comprueba si el mensaje se refiere a una garantía comercial voluntaria o a tu garantía legal. Son conceptos distintos. Según la <a href="https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_es.htm">guía de garantías de Your Europe</a>, existe generalmente una garantía legal mínima de dos años para bienes defectuosos comprados a un comerciante de la UE. La reclamación suele dirigirse al vendedor aunque el fabricante ofrezca una garantía comercial más corta.</p>
+<p>Comprueba si el mensaje se refiere a una garantía comercial voluntaria o a tu garantía legal. Según la <a href="https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_es.htm">guía de garantías de Your Europe</a>, existe generalmente una garantía legal mínima de dos años para bienes defectuosos comprados a un comerciante de la UE. La reclamación suele dirigirse al vendedor aunque el fabricante ofrezca una garantía comercial más corta.</p>
 <p>También debes separar una reclamación por defecto del derecho de desistimiento de 14 días aplicable a muchas compras a distancia. La tienda puede tener razón al afirmar que terminó el desistimiento y, aun así, seguir respondiendo por un producto no conforme.</p>
 <h2>3. Solicita un motivo concreto por escrito</h2>
 <p>Responde por escrito y pide al vendedor que indique:</p>
@@ -270,19 +319,27 @@
 <li>si la decisión afecta a la garantía comercial o a la legal;</li>
 <li>qué solución ofrece, si ofrece alguna.</li>
 </ul>
-<p>Mantén un tono objetivo. El objetivo inmediato es eliminar ambigüedades y construir un expediente.</p>
-<h2>4. Indica la solución que solicitas</h2>
+<div class="key-points">
+  <h3>Una respuesta útil debe aclarar</h3>
+  <ul>
+    <li>qué decisión tomó el vendedor;</li>
+    <li>qué pruebas la respaldan; y</li>
+    <li>qué solución continúa disponible.</li>
+  </ul>
+</div><h2>4. Indica la solución que solicitas</h2>
 <p>Las normas de la UE suelen situar primero la reparación o sustitución. Pide la alternativa práctica y proporcionada, y solicita que se complete gratuitamente, en un plazo razonable y sin inconvenientes importantes.</p>
 <p>El reembolso total no siempre es el primer remedio automático. La reducción del precio o resolución del contrato puede proceder cuando reparar o sustituir sea imposible, desproporcionado, rechazado, infructuoso o no se complete razonablemente. La legislación de tu país puede reconocer derechos adicionales.</p>
 <h2>5. Envía un seguimiento estructurado</h2>
 <p>Tu mensaje debe incluir datos de compra, defecto, cronología, negativa del vendedor, base legal, solución solicitada y una fecha razonable de respuesta. <a href="/es/claimforge/">ClaimForge</a> puede ayudarte a organizar una carta de consumo y analizar localmente la contestación del vendedor. Revisa y adapta siempre el borrador: la extensión es un asistente, no un abogado ni una autoridad pública.</p>
-<p>Evita datos personales innecesarios. Incluye solo lo necesario para localizar la compra y valorar la reclamación.</p>
 <h2>6. Escala el caso en un orden razonable</h2>
 <p>Si el primer nivel de soporte repite la negativa, solicita que el asunto pase al equipo de reclamaciones o a un responsable. Utiliza el procedimiento formal del comerciante y conserva el justificante de presentación.</p>
 <p>En un conflicto transfronterizo, la Red de Centros Europeos del Consumidor puede ayudar cuando el comerciante se encuentra en otro país de la UE, Islandia o Noruega. Según el país y el caso, también pueden ser relevantes un organismo de resolución alternativa, la autoridad nacional de consumo o el proceso europeo de escasa cuantía. Nuestra guía para <a href="/es/blog/como-presentar-reclamacion-consumidor-ue/">presentar una reclamación de consumo en la UE</a> explica estas vías.</p>
 <p>Antes de escalar, consulta la información oficial vigente en tu país. Las normas europeas establecen una base común, pero los plazos, presunciones probatorias y procedimientos varían.</p>
+<blockquote>
+<p><strong>Regla para escalar</strong>
+Pasa al siguiente canal porque el actual no resolvió el caso, no solo porque la primera respuesta fue decepcionante. Conserva prueba de cada intento.</p>
+</blockquote>
 <h2>Una respuesta concisa supera a una discusión repetida</h2>
-<p>El siguiente paso más sólido no suele ser discutir más. Es preparar pruebas claras, formular una petición concreta bajo la garantía legal y dejar documentada la escalada. Esa combinación dificulta que una reclamación válida se descarte como una consulta imprecisa.</p>
 <h2>Preguntas frecuentes</h2>
 <h3>¿Responde el vendedor o el fabricante de la garantía legal de la UE?</h3>
 <p>La garantía legal se aplica normalmente al contrato con el vendedor. La garantía comercial del fabricante es independiente y no sustituye tus derechos legales.</p>

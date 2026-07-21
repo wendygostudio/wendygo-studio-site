@@ -29,6 +29,9 @@ A seller's first “no” does not decide whether your claim is valid. Customer-
 
 This guide gives you a practical workflow for responding. It is general information, not individual legal advice; national rules and the facts of your purchase can change the result.
 
+> **Key distinction**
+> A store return window, a manufacturer's commercial warranty and your statutory legal guarantee are three different things.
+
 ## 1. Preserve the evidence before replying
 
 Save the order confirmation, invoice, product listing and warranty documents. Photograph or record the defect and keep every message exchanged with the seller. Write down when the item arrived, when the problem appeared and any troubleshooting already attempted.
@@ -52,7 +55,14 @@ Reply in writing and ask the seller to identify:
 - whether the decision concerns the commercial warranty or the legal guarantee;
 - the remedy they are offering, if any.
 
-Keep the tone factual. Do not threaten proceedings in the first sentence. Your immediate goal is to remove ambiguity and create a record.
+<div class="key-points">
+  <h3>A useful rejection reply should establish</h3>
+  <ul>
+    <li>what decision the seller made;</li>
+    <li>which evidence supports it; and</li>
+    <li>which remedy remains available.</li>
+  </ul>
+</div>
 
 ## 4. State the remedy you want
 
@@ -64,8 +74,6 @@ A full refund is not always the automatic first step. Price reduction or termina
 
 Your message should contain the purchase details, defect, timeline, seller's rejection, legal basis, requested remedy and a reasonable response date. [ClaimForge](/claimforge/) can help organize a consumer-rights letter and analyze a seller's response locally in the browser. Review and adapt every draft yourself; the extension is an assistant, not a lawyer or public authority.
 
-Avoid sharing unnecessary personal information. Include only what the seller needs to identify the purchase and assess the claim.
-
 ## 6. Escalate in a sensible order
 
 If frontline support repeats the refusal, request escalation to a complaints team or manager. Follow the trader's formal complaint procedure and retain proof of submission.
@@ -73,6 +81,9 @@ If frontline support repeats the refusal, request escalation to a complaints tea
 For a cross-border dispute, the European Consumer Centres Network may be able to assist when the trader is based in another EU country, Iceland or Norway. Depending on the country and dispute, an alternative dispute-resolution body, national consumer authority or the European Small Claims Procedure may also be relevant. Our guide to [filing and escalating an EU consumer complaint](/blog/how-to-file-consumer-complaint-eu/) explains these routes in more detail.
 
 Before escalating, check the current official guidance for your country. EU rules set a common floor, but deadlines, evidential presumptions and enforcement procedures vary.
+
+> **Escalation rule**
+> Move to the next channel because the current one failed, not simply because the first answer was disappointing. Keep proof of each attempt.
 
 ## A concise response beats repeated arguments
 

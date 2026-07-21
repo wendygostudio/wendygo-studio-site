@@ -96,6 +96,48 @@
     .article-body li { margin-bottom: 6px; color: var(--muted); }
     .article-body li strong { color: var(--text); }
 
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
     .tool-card {
       background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
       padding: 24px; margin: 24px 0;
@@ -227,6 +269,9 @@
       .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
       .decision-row { flex-direction: column; }
       .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
     }
 </style>
   <meta property="og:type" content="article" />
@@ -255,6 +300,10 @@
     <hr class="divider" />
     <div class="article-body"><p>A seller&#39;s first “no” does not decide whether your claim is valid. Customer-support replies often discuss a manufacturer&#39;s warranty, an internal return window or a store policy. Those terms are not necessarily the same as the <strong>EU legal guarantee</strong> that protects consumers when goods are faulty, do not work as advertised or do not match their description.</p>
 <p>This guide gives you a practical workflow for responding. It is general information, not individual legal advice; national rules and the facts of your purchase can change the result.</p>
+<blockquote>
+<p><strong>Key distinction</strong>
+A store return window, a manufacturer&#39;s commercial warranty and your statutory legal guarantee are three different things.</p>
+</blockquote>
 <h2>1. Preserve the evidence before replying</h2>
 <p>Save the order confirmation, invoice, product listing and warranty documents. Photograph or record the defect and keep every message exchanged with the seller. Write down when the item arrived, when the problem appeared and any troubleshooting already attempted.</p>
 <p>Create a short timeline rather than sending a long emotional account. For example: “Delivered 3 March; display began flickering 18 June; factory reset completed 19 June; seller contacted 20 June; claim rejected 22 June.” This makes the dispute easier for a support manager, consumer body or court to understand.</p>
@@ -270,17 +319,26 @@
 <li>whether the decision concerns the commercial warranty or the legal guarantee;</li>
 <li>the remedy they are offering, if any.</li>
 </ul>
-<p>Keep the tone factual. Do not threaten proceedings in the first sentence. Your immediate goal is to remove ambiguity and create a record.</p>
-<h2>4. State the remedy you want</h2>
+<div class="key-points">
+  <h3>A useful rejection reply should establish</h3>
+  <ul>
+    <li>what decision the seller made;</li>
+    <li>which evidence supports it; and</li>
+    <li>which remedy remains available.</li>
+  </ul>
+</div><h2>4. State the remedy you want</h2>
 <p>EU rules commonly place repair or replacement first. Ask for the remedy that is practical and proportionate, and request that it be completed free of charge, within a reasonable time and without significant inconvenience.</p>
 <p>A full refund is not always the automatic first step. Price reduction or termination of the contract may become available when repair or replacement is impossible, disproportionate, refused, unsuccessful or not completed reasonably. Your country&#39;s implementation may give additional rights.</p>
 <h2>5. Send a structured follow-up</h2>
 <p>Your message should contain the purchase details, defect, timeline, seller&#39;s rejection, legal basis, requested remedy and a reasonable response date. <a href="/claimforge/">ClaimForge</a> can help organize a consumer-rights letter and analyze a seller&#39;s response locally in the browser. Review and adapt every draft yourself; the extension is an assistant, not a lawyer or public authority.</p>
-<p>Avoid sharing unnecessary personal information. Include only what the seller needs to identify the purchase and assess the claim.</p>
 <h2>6. Escalate in a sensible order</h2>
 <p>If frontline support repeats the refusal, request escalation to a complaints team or manager. Follow the trader&#39;s formal complaint procedure and retain proof of submission.</p>
 <p>For a cross-border dispute, the European Consumer Centres Network may be able to assist when the trader is based in another EU country, Iceland or Norway. Depending on the country and dispute, an alternative dispute-resolution body, national consumer authority or the European Small Claims Procedure may also be relevant. Our guide to <a href="/blog/how-to-file-consumer-complaint-eu/">filing and escalating an EU consumer complaint</a> explains these routes in more detail.</p>
 <p>Before escalating, check the current official guidance for your country. EU rules set a common floor, but deadlines, evidential presumptions and enforcement procedures vary.</p>
+<blockquote>
+<p><strong>Escalation rule</strong>
+Move to the next channel because the current one failed, not simply because the first answer was disappointing. Keep proof of each attempt.</p>
+</blockquote>
 <h2>A concise response beats repeated arguments</h2>
 <p>The strongest next step is usually not a longer argument. It is a clean evidence file, a precise request under the legal guarantee and a documented escalation path. That combination makes it harder for a valid claim to be dismissed as a vague customer-service query.</p>
 <h2>Frequently asked questions</h2>

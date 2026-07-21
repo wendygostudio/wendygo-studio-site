@@ -29,17 +29,20 @@ El primer “no” de un vendedor no determina si tu reclamación es válida. Mu
 
 Esta guía ofrece un flujo práctico para responder. Es información general, no asesoramiento jurídico individual; las normas nacionales y los hechos de cada compra pueden cambiar el resultado.
 
+> **Distinción clave**
+> El plazo de devolución de una tienda, la garantía comercial del fabricante y tu garantía legal son tres cosas distintas.
+
 ## 1. Conserva las pruebas antes de responder
 
 Guarda la confirmación del pedido, factura, anuncio del producto y documentos de garantía. Fotografía o graba el defecto y conserva todos los mensajes intercambiados. Anota cuándo recibiste el artículo, cuándo apareció el problema y qué comprobaciones realizaste.
 
-Crea una cronología breve en lugar de enviar un relato emocional. Por ejemplo: “Recibido el 3 de marzo; la pantalla empezó a parpadear el 18 de junio; restablecimiento realizado el 19; contacto con la tienda el 20; reclamación rechazada el 22”. Así facilitas que un responsable, organismo de consumo o tribunal comprenda el caso.
+Crea una cronología breve en lugar de enviar un relato emocional. Por ejemplo: “Recibido el 3 de marzo; la pantalla empezó a parpadear el 18 de junio; restablecimiento realizado el 19; contacto con la tienda el 20; reclamación rechazada el 22”.
 
 Si necesitas repasar las reglas básicas, consulta nuestra explicación sobre la [garantía legal de dos años en la UE](/es/blog/garantia-legal-ue-explicada/) antes de redactar la respuesta.
 
 ## 2. Identifica qué ha rechazado realmente
 
-Comprueba si el mensaje se refiere a una garantía comercial voluntaria o a tu garantía legal. Son conceptos distintos. Según la [guía de garantías de Your Europe](https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_es.htm), existe generalmente una garantía legal mínima de dos años para bienes defectuosos comprados a un comerciante de la UE. La reclamación suele dirigirse al vendedor aunque el fabricante ofrezca una garantía comercial más corta.
+Comprueba si el mensaje se refiere a una garantía comercial voluntaria o a tu garantía legal. Según la [guía de garantías de Your Europe](https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_es.htm), existe generalmente una garantía legal mínima de dos años para bienes defectuosos comprados a un comerciante de la UE. La reclamación suele dirigirse al vendedor aunque el fabricante ofrezca una garantía comercial más corta.
 
 También debes separar una reclamación por defecto del derecho de desistimiento de 14 días aplicable a muchas compras a distancia. La tienda puede tener razón al afirmar que terminó el desistimiento y, aun así, seguir respondiendo por un producto no conforme.
 
@@ -52,7 +55,14 @@ Responde por escrito y pide al vendedor que indique:
 - si la decisión afecta a la garantía comercial o a la legal;
 - qué solución ofrece, si ofrece alguna.
 
-Mantén un tono objetivo. El objetivo inmediato es eliminar ambigüedades y construir un expediente.
+<div class="key-points">
+  <h3>Una respuesta útil debe aclarar</h3>
+  <ul>
+    <li>qué decisión tomó el vendedor;</li>
+    <li>qué pruebas la respaldan; y</li>
+    <li>qué solución continúa disponible.</li>
+  </ul>
+</div>
 
 ## 4. Indica la solución que solicitas
 
@@ -64,8 +74,6 @@ El reembolso total no siempre es el primer remedio automático. La reducción de
 
 Tu mensaje debe incluir datos de compra, defecto, cronología, negativa del vendedor, base legal, solución solicitada y una fecha razonable de respuesta. [ClaimForge](/es/claimforge/) puede ayudarte a organizar una carta de consumo y analizar localmente la contestación del vendedor. Revisa y adapta siempre el borrador: la extensión es un asistente, no un abogado ni una autoridad pública.
 
-Evita datos personales innecesarios. Incluye solo lo necesario para localizar la compra y valorar la reclamación.
-
 ## 6. Escala el caso en un orden razonable
 
 Si el primer nivel de soporte repite la negativa, solicita que el asunto pase al equipo de reclamaciones o a un responsable. Utiliza el procedimiento formal del comerciante y conserva el justificante de presentación.
@@ -74,9 +82,10 @@ En un conflicto transfronterizo, la Red de Centros Europeos del Consumidor puede
 
 Antes de escalar, consulta la información oficial vigente en tu país. Las normas europeas establecen una base común, pero los plazos, presunciones probatorias y procedimientos varían.
 
-## Una respuesta concisa supera a una discusión repetida
+> **Regla para escalar**
+> Pasa al siguiente canal porque el actual no resolvió el caso, no solo porque la primera respuesta fue decepcionante. Conserva prueba de cada intento.
 
-El siguiente paso más sólido no suele ser discutir más. Es preparar pruebas claras, formular una petición concreta bajo la garantía legal y dejar documentada la escalada. Esa combinación dificulta que una reclamación válida se descarte como una consulta imprecisa.
+## Una respuesta concisa supera a una discusión repetida
 
 ## Preguntas frecuentes
 
