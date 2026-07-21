@@ -1,531 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wendygostudio.com/</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/"/>
   </url>
-
   <url>
     <loc>https://wendygostudio.com/blog/</loc>
     <lastmod>2026-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/blog/base64-encode-decode-online-tool/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <loc>https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/</loc>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
   </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/decode-jwt-token-browser/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/resize-image-for-instagram-chrome/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/resize-image-for-twitch-panel-chrome/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-twitch-panel-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-panel-twitch/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/youtube-thumbnail-checker/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/youtube-thumbnail-checker/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/youtube-thumbnail-checker/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/youtube-thumbnail-checker/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/youtube-thumbnail-checker/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/youtube-thumbnail-checker/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/ip-extractor/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/ip-extractor/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/ip-extractor/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/ip-extractor/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/ip-extractor/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/ip-extractor/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/regex-tester/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/regex-tester/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/regex-tester/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/regex-tester/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/regex-tester/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/regex-tester/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/uuid-generator/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/uuid-generator/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/uuid-generator/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/uuid-generator/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/uuid-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/uuid-generator/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/subnet-calculator/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/subnet-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/subnet-calculator/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/subnet-calculator/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/subnet-calculator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/subnet-calculator/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/json-formatter/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/json-formatter/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/json-formatter/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/json-formatter/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/json-formatter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/json-formatter/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/privacy</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/terms</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/extract-emails-from-text/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-emails-from-text/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-correos-desde-texto/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/extraer-correos-desde-texto/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-correos-desde-texto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-emails-from-text/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/extract-urls-from-text/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-urls-from-text/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-urls-de-texto/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/resize-image-for-x-twitter-post/</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-x-twitter-post/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-x-twitter-post/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/sort-lines-alphabetically-online/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/remove-duplicate-lines-online/</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-duplicate-lines-online/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-lineas-duplicadas-online/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/resize-image-for-linkedin-post/</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-linkedin-post/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-linkedin/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/free-thumbnail-tool-no-login/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-thumbnail-tool-no-login/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/herramienta-miniaturas-gratis-sin-registro/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/resize-image-for-pinterest-pin/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-pinterest/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/sanitize-network-config-before-sharing/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
-</url>
-
-
-  <url>
-    <loc>https://wendygostudio.com/blog/clean-pasted-text-formatting/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-pasted-text-formatting/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/limpiar-formato-texto-pegado/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/resize-image-for-tiktok-profile-picture/</loc>
-    <lastmod>2026-06-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-tiktok-profile-picture/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-perfil-tiktok/"/>
-</url>
-
-
-  <url>
-    <loc>https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/sanitize-fortigate-config/</loc>
-    <lastmod>2026-06-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-config-fortigate/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/eu-warranty-rights-explained/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/garantia-legal-ue-explicada/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/share-network-config-reddit-safely/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-reddit-safely/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-reddit-seguro/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/share-network-config-support-ticket-safely/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/textforge/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/frameforge/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/scrubforge/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/convertforge/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/slimeforge/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/slimeforge/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/convertforge/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/claimforge/</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/use-cases/gdpr-rights-tool/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/gdpr-data-access-request/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/solicitud-acceso-datos-rgpd/"/>
-</url>
-
-
-  <url>
-    <loc>https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/como-presentar-reclamacion-consumidor-ue/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/como-presentar-reclamacion-consumidor-ue/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/como-presentar-reclamacion-consumidor-ue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/"/>
-  </url>
-
   <url>
     <loc>https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/</loc>
     <lastmod>2026-07-04</lastmod>
@@ -534,395 +32,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://wendygostudio.com/blog/base64-encode-decode-online-tool/</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/blog/credit-card-chargeback-eu/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/"/>
   </url>
-
-  <url>
-    <loc>https://wendygostudio.com/use-cases/bulk-text-cleaner/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/bulk-text-cleaner/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/bulk-text-cleaner/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/convert-heic-to-jpg-free/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-jpg-gratis/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/convertir-heic-a-jpg-gratis/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-jpg-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/convert-heic-to-png-free/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-png-free/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/convert-pdf-to-text-free/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/convert-video-to-audio-free/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-video-to-audio-free/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-video-a-audio-gratis/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/convertir-video-a-audio-gratis/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-video-a-audio-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-video-to-audio-free/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/extract-text-from-image-free/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-text-from-image-free/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-text-from-image-free/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/save-video-audio-as-mp3/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/save-video-audio-as-mp3/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/convert-csv-to-json-free/</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-csv-to-json-free/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/generate-uuid-online/</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-uuid-en-linea/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/generar-uuid-en-linea/</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-uuid-en-linea/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/generate-random-string-online/</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-random-string-online/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/convertio-alternatives/</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convertio-alternatives/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/tools/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/tools/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/guides/base64-encoding/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/guides/image-resizing-social-media/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/guides/text-data-extraction/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
-</url>
-  <url>
-    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/use-cases/derechos-gdpr-herramienta/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/gdpr-rights-tool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/derechos-gdpr-herramienta/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/textforge/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/frameforge/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/scrubforge/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/claimforge/</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/slug-generator/</loc>
-    <lastmod>2026-07-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/slug-generator/</loc>
-    <lastmod>2026-07-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/goodbye/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/cyberchef-alternatives/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cyberchef/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/alternativas-cyberchef/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cyberchef/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/decode-jwt-online/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/clean-text-online/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-text-online/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/remove-special-characters-from-text/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-special-characters-from-text/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/tools/password-generator/</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/password-generator/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/password-generator/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/tools/password-generator/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/password-generator/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/password-generator/"/>
-  </url>
-
   <url>
     <loc>https://wendygostudio.com/blog/batch-resize-images-chrome-extension/</loc>
     <lastmod>2026-07-14</lastmod>
@@ -931,224 +56,149 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://wendygostudio.com/blog/best-chrome-extensions-for-students/</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/best-chrome-extensions-for-students/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-extensiones-chrome-estudiantes/"/>
   </url>
-
+  <url>
+    <loc>https://wendygostudio.com/blog/clean-pasted-text-formatting/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-pasted-text-formatting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/limpiar-formato-texto-pegado/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/clean-text-online/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-text-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/limpiar-texto-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/cloudconvert-alternatives/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cloudconvert-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cloudconvert/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/convert-csv-to-json-free/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-csv-to-json-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-csv-a-json-gratis/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/convert-heic-to-jpg-free/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-jpg-gratis/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/convert-heic-to-png-free/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-png-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-png-gratis/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/convert-pdf-to-text-free/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/convert-video-to-audio-free/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-video-to-audio-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-video-a-audio-gratis/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/convert-xlsx-to-csv-free/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-xlsx-to-csv-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-xlsx-a-csv-gratis/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/convertio-alternatives/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convertio-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertio/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/credit-card-chargeback-eu/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+  </url>
   <url>
     <loc>https://wendygostudio.com/blog/crop-images-social-media-chrome/</loc>
     <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/cyberchef-alternatives/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cyberchef/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/decode-jwt-online/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-jwt-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/decode-jwt-token-browser/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/eu-14-day-return-withdrawal/</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-desistimiento-14-dias-ue/"/>
-</url>
-  <url>
-    <loc>https://wendygostudio.com/es/privacy</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/terms</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/guides/eu-consumer-rights/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/guides/eu-consumer-rights/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/guides/derechos-consumidor-ue/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/guides/derechos-consumidor-ue/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/guides/derechos-consumidor-ue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/guides/eu-consumer-rights/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extension-pomodoro-chrome/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/forest-app-alternatives-chrome/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-forest-chrome/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/alternativas-forest-chrome/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-forest-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/pomodoro-timer-for-developers/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-timer-for-developers/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programadores/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/best-chrome-extensions-for-students/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/best-chrome-extensions-for-students/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-extensiones-chrome-estudiantes/"/>
-</url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/"/>
-</url>
-
-<url>
-    <loc>https://wendygostudio.com/es/blog/convertir-csv-a-json-gratis/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-csv-a-json-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-csv-to-json-free/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/limpiar-texto-online/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/limpiar-texto-online/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-text-online/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/convertir-heic-a-png-gratis/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-png-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-png-free/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/decodificar-jwt-online/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-jwt-online/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-special-characters-from-text/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-random-string-online/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/guardar-audio-video-mp3/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/guardar-audio-video-mp3/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/save-video-audio-as-mp3/"/>
-  </url>
-<url>
-    <loc>https://wendygostudio.com/es/blog/alternativas-convertio/</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertio/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convertio-alternatives/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/blog/right-to-repair-eu-law/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/"/>
-  </url>
-  <url>
-    <loc>https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/</loc>
@@ -1159,103 +209,53 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/"/>
   </url>
   <url>
-    <loc>https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://wendygostudio.com/blog/eu-warranty-rights-explained/</loc>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/garantia-legal-ue-explicada/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/blog/pomodoro-vs-time-blocking/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://wendygostudio.com/blog/extract-emails-from-text/</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-vs-bloques-de-tiempo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-emails-from-text/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-correos-desde-texto/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/es/blog/pomodoro-vs-bloques-de-tiempo/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <loc>https://wendygostudio.com/blog/extract-text-from-image-free/</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-vs-bloques-de-tiempo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-text-from-image-free/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <loc>https://wendygostudio.com/blog/extract-urls-from-text/</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-urls-from-text/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-urls-de-texto/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <loc>https://wendygostudio.com/blog/forest-app-alternatives-chrome/</loc>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-forest-chrome/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/blog/convert-xlsx-to-csv-free/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/</loc>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-xlsx-to-csv-free/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-xlsx-a-csv-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/"/>
   </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/convert-xlsx-to-csv-free/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-xlsx-to-csv-free/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/blog/pomofocus-alternatives/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomofocus-alternatives/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/"/>
-  </url>
-
-  <url>
-    <loc>https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomofocus-alternatives/"/>
-  </url>
-
   <url>
     <loc>https://wendygostudio.com/blog/free-config-sanitizer-alternatives/</loc>
     <lastmod>2026-07-19</lastmod>
@@ -1264,33 +264,54 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://wendygostudio.com/blog/free-thumbnail-tool-no-login/</loc>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-thumbnail-tool-no-login/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/herramienta-miniaturas-gratis-sin-registro/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/blog/remove-secrets-kubernetes-config/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://wendygostudio.com/blog/gdpr-data-access-request/</loc>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/solicitud-acceso-datos-rgpd/"/>
   </url>
-
   <url>
-    <loc>https://wendygostudio.com/blog/cloudconvert-alternatives/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <loc>https://wendygostudio.com/blog/generate-random-string-online/</loc>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cloudconvert-alternatives/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cloudconvert/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-random-string-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/"/>
   </url>
-
+  <url>
+    <loc>https://wendygostudio.com/blog/generate-uuid-online/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-uuid-en-linea/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/como-presentar-reclamacion-consumidor-ue/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/"/>
+  </url>
   <url>
     <loc>https://wendygostudio.com/blog/pdf-converter-alternatives/</loc>
     <lastmod>2026-07-20</lastmod>
@@ -1299,7 +320,237 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pdf-converter-alternatives/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertidor-pdf/"/>
   </url>
-
+  <url>
+    <loc>https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extension-pomodoro-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/pomodoro-timer-for-developers/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-timer-for-developers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programadores/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/pomodoro-vs-time-blocking/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-vs-bloques-de-tiempo/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/pomofocus-alternatives/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomofocus-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/remove-duplicate-lines-online/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-duplicate-lines-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-lineas-duplicadas-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/remove-secrets-kubernetes-config/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/remove-special-characters-from-text/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-special-characters-from-text/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-instagram-chrome/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-linkedin-post/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-linkedin-post/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-linkedin/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-pinterest-pin/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-pinterest/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-tiktok-profile-picture/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-tiktok-profile-picture/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-perfil-tiktok/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-twitch-panel-chrome/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-twitch-panel-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-panel-twitch/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-for-x-twitter-post/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-x-twitter-post/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/right-to-repair-eu-law/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sanitize-fortigate-config/</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-config-fortigate/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sanitize-network-config-before-sharing/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/save-video-audio-as-mp3/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/save-video-audio-as-mp3/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/guardar-audio-video-mp3/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/share-network-config-reddit-safely/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-reddit-safely/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-reddit-seguro/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/share-network-config-support-ticket-safely/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sort-lines-alphabetically-online/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/claimforge/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/convertforge/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/"/>
+  </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/alternativas-cloudconvert/</loc>
     <lastmod>2026-07-20</lastmod>
@@ -1308,7 +559,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cloudconvert/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cloudconvert-alternatives/"/>
   </url>
-
   <url>
     <loc>https://wendygostudio.com/es/blog/alternativas-convertidor-pdf/</loc>
     <lastmod>2026-07-20</lastmod>
@@ -1317,7 +567,134 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertidor-pdf/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pdf-converter-alternatives/"/>
   </url>
-
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-convertio/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-convertio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convertio-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-cyberchef/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-cyberchef/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-forest-chrome/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-reclamar-sin-abogado-ue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/como-presentar-reclamacion-consumidor-ue/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/como-presentar-reclamacion-consumidor-ue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/compartir-config-red-reddit-seguro/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-reddit-seguro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-reddit-safely/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/compartir-config-red-ticket-soporte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/share-network-config-support-ticket-safely/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/convertir-csv-a-json-gratis/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-csv-a-json-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-csv-to-json-free/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/convertir-heic-a-jpg-gratis/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-jpg-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/convertir-heic-a-png-gratis/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-png-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-png-free/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-pdf-a-texto-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/convertir-video-a-audio-gratis/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-video-a-audio-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-video-to-audio-free/"/>
+  </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/convertir-xlsx-a-csv-gratis/</loc>
     <lastmod>2026-07-19</lastmod>
@@ -1326,5 +703,691 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-xlsx-a-csv-gratis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-xlsx-to-csv-free/"/>
   </url>
-
+  <url>
+    <loc>https://wendygostudio.com/es/blog/decodificar-jwt-online/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-jwt-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-a-reparacion-ley-ue/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/derecho-desistimiento-14-dias-ue/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-desistimiento-14-dias-ue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-reparacion-partes-refabricadas-ue/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-caracteres-especiales-texto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-special-characters-from-text/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/eliminar-lineas-duplicadas-online/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-lineas-duplicadas-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-duplicate-lines-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/extension-pomodoro-chrome/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extension-pomodoro-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/extraer-correos-desde-texto/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-correos-desde-texto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-emails-from-text/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-texto-de-imagen-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-text-from-image-free/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/extraer-urls-de-texto/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/extraer-urls-de-texto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/extract-urls-from-text/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/frameforge-vs-canva-thumbnails/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/garantia-legal-ue-explicada/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/garantia-legal-ue-explicada/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-random-string-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/generar-uuid-en-linea/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-uuid-en-linea/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/guardar-audio-video-mp3/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/guardar-audio-video-mp3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/save-video-audio-as-mp3/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/herramienta-miniaturas-gratis-sin-registro/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/herramienta-miniaturas-gratis-sin-registro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-thumbnail-tool-no-login/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/limpiar-formato-texto-pegado/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/limpiar-formato-texto-pegado/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-pasted-text-formatting/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/limpiar-texto-online/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/limpiar-texto-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/clean-text-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomofocus-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/mejores-extensiones-chrome-estudiantes/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-extensiones-chrome-estudiantes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/best-chrome-extensions-for-students/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/pomodoro-para-programadores/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programadores/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-timer-for-developers/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/pomodoro-vs-bloques-de-tiempo/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-vs-bloques-de-tiempo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-instagram-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-linkedin/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-linkedin/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-linkedin-post/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-panel-twitch/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-panel-twitch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-twitch-panel-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-para-x-twitter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-x-twitter-post/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-perfil-tiktok/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-perfil-tiktok/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-tiktok-profile-picture/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagen-pinterest/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-config-fortigate/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-config-fortigate/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-chatgpt-network-troubleshooting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/solicitud-acceso-datos-rgpd/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/solicitud-acceso-datos-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/claimforge/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/convertforge/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/frameforge/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/guides/derechos-consumidor-ue/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/guides/derechos-consumidor-ue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/guides/eu-consumer-rights/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/privacy</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/scrubforge/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/slimeforge/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/terms</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/textforge/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/ip-extractor/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/ip-extractor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/ip-extractor/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/json-formatter/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/json-formatter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/json-formatter/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/password-generator/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/password-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/password-generator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/regex-tester/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/regex-tester/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/regex-tester/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/slug-generator/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/subnet-calculator/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/subnet-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/subnet-calculator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/uuid-generator/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/uuid-generator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/uuid-generator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/tools/youtube-thumbnail-checker/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/youtube-thumbnail-checker/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/youtube-thumbnail-checker/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/use-cases/derechos-gdpr-herramienta/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/derechos-gdpr-herramienta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/gdpr-rights-tool/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/bulk-text-cleaner/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/frameforge/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/guides/base64-encoding/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/guides/eu-consumer-rights/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/guides/eu-consumer-rights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/guides/derechos-consumidor-ue/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/guides/image-resizing-social-media/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/guides/text-data-extraction/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/privacy</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/scrubforge/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/slimeforge/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/terms</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/textforge/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/ip-extractor/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/ip-extractor/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/ip-extractor/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/json-formatter/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/json-formatter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/json-formatter/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/password-generator/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/password-generator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/password-generator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/regex-tester/</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/regex-tester/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/regex-tester/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/slug-generator/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/slug-generator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/slug-generator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/subnet-calculator/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/subnet-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/subnet-calculator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/uuid-generator/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/uuid-generator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/uuid-generator/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/tools/youtube-thumbnail-checker/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/youtube-thumbnail-checker/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/youtube-thumbnail-checker/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/use-cases/bulk-text-cleaner/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/bulk-text-cleaner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/limpiador-de-texto-en-lote/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/use-cases/gdpr-rights-tool/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/gdpr-rights-tool/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/derechos-gdpr-herramienta/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/use-cases/convertidor-archivos-extension-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

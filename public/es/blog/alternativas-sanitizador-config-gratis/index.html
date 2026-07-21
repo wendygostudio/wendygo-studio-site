@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alternativas a Sanitizador de Config Gratis (2026) | Wendygo Studio</title>
+<title>Alternativas a Sanitizador de Config Gratis (2026) | Wendygo</title>
 <meta name="description" content="Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge." />
 <link rel="canonical" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/" />
 <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/" />
@@ -22,12 +22,12 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Es CyberChef seguro para sanitizar configuraciones de red?","acceptedAnswer":{"@type":"Answer","text":"CyberChef estándar (bake.gchq.github.io) se ejecuta en el navegador, pero el sitio es servido por infraestructura de GCHQ. La mayoría de profesionales de seguridad tratan las herramientas basadas en web igual que cualquier servidor de terceros. Si ejecutas CyberChef en tu propia infraestructura, se convierte en una herramienta local. De lo contrario, para configuraciones de producción sensibles, un enfoque solo local es más seguro."}},{"@type":"Question","name":"¿Puedo escribir mi propio script bash para sanitizar configuraciones de Cisco?","acceptedAnswer":{"@type":"Answer","text":"Sí. Un script sed o awk puede eliminar patrones conocidos de un archivo de configuración sin enviar nada a un servidor externo. El problema: tienes que mantener la lista de patrones tú mismo. Las nuevas versiones de firmware a menudo cambian ligeramente la sintaxis de credenciales. Si tu script falla en un patrón, la credencial se envía en texto plano sin advertencia."}},{"@type":"Question","name":"¿Qué detecta ScrubForge que los scripts manuales generalmente pierden?","acceptedAnswer":{"@type":"Answer","text":"ScrubForge cubre más de 120 patrones incluyendo contraseñas cifradas tipo 7 de Cisco, hashes ENC de FortiGate, cadenas de comunidad SNMP, contraseñas de vecinos BGP, claves de acceso AWS, tokens de GitHub, tokens de Slack y secretos JWT. Los scripts manuales típicamente capturan palabras clave obvias de contraseña y secreto pero pierden formatos codificados y credenciales de servicio integradas en sintaxis específica del proveedor."}},{"@type":"Question","name":"¿Funciona ScrubForge sin conexión?","acceptedAnswer":{"@type":"Answer","text":"Sí. ScrubForge es una extensión Chrome que se ejecuta completamente en el dispositivo. No se carga ningún dato de configuración. La coincidencia de patrones sucede localmente en tu navegador sin solicitudes de red. Esto lo hace adecuado para entornos restringidos donde puedes instalar extensiones de Chrome pero no puedes enviar datos de configuración externamente."}},{"@type":"Question","name":"¿Cuál es la diferencia entre las versiones gratuita y Pro de ScrubForge?","acceptedAnswer":{"@type":"Answer","text":"La versión gratuita cubre sanitización principal: pega una configuración, detecta y reemplaza credenciales con tokens de marcador de posición consistentes, copia la salida sanitizada. Pro añade importación/exportación de diccionario personalizado (trae tus propios patrones para formatos de proveedor inusuales), perfiles de contexto para diferentes entornos de proveedor e integración BYOK AI con cinco proveedores de IA para análisis en la extensión."}}]}
 </script>
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Alternativas a Sanitizador de Config Gratis (2026) | Wendygo Studio" />
+<meta property="og:title" content="Alternativas a Sanitizador de Config Gratis (2026) | Wendygo" />
 <meta property="og:description" content="Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge." />
 <meta property="og:url" content="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/" />
 <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Alternativas a Sanitizador de Config Gratis (2026) | Wendygo Studio" />
+<meta name="twitter:title" content="Alternativas a Sanitizador de Config Gratis (2026) | Wendygo" />
 <meta name="twitter:description" content="Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge." />
 <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
 <style>
@@ -255,5 +255,7 @@ sed -E \
   </div>
   <div class="footer-copy">© 2026 Wendygo Studio. Todos los derechos reservados.</div>
 </footer>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>

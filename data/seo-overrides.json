@@ -1,0 +1,16 @@
+{
+  "es/index.html": {"title":"Wendygo Studio — Extensiones privadas para Chrome"},
+  "es/blog/frameforge-vs-canva-miniaturas/index.html": {"title":"FrameForge vs Canva para crear miniaturas"},
+  "es/frameforge/index.html": {"title":"FrameForge — Redimensiona imágenes y miniaturas"},
+  "es/guides/derechos-consumidor-ue/index.html": {"title":"Derechos del consumidor en la UE: guía completa"},
+  "es/tools/ip-extractor/index.html": {"title":"Extractor de direcciones IP online y privado"},
+  "es/tools/subnet-calculator/index.html": {"title":"Calculadora de subredes, CIDR y hosts"},
+  "es/tools/youtube-thumbnail-checker/index.html": {"title":"Comprobador de miniaturas de YouTube"},
+  "es/tools/json-formatter/index.html": {"description":"Formatea, valida y minifica JSON localmente. Detecta errores y consulta la línea exacta sin subir tus datos."},
+  "es/tools/uuid-generator/index.html": {"description":"Genera de 1 a 1000 UUID v4 con o sin guiones. Gratis, rápido y completamente local."},
+  "es/use-cases/derechos-gdpr-herramienta/index.html": {"description":"Conoce y ejerce tus derechos RGPD: acceso, borrado, portabilidad y objeción con una guía práctica y privada."},
+  "guides/base64-encoding/index.html": {"description":"Learn Base64 encoding and decoding, JWT tokens, Kubernetes secrets and Basic Auth without uploading your data."},
+  "guides/eu-consumer-rights/index.html": {"title":"EU Consumer Rights: Complete Guide for Shoppers","description":"Understand EU warranties, complaints, chargebacks, GDPR rights and small claims with this practical consumer guide."},
+  "tools/subnet-calculator/index.html": {"description":"Calculate network address, broadcast, host range and wildcard mask from any IP and CIDR prefix, locally in your browser."},
+  "use-cases/network-config-anonymizer-for-ai/index.html": {"description":"Remove passwords, SNMP strings, IPsec keys and other secrets before sharing network configurations with an AI assistant."}
+}

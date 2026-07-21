@@ -12,6 +12,8 @@ desktop.ini
 
 # Node (if any build tools added later)
 node_modules/
+dist/
+.import-staging/
 
 # Environment / secrets
 .env

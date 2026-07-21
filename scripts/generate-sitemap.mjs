@@ -1,0 +1,10 @@
+import fs from 'node:fs'; import path from 'node:path';
+const root=path.resolve('public'), sitemap=path.join(root,'sitemap.xml'), files=[];
+function walk(d){for(const e of fs.readdirSync(d,{withFileTypes:true})){const p=path.join(d,e.name);e.isDirectory()?walk(p):e.name.endsWith('.html')&&files.push(p)}} walk(root);
+const old=fs.readFileSync(sitemap,'utf8'); const dates=new Map([...old.matchAll(/<url>[\s\S]*?<loc>([^<]+)<\/loc>[\s\S]*?<lastmod>([^<]+)<\/lastmod>[\s\S]*?<\/url>/g)].map(m=>[m[1],m[2]]));
+const urls=new Map();
+for(const f of files){const s=fs.readFileSync(f,'utf8');if(/<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(s))continue;const loc=s.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)/i)?.[1];if(!loc)continue;const alternates=[...s.matchAll(/<link\s+rel=["']alternate["']\s+hreflang=["']([^"']+)["']\s+href=["']([^"']+)/gi)].map(m=>({lang:m[1],href:m[2]}));urls.set(loc,{loc,alternates});}
+function esc(v){return v.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')}
+function priority(loc){if(loc==='https://wendygostudio.com/')return '1.0';if(/\/(?:text|frame|convert|scrub|claim|slime)forge\/$/.test(loc))return '0.9';if(loc.includes('/tools/'))return '0.8';if(loc.includes('/blog/'))return '0.7';return '0.6'}
+const today=new Date().toISOString().slice(0,10);let xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
+for(const {loc,alternates} of [...urls.values()].sort((a,b)=>a.loc.localeCompare(b.loc))){xml+='  <url>\n';xml+=`    <loc>${esc(loc)}</loc>\n    <lastmod>${dates.get(loc)||today}</lastmod>\n    <changefreq>${loc.includes('/blog/')?'monthly':'weekly'}</changefreq>\n    <priority>${priority(loc)}</priority>\n`;for(const a of alternates)xml+=`    <xhtml:link rel="alternate" hreflang="${esc(a.lang)}" href="${esc(a.href)}"/>\n`;xml+='  </url>\n'}xml+='</urlset>\n';fs.writeFileSync(sitemap,xml,'utf8');console.log(`Generated ${urls.size} sitemap URLs`);
