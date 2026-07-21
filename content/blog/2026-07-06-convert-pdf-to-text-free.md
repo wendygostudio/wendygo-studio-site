@@ -1,5 +1,5 @@
 ---
-title: "How to Convert PDF to Text Free — Local OCR, No Upload"
+title: "How to Convert Scanned PDF to Text Locally — No Upload"
 description: "Extract text from PDFs and scanned documents entirely in your browser. ConvertForge uses local OCR (Tesseract) — no cloud service, no account, no files sent to any server."
 date: 2026-07-06
 slug: convert-pdf-to-text-free
@@ -74,8 +74,8 @@ There's a related use case worth knowing: you can also use OCR to create a searc
 
 ## FAQ
 
-**Is PDF to text conversion free in ConvertForge?**
-Yes. The OCR conversion feature is available in the free version of ConvertForge. No account or subscription required.
+**Is scanned-PDF OCR free in ConvertForge?**
+No. OCR for scanned PDFs is a Pro feature. OCR for JPG and PNG images is available in the free version. Both run locally with Tesseract.
 
 **Does ConvertForge send my PDFs to a server?**
 No. ConvertForge is a Chrome extension. OCR runs locally on your device using the Tesseract engine. Your files are never sent to any server.

@@ -39,7 +39,7 @@ For handwritten text, Tesseract's accuracy is limited — it's optimized for pri
 ## Frequently Asked Questions
 
 **Is image to text conversion free in ConvertForge?**
-Yes. The OCR conversion feature is available in the free version of ConvertForge. No account or subscription required.
+Yes. OCR for JPG and PNG images is available in the free version. OCR for scanned PDFs is a separate Pro feature. Both run locally with Tesseract.
 
 **Does ConvertForge send my images to a server?**
 No. ConvertForge is a Chrome extension. OCR runs locally on your device using the Tesseract engine. Your files are never sent to any server.

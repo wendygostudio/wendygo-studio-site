@@ -57,7 +57,7 @@ Your bank investigates and typically makes a decision within 4–6 weeks. They'l
 ### Chargeback vs. Other Options
 A chargeback is fast but not the only option. If your chargeback fails, or if you want a second opinion before filing:
 - **ADR (Alternative Dispute Resolution):** Takes up to 90 days, but often more successful for quality disputes
-- **EU ODR Platform:** Better for cross-border disputes; routes your claim through the right authority
+- **ECC-Net:** May help with an eligible dispute involving a trader in another EU country, Iceland or Norway
 - **National Consumer Authority:** Can pressure the merchant if they're repeat offenders; free to file
 - **Small Claims Court:** Last resort, but often sellers settle before judgment
 

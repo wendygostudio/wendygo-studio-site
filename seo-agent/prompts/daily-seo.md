@@ -174,6 +174,7 @@ Cómo usar nuestras extensiones con otras herramientas populares.
    relatedPages: /producto/,/blog/otro-slug/
    ---
    ```
+   Para ClaimForge añade también `jurisdiction`, `reviewedAt`, `reviewDue` (máximo 90 días) y `sourceUrls` con fuentes oficiales vigentes. Si no puedes verificar una afirmación legal en una fuente oficial actual, no publiques esa afirmación.
 2. **HTML:** `public/blog/slug/index.html`
 3. **CSS inline** con el sistema de diseño dark del sitio (ver system prompt) — **incluye el nav con el menú móvil (checkbox hack) completo, HTML+CSS, tal como está documentado en `system-prompt.md` → "Nav — OBLIGATORIO incluir el menú móvil"**. No copies una plantilla de nav de un artículo antiguo sin comprobar antes que ese artículo ya tiene el menú móvil aplicado (búscalo con `grep -c nav-toggle` sobre el archivo que vayas a usar como base) — si no lo tiene, estás propagando la versión rota.
 4. **600-900 palabras** con H1 = keyword principal, H2s, ejemplo práctico, CTA suave

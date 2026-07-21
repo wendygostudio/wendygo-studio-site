@@ -12,7 +12,7 @@ When a seller refuses your warranty claim or ignores a refund request, hiring a 
 
 ## Why You (Almost Certainly) Don't Need a Lawyer
 
-EU consumer rights are self-enforcing in the sense that the mechanisms for asserting them — ADR bodies, national authorities, the ODR platform, small claims courts — are all designed to be accessible without legal representation. Most are free. Most can be started online in under 30 minutes.
+EU consumers can use several routes without immediately hiring a lawyer, including ADR bodies, national authorities, ECC-Net and the European Small Claims Procedure. Eligibility, costs and procedure depend on the dispute and country.
 
 Hiring a lawyer for a standard consumer dispute (defective product, unjustified refund refusal, non-delivery) is almost always disproportionate. Lawyers are worth it when the stakes are genuinely high — several thousand euros, complex fraud, or a dispute that has already been through every other channel. For the vast majority of everyday disputes, the alternatives below are faster, cheaper, and often more effective.
 
@@ -33,9 +33,9 @@ Every EU member state has a government body responsible for enforcing consumer r
 
 Well-known examples include the Verbraucherzentrale (Germany), DGCCRF (France), OCU / OMIC (Spain), AGCM (Italy), and ACM (Netherlands). Filing with them is free and can produce results, especially with larger sellers who want to protect their operating licences.
 
-## Alternative 3: The EU ODR Platform
+## Alternative 3: ECC-Net for Cross-Border Purchases
 
-The EU Online Dispute Resolution platform (`ec.europa.eu/consumers/odr`) is specifically designed for cross-border disputes — when you bought from a seller in a different EU country. It automatically routes your complaint to the appropriate ADR body in the seller's country and handles the process in your language.
+If you bought from a trader in another EU country, Iceland or Norway, contact the European Consumer Centre in your own country. ECC-Net can explain the available routes, help you communicate across borders and may assist in seeking an amicable settlement. You should normally contact the trader first and keep the evidence of that attempt.
 
 Use this if the seller is based in a different EU country from you.
 
@@ -78,7 +78,7 @@ For everything else, the alternatives above have a strong track record.
 ## Frequently Asked Questions
 
 **Do I need a lawyer to file an EU consumer complaint?**
-No. ADR bodies, national consumer authorities, and the EU ODR platform are all designed to be used without legal representation. The process is typically an online form submission with your documentation attached.
+Not necessarily. ADR bodies, national consumer authorities and ECC-Net are intended to be accessible to consumers, although eligibility and procedure vary. Court action or a complex case may justify individual legal advice.
 
 **What is the fastest alternative for a simple refund dispute?**
 A credit card chargeback is usually the fastest — often resolved in days. If you didn't pay by card, an ADR body typically resolves in under 90 days, which is still far faster than court.
@@ -86,8 +86,8 @@ A credit card chargeback is usually the fastest — often resolved in days. If y
 **Are ADR proceedings free for consumers?**
 Yes, in most cases. EU-certified ADR bodies must be free or low-cost for consumers. Some charge a nominal fee (under €30), which is typically reimbursed if you win.
 
-**Can I use the EU ODR platform for Amazon purchases?**
-Your complaint is against the individual seller, not Amazon. If the seller is established in the EU, the ODR platform applies. Amazon's A-to-z Guarantee may also be faster for simple refund cases.
+**Can ECC-Net help with an Amazon Marketplace purchase?**
+It depends on who the seller is and where that trader is established. Amazon's own A-to-z Guarantee may also be available. For an eligible cross-border dispute, contact the European Consumer Centre in your own country after trying to resolve it with the trader.
 
 **When does it make sense to hire a lawyer for a consumer claim?**
 When the amount at stake is high (€2,000+) and all other channels have been exhausted, or when there are signs of deliberate fraud that require legal enforcement. For standard warranty, return, or GDPR disputes, the free alternatives are almost always sufficient.

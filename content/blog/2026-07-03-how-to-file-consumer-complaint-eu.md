@@ -26,7 +26,7 @@ There are three main channels in the EU:
 
 1. **ADR bodies (Alternative Dispute Resolution)** — independent mediators that resolve seller-consumer disputes. Free or low-cost, typically resolves in 90 days.
 2. **Your national consumer authority** — government agencies that can sanction non-compliant sellers. Takes longer but carries more weight.
-3. **EU ODR platform** — the official platform for cross-border complaints between EU countries (ec.europa.eu/consumers/odr).
+3. **European Consumer Centre (ECC-Net)** — contact the centre in your own country for help with a trader in another EU country, Iceland or Norway.
 
 National authorities for reference: Verbraucherzentrale (Germany), DGCCRF (France), OCU or OMIC (Spain), AGCM (Italy), ACM (Netherlands).
 
@@ -56,39 +56,39 @@ This letter also serves as evidence that you tried in good faith.
 
 **National consumer authority:** Best for serious violations or repeat offenders. File a report — even if they don't intervene in your specific case, enough complaints can trigger enforcement action.
 
-**EU ODR platform:** For purchases from sellers in a different EU country. Handles routing and translation. Available at ec.europa.eu/consumers/odr.
+**European Consumer Centre:** For purchases from a trader in another EU country, Iceland or Norway. Contact the centre in your own country for guidance and possible help reaching an amicable settlement.
 
 ### Step 4: Submit Your Complaint
 
-For the EU ODR platform: Log in → Select the seller's country → Describe the dispute → Attach documentation → The platform connects you to a certified ADR body.
+For ECC-Net: first contact the trader directly, then contact the European Consumer Centre in your country with the purchase details, correspondence and supporting evidence.
 
 For national authorities: Each has its own form. Standard required fields: your name and contact details, the seller's name and address, a description of the dispute, supporting evidence, and the remedy you're requesting (refund, replacement, repair, compensation).
 
 ### Step 5: Follow Up
 
-You will receive an acknowledgment with a case reference number. ADR procedures run up to 90 days from acceptance. If the ADR decision is not honored, you can then escalate to small claims court — but in practice, most sellers comply to avoid legal costs and a formal judgment.
+The ADR body should explain its procedure, expected timing, costs and whether an outcome is binding before you proceed. If the dispute is not resolved, check whether the European Small Claims Procedure or another national court route is appropriate.
 
 ## Cross-Border Purchases
 
-For purchases from a seller in a different EU country, use the EU ODR platform first. It automatically routes your complaint to the appropriate certified ADR body in the seller's country and handles the process in your language.
+For purchases from a trader in another EU country, Iceland or Norway, contact the European Consumer Centre in your own country. It can explain your rights, suggest the appropriate route and may help seek an amicable settlement with the foreign trader.
 
 ## What to Expect
 
-- **Timeline:** 30–90 days for most ADR cases
-- **Cost:** Free or under €20 in most EU countries
+- **Timeline:** Varies by ADR body and country; check the body's published procedure
+- **Cost:** Varies by ADR body and country; confirm any fee before filing
 - **Outcome:** Refund, replacement, or partial compensation
-- **Binding?** ADR decisions are usually binding on the trader; you as a consumer can still appeal to court if unsatisfied
+- **Binding?** It depends on the ADR body, national law and whether the parties agreed to participate. Check the body's rules before filing
 
 ## Frequently Asked Questions
 
 **Can I file a consumer complaint if I bought from Amazon?**
-Your complaint is against the individual seller, not Amazon. If the seller is EU-established, the ODR platform applies. Amazon's own A-to-z Guarantee may also be available and is often faster for simple refund cases.
+Your complaint is normally against the individual seller, not Amazon. Amazon's own A-to-z Guarantee may also be available. For a cross-border dispute with an EU, Icelandic or Norwegian trader, your national European Consumer Centre may be able to help.
 
 **Is an ADR decision legally binding?**
-It depends on the ADR body. Most EU-certified ADR bodies issue decisions binding on the trader if they agreed to participate. As a consumer, you are generally not bound — you can still go to court if unsatisfied.
+It depends on the ADR body, national law and the parties' agreement to participate. Check the body's current rules before filing and do not assume every ADR outcome has the same legal effect.
 
-**How long does the EU ODR process take?**
-Up to 4 months total in the worst case: 30 days to agree on an ADR body, then 90 days for the ADR to resolve the dispute. In practice, many cases resolve faster.
+**How long does ADR take?**
+Timelines depend on the selected ADR body and national procedure. Check the body's current rules before filing; do not assume one EU-wide deadline applies to every dispute.
 
 **What if the seller is outside the EU?**
 EU consumer rights only apply to sellers established in the EU. For non-EU sellers, your best options are a credit card chargeback or the seller's own dispute resolution process.

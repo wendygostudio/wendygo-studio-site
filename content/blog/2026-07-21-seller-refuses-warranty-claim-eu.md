@@ -7,6 +7,10 @@ slug: seller-refuses-warranty-claim-eu
 locale: en
 translationKey: seller-refuses-warranty-claim-eu
 product: claimforge
+jurisdiction: "European Union; national rules may add or vary protections"
+reviewedAt: 2026-07-21
+reviewDue: 2026-10-21
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_en.htm,https://europa.eu/youreurope/citizens/consumers/consumers-dispute-resolution/index_en.htm
 contentType: workflow
 primaryKeyword: "seller refuses warranty claim EU"
 relatedPages: /claimforge/,/blog/eu-warranty-rights-explained/,/blog/how-to-file-consumer-complaint-eu/

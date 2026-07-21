@@ -1,8 +1,64 @@
 {
-  "textforge": {"name":"TextForge","version":"1.6.0","storeId":"cnmlojgahikinilbefkkfadkfamchlba","permissions":["contextMenus","storage","offscreen"],"locales":["en","es","fr","de","it","pt_PT"]},
-  "frameforge": {"name":"FrameForge","version":"2.0.0","storeId":"abdmadomfnijoiklnaklmplifmljgchj","permissions":["contextMenus","storage"],"locales":["en","es","fr","de","it","pt_PT"]},
-  "convertforge": {"name":"ConvertForge","version":"1.5.0","storeId":"mjmamnnhophdhccknmgnppcdkojkpagj","permissions":["contextMenus","storage","downloads","notifications"],"locales":["en","es","fr","de","it","pt_PT"]},
-  "scrubforge": {"name":"ScrubForge","version":"1.13.1","storeId":"pjaohhipefhjfopoaepjbmiienagaffe","permissions":["storage","contextMenus"],"locales":["en","es","fr","de","it","pt_PT"]},
-  "claimforge": {"name":"ClaimForge","version":"1.4.0","storeId":"mlnjadkolgplpgbheklkdjcglojfakcg","permissions":["storage","alarms","notifications","contextMenus"],"locales":["en","es","fr","de","it","pt_PT"],"legalDisclaimerRequired":true},
-  "slimeforge": {"name":"SlimeForge","version":"1.8.0","storeId":"dobhabpmcmpfdihchnhbickecelihhbc","permissions":["storage","alarms","scripting","activeTab"],"locales":["en","es","fr","de","it","pt_PT"]}
+  "textforge": {
+    "name": "TextForge",
+    "version": "1.6.0",
+    "storeId": "cnmlojgahikinilbefkkfadkfamchlba",
+    "permissions": ["contextMenus", "storage", "offscreen"],
+    "locales": ["en", "es", "fr", "de", "it", "pt_PT"],
+    "claims": {
+      "functionCount": 58,
+      "features": ["chainable recipes", "on-device AI Composer", "Forge Magic"],
+      "pro": ["regex find and replace", "unlimited recipes", "unlimited AI compositions"]
+    }
+  },
+  "frameforge": {
+    "name": "FrameForge",
+    "version": "2.0.0",
+    "storeId": "abdmadomfnijoiklnaklmplifmljgchj",
+    "permissions": ["contextMenus", "storage"],
+    "locales": ["en", "es", "fr", "de", "it", "pt_PT"],
+    "claims": {"coreProcessing": "local"}
+  },
+  "convertforge": {
+    "name": "ConvertForge",
+    "version": "1.5.0",
+    "storeId": "mjmamnnhophdhccknmgnppcdkojkpagj",
+    "permissions": ["contextMenus", "storage", "downloads", "notifications"],
+    "locales": ["en", "es", "fr", "de", "it", "pt_PT"],
+    "claims": {
+      "imageOcr": "free",
+      "scannedPdfOcr": "pro",
+      "ocrEngine": "Tesseract",
+      "coreProcessing": "local"
+    }
+  },
+  "scrubforge": {
+    "name": "ScrubForge",
+    "version": "1.13.1",
+    "storeId": "pjaohhipefhjfopoaepjbmiienagaffe",
+    "permissions": ["storage", "contextMenus"],
+    "locales": ["en", "es", "fr", "de", "it", "pt_PT"],
+    "claims": {
+      "coreSanitization": "local",
+      "externalAi": "optional BYOK",
+      "externalDataFlow": "Data is sent directly to the provider chosen by the user only when the user explicitly invokes that provider"
+    }
+  },
+  "claimforge": {
+    "name": "ClaimForge",
+    "version": "1.4.0",
+    "storeId": "mlnjadkolgplpgbheklkdjcglojfakcg",
+    "permissions": ["storage", "alarms", "notifications", "contextMenus"],
+    "locales": ["en", "es", "fr", "de", "it", "pt_PT"],
+    "legalDisclaimerRequired": true,
+    "claims": {"jurisdiction": "EU with country-specific differences", "legalReviewRequired": true}
+  },
+  "slimeforge": {
+    "name": "SlimeForge",
+    "version": "1.8.0",
+    "storeId": "dobhabpmcmpfdihchnhbickecelihhbc",
+    "permissions": ["storage", "alarms", "scripting", "activeTab"],
+    "locales": ["en", "es", "fr", "de", "it", "pt_PT"],
+    "claims": {"coreProcessing": "local", "geminiNano": "optional on-device feature"}
+  }
 }

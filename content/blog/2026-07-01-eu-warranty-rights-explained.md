@@ -68,7 +68,7 @@ You're entitled to ask for:
 **Step 4: Escalate if the seller refuses**
 If the seller ignores you or refuses without valid reason, you can:
 - File a complaint with your national consumer protection authority
-- Use the EU Online Dispute Resolution (ODR) platform at ec.europa.eu/consumers/odr
+- Contact an appropriate national ADR body or, for a cross-border purchase, the European Consumer Centre in your country
 - Contact a consumer association in your country for free legal support
 
 ## The Right to Repair (EU Directive 2024/1799)
@@ -84,11 +84,11 @@ The right to repair extends beyond the 2-year guarantee window. Even after your 
 
 ## What to Do If the Seller Refuses
 
-A seller who refuses your valid warranty claim is breaking EU law. Your options:
+If a seller refuses a claim that appears covered by the legal guarantee, ask for the reason in writing and check the applicable national rules. Possible next steps include:
 
 1. **Send a formal complaint letter** — clearly state the legal basis (EU Directive 2019/771, your country's consumer law)
 2. **Contact your national consumer authority** — they can intervene and fine non-compliant sellers
-3. **File an ODR dispute** — for online purchases, the EU's dispute resolution platform handles cross-border cases
+3. **Use ADR or ECC-Net** — contact an appropriate national ADR body, or your European Consumer Centre for help with a trader in another EU country, Iceland or Norway
 4. **Chargeback** — if you paid by credit card and the seller is uncooperative, your bank may reverse the charge under dispute protection rules
 
 ClaimForge helps you draft the right letter for your situation — based on your country's specific consumer law — so you don't have to figure out the legal language yourself.

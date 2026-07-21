@@ -7,6 +7,10 @@ slug: vendedor-rechaza-garantia-ue
 locale: es
 translationKey: seller-refuses-warranty-claim-eu
 product: claimforge
+jurisdiction: "Unión Europea; las normas nacionales pueden ampliar o variar la protección"
+reviewedAt: 2026-07-21
+reviewDue: 2026-10-21
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_es.htm,https://europa.eu/youreurope/citizens/consumers/consumers-dispute-resolution/index_es.htm
 contentType: workflow
 primaryKeyword: "vendedor rechaza garantía UE"
 relatedPages: /es/claimforge/,/es/blog/garantia-legal-ue-explicada/,/es/blog/como-presentar-reclamacion-consumidor-ue/

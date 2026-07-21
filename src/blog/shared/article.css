@@ -66,6 +66,15 @@
 
     .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
 
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
     .article-body { line-height: 1.75; }
     .article-body p { margin-bottom: 20px; }
     .article-body h2 {
@@ -259,4 +268,5 @@
       .article-body blockquote,
       .article-body .step-card,
       .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
     }

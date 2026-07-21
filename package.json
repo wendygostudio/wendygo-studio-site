@@ -2,13 +2,14 @@
   "name": "wendygo-studio-site",
   "private": true,
   "scripts": {
-    "seo:fix": "node scripts/render-product-pages.mjs && node scripts/render-blog.mjs && node scripts/critical-seo-fix.mjs && node scripts/generate-sitemap.mjs",
+    "seo:fix": "node scripts/render-product-pages.mjs && node scripts/render-blog.mjs && node scripts/retire-odr-references.mjs && node scripts/inject-legal-review.mjs && node scripts/normalize-product-claims.mjs && node scripts/critical-seo-fix.mjs && node scripts/generate-sitemap.mjs",
+    "legal:fix": "node scripts/retire-odr-references.mjs && node scripts/inject-legal-review.mjs",
     "product:render": "node scripts/render-product-pages.mjs",
     "product:check": "node scripts/render-product-pages.mjs --check",
     "blog:render": "node scripts/render-blog.mjs",
     "blog:check": "node scripts/render-blog.mjs --check",
     "test": "node --test tests/*.test.mjs",
-    "validate": "node scripts/render-product-pages.mjs --check && node scripts/render-blog.mjs --check && node scripts/validate-content.mjs && node scripts/validate-site.mjs",
+    "validate": "node scripts/render-product-pages.mjs --check && node scripts/render-blog.mjs --check && node scripts/validate-content.mjs && node scripts/validate-governance.mjs && node scripts/validate-site.mjs",
     "build": "node scripts/render-product-pages.mjs && node scripts/render-blog.mjs && node scripts/build.mjs"
   },
   "dependencies": {
