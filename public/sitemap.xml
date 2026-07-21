@@ -496,6 +496,13 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-claude-ai-troubleshooting-red/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/blog/seller-refuses-warranty-claim-eu/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/vendedor-rechaza-garantia-ue/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/blog/share-network-config-reddit-safely/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -1046,6 +1053,13 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/vendedor-rechaza-garantia-ue/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/seller-refuses-warranty-claim-eu/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/claimforge/</loc>

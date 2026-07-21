@@ -2,7 +2,7 @@
   "name": "wendygo-studio-site",
   "private": true,
   "scripts": {
-    "seo:fix": "node scripts/render-product-pages.mjs && node scripts/critical-seo-fix.mjs && node scripts/generate-sitemap.mjs",
+    "seo:fix": "node scripts/render-product-pages.mjs && node scripts/render-blog.mjs && node scripts/critical-seo-fix.mjs && node scripts/generate-sitemap.mjs",
     "product:render": "node scripts/render-product-pages.mjs",
     "product:check": "node scripts/render-product-pages.mjs --check",
     "blog:render": "node scripts/render-blog.mjs",
