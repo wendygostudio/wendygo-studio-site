@@ -14,6 +14,10 @@ desktop.ini
 node_modules/
 dist/
 .import-staging/
+seo-agent/config/agent.env
+seo-agent/logs/
+seo-agent/temp/
+seo-agent/STOP
 
 # Environment / secrets
 .env

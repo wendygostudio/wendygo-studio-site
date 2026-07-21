@@ -1,0 +1,60 @@
+{
+  "_comment": "Queries de dolor. Edita libremente: el script las lee en cada run. Frases de frustración > keywords genéricas.",
+  "reddit": {
+    "_comment": "YA NO ES AUTOMÁTICO. Reddit cerró la creación self-serve de apps (Responsible Builder Policy, fin 2025) y el endpoint público .json devuelve 403 a peticiones no-navegador. Usa: node scripts/pain-scan.js --reddit-checklist para generar las URLs de búsqueda (old.reddit.com/search, funciona en navegador normal) y pega lo que encuentres en data/pain/manual-YYYY-MM-DD.md. 15-30s por link, ~10-15 min/semana total.",
+    "subreddits": [
+      "chrome_extensions",
+      "webdev",
+      "productivity",
+      "DataHoarder",
+      "gdpr",
+      "Consumerrights",
+      "SideProject",
+      "indiehackers"
+    ],
+    "queries": [
+      "is there an extension",
+      "so annoying",
+      "why is there no tool",
+      "remove.bg alternative",
+      "convert files without uploading",
+      "clean up text formatting",
+      "resize images batch",
+      "warranty claim template",
+      "stopped working after update"
+    ]
+  },
+  "hn": {
+    "enabled": true,
+    "min_points": 2,
+    "min_comments": 2,
+    "queries": [
+      "so annoying",
+      "why is there no tool",
+      "stopped working after update",
+      "wish there was a tool",
+      "frustrated with",
+      "no tool does this",
+      "without uploading to server"
+    ]
+  },
+  "bluesky": {
+    "enabled": false,
+    "_comment": "Activar cuando quieras; reutiliza bluesky-tools.js search",
+    "queries": [
+      "chrome extension annoying",
+      "is there a tool"
+    ]
+  },
+  "manual": {
+    "_comment": "Todo lo que se revisa a mano (Reddit + reseñas CWS) va al mismo archivo data/pain/manual-YYYY-MM-DD.md. El prompt pain-scan.md lee cualquier manual-*.md de los últimos 30 días junto al raw-*.json automático.",
+    "cws_competidores": [
+      "remove.bg / PhotoRoom (vs ScrubForge)",
+      "CloudConvert / Convertio (vs ConvertForge)",
+      "Text Blaze / Magical (vs TextForge)",
+      "DoNotPay (vs ClaimForge)",
+      "TinEye / Image Resizer (vs FrameForge)"
+    ],
+    "cadencia_sugerida": "Reddit: semanal, 10-15 min. CWS reseñas: mensual, 15 min."
+  }
+}
