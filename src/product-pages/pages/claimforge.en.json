@@ -1,0 +1,12 @@
+{
+  "product": "claimforge",
+  "locale": "en",
+  "footerColor": "faint",
+  "output": "public/claimforge/index.html",
+  "seo": {
+    "title": "ClaimForge — EU Consumer Rights Assistant",
+    "description": "Understand EU warranties, returns and right-to-repair. Generate claim letters and analyze seller replies locally. Not legal advice.",
+    "canonical": "https://wendygostudio.com/claimforge/",
+    "ogImage": "https://wendygostudio.com/images/og/claimforge-og.png"
+  }
+}

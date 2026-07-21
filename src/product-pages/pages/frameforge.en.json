@@ -1,0 +1,12 @@
+{
+  "product": "frameforge",
+  "locale": "en",
+  "footerColor": "faint",
+  "output": "public/frameforge/index.html",
+  "seo": {
+    "title": "FrameForge — Image Resizer for YouTube Thumbnails & Social",
+    "description": "Resize and crop images for YouTube, Instagram, Twitch and X. Remove backgrounds and upscale locally in your browser. No uploads.",
+    "canonical": "https://wendygostudio.com/frameforge/",
+    "ogImage": "https://wendygostudio.com/images/og/frameforge-og.png"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "product": "textforge",
+  "locale": "es",
+  "output": "public/es/textforge/index.html",
+  "seo": {
+    "title": "TextForge — Transforma texto localmente en Chrome",
+    "description": "Limpia, extrae y transforma texto con 58 herramientas locales y recetas con Gemini Nano. Una extensión privada sin subir tus textos.",
+    "canonical": "https://wendygostudio.com/es/textforge/",
+    "ogImage": "https://wendygostudio.com/images/og/textforge-og.png"
+  }
+}

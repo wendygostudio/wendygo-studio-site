@@ -1,0 +1,12 @@
+{
+  "product": "claimforge",
+  "locale": "es",
+  "footerColor": "faint",
+  "output": "public/es/claimforge/index.html",
+  "seo": {
+    "title": "ClaimForge — Asistente de Derechos del Consumidor UE",
+    "description": "Entiende garantías, devoluciones y derecho a reparar en la UE. Genera reclamaciones y analiza respuestas localmente. No es asesoramiento legal.",
+    "canonical": "https://wendygostudio.com/es/claimforge/",
+    "ogImage": "https://wendygostudio.com/images/og/claimforge-og.png"
+  }
+}

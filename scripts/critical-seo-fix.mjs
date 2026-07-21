@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve('public');
+const generatedDir=path.resolve('src/product-pages/pages');
+const generatedOutputs=new Set(fs.existsSync(generatedDir)?fs.readdirSync(generatedDir).filter(n=>n.endsWith('.json')).map(n=>path.resolve(JSON.parse(fs.readFileSync(path.join(generatedDir,n),'utf8')).output)):[]);
 const overrides = JSON.parse(fs.readFileSync(path.resolve('data/seo-overrides.json'),'utf8'));
 const linkFixes = {
   '/es/blog/mejor-extension-pomodoro-timer-chrome/':'/es/blog/extension-pomodoro-chrome/',
@@ -15,14 +17,17 @@ const beacon = `\n<script defer src='https://static.cloudflareinsights.com/beaco
 const files = [];
 function walk(dir) { for (const e of fs.readdirSync(dir, {withFileTypes:true})) { const p=path.join(dir,e.name); e.isDirectory()?walk(p):e.name.endsWith('.html')&&files.push(p); } }
 function shorten(value, max) {
-  if ([...value].length <= max) return value;
-  const slice=[...value].slice(0,max+1).join('');
+  const visible=value.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+  if ([...visible].length <= max) return value;
+  const slice=[...visible].slice(0,max+1).join('');
   const cut=slice.lastIndexOf(' ');
-  return (cut > max * .65 ? slice.slice(0,cut) : [...value].slice(0,max).join('')).replace(/[\s|—–:-]+$/u,'');
+  return (cut > max * .65 ? slice.slice(0,cut) : [...visible].slice(0,max).join('')).replace(/[\s|—–:-]+$/u,'');
 }
+const escapeBareAmpersands=value=>value.replace(/&(?!(?:amp|quot|lt|gt|#\d+|#x[0-9a-f]+);)/gi,'&amp;');
 walk(root);
 let titles=0, descriptions=0, analytics=0;
 for (const file of files) {
+  if(generatedOutputs.has(path.resolve(file))) continue;
   let html=fs.readFileSync(file,'utf8');
   const rel=path.relative(root,file).replaceAll('\\','/');
   const tm=html.match(/<title>([\s\S]*?)<\/title>/i);
@@ -34,6 +39,7 @@ for (const file of files) {
   if(override?.title){html=html.replace(/<title>[\s\S]*?<\/title>/i,`<title>${override.title}</title>`).replace(/(<meta\s+(?:property|name)=["'](?:og:title|twitter:title)["']\s+content=["'])[^"']*(["'])/gi,`$1${override.title}$2`);}
   if(override?.description){html=html.replace(/(<meta\s+name=["']description["']\s+content=["'])[^"']*(["'])/i,`$1${override.description}$2`).replace(/(<meta\s+(?:property|name)=["'](?:og:description|twitter:description)["']\s+content=["'])[^"']*(["'])/gi,`$1${override.description}$2`);}
   for(const [from,to] of Object.entries(linkFixes)) html=html.replaceAll(from,to);
+  html=html.replace(/<meta\b[^>]*>/gi,tag=>tag.replace(/content=(['"])([\s\S]*?)\1/i,(_,quote,value)=>`content=${quote}${escapeBareAmpersands(value)}${quote}`));
   fs.writeFileSync(file,html,'utf8');
 }
 console.log(JSON.stringify({files:files.length,titles,descriptions,analytics},null,2));

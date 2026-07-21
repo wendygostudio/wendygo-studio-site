@@ -1,0 +1,12 @@
+{
+  "product": "slimeforge",
+  "locale": "es",
+  "footerColor": "muted",
+  "output": "public/es/slimeforge/index.html",
+  "seo": {
+    "title": "SlimeForge — Pomodoro y mascota de foco para Chrome",
+    "description": "Un pomodoro con mascota slime virtual que eclosiona y crece con tus sesiones de foco. 100% local, sin cuentas, sin recogida de datos.",
+    "canonical": "https://wendygostudio.com/es/slimeforge/",
+    "ogImage": "https://wendygostudio.com/images/og/slimeforge-og.png"
+  }
+}

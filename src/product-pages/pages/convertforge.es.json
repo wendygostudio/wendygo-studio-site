@@ -1,0 +1,12 @@
+{
+  "product": "convertforge",
+  "locale": "es",
+  "footerColor": "muted",
+  "output": "public/es/convertforge/index.html",
+  "seo": {
+    "title": "ConvertForge — Conversor de Archivos Local para Chrome",
+    "description": "Convierte imágenes, documentos, audio y datos íntegramente en tu equipo. HEIC, PDF, OCR, MP3 y más. Sin subidas, sin cuentas, sin recogida de datos.",
+    "canonical": "https://wendygostudio.com/es/convertforge/",
+    "ogImage": "https://wendygostudio.com/images/og/convertforge-og.png"
+  }
+}

@@ -1,0 +1,7 @@
+import fs from 'node:fs'; import path from 'node:path';
+const check=process.argv.includes('--check'), root=path.resolve('src/product-pages'), pages=path.join(root,'pages');let changed=0;
+const escapeHtml=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+const shared=Object.fromEntries(fs.readdirSync(path.join(root,'shared')).filter(n=>n.endsWith('.html')).map(n=>[n.replace(/\.html$/,''),fs.readFileSync(path.join(root,'shared',n),'utf8')]));
+const definitions=fs.readdirSync(pages).filter(n=>n.endsWith('.json'));
+for(const name of definitions){const data=JSON.parse(fs.readFileSync(path.join(pages,name),'utf8'));const template=fs.readFileSync(path.join(pages,name.replace(/\.json$/,'.html')),'utf8');let html=template.replace(/\{\{>([^}]+)}}/g,(_,key)=>{if(!(key in shared))throw new Error(`${name}: unknown shared partial ${key}`);return shared[key]}).replaceAll('{{product}}',data.product).replaceAll('{{footerColor}}',data.footerColor);for(const [key,value] of Object.entries(data.seo||{}))html=html.replaceAll(`{{seo.${key}}}`,escapeHtml(value));const output=path.resolve(data.output);const current=fs.existsSync(output)?fs.readFileSync(output,'utf8'):'';if(current!==html){changed++;if(!check)fs.writeFileSync(output,html,'utf8')}}
+console.log(`${check?'Checked':'Rendered'} ${definitions.length} product pages; ${changed} ${check?'out of sync':'updated'}`);if(check&&changed)process.exit(1);

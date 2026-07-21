@@ -1,0 +1,12 @@
+{
+  "product": "scrubforge",
+  "locale": "en",
+  "footerColor": "faint",
+  "output": "public/scrubforge/index.html",
+  "seo": {
+    "title": "ScrubForge — Network Configuration Sanitizer",
+    "description": "Remove sensitive data from Cisco, FortiGate, MikroTik and other network configurations before sharing them with support or AI tools.",
+    "canonical": "https://wendygostudio.com/scrubforge/",
+    "ogImage": "https://wendygostudio.com/images/og/scrubforge-og.png"
+  }
+}

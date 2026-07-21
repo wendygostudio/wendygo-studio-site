@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{seo.title}}</title>
+  <meta name="description" content="{{seo.description}}" />
+  <link rel="canonical" href="{{seo.canonical}}" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},
+    {"@type":"ListItem","position":2,"name":"TextForge"}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"TextForge","description":"Text transformation extension with 50+ functions","applicationCategory":"Utility","operatingSystem":"Chrome","url":"https://wendygostudio.com/textforge/","author":{"@type":"Organization","name":"Wendygo Studio"},"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Does TextForge upload my text?","acceptedAnswer":{"@type":"Answer","text":"No. All text processing happens in your browser. Nothing is uploaded or transmitted."}},
+    {"@type":"Question","name":"Is TextForge free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Free version includes 50+ functions. Pro (€3.99/mo, €24.99/yr or €59.99 lifetime) adds regex find & replace, unlimited recipes and unlimited AI compositions."}},
+    {"@type":"Question","name":"How many functions does TextForge have?","acceptedAnswer":{"@type":"Answer","text":"50+ functions: Clean, Case, Sort, Extract, Dev (Base64, JSON, etc), Generate (UUID, SHA-256, passwords), Markdown formatting."}},
+    {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No account needed. Install from Chrome Web Store and use immediately."}}
+  ]}
+  </script>
+  {{>style.textforge}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="{{seo.title}}">
+<meta property="og:description" content="{{seo.description}}">
+<meta property="og:url" content="{{seo.canonical}}">
+<meta property="og:image" content="{{seo.ogImage}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{seo.title}}">
+<meta name="twitter:description" content="{{seo.description}}">
+<meta name="twitter:image" content="{{seo.ogImage}}">
+</head>
+<body>
+  {{>nav.textforge.en}}
+
+  <section class="hero">
+    <div class="eyebrow">TextForge</div>
+    <h1>Text transformation<br><em>made simple</em></h1>
+    <p class="hero-sub">50+ text functions in your browser. Clean, extract, convert, sort, and manipulate text instantly — no upload, no server, no data collected.</p>
+    <div class="hero-badges">
+      <span class="badge"><span class="dot"></span>50+ functions</span>
+      <span class="badge"><span class="dot"></span>100% local</span>
+      <span class="badge"><span class="dot"></span>No account needed</span>
+    </div>
+    <a class="cta-button" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">↗ Add to Chrome</a>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Everything you need for text</h2>
+      <ul class="feature-list">
+        <li><strong>Clean:</strong> remove extra spaces, line breaks, HTML, accents</li>
+        <li><strong>Case:</strong> UPPERCASE, lowercase, Title Case, Sentence case</li>
+        <li><strong>Sort:</strong> A-Z, Z-A, numeric with KB/MB/GB, deduplicate</li>
+        <li><strong>Extract:</strong> emails, URLs, IPv4/v6, numbers</li>
+        <li><strong>Dev:</strong> Base64, URL encode, HTML, JSON, regex escape, slugify</li>
+        <li><strong>Generate:</strong> SHA-256, UUIDs, passwords, Unix date conversion</li>
+        <li><strong>Markdown:</strong> bullet list, numbered list, code block, wrap at 80 cols</li>
+        <li><strong>Pro Only:</strong> regex find & replace, column extraction, word frequency</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Free and Pro</h2>
+      <p style="color: var(--muted); margin-top: 20px; margin-bottom: 30px;">Free forever with 50+ functions. Pro adds regex and advanced analysis.</p>
+      <div style="background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 24px; max-width: 600px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; text-align: center;">
+          <div>
+            <div style="font-weight: 700; margin-bottom: 12px;">Free</div>
+            <div style="font-size: 20px; color: var(--amber); font-weight: 700;">€0</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">core functions forever</div>
+          </div>
+          <div>
+            <div style="font-weight: 700; margin-bottom: 12px;">Pro Monthly</div>
+            <div style="font-size: 20px; color: var(--amber); font-weight: 700;">€3.99</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">per month</div>
+          </div>
+          <div>
+            <div style="font-weight: 700; margin-bottom: 12px;">Pro Annual</div>
+            <div style="font-size: 20px; color: var(--amber); font-weight: 700;">€24.99</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">per year</div>
+          </div>
+          <div>
+            <div style="font-weight: 700; margin-bottom: 12px;">Pro Lifetime</div>
+            <div style="font-size: 20px; color: var(--amber); font-weight: 700;">€59.99</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">pay once</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">More from Wendygo</div>
+      <h3 class="section-title">Explore other extensions</h3>
+      <div class="cross-promo">
+        <div class="promo-item">
+          <img class="promo-icon-img" src="/images/icons/frameforge.png" alt="" width="40" height="40" loading="lazy">
+          <div class="promo-title">FrameForge</div>
+          <div class="promo-desc">Image resizer and thumbnail maker for YouTube, Instagram, Twitch and more.</div>
+          <a href="/frameforge/" class="promo-link">Learn more →</a>
+        </div>
+        <div class="promo-item">
+          <img class="promo-icon-img" src="/images/icons/scrubforge.png" alt="" width="40" height="40" loading="lazy">
+          <div class="promo-title">ScrubForge</div>
+          <div class="promo-desc">Config sanitizer for sysadmins. Redact sensitive data before sharing.</div>
+          <a href="/scrubforge/" class="promo-link">Learn more →</a>
+        </div>
+        <div class="promo-item">
+          <img class="promo-icon-img" src="/images/icons/claimforge.png" alt="" width="40" height="40" loading="lazy">
+          <div class="promo-title">ClaimForge</div>
+          <div class="promo-desc">EU consumer rights assistant for warranty claims and returns.</div>
+          <a href="/claimforge/" class="promo-link">Learn more →</a>
+        </div>
+        <div><img class="promo-icon-img" src="/images/icons/convertforge.png" alt="" width="40" height="40" loading="lazy"><div class="promo-title">ConvertForge</div><div class="promo-desc">Convert images, docs, audio and data on your device.</div><a href="/convertforge/" class="promo-link">Learn more →</a></div>
+      </div>
+    </div>
+  </section>
+
+  {{>footer.textforge.en}}
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "product": "textforge",
+  "locale": "en",
+  "output": "public/textforge/index.html",
+  "seo": {
+    "title": "TextForge — Text Transformation Extension for Chrome",
+    "description": "Clean, extract and transform text with 58 local tools and Gemini Nano recipes. A private Chrome extension with no text uploads.",
+    "canonical": "https://wendygostudio.com/textforge/",
+    "ogImage": "https://wendygostudio.com/images/og/textforge-og.png"
+  }
+}
