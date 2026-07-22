@@ -5,7 +5,7 @@ import {alternateLinks, languageSwitcher, liveLocales, localeOrder, locales} fro
 
 test('locale registry defines six extension-aligned languages', () => {
   assert.deepEqual(localeOrder, ['en', 'es', 'de', 'fr', 'it', 'pt']);
-  assert.deepEqual(liveLocales, ['en', 'es', 'de']);
+  assert.deepEqual(liveLocales, ['en', 'es', 'de', 'fr']);
   assert.equal(locales.pt.htmlLang, 'pt-PT');
   assert.equal(locales.pt.hreflang, 'pt-PT');
   assert.equal(locales.pt.extensionLocale, 'pt_PT');
@@ -19,9 +19,11 @@ test('pending translations are not advertised to crawlers or users', () => {
   assert.match(alternates, /hreflang="es"/);
   assert.match(alternates, /hreflang="x-default"/);
   assert.match(alternates, /hreflang="de"/);
-  assert.doesNotMatch(alternates, /hreflang="(?:fr|it|pt-PT)"/);
+  assert.match(alternates, /hreflang="fr"/);
+  assert.doesNotMatch(alternates, /hreflang="(?:it|pt-PT)"/);
   assert.match(switcher, /\/de\//);
-  assert.doesNotMatch(switcher, /\/fr\/|\/it\/|\/pt\//);
+  assert.match(switcher, /\/fr\//);
+  assert.doesNotMatch(switcher, /\/it\/|\/pt\//);
 });
 
 test('CyberChef comparisons preserve its documented client-side privacy model', () => {
