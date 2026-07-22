@@ -97,7 +97,7 @@
         "name": "Does ScrubForge send my config to any server?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. ScrubForge is a Chrome extension that runs entirely in your browser. The text you paste is processed locally. Nothing is transmitted to Wendygo Studio servers or any external service."
+          "text": "Your original, unsanitized config is never sent anywhere \u2014 sanitization runs entirely in your browser. Nothing is transmitted to Wendygo Studio servers. If you explicitly use ScrubForge's optional BYOK AI chat, the sanitized version (not the original) is sent directly to the AI provider you've configured, under that provider's own terms."
         }
       },
       {
@@ -456,7 +456,7 @@
 
       <p>The critical property is <strong>consistency</strong>: if the same IP address appears eight times in your config, all eight instances become the same token — <code>[IP_1]</code>. The AI reading the sanitized config sees the same logical relationships between objects. It can trace a routing decision, audit an ACL, or explain a policy — it just can't see that <code>[IP_1]</code> is actually your management interface.</p>
 
-      <p>All of this happens locally. The extension does not contact any external service. Your config text never leaves your browser tab.</p>
+      <p>Sanitization itself is entirely local: pattern detection and token replacement run in your browser, and the original, unsanitized config is never sent anywhere. ScrubForge also offers an optional BYOK AI chat — when you explicitly use it, the <strong>sanitized</strong> text (never the original) is sent directly from your browser to the AI provider you've configured, under that provider's own terms. If you instead copy the sanitized output and paste it into ChatGPT or Claude yourself, the same rule applies: only what you choose to share ever leaves your device.</p>
 
       <h2>How to Sanitize a Config with ScrubForge</h2>
 
@@ -568,7 +568,7 @@ end</div>
       <div class="faq-list">
         <div class="faq-item">
           <p class="faq-q">Does ScrubForge send my config to any server?</p>
-          <p class="faq-a">No. ScrubForge is a Chrome extension that runs entirely in your browser. The text you paste is processed locally on your machine. Nothing is transmitted to Wendygo Studio servers or any external service.</p>
+          <p class="faq-a">Your original, unsanitized config is never sent anywhere — sanitization runs entirely in your browser. Nothing is transmitted to Wendygo Studio servers. If you explicitly use ScrubForge's optional BYOK AI chat, the sanitized version (not the original) is sent directly to the AI provider you've configured, under that provider's own terms.</p>
         </div>
         <div class="faq-item">
           <p class="faq-q">Does it work with Cisco IOS, FortiGate, and AWS configs?</p>
