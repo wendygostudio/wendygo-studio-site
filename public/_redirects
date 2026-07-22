@@ -3,3 +3,8 @@
 # SlimeForge — CWS listing (publicada 15-jul-2026)
 /slimeforge/install https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc 301
 /es/blog/frameforge-vs-canva-miniaturas/* /es/blog/frameforge-vs-canva-thumbnails/:splat 301
+/guides/ /resources/ 301
+/es/blog/redimensionar-imagen-instagram/ /es/blog/redimensionar-imagen-instagram-chrome/ 301
+/es/blog/redimensionar-imagen-youtube-thumbnail-chrome/ /es/blog/redimensionar-imagen-miniatura-youtube/ 301
+/es/blog/redimensionar-imagen-youtube-miniatura-chrome/ /es/blog/redimensionar-imagen-miniatura-youtube/ 301
+/es/blog/sanitize-network-config-before-sharing/ /es/blog/sanitizar-configuracion-red-antes-compartir/ 301
