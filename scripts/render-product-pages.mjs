@@ -40,6 +40,13 @@ function enhanceSoftwareSchema(html,id,locale){
   });
 }
 
+function ensureXDefault(html){
+  if (/hreflang=["']x-default["']/i.test(html)) return html;
+  const english=html.match(/<link\s+rel=["']alternate["']\s+hreflang=["']en["']\s+href=["']([^"']+)["'][^>]*>/i);
+  if (!english) return html;
+  return html.replace(english[0], `${english[0]}\n  <link rel="alternate" hreflang="x-default" href="${english[1]}">`);
+}
+
 for(const name of fs.readdirSync(pages).filter(n=>n.endsWith('.json'))){
   const data=JSON.parse(fs.readFileSync(path.join(pages,name),'utf8'));
   const template=fs.readFileSync(path.join(pages,name.replace(/\.json$/,'.html')),'utf8');
@@ -48,6 +55,7 @@ for(const name of fs.readdirSync(pages).filter(n=>n.endsWith('.json'))){
   for(const [key,value] of Object.entries(data.seo||{}))html=html.replaceAll(`{{seo.${key}}}`,escapeHtml(value));
   html=enhanceSoftwareSchema(html,data.product,data.locale);
   html=html.replace(/(?=<footer>)/,proofSection(data.product,data.locale));
+  html=ensureXDefault(html);
   const output=path.resolve(data.output),current=fs.existsSync(output)?fs.readFileSync(output,'utf8'):'';
   if(current!==html){changed++;if(!check)fs.writeFileSync(output,html,'utf8')}
 }

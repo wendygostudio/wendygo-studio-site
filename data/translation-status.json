@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "publishedLocales": ["en", "es"],
+  "pendingLocales": ["de", "fr", "it", "pt"],
+  "routeFamilies": {
+    "home": {
+      "kind": "page",
+      "paths": {"en": "/", "es": "/es/", "de": "/de/", "fr": "/fr/", "it": "/it/", "pt": "/pt/"}
+    },
+    "ecosystem": {
+      "kind": "page",
+      "paths": {"en": "/forge-ecosystem/", "es": "/es/ecosistema-forge/", "de": "/de/forge-oekosystem/", "fr": "/fr/ecosysteme-forge/", "it": "/it/ecosistema-forge/", "pt": "/pt/ecossistema-forge/"}
+    },
+    "resources": {
+      "kind": "page",
+      "paths": {"en": "/resources/", "es": "/es/recursos/", "de": "/de/ressourcen/", "fr": "/fr/ressources/", "it": "/it/risorse/", "pt": "/pt/recursos/"}
+    },
+    "products": {
+      "kind": "product-set",
+      "ids": ["textforge", "frameforge", "convertforge", "scrubforge", "claimforge", "slimeforge"],
+      "pathPattern": "/{localePrefix}{product}/"
+    },
+    "privacy": {
+      "kind": "page",
+      "paths": {"en": "/privacy", "es": "/es/privacy", "de": "/de/datenschutz", "fr": "/fr/confidentialite", "it": "/it/privacy", "pt": "/pt/privacidade"}
+    },
+    "terms": {
+      "kind": "page",
+      "paths": {"en": "/terms", "es": "/es/terms", "de": "/de/nutzungsbedingungen", "fr": "/fr/conditions", "it": "/it/termini", "pt": "/pt/termos"}
+    }
+  }
+}

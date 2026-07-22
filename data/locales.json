@@ -1,0 +1,60 @@
+{
+  "defaultLocale": "en",
+  "order": ["en", "es", "de", "fr", "it", "pt"],
+  "locales": {
+    "en": {
+      "htmlLang": "en",
+      "hreflang": "en",
+      "routePrefix": "",
+      "extensionLocale": "en",
+      "label": "English",
+      "shortLabel": "EN",
+      "status": "live"
+    },
+    "es": {
+      "htmlLang": "es",
+      "hreflang": "es",
+      "routePrefix": "es",
+      "extensionLocale": "es",
+      "label": "Español",
+      "shortLabel": "ES",
+      "status": "live"
+    },
+    "de": {
+      "htmlLang": "de",
+      "hreflang": "de",
+      "routePrefix": "de",
+      "extensionLocale": "de",
+      "label": "Deutsch",
+      "shortLabel": "DE",
+      "status": "pending"
+    },
+    "fr": {
+      "htmlLang": "fr",
+      "hreflang": "fr",
+      "routePrefix": "fr",
+      "extensionLocale": "fr",
+      "label": "Français",
+      "shortLabel": "FR",
+      "status": "pending"
+    },
+    "it": {
+      "htmlLang": "it",
+      "hreflang": "it",
+      "routePrefix": "it",
+      "extensionLocale": "it",
+      "label": "Italiano",
+      "shortLabel": "IT",
+      "status": "pending"
+    },
+    "pt": {
+      "htmlLang": "pt-PT",
+      "hreflang": "pt-PT",
+      "routePrefix": "pt",
+      "extensionLocale": "pt_PT",
+      "label": "Português",
+      "shortLabel": "PT",
+      "status": "pending"
+    }
+  }
+}

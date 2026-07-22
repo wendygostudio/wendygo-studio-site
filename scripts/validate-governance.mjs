@@ -23,6 +23,18 @@ for (const file of governedFiles) {
   if (retiredOdr.test(text)) errors.push(`${path.relative('.', file)}: retired EU ODR reference`);
 }
 
+const falseCyberChefPrivacy = [
+  /Your (?:config|input|text) data passes through (?:that|the) server/i,
+  /CyberChef[^\n<]{0,180}(?:sends?|uploads?|transmits?)[^\n<]{0,80}(?:input|text|config|recipe)[^\n<]{0,80}(?:server|third party)/i,
+  /CyberChef[^\n<]{0,180}(?:texto|datos|configuraci[oó]n|recetas?)[^\n<]{0,80}(?<!no )(?:se transmite|se env[ií]a|se sube)[^\n<]{0,80}(?:servidor|tercero)/i,
+  /Standard CyberChef[^\n<]{0,240}third-party server/i,
+  /CyberChef est[aá]ndar[^\n<]{0,240}servidor de terceros/i
+];
+for (const file of governedFiles) {
+  const text = fs.readFileSync(file, 'utf8');
+  if (falseCyberChefPrivacy.some(pattern => pattern.test(text))) errors.push(`${path.relative('.', file)}: false CyberChef server-upload claim`);
+}
+
 const catalog = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
 const requiredCategories = ['text-tools','image-tools','file-conversion','infrastructure-security','eu-consumer-rights','focus-productivity'];
 const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
