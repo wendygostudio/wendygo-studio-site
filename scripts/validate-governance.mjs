@@ -54,6 +54,27 @@ for (const file of ['public/forge-ecosystem/index.html','public/es/ecosistema-fo
   if (!fs.existsSync(file)) errors.push(`${file}: ecosystem page missing`);
   else if (!/ItemList/.test(fs.readFileSync(file,'utf8'))) errors.push(`${file}: ItemList schema missing`);
 }
+const darkPages = [
+  ...Object.keys(catalog).flatMap(id => [`public/${id}/index.html`,`public/es/${id}/index.html`]),
+  ...requiredCategories.flatMap(category => [`public/resources/${category}/index.html`,`public/es/recursos/${category}/index.html`]),
+  'public/resources/index.html','public/es/recursos/index.html','public/forge-ecosystem/index.html','public/es/ecosistema-forge/index.html'
+];
+for (const file of darkPages) {
+  const html = fs.readFileSync(file,'utf8');
+  if (!html.includes('#13151a') || !html.includes('#e7e9ee')) errors.push(`${file}: Wendygo dark theme tokens missing`);
+}
+const untranslatedLandingPhrases = /Your consumer|rights advocate|Navigate EU|Know your|Built for|Sanitize network|Everything you need|Text transformation|Image resizing|made fast|Features|Pricing|More from Wendygo|Explore other|No account needed|Pro Only|Does TextForge|Do I need|per month|per year|pay once|Expert:/i;
+for (const file of fs.readdirSync('src/product-pages/pages').filter(name=>name.endsWith('.es.html'))) {
+  const source = fs.readFileSync(path.join('src/product-pages/pages',file),'utf8');
+  if (untranslatedLandingPhrases.test(source)) errors.push(`src/product-pages/pages/${file}: untranslated English copy`);
+}
+for (const id of Object.keys(catalog)) {
+  const en = fs.readFileSync(`public/${id}/index.html`,'utf8');
+  const es = fs.readFileSync(`public/es/${id}/index.html`,'utf8');
+  const enImage = en.match(/class="proof-shot" src="([^"]+)/)?.[1];
+  const esImage = es.match(/class="proof-shot" src="([^"]+)/)?.[1];
+  if (!enImage || enImage !== esImage) errors.push(`${id}: EN and ES must use the same English product screenshot`);
+}
 if (catalog.textforge?.claims?.functionCount !== 58) errors.push('data/products.json: TextForge functionCount must be 58');
 if (catalog.convertforge?.claims?.imageOcr !== 'free') errors.push('data/products.json: ConvertForge image OCR entitlement missing');
 if (catalog.convertforge?.claims?.scannedPdfOcr !== 'pro') errors.push('data/products.json: ConvertForge scanned-PDF OCR entitlement missing');
