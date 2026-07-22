@@ -1082,6 +1082,9 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/ecosistema-forge/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/forge-ecosystem/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/forge-ecosystem/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/frameforge/</loc>
@@ -1112,42 +1115,63 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/recursos/eu-consumer-rights/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/eu-consumer-rights/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/eu-consumer-rights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/eu-consumer-rights/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/recursos/file-conversion/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/file-conversion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/file-conversion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/file-conversion/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/recursos/focus-productivity/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/focus-productivity/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/focus-productivity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/focus-productivity/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/recursos/image-tools/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/image-tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/image-tools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/image-tools/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/recursos/infrastructure-security/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/infrastructure-security/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/infrastructure-security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/infrastructure-security/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/recursos/text-tools/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/text-tools/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/text-tools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/text-tools/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/scrubforge/</loc>
@@ -1281,6 +1305,9 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/forge-ecosystem/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/ecosistema-forge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/forge-ecosystem/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/frameforge/</loc>
@@ -1329,42 +1356,63 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/resources/eu-consumer-rights/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/eu-consumer-rights/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/eu-consumer-rights/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/eu-consumer-rights/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/resources/file-conversion/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/file-conversion/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/file-conversion/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/file-conversion/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/resources/focus-productivity/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/focus-productivity/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/focus-productivity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/focus-productivity/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/resources/image-tools/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/image-tools/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/image-tools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/image-tools/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/resources/infrastructure-security/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/infrastructure-security/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/infrastructure-security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/infrastructure-security/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/resources/text-tools/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/text-tools/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/text-tools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/text-tools/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/scrubforge/</loc>

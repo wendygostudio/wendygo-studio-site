@@ -9,7 +9,7 @@
     "blog:render": "node scripts/render-blog.mjs",
     "blog:check": "node scripts/render-blog.mjs --check",
     "test": "node --test tests/*.test.mjs",
-    "validate": "node scripts/render-product-pages.mjs --check && node scripts/render-blog.mjs --check && node scripts/render-resource-hubs.mjs --check && node scripts/validate-content.mjs && node scripts/validate-governance.mjs && node scripts/validate-site.mjs",
+    "validate": "node scripts/render-product-pages.mjs --check && node scripts/render-blog.mjs --check && node scripts/render-resource-hubs.mjs --check && node scripts/validate-content.mjs && node scripts/validate-governance.mjs && node scripts/validate-i18n.mjs && node scripts/validate-site.mjs",
     "build": "node scripts/render-product-pages.mjs && node scripts/render-blog.mjs && node scripts/build.mjs"
   },
   "dependencies": {
