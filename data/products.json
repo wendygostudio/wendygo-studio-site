@@ -1,6 +1,9 @@
 {
   "textforge": {
     "name": "TextForge",
+    "category": "text-tools",
+    "summary": {"en": "Clean, extract and transform text with 58 functions, recipes and optional on-device AI.", "es": "Limpia, extrae y transforma texto con 58 funciones, recetas e IA opcional en el dispositivo."},
+    "relatedProducts": ["convertforge", "scrubforge"],
     "version": "1.6.0",
     "storeId": "cnmlojgahikinilbefkkfadkfamchlba",
     "permissions": ["contextMenus", "storage", "offscreen"],
@@ -13,6 +16,9 @@
   },
   "frameforge": {
     "name": "FrameForge",
+    "category": "image-tools",
+    "summary": {"en": "Resize, enhance and export images with local background removal and upscaling.", "es": "Redimensiona, mejora y exporta imágenes con eliminación de fondo y escalado local."},
+    "relatedProducts": ["convertforge", "textforge"],
     "version": "2.0.0",
     "storeId": "abdmadomfnijoiklnaklmplifmljgchj",
     "permissions": ["contextMenus", "storage"],
@@ -21,6 +27,9 @@
   },
   "convertforge": {
     "name": "ConvertForge",
+    "category": "file-conversion",
+    "summary": {"en": "Convert images, documents, audio and data locally without uploading files.", "es": "Convierte imágenes, documentos, audio y datos localmente sin subir archivos."},
+    "relatedProducts": ["frameforge", "textforge"],
     "version": "1.5.0",
     "storeId": "mjmamnnhophdhccknmgnppcdkojkpagj",
     "permissions": ["contextMenus", "storage", "downloads", "notifications"],
@@ -34,6 +43,9 @@
   },
   "scrubforge": {
     "name": "ScrubForge",
+    "category": "infrastructure-security",
+    "summary": {"en": "Sanitize infrastructure configurations before sharing them with support or optional AI providers.", "es": "Sanea configuraciones de infraestructura antes de compartirlas con soporte o proveedores de IA opcionales."},
+    "relatedProducts": ["textforge", "convertforge"],
     "version": "1.13.1",
     "storeId": "pjaohhipefhjfopoaepjbmiienagaffe",
     "permissions": ["storage", "contextMenus"],
@@ -46,6 +58,9 @@
   },
   "claimforge": {
     "name": "ClaimForge",
+    "category": "eu-consumer-rights",
+    "summary": {"en": "Understand EU consumer routes and prepare clearer warranty, return and repair claims.", "es": "Comprende las vías de consumo de la UE y prepara reclamaciones de garantía, devolución y reparación más claras."},
+    "relatedProducts": ["textforge"],
     "version": "1.4.0",
     "storeId": "mlnjadkolgplpgbheklkdjcglojfakcg",
     "permissions": ["storage", "alarms", "notifications", "contextMenus"],
@@ -55,6 +70,9 @@
   },
   "slimeforge": {
     "name": "SlimeForge",
+    "category": "focus-productivity",
+    "summary": {"en": "Turn focus sessions into progress for a virtual companion that grows with your routine.", "es": "Convierte sesiones de concentración en progreso para una mascota virtual que crece con tu rutina."},
+    "relatedProducts": ["textforge"],
     "version": "1.8.0",
     "storeId": "dobhabpmcmpfdihchnhbickecelihhbc",
     "permissions": ["storage", "alarms", "scripting", "activeTab"],

@@ -24,6 +24,27 @@ for (const file of governedFiles) {
 }
 
 const catalog = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
+const requiredCategories = ['text-tools','image-tools','file-conversion','infrastructure-security','eu-consumer-rights','focus-productivity'];
+const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
+for (const [id, product] of Object.entries(catalog)) {
+  if (!requiredCategories.includes(product.category)) errors.push(`data/products.json: ${id} has no valid topic category`);
+  if (!product.summary?.en || !product.summary?.es) errors.push(`data/products.json: ${id} has incomplete summaries`);
+  for (const localeRoot of ['', 'es/']) {
+    const landing = `public/${localeRoot}${id}/index.html`;
+    if (!fs.existsSync(landing)) errors.push(`${landing}: product landing missing`);
+    if (!sitemap.includes(`https://wendygostudio.com/${localeRoot}${id}/`)) errors.push(`${landing}: product missing from sitemap`);
+  }
+}
+for (const category of requiredCategories) {
+  for (const file of [`public/resources/${category}/index.html`, `public/es/recursos/${category}/index.html`]) {
+    if (!fs.existsSync(file)) errors.push(`${file}: topic hub missing`);
+    else if (!/CollectionPage/.test(fs.readFileSync(file,'utf8'))) errors.push(`${file}: CollectionPage schema missing`);
+  }
+}
+for (const file of ['public/forge-ecosystem/index.html','public/es/ecosistema-forge/index.html']) {
+  if (!fs.existsSync(file)) errors.push(`${file}: ecosystem page missing`);
+  else if (!/ItemList/.test(fs.readFileSync(file,'utf8'))) errors.push(`${file}: ItemList schema missing`);
+}
 if (catalog.textforge?.claims?.functionCount !== 58) errors.push('data/products.json: TextForge functionCount must be 58');
 if (catalog.convertforge?.claims?.imageOcr !== 'free') errors.push('data/products.json: ConvertForge image OCR entitlement missing');
 if (catalog.convertforge?.claims?.scannedPdfOcr !== 'pro') errors.push('data/products.json: ConvertForge scanned-PDF OCR entitlement missing');

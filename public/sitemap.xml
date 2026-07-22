@@ -1078,6 +1078,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/ecosistema-forge/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/frameforge/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1100,6 +1106,48 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/recursos/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/recursos/eu-consumer-rights/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/recursos/file-conversion/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/recursos/focus-productivity/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/recursos/image-tools/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/recursos/infrastructure-security/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/recursos/text-tools/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/scrubforge/</loc>
@@ -1229,6 +1277,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/bulk-text-cleaner/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/forge-ecosystem/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/frameforge/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -1269,6 +1323,48 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/resources/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/resources/eu-consumer-rights/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/resources/file-conversion/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/resources/focus-productivity/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/resources/image-tools/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/resources/infrastructure-security/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/resources/text-tools/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://wendygostudio.com/scrubforge/</loc>
