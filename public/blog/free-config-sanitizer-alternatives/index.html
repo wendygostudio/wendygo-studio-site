@@ -134,6 +134,7 @@ footer { border-top: 1px solid var(--line); margin-top: 80px; padding: clamp(32p
   </header>
   <hr class="divider" />
   <article class="article-body">
+    <div style="border-left:3px solid var(--amber); background:var(--surf2); padding:14px 18px; border-radius:8px; margin:24px 0; font-size:15px; color:var(--muted);"><strong style="color:var(--text)">Disclosure:</strong> ScrubForge is our own product. Comparison criteria: sanitization reliability, setup friction, and cost, checked against the version live in the Chrome Web Store as of July 2026.</div>
     <p>Sharing a network configuration is a normal part of the job: support tickets, Reddit posts, team wikis, AI-assisted troubleshooting. The problem is that production configs are dense with credentials. A Cisco IOS running config typically contains encrypted passwords, pre-shared keys for every IPsec tunnel, SNMP community strings, and sometimes plaintext BGP neighbor passwords. Send that file without sanitizing it and you have effectively emailed your infrastructure credentials to a stranger.</p>
     <p>There is no single official tool for this. Sysadmins reach for whatever is already in their workflow. Here is how the common approaches compare &mdash; and where each one breaks down.</p>
     <h2>Option 1: Bash One-Liners (sed / awk)</h2>

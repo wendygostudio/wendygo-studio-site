@@ -135,6 +135,7 @@ footer { border-top: 1px solid var(--line); margin-top: 80px; padding: clamp(32p
   </header>
   <hr class="divider" />
   <article class="article-body">
+    <div style="border-left:3px solid var(--amber); background:var(--surf2); padding:14px 18px; border-radius:8px; margin:24px 0; font-size:15px; color:var(--muted);"><strong style="color:var(--text)">Aviso:</strong> ScrubForge es nuestro propio producto. Criterios de comparación: fiabilidad de la sanitización, fricción de configuración y coste, verificados contra la versión publicada en la Chrome Web Store en julio de 2026.</div>
     <p>Compartir una configuración de red es una parte normal del trabajo: tickets de soporte, publicaciones en Reddit, wikis de equipo, resolución de problemas asistida por IA. El problema es que las configuraciones de producción están llenas de credenciales. Una configuración de ejecución de Cisco IOS típicamente contiene contraseñas cifradas, claves precompartidas para cada túnel IPsec, cadenas de comunidad SNMP y a veces contraseñas BGP en texto plano. Envía ese archivo sin sanitizar y has efectivamente enviado por correo electrónico las credenciales de tu infraestructura a un extraño.</p>
     <p>No hay una única herramienta oficial para esto. Los administradores de sistemas recurren a lo que ya está en su flujo de trabajo. Aquí hay cómo se comparan los enfoques comunes — y dónde cada uno falla.</p>
     <h2>Opción 1: Líneas de Bash (sed / awk)</h2>
