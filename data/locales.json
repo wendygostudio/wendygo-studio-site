@@ -45,7 +45,7 @@
       "extensionLocale": "it",
       "label": "Italiano",
       "shortLabel": "IT",
-      "status": "pending"
+      "status": "live"
     },
     "pt": {
       "htmlLang": "pt-PT",
@@ -54,7 +54,7 @@
       "extensionLocale": "pt_PT",
       "label": "Português",
       "shortLabel": "PT",
-      "status": "pending"
+      "status": "live"
     }
   }
 }

@@ -5,13 +5,13 @@ import {alternateLinks, languageSwitcher, liveLocales, localeOrder, locales} fro
 
 test('locale registry defines six extension-aligned languages', () => {
   assert.deepEqual(localeOrder, ['en', 'es', 'de', 'fr', 'it', 'pt']);
-  assert.deepEqual(liveLocales, ['en', 'es', 'de', 'fr']);
+  assert.deepEqual(liveLocales, ['en', 'es', 'de', 'fr', 'it', 'pt']);
   assert.equal(locales.pt.htmlLang, 'pt-PT');
   assert.equal(locales.pt.hreflang, 'pt-PT');
   assert.equal(locales.pt.extensionLocale, 'pt_PT');
 });
 
-test('pending translations are not advertised to crawlers or users', () => {
+test('all completed translations are advertised to crawlers and users', () => {
   const routes = {en: '/', es: '/es/', de: '/de/', fr: '/fr/', it: '/it/', pt: '/pt/'};
   const alternates = alternateLinks(routes);
   const switcher = languageSwitcher(routes, 'en');
@@ -20,10 +20,12 @@ test('pending translations are not advertised to crawlers or users', () => {
   assert.match(alternates, /hreflang="x-default"/);
   assert.match(alternates, /hreflang="de"/);
   assert.match(alternates, /hreflang="fr"/);
-  assert.doesNotMatch(alternates, /hreflang="(?:it|pt-PT)"/);
+  assert.match(alternates, /hreflang="it"/);
+  assert.match(alternates, /hreflang="pt-PT"/);
   assert.match(switcher, /\/de\//);
   assert.match(switcher, /\/fr\//);
-  assert.doesNotMatch(switcher, /\/it\/|\/pt\//);
+  assert.match(switcher, /\/it\//);
+  assert.match(switcher, /\/pt\//);
 });
 
 test('CyberChef comparisons preserve its documented client-side privacy model', () => {

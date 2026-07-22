@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "publishedLocales": ["en", "es", "de", "fr"],
-  "pendingLocales": ["it", "pt"],
+  "publishedLocales": ["en", "es", "de", "fr", "it", "pt"],
+  "pendingLocales": [],
   "routeFamilies": {
     "home": {
       "kind": "page",

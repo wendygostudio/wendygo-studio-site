@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrubforge in italiano | Wendygo Studio</title>
+  <meta name="description" content="scrubforge con elaborazione principale locale." />
+  <link rel="canonical" href="https://wendygostudio.com/it/scrubforge/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"ScrubForge"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ScrubForge","description":"Config sanitizer for network engineers and sysadmins","applicationCategory":"Utility","operatingSystem":"Chrome","softwareVersion":"1.13.1","url":"https://wendygostudio.com/scrubforge/","downloadUrl":"https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe"}</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --ink: #13151a; --surf: #1c1f26; --line: #2e343f; --text: #e7e9ee; --muted: #8b93a3; --amber: #e8a33d; --r: 9px; --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--ink); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(19,21,26,.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px,5vw,60px); height: 56px; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; color: var(--text); }
+    .nav-mark { width: 28px; height: 28px; border-radius: 7px; background: var(--amber); display: grid; place-items: center; color: #13151a; font-weight: 900; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .hero { max-width: 780px; margin: 0 auto; padding: clamp(64px,10vw,120px) clamp(20px,5vw,40px) clamp(48px,8vw,96px); text-align: center; }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber); margin-bottom: 28px; }
+    h1 { font-size: clamp(38px, 7vw, 68px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--amber); }
+    .hero-sub { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); max-width: 580px; margin: 0 auto 40px; }
+    .cta-button { display: inline-flex; align-items: center; gap: 8px; background: var(--amber); color: #13151a; font-weight: 700; font-size: 15px; text-decoration: none; padding: 14px 28px; border-radius: var(--r); border: none; cursor: pointer; margin-top: 20px; }
+    .cta-button:hover { filter: brightness(1.08); }
+    .section { padding: clamp(48px,8vw,80px) clamp(20px,5vw,60px); }
+    .section-inner { max-width: 1060px; margin: 0 auto; }
+    .section-title { font-size: clamp(26px,4vw,38px); font-weight: 750; margin-bottom: 10px; }
+    .feature-list { display: flex; flex-direction: column; gap: 10px; margin-top: 32px; }
+    .feature-list li { list-style: none; font-size: 15px; color: var(--text); display: flex; gap: 12px; }
+    .feature-list li::before { content: '◆'; font-size: 7px; color: var(--amber); flex: none; }
+    .cross-promo { background: var(--surf); border: 1px solid var(--line); border-radius: 14px; padding: 28px; margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .promo-title { font-size: 16px; font-weight: 700; margin-top: 8px; }
+    .promo-desc { font-size: 14px; color: var(--muted); margin-top: 8px; }
+    .promo-link { font-size: 13px; color: var(--amber); text-decoration: none; font-weight: 600; margin-top: 12px; display: inline-block; }
+    .proof-grid { display: grid; grid-template-columns: minmax(240px,.8fr) 1.2fr; gap: 28px; align-items: start; margin-top: 30px; }
+    .proof-grid-wide { grid-template-columns: 1fr; }
+    .proof-grid-wide .proof-shot { max-height: none; }
+    .proof-shot { width: 100%; max-height: 520px; object-fit: contain; object-position: top; background: var(--surf); border: 1px solid var(--line); border-radius: 14px; padding: 10px; }
+    .proof-card { background: var(--surf); border: 1px solid var(--line); border-radius: 14px; padding: 22px; margin-bottom: 16px; }
+    .proof-card h3 { font-size: 17px; margin-bottom: 10px; }
+    .proof-card p, .proof-card li { color: var(--muted); font-size: 14px; }
+    .proof-card ul { padding-left: 20px; }
+    .proof-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .proof-meta span { border: 1px solid var(--line); border-radius: 999px; padding: 5px 10px; color: var(--muted); font-size: 12px; }
+    @media (max-width: 760px) { .proof-grid { grid-template-columns: 1fr; } }
+    footer { padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; max-width: 1180px; margin: 0 auto; }
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) { nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); } }
+  </style>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="ScrubForge — Network Configuration Sanitizer">
+<meta property="og:description" content="Remove sensitive data from Cisco, FortiGate, MikroTik and other network configurations before sharing them with support or AI tools.">
+<meta property="og:url" content="https://wendygostudio.com/scrubforge/">
+<meta property="og:image" content="https://wendygostudio.com/images/og/scrubforge-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ScrubForge — Network Configuration Sanitizer">
+<meta name="twitter:description" content="Remove sensitive data from Cisco, FortiGate, MikroTik and other network configurations before sharing them with support or AI tools.">
+<meta name="twitter:image" content="https://wendygostudio.com/images/og/scrubforge-og.png">
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/scrubforge/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/scrubforge/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/scrubforge/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"></head>
+<body>
+  <nav><a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links"><a href="/">Home</a><a href="/it/risorse/">Risorse</a><a href="/it/ecosistema-forge/">Ecosistema</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/es/scrubforge/" class="nav-lang">ES 🌐</a></div>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow">ScrubForge</div>
+    <h1>Redact configs<br><em>confidently</em></h1>
+    <p class="hero-sub">Sanitize network configs before sharing with support or AI. Detects IPs, passwords, secrets across Cisco, FortiGate, MikroTik, Palo Alto. Gratis, no upload, BYOK.</p>
+    <a class="cta-button" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank">↗ Aggiungi a Chrome</a>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Built for infrastructure</h2>
+      <ul class="feature-list">
+        <li>120 patterns: network IPs, secrets, PII, infrastructure keys</li>
+        <li>12 vendor profiles: Cisco, FortiGate, MikroTik, Juniper, Palo Alto, Dell, etc</li>
+        <li>Consistent tokens preserve topology — same IP always gets same token</li>
+        <li>BYOK: your Claude/GPT-4o/Gemini/Groq/Mistral key, we never see queries</li>
+        <li>Pro: format-aware tokens, AI chat, custom dictionaries, audit mode</li>
+        <li>Expert: batch processing, question obfuscation, all vendor profiles</li>
+      </ul>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <h3 class="section-title" style="margin-top: 40px;">Altro da Wendygo</h3>
+      <div class="cross-promo">
+        <div><div style="font-size: 28px;">T</div><div class="promo-title">TextForge</div><div class="promo-desc">58 text transforms, recipes and a local AI composer.</div><a href="/it/textforge/" class="promo-link">Scopri di più →</a></div>
+        <div><div style="font-size: 28px;">▢</div><div class="promo-title">FrameForge</div><div class="promo-desc">Resize images, remove backgrounds and upscale with local AI.</div><a href="/it/frameforge/" class="promo-link">Scopri di più →</a></div>
+        <div><div style="font-size: 28px;">C</div><div class="promo-title">ClaimForge</div><div class="promo-desc">Diritti dei consumatori UE for warranty claims and returns.</div><a href="/it/claimforge/" class="promo-link">Scopri di più →</a></div>
+        <div><div style="font-size: 28px;">⟲</div><div class="promo-title">ConvertForge</div><div class="promo-desc">Convert images, docs, audio and data on your device.</div><a href="/it/convertforge/" class="promo-link">Scopri di più →</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="section product-proof" data-product-proof data-version="1.13.1"><div class="section-inner"><h2 class="section-title">Prove, privacy e limiti</h2><p class="hero-sub" style="margin:0">Verifiable details to help you decide before installing.</p><div class="proof-grid proof-grid-wide"><div><img class="proof-shot" src="/images/product-ui/scrubforge.png" alt="ScrubForge product preview" width="1180" height="750" loading="lazy"><div class="proof-meta"><span>Version 1.13.1</span><span>Chrome & Edge</span><span>6 lingue</span></div><a class="promo-link" href="/resources/infrastructure-security/">See related guides →</a></div><div><article class="proof-card"><h3>Come vengono trattati i dati</h3><p>Core sanitization is local. Data only leaves when you explicitly invoke an external BYOK provider.</p></article><article class="proof-card"><h3>Autorizzazioni dichiarate</h3><ul><li><code>storage</code></li><li><code>contextMenus</code></li></ul></article><article class="proof-card"><h3>Limiti noti</h3><ul><li>Automatic detection must be reviewed before sharing sensitive material.</li><li>When optional BYOK AI is invoked, data goes directly to the selected external provider under its terms.</li></ul></article><article class="proof-card"><h3>Scheda ufficiale</h3><p>Check the Chrome Web Store listing for the published version, permissions and update notes.</p><a class="promo-link" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Chrome Web Store →</a></article></div></div></div></section><footer><div><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div><div><a href="/it/privacy" style="color: var(--faint); text-decoration: none;">Privacy</a></div></footer>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

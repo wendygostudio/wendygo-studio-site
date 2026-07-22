@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wendygo Studio — Extensões Chrome privadas</title>
+  <meta name="description" content="Seis extensões para texto, imagens, ficheiros, infraestrutura, direitos da UE e concentração." />
+  <link rel="canonical" href="https://wendygostudio.com/pt/" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --good:   #6fbf73;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px; text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Forge glow & embers (2026-07-17) ── */
+    .hero { position: relative; overflow: visible; }
+    .hero::before {
+      content: ''; position: absolute; left: 50%; bottom: -40px; transform: translateX(-50%);
+      width: min(560px, 80vw); height: 220px; pointer-events: none;
+      background: radial-gradient(ellipse at center bottom, rgba(232,163,61,.14), transparent 65%);
+    }
+    .embers { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .embers span {
+      position: absolute; bottom: 8%; width: 4px; height: 4px; border-radius: 50%;
+      background: var(--amber); opacity: 0;
+      animation: ember-rise 7s linear infinite;
+    }
+    .embers span:nth-child(1) { left: 16%; animation-delay: 0s;   animation-duration: 8s;  width: 3px; height: 3px; }
+    .embers span:nth-child(2) { left: 30%; animation-delay: 2.4s; animation-duration: 9.5s; }
+    .embers span:nth-child(3) { left: 47%; animation-delay: 1.1s; animation-duration: 7.5s; width: 5px; height: 5px; }
+    .embers span:nth-child(4) { left: 62%; animation-delay: 3.8s; animation-duration: 10s; width: 3px; height: 3px; }
+    .embers span:nth-child(5) { left: 76%; animation-delay: 0.7s; animation-duration: 8.5s; }
+    .embers span:nth-child(6) { left: 88%; animation-delay: 5.2s; animation-duration: 9s;  width: 3px; height: 3px; }
+    @keyframes ember-rise {
+      0%   { transform: translateY(0) translateX(0) scale(1);      opacity: 0; }
+      8%   { opacity: .55; }
+      55%  { opacity: .3; }
+      100% { transform: translateY(-420px) translateX(22px) scale(.4); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .embers span { animation: none; opacity: 0; }
+    }
+
+    .hero-term {
+      display: inline-block; font-family: var(--mono); font-size: 13px;
+      color: var(--muted); border: 1px solid var(--line); border-radius: 8px;
+      background: rgba(16,18,22,.6); padding: 8px 14px; margin-bottom: 34px;
+    }
+    .hero-term b { color: var(--good); font-weight: 600; }
+    .hero-term .prompt { color: var(--amber); }
+
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; }
+    .cta-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a); font-weight: 700; font-size: 14.5px;
+      padding: 12px 24px; border-radius: var(--r); text-decoration: none;
+      transition: transform .15s ease, filter .15s;
+    }
+    .cta-primary:hover { filter: brightness(1.07); transform: translateY(-1px); }
+    .cta-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--text); font-weight: 600; font-size: 14.5px;
+      padding: 12px 24px; border-radius: var(--r); text-decoration: none;
+      border: 1px solid var(--line); transition: border-color .15s, transform .15s ease;
+    }
+    .cta-ghost:hover { border-color: var(--faint); transform: translateY(-1px); }
+
+    .hero-stats {
+      display: flex; justify-content: center; gap: clamp(18px, 4vw, 44px); flex-wrap: wrap;
+      font-family: var(--mono); font-size: 12.5px; color: var(--faint);
+      border-top: 1px solid var(--line); margin-top: 8px; padding-top: 26px;
+    }
+    .hero-stats b { color: var(--amber); font-weight: 700; margin-right: 5px; }
+
+    .product-card { transition: border-color .2s, transform .2s ease, box-shadow .2s ease; }
+    .product-card:hover {
+      border-color: rgba(232,163,61,.45); transform: translateY(-3px);
+      box-shadow: 0 14px 34px -18px rgba(0,0,0,.65);
+    }
+
+    .priv-icon svg { display: block; }
+    .product-mark-img { width: 44px; height: 44px; border-radius: 11px; flex: none; display: block; }
+
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 780px; margin: 0 auto;
+      padding: clamp(64px,10vw,120px) clamp(20px,5vw,40px) clamp(48px,8vw,96px);
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 28px;
+    }
+    .eyebrow::before, .eyebrow::after { content: ''; flex: 1; width: 28px; height: 1px; background: var(--amber); opacity: .5; }
+    h1 {
+      font-size: clamp(38px, 7vw, 68px); font-weight: 800; line-height: 1.1;
+      letter-spacing: -1.5px; margin-bottom: 24px;
+    }
+    h1 em { font-style: normal; color: var(--amber); }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); max-width: 580px; margin: 0 auto 40px;
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12.5px; font-weight: 600; color: var(--muted);
+      border: 1px solid var(--line); border-radius: 20px; padding: 5px 13px;
+    }
+    .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); }
+
+    /* ── SECTION WRAPPER ── */
+    .section { padding: clamp(48px,8vw,80px) clamp(20px,5vw,60px); }
+    .section-inner { max-width: 1060px; margin: 0 auto; }
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 12px;
+    }
+    .section-title { font-size: clamp(26px,4vw,38px); font-weight: 750; letter-spacing: -.6px; margin-bottom: 10px; }
+    .section-sub { color: var(--muted); font-size: 16px; max-width: 520px; }
+
+    /* ── PRODUCTS ── */
+    .products { background: var(--surf); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+    .product-card {
+      background: var(--ink); border: 1px solid var(--line); border-radius: 14px;
+      padding: 28px; display: flex; flex-direction: column; gap: 18px;
+      transition: border-color .2s;
+    }
+    
+    .product-head { display: flex; align-items: flex-start; gap: 14px; }
+    .product-mark {
+      width: 44px; height: 44px; border-radius: 11px; background: var(--amber);
+      display: grid; place-items: center; font-size: 22px; color: var(--on-a);
+      flex: none; font-weight: 900;
+    }
+    .product-name { font-size: 20px; font-weight: 750; letter-spacing: -.3px; }
+    .product-tagline { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+    .product-desc { font-size: 14.5px; color: var(--muted); line-height: 1.6; }
+    /* ── Product mockups & expandable details (2026-07-17 redesign) ── */
+    .product-shot {
+      border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+      background: #16181d; font-size: 11px; user-select: none;
+    }
+    .shot-bar { display:flex; align-items:center; gap:5px; padding: 7px 10px; border-bottom: 1px solid var(--line); background: #1b1e24; }
+    .shot-dot { width:7px; height:7px; border-radius:50%; background: var(--line); }
+    .shot-title { margin-left: 4px; color: var(--muted); font-size: 10px; letter-spacing: .3px; }
+    .shot-body { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .shot-input { background:#101216; border:1px solid var(--line); border-radius:6px; padding:6px 8px; color:var(--muted); font-family: ui-monospace, monospace; font-size: 10.5px; white-space: pre; overflow: hidden; }
+    .shot-output { background:#101216; border:1px solid rgba(232,163,61,.35); border-radius:6px; padding:6px 8px; color:var(--amber); font-family: ui-monospace, monospace; font-size: 10.5px; }
+    .shot-chips { display:flex; gap:5px; flex-wrap:wrap; }
+    .shot-chip { border:1px solid var(--line); border-radius:20px; padding:2.5px 8px; color:var(--muted); font-size:10px; }
+    .shot-chip.on { border-color: var(--amber); color: var(--amber); }
+    .shot-mono { font-family: ui-monospace, monospace; font-size: 10.5px; line-height: 1.75; color: var(--muted); white-space: pre; overflow: hidden; }
+    .shot-mono .tk { color: var(--amber); background: rgba(232,163,61,.12); border-radius: 3px; padding: 0 3px; }
+    .shot-canvas { position: relative; height: 74px; border-radius: 6px; background: linear-gradient(120deg, #2c3e50, #4b6584 55%, #786fa6); }
+    .shot-crop { position:absolute; inset: 9px 22px; border: 1.5px dashed var(--amber); border-radius: 3px; }
+    .shot-crop::after { content:'1280 × 720'; position:absolute; right:5px; bottom:3px; font-size:9px; color:var(--amber); }
+    .shot-drop { border: 1.5px dashed var(--line); border-radius: 8px; padding: 10px; text-align:center; color: var(--muted); font-size: 10.5px; }
+    .shot-arrow { text-align:center; color: var(--faint); font-size: 12px; line-height: 1; }
+    .shot-row { display:flex; align-items:center; gap:8px; }
+    .shot-timer { font-size: 19px; font-weight: 800; color: var(--text); letter-spacing: .5px; font-variant-numeric: tabular-nums; }
+    .shot-embers { color: var(--amber); font-size: 11px; font-weight: 700; }
+    .shot-stat { display:flex; align-items:center; gap:6px; font-size: 9.5px; color: var(--muted); }
+    .shot-stat .strack { flex:1; height:4px; border-radius:3px; background:#101216; overflow:hidden; }
+    .shot-stat .sfill { height:100%; border-radius:3px; background: var(--amber); }
+    .shot-steps { display:flex; align-items:center; gap:6px; }
+    .shot-step { width:18px; height:18px; border-radius:50%; border:1px solid var(--line); display:grid; place-items:center; color:var(--muted); font-size:10px; flex:none; }
+    .shot-step.on { background: var(--amber); border-color: var(--amber); color: var(--on-a); font-weight:700; }
+    .shot-step-line { flex:1; height:1px; background: var(--line); }
+    .shot-badge { display:inline-block; border:1px solid rgba(111,191,138,.5); color:#6fbf8a; border-radius:20px; padding:2.5px 8px; font-size:9.5px; }
+
+    .product-more summary {
+      cursor: pointer; list-style: none; font-size: 13px; font-weight: 600;
+      color: var(--amber); display: flex; align-items: center; gap: 7px;
+      padding: 2px 0;
+    }
+    .product-more summary::-webkit-details-marker { display: none; }
+    .product-more summary::before { content: '▸'; font-size: 11px; transition: transform .18s ease; }
+    .product-more[open] summary::before { transform: rotate(90deg); }
+    .product-more summary:hover { color: var(--amber2, var(--amber)); }
+    .product-more .feature-list { margin-top: 12px; }
+
+
+    .feature-list { display: flex; flex-direction: column; gap: 7px; }
+    .feature-list li {
+      list-style: none; font-size: 13.5px; color: var(--text);
+      display: flex; align-items: baseline; gap: 9px;
+    }
+    .feature-list li::before { content: '◆'; font-size: 6px; color: var(--amber); flex: none; position: relative; top: -1px; }
+    .pro-feat { color: var(--amber); }
+    .pro-feat::before { color: var(--amber) !important; }
+
+    .product-footer { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+    .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+    .price-free { font-size: 13px; color: var(--muted); padding: 3px 9px; border: 1px solid var(--line); border-radius: 20px; }
+    .price-pro { font-size: 18px; font-weight: 750; color: var(--text); }
+    .price-once { font-size: 12px; color: var(--muted); }
+    .btn-store {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 13.5px; text-decoration: none;
+      padding: 10px 18px; border-radius: var(--r); border: none; cursor: pointer;
+      transition: filter .15s; width: 100%;
+    }
+    .btn-store:hover { filter: brightness(1.08); }
+    .btn-store.learn { background: transparent; color: var(--amber); border: 1px solid var(--amber); margin-right: 8px; }
+    .btn-store.ghost {
+      background: var(--surf2); color: var(--muted); border: 1px solid var(--line); margin-top: 8px;
+    }
+    .btn-store.ghost:hover { color: var(--text); border-color: var(--faint); }
+
+    /* ── HOW IT WORKS ── */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 24px; margin-top: 48px; }
+    .step { background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+    .step-n { font-family: var(--mono); font-size: 11px; color: var(--amber); font-weight: 700; letter-spacing: .5px; margin-bottom: 10px; }
+    .step-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .step-desc { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+
+    /* ── PRIVACY ── */
+    .privacy { background: var(--surf); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; margin-top: 40px; }
+    .priv-item { display: flex; align-items: flex-start; gap: 12px; }
+    .priv-icon { font-size: 20px; flex: none; margin-top: 2px; }
+    .priv-label { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+    .priv-desc { font-size: 13px; color: var(--muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    /* ── DIVIDER ── */
+    .amber-rule { width: 48px; height: 3px; background: var(--amber); border-radius: 2px; margin-bottom: 28px; }
+
+    /* ── RESPONSIVE ── */
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      h1 { letter-spacing: -.8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="Wendygo Studio — Privacidade-First Extensões Chrome &amp; Focus Pet">
+<meta property="og:description" content="Six privacy-first Chrome extensions: text, images, file conversion, network configs, Direitos dos consumidores na UE and a pomodoro focus pet. 100% local.">
+<meta property="og:url" content="https://wendygostudio.com/">
+<meta property="og:image" content="https://wendygostudio.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wendygo Studio — Privacidade-First Extensões Chrome &amp; Focus Pet">
+<meta name="twitter:description" content="Six privacy-first Chrome extensions: text, images, file conversion, network configs, Direitos dos consumidores na UE and a pomodoro focus pet. 100% local.">
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com","description":"Six privacy-first Chrome extensions for text manipulation, image resizing, file conversion, network config sanitization, Direitos dos consumidores na UE and pomodoro focus with a virtual pet","sameAs":["https://bsky.app/profile/wendygostudio.bsky.social","https://dev.to/wendygostudio"]}
+</script>
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/"></head>
+<body>  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a>
+      <a href="/pt/recursos/">Recursos</a>
+      <a href="/pt/ecossistema-forge/">Ecossistema</a>
+      <a href="/blog/">Blog</a>
+      <a href="/tools/">Tools</a>
+      <a href="/#how">Como funciona</a>
+      <a href="/#privacy">Privacidade</a>
+      <a href="/es/" class="nav-lang">ES 🌐</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="embers" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="eyebrow">Wendygo Studio</div>
+    <h1>Grátis, Privacidade-First <em>Extensões Chrome</em></h1>
+    <p class="hero-sub">Seis extensões para Chrome e Edge: transforme texto, redimensione imagens, converta ficheiros, limpe configurações, defenda os seus direitos na UE e mantenha a concentração.</p>
+    <div class="hero-term"><span class="prompt">$</span> para onde vão os meus dados? <b>→ o processamento principal permanece local. A IA externa só é usada quando a escolher.</b></div>
+    <div class="hero-ctas">
+      <a class="cta-primary" href="#products">Explorar as seis Forges ↓</a>
+      <a class="cta-ghost" href="/pt/ecossistema-forge/">Explorar o ecossistema</a>
+      <a class="cta-ghost" href="/blog/">Ler o blog</a>
+    </div>
+    <div class="hero-badges">
+      <span class="badge"><span class="dot"></span>Permissões mínimas</span>
+      <span class="badge"><span class="dot"></span>Processamento local</span>
+      <span class="badge"><span class="dot"></span>A Wendygo não recolhe conteúdos</span>
+      <span class="badge"><span class="dot"></span>Chrome & Edge</span>
+    </div>
+    <div class="hero-stats">
+      <span><b>6</b>extensions</span>
+      <span><b>0</b>Wendygo processing servers</span>
+      <span><b>No</b>ad tracking</span>
+      <span><b>2</b>on-device AIs</span>
+      <span><b>6</b>idiomas</span>
+    </div>
+  </section>
+
+  <section class="section products" id="products">
+    <div class="section-inner">
+      <div class="section-label">Extensions</div>
+      <h2 class="section-title">A família Forge</h2>
+      <p class="section-sub">Seis extensões, uma filosofia: ferramentas poderosas diretamente no navegador.</p>
+      <div class="amber-rule" style="margin-top:24px;"></div>
+
+      <div class="product-grid">
+
+        <!-- TextForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <img class="product-mark-img" src="/images/icons/textforge.png" alt="" width="44" height="44" loading="lazy">
+            <div>
+              <div class="product-name">TextForge</div>
+              <div class="product-tagline">paste · transform · copy</div>
+            </div>
+          </div>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">TextForge</span></div>
+            <div class="shot-body">
+              <div class="shot-input">  John,, SMITH   
+  jane  doe ;;
+  John,, SMITH   </div>
+              <div class="shot-chips"><span class="shot-chip on">Trim</span><span class="shot-chip on">Dedupe</span><span class="shot-chip on">Slugify</span><span class="shot-chip">＋ 55 more</span></div>
+              <div class="shot-output">john-smith
+jane-doe</div>
+            </div>
+          </div>
+          <p class="product-desc">58 text functions, chainable recipes, and a local AI composer: describe the transform in plain words and Gemini Nano builds the pipeline — 100% on your device.</p>
+          <ul class="feature-list">
+            <li>Clean, sort, deduplicate, change case — in one click</li>
+            <li>Extract emails, URLs, IPs; Base64, JSON, UUID, SHA-256</li>
+            <li>✨ Recipes: chain transforms into reusable pipelines</li>
+            <li>✨ AI Composer: natural language → recipe, on-device</li>
+          </ul>
+          <details class="product-more">
+            <summary>Everything included</summary>
+            <ul class="feature-list">
+              <li>Clean: extra spaces, line breaks, trim, strip HTML, remove accents</li>
+              <li>Case: UPPERCASE, lowercase, Title Case, Sentence case</li>
+              <li>Sort: A→Z, Z→A, numeric (understands KB/MB/GB/TB), deduplicate</li>
+              <li>Dev: Base64, URL, HTML, JSON, regex escape, slugify, hex</li>
+              <li>Generate: SHA-256, UUID, secure passwords, Unix ↔ date</li>
+              <li>Markdown: bullets, numbered lists, code block, wrap at 80 cols</li>
+              <li>Forge Magic: paste JSON/Base64/hex and get 1-click suggestions</li>
+              <li class="pro-feat">Regex find & replace + regex grep filter (Pro)</li>
+              <li class="pro-feat">Unlimited saved recipes and AI compositions (Pro)</li>
+              <li class="pro-feat">Markdown table generator from columns (Pro)</li>
+            </ul>
+          </details>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Grátis</span>
+              <span class="price-pro">€3.99<small style="font-size:12px;font-weight:400">/mo</small></span>
+              <span class="price-once">· €24.99/yr · €59.99 lifetime</span>
+            </div>
+            <a class="btn-store learn" href="/pt/textforge/">Saber mais</a>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+          </div>
+        </div>
+
+        <!-- FrameForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <img class="product-mark-img" src="/images/icons/frameforge.png" alt="" width="44" height="44" loading="lazy">
+            <div>
+              <div class="product-name">FrameForge</div>
+              <div class="product-tagline">resize · adjust · export</div>
+            </div>
+          </div>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">FrameForge</span></div>
+            <div class="shot-body">
+              <div class="shot-canvas"><div class="shot-crop"></div></div>
+              <div class="shot-chips"><span class="shot-chip on">YouTube</span><span class="shot-chip">Instagram</span><span class="shot-chip">Twitch</span><span class="shot-chip">X header</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Image resizer and thumbnail maker with two local AIs — background removal and 2×/4× upscaling. No uploads, no credits, no accounts.</p>
+          <ul class="feature-list">
+            <li>🪄 AI background removal — unlimited, on your device</li>
+            <li>🔍 AI upscaling 2×/4× — ESRGAN, locally</li>
+            <li>Presets for YouTube, Shorts, Instagram, Twitch, X and more</li>
+            <li>JPEG / PNG / WebP export, EXIF stripped</li>
+          </ul>
+          <details class="product-more">
+            <summary>Everything included</summary>
+            <ul class="feature-list">
+              <li>Fill / Fit / Stretch with zoom and drag to reposition</li>
+              <li>12 effects: gradient, vignette, cinema bars, duotone, vintage…</li>
+              <li>Adjustable quality with live file-size preview</li>
+              <li>Copy to clipboard, EXIF metadata stripped on export</li>
+              <li class="pro-feat">8 extra effects: warm, cool, dramatic, glow… (Pro)</li>
+              <li class="pro-feat">Text layers and logo/image overlays (Pro)</li>
+              <li class="pro-feat">Brightness, contrast & saturation controls (Pro)</li>
+              <li class="pro-feat">Batch processing and multi-size ZIP export (Pro)</li>
+              <li class="pro-feat">Target size compression — e.g. max 2 MB (Pro)</li>
+            </ul>
+          </details>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Grátis</span>
+              <span class="price-pro">€4.99<small style="font-size:12px;font-weight:400">/mo</small></span>
+              <span class="price-once">· €29.99/yr · €59.99 lifetime</span>
+            </div>
+            <a class="btn-store learn" href="/pt/frameforge/">Saber mais</a>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+          </div>
+        </div>
+
+        <!-- ScrubForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <img class="product-mark-img" src="/images/icons/scrubforge.png" alt="" width="44" height="44" loading="lazy">
+            <div>
+              <div class="product-name">ScrubForge</div>
+              <div class="product-tagline">sanitize · share · ask</div>
+            </div>
+          </div>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">ScrubForge</span></div>
+            <div class="shot-body">
+              <div class="shot-mono">crypto isakmp key <span class="tk">[PSK_1]</span> addr 203.0.113.5
+username admin password 7 <span class="tk">[ENC_PASS_1]</span>
+snmp-server community <span class="tk">[SNMP_RO_1]</span> RO</div>
+              <div class="shot-chips"><span class="shot-chip on">✓ 3 secrets sanitized</span><span class="shot-chip">Ask AI</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Config sanitizer for sysadmins and network engineers. Paste your config, sensitive data becomes consistent tokens — then ask AI about it without exposing your infrastructure.</p>
+          <ul class="feature-list">
+            <li>120 patterns: secrets, PII, network, infrastructure, custom</li>
+            <li>12 vendor profiles: Cisco, FortiGate, MikroTik, Palo Alto…</li>
+            <li>Consistent tokens preserve topology — same IP → same token</li>
+            <li>BYOK — Claude, GPT-4o, Gemini, Groq or Mistral</li>
+          </ul>
+          <details class="product-more">
+            <summary>Everything included</summary>
+            <ul class="feature-list">
+              <li>Format-aware tokens: SHA-512 stays SHA-512</li>
+              <li>🔍 Review-before-sanitize: click any detection to exclude it</li>
+              <li>Context profiles: firewall audit, log review, generic infra</li>
+              <li class="pro-feat">Integrated AI chat with multi-turn conversations (Pro)</li>
+              <li class="pro-feat">Custom dictionary with import/export (Pro)</li>
+              <li class="pro-feat">Deep scan and audit mode (Pro)</li>
+              <li class="pro-feat">Batch processing and question obfuscation (Pro)</li>
+            </ul>
+          </details>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Grátis</span>
+              <span class="price-pro">€5.99<small style="font-size:12px;font-weight:400">/mo</small></span>
+              <span class="price-once">· €34.99/yr · €69.99 lifetime</span>
+            </div>
+            <a class="btn-store learn" href="/pt/scrubforge/">Saber mais</a>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+          </div>
+        </div>
+
+        <!-- ClaimForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <img class="product-mark-img" src="/images/icons/claimforge.png" alt="" width="44" height="44" loading="lazy">
+            <div>
+              <div class="product-name">ClaimForge</div>
+              <div class="product-tagline">advocate · verify · claim</div>
+            </div>
+          </div>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">ClaimForge</span></div>
+            <div class="shot-body">
+              <div class="shot-steps"><span class="shot-step on">1</span><span class="shot-step-line"></span><span class="shot-step on">2</span><span class="shot-step-line"></span><span class="shot-step">3</span></div>
+              <div class="shot-input">Laptop stopped working after 14 months.
+Seller says warranty is "only 1 year"…</div>
+              <div class="shot-row"><span class="shot-badge">✓ EU 2-year legal guarantee applies</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Direitos dos consumidores na UE assistant for warranty claims, returns and right-to-repair. Understand your rights, generate the letter, track the deadline.</p>
+          <ul class="feature-list">
+            <li>Warranties, returns, repairs, refunds — under EU law</li>
+            <li>🔎 Seller-reply analyzer: detects illegal excuses</li>
+            <li>✨ Local AI letter drafting via Gemini Nano</li>
+            <li>Claim templates and letter generators</li>
+          </ul>
+          <details class="product-more">
+            <summary>Everything included</summary>
+            <ul class="feature-list">
+              <li>Right to repair: appliances, electronics, vehicles covered under EU directives</li>
+              <li>Seller and manufacturer contact lookup by product</li>
+              <li>Product defect assessment and damage documentation guide</li>
+              <li>Return and refund timeline tracking</li>
+              <li class="pro-feat">Pre-purchase policy scanner (Pro)</li>
+              <li class="pro-feat">Reply-deadline tracking with escalation guidance (Pro)</li>
+              <li class="pro-feat">PDF/CSV export of claims and purchases (Pro)</li>
+            </ul>
+          </details>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Grátis</span>
+              <span class="price-pro">€3.99<small style="font-size:12px;font-weight:400">/mo</small></span>
+              <span class="price-once">· €24.99/yr · €49.99 lifetime</span>
+            </div>
+            <a class="btn-store learn" href="/pt/claimforge/">Saber mais</a>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/mlnjadkolgplpgbheklkdjcglojfakcg" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+          </div>
+        </div>
+
+        <!-- ConvertForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <img class="product-mark-img" src="/images/icons/convertforge.png" alt="" width="44" height="44" loading="lazy">
+            <div>
+              <div class="product-name">ConvertForge</div>
+              <div class="product-tagline">drop · convert · done</div>
+            </div>
+          </div>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">ConvertForge</span></div>
+            <div class="shot-body">
+              <div class="shot-drop">📄 photo.heic</div>
+              <div class="shot-arrow">↓</div>
+              <div class="shot-chips"><span class="shot-chip on">JPG</span><span class="shot-chip">PNG</span><span class="shot-chip">WebP</span><span class="shot-chip">PDF</span><span class="shot-chip">MP3</span></div>
+            </div>
+          </div>
+          <p class="product-desc">Local file converter for images, documents, audio and data. Drop any file and it routes to the right converter — every conversion runs on your device.</p>
+          <ul class="feature-list">
+            <li>Images: HEIC, PNG, JPG, WebP, AVIF, SVG and more</li>
+            <li>Audio: MP3, WAV, FLAC — or extract audio from video</li>
+            <li>Data: JSON, CSV, YAML, XML, XLSX, Base64</li>
+            <li>Universal drag-and-drop router: drop anything</li>
+          </ul>
+          <details class="product-more">
+            <summary>Everything included</summary>
+            <ul class="feature-list">
+              <li>Images: HEIC, PNG, JPG, WebP, GIF, BMP, ICO, AVIF, SVG → PNG/JPG/WebP/ICO</li>
+              <li>Audio: MP3, WAV, OGG, FLAC, M4A — or extract audio from MP4/WebM</li>
+              <li>Documents: images ↔ PDF, PDF → text, Markdown ↔ HTML</li>
+              <li class="pro-feat">🔍 Local OCR — scanned PDF → searchable text (Pro)</li>
+              <li class="pro-feat">Unlimited batch conversion, whole folders at once (Pro)</li>
+              <li class="pro-feat">Favicon pack generator — 6 files from one image (Pro)</li>
+              <li class="pro-feat">Download interceptor: auto-convert .webp/.avif to JPG (Pro)</li>
+            </ul>
+          </details>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Grátis</span>
+              <span class="price-pro">€4.99<small style="font-size:12px;font-weight:400">/mo</small></span>
+              <span class="price-once">· €29.99/yr · €69.99 lifetime</span>
+            </div>
+            <a class="btn-store learn" href="/pt/convertforge/">Saber mais</a>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/mjmamnnhophdhccknmgnppcdkojkpagj" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+          </div>
+        </div>
+
+        <!-- SlimeForge -->
+        <div class="product-card">
+          <div class="product-head">
+            <img class="product-mark-img" src="/images/icons/slimeforge.png" alt="" width="44" height="44" loading="lazy">
+            <div>
+              <div class="product-name">SlimeForge</div>
+              <div class="product-tagline">focus · hatch · bond</div>
+            </div>
+          </div>
+          <div class="product-shot" aria-hidden="true">
+            <div class="shot-bar"><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-dot"></span><span class="shot-title">SlimeForge</span></div>
+            <div class="shot-body">
+              <div class="shot-row">
+                <svg viewBox="18 6 178 168" width="52" height="48" aria-hidden="true" style="flex:none"><path d="M152,138 Q186,128 180,96 Q177,82 165,81" fill="none" stroke="#6b4a16" stroke-width="13" stroke-linecap="round"/><path d="M152,138 Q186,128 180,96 Q177,82 165,81" fill="none" stroke="#f0b46a" stroke-width="8.5" stroke-linecap="round"/><path d="M60,72 Q48,34 52,30 Q57,26 92,54 Q80,68 60,72 Z" fill="#f7cd8e" stroke="#6b4a16" stroke-width="5" stroke-linejoin="round"/><path d="M140,72 Q152,34 148,30 Q143,26 108,54 Q120,68 140,72 Z" fill="#f0b46a" stroke="#6b4a16" stroke-width="5" stroke-linejoin="round"/><path d="M138,62 Q145,42 142,38 Q128,46 118,56 Z" fill="#f0b4ac"/><path d="M100,58 C140,58 158,90 156,122 C155,144 148,156 134,160 Q128,168 116,162 Q108,170 94,163 Q82,170 72,161 Q56,158 48,142 C42,132 42,120 44,110 C48,80 66,58 100,58 Z" fill="#f0b46a" stroke="#6b4a16" stroke-width="5" stroke-linejoin="round"/><circle cx="82" cy="109" r="10" fill="#33302b"/><circle cx="118" cy="109" r="10" fill="#33302b"/><circle cx="85.2" cy="106" r="3.2" fill="#fff"/><circle cx="121.2" cy="106" r="3.2" fill="#fff"/><path d="M94.5,124 Q97.2,127.6 100,124 Q102.8,127.6 105.5,124" fill="none" stroke="#6b4a16" stroke-width="3" stroke-linecap="round"/><path d="M50,114 L36,110 M50,121 L37,124 M150,114 L164,110 M150,121 L163,124" stroke="#6b4a16" stroke-width="2.4" stroke-linecap="round"/><ellipse cx="64" cy="122" rx="6.5" ry="4" fill="#f0a8a0" opacity="0.9"/><ellipse cx="136" cy="122" rx="6.5" ry="4" fill="#f0a8a0" opacity="0.9"/></svg>
+                <div style="flex:1">
+                  <div class="shot-timer">25:00</div>
+                  <div class="shot-embers">🔥 142 Embers · streak ×5</div>
+                </div>
+              </div>
+              <div class="shot-stat"><span>Bond</span><span class="strack"><span class="sfill" style="width:72%"></span></span></div>
+              <div class="shot-stat"><span>Mood</span><span class="strack"><span class="sfill" style="width:85%"></span></span></div>
+            </div>
+          </div>
+          <p class="product-desc">A pomodoro timer with a virtual pet you actually raise: feed it, teach it, dress it, grow a garden with it. Your creature grows with every focus session — and walks across your web pages while you work.</p>
+          <ul class="feature-list">
+            <li>Full pomodoro: 15/25/45/60 min, breaks, streaks, weekly report</li>
+            <li>Real care sim: hunger, hygiene, mood, bond and education stats</li>
+            <li>✨ Goal planning with local AI — type your goal, get a session plan</li>
+            <li>16 species, daily journey with missions and expeditions</li>
+          </ul>
+          <details class="product-more">
+            <summary>Everything included</summary>
+            <ul class="feature-list">
+              <li>Your first egg hatches with your first completed focus session</li>
+              <li>Focus projects & rituals — group sessions by what you're working on</li>
+              <li>Focus shield: blocks distracting sites during sessions</li>
+              <li>Garden, wardrobe, bestiary, memories and crafting workshop</li>
+              <li>Minigames for your breaks: fishing and yarn-chase</li>
+              <li>Visit your friends' slimes with share codes — chemistry, BFFs</li>
+              <li>Pet small talk via Gemini Nano, 100% on-device, in 6 idiomas</li>
+              <li>Quiet mode, do-not-disturb, light/dark themes, pop-out window</li>
+              <li>Ethical by design: real money never buys randomness</li>
+              <li class="pro-feat">Pack mode: up to 3 creatures interacting on screen (Pro)</li>
+              <li class="pro-feat">The Forge: design your own creature, 3/month (Pro)</li>
+              <li class="pro-feat">Cosmetics, ×1.5 Embers per session, Reserve of 25 (Pro)</li>
+            </ul>
+          </details>
+          <div class="product-footer">
+            <div class="price-row">
+              <span class="price-free">Grátis</span>
+              <span class="price-pro">€1.99<small style="font-size:12px;font-weight:400">/mo</small></span>
+              <span class="price-once">· €9.99/yr · €19.99 lifetime</span>
+            </div>
+            <a class="btn-store learn" href="/pt/slimeforge/">Saber mais</a>
+            <a class="btn-store" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
+              ↗ Chrome Web Store
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="section-inner">
+      <div class="section-label">Como funciona</div>
+      <h2 class="section-title">Simples por opção</h2>
+      <p class="section-sub">Install from the store, try PRO free for 5 days, keep the free tier forever.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">01 — INSTALL</div>
+          <div class="step-title">Adicionar ao Chrome or Edge</div>
+          <div class="step-desc">Find the extension in the Chrome Web Store or Microsoft Edge Add-ons and click Add. No sign-up, no account.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">02 — USE FREE</div>
+          <div class="step-title">Start right away</div>
+          <div class="step-desc">Every Forge starts with a 5-day free PRO trial — no card, no account. When it ends, nothing is deleted: the free tier keeps working for as long as you like.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">03 — GO PRO</div>
+          <div class="step-title">Simple pricing</div>
+          <div class="step-desc">Every Forge from €1.99/mo, with annual and lifetime options. Lifetime means one payment, yours forever.</div>
+        </div>
+        <div class="step">
+          <div class="step-n">04 — KEEP IT</div>
+          <div class="step-title">Your choice of model</div>
+          <div class="step-desc">Subscribe monthly, save with annual, or buy lifetime once and keep it forever — cancel subscriptions any time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section privacy" id="privacy">
+    <div class="section-inner">
+      <div class="section-label">Privacidade</div>
+      <h2 class="section-title">Os seus dados ficam consigo</h2>
+      <p class="section-sub">O processamento principal é local. Os dados só saem do navegador se escolher explicitamente um fornecedor externo com a sua chave API.</p>
+      <div class="privacy-grid">
+        <div class="priv-item">
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4" fill="var(--amber)" stroke="none"/></svg></div>
+          <div>
+            <div class="priv-label">Permissões mínimas</div>
+            <div class="priv-desc">Each extension requests only what it needs to work. Payment validation is an optional permission, asked only when you click Activate.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="6" rx="1.6"/><rect x="3.5" y="13.5" width="17" height="6" rx="1.6"/><circle cx="7" cy="7.5" r=".9" fill="var(--amber)" stroke="none"/><circle cx="7" cy="16.5" r=".9" fill="var(--amber)" stroke="none"/><path d="M3 3l18 18"/></svg></div>
+          <div>
+            <div class="priv-label">Sem servidor Wendygo</div>
+            <div class="priv-desc">All transforms and image processing run entirely in your browser tab. There is no backend.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6"/><path d="M4.5 12v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"/><path d="M16 16l5 5m0-5l-5 5"/></svg></div>
+          <div>
+            <div class="priv-label">Sem recolha de dados</div>
+            <div class="priv-desc">We do not collect, store or transmit any personal data or usage analytics.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.2"/><circle cx="9" cy="9.5" r="1.6"/><path d="M4.5 17l4.5-4.5 3 3 4-4 3.5 3.5"/></svg></div>
+          <div>
+            <div class="priv-label">Imagens nunca carregadas</div>
+            <div class="priv-desc">FrameForge processes images locally. Your photos never leave your machine.</div>
+          </div>
+        </div>
+        <div class="priv-item">
+          <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="14.5" r="4"/><path d="M11 11.5L20 3m-4 1.5l2.5 2.5M13.5 6l2 2"/></svg></div>
+          <div>
+            <div class="priv-label">BYOK — your key, your data</div>
+            <div class="priv-desc">ScrubForge uses your own AI API key. When you explicitly invoke an external provider, data goes directly to that provider under its terms; Wendygo never sees, proxies or stores the query.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://bsky.app/profile/wendygostudio.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://dev.to/wendygostudio" target="_blank" rel="noopener">Dev.to</a>
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contact</a>
+      <a href="/pt/privacidade">Privacidade policy</a>
+      <a href="/pt/termos">Terms and conditions</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
