@@ -40,11 +40,12 @@ function enhanceSoftwareSchema(html,id,locale){
   });
 }
 
-function ensureXDefault(html){
-  if (/hreflang=["']x-default["']/i.test(html)) return html;
-  const english=html.match(/<link\s+rel=["']alternate["']\s+hreflang=["']en["']\s+href=["']([^"']+)["'][^>]*>/i);
-  if (!english) return html;
-  return html.replace(english[0], `${english[0]}\n  <link rel="alternate" hreflang="x-default" href="${english[1]}">`);
+function ensureXDefault(html,product){
+  if (!/hreflang=["']x-default["']/i.test(html)){
+    const english=html.match(/<link\s+rel=["']alternate["']\s+hreflang=["']en["']\s+href=["']([^"']+)["'][^>]*>/i);
+    if(english)html=html.replace(english[0],`${english[0]}\n  <link rel="alternate" hreflang="x-default" href="${english[1]}">`);
+  }
+  return html.replace('  <link rel="alternate" hreflang="x-default"',`  <link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/${product}/">\n  <link rel="alternate" hreflang="x-default"`);
 }
 
 for(const name of fs.readdirSync(pages).filter(n=>n.endsWith('.json'))){
@@ -55,7 +56,7 @@ for(const name of fs.readdirSync(pages).filter(n=>n.endsWith('.json'))){
   for(const [key,value] of Object.entries(data.seo||{}))html=html.replaceAll(`{{seo.${key}}}`,escapeHtml(value));
   html=enhanceSoftwareSchema(html,data.product,data.locale);
   html=html.replace(/(?=<footer>)/,proofSection(data.product,data.locale));
-  html=ensureXDefault(html);
+  html=ensureXDefault(html,data.product);
   const output=path.resolve(data.output),current=fs.existsSync(output)?fs.readFileSync(output,'utf8'):'';
   if(current!==html){changed++;if(!check)fs.writeFileSync(output,html,'utf8')}
 }

@@ -7,6 +7,7 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/"/>
   </url>
   <url>
@@ -599,6 +600,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
   </url>
@@ -608,8 +610,119 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/claimforge/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/claimforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/convertforge/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/convertforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/datenschutz</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/privacy"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/forge-oekosystem/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/forge-ecosystem/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/ecosistema-forge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/forge-oekosystem/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/forge-ecosystem/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/frameforge/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/nutzungsbedingungen</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/nutzungsbedingungen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/terms"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/ressourcen/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/ressourcen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/scrubforge/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/slimeforge/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/slimeforge/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/textforge/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/textforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/</loc>
@@ -618,6 +731,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/"/>
   </url>
   <url>
@@ -1202,6 +1316,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
   </url>
@@ -1211,6 +1326,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
   </url>
@@ -1221,6 +1337,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/ecosistema-forge/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/forge-ecosystem/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/forge-oekosystem/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/forge-ecosystem/"/>
   </url>
   <url>
@@ -1229,6 +1346,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
   </url>
@@ -1248,6 +1366,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/datenschutz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/privacy"/>
   </url>
   <url>
@@ -1257,6 +1376,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/ressourcen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/"/>
   </url>
   <url>
@@ -1319,6 +1439,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
   </url>
@@ -1328,6 +1449,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
   </url>
@@ -1338,6 +1460,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/nutzungsbedingungen"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/terms"/>
   </url>
   <url>
@@ -1346,6 +1469,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/textforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/textforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
   </url>
@@ -1463,6 +1587,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/forge-ecosystem/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/ecosistema-forge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/forge-oekosystem/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/forge-ecosystem/"/>
   </url>
   <url>
@@ -1471,6 +1596,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
   </url>
@@ -1508,6 +1634,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/privacy"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/datenschutz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/privacy"/>
   </url>
   <url>
@@ -1517,6 +1644,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/resources/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/recursos/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/ressourcen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/resources/"/>
   </url>
   <url>
@@ -1579,6 +1707,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
   </url>
@@ -1588,6 +1717,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
   </url>
@@ -1598,6 +1728,7 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/terms"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/nutzungsbedingungen"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/terms"/>
   </url>
   <url>
@@ -1606,6 +1737,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/textforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/textforge/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
   </url>
