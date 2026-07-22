@@ -13,7 +13,8 @@ function proofSection(id,locale){
   const p=catalog[id], es=locale==='es';
   if(!p)throw new Error(`Missing catalog entry for ${id}`);
   const screenshot=fs.existsSync(`public/images/product-ui/${id}.png`)?`/images/product-ui/${id}.png`:`/images/og/${id}-og.png`;
-  const wide=id==='scrubforge', imageWidth=wide?1180:520, imageHeight=wide?750:760;
+  const imageSizes={textforge:[438,539],frameforge:[469,881],convertforge:[1909,846],scrubforge:[1180,750],slimeforge:[393,1261],claimforge:[520,760]};
+  const wide=['scrubforge','convertforge'].includes(id), [imageWidth,imageHeight]=imageSizes[id]||[520,760];
   const privacy=id==='scrubforge'
     ? (es?'El saneamiento principal es local. Los datos solo salen al invocar explícitamente un proveedor BYOK externo.':'Core sanitization is local. Data only leaves when you explicitly invoke an external BYOK provider.')
     : id==='claimforge'
