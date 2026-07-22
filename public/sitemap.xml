@@ -598,6 +598,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/que-hacer-descanso-pomodoro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/claimforge/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -1183,6 +1192,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-vs-bloques-de-tiempo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-vs-time-blocking/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/que-hacer-descanso-pomodoro/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/que-hacer-descanso-pomodoro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/</loc>
