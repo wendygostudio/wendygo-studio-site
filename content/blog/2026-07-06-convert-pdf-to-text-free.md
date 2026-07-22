@@ -1,16 +1,18 @@
 ---
-title: "How to Convert Scanned PDF to Text Locally — No Upload"
-description: "Extract text from PDFs and scanned documents entirely in your browser. ConvertForge uses local OCR (Tesseract) — no cloud service, no account, no files sent to any server."
+title: "PDF to Text Converter for Scanned PDFs — Local OCR"
+description: "Convert scanned PDFs and PDF images to text with private, on-device OCR. No upload or account; clear Free and Pro limits before you install."
 date: 2026-07-06
 slug: convert-pdf-to-text-free
 product: ConvertForge
 type: how-to
-keyword: "convert PDF to text free"
+keyword: "PDF to text converter"
 ---
 
-Scanned PDFs and image-based documents are everywhere: contracts, receipts, invoices, book pages, medical records. Getting usable text out of them usually means uploading them to a cloud service — until now.
+Need to convert a scanned PDF to text? Scanned PDFs and image-based documents are everywhere: contracts, receipts, invoices, book pages, and medical records. Getting usable text out of them usually means uploading them to a cloud service — until now.
 
-ConvertForge includes local OCR powered by Tesseract, running entirely in your browser. No upload. No account. Your documents never leave your device.
+ConvertForge includes local OCR powered by Tesseract, running entirely in your browser. No upload. No account. Your documents never leave your device. OCR for JPG and PNG images is included in Free; OCR for scanned PDFs is a Pro feature.
+
+**Quick answer:** a text-based PDF already contains selectable text, while a scanned PDF stores each page as an image and needs OCR. ConvertForge reads that PDF image locally and exports the recognized content as plain text.
 
 ## Why PDFs Are Often Image-Only
 
