@@ -32,6 +32,15 @@ for (const [id, product] of Object.entries(catalog)) {
   for (const localeRoot of ['', 'es/']) {
     const landing = `public/${localeRoot}${id}/index.html`;
     if (!fs.existsSync(landing)) errors.push(`${landing}: product landing missing`);
+    else {
+      const landingHtml = fs.readFileSync(landing, 'utf8');
+      if (!landingHtml.includes('data-product-proof')) errors.push(`${landing}: product proof section missing`);
+      if (!landingHtml.includes(`data-version="${product.version}"`)) errors.push(`${landing}: current version missing`);
+      if (!landingHtml.includes(`"softwareVersion":"${product.version}"`)) errors.push(`${landing}: structured software version missing`);
+      if (!landingHtml.includes(`"downloadUrl":"https://chromewebstore.google.com/detail/${product.storeId}"`)) errors.push(`${landing}: structured store URL missing`);
+      if (!/Known limitations|Limitaciones conocidas/.test(landingHtml)) errors.push(`${landing}: limitations missing`);
+      if (!/Declared permissions|Permisos declarados/.test(landingHtml)) errors.push(`${landing}: permission disclosure missing`);
+    }
     if (!sitemap.includes(`https://wendygostudio.com/${localeRoot}${id}/`)) errors.push(`${landing}: product missing from sitemap`);
   }
 }
