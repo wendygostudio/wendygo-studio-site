@@ -48,6 +48,25 @@ URLs reales del Chrome Web Store:
 3. Revisa `public/sitemap.xml` para saber qué está publicado.
 4. Si hay un archivo `analytics-data.json`, léelo para ver qué contenido tiene tracción.
 
+### Paso 1a: Decidir si debe existir una URL nueva
+
+Antes de elegir producto o formato, busca la intención en `content/`, `public/`,
+el sitemap y los hubs de `/resources/` y `/es/recursos/`. Una ejecución no tiene
+obligación de crear una URL.
+
+Solo se permite una URL nueva cuando se cumplen todas estas condiciones:
+
+1. Responde a una intención de búsqueda distinta que ninguna URL existente cubre bien.
+2. Aporta un ejemplo, comparación, flujo o evidencia que no esté ya publicado.
+3. Tiene una landing de producto y un hub temático claros a los que enlazar.
+4. Puede recibir al menos dos enlaces internos reales sin inventar rutas.
+5. Las afirmaciones verificables proceden de `data/products.json`; las legales,
+   además, de fuentes oficiales vigentes.
+
+Si una página existente cubre la intención, actualízala en vez de crear otra.
+Si no hay aportación diferencial suficiente, no publiques: documenta la decisión
+en el journal. Registra siempre `targetHub`, `competingUrls` y `whyNewUrl`.
+
 ### Paso 1b: Elegir el PRODUCTO antes que el tipo de artículo
 
 Esto va antes de decidir el tipo (Paso 2). Cuenta cuántos posts existentes mencionan cada producto en el título, en ambos idiomas:
