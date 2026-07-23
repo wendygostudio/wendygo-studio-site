@@ -230,6 +230,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/plataforma-odr-ue-cerrada-que-usar-ahora/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/blog/eu-right-to-repair-refurbished-parts/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -802,8 +811,8 @@
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/"/>
   </url>
   <url>
@@ -1183,6 +1192,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/plataforma-odr-ue-cerrada-que-usar-ahora/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/plataforma-odr-ue-cerrada-que-usar-ahora/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/pomodoro-para-programadores/</loc>

@@ -2,47 +2,188 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog en español — Wendygo Studio</title>
   <meta name="description" content="Guías, tutoriales y consejos sobre productividad en navegadores, edición de imágenes, manipulación de texto y gestión de red." />
   <link rel="canonical" href="https://wendygostudio.com/es/blog/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/" />
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/" />
   <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <style>
-    body { background: #13151a; color: #e7e9ee; font-family: system-ui; font-size: 16px; margin: 0; }
-    .blog-header { max-width: 720px; margin: 0 auto; padding: 80px 40px 32px; }
-    .blog-header h1 { font-size: 42px; font-weight: 800; margin: 0 0 12px; }
-    .blog-header p { color: #8b93a3; font-size: 16px; margin: 0; }
-    .post-list { max-width: 720px; margin: 0 auto; padding: 0 40px 80px; }
-    .post-item { display: block; text-decoration: none; color: #e7e9ee; padding: 24px; margin-bottom: 16px; background: #1c1f26; border: 1px solid #2e343f; border-radius: 12px; }
-    .post-item:hover { border-color: #4e5768; }
-    .post-date { font-size: 12px; color: #4e5768; margin-bottom: 8px; }
-    .post-title { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
-    .post-excerpt { font-size: 14px; color: #8b93a3; line-height: 1.5; }
-    .post-tag { display: inline-block; font-size: 11px; font-weight: 600; color: #e8a33d; border: 1px solid #2e343f; border-radius: 20px; padding: 2px 10px; margin-top: 10px; }
-    footer { padding: 36px 40px; border-top: 1px solid #2e343f; text-align: center; color: #8b93a3; font-size: 14px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav — identical to main site */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Blog header */
+    .blog-header {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 32px;
+    }
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 12px;
+    }
+    .blog-header h1 {
+      font-size: clamp(28px,5vw,42px); font-weight: 800;
+      letter-spacing: -.8px; margin-bottom: 12px;
+    }
+    .blog-header p { color: var(--muted); font-size: 16px; max-width: 520px; }
+
+    /* Post list */
+    .post-list { max-width: 720px; margin: 0 auto; padding: 0 clamp(20px,5vw,40px) 80px; }
+    .post-item {
+      display: block; text-decoration: none; color: inherit;
+      padding: 24px; margin-bottom: 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      transition: border-color .2s;
+    }
+    .post-item:hover { border-color: var(--faint); }
+    .post-date { font-size: 12px; color: var(--faint); margin-bottom: 8px; }
+    .post-title { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+    .post-excerpt { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .post-tag {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      color: var(--amber); border: 1px solid var(--line); border-radius: 20px;
+      padding: 2px 10px; margin-top: 10px;
+    }
+
+    /* Footer — identical to main site */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
   </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="Blog en español — Wendygo Studio">
+<meta property="og:description" content="Guías, tutoriales y consejos sobre productividad en navegadores, edición de imágenes, manipulación de texto y gestión de red.">
+<meta property="og:url" content="https://wendygostudio.com/es/blog/">
+<meta property="og:image" content="https://wendygostudio.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog en español — Wendygo Studio">
+<meta name="twitter:description" content="Guías, tutoriales y consejos sobre productividad en navegadores, edición de imágenes, manipulación de texto y gestión de red.">
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
 </head>
-<body>
+<body>  <nav>
+    <a class="nav-brand" href="/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#products">Extensiones</a>
+      <a href="/es/blog/">Blog</a>
+      <a href="/tools/">Herramientas</a>
+      <a href="/es/#how">Cómo funciona</a>
+      <a href="/es/#privacy">Privacidad</a>
+      <a href="/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
   <div class="blog-header">
+    <div class="section-label">Blog</div>
     <h1>Guías y tutoriales</h1>
-    <p>Consejos prácticos sobre productividad en navegadores, edición de imágenes y más.</p>
+    <p>Consejos prácticos sobre productividad en navegadores, edición de imágenes, manipulación de texto y gestión de configuración de red.</p>
   </div>
 
   <div class="post-list">
+    <a class="post-item" href="/es/blog/plataforma-odr-ue-cerrada-que-usar-ahora/">
+      <div class="post-date">24 de julio de 2026</div>
+      <div class="post-title">La Plataforma ODR de la UE Ha Cerrado: Qué Usar Ahora</div>
+      <div class="post-excerpt">La plataforma de Resolución de Litigios en Línea de la UE cerró en 2025. Esto es lo que la sustituye y dónde presentar ahora una reclamación transfronteriza.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/sanitizar-configuracion-mikrotik/">
+      <div class="post-date">23 de julio de 2026</div>
+      <div class="post-title">Sanitiza una config MikroTik RouterOS antes de compartir</div>
+      <div class="post-excerpt">RouterOS oculta contraseñas al exportar, pero topología, comentarios e IPs quedan visibles. Esto es lo que revisar antes de compartir.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
     <a class="post-item" href="/es/blog/que-hacer-descanso-pomodoro/">
       <div class="post-date">22 de julio de 2026</div>
-      <div class="post-title">Qué hacer en un descanso Pomodoro sin perder el foco</div>
-      <div class="post-excerpt">Doce ideas de pausa con un final claro para recuperar energía, evitar el scroll infinito y regresar a tiempo.</div>
+      <div class="post-title">Qué hacer en un descanso Pomodoro: 12 ideas</div>
+      <div class="post-excerpt">Aprovecha el descanso Pomodoro para recuperar energía sin perder el foco. Prueba 12 ideas breves y vuelve a tiempo.</div>
       <span class="post-tag">SlimeForge</span>
     </a>
 
     <a class="post-item" href="/es/blog/vendedor-rechaza-garantia-ue/">
       <div class="post-date">21 de julio de 2026</div>
       <div class="post-title">¿El vendedor rechaza tu garantía en la UE? Qué hacer</div>
-      <div class="post-excerpt">Un proceso práctico para documentar la negativa, invocar la garantía legal europea y escalar una reclamación por un producto defectuoso.</div>
+      <div class="post-excerpt">Descubre qué documentar, solicitar y escalar cuando un vendedor de la UE rechaza la garantía de un producto defectuoso.</div>
       <span class="post-tag">ClaimForge</span>
     </a>
 
@@ -60,32 +201,444 @@
       <span class="post-tag">ConvertForge</span>
     </a>
 
-    <a class="post-item" href="/es/blog/convertir-xlsx-a-csv-gratis/">
-      <div class="post-date">19 de julio de 2026</div>
-      <div class="post-title">Convertir XLSX a CSV Gratis — Sin Carga, Sin Nube</div>
-      <div class="post-excerpt">Convierte hojas de cálculo Excel a CSV localmente sin carga. ConvertForge ejecuta la conversión en tu navegador para que tus datos nunca salgan.</div>
-      <span class="post-tag">ConvertForge</span>
-    </a>
-
     <a class="post-item" href="/es/blog/alternativas-sanitizador-config-gratis/">
       <div class="post-date">19 de julio de 2026</div>
       <div class="post-title">Alternativas a Sanitizador de Config Gratis (2026)</div>
-      <div class="post-excerpt">Compara herramientas para eliminar credenciales de configuraciones de red: bash, VSCode, CyberChef o ScrubForge.</div>
-      <span class="post-tag">ScrubForge</span>
+      <div class="post-excerpt">Compara herramientas para eliminar credenciales de configuraciones de red antes de compartir: bash, VSCode, CyberChef o ScrubForge.</div>
+      <span class="post-tag">Comparativa</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-xlsx-a-csv-gratis/">
+      <div class="post-date">19 de julio de 2026</div>
+      <div class="post-title">Convertir XLSX a CSV Gratis — Sin Carga</div>
+      <div class="post-excerpt">Convierte hojas de cálculo Excel a CSV localmente — sin carga. ConvertForge ejecuta la conversión en tu navegador para que tus datos nunca salgan.</div>
+      <span class="post-tag">ConvertForge</span>
     </a>
 
     <a class="post-item" href="/es/blog/mejores-alternativas-pomofocus/">
       <div class="post-date">19 de julio de 2026</div>
-      <div class="post-title">Mejores Alternativas a Pomofocus en 2026 — Gratuitas y en Chrome</div>
-      <div class="post-excerpt">¿Buscas alternativas a Pomofocus? Compara los mejores temporizadores Pomodoro gratuitos en 2026.</div>
+      <div class="post-title">Mejores Alternativas a Pomofocus en 2026</div>
+      <div class="post-excerpt">¿Buscas alternativas a Pomofocus? Compara los mejores temporizadores Pomodoro gratuitos en 2026 — incluyendo extensión Chrome con gamificación.</div>
       <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/temporizador-pomodoro-para-estudiar-extension-chrome/">
+      <div class="post-date">18 de julio de 2026</div>
+      <div class="post-title">Temporizador Pomodoro para Estudiar</div>
+      <div class="post-excerpt">Cómo los temporizadores Pomodoro gamificados ayudan a estudiantes a enfocarse durante exámenes: descansos que funcionan, recompensas que duran.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/temporizador-pomodoro-tdah-extension-chrome/">
+      <div class="post-date">18 de julio de 2026</div>
+      <div class="post-title">Temporizador Pomodoro para TDAH</div>
+      <div class="post-excerpt">Cómo los temporizadores Pomodoro gamificados ayudan a arrancar tareas: recompensas inmediatas, sesiones cortas y una mascota que crece contigo.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/derecho-a-reparacion-ley-ue/">
+      <div class="post-date">17 de julio de 2026</div>
+      <div class="post-title">Derecho a Reparación en la UE Explicado</div>
+      <div class="post-excerpt">La Directiva de Derecho a Reparación de la UE te da derecho a reparar tus productos en lugar de reemplazarlos. Descubre qué cubre y cómo usarla.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/derecho-reparacion-partes-refabricadas-ue/">
+      <div class="post-date">17 de julio de 2026</div>
+      <div class="post-title">Derecho a Reparación UE: ¿Puedes Usar Partes Refabricadas?</div>
+      <div class="post-excerpt">Aprende si las partes refabricadas son legales bajo el derecho a reparación de la UE, cobertura de garantía, ahorros de costos y qué observar.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/pomodoro-vs-bloques-de-tiempo/">
+      <div class="post-date">17 de julio de 2026</div>
+      <div class="post-title">Pomodoro vs Bloques de Tiempo: Cómo Elegir</div>
+      <div class="post-excerpt">Compara Pomodoro y bloques de tiempo lado a lado. Qué método se adapta a tu estilo de trabajo y cuándo la gamificación marca la diferencia.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/alternativas-forest-chrome/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Mejores Alternativas a Forest para Chrome</div>
+      <div class="post-excerpt">Forest en Chrome funciona, pero no es la única opción. Compara los mejores temporizadores de enfoque para Chrome.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/mejores-extensiones-chrome-estudiantes/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Mejores Extensiones de Chrome para Estudiantes</div>
+      <div class="post-excerpt">Cinco extensiones que de verdad ayudan a estudiar: temporizador, corrector gramatical, bloqueador de anuncios y más.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/pomodoro-para-programadores/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Mejor Pomodoro para Programadores</div>
+      <div class="post-excerpt">Los programadores necesitan sesiones de 45–60 min para trabajo profundo, no solo descansos de 25 minutos.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/temporizador-pomodoro-offline-chrome/">
+      <div class="post-date">16 de julio de 2026</div>
+      <div class="post-title">Temporizador Pomodoro Offline para Chrome</div>
+      <div class="post-excerpt">Un temporizador Pomodoro que funciona sin conexión en Chrome. Configura sesiones y construye hábitos de enfoque.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/derecho-desistimiento-14-dias-ue/">
+      <div class="post-date">15 de julio de 2026</div>
+      <div class="post-title">Derecho de Desistimiento de 14 Días en la UE</div>
+      <div class="post-excerpt">La ley de la UE te da 14 días para devolver cualquier compra online, sin dar motivos. Aprende cómo ejercerlo.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/extension-pomodoro-chrome/">
+      <div class="post-date">15 de julio de 2026</div>
+      <div class="post-title">Mejor Extensión de Pomodoro para Chrome (2026)</div>
+      <div class="post-excerpt">SlimeForge añade una mascota virtual y gamificación para mantenerte concentrado. Gratis para empezar.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/recortar-imagenes-redes-sociales-chrome/">
+      <div class="post-date">14 de julio de 2026</div>
+      <div class="post-title">Recortar Imágenes para Redes Sociales en Chrome</div>
+      <div class="post-excerpt">Aprende a recortar imágenes para YouTube, Instagram, X y Twitch — centrado perfecto en cada relación de aspecto.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagenes-lote-extension-chrome/">
+      <div class="post-date">14 de julio de 2026</div>
+      <div class="post-title">Redimensionar Imágenes para Redes Sociales</div>
+      <div class="post-excerpt">Redimensiona una imagen para YouTube, Instagram, Twitch y X sin subir nada. Con FrameForge, en tu navegador.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/eliminar-caracteres-especiales-texto/">
+      <div class="post-date">13 de julio de 2026</div>
+      <div class="post-title">Eliminar Caracteres Especiales de un Texto | TextForge</div>
+      <div class="post-excerpt">Quita puntuación, símbolos y caracteres especiales de un texto en lote — todo en local, con TextForge.</div>
+      <span class="post-tag">TextForge — Blog</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/alternativas-cyberchef/">
+      <div class="post-date">12 de julio de 2026</div>
+      <div class="post-title">5 Mejores Alternativas a CyberChef por Uso (2026)</div>
+      <div class="post-excerpt">Compara cinco alternativas a CyberChef para limpiar texto, regex, automatización y análisis de seguridad, además de cuándo conviene CyberChef.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/decodificar-jwt-online/">
+      <div class="post-date">12 de julio de 2026</div>
+      <div class="post-title">Decodificar JWT Online — Sin Servidores</div>
+      <div class="post-excerpt">Decodifica tokens JWT en local, en tu navegador. Lee claims, expiración y datos de usuario. Gratis y privado.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/limpiar-texto-online/">
+      <div class="post-date">12 de julio de 2026</div>
+      <div class="post-title">Limpiar Texto Online — Eliminar Espacios</div>
+      <div class="post-excerpt">Elimina espacios sobrantes, recorta líneas, borra líneas en blanco y limpia texto desordenado — en local con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/scrubforge-claude-ai-troubleshooting-red/">
+      <div class="post-date">12 de julio de 2026</div>
+      <div class="post-title">ScrubForge con Claude AI para Redes</div>
+      <div class="post-excerpt">La gran ventana de contexto de Claude ayuda con configs de red extensas. Sanitiza primero con ScrubForge.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/generar-cadena-aleatoria-online/">
+      <div class="post-date">9 de julio de 2026</div>
+      <div class="post-title">Generar una Cadena Aleatoria Online</div>
+      <div class="post-excerpt">Genera una cadena aleatoria en tu navegador — sin registro, sin que ningún dato salga de tu máquina. Con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/generar-uuid-en-linea/">
+      <div class="post-date">9 de julio de 2026</div>
+      <div class="post-title">Generar un UUID en tu Navegador</div>
+      <div class="post-excerpt">Genera un UUID en tu navegador — sin registros, sin enviar datos a servidores. Incluido en TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/alternativas-convertio/">
+      <div class="post-date">8 de julio de 2026</div>
+      <div class="post-title">Mejores Alternativas a Convertio (2026)</div>
+      <div class="post-excerpt">¿Buscas alternativas a Convertio? Compara las mejores opciones gratuitas que procesan archivos en local, sin subir nada.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-csv-a-json-gratis/">
+      <div class="post-date">8 de julio de 2026</div>
+      <div class="post-title">Convertir CSV a JSON Gratis</div>
+      <div class="post-excerpt">Convierte archivos CSV a JSON completamente en tu navegador, sin subir nada a un servidor. Local y sin límites.</div>
+      <span class="post-tag">ConvertForge &amp;mdash; Guía</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-video-a-audio-gratis/">
+      <div class="post-date">7 de julio de 2026</div>
+      <div class="post-title">Convertir Video a Audio Gratis</div>
+      <div class="post-excerpt">Extrae el audio de cualquier video en tu navegador. ConvertForge procesa todo en local — sin subidas, sin límites.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/guardar-audio-video-mp3/">
+      <div class="post-date">7 de julio de 2026</div>
+      <div class="post-title">Guardar el Audio de un Vídeo como MP3 Gratis</div>
+      <div class="post-excerpt">Extrae el audio de un vídeo como MP3 en tu navegador. ConvertForge lo guarda en local — sin subidas, sin límites.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-pdf-a-texto-gratis/">
+      <div class="post-date">6 de julio de 2026</div>
+      <div class="post-title">Convertir PDF Escaneado a Texto Local</div>
+      <div class="post-excerpt">Extrae texto de PDFs y documentos escaneados en tu navegador. OCR local (Tesseract) — sin nube, sin cuenta.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/extraer-texto-de-imagen-gratis/">
+      <div class="post-date">6 de julio de 2026</div>
+      <div class="post-title">Extraer Texto de una Imagen Gratis — OCR</div>
+      <div class="post-excerpt">Extrae texto de JPG, PNG e imágenes en tu navegador. ConvertForge usa OCR local — sin nube, sin cuenta.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-heic-a-jpg-gratis/">
+      <div class="post-date">5 de julio de 2026</div>
+      <div class="post-title">Convertir HEIC a JPG Gratis — Sin Subir</div>
+      <div class="post-excerpt">Convierte fotos HEIC a JPG en tu navegador. ConvertForge funciona en tu dispositivo — sin cuenta, sin límite.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/convertir-heic-a-png-gratis/">
+      <div class="post-date">5 de julio de 2026</div>
+      <div class="post-title">Convertir HEIC a PNG Gratis — Sin Pérdida</div>
+      <div class="post-excerpt">Convierte fotos HEIC a PNG en tu navegador. ConvertForge conserva la transparencia — sin subir nada.</div>
+      <span class="post-tag">ConvertForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/contracargo-tarjeta-credito-ue/">
+      <div class="post-date">4 de julio de 2026</div>
+      <div class="post-title">Contracargo de Tarjeta de Crédito en la UE</div>
+      <div class="post-excerpt">Guía paso a paso para disputar un cargo y recuperar tu dinero en la UE. Contracargo directo con tu banco, sin abogado.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/como-presentar-reclamacion-consumidor-ue/">
+      <div class="post-date">3 de julio de 2026</div>
+      <div class="post-title">Reclamación de Consumo en la UE: Guía Paso a Paso</div>
+      <div class="post-excerpt">Cuando un vendedor ignora tu reclamo de garantía o rechaza una devolución, tienes opciones legales. Aquí te explicamos cómo.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/escalar-reclamacion-escasa-cuantia-ue/">
+      <div class="post-date">3 de julio de 2026</div>
+      <div class="post-title">Escalar una Reclamación a Escasa Cuantía (UE)</div>
+      <div class="post-excerpt">El vendedor ignoró tu reclamación ADR. Cómo presentar una demanda de escasa cuantía y hacer que cumpla.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/solicitud-acceso-datos-rgpd/">
+      <div class="post-date">2 de julio de 2026</div>
+      <div class="post-title">Solicitar tus Datos Personales con el RGPD</div>
+      <div class="post-excerpt">Guía paso a paso para solicitar tus datos personales a cualquier empresa según el Artículo 15 del RGPD.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/alternativas-reclamar-sin-abogado-ue/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">Alternativas para Reclamar sin Abogado en la UE</div>
+      <div class="post-excerpt">Cómo reclamar a un comercio sin abogado en la UE: reclamación directa, RAL, ECC-Net y proceso europeo de escasa cuantía, con fuentes oficiales.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/compartir-config-red-reddit-seguro/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">Compartir Configs de Red en Reddit con Seguridad</div>
+      <div class="post-excerpt">¿Vas a pedir ayuda en Reddit? Sanitiza tu config con ScrubForge primero — elimina las credenciales activas.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/compartir-config-red-ticket-soporte/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">Compartir tu Config de Red en Tickets de Soporte</div>
+      <div class="post-excerpt">El soporte del fabricante necesita tu config. Sanitiza las credenciales con ScrubForge primero — gratis y en local.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/garantia-legal-ue-explicada/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">La Garantía Legal de 2 Años en la UE</div>
+      <div class="post-excerpt">La UE te garantiza un mínimo de 2 años de garantía en cualquier producto. Qué cubre y cómo reclamarla.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/scrubforge-chatgpt-troubleshooting-red/">
+      <div class="post-date">1 de julio de 2026</div>
+      <div class="post-title">ScrubForge y ChatGPT para Redes</div>
+      <div class="post-excerpt">Los admins de red usan ChatGPT para depurar routing y firewall. Sanitiza tu config con ScrubForge primero.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/remover-datos-sensibles-cisco-config/">
+      <div class="post-date">30 de junio de 2026</div>
+      <div class="post-title">Eliminar Datos Sensibles de una Config de Cisco</div>
+      <div class="post-excerpt">Las configs de Cisco IOS contienen contraseñas y claves VPN. Sanitízalas antes de compartir con TAC o proveedores.</div>
+      <span class="post-tag">Seguridad</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/sanitizar-config-fortigate/">
+      <div class="post-date">30 de junio de 2026</div>
+      <div class="post-title">Compartir una Config de FortiGate con Seguridad</div>
+      <div class="post-excerpt">Las configs de FortiGate contienen claves VPN y contraseñas de admin. Sanitízalas antes de compartir, con ScrubForge.</div>
+      <span class="post-tag">Seguridad</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/frameforge-vs-canva-miniaturas/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">FrameForge vs Canva para crear miniaturas</div>
+      <div class="post-excerpt">Canva es excelente para diseñar desde cero. FrameForge es más rápido cuando ya tienes una imagen y solo necesitas las dimensiones correctas. Así es.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/frameforge-vs-canva-thumbnails/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">FrameForge vs Canva para Miniaturas</div>
+      <div class="post-excerpt">Canva es ideal para diseñar desde cero. FrameForge es más rápido cuando ya tienes la imagen y solo faltan las medidas.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/herramienta-miniaturas-gratis-sin-registro/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Herramienta de Miniaturas Gratis Sin Registro</div>
+      <div class="post-excerpt">Sin registro, sin cuenta, sin subir archivos. FrameForge redimensiona miniaturas completamente en tu navegador.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/limpiar-formato-texto-pegado/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Limpiar el Formato del Texto Pegado</div>
+      <div class="post-excerpt">Arregla espacios dobles y problemas de mayúsculas en texto pegado al instante, en local, con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-perfil-tiktok/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Redimensionar Imagen para Perfil de TikTok</div>
+      <div class="post-excerpt">Las fotos de perfil de TikTok deben ser cuadradas (512×512 o 400×400). Redimensiona con FrameForge en segundos.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-pinterest/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Redimensionar Imagen para Pines de Pinterest</div>
+      <div class="post-excerpt">Recorta cualquier imagen al formato óptimo de Pinterest, 1000×1500 px, con FrameForge en segundos.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/sanitizar-configuracion-red-antes-compartir/">
+      <div class="post-date">29 de junio de 2026</div>
+      <div class="post-title">Sanitizar Configs de Red Antes de Compartirlas</div>
+      <div class="post-excerpt">Comparte configs de red con asistentes de IA sin exponer credenciales reales. ScrubForge sustituye datos sensibles.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/eliminar-lineas-duplicadas-online/">
+      <div class="post-date">28 de junio de 2026</div>
+      <div class="post-title">Eliminar Líneas Duplicadas Online</div>
+      <div class="post-excerpt">Elimina líneas duplicadas de cualquier lista en segundos — en local, con TextForge. Sin subidas.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/ordenar-lineas-alfabeticamente-online/">
+      <div class="post-date">28 de junio de 2026</div>
+      <div class="post-title">Ordenar Líneas Alfabéticamente Online</div>
+      <div class="post-excerpt">Ordena cualquier lista de líneas alfabéticamente en segundos. Gratis, en local, con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-linkedin/">
+      <div class="post-date">27 de junio de 2026</div>
+      <div class="post-title">Redimensionar Imagen para LinkedIn (1200×627)</div>
+      <div class="post-excerpt">Publica imágenes a 1200×627 px para que nada se recorte en LinkedIn. Gratis con FrameForge, en tu navegador.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-para-x-twitter/">
+      <div class="post-date">27 de junio de 2026</div>
+      <div class="post-title">Redimensionar Imagen para Publicaciones en X</div>
+      <div class="post-excerpt">Publica imágenes a 1200×675 px para que nada se recorte en el feed de X. Gratis con FrameForge.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/base64-codificador-decodificador-online/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Codificador Base64 Online — Sin Subir Nada</div>
+      <div class="post-excerpt">Codifica y decodifica Base64 en tu navegador sin enviar datos a ningún servidor. Gratis, con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/codificar-base64-secretos-kubernetes/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Codificar en Base64 Secretos de Kubernetes</div>
+      <div class="post-excerpt">Los Secrets de Kubernetes requieren valores en Base64. Codifícalos en local, en tu navegador, con TextForge — sin terminal.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/decodificar-token-jwt-navegador/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Decodificar un Token JWT en tu Navegador</div>
+      <div class="post-excerpt">Inspecciona los claims de un JWT — usuario, expiración, roles — en local, sin pegar tokens en jwt.io.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/extraer-correos-desde-texto/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Extraer Correos desde Texto Online</div>
+      <div class="post-excerpt">Extrae cada dirección de email de cualquier bloque de texto en segundos, en local, con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/extraer-urls-de-texto/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Extraer URLs de un Texto Online</div>
+      <div class="post-excerpt">Saca todas las URLs de cualquier bloque de texto en segundos, en local, con TextForge.</div>
+      <span class="post-tag">TextForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-instagram-chrome/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Redimensionar Imagen para Instagram en Chrome</div>
+      <div class="post-excerpt">Recorta cualquier foto a 1080×1080 para Instagram sin subir archivos a ningún servidor. Con FrameForge.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-panel-twitch/">
+      <div class="post-date">26 de junio de 2026</div>
+      <div class="post-title">Redimensionar Imagen para Paneles de Twitch</div>
+      <div class="post-excerpt">Recorta cualquier imagen al formato 320×160 de Twitch sin subirla a ningún sitio. Con FrameForge.</div>
+      <span class="post-tag">FrameForge</span>
+    </a>
+
+    <a class="post-item" href="/es/blog/redimensionar-imagen-miniatura-youtube/">
+      <div class="post-date">25 de junio de 2026</div>
+      <div class="post-title">Redimensionar Imagen para Miniaturas de YouTube</div>
+      <div class="post-excerpt">Redimensiona cualquier imagen a 1280×720 px para YouTube, sin Photoshop y sin subirla. Con FrameForge.</div>
+      <span class="post-tag">FrameForge</span>
     </a>
   </div>
 
   <footer>
-    <strong>Wendygo Studio</strong> — Islas Canarias
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/privacy">Política de privacidad</a>
+      <a href="/terms">Términos y condiciones</a>
+    </div>
   </footer>
 
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>

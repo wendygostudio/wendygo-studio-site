@@ -19,7 +19,7 @@ const forbidden = [
 
 // If a forbidden term appears, the same paragraph must contain one of these
 // to prove it's being described as retired, not as an available channel.
-const historicalMarkers = /discontinued|permanently closed|shut down|retired|cerr[oó]|cerrada|clausurada|discontinuad[ao]|eingestellt|abgeschaltet|ferm[ée]e?|dismessa|chiusa|descontinuad[ao]|encerrad[ao]|2025-07-20|20 de julio de 2025|20 July 2025|juillet 2025|luglio 2025|julho de 2025|Juli 2025/i;
+const historicalMarkers = /discontinued|permanently closed|closed for good|closure|is gone|has closed|shut down|retired|cerr[oó]|cerrada|cierre|ha cerrado|clausurada|discontinuad[ao]|eingestellt|abgeschaltet|ferm[ée]e?|dismessa|chiusa|descontinuad[ao]|encerrad[ao]|2025-07-20|20 de julio de 2025|20 July 2025|juillet 2025|luglio 2025|julho de 2025|Juli 2025/i;
 
 const root = path.resolve('public');
 const errors = [];

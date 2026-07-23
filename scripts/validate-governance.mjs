@@ -18,9 +18,25 @@ const walk = root => {
 
 const governedFiles = [...walk('public'), ...walk('content')].filter(file => /\.(html|md)$/i.test(file));
 const retiredOdr = /\bODR\b|Online Dispute Resolution|consumers\/odr|Resoluci[oó]n de Litigios en L[ií]nea/i;
+// Explicit, narrow allowlist: this rule exists to catch stale content that still tells
+// readers to use the (now-shut-down) EU ODR platform. It must not block the one article
+// whose entire subject is explaining that shutdown and pointing readers to ECC-Net/ADR
+// instead — that content mentions "ODR" deliberately and accurately, past tense.
+const odrExceptionFiles = new Set([
+  'content/blog/2026-07-24-eu-odr-platform-shutdown-what-to-use-instead.md',
+  'content/blog/2026-07-24-plataforma-odr-ue-cerrada-que-usar-ahora.md',
+  'public/blog/eu-odr-platform-shutdown-what-to-use-instead/index.html',
+  'public/es/blog/plataforma-odr-ue-cerrada-que-usar-ahora/index.html',
+  'public/blog/index.html',
+  'public/es/blog/index.html',
+  'public/resources/eu-consumer-rights/index.html',
+  'public/es/recursos/eu-consumer-rights/index.html'
+]);
 for (const file of governedFiles) {
+  const rel = path.relative('.', file).split(path.sep).join('/');
+  if (odrExceptionFiles.has(rel)) continue;
   const text = fs.readFileSync(file, 'utf8');
-  if (retiredOdr.test(text)) errors.push(`${path.relative('.', file)}: retired EU ODR reference`);
+  if (retiredOdr.test(text)) errors.push(`${rel}: retired EU ODR reference`);
 }
 
 const falseCyberChefPrivacy = [
