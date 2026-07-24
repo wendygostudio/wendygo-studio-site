@@ -356,6 +356,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -614,6 +623,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/lo-que-ensena-la-brecha-de-backups-sonicwall-sobre-compartir-configs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/</loc>
@@ -1167,6 +1185,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/clean-text-online/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/lo-que-ensena-la-brecha-de-backups-sonicwall-sobre-compartir-configs/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/lo-que-ensena-la-brecha-de-backups-sonicwall-sobre-compartir-configs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1399,6 +1426,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-tdah-extension-chrome/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/vendedor-rechaza-garantia-ue/</loc>

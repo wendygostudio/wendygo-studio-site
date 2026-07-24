@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>What the SonicWall Breach Teaches About Sharing Configs</title>
+  <meta name="description" content="SonicWall's own cloud backups leaked config data for every customer who used them. If a vendor backup isn't safe, neither is a support-ticket paste." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/lo-que-ensena-la-brecha-de-backups-sonicwall-sobre-compartir-configs/" />
+  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What the SonicWall Breach Teaches About Sharing Configs","description":"SonicWall's own cloud backups leaked config data for every customer who used them. If a vendor backup isn't safe, neither is a support-ticket paste.","datePublished":"2026-07-25","dateModified":"2026-07-25","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"What the SonicWall Breach Teaches About Sharing Configs"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What actually happened in the SonicWall backup incident?","acceptedAnswer":{"@type":"Answer","text":"An attacker used brute-force techniques against the MySonicWall.com customer portal and accessed configuration backup (.EXP) files. SonicWall's investigation, run with Mandiant, initially estimated under 5% of cloud-backup customers were affected, then confirmed in its final update that all customers who had used the cloud backup feature were impacted."}},{"@type":"Question","name":"Were the exposed backup files encrypted?","acceptedAnswer":{"@type":"Answer","text":"Partially. Credentials and secrets inside the .EXP file are individually encrypted, AES-256 on Gen 7 and newer firewalls, 3DES on Gen 6, but the rest of the configuration is only encoded, not encrypted, so topology, rules, IP ranges and other details are readable once decoded. SonicWall itself recommends treating any exposed file as a credential-reset trigger."}},{"@type":"Question","name":"Does this mean vendor cloud backups are unsafe to use?","acceptedAnswer":{"@type":"Answer","text":"No, SonicWall's advisory is about a portal being breached via brute force, not a flaw in backups as a concept. The lesson is narrower: a config export contains more usable detail than most people assume, so anywhere that file or its contents travels, a vendor's cloud backup, a support ticket, an AI chat, deserves the same scrutiny."}},{"@type":"Question","name":"What should I check on my own firewall after reading this?","acceptedAnswer":{"@type":"Answer","text":"If you use MySonicWall's cloud backup feature, log in and check the Product Management > Issue List for affected serial numbers, then follow SonicWall's Essential Credential Reset guidance. Separately, sanitize any config file before pasting it anywhere else, a support ticket, a forum post, or an AI assistant."}}]}</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="What the SonicWall Breach Teaches About Sharing Configs" />
+  <meta property="og:description" content="SonicWall's own cloud backups leaked config data for every customer who used them. If a vendor backup isn't safe, neither is a support-ticket paste." />
+  <meta property="og:url" content="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What the SonicWall Breach Teaches About Sharing Configs" />
+  <meta name="twitter:description" content="SonicWall's own cloud backups leaked config data for every customer who used them. If a vendor backup isn't safe, neither is a support-ticket paste." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/#privacy">Privacy</a><a class="nav-lang" href="https://wendygostudio.com/es/blog/lo-que-ensena-la-brecha-de-backups-sonicwall-sobre-compartir-configs/">ES</a>
+    </div>
+  </nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>SonicWall backup breach lesson</div>
+    <div class="article-meta"><div class="article-tag">use-case · scrubforge</div><h1>What the SonicWall Breach Teaches About Sharing Configs</h1><p class="article-intro">SonicWall confirmed that a brute-force attack on its MySonicWall.com portal exposed firewall configuration backup files for every customer who had used its cloud backup service, not a small subset, all of them. The files came straight from the vendor's own official backup feature.</p><div class="article-date">July 25, 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><p>A vendor&#39;s own backup feature is supposed to be the safe place to put your configuration. In September 2025, SonicWall confirmed that wasn&#39;t true for its cloud backup customers, and the details are worth reading even if you don&#39;t run a SonicWall firewall.</p>
+<blockquote>
+<p><strong>What SonicWall confirmed</strong>
+An attacker ran brute-force attacks against the MySonicWall.com customer portal and gained access to firewall configuration backup files. SonicWall&#39;s <a href="https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU">own incident notice</a>, run jointly with incident-response firm Mandiant, first estimated under 5% of cloud-backup customers were affected, then confirmed in its final update that <strong>all</strong> customers who had used the cloud backup feature were impacted. <a href="https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident">CISA issued its own alert</a> urging every SonicWall customer to check their account.</p>
+</blockquote>
+<h2>What was actually inside the exposed files</h2>
+<p>This is the part that matters beyond SonicWall&#39;s specific customers. A firewall configuration export (an <code>.EXP</code> file) is a full snapshot of the device: not just passwords, but topology, IP ranges, rules, and integration details.</p>
+<div class="key-points">
+  <h3>What's protected, and what isn't</h3>
+  <ul>
+    <li><strong>Credentials and secrets</strong> are individually encrypted, AES-256 on Gen 7+ firewalls, the older 3DES on Gen 6.</li>
+    <li><strong>Everything else in the file</strong>, network layout, rule sets, addressing, is only encoded, not encrypted, so it's readable after a simple decode.</li>
+    <li><strong>The file's entire purpose</strong> is to restore a device to its exact captured state, which is precisely why it's dangerous outside a trusted channel: it's designed to contain everything needed to reconstruct your setup.</li>
+  </ul>
+</div><p>SonicWall&#39;s advisory is explicit that even with credentials encrypted, &quot;possession of these files could increase the risk of targeted attacks&quot; because of everything else the file reveals about how the network is built.</p>
+<h2>Why this applies to more than one vendor&#39;s backup feature</h2>
+<div class="step-card">
+  <span class="step-label">Use case</span>
+  <strong>The backup file and the support-ticket paste have the same problem</strong>
+  <p>Whether a config leaves your control through a breached vendor portal, a pasted forum post, an AI chat window, or an email attachment to support, the risk is the same: the file was built to contain everything needed to describe or rebuild your network, and most of that detail was never meant to be exposed outside a channel you trust. SonicWall's incident is a reminder that even the "official," vendor-blessed channel can fail. A support ticket or an AI chat has none of the encryption a cloud backup at least attempts.</p>
+</div><table>
+<thead>
+<tr>
+<th>What a raw config export contains</th>
+<th>What&#39;s actually needed to troubleshoot or restore</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Every firewall rule, in full</td>
+<td>The one or two rules relevant to the issue</td>
+</tr>
+<tr>
+<td>Full internal IP ranges and topology</td>
+<td>Enough structure to explain the problem, not the whole map</td>
+</tr>
+<tr>
+<td>Hostnames, server addresses, integration endpoints</td>
+<td>Redacted placeholders that preserve the logic</td>
+</tr>
+<tr>
+<td>Any embedded credentials or keys, even if encrypted</td>
+<td>Nothing, credentials never belong in a shared file</td>
+</tr>
+</tbody></table>
+<h2>Before you share a config anywhere</h2>
+<p>If you&#39;re <a href="/blog/share-network-config-support-ticket-safely/">sharing a network config with a support team</a>, the SonicWall incident is a good argument for <a href="/blog/sanitize-network-config-before-sharing/">sanitizing it first</a>, regardless of which vendor&#39;s portal, which AI assistant, or which forum you&#39;re posting to. <a href="/scrubforge/">ScrubForge</a> strips exactly the detail a backup file leaks: credentials, IP ranges, hostnames and topology, while keeping the config structure intact enough to actually get help.</p>
+<p>If you do use MySonicWall&#39;s cloud backup feature, check your account directly rather than relying on this article: SonicWall&#39;s advisory has the exact steps, and the Product Management &gt; Issue List in your MySonicWall account will show if any of your serial numbers were flagged.</p>
+<h2>Frequently asked questions</h2>
+<h3>What actually happened in the SonicWall backup incident?</h3>
+<p>An attacker used brute-force techniques against the MySonicWall.com customer portal and accessed configuration backup (.EXP) files. SonicWall&#39;s investigation, run with Mandiant, initially estimated under 5% of cloud-backup customers were affected, then confirmed in its final update that all customers who had used the cloud backup feature were impacted.</p>
+<h3>Were the exposed backup files encrypted?</h3>
+<p>Partially. Credentials and secrets inside the .EXP file are individually encrypted, AES-256 on Gen 7 and newer firewalls, 3DES on Gen 6, but the rest of the configuration is only encoded, not encrypted, so topology, rules, IP ranges and other details are readable once decoded. SonicWall itself recommends treating any exposed file as a credential-reset trigger.</p>
+<h3>Does this mean vendor cloud backups are unsafe to use?</h3>
+<p>No, SonicWall&#39;s advisory is about a portal being breached via brute force, not a flaw in backups as a concept. The lesson is narrower: a config export contains more usable detail than most people assume, so anywhere that file or its contents travels, a vendor&#39;s cloud backup, a support ticket, an AI chat, deserves the same scrutiny.</p>
+<h3>What should I check on my own firewall after reading this?</h3>
+<p>If you use MySonicWall&#39;s cloud backup feature, log in and check the Product Management &gt; Issue List for affected serial numbers, then follow SonicWall&#39;s Essential Credential Reset guidance. Separately, sanitize any config file before pasting it anywhere else, a support ticket, a forum post, or an AI assistant.
+</content></p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div><div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/privacy">Privacy</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>Is Your Chrome Extension Spying on You? A 2026 Checklist</title>
+  <meta name="description" content="Google and Microsoft just pulled a trusted extension with 1.6M installs over hidden data collection. Here's how to check if any extension you use is safe." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/" />
+  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Is Your Chrome Extension Spying on You? A 2026 Checklist","description":"Google and Microsoft just pulled a trusted extension with 1.6M installs over hidden data collection. Here's how to check if any extension you use is safe.","datePublished":"2026-07-25","dateModified":"2026-07-25","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"Is Your Chrome Extension Spying on You? A 2026 Checklist"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How did ModHeader pass Chrome's security scans for years?","acceptedAnswer":{"@type":"Answer","text":"The collector was encrypted and gated behind an internal allow-list that shipped empty, so the upload step never ran during scanning. A scanner sees ciphertext and no outbound traffic, which is exactly what a clean extension looks like too. Researchers at Stripe OLT only found it by reading the minified code directly."}},{"@type":"Question","name":"What permissions should a focus or productivity extension actually need?","acceptedAnswer":{"@type":"Answer","text":"A timer that runs entirely in your browser needs almost nothing beyond storage for your own settings. If a pomodoro or focus extension asks for \"read and change all your data on all websites,\" that's broader than the feature requires, which is exactly what Chrome's own policy tells developers to avoid requesting."}},{"@type":"Question","name":"Is a popular, highly-rated extension automatically safe?","acceptedAnswer":{"@type":"Answer","text":"No. ModHeader had 1.6 million installs, a long track record, and automated risk scores as high as 95 out of 100 rated low-risk, and still shipped a working data collector. Install count and star rating measure popularity, not what the code does after an update."}},{"@type":"Question","name":"Does uninstalling a bad extension remove the data it already collected?","acceptedAnswer":{"@type":"Answer","text":"Uninstalling removes it from your browser and clears its local storage, but it doesn't undo anything already sent to the developer's servers. If you ever pasted API keys, tokens, or passwords into an extension's fields, rotate them regardless of whether that extension turns out to have been compromised."}}]}</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="Is Your Chrome Extension Spying on You? A 2026 Checklist" />
+  <meta property="og:description" content="Google and Microsoft just pulled a trusted extension with 1.6M installs over hidden data collection. Here's how to check if any extension you use is safe." />
+  <meta property="og:url" content="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Is Your Chrome Extension Spying on You? A 2026 Checklist" />
+  <meta name="twitter:description" content="Google and Microsoft just pulled a trusted extension with 1.6M installs over hidden data collection. Here's how to check if any extension you use is safe." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/#products">Extensions</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/#privacy">Privacy</a><a class="nav-lang" href="https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/">ES</a>
+    </div>
+  </nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>Is your extension spying on you?</div>
+    <div class="article-meta"><div class="article-tag">how-to · slimeforge</div><h1>Is Your Chrome Extension Spying on You? A 2026 Checklist</h1><p class="article-intro">On July 10, 2026, Google pulled ModHeader, a trusted developer extension with roughly 1.6 million installs, after researchers found a complete, dormant data-collection pipeline built into the official, signed version. It had passed automated security scans for years.</p><div class="article-date">July 25, 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><p>If you use a Chrome or Edge extension to manage your focus, your headers, your passwords, or anything else, the ModHeader takedown is worth five minutes of your time. Not because ModHeader itself was a fringe tool, it had 1.6 million installs and a decade of trust, but because of exactly how it hid what it was doing.</p>
+<blockquote>
+<p><strong>What actually happened</strong>
+On July 3, 2026, Microsoft removed ModHeader from the Edge Add-ons store. On July 10, Google followed and pulled it from the Chrome Web Store. Security firm <a href="https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html">Stripe OLT</a> found that the official, cryptographically signed extension contained a complete browsing-history collector: it fingerprinted the device, encrypted the domain of every page visited, and was built to upload the list daily to an external server. The collector had not shipped active, an empty internal allow-list kept it switched off, but populating that list required nothing more than a routine update, no new permissions, no click from the user.</p>
+</blockquote>
+<h2>Why this matters even if you don&#39;t use ModHeader</h2>
+<p>ModHeader is a developer tool for editing HTTP headers, not a productivity extension. But the pattern it revealed applies directly to focus timers, tab managers, and any other extension that asks for broad access:</p>
+<div class="key-points">
+  <h3>Why automated scans missed it</h3>
+  <ul>
+    <li><strong>Encryption hid the payload</strong> — a scanner sees ciphertext, not a domain list, so nothing readable ever left the device during testing.</li>
+    <li><strong>An empty allow-list gated the upload</strong> — the collection code ran, but the network call it fed into simply never fired, so sandboxes saw no outbound traffic.</li>
+    <li><strong>The malicious code was minified into a legitimate, working feature</strong> — the extension still did exactly what it advertised, which is what most manual reviews check for.</li>
+  </ul>
+</div><p>Automated risk checkers rated the extension as low risk, some as high as 95 out of 100. A signed listing with years of good reviews told users it was trustworthy. Neither signal caught it.</p>
+<h2>A practical checklist before you trust an extension</h2>
+<div class="step-card">
+  <span class="step-label">How-to</span>
+  <strong>Five checks that take under two minutes</strong>
+  <p>Open <code>chrome://extensions</code>, click "Details" on anything you rely on daily, and check: does it ask for "Read and change all your data on all websites" when its stated job doesn't need that? Has it changed hands or gone from free to "ad-supported" recently, a pattern security researchers have flagged repeatedly since 2021? Does the developer publish a privacy policy that actually matches what the code needs to do? Has it pushed an update in the last few weeks with no changelog? And, if you can, does the extension work with your network connection off, a genuinely local-only tool will keep functioning; one that phones home won't.</p>
+</div><table>
+<thead>
+<tr>
+<th>Sign of a lower-risk extension</th>
+<th>Sign worth investigating</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Requests only the permissions its stated feature needs</td>
+<td>Requests broad host access &quot;just in case&quot;</td>
+</tr>
+<tr>
+<td>Same ownership and clear changelog over time</td>
+<td>Recently changed hands or went ad-supported</td>
+</tr>
+<tr>
+<td>Works fully offline if its feature doesn&#39;t need the network</td>
+<td>Makes network calls a purely local feature shouldn&#39;t need</td>
+</tr>
+<tr>
+<td>Open about not collecting browsing data</td>
+<td>Vague or missing privacy policy</td>
+</tr>
+</tbody></table>
+<p>Google&#39;s own <a href="https://developer.chrome.com/docs/webstore/program-policies/policies">Chrome Web Store policy</a> already tells developers to request the narrowest permissions a feature needs and bars collecting browsing activity outside a disclosed, user-facing purpose. Starting August 1, 2026, <a href="https://developer.chrome.com/blog/cws-policy-updates-2026">enforcement of stricter data-collection rules</a> takes effect store-wide, but that&#39;s a floor, not a guarantee. It only limits what a compliant extension is <em>allowed</em> to do, and ModHeader wasn&#39;t disclosing what it built either.</p>
+<h2>What &quot;local-only&quot; actually buys you</h2>
+<p>This is the specific design choice behind <a href="/slimeforge/">SlimeForge</a>: the timer runs entirely in your browser, keeps your session data on your device, requires no account, and makes no calls to any server, ours or anyone else&#39;s. That&#39;s not a claim you have to take on faith, it&#39;s checkable the same way the checklist above works: disconnect your network and the timer keeps running, because there&#39;s nothing for it to phone home to.</p>
+<p>If you&#39;re evaluating any <a href="/blog/pomodoro-timer-chrome-extension/">focus or pomodoro extension</a>, including an <a href="/blog/offline-pomodoro-timer-chrome/">offline-first one</a>, the permissions tab and the &quot;does it still work with no internet&quot; test tell you more in two minutes than a star rating ever will.</p>
+<h2>Frequently asked questions</h2>
+<h3>How did ModHeader pass Chrome&#39;s security scans for years?</h3>
+<p>The collector was encrypted and gated behind an internal allow-list that shipped empty, so the upload step never ran during scanning. A scanner sees ciphertext and no outbound traffic, which is exactly what a clean extension looks like too. Researchers at Stripe OLT only found it by reading the minified code directly.</p>
+<h3>What permissions should a focus or productivity extension actually need?</h3>
+<p>A timer that runs entirely in your browser needs almost nothing beyond storage for your own settings. If a pomodoro or focus extension asks for &quot;read and change all your data on all websites,&quot; that&#39;s broader than the feature requires, which is exactly what Chrome&#39;s own policy tells developers to avoid requesting.</p>
+<h3>Is a popular, highly-rated extension automatically safe?</h3>
+<p>No. ModHeader had 1.6 million installs, a long track record, and automated risk scores as high as 95 out of 100 rated low-risk, and still shipped a working data collector. Install count and star rating measure popularity, not what the code does after an update.</p>
+<h3>Does uninstalling a bad extension remove the data it already collected?</h3>
+<p>Uninstalling removes it from your browser and clears its local storage, but it doesn&#39;t undo anything already sent to the developer&#39;s servers. If you ever pasted API keys, tokens, or passwords into an extension&#39;s fields, rotate them regardless of whether that extension turns out to have been compromised.
+</content></p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div><div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/privacy">Privacy</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
