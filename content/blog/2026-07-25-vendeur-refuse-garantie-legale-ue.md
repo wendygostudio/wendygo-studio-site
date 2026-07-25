@@ -102,4 +102,3 @@ Pas toujours. La réparation ou le remplacement sont généralement le premier r
 ### Que faire si le vendeur est dans un autre pays de l'UE ?
 
 Ton Centre Européen des Consommateurs national peut t'aider en cas de litige transfrontalier avec un professionnel établi dans un autre pays de l'UE, en Islande ou en Norvège.
-</content>

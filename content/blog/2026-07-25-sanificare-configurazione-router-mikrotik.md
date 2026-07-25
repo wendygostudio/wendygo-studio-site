@@ -94,4 +94,3 @@ Sì. RouterOS è una delle dodici sintassi di configurazione dispositivi coperte
 ### Cosa fare se ho già pubblicato una config MikroTik non sanificata?
 
 Modifica o elimina il post se la piattaforma lo consente, poi ruota qualsiasi credenziale esposta — password, chiavi pre-condivise, secret RADIUS. Cambiare i valori dopo il fatto non annulla ciò che era visibile mentre il post era attivo.
-</content>

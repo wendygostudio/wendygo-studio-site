@@ -19,7 +19,7 @@ faqs:
   - question: "How did ModHeader pass Chrome's security scans for years?"
     answer: "The collector was encrypted and gated behind an internal allow-list that shipped empty, so the upload step never ran during scanning. A scanner sees ciphertext and no outbound traffic, which is exactly what a clean extension looks like too. Researchers at Stripe OLT only found it by reading the minified code directly."
   - question: "What permissions should a focus or productivity extension actually need?"
-    answer: "A timer that runs entirely in your browser needs almost nothing beyond storage for your own settings. If a pomodoro or focus extension asks for \"read and change all your data on all websites,\" that's broader than the feature requires, which is exactly what Chrome's own policy tells developers to avoid requesting."
+    answer: "A focus extension should request only the permissions its disclosed features need. SlimeForge declares storage, alarms, scripting and activeTab; optional site access is requested only when the user enables page-level features."
   - question: "Is a popular, highly-rated extension automatically safe?"
     answer: "No. ModHeader had 1.6 million installs, a long track record, and automated risk scores as high as 95 out of 100 rated low-risk, and still shipped a working data collector. Install count and star rating measure popularity, not what the code does after an update."
   - question: "Does uninstalling a bad extension remove the data it already collected?"
@@ -65,7 +65,7 @@ Google's own [Chrome Web Store policy](https://developer.chrome.com/docs/webstor
 
 ## What "local-only" actually buys you
 
-This is the specific design choice behind [SlimeForge](/slimeforge/): the timer runs entirely in your browser, keeps your session data on your device, requires no account, and makes no calls to any server, ours or anyone else's. That's not a claim you have to take on faith, it's checkable the same way the checklist above works: disconnect your network and the timer keeps running, because there's nothing for it to phone home to.
+The core [SlimeForge](/slimeforge/) timer, pet progress and session data run on your device without requiring an account. Its manifest declares `storage`, `alarms`, `scripting` and `activeTab` for the timer and optional page-level features. License activation can contact Creem; optional Gemini Nano features run on-device when supported. This is more precise than claiming that the extension never makes a network request.
 
 If you're evaluating any [focus or pomodoro extension](/blog/pomodoro-timer-chrome-extension/), including an [offline-first one](/blog/offline-pomodoro-timer-chrome/), the permissions tab and the "does it still work with no internet" test tell you more in two minutes than a star rating ever will.
 
@@ -77,7 +77,7 @@ The collector was encrypted and gated behind an internal allow-list that shipped
 
 ### What permissions should a focus or productivity extension actually need?
 
-A timer that runs entirely in your browser needs almost nothing beyond storage for your own settings. If a pomodoro or focus extension asks for "read and change all your data on all websites," that's broader than the feature requires, which is exactly what Chrome's own policy tells developers to avoid requesting.
+A focus extension should request only the permissions its disclosed features need. SlimeForge declares `storage`, `alarms`, `scripting` and `activeTab`; optional site access is requested only when the user enables page-level features.
 
 ### Is a popular, highly-rated extension automatically safe?
 
@@ -86,4 +86,3 @@ No. ModHeader had 1.6 million installs, a long track record, and automated risk 
 ### Does uninstalling a bad extension remove the data it already collected?
 
 Uninstalling removes it from your browser and clears its local storage, but it doesn't undo anything already sent to the developer's servers. If you ever pasted API keys, tokens, or passwords into an extension's fields, rotate them regardless of whether that extension turns out to have been compromised.
-</content>

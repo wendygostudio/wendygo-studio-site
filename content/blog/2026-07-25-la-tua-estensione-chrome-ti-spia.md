@@ -18,7 +18,7 @@ faqs:
   - question: "Come ha superato ModHeader le scansioni di sicurezza di Chrome per anni?"
     answer: "Il raccoglitore era cifrato e bloccato dietro una lista di autorizzazione interna pubblicata vuota, quindi il passaggio di upload non veniva mai eseguito durante le scansioni. Uno scanner vede testo cifrato e nessun traffico in uscita, esattamente come appare un'estensione pulita. I ricercatori di Stripe OLT lo hanno trovato solo leggendo direttamente il codice minificato."
   - question: "Di quali permessi ha davvero bisogno un'estensione di concentrazione o produttività?"
-    answer: "Un timer che funziona interamente nel browser non ha bisogno praticamente di nulla oltre allo storage per le tue impostazioni. Se un'estensione pomodoro o di concentrazione chiede di \"leggere e modificare tutti i tuoi dati su tutti i siti web\", è più ampio di quanto richieda la funzione — esattamente ciò che la politica di Chrome chiede agli sviluppatori di evitare."
+    answer: "Un'estensione per la concentrazione dovrebbe richiedere solo i permessi necessari alle funzioni dichiarate. SlimeForge dichiara storage, alarms, scripting e activeTab; l'accesso facoltativo ai siti viene richiesto solo quando l'utente attiva funzioni all'interno delle pagine."
   - question: "Un'estensione popolare e ben valutata è automaticamente sicura?"
     answer: "No. ModHeader aveva 1,6 milioni di installazioni, una lunga reputazione, e punteggi di rischio automatizzati fino a 95 su 100 che la classificavano a basso rischio — e includeva comunque un raccoglitore di dati funzionante. Il numero di installazioni e la valutazione misurano la popolarità, non ciò che fa il codice dopo un aggiornamento."
   - question: "Disinstallare un'estensione dannosa rimuove i dati già raccolti?"
@@ -64,7 +64,7 @@ La [politica del Chrome Web Store](https://developer.chrome.com/docs/webstore/pr
 
 ## Cosa ti offre davvero "solo locale"
 
-Questa è la scelta di design specifica dietro [SlimeForge](/it/slimeforge/): il timer funziona interamente nel tuo browser, mantiene i dati della sessione sul tuo dispositivo, non richiede un account, e non effettua chiamate verso alcun server, né il nostro né quello di altri. Non è un'affermazione da accettare per fede — è verificabile allo stesso modo in cui funziona la checklist sopra: disconnetti la rete, e il timer continua a funzionare, perché non c'è nulla verso cui telefonare.
+Il nucleo di [SlimeForge](/it/slimeforge/) — timer, progresso dell'animale e dati di sessione — funziona sul dispositivo senza richiedere un account. Il manifest dichiara `storage`, `alarms`, `scripting` e `activeTab` per il timer e le funzioni facoltative nelle pagine. L'attivazione della licenza può contattare Creem; le funzioni Gemini Nano facoltative vengono eseguite localmente quando supportate. È più preciso che affermare che l'estensione non effettua mai richieste di rete.
 
 ## Domande frequenti
 
@@ -74,7 +74,7 @@ Il raccoglitore era cifrato e bloccato dietro una lista di autorizzazione intern
 
 ### Di quali permessi ha davvero bisogno un'estensione di concentrazione o produttività?
 
-Un timer che funziona interamente nel browser non ha bisogno praticamente di nulla oltre allo storage per le tue impostazioni. Se un'estensione pomodoro o di concentrazione chiede di "leggere e modificare tutti i tuoi dati su tutti i siti web", è più ampio di quanto richieda la funzione — esattamente ciò che la politica di Chrome chiede agli sviluppatori di evitare.
+Un'estensione per la concentrazione dovrebbe richiedere solo i permessi necessari alle funzioni dichiarate. SlimeForge dichiara `storage`, `alarms`, `scripting` e `activeTab`; l'accesso facoltativo ai siti viene richiesto solo quando l'utente attiva funzioni all'interno delle pagine.
 
 ### Un'estensione popolare e ben valutata è automaticamente sicura?
 
@@ -83,4 +83,3 @@ No. ModHeader aveva 1,6 milioni di installazioni, una lunga reputazione, e punte
 ### Disinstallare un'estensione dannosa rimuove i dati già raccolti?
 
 Disinstallarla la rimuove dal browser e cancella il suo storage locale, ma non annulla nulla di già inviato ai server dello sviluppatore. Se hai mai incollato chiavi API, token o password nei campi di un'estensione, ruotale indipendentemente dal fatto che quell'estensione risulti compromessa o meno.
-</content>

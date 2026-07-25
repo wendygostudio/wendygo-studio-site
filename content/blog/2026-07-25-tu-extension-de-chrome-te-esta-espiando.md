@@ -19,7 +19,7 @@ faqs:
   - question: "¿Cómo superó ModHeader los escáneres de seguridad de Chrome durante años?"
     answer: "El recolector estaba cifrado y bloqueado tras una lista de permitidos interna que se publicó vacía, así que el paso de subida nunca se ejecutaba durante los escaneos. Un escáner ve texto cifrado y ningún tráfico saliente, que es exactamente el aspecto de una extensión limpia. Los investigadores de Stripe OLT solo lo encontraron leyendo directamente el código minificado."
   - question: "¿Qué permisos necesita realmente una extensión de enfoque o productividad?"
-    answer: "Un temporizador que funciona enteramente en tu navegador no necesita casi nada más que almacenamiento para tus propios ajustes. Si una extensión de pomodoro o enfoque pide \"leer y cambiar todos tus datos en todos los sitios web\", eso excede lo que la función necesita, justo lo que la propia política de Chrome pide a los desarrolladores evitar."
+    answer: "Una extensión de concentración debe solicitar solo los permisos necesarios para sus funciones declaradas. SlimeForge declara storage, alarms, scripting y activeTab; el acceso opcional a sitios solo se solicita cuando el usuario activa funciones dentro de la página."
   - question: "¿Una extensión popular y bien valorada es automáticamente segura?"
     answer: "No. ModHeader tenía 1.6 millones de instalaciones, un largo historial, y puntuaciones de riesgo automáticas de hasta 95 sobre 100 calificándola de bajo riesgo, y aun así incluía un recolector de datos funcional. El número de instalaciones y la valoración miden popularidad, no lo que hace el código tras una actualización."
   - question: "¿Desinstalar una extensión maliciosa elimina los datos ya recopilados?"
@@ -65,7 +65,7 @@ La propia [política de la Chrome Web Store](https://developer.chrome.com/docs/w
 
 ## Qué te da realmente "solo local"
 
-Esta es la decisión de diseño específica detrás de [SlimeForge](/es/slimeforge/): el temporizador funciona enteramente en tu navegador, mantiene los datos de tu sesión en tu dispositivo, no requiere cuenta, y no hace llamadas a ningún servidor, ni el nuestro ni el de nadie más. No es una afirmación que tengas que creer sin más, es comprobable de la misma forma que funciona el checklist anterior: desconecta tu red y el temporizador sigue funcionando, porque no hay nada a lo que llamar.
+El núcleo de [SlimeForge](/es/slimeforge/) —temporizador, progreso de la mascota y datos de sesión— se ejecuta en el dispositivo sin requerir una cuenta. Su manifiesto declara `storage`, `alarms`, `scripting` y `activeTab` para el temporizador y las funciones opcionales dentro de páginas. La activación de licencia puede contactar con Creem; las funciones opcionales de Gemini Nano se ejecutan localmente cuando son compatibles. Esto es más preciso que afirmar que la extensión nunca realiza una petición de red.
 
 Si estás evaluando cualquier [extensión de pomodoro o enfoque](/es/blog/extension-pomodoro-chrome/), incluida una [que funcione sin conexión](/es/blog/temporizador-pomodoro-offline-chrome/), la pestaña de permisos y la prueba de "¿sigue funcionando sin internet?" te dicen más en dos minutos que cualquier valoración por estrellas.
 
@@ -77,7 +77,7 @@ El recolector estaba cifrado y bloqueado tras una lista de permitidos interna qu
 
 ### ¿Qué permisos necesita realmente una extensión de enfoque o productividad?
 
-Un temporizador que funciona enteramente en tu navegador no necesita casi nada más que almacenamiento para tus propios ajustes. Si una extensión de pomodoro o enfoque pide "leer y cambiar todos tus datos en todos los sitios web", eso excede lo que la función necesita, justo lo que la propia política de Chrome pide a los desarrolladores evitar.
+Una extensión de concentración debe solicitar solo los permisos necesarios para sus funciones declaradas. SlimeForge declara `storage`, `alarms`, `scripting` y `activeTab`; el acceso opcional a sitios solo se solicita cuando el usuario activa funciones dentro de la página.
 
 ### ¿Una extensión popular y bien valorada es automáticamente segura?
 
@@ -86,4 +86,3 @@ No. ModHeader tenía 1.6 millones de instalaciones, un largo historial, y puntua
 ### ¿Desinstalar una extensión maliciosa elimina los datos ya recopilados?
 
 Desinstalarla la elimina de tu navegador y borra su almacenamiento local, pero no deshace nada ya enviado a los servidores del desarrollador. Si alguna vez pegaste claves de API, tokens o contraseñas en los campos de una extensión, rótalas independientemente de si esa extensión resulta o no estar comprometida.
-</content>

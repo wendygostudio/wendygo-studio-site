@@ -102,4 +102,3 @@ Nicht immer. Reparatur oder Ersatz sind in der Regel der erste Schritt. Preismin
 ### Was, wenn der Verkäufer in einem anderen EU-Land sitzt?
 
 Dein nationales Europäisches Verbraucherzentrum kann bei einem grenzüberschreitenden Streit mit einem Händler in einem anderen EU-Land, Island oder Norwegen helfen.
-</content>

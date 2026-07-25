@@ -87,4 +87,3 @@ Não. ec.europa.eu/consumers/odr redireciona agora para um aviso de encerramento
 ### Isto afeta os meus direitos reais de consumidor, ou só esta ferramenta?
 
 Só a ferramenta. A garantia legal de dois anos, o direito de retratação de 14 dias e o teu direito de usar organismos de resolução extrajudicial ou o Processo Europeu para Ações de Pequeno Montante mantêm-se inalterados. Só desapareceu o único site gerido pela UE que encaminhava reclamações entre países.
-</content>

@@ -10,7 +10,7 @@ product: scrubforge
 contentType: use-case
 primaryKeyword: "ist mein Firewall-Konfigurations-Backup sicher zu teilen"
 relatedPages: /de/scrubforge/,/de/blog/mikrotik-router-konfiguration-bereinigen/,/de/ressourcen/
-sourceUrls: https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
+sourceUrls: https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
 heading: "Was Die SonicWall-Panne Über Config-Sharing Lehrt"
 shortTitle: "Lehre aus der SonicWall-Panne"
 intro: "SonicWall bestätigte, dass ein Brute-Force-Angriff auf sein MySonicWall.com-Portal Firewall-Konfigurations-Backup-Dateien für jeden Kunden offenlegte, der den Cloud-Backup-Dienst nutzte — nicht nur einen Teil, alle. Die Dateien stammten direkt aus der offiziellen Backup-Funktion des Herstellers."
@@ -28,7 +28,7 @@ faqs:
 Das eigene Backup eines Herstellers soll eigentlich der sichere Ort für deine Konfiguration sein. Im September 2025 bestätigte SonicWall, dass das für seine Cloud-Backup-Kunden nicht zutraf, und die Details lohnen sich zu lesen, selbst wenn du keine SonicWall-Firewall betreibst.
 
 > **Was SonicWall bestätigte**
-> Ein Angreifer führte Brute-Force-Angriffe gegen das Kundenportal MySonicWall.com durch und erhielt Zugriff auf Firewall-Konfigurations-Backup-Dateien. [SonicWalls eigener Vorfallshinweis](https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU), gemeinsam mit der Incident-Response-Firma Mandiant durchgeführt, schätzte zunächst unter 5 % der Cloud-Backup-Kunden als betroffen, bestätigte in der finalen Aktualisierung aber, dass **alle** Kunden betroffen waren, die die Cloud-Backup-Funktion genutzt hatten. [CISA veröffentlichte einen eigenen Hinweis](https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident), der alle SonicWall-Kunden aufforderte, ihr Konto zu prüfen.
+> Ein Angreifer führte Brute-Force-Angriffe gegen das Kundenportal MySonicWall.com durch und erhielt Zugriff auf Firewall-Konfigurations-Backup-Dateien. [SonicWalls eigener Vorfallshinweis](https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330), gemeinsam mit der Incident-Response-Firma Mandiant durchgeführt, schätzte zunächst unter 5 % der Cloud-Backup-Kunden als betroffen, bestätigte in der finalen Aktualisierung aber, dass **alle** Kunden betroffen waren, die die Cloud-Backup-Funktion genutzt hatten. [CISA veröffentlichte einen eigenen Hinweis](https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident), der alle SonicWall-Kunden aufforderte, ihr Konto zu prüfen.
 
 ## Was tatsächlich in den offengelegten Dateien steckte
 
@@ -83,4 +83,3 @@ Nein, SonicWalls Hinweis betrifft ein per Brute-Force kompromittiertes Portal, k
 ### Was sollte ich an meiner eigenen Firewall nach dieser Lektüre prüfen?
 
 Wenn du die Cloud-Backup-Funktion von MySonicWall nutzt, melde dich an und prüfe unter Product Management > Issue List auf betroffene Seriennummern, dann folge SonicWalls Anleitung zum grundlegenden Zurücksetzen der Zugangsdaten. Unabhängig davon: Bereinige jede Konfigurationsdatei, bevor du sie irgendwo einfügst — ein Support-Ticket, ein Forenbeitrag oder ein KI-Assistent.
-</content>

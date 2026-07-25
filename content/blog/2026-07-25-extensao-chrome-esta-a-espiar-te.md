@@ -18,7 +18,7 @@ faqs:
   - question: "Como é que o ModHeader passou as verificações de segurança do Chrome durante anos?"
     answer: "O recoletor estava cifrado e bloqueado atrás de uma lista de permissões interna publicada vazia, por isso o passo de envio nunca era executado durante as verificações. Um verificador vê texto cifrado e nenhum tráfego de saída, exatamente o aspeto de uma extensão limpa. Os investigadores da Stripe OLT só o encontraram lendo diretamente o código minificado."
   - question: "De que permissões precisa realmente uma extensão de foco ou produtividade?"
-    answer: "Um temporizador que funciona inteiramente no navegador não precisa de quase nada além de armazenamento para as tuas próprias definições. Se uma extensão de pomodoro ou foco pedir para \"ler e alterar todos os teus dados em todos os sites\", isso é mais amplo do que a função precisa — exatamente o que a própria política do Chrome pede aos programadores para evitarem."
+    answer: "Uma extensão de foco deve pedir apenas as permissões necessárias às funções declaradas. O SlimeForge declara storage, alarms, scripting e activeTab; o acesso opcional a sites só é pedido quando o utilizador ativa funções dentro das páginas."
   - question: "Uma extensão popular e bem avaliada é automaticamente segura?"
     answer: "Não. O ModHeader tinha 1,6 milhões de instalações, um longo histórico, e pontuações de risco automatizadas até 95 em 100 que a classificavam como baixo risco — e mesmo assim incluía um recoletor de dados funcional. O número de instalações e a avaliação medem popularidade, não o que o código faz depois de uma atualização."
   - question: "Desinstalar uma extensão maliciosa remove os dados já recolhidos?"
@@ -64,7 +64,7 @@ A própria [política da Chrome Web Store](https://developer.chrome.com/docs/web
 
 ## O que "só local" te dá realmente
 
-Esta é a decisão de design específica por trás do [SlimeForge](/pt/slimeforge/): o temporizador funciona inteiramente no teu navegador, mantém os dados da tua sessão no teu dispositivo, não requer conta, e não faz chamadas para nenhum servidor, nem o nosso nem o de ninguém. Não é uma afirmação para aceitares por fé — é verificável da mesma forma que o checklist acima funciona: desliga a tua rede, e o temporizador continua a funcionar, porque não há nada para onde telefonar.
+O núcleo do [SlimeForge](/pt/slimeforge/) — temporizador, progresso do animal e dados de sessão — funciona no dispositivo sem exigir uma conta. O manifesto declara `storage`, `alarms`, `scripting` e `activeTab` para o temporizador e as funções opcionais dentro das páginas. A ativação da licença pode contactar a Creem; as funções opcionais do Gemini Nano são executadas localmente quando suportadas. Isto é mais preciso do que afirmar que a extensão nunca faz um pedido de rede.
 
 ## Perguntas frequentes
 
@@ -74,7 +74,7 @@ O recoletor estava cifrado e bloqueado atrás de uma lista de permissões intern
 
 ### De que permissões precisa realmente uma extensão de foco ou produtividade?
 
-Um temporizador que funciona inteiramente no navegador não precisa de quase nada além de armazenamento para as tuas próprias definições. Se uma extensão de pomodoro ou foco pedir para "ler e alterar todos os teus dados em todos os sites", isso é mais amplo do que a função precisa — exatamente o que a própria política do Chrome pede aos programadores para evitarem.
+Uma extensão de foco deve pedir apenas as permissões necessárias às funções declaradas. O SlimeForge declara `storage`, `alarms`, `scripting` e `activeTab`; o acesso opcional a sites só é pedido quando o utilizador ativa funções dentro das páginas.
 
 ### Uma extensão popular e bem avaliada é automaticamente segura?
 
@@ -83,4 +83,3 @@ Não. O ModHeader tinha 1,6 milhões de instalações, um longo histórico, e po
 ### Desinstalar uma extensão maliciosa remove os dados já recolhidos?
 
 Desinstalá-la remove-a do teu navegador e apaga o seu armazenamento local, mas não desfaz nada já enviado para os servidores do programador. Se alguma vez colaste chaves de API, tokens ou palavras-passe nos campos de uma extensão, roda-as independentemente de essa extensão se revelar comprometida ou não.
-</content>

@@ -87,4 +87,3 @@ Nein. ec.europa.eu/consumers/odr leitet jetzt auf einen Hinweis zur Standortverl
 ### Betrifft das meine eigentlichen Verbraucherrechte, oder nur dieses eine Tool?
 
 Nur das Tool. Die zweijährige gesetzliche Gewährleistung, das 14-tägige Widerrufsrecht und dein Recht, Schlichtungsstellen oder das Kleinforderungsverfahren zu nutzen, bleiben unverändert. Nur die eine EU-weite Website, die früher Beschwerden zwischen Ländern vermittelte, ist verschwunden.
-</content>

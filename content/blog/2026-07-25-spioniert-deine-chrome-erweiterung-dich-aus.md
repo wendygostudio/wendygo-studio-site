@@ -18,7 +18,7 @@ faqs:
   - question: "Wie hat ModHeader jahrelang Chromes Sicherheitsscans bestanden?"
     answer: "Der Sammler war verschlüsselt und hinter einer intern leeren Positivliste versteckt, sodass der Upload-Schritt beim Scannen nie ausgeführt wurde. Ein Scanner sieht Chiffretext und keinen ausgehenden Datenverkehr — genau das Bild einer sauberen Erweiterung. Forscher von Stripe OLT fanden es nur, indem sie den minifizierten Code direkt lasen."
   - question: "Welche Berechtigungen braucht eine Fokus- oder Produktivitätserweiterung wirklich?"
-    answer: "Ein Timer, der komplett im Browser läuft, braucht kaum mehr als Speicher für deine eigenen Einstellungen. Wenn eine Pomodoro- oder Fokus-Erweiterung „Alle deine Daten auf allen Websites lesen und ändern“ verlangt, ist das mehr, als die Funktion braucht — genau das, wovor Chromes eigene Richtlinie Entwickler warnt."
+    answer: "Eine Fokus-Erweiterung sollte nur die Berechtigungen anfordern, die ihre offengelegten Funktionen benötigen. SlimeForge deklariert storage, alarms, scripting und activeTab; optionaler Website-Zugriff wird erst für aktivierte Seitenfunktionen angefordert."
   - question: "Ist eine beliebte, gut bewertete Erweiterung automatisch sicher?"
     answer: "Nein. ModHeader hatte 1,6 Millionen Installationen, eine lange Erfolgsgeschichte und automatisierte Risikobewertungen von bis zu 95 von 100 als niedriges Risiko — und lieferte trotzdem einen funktionierenden Datensammler. Installationszahl und Sternebewertung messen Beliebtheit, nicht das, was der Code nach einem Update tut."
   - question: "Entfernt das Deinstallieren einer schädlichen Erweiterung bereits gesammelte Daten?"
@@ -64,7 +64,7 @@ Googles eigene [Chrome-Web-Store-Richtlinie](https://developer.chrome.com/docs/w
 
 ## Was „nur lokal" tatsächlich bringt
 
-Das ist die konkrete Designentscheidung hinter [SlimeForge](/de/slimeforge/): Der Timer läuft vollständig in deinem Browser, behält deine Sitzungsdaten auf deinem Gerät, braucht kein Konto und macht keine Aufrufe an irgendeinen Server, weder unseren noch sonst einen. Das ist keine Behauptung, der du blind vertrauen musst — sie ist genauso überprüfbar wie die obige Checkliste: Trenne deine Netzwerkverbindung, und der Timer läuft weiter, weil es nichts gibt, wohin er telefonieren könnte.
+Der Kern von [SlimeForge](/de/slimeforge/) — Fokus-Timer, Haustierfortschritt und Sitzungsdaten — läuft ohne Konto auf deinem Gerät. Das Manifest deklariert `storage`, `alarms`, `scripting` und `activeTab` für den Timer und optionale Seitenfunktionen. Die Lizenzaktivierung kann Creem kontaktieren; optionale Gemini-Nano-Funktionen laufen auf unterstützten Geräten lokal. Das ist genauer als die Behauptung, die Erweiterung stelle niemals eine Netzwerkverbindung her.
 
 ## Häufig gestellte Fragen
 
@@ -74,7 +74,7 @@ Der Sammler war verschlüsselt und hinter einer intern leeren Positivliste verst
 
 ### Welche Berechtigungen braucht eine Fokus- oder Produktivitätserweiterung wirklich?
 
-Ein Timer, der komplett im Browser läuft, braucht kaum mehr als Speicher für deine eigenen Einstellungen. Wenn eine Pomodoro- oder Fokus-Erweiterung „Alle deine Daten auf allen Websites lesen und ändern“ verlangt, ist das mehr, als die Funktion braucht — genau das, wovor Chromes eigene Richtlinie Entwickler warnt.
+Eine Fokus-Erweiterung sollte nur die Berechtigungen anfordern, die ihre offengelegten Funktionen benötigen. SlimeForge deklariert `storage`, `alarms`, `scripting` und `activeTab`; optionaler Website-Zugriff wird erst für aktivierte Seitenfunktionen angefordert.
 
 ### Ist eine beliebte, gut bewertete Erweiterung automatisch sicher?
 
@@ -83,4 +83,3 @@ Nein. ModHeader hatte 1,6 Millionen Installationen, eine lange Erfolgsgeschichte
 ### Entfernt das Deinstallieren einer schädlichen Erweiterung bereits gesammelte Daten?
 
 Das Deinstallieren entfernt sie aus deinem Browser und löscht ihren lokalen Speicher, macht aber nichts rückgängig, was bereits an die Server des Entwicklers gesendet wurde. Wenn du jemals API-Schlüssel, Tokens oder Passwörter in die Felder einer Erweiterung eingegeben hast, rotiere sie unabhängig davon, ob sich diese Erweiterung als kompromittiert herausstellt.
-</content>

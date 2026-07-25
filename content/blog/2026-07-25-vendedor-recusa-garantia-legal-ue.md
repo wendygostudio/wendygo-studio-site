@@ -102,4 +102,3 @@ Nem sempre. A reparação ou substituição são normalmente o primeiro recurso.
 ### E se o vendedor estiver noutro país da UE?
 
 O teu Centro Europeu do Consumidor nacional pode ajudar num litígio transfronteiriço com um comerciante sediado noutro país da UE, Islândia ou Noruega.
-</content>

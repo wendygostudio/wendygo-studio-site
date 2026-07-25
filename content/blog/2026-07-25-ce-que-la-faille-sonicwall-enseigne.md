@@ -10,7 +10,7 @@ product: scrubforge
 contentType: use-case
 primaryKeyword: "ma sauvegarde de config de pare-feu est-elle sûre à partager"
 relatedPages: /fr/scrubforge/,/fr/blog/nettoyer-configuration-routeur-mikrotik/,/fr/ressources/
-sourceUrls: https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
+sourceUrls: https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
 heading: "Ce Que la Faille SonicWall Enseigne sur le Partage de Config"
 shortTitle: "La leçon de la faille SonicWall"
 intro: "SonicWall a confirmé qu'une attaque par force brute contre son portail MySonicWall.com a exposé des fichiers de sauvegarde de configuration de pare-feu pour chaque client ayant utilisé ce service cloud — pas un sous-ensemble, tous. Les fichiers provenaient directement de la fonction de sauvegarde officielle du fabricant."
@@ -28,7 +28,7 @@ faqs:
 La sauvegarde d'un fabricant est censée être l'endroit sûr pour ta configuration. En septembre 2025, SonicWall a confirmé que ce n'était pas vrai pour ses clients de sauvegarde cloud, et les détails méritent d'être lus même si tu n'utilises pas de pare-feu SonicWall.
 
 > **Ce que SonicWall a confirmé**
-> Un attaquant a mené des attaques par force brute contre le portail client MySonicWall.com et a obtenu l'accès à des fichiers de sauvegarde de configuration de pare-feu. L'[avis d'incident de SonicWall](https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU), mené conjointement avec la société de réponse aux incidents Mandiant, a d'abord estimé que moins de 5 % des clients de sauvegarde cloud étaient concernés, puis a confirmé dans sa mise à jour finale que **tous** les clients ayant utilisé la fonction de sauvegarde cloud étaient touchés. [La CISA a publié son propre avis](https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident) exhortant tous les clients SonicWall à vérifier leur compte.
+> Un attaquant a mené des attaques par force brute contre le portail client MySonicWall.com et a obtenu l'accès à des fichiers de sauvegarde de configuration de pare-feu. L'[avis d'incident de SonicWall](https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330), mené conjointement avec la société de réponse aux incidents Mandiant, a d'abord estimé que moins de 5 % des clients de sauvegarde cloud étaient concernés, puis a confirmé dans sa mise à jour finale que **tous** les clients ayant utilisé la fonction de sauvegarde cloud étaient touchés. [La CISA a publié son propre avis](https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident) exhortant tous les clients SonicWall à vérifier leur compte.
 
 ## Ce que contenaient réellement les fichiers exposés
 
@@ -83,4 +83,3 @@ Non, l'avis de SonicWall concerne un portail compromis par force brute, pas une 
 ### Que dois-je vérifier sur mon propre pare-feu après avoir lu ceci ?
 
 Si tu utilises la fonction de sauvegarde cloud de MySonicWall, connecte-toi et vérifie la liste des problèmes dans Product Management > Issue List pour repérer les numéros de série concernés, puis suis les recommandations de réinitialisation essentielle des identifiants de SonicWall. Séparément, nettoie tout fichier de configuration avant de le coller n'importe où — un ticket de support, un message de forum ou un assistant IA.
-</content>

@@ -312,7 +312,7 @@
     <div class="article-body"><p>A vendor&#39;s own backup feature is supposed to be the safe place to put your configuration. In September 2025, SonicWall confirmed that wasn&#39;t true for its cloud backup customers, and the details are worth reading even if you don&#39;t run a SonicWall firewall.</p>
 <blockquote>
 <p><strong>What SonicWall confirmed</strong>
-An attacker ran brute-force attacks against the MySonicWall.com customer portal and gained access to firewall configuration backup files. SonicWall&#39;s <a href="https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU">own incident notice</a>, run jointly with incident-response firm Mandiant, first estimated under 5% of cloud-backup customers were affected, then confirmed in its final update that <strong>all</strong> customers who had used the cloud backup feature were impacted. <a href="https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident">CISA issued its own alert</a> urging every SonicWall customer to check their account.</p>
+An attacker ran brute-force attacks against the MySonicWall.com customer portal and gained access to firewall configuration backup files. SonicWall&#39;s <a href="https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330">own incident notice</a>, run jointly with incident-response firm Mandiant, first estimated under 5% of cloud-backup customers were affected, then confirmed in its final update that <strong>all</strong> customers who had used the cloud backup feature were impacted. <a href="https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident">CISA issued its own alert</a> urging every SonicWall customer to check their account.</p>
 </blockquote>
 <h2>What was actually inside the exposed files</h2>
 <p>This is the part that matters beyond SonicWall&#39;s specific customers. A firewall configuration export (an <code>.EXP</code> file) is a full snapshot of the device: not just passwords, but topology, IP ranges, rules, and integration details.</p>
@@ -364,8 +364,7 @@ An attacker ran brute-force attacks against the MySonicWall.com customer portal 
 <h3>Does this mean vendor cloud backups are unsafe to use?</h3>
 <p>No, SonicWall&#39;s advisory is about a portal being breached via brute force, not a flaw in backups as a concept. The lesson is narrower: a config export contains more usable detail than most people assume, so anywhere that file or its contents travels, a vendor&#39;s cloud backup, a support ticket, an AI chat, deserves the same scrutiny.</p>
 <h3>What should I check on my own firewall after reading this?</h3>
-<p>If you use MySonicWall&#39;s cloud backup feature, log in and check the Product Management &gt; Issue List for affected serial numbers, then follow SonicWall&#39;s Essential Credential Reset guidance. Separately, sanitize any config file before pasting it anywhere else, a support ticket, a forum post, or an AI assistant.
-</content></p>
+<p>If you use MySonicWall&#39;s cloud backup feature, log in and check the Product Management &gt; Issue List for affected serial numbers, then follow SonicWall&#39;s Essential Credential Reset guidance. Separately, sanitize any config file before pasting it anywhere else, a support ticket, a forum post, or an AI assistant.</p>
 </div>
   </div>
   <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div><div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/privacy">Privacy</a></div></footer>

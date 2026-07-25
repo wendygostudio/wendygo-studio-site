@@ -94,4 +94,3 @@ Oui. RouterOS fait partie des douze syntaxes de configuration d'appareils couver
 ### Que faire si j'ai déjà posté une config MikroTik non nettoyée ?
 
 Modifie ou supprime le message si la plateforme le permet, puis fais tourner tout identifiant exposé — mots de passe, clés pré-partagées, secrets RADIUS. Remplacer les valeurs après coup n'annule pas ce qui était visible pendant que le message était en ligne.
-</content>

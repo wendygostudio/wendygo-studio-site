@@ -10,7 +10,7 @@ product: scrubforge
 contentType: use-case
 primaryKeyword: "è sicuro condividere un backup di configurazione firewall"
 relatedPages: /it/scrubforge/,/it/blog/sanificare-configurazione-router-mikrotik/,/it/risorse/
-sourceUrls: https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
+sourceUrls: https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
 heading: "Cosa Insegna la Violazione SonicWall Sul Condividere Config"
 shortTitle: "La lezione della violazione SonicWall"
 intro: "SonicWall ha confermato che un attacco di forza bruta contro il suo portale MySonicWall.com ha esposto file di backup della configurazione firewall per ogni cliente che aveva usato il servizio di backup cloud — non un sottoinsieme, tutti. I file provenivano direttamente dalla funzione di backup ufficiale del fornitore."
@@ -28,7 +28,7 @@ faqs:
 Il backup di un fornitore dovrebbe essere il luogo sicuro per la tua configurazione. Nel settembre 2025, SonicWall ha confermato che non era così per i suoi clienti con backup cloud, e i dettagli meritano di essere letti anche se non usi un firewall SonicWall.
 
 > **Cosa ha confermato SonicWall**
-> Un attaccante ha condotto attacchi di forza bruta contro il portale clienti MySonicWall.com e ha ottenuto accesso a file di backup della configurazione firewall. L'[avviso di incidente di SonicWall](https://www.sonicwall.com/support/notices/mysonicwall-cloud-backup-file-incident/kA1VN0000000RoD0AU), condotto insieme alla società di risposta agli incidenti Mandiant, ha stimato inizialmente che meno del 5% dei clienti con backup cloud fosse coinvolto, poi ha confermato nell'aggiornamento finale che **tutti** i clienti che avevano usato la funzione di backup cloud erano stati colpiti. [CISA ha pubblicato un proprio avviso](https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident) esortando tutti i clienti SonicWall a controllare il proprio account.
+> Un attaccante ha condotto attacchi di forza bruta contro il portale clienti MySonicWall.com e ha ottenuto accesso a file di backup della configurazione firewall. L'[avviso di incidente di SonicWall](https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330), condotto insieme alla società di risposta agli incidenti Mandiant, ha stimato inizialmente che meno del 5% dei clienti con backup cloud fosse coinvolto, poi ha confermato nell'aggiornamento finale che **tutti** i clienti che avevano usato la funzione di backup cloud erano stati colpiti. [CISA ha pubblicato un proprio avviso](https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident) esortando tutti i clienti SonicWall a controllare il proprio account.
 
 ## Cosa contenevano davvero i file esposti
 
@@ -83,4 +83,3 @@ No, l'avviso di SonicWall riguarda un portale violato tramite forza bruta, non u
 ### Cosa dovrei controllare sul mio firewall dopo aver letto questo?
 
 Se usi la funzione di backup cloud di MySonicWall, accedi e controlla Product Management > Issue List per i numeri di serie interessati, poi segui le indicazioni di SonicWall per il reset essenziale delle credenziali. Separatamente, sanifica qualsiasi file di configurazione prima di incollarlo ovunque — un ticket di supporto, un post sul forum o un assistente IA.
-</content>

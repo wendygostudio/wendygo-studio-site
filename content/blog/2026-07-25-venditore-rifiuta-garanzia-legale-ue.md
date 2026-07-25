@@ -102,4 +102,3 @@ Non sempre. Riparazione o sostituzione sono di norma il primo rimedio. Una riduz
 ### Cosa succede se il venditore si trova in un altro paese UE?
 
 Il tuo Centro Europeo Consumatori nazionale può aiutarti in una controversia transfrontaliera con un commerciante con sede in un altro paese UE, Islanda o Norvegia.
-</content>

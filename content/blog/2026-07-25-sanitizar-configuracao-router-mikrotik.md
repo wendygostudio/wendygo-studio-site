@@ -94,4 +94,3 @@ Sim. O RouterOS é uma das doze sintaxes de configuração de dispositivos abran
 ### E se já tiver publicado uma config MikroTik não sanitizada?
 
 Edita ou apaga a publicação se a plataforma permitir, depois roda qualquer credencial exposta — palavras-passe, chaves pré-partilhadas, secrets RADIUS. Substituir valores depois do facto não desfaz o que esteve visível enquanto a publicação esteve ativa.
-</content>

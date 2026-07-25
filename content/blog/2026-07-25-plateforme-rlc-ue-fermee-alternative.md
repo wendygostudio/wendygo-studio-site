@@ -87,4 +87,3 @@ Non. ec.europa.eu/consumers/odr redirige désormais vers un avis de fermeture su
 ### Cela affecte-t-il mes droits réels de consommateur, ou juste cet outil ?
 
 Juste l'outil. La garantie légale de deux ans, le droit de rétractation de 14 jours et ton droit d'utiliser des organismes de résolution extrajudiciaire ou la procédure de petites créances restent inchangés. Seul le site unique géré par l'UE qui routait les réclamations entre pays a disparu.
-</content>

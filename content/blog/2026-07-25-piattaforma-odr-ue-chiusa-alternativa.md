@@ -87,4 +87,3 @@ No. ec.europa.eu/consumers/odr ora reindirizza a un avviso di trasferimento sul 
 ### Questo influisce sui miei diritti effettivi di consumatore, o solo su questo strumento?
 
 Solo lo strumento. La garanzia legale di due anni, il diritto di recesso di 14 giorni e il tuo diritto di usare organismi ADR o il procedimento per le controversie di modesta entità restano invariati. È scomparso solo l'unico sito gestito dall'UE che instradava i reclami tra paesi.
-</content>

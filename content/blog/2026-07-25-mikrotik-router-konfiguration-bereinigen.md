@@ -94,4 +94,3 @@ Ja. RouterOS ist eine von zwölf Gerätesyntaxen, die von ScrubForges Musterbibl
 ### Was, wenn ich bereits eine unbereinigte MikroTik-Konfiguration gepostet habe?
 
 Bearbeite oder lösche den Beitrag, wenn die Plattform das erlaubt, und rotiere danach jede offengelegte Zugangsdaten — Passwörter, Pre-Shared Keys, RADIUS-Secrets. Werte im Nachhinein zu ändern macht nicht ungeschehen, was sichtbar war, solange der Beitrag live war.
-</content>
