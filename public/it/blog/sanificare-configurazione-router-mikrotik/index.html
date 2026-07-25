@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>Sanificare una Config Router MikroTik Prima di Condividerla</title>
+  <meta name="description" content="MikroTik nasconde le password negli export RouterOS di default. Topologia, commenti e indirizzi server restano visibili. Ecco cosa controllare prima." />
+  <link rel="canonical" href="https://wendygostudio.com/it/blog/sanificare-configurazione-router-mikrotik/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-mikrotik/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/mikrotik-router-konfiguration-bereinigen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-routeur-mikrotik/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-router-mikrotik/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-router-mikrotik/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Sanificare una Config Router MikroTik Prima di Condividerla","description":"MikroTik nasconde le password negli export RouterOS di default. Topologia, commenti e indirizzi server restano visibili. Ecco cosa controllare prima.","datePublished":"2026-07-25","dateModified":"2026-07-25","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/it/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/it/blog/"},{"@type":"ListItem","position":3,"name":"Sanificare una Config Router MikroTik Prima di Condividerla"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"show-sensitive sostituisce la necessità di sanificare una config MikroTik?","acceptedAnswer":{"@type":"Answer","text":"No. show-sensitive controlla solo se RouterOS stampa il suo elenco predefinito di campi sensibili — password, chiavi, secret. Tutto il resto nell'export, inclusi indirizzi IP, commenti e indirizzi server, resta comunque visibile. È esattamente a questo che serve ScrubForge."}},{"@type":"Question","name":"La sanificazione romperà la config se devo reimportarla?","acceptedAnswer":{"@type":"Answer","text":"Sanifica solo una copia destinata alla discussione, a un post sul forum o a un ticket di supporto — non il file che intendi reimportare. Reimportare uno script richiede i valori reali delle credenziali, quindi tieni il tuo export di lavoro separato dalla versione sanificata che condividi pubblicamente."}},{"@type":"Question","name":"ScrubForge riconosce specificamente la sintassi RouterOS?","acceptedAnswer":{"@type":"Answer","text":"Sì. RouterOS è una delle dodici sintassi di configurazione dispositivi coperte dalla libreria di pattern di ScrubForge, insieme a Cisco, FortiGate, Juniper e Palo Alto, tra le altre."}},{"@type":"Question","name":"Cosa fare se ho già pubblicato una config MikroTik non sanificata?","acceptedAnswer":{"@type":"Answer","text":"Modifica o elimina il post se la piattaforma lo consente, poi ruota qualsiasi credenziale esposta — password, chiavi pre-condivise, secret RADIUS. Cambiare i valori dopo il fatto non annulla ciò che era visibile mentre il post era attivo."}}]}</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="Sanificare una Config Router MikroTik Prima di Condividerla" />
+  <meta property="og:description" content="MikroTik nasconde le password negli export RouterOS di default. Topologia, commenti e indirizzi server restano visibili. Ecco cosa controllare prima." />
+  <meta property="og:url" content="https://wendygostudio.com/it/blog/sanificare-configurazione-router-mikrotik/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sanificare una Config Router MikroTik Prima di Condividerla" />
+  <meta name="twitter:description" content="MikroTik nasconde le password negli export RouterOS di default. Topologia, commenti e indirizzi server restano visibili. Ecco cosa controllare prima." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<style id="wg-language-style">.wg-language-switcher{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #3a414e;border-radius:10px;background:rgba(19,21,26,.94);box-shadow:0 8px 28px rgba(0,0,0,.32);font:600 12px/1.2 system-ui,sans-serif;color:#9ca4b4}.wg-language-switcher select{max-width:130px;padding:6px 28px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:520px){.wg-language-switcher{right:10px;bottom:10px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/it/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/it/#products">Estensioni</a><a href="/it/blog/">Blog</a><a href="/tools/">Strumenti</a><a href="/it/#privacy">Privacy</a><a class="nav-lang" href="/blog/sanitize-mikrotik-router-config/">EN</a><a class="nav-lang" href="/es/blog/sanitizar-configuracion-mikrotik/">ES</a><a class="nav-lang" href="/de/blog/mikrotik-router-konfiguration-bereinigen/">DE</a><a class="nav-lang" href="/fr/blog/nettoyer-configuration-routeur-mikrotik/">FR</a><a class="nav-lang" href="/pt/blog/sanitizar-configuracao-router-mikrotik/">PT</a>
+    </div>
+  </nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/it/">Home</a><span>&#8250;</span><a href="/it/blog/">Blog</a><span>&#8250;</span>Sanificare una config MikroTik</div>
+    <div class="article-meta"><div class="article-tag">how-to · scrubforge</div><h1>Sanificare una Config Router MikroTik Prima di Condividerla</h1><p class="article-intro">RouterOS nasconde le password in /export per impostazione predefinita. Restano comunque topologia, commenti e indirizzi server nel file che incolli in un forum, un ticket o una chat IA.</p><div class="article-date">25 luglio 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><p>Pubblicare un export di configurazione router in un thread del forum o in un ticket di supporto è lavoro di routine per un amministratore, e gli admin MikroTik ne hanno fatto molto questo mese: RouterOS 7.21.5 (long-term) e 6.49.20 sono usciti entrambi il 6 luglio 2026, e un aggiornamento di solito significa estrarre un <code>/export</code> fresco per confrontare prima e dopo.</p>
+<blockquote>
+<p><strong>Cosa nasconde davvero show-sensitive</strong>
+Per impostazione predefinita, <code>/export</code> maschera password, chiavi e secret in un elenco documentato di menu — chiavi WireGuard, secret RADIUS, password PPP, password community SNMP e altri quaranta campi circa. Non tocca indirizzi IP, commenti o qualsiasi cosa fuori da quell&#39;elenco.</p>
+</blockquote>
+<h2>Cosa nasconde già RouterOS per te</h2>
+<p>La documentazione di MikroTik è precisa su questo: il comando <code>export</code> &quot;non esporta le password utente di sistema, i certificati installati, le chiavi SSH, né il database Dude o User-manager&quot;, e tutto il resto considerato sensibile viene mascherato a meno che tu non aggiunga <code>show-sensitive</code> al comando. Esiste una tabella di riferimento ufficiale che elenca esattamente quale menu e quale campo viene nascosto: l&#39;<a href="https://help.mikrotik.com/docs/spaces/ROS/pages/380076066/List+of+menus+with+sensitive+parameters">elenco dei menu con parametri sensibili</a> copre <code>private-key</code> e <code>preshared-key</code> di WireGuard, <code>secret</code> RADIUS, <code>authentication-password</code> SNMP, <code>secret</code> PPP, chiavi IPsec, <code>password</code> VRRP e altro ancora.</p>
+<p>È un comportamento predefinito genuinamente utile. Ma è anche facile leggerlo come &quot;l&#39;export è sicuro da incollare ovunque&quot;, il che non è del tutto vero.</p>
+<h2>Cosa contiene ancora un export &quot;pulito&quot;</h2>
+<p>Mascherare un elenco fisso di nomi di parametri non tocca il testo libero né nulla fuori da quell&#39;elenco. Un <code>/export</code> predefinito include ancora:</p>
+<div class="key-points">
+  <h3>Ancora completamente visibile dopo il mascheramento show-sensitive</h3>
+  <ul>
+    <li>ogni indirizzo IP configurato, subnet ed endpoint peer WAN;</li>
+    <li>commenti di interfacce e VLAN, che spesso nominano sistemi interni o clienti;</li>
+    <li>indirizzi dei server RADIUS, NTP, DNS e SNMP — l'indirizzo, non solo il secret;</li>
+    <li>nomi di community SNMP, quando sono stringhe descrittive anziché password;</li>
+    <li>identità di sistema, peer di routing e liste di indirizzi del firewall.</li>
+  </ul>
+</div><p>Niente di tutto ciò è un bug. La <a href="https://help.mikrotik.com/docs/spaces/ROS/pages/328155/Configuration+Management">guida alla gestione della configurazione di MikroTik</a> mostra essa stessa subnet interne dall&#39;aspetto reale nei propri esempi di export, perché la topologia è esattamente ciò di cui un&#39;importazione ha bisogno. Semplicemente non è qualcosa che vuoi mostrare a uno sconosciuto su un forum, o a una coda di supporto esterna, insieme al tuo IP pubblico.</p>
+<h2>Sanificare prima ancora che show-sensitive conti qualcosa</h2>
+<div class="step-card">
+  <span class="step-label">Procedura</span>
+  <strong>Esportare, incollare, controllare, condividere</strong>
+  <p>Esegui <code>/export file=config</code> come al solito — ometti <code>show-sensitive</code>, non ti serve per una richiesta di supporto o un post sul forum. Apri [ScrubForge](/it/scrubforge/), incolla l'output, e segnala le stringhe simili a credenziali corrispondenti alla sintassi RouterOS, sostituendo ogni valore univoco con un token coerente come <code>[RADIUS_SECRET_1]</code>. Tutto viene eseguito localmente nella scheda del browser; nulla viene caricato altrove.</p>
+</div><table>
+<thead>
+<tr>
+<th>Prima (export grezzo)</th>
+<th>Dopo (sanificato)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>set 0 password=Adm1nR0S!</code></td>
+<td><code>set 0 password=[PASSWORD_1]</code></td>
+</tr>
+<tr>
+<td><code>secret=&quot;Sup3rShared&quot; address=10.20.0.1</code></td>
+<td><code>secret=[RADIUS_SECRET_1] address=10.20.0.1</code></td>
+</tr>
+<tr>
+<td><code>private-key=&quot;wG9K...==&quot;</code></td>
+<td><code>private-key=[WG_KEY_1]</code></td>
+</tr>
+</tbody></table>
+<p>Nota che l&#39;indirizzo del peer resta invariato. È esattamente ciò di cui un lettore del forum o un tecnico di supporto ha bisogno per aiutarti — non il secret accanto.</p>
+<h2>La stessa abitudine funziona per ogni fornitore</h2>
+<p>Abbiamo già trattato questo procedimento per le config Cisco e FortiGate. MikroTik è una delle dodici sintassi di fornitori che ScrubForge riconosce, insieme a Juniper e Palo Alto — stessa idea, nomi di campo diversi ogni volta. Se stai incollando in un ticket di supporto anziché in un forum pubblico, vale la stessa abitudine di sanificare prima che il file lasci la tua macchina.</p>
+<h2>Prima di pubblicare</h2>
+<p>Una breve nota accanto all&#39;export sanificato aiuta: &quot;credenziali sostituite con token segnaposto; la struttura è intatta.&quot; Dice a chiunque legga il thread che non c&#39;è una password attiva al suo interno, e richiede dieci secondi da aggiungere.</p>
+<h2>Domande frequenti</h2>
+<h3>show-sensitive sostituisce la necessità di sanificare una config MikroTik?</h3>
+<p>No. show-sensitive controlla solo se RouterOS stampa il suo elenco predefinito di campi sensibili — password, chiavi, secret. Tutto il resto nell&#39;export, inclusi indirizzi IP, commenti e indirizzi server, resta comunque visibile. È esattamente a questo che serve ScrubForge.</p>
+<h3>La sanificazione romperà la config se devo reimportarla?</h3>
+<p>Sanifica solo una copia destinata alla discussione, a un post sul forum o a un ticket di supporto — non il file che intendi reimportare. Reimportare uno script richiede i valori reali delle credenziali, quindi tieni il tuo export di lavoro separato dalla versione sanificata che condividi pubblicamente.</p>
+<h3>ScrubForge riconosce specificamente la sintassi RouterOS?</h3>
+<p>Sì. RouterOS è una delle dodici sintassi di configurazione dispositivi coperte dalla libreria di pattern di ScrubForge, insieme a Cisco, FortiGate, Juniper e Palo Alto, tra le altre.</p>
+<h3>Cosa fare se ho già pubblicato una config MikroTik non sanificata?</h3>
+<p>Modifica o elimina il post se la piattaforma lo consente, poi ruota qualsiasi credenziale esposta — password, chiavi pre-condivise, secret RADIUS. Cambiare i valori dopo il fatto non annulla ciò che era visibile mentre il post era attivo.
+</content></p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Isole Canarie</div><div class="footer-links"><a href="/it/">Home</a><a href="/it/blog/">Blog</a><a href="/tools/">Strumenti</a><a href="/it/privacy">Privacy</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+<div class="wg-language-switcher"><label for="wg-language-select">Lingua</label><select id="wg-language-select" aria-label="Scegli la lingua" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/">English</option><option value="https://wendygostudio.com/es/blog/sanitizar-configuracion-mikrotik/">Español</option><option value="https://wendygostudio.com/de/blog/mikrotik-router-konfiguration-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-configuration-routeur-mikrotik/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-configurazione-router-mikrotik/" selected>Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-configuracao-router-mikrotik/">Português</option></select></div></body>
+</html>

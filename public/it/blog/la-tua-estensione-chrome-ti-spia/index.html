@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>La Tua Estensione Chrome Ti Spia? Checklist 2026</title>
+  <meta name="description" content="Google e Microsoft hanno rimosso un'estensione fidata con 1,6M installazioni per raccolta dati nascosta. Come verificare se le tue sono sicure." />
+  <link rel="canonical" href="https://wendygostudio.com/it/blog/la-tua-estensione-chrome-ti-spia/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/spioniert-deine-chrome-erweiterung-dich-aus/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/votre-extension-chrome-vous-espionne/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/la-tua-estensione-chrome-ti-spia/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/extensao-chrome-esta-a-espiar-te/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"La Tua Estensione Chrome Ti Spia? Checklist 2026","description":"Google e Microsoft hanno rimosso un'estensione fidata con 1,6M installazioni per raccolta dati nascosta. Come verificare se le tue sono sicure.","datePublished":"2026-07-25","dateModified":"2026-07-25","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/it/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/it/blog/"},{"@type":"ListItem","position":3,"name":"La Tua Estensione Chrome Ti Spia? Checklist 2026"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Come ha superato ModHeader le scansioni di sicurezza di Chrome per anni?","acceptedAnswer":{"@type":"Answer","text":"Il raccoglitore era cifrato e bloccato dietro una lista di autorizzazione interna pubblicata vuota, quindi il passaggio di upload non veniva mai eseguito durante le scansioni. Uno scanner vede testo cifrato e nessun traffico in uscita, esattamente come appare un'estensione pulita. I ricercatori di Stripe OLT lo hanno trovato solo leggendo direttamente il codice minificato."}},{"@type":"Question","name":"Di quali permessi ha davvero bisogno un'estensione di concentrazione o produttività?","acceptedAnswer":{"@type":"Answer","text":"Un timer che funziona interamente nel browser non ha bisogno praticamente di nulla oltre allo storage per le tue impostazioni. Se un'estensione pomodoro o di concentrazione chiede di \"leggere e modificare tutti i tuoi dati su tutti i siti web\", è più ampio di quanto richieda la funzione — esattamente ciò che la politica di Chrome chiede agli sviluppatori di evitare."}},{"@type":"Question","name":"Un'estensione popolare e ben valutata è automaticamente sicura?","acceptedAnswer":{"@type":"Answer","text":"No. ModHeader aveva 1,6 milioni di installazioni, una lunga reputazione, e punteggi di rischio automatizzati fino a 95 su 100 che la classificavano a basso rischio — e includeva comunque un raccoglitore di dati funzionante. Il numero di installazioni e la valutazione misurano la popolarità, non ciò che fa il codice dopo un aggiornamento."}},{"@type":"Question","name":"Disinstallare un'estensione dannosa rimuove i dati già raccolti?","acceptedAnswer":{"@type":"Answer","text":"Disinstallarla la rimuove dal browser e cancella il suo storage locale, ma non annulla nulla di già inviato ai server dello sviluppatore. Se hai mai incollato chiavi API, token o password nei campi di un'estensione, ruotale indipendentemente dal fatto che quell'estensione risulti compromessa o meno."}}]}</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="La Tua Estensione Chrome Ti Spia? Checklist 2026" />
+  <meta property="og:description" content="Google e Microsoft hanno rimosso un'estensione fidata con 1,6M installazioni per raccolta dati nascosta. Come verificare se le tue sono sicure." />
+  <meta property="og:url" content="https://wendygostudio.com/it/blog/la-tua-estensione-chrome-ti-spia/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="La Tua Estensione Chrome Ti Spia? Checklist 2026" />
+  <meta name="twitter:description" content="Google e Microsoft hanno rimosso un'estensione fidata con 1,6M installazioni per raccolta dati nascosta. Come verificare se le tue sono sicure." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<style id="wg-language-style">.wg-language-switcher{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #3a414e;border-radius:10px;background:rgba(19,21,26,.94);box-shadow:0 8px 28px rgba(0,0,0,.32);font:600 12px/1.2 system-ui,sans-serif;color:#9ca4b4}.wg-language-switcher select{max-width:130px;padding:6px 28px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:520px){.wg-language-switcher{right:10px;bottom:10px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/it/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/it/#products">Estensioni</a><a href="/it/blog/">Blog</a><a href="/tools/">Strumenti</a><a href="/it/#privacy">Privacy</a><a class="nav-lang" href="/blog/is-your-chrome-extension-spying-on-you/">EN</a><a class="nav-lang" href="/es/blog/tu-extension-de-chrome-te-esta-espiando/">ES</a><a class="nav-lang" href="/de/blog/spioniert-deine-chrome-erweiterung-dich-aus/">DE</a><a class="nav-lang" href="/fr/blog/votre-extension-chrome-vous-espionne/">FR</a><a class="nav-lang" href="/pt/blog/extensao-chrome-esta-a-espiar-te/">PT</a>
+    </div>
+  </nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/it/">Home</a><span>&#8250;</span><a href="/it/blog/">Blog</a><span>&#8250;</span>La tua estensione ti spia?</div>
+    <div class="article-meta"><div class="article-tag">how-to · slimeforge</div><h1>La Tua Estensione Chrome Ti Spia? Checklist 2026</h1><p class="article-intro">Il 10 luglio 2026, Google ha rimosso ModHeader, un'estensione affidabile con circa 1,6 milioni di installazioni, dopo che i ricercatori hanno trovato una pipeline completa e dormiente di raccolta dati nella versione ufficiale e firmata. Aveva superato scansioni di sicurezza automatizzate per anni.</p><div class="article-date">25 luglio 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><p>Se usi un&#39;estensione Chrome o Edge per gestire la tua concentrazione, le tue intestazioni HTTP, le tue password o altro, la rimozione di ModHeader merita cinque minuti del tuo tempo. Non perché ModHeader fosse uno strumento marginale — aveva 1,6 milioni di installazioni e un decennio di fiducia — ma per il modo esatto in cui nascondeva ciò che faceva.</p>
+<blockquote>
+<p><strong>Cosa è successo realmente</strong>
+Il 3 luglio 2026, Microsoft ha rimosso ModHeader dallo store di componenti aggiuntivi di Edge. Il 10 luglio, Google ha fatto lo stesso rimuovendola dal Chrome Web Store. La società di sicurezza <a href="https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html">Stripe OLT</a> ha scoperto che l&#39;estensione ufficiale, firmata crittograficamente, conteneva un raccoglitore completo di cronologia di navigazione: generava un&#39;impronta del dispositivo, cifrava il dominio di ogni pagina visitata, ed era progettata per caricare l&#39;elenco quotidianamente su un server esterno. Il raccoglitore non era attivo — una lista di autorizzazione interna vuota lo teneva disattivato — ma attivarla avrebbe richiesto solo un aggiornamento di routine, senza nuovi permessi, senza alcun clic da parte dell&#39;utente.</p>
+</blockquote>
+<h2>Perché questo conta anche se non usi ModHeader</h2>
+<p>ModHeader è uno strumento per sviluppatori per modificare le intestazioni HTTP, non un&#39;estensione di produttività. Ma lo schema che ha rivelato si applica direttamente a timer di concentrazione, gestori di schede, e qualsiasi altra estensione che richieda accesso ampio:</p>
+<div class="key-points">
+  <h3>Perché le scansioni automatizzate non l'hanno rilevato</h3>
+  <ul>
+    <li><strong>La cifratura nascondeva il payload</strong> — uno scanner vede testo cifrato, non un elenco di domini, quindi nulla di leggibile ha mai lasciato il dispositivo durante i test.</li>
+    <li><strong>Una lista di autorizzazione vuota bloccava l'upload</strong> — il codice di raccolta veniva eseguito, ma la chiamata di rete che alimentava semplicemente non si attivava mai, quindi i sandbox non vedevano traffico in uscita.</li>
+    <li><strong>Il codice dannoso era minificato in una funzionalità legittima e funzionante</strong> — l'estensione continuava a fare esattamente ciò che dichiarava, cosa che la maggior parte delle revisioni manuali controlla.</li>
+  </ul>
+</div><p>I verificatori di rischio automatizzati hanno classificato l&#39;estensione a basso rischio, alcuni fino a 95 su 100. Una scheda firmata con anni di buone recensioni segnalava agli utenti che era affidabile. Nessuno dei due segnali l&#39;ha rilevato.</p>
+<h2>Una checklist pratica prima di fidarti di un&#39;estensione</h2>
+<div class="step-card">
+  <span class="step-label">Procedura</span>
+  <strong>Cinque controlli che richiedono meno di due minuti</strong>
+  <p>Apri <code>chrome://extensions</code>, clicca su "Dettagli" per tutto ciò che usi quotidianamente, e verifica: chiede di "leggere e modificare tutti i tuoi dati su tutti i siti web" quando la sua funzione dichiarata non lo richiede? Ha cambiato proprietario di recente, o è passata da gratuita a "supportata da pubblicità", uno schema che i ricercatori di sicurezza segnalano ripetutamente dal 2021? Lo sviluppatore pubblica una politica sulla privacy che corrisponde davvero a ciò che il codice deve fare? Ha ricevuto un aggiornamento nelle ultime settimane senza changelog? E, se possibile, l'estensione funziona con la connessione di rete disattivata? Uno strumento genuinamente locale continuerà a funzionare; uno che telefona a casa, no.</p>
+</div><table>
+<thead>
+<tr>
+<th>Segno di un&#39;estensione a rischio minore</th>
+<th>Segno che merita indagine</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Richiede solo i permessi necessari alla sua funzione dichiarata</td>
+<td>Richiede ampio accesso agli host &quot;per sicurezza&quot;</td>
+</tr>
+<tr>
+<td>Stesso proprietario e changelog chiaro nel tempo</td>
+<td>Ha cambiato proprietario di recente o è diventata supportata da pubblicità</td>
+</tr>
+<tr>
+<td>Funziona completamente offline se la sua funzione non richiede rete</td>
+<td>Effettua chiamate di rete che una funzione puramente locale non dovrebbe richiedere</td>
+</tr>
+<tr>
+<td>Trasparente sul non raccogliere dati di navigazione</td>
+<td>Politica sulla privacy vaga o assente</td>
+</tr>
+</tbody></table>
+<p>La <a href="https://developer.chrome.com/docs/webstore/program-policies/policies">politica del Chrome Web Store</a> di Google chiede già agli sviluppatori di richiedere i permessi più ristretti necessari a una funzione, e vieta di raccogliere attività di navigazione al di fuori di uno scopo dichiarato e visibile all&#39;utente. Dal 1° agosto 2026, entra in vigore l&#39;<a href="https://developer.chrome.com/blog/cws-policy-updates-2026">applicazione di regole più severe sulla raccolta dati</a> in tutto lo store — ma è una base minima, non una garanzia. Limita solo ciò che un&#39;estensione conforme è <em>autorizzata</em> a fare, e ModHeader non dichiarava nemmeno ciò che aveva costruito.</p>
+<h2>Cosa ti offre davvero &quot;solo locale&quot;</h2>
+<p>Questa è la scelta di design specifica dietro <a href="/it/slimeforge/">SlimeForge</a>: il timer funziona interamente nel tuo browser, mantiene i dati della sessione sul tuo dispositivo, non richiede un account, e non effettua chiamate verso alcun server, né il nostro né quello di altri. Non è un&#39;affermazione da accettare per fede — è verificabile allo stesso modo in cui funziona la checklist sopra: disconnetti la rete, e il timer continua a funzionare, perché non c&#39;è nulla verso cui telefonare.</p>
+<h2>Domande frequenti</h2>
+<h3>Come ha superato ModHeader le scansioni di sicurezza di Chrome per anni?</h3>
+<p>Il raccoglitore era cifrato e bloccato dietro una lista di autorizzazione interna pubblicata vuota, quindi il passaggio di upload non veniva mai eseguito durante le scansioni. Uno scanner vede testo cifrato e nessun traffico in uscita, esattamente come appare un&#39;estensione pulita. I ricercatori di Stripe OLT lo hanno trovato solo leggendo direttamente il codice minificato.</p>
+<h3>Di quali permessi ha davvero bisogno un&#39;estensione di concentrazione o produttività?</h3>
+<p>Un timer che funziona interamente nel browser non ha bisogno praticamente di nulla oltre allo storage per le tue impostazioni. Se un&#39;estensione pomodoro o di concentrazione chiede di &quot;leggere e modificare tutti i tuoi dati su tutti i siti web&quot;, è più ampio di quanto richieda la funzione — esattamente ciò che la politica di Chrome chiede agli sviluppatori di evitare.</p>
+<h3>Un&#39;estensione popolare e ben valutata è automaticamente sicura?</h3>
+<p>No. ModHeader aveva 1,6 milioni di installazioni, una lunga reputazione, e punteggi di rischio automatizzati fino a 95 su 100 che la classificavano a basso rischio — e includeva comunque un raccoglitore di dati funzionante. Il numero di installazioni e la valutazione misurano la popolarità, non ciò che fa il codice dopo un aggiornamento.</p>
+<h3>Disinstallare un&#39;estensione dannosa rimuove i dati già raccolti?</h3>
+<p>Disinstallarla la rimuove dal browser e cancella il suo storage locale, ma non annulla nulla di già inviato ai server dello sviluppatore. Se hai mai incollato chiavi API, token o password nei campi di un&#39;estensione, ruotale indipendentemente dal fatto che quell&#39;estensione risulti compromessa o meno.
+</content></p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Isole Canarie</div><div class="footer-links"><a href="/it/">Home</a><a href="/it/blog/">Blog</a><a href="/tools/">Strumenti</a><a href="/it/privacy">Privacy</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+<div class="wg-language-switcher"><label for="wg-language-select">Lingua</label><select id="wg-language-select" aria-label="Scegli la lingua" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/">English</option><option value="https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/">Español</option><option value="https://wendygostudio.com/de/blog/spioniert-deine-chrome-erweiterung-dich-aus/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/votre-extension-chrome-vous-espionne/">Français</option><option value="https://wendygostudio.com/it/blog/la-tua-estensione-chrome-ti-spia/" selected>Italiano</option><option value="https://wendygostudio.com/pt/blog/extensao-chrome-esta-a-espiar-te/">Português</option></select></div></body>
+</html>

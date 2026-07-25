@@ -25,10 +25,27 @@ const retiredOdr = /\bODR\b|Online Dispute Resolution|consumers\/odr|Resoluci[o√
 const odrExceptionFiles = new Set([
   'content/blog/2026-07-24-eu-odr-platform-shutdown-what-to-use-instead.md',
   'content/blog/2026-07-24-plataforma-odr-ue-cerrada-que-usar-ahora.md',
+  'content/blog/2026-07-25-eu-odr-plattform-geschlossen-alternative.md',
+  'content/blog/2026-07-25-plateforme-rlc-ue-fermee-alternative.md',
+  'content/blog/2026-07-25-piattaforma-odr-ue-chiusa-alternativa.md',
+  'content/blog/2026-07-25-plataforma-rlc-ue-encerrada-alternativa.md',
+  // these two only match because their relatedPages frontmatter links to the
+  // ODR-shutdown article's slug (which contains "odr" as a hyphenated URL
+  // segment), not because the seller-warranty article itself discusses ODR
+  'content/blog/2026-07-25-venditore-rifiuta-garanzia-legale-ue.md',
+  'content/blog/2026-07-25-verkaeufer-lehnt-eu-garantieanspruch-ab.md',
   'public/blog/eu-odr-platform-shutdown-what-to-use-instead/index.html',
   'public/es/blog/plataforma-odr-ue-cerrada-que-usar-ahora/index.html',
+  'public/de/blog/eu-odr-plattform-geschlossen-alternative/index.html',
+  'public/fr/blog/plateforme-rlc-ue-fermee-alternative/index.html',
+  'public/it/blog/piattaforma-odr-ue-chiusa-alternativa/index.html',
+  'public/pt/blog/plataforma-rlc-ue-encerrada-alternativa/index.html',
   'public/blog/index.html',
   'public/es/blog/index.html',
+  'public/de/blog/index.html',
+  'public/fr/blog/index.html',
+  'public/it/blog/index.html',
+  'public/pt/blog/index.html',
   'public/resources/eu-consumer-rights/index.html',
   'public/es/recursos/eu-consumer-rights/index.html'
 ]);

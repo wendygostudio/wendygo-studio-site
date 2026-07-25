@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog in italiano — Wendygo Studio</title>
+  <meta name="description" content="Guide, tutorial e consigli su produttività del browser, editing di immagini, manipolazione di testo e gestione della configurazione di rete." />
+  <link rel="canonical" href="https://wendygostudio.com/it/blog/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/" />
+  <link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/" />
+  <link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/" />
+  <link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/" />
+  <link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/" />
+  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nav — identical to main site */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Blog header */
+    .blog-header {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 32px;
+    }
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 12px;
+    }
+    .blog-header h1 {
+      font-size: clamp(28px,5vw,42px); font-weight: 800;
+      letter-spacing: -.8px; margin-bottom: 12px;
+    }
+    .blog-header p { color: var(--muted); font-size: 16px; max-width: 520px; }
+
+    /* Post list */
+    .post-list { max-width: 720px; margin: 0 auto; padding: 0 clamp(20px,5vw,40px) 80px; }
+    .post-item {
+      display: block; text-decoration: none; color: inherit;
+      padding: 24px; margin-bottom: 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      transition: border-color .2s;
+    }
+    .post-item:hover { border-color: var(--faint); }
+    .post-date { font-size: 12px; color: var(--faint); margin-bottom: 8px; }
+    .post-title { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+    .post-excerpt { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .post-tag {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      color: var(--amber); border: 1px solid var(--line); border-radius: 20px;
+      padding: 2px 10px; margin-top: 10px;
+    }
+
+    /* Footer — identical to main site */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+  </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="Blog in italiano — Wendygo Studio">
+<meta property="og:description" content="Guide, tutorial e consigli su produttività del browser, editing di immagini, manipolazione di testo e gestione della configurazione di rete.">
+<meta property="og:url" content="https://wendygostudio.com/it/blog/">
+<meta property="og:image" content="https://wendygostudio.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog in italiano — Wendygo Studio">
+<meta name="twitter:description" content="Guide, tutorial e consigli su produttività del browser, editing di immagini, manipolazione di testo e gestione della configurazione di rete.">
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+<style id="wg-language-style">.wg-language-switcher{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #3a414e;border-radius:10px;background:rgba(19,21,26,.94);box-shadow:0 8px 28px rgba(0,0,0,.32);font:600 12px/1.2 system-ui,sans-serif;color:#9ca4b4}.wg-language-switcher select{max-width:130px;padding:6px 28px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:520px){.wg-language-switcher{right:10px;bottom:10px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}</style></head>
+<body>  <nav>
+    <a class="nav-brand" href="/it/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/it/#products">Estensioni</a>
+      <a href="/it/blog/">Blog</a>
+      <a href="/tools/">Strumenti</a>
+      <a href="/it/#privacy">Privacy</a>
+      <a href="/" class="nav-lang">EN 🌐</a>
+    </div>
+  </nav>
+
+  <div class="blog-header">
+    <div class="section-label">Blog</div>
+    <h1>Guide e tutorial</h1>
+    <p>Consigli pratici su produttività del browser, editing di immagini, manipolazione di testo e gestione della configurazione di rete.</p>
+  </div>
+
+  <div class="post-list">
+    <a class="post-item" href="/it/blog/venditore-rifiuta-garanzia-legale-ue/">
+      <div class="post-date">25 luglio 2026</div>
+      <div class="post-title">Il Venditore Rifiuta la Garanzia? Ecco Cosa Fare</div>
+      <div class="post-excerpt">Come documentare, formulare ed eventualmente far escalare il reclamo quando un venditore nell'UE rifiuta una garanzia legale valida per un prodotto difettoso.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/it/blog/sanificare-configurazione-router-mikrotik/">
+      <div class="post-date">25 luglio 2026</div>
+      <div class="post-title">Sanificare una Config Router MikroTik Prima di Condividerla</div>
+      <div class="post-excerpt">MikroTik nasconde le password negli export RouterOS di default. Topologia, commenti e indirizzi server restano visibili. Ecco cosa controllare prima.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+
+    <a class="post-item" href="/it/blog/piattaforma-odr-ue-chiusa-alternativa/">
+      <div class="post-date">25 luglio 2026</div>
+      <div class="post-title">La Piattaforma ODR UE Ha Chiuso: Cosa Usare Adesso</div>
+      <div class="post-excerpt">La piattaforma di risoluzione online delle controversie dell'UE ha chiuso definitivamente nel 2025. Ecco cosa la sostituisce per un reclamo transfrontaliero.</div>
+      <span class="post-tag">ClaimForge</span>
+    </a>
+
+    <a class="post-item" href="/it/blog/la-tua-estensione-chrome-ti-spia/">
+      <div class="post-date">25 luglio 2026</div>
+      <div class="post-title">La Tua Estensione Chrome Ti Spia? Checklist 2026</div>
+      <div class="post-excerpt">Google e Microsoft hanno rimosso un'estensione fidata con 1,6M installazioni per raccolta dati nascosta. Come verificare se le tue sono sicure.</div>
+      <span class="post-tag">SlimeForge</span>
+    </a>
+
+    <a class="post-item" href="/it/blog/cosa-insegna-la-violazione-sonicwall/">
+      <div class="post-date">25 luglio 2026</div>
+      <div class="post-title">Cosa Insegna la Violazione SonicWall Sul Condividere Config</div>
+      <div class="post-excerpt">I backup cloud di SonicWall hanno esposto i dati di config di tutti i clienti. Se quel backup non era sicuro, non lo è nemmeno un ticket di supporto.</div>
+      <span class="post-tag">ScrubForge</span>
+    </a>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Isole Canarie</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contatto</a>
+      <a href="/it/privacy">Informativa sulla privacy</a>
+      <a href="/it/termini">Termini e condizioni</a>
+    </div>
+  </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+<div class="wg-language-switcher"><label for="wg-language-select">Lingua</label><select id="wg-language-select" aria-label="Scegli la lingua" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/">English</option><option value="https://wendygostudio.com/es/blog/">Español</option><option value="https://wendygostudio.com/de/blog/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/">Français</option><option value="https://wendygostudio.com/it/blog/" selected>Italiano</option><option value="https://wendygostudio.com/pt/blog/">Português</option></select></div></body>
+</html>
