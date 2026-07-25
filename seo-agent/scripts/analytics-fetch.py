@@ -24,7 +24,22 @@ from pathlib import Path
 
 AGENT_DIR = Path(__file__).resolve().parent.parent
 CONFIG_DIR = AGENT_DIR / "config"
-SITE_DIR = Path(os.environ.get("SITE_DIR", Path.home() / "wendygo-site"))
+
+# Load the local agent configuration when this script is run directly. The
+# daily shell wrapper exports these variables already, but PowerShell/manual
+# runs should behave the same way.
+ENV_FILE = CONFIG_DIR / "agent.env"
+if ENV_FILE.exists():
+    for raw_line in ENV_FILE.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
+
+SITE_DIR = Path(os.environ.get("SITE_DIR", AGENT_DIR.parent))
 
 logging.basicConfig(
     level=logging.INFO,
