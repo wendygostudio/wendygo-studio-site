@@ -75,6 +75,7 @@ for (const document of documents) {
   const siblings = documents.filter(candidate => candidate.data.translationKey === data.translationKey);
   const routes = {};
   for (const sibling of siblings) routes[sibling.data.locale || 'en'] = routePath(sibling.data.locale || 'en', sibling.data.slug);
+  if (data.xDefaultPath && !routes.en) routes.en = data.xDefaultPath;
   if (!routes[locale]) routes[locale] = canonicalPath;
 
   const otherLocaleCodes = localeOrder.filter(code => routes[code] && code !== locale);
