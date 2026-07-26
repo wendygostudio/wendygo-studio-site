@@ -74,7 +74,7 @@ for (const id of ids) {
     const file = path.resolve(`public/${locale}/${id}/index.html`);
     const html = fs.readFileSync(file, 'utf8');
     const parsed = tokens(html);
-    const translated = cache.pages[id]?.[locale] || [];
+    const translated = (cache.pages[id]?.[locale] || []).filter((text) => !text.includes(String.fromCodePoint(0x1f310)));
     if (parsed.out.length !== source.length || translated.length !== source.length) {
       errors.push(`${locale}/${id}: block count ${parsed.out.length}/${source.length}/${translated.length}`);
       continue;
