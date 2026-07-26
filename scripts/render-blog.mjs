@@ -19,7 +19,7 @@ const INTL_TAG = {en: 'en-US', es: 'es-ES', de: 'de-DE', fr: 'fr-FR', it: 'it-IT
 // Each locale's real privacy-page slug (they don't all use "/privacy").
 const PRIVACY_SLUG = {en: 'privacy', es: 'privacy', de: 'datenschutz', fr: 'confidentialite', it: 'privacy', pt: 'privacidade'};
 // Locales that actually have a localized /tools/ page; others fall back to the EN root page.
-const TOOLS_LOCALES = new Set(['en', 'es']);
+const TOOLS_LOCALES = new Set(['en', 'es', 'de', 'fr', 'it', 'pt']);
 
 const STRINGS = {
   menu: {en: 'Menu', es: 'Menú', de: 'Menü', fr: 'Menu', it: 'Menu', pt: 'Menu'},

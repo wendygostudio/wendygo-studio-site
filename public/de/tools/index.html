@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kostenlose Browser-Tools – Wendygo Studio</title>
+  <meta name="description" content="Kostenlose Browser-Tools für Entwickler, Ersteller und alle, die mit Text und Bildern arbeiten. Kein Upload, kein Konto, kein Tracking – alles läuft…" />
+  <link rel="canonical" href="https://wendygostudio.com/de/tools/" />
+            <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/" />
+  <link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/tools/" />
+  <link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/tools/" />
+  <link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/tools/" />
+  <link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/tools/" />
+  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/tools/" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px; text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-lang { white-space: nowrap; }
+
+    /* ── PAGE LAYOUT ── */
+    .page-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: clamp(60px,10vw,100px) clamp(20px,5vw,60px) clamp(60px,8vw,100px);
+    }
+
+    .page-header {
+      text-align: center; margin-bottom: clamp(48px, 8vw, 80px);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 20px;
+    }
+    .eyebrow::before, .eyebrow::after { content: ''; flex: 1; width: 28px; height: 1px; background: var(--amber); opacity: .5; }
+    h1 {
+      font-size: clamp(36px, 6vw, 56px); font-weight: 800; line-height: 1.1;
+      letter-spacing: -1px; margin-bottom: 16px;
+    }
+    .page-sub {
+      font-size: clamp(15px, 2vw, 18px); color: var(--muted); max-width: 520px; margin: 0 auto;
+    }
+
+    /* ── TOOLS GRID ── */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line);
+      border-radius: 16px; padding: 32px; display: flex; flex-direction: column;
+      transition: border-color .2s, transform .2s;
+      text-decoration: none; color: inherit;
+    }
+    .tool-card:hover {
+      border-color: var(--faint);
+      transform: translateY(-2px);
+    }
+
+    .tool-icon {
+      width: 56px; height: 56px; border-radius: 14px; background: var(--amber);
+      display: grid; place-items: center; font-size: 28px; color: var(--on-a);
+      margin-bottom: 20px;
+    }
+
+    .tool-title {
+      font-size: 22px; font-weight: 750; letter-spacing: -.3px;
+      margin-bottom: 8px; color: var(--text);
+    }
+    .tool-desc {
+      font-size: 14.5px; color: var(--muted); line-height: 1.6;
+      margin-bottom: 24px; flex: 1;
+    }
+
+    .tool-features {
+      display: flex; flex-direction: column; gap: 8px;
+      margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line);
+    }
+    .tool-feature {
+      font-size: 13.5px; color: var(--text);
+      display: flex; align-items: baseline; gap: 9px;
+    }
+    .tool-feature::before {
+      content: '◆'; font-size: 6px; color: var(--amber); flex: none; position: relative; top: -1px;
+    }
+
+    .tool-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-weight: 700; font-size: 13.5px; text-decoration: none;
+      padding: 12px 20px; border-radius: var(--r); border: none; cursor: pointer;
+      transition: filter .15s;
+    }
+    .tool-cta:hover { filter: brightness(1.08); }
+
+    /* ── RESPONSIVE ── */
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="Free Browser Tools — Wendygo Studio">
+<meta property="og:description" content="Free browser tools for developers, creators, and anyone who works with text and images. No upload, no account, no tracking — everything runs locally">
+<meta property="og:url" content="https://wendygostudio.com/tools/">
+<meta property="og:image" content="https://wendygostudio.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Browser Tools — Wendygo Studio">
+<meta name="twitter:description" content="Free browser tools for developers, creators, and anyone who works with text and images. No upload, no account, no tracking — everything runs locally">
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/de/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/de/#products">Erweiterungen</a>
+      <a href="/blog/">Blog</a>
+      <a href="/de/tools/">Werkzeuge</a>
+      <a href="/de/#how">Wie es funktioniert</a>
+      <a href="/de/#privacy">Privatsphäre</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Sprache</label><select id="wg-language-select" aria-label="Sprache wählen" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/tools/">English</option><option value="https://wendygostudio.com/es/tools/">Español</option><option value="https://wendygostudio.com/de/tools/" selected>Deutsch</option><option value="https://wendygostudio.com/fr/tools/">Français</option><option value="https://wendygostudio.com/it/tools/">Italiano</option><option value="https://wendygostudio.com/pt/tools/">Português</option></select></div></nav>
+
+  <div class="page-wrap">
+    <div class="page-header">
+      <div class="eyebrow">Werkzeuge</div>
+      <h1>Kostenlose Online-Dienstprogramme</h1>
+      <p class="page-sub">Schnelle, zweckgebundene Tools, die vollständig in Ihrem Browser ausgeführt werden. Keine Anmeldung, keine Nachverfolgung, keine Daten werden jemals hochgeladen.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <!-- YouTube Thumbnail Checker -->
+      <a href="/de/tools/youtube-thumbnail-checker/" class="tool-card">
+        <div class="tool-icon">📐</div>
+        <h2 class="tool-title">YouTube-Thumbnail-Checker</h2>
+        <p class="tool-desc">Stellen Sie sicher, dass Ihre YouTube-Miniaturansichten die Anforderungen von 1280 x 720 Pixeln erfüllen, weniger als 2 MB groß sind und im JPG/PNG-Format vorliegen.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Validiert Abmessungen (1280×720 px)</div>
+          <div class="tool-feature">Überprüft die Dateigröße (max. 2 MB)</div>
+          <div class="tool-feature">Überprüft das Format (JPG/PNG)</div>
+          <div class="tool-feature">Überprüft das Seitenverhältnis 16:9</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+      <!-- IP Address Extractor -->
+      <a href="/de/tools/ip-extractor/" class="tool-card">
+        <div class="tool-icon">🌐</div>
+        <h2 class="tool-title">IP-Adressextraktor</h2>
+        <p class="tool-desc">Fügen Sie beliebigen Text ein und extrahieren Sie sofort alle IPv4- und IPv6-Adressen mit Häufigkeitszählung und privater/öffentlicher Klassifizierung.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Extrahiert IPv4- und IPv6-Adressen</div>
+          <div class="tool-feature">Zeigt die Häufigkeitsanzahl pro eindeutiger IP an</div>
+          <div class="tool-feature">Klassifiziert privat, öffentlich, Loopback</div>
+          <div class="tool-feature">100 % lokal – kein Server-Upload</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+      <!-- Regex Tester -->
+      <a href="/de/tools/regex-tester/" class="tool-card">
+        <div class="tool-icon">🔎</div>
+        <h2 class="tool-title">Regex-Tester</h2>
+        <p class="tool-desc">Testen Sie reguläre Ausdrücke mit Live-Match-Hervorhebung, Erfassungsgruppen und Match-Positionen. Unterstützt g-, i-, m- und s-Flags.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Live-Hervorhebung während der Eingabe</div>
+          <div class="tool-feature">Zeigt Capture-Gruppen pro Spiel an</div>
+          <div class="tool-feature">Passen Sie Start- und Endpositionen an</div>
+          <div class="tool-feature">8 gängige Schnelllademuster</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+      <!-- UUID Generator -->
+      <a href="/de/tools/uuid-generator/" class="tool-card">
+        <div class="tool-icon">🔑</div>
+        <h2 class="tool-title">UUID v4-Generator</h2>
+        <p class="tool-desc">Generieren Sie sofort 1 bis 1.000 UUID v4-Werte. Schalten Sie Bindestriche und Großbuchstaben um und kopieren Sie alles mit einem Klick. 100 % lokal – nichts wird an einen Server gesendet.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Massengenerierung von bis zu 1.000 UUIDs</div>
+          <div class="tool-feature">Mit oder ohne Bindestriche</div>
+          <div class="tool-feature">Ausgabe in Klein- oder Großbuchstaben</div>
+          <div class="tool-feature">Mit einem Klick alles oder einzelne kopieren</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+      <!-- Subnet Calculator -->
+      <a href="/de/tools/subnet-calculator/" class="tool-card">
+        <div class="tool-icon">🔢</div>
+        <h2 class="tool-title">Subnetzrechner</h2>
+        <p class="tool-desc">Geben Sie eine beliebige IPv4-Adresse mit CIDR oder Subnetzmaske ein, um Netzwerkadresse, Broadcast, Hostbereich, Platzhaltermaske und binäre Aufschlüsselung zu erhalten. Kein Upload erforderlich.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Akzeptiert CIDR oder gepunktete Subnetzmaske</div>
+          <div class="tool-feature">Netzwerk, Broadcast, erster und letzter Host</div>
+          <div class="tool-feature">Wildcard-Maske und binäre Aufschlüsselung</div>
+          <div class="tool-feature">Gemeinsames Subnetz-Cheatsheet enthalten</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+      <!-- JSON Formatter -->
+      <a href="/de/tools/json-formatter/" class="tool-card">
+        <div class="tool-icon">{ }</div>
+        <h2 class="tool-title">JSON-Formatierer</h2>
+        <p class="tool-desc">Fügen Sie JSON ein, um es durch Syntaxhervorhebung aufzupeppen, Fehler mit genauen Zeilennummern zu validieren und zu finden oder es für die Produktion zu verkleinern. Automatische Formatierung beim Einfügen.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Formatieren Sie mit 2 oder 4 Leerzeichen Einzug</div>
+          <div class="tool-feature">Syntaxhervorhebung (Schlüssel, Zeichenfolgen, Zahlen)</div>
+          <div class="tool-feature">Fehlerzeile und -spalte bei ungültigem JSON</div>
+          <div class="tool-feature">Minimieren und kopieren Sie die Ausgabe mit einem Klick</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+      <!-- Slug Generator -->
+      <a href="/de/tools/slug-generator/" class="tool-card">
+        <div class="tool-icon">🔗</div>
+        <h2 class="tool-title">URL-Slug-Generator</h2>
+        <p class="tool-desc">Konvertieren Sie jeden Text sofort in einen sauberen, URL-freundlichen Slug. Behandelt Akzente (Café → Café), Leerzeichen und Sonderzeichen. Wählen Sie als Trennzeichen einen Bindestrich oder einen Unterstrich.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Normalisiert Akzentzeichen (á, ü, ñ…)</div>
+          <div class="tool-feature">Trennzeichen durch Bindestrich oder Unterstrich</div>
+          <div class="tool-feature">Optionale maximale Länge mit sauberer Kürzung</div>
+          <div class="tool-feature">Live-Generierung – keine Schaltfläche erforderlich</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+      <!-- Password Generator -->
+      <a href="/de/tools/password-generator/" class="tool-card">
+        <div class="tool-icon">🔒</div>
+        <h2 class="tool-title">Passwortgenerator</h2>
+        <p class="tool-desc">Generieren Sie sichere, zufällige Passwörter mit konfigurierbarer Länge, Zeichensätzen und Anzahl. Verwendet crypto.getRandomValues() – nichts verlässt Ihren Browser.</p>
+        <div class="tool-features">
+          <div class="tool-feature">Länge 8–128 mit Live-Slider</div>
+          <div class="tool-feature">Umschalten zwischen Groß- und Kleinschreibung, Zahlen und Symbolen</div>
+          <div class="tool-feature">Entropiebasierter Kraftmesser</div>
+          <div class="tool-feature">Generieren Sie bis zu 100 Passwörter gleichzeitig</div>
+        </div>
+        <div class="tool-cta">
+          Verwenden Sie das Werkzeug →
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

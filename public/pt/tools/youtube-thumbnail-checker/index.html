@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verificador de miniaturas do YouTube – verifique o…</title>
+  <meta name="description" content="Verifique instantaneamente se a sua miniatura do YouTube cumpre os requisitos de 1280×720 px, abaixo de 2 MB, JPG/PNG. 100% gratuito, corre no seu…" />
+  <link rel="canonical" href="https://wendygostudio.com/pt/tools/youtube-thumbnail-checker/" />
+            <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/youtube-thumbnail-checker/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/youtube-thumbnail-checker/" />
+  <link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/tools/youtube-thumbnail-checker/" />
+  <link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/tools/youtube-thumbnail-checker/" />
+  <link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/tools/youtube-thumbnail-checker/" />
+  <link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/tools/youtube-thumbnail-checker/" />
+  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/tools/youtube-thumbnail-checker/" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "YouTube Thumbnail Checker",
+      "url": "https://wendygostudio.com/tools/youtube-thumbnail-checker/",
+      "description": "Free browser-based tool to verify YouTube thumbnail dimensions (1280×720 px), file size (under 2 MB), and format (JPG/PNG). No upload — runs 100% locally.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Checks image dimensions against 1280×720 px YouTube requirement",
+        "Verifies file size is under 2 MB",
+        "Validates JPG, PNG, GIF, and BMP format",
+        "Checks 16:9 aspect ratio",
+        "100% local — no server upload"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "YouTube Thumbnail Checker", "item": "https://wendygostudio.com/tools/youtube-thumbnail-checker/" }
+      ]
+    },
+    {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+                {
+                      "@type": "Question",
+                      "name": "What's the required thumbnail size for YouTube?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "YouTube recommends 1280×720 pixels (16:9 ratio), under 2 MB, in JPG, PNG, GIF, or BMP format. This tool checks your image against those requirements instantly."
+                      }
+                },
+                {
+                      "@type": "Question",
+                      "name": "What file formats does the checker accept?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "It checks against YouTube's accepted formats: JPG, PNG, GIF, and BMP."
+                      }
+                },
+                {
+                      "@type": "Question",
+                      "name": "Does it check video length or other YouTube requirements?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No, this tool only checks thumbnail image dimensions, file size, and format — it doesn't touch video files or other channel settings."
+                      }
+                },
+                {
+                      "@type": "Question",
+                      "name": "Is my image uploaded to YouTube or any server?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No, the check happens entirely in your browser by reading the image file locally — nothing is uploaded anywhere, including to YouTube."
+                      }
+                }
+          ]
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --green:  #4ade80;
+      --red:    #f87171;
+      --yellow: #facc15;
+      --r: 9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Page layout */
+    .page-wrap {
+      max-width: 680px; margin: 0 auto;
+      padding: clamp(40px,7vw,72px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 28px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Hero */
+    .tool-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(24px,4vw,36px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.6px; margin-bottom: 12px;
+    }
+    .tool-intro { font-size: 16px; color: var(--muted); line-height: 1.65; margin-bottom: 36px; }
+
+    /* Drop zone */
+    .drop-zone {
+      border: 2px dashed var(--line);
+      border-radius: 14px;
+      background: var(--surf);
+      padding: 48px 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      position: relative;
+      margin-bottom: 28px;
+    }
+    .drop-zone:hover, .drop-zone.drag-over {
+      border-color: var(--amber);
+      background: var(--surf2);
+    }
+    .drop-zone input[type="file"] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
+    }
+    .drop-icon {
+      font-size: 40px; margin-bottom: 12px; display: block;
+      filter: grayscale(1) opacity(.6);
+    }
+    .drop-label { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .drop-sub { font-size: 13px; color: var(--muted); }
+    .drop-btn {
+      display: inline-block; margin-top: 16px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 13px; font-weight: 700;
+      padding: 9px 20px; border-radius: 7px;
+      pointer-events: none;
+    }
+
+    /* Preview + results card */
+    #results { display: none; }
+    .preview-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      overflow: hidden; margin-bottom: 20px;
+    }
+    .preview-img-wrap {
+      background: var(--surf2);
+      display: flex; align-items: center; justify-content: center;
+      min-height: 160px; max-height: 260px; overflow: hidden;
+    }
+    .preview-img-wrap img {
+      max-width: 100%; max-height: 260px; object-fit: contain; display: block;
+    }
+    .preview-meta {
+      padding: 16px 20px;
+      display: flex; flex-wrap: wrap; gap: 16px;
+    }
+    .meta-item { font-size: 13px; color: var(--muted); }
+    .meta-item strong { color: var(--text); font-size: 14px; display: block; }
+
+    /* Overall verdict */
+    .verdict {
+      border-radius: 12px; padding: 20px 24px;
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 20px; border: 1px solid;
+    }
+    .verdict.pass { background: rgba(74,222,128,.08); border-color: rgba(74,222,128,.25); }
+    .verdict.fail { background: rgba(248,113,113,.08); border-color: rgba(248,113,113,.25); }
+    .verdict.warn { background: rgba(250,204,21,.08); border-color: rgba(250,204,21,.25); }
+    .verdict-icon { font-size: 28px; flex-shrink: 0; }
+    .verdict-text h2 { font-size: 17px; font-weight: 700; margin-bottom: 2px; }
+    .verdict-text p { font-size: 13px; color: var(--muted); }
+    .verdict.pass .verdict-text h2 { color: var(--green); }
+    .verdict.fail .verdict-text h2 { color: var(--red); }
+    .verdict.warn .verdict-text h2 { color: var(--yellow); }
+
+    /* Checks list */
+    .checks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .check-item {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px;
+    }
+    .check-badge {
+      width: 22px; height: 22px; border-radius: 50%;
+      display: grid; place-items: center; font-size: 12px; flex-shrink: 0; margin-top: 1px;
+    }
+    .check-badge.pass { background: rgba(74,222,128,.15); color: var(--green); }
+    .check-badge.fail { background: rgba(248,113,113,.15); color: var(--red); }
+    .check-badge.warn { background: rgba(250,204,21,.12); color: var(--yellow); }
+    .check-content { flex: 1; }
+    .check-label { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .check-detail { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .check-detail.fail { color: var(--red); opacity: .9; }
+    .check-detail.pass { color: var(--green); opacity: .9; }
+    .check-detail.warn { color: var(--yellow); opacity: .9; }
+
+    /* Fix suggestions */
+    .fix-box {
+      background: var(--surf2); border: 1px solid var(--line); border-radius: 12px;
+      padding: 20px 24px; margin-bottom: 28px; display: none;
+    }
+    .fix-box h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    .fix-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .fix-box li { font-size: 13px; color: var(--muted); padding-left: 16px; position: relative; }
+    .fix-box li::before { content: "→"; position: absolute; left: 0; color: var(--amber); }
+
+    /* Reset button */
+    .reset-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; border: 1px solid var(--line); color: var(--muted);
+      font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 7px;
+      cursor: pointer; transition: border-color .15s, color .15s; margin-bottom: 28px;
+    }
+    .reset-btn:hover { border-color: var(--faint); color: var(--text); }
+
+    /* CTA */
+    .cta-box {
+      margin-top: 8px; padding: 28px 28px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .cta-box p { font-size: 14px; color: var(--muted); flex: 1; min-width: 200px; line-height: 1.55; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0;
+      background: var(--amber); color: var(--on-a);
+      font-size: 13px; font-weight: 700; text-decoration: none;
+      padding: 10px 20px; border-radius: 8px; transition: background .15s; white-space: nowrap;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Info section */
+    .info-section { margin-top: 56px; }
+    .info-section h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+    .specs-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 24px; }
+    .specs-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px;
+    }
+    .specs-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--text);
+    }
+    .specs-table tr:last-child td { border-bottom: none; }
+    .specs-table td:first-child { color: var(--muted); }
+    .info-p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .cta-box { flex-direction: column; }
+    }
+  
+    /* FAQ */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a code {
+      font-family: var(--mono, monospace); font-size: 12px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+
+    /* Related tools */
+    .related { margin: 32px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+  </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="YouTube Thumbnail Checker — Verify Size, Format &amp;">
+<meta property="og:description" content="Instantly check if your YouTube thumbnail meets the 1280×720 px, under 2 MB, JPG/PNG requirements. 100% free, runs in your browser — nothing uploaded">
+<meta property="og:url" content="https://wendygostudio.com/tools/youtube-thumbnail-checker/">
+<meta property="og:image" content="https://wendygostudio.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YouTube Thumbnail Checker — Verify Size, Format &amp;">
+<meta name="twitter:description" content="Instantly check if your YouTube thumbnail meets the 1280×720 px, under 2 MB, JPG/PNG requirements. 100% free, runs in your browser — nothing uploaded">
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>  <nav>
+    <a class="nav-brand" href="/pt/">
+      <div class="nav-mark">C</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/pt/#products">Extensões</a>
+      <a href="/blog/">Blogue</a>
+      <a href="/pt/tools/">Ferramentas</a>
+      <a href="/pt/#how">Como funciona</a>
+      <a href="/pt/#privacy">Privacidade</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Idioma</label><select id="wg-language-select" aria-label="Escolher idioma" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/tools/youtube-thumbnail-checker/">English</option><option value="https://wendygostudio.com/es/tools/youtube-thumbnail-checker/">Español</option><option value="https://wendygostudio.com/de/tools/youtube-thumbnail-checker/">Deutsch</option><option value="https://wendygostudio.com/fr/tools/youtube-thumbnail-checker/">Français</option><option value="https://wendygostudio.com/it/tools/youtube-thumbnail-checker/">Italiano</option><option value="https://wendygostudio.com/pt/tools/youtube-thumbnail-checker/" selected>Português</option></select></div></nav>
+
+  <div class="page-wrap">
+
+    <div class="breadcrumb">
+      <a href="/pt/">Casa</a><span>›</span><a href="/pt/tools/">Ferramentas</a><span>›</span>Verificador de miniaturas do YouTube
+    </div>
+
+    <div class="tool-tag">Ferramenta gratuita · FrameForge</div>
+    <h1>Verificador de miniaturas do YouTube</h1>
+    <p class="tool-intro">Solte a sua imagem em miniatura abaixo e veja instantaneamente se cumpre os requisitos do YouTube: 1280×720 px, menos de 2 MB, JPG ou PNG. Funciona inteiramente no seu browser – nada é enviado para qualquer servidor.</p>
+
+    <!-- Drop zone -->
+    <div class="drop-zone" id="dropZone">
+      <input type="file" id="fileInput" accept="image/jpeg,image/png,image/gif,image/bmp,image/webp" />
+      <span class="drop-icon">🖼️</span>
+      <div class="drop-label">Deixe aqui a sua miniatura</div>
+      <div class="drop-sub">ou clique para selecionar um ficheiro</div>
+      <div class="drop-btn">Navegar na imagem</div>
+    </div>
+
+    <!-- Results -->
+    <div id="results">
+
+      <div class="preview-card">
+        <div class="preview-img-wrap">
+          <img id="previewImg" src="" alt="Thumbnail preview" />
+        </div>
+        <div class="preview-meta">
+          <div class="meta-item"><strong id="metaName">—</strong>Nome do ficheiro</div>
+          <div class="meta-item"><strong id="metaDims">—</strong>Dimensões</div>
+          <div class="meta-item"><strong id="metaSize">—</strong>Tamanho do ficheiro</div>
+          <div class="meta-item"><strong id="metaType">—</strong>Formatar</div>
+        </div>
+      </div>
+
+      <div class="verdict" id="verdictBox">
+        <div class="verdict-icon" id="verdictIcon"></div>
+        <div class="verdict-text">
+          <h2 id="verdictTitle"></h2>
+          <p id="verdictSub"></p>
+        </div>
+      </div>
+
+      <div class="checks" id="checksList"></div>
+
+      <div class="fix-box" id="fixBox">
+        <h3>Como consertar</h3>
+        <ul id="fixList"></ul>
+      </div>
+
+      <button class="reset-btn" id="resetBtn">← Confira outra imagem</button>
+
+      <div class="cta-box">
+        <p>Precisa de redimensionar esta miniatura para exatamente 1280×720? <strong>FrameForge</strong> recorta e exporta qualquer imagem para as especificações do YouTube em segundos – tudo dentro do Chrome, nada carregado.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
+          Experimente o FrameForge – grátis
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Info section -->
+    <div class="info-section">
+      <h2>Requisitos de miniaturas do YouTube</h2>
+      <table class="specs-table">
+        <thead>
+          <tr><th>Exigência</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tamanho recomendado</td><td>1280 × 720 pixéis</td></tr>
+          <tr><td>Tamanho mínimo</td><td>640 × 360 pixéis</td></tr>
+          <tr><td>Proporção de aspeto</td><td>16:9</td></tr>
+          <tr><td>Tamanho máximo do ficheiro</td><td>2MB</td></tr>
+          <tr><td>Formatos aceites</td><td>JPG, PNG, GIF, BMP</td></tr>
+        </tbody>
+      </table>
+      <p class="info-p">O YouTube aceita miniaturas até 640×360, mas ficarão desfocadas em ecrãs de alto DPI. Aponte sempre a 1280×720 para obter resultados nítidos em ecrãs retina e monitores grandes.</p>
+      <p class="info-p">O canto inferior direito da sua miniatura está coberto pelo rótulo de carimbo de data/hora do YouTube nos resultados de pesquisa, por isso mantenha os rostos, textos e imagens importantes longe desta área.</p>
+    </div>
+    <!-- FAQ -->
+    <div class="info-section">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Qual é o tamanho de miniatura necessário para o YouTube?</p>
+        <p class="faq-a">O YouTube recomenda 1280×720 pixéis (proporção 16:9), menos de 2 MB, em formato JPG, PNG, GIF ou BMP. Esta ferramenta verifica a sua imagem em relação a estes requisitos instantaneamente.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Que formatos de ficheiro o verificador aceita?</p>
+        <p class="faq-a">Verifica os formatos aceites pelo YouTube: JPG, PNG, GIF e BMP.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Verifica a duração do vídeo ou outros requisitos do YouTube?</p>
+        <p class="faq-a">Não, esta ferramenta apenas verifica as dimensões, o tamanho e o formato da imagem em miniatura - não altera os ficheiros de vídeo ou outras definições do canal.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">A minha imagem é enviada para o YouTube ou para qualquer servidor?</p>
+        <p class="faq-a">Não, a verificação acontece inteiramente no seu browser, lendo o ficheiro de imagem localmente – nada é carregado em lado nenhum, incluindo no YouTube.</p>
+      </div>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <div class="related-label">Ferramentas relacionadas</div>
+      <div class="related-links">
+          <a class="related-link" href="/blog/resize-image-youtube-thumbnail-chrome/">
+            Como redimensionar uma imagem para uma miniatura do YouTube
+            <span>Guia passo a passo de redimensionamento utilizando o FrameForge</span>
+          </a>
+          <a class="related-link" href="/blog/frameforge-vs-canva-thumbnails/">
+            FrameForge vs. Canva para miniaturas
+            <span>Compare uma ferramenta local com um editor baseado na nuvem</span>
+          </a>
+          <a class="related-link" href="/guides/image-resizing-social-media/">
+            Redimensionamento de imagens para redes sociais – Guia completo
+            <span>Gráficos de tamanho para todas as principais plataformas, não apenas para o YouTube</span>
+          </a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canárias</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X/Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contacto</a>
+      <a href="/pt/privacidade">Política de Privacidade</a>
+      <a href="/pt/termos">Termos e Condições</a>
+    </div>
+  </footer>
+
+  <script>
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const results  = document.getElementById('results');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const REQUIRED_W = 1280, REQUIRED_H = 720;
+    const MIN_W = 640, MIN_H = 360;
+    const MAX_BYTES = 2 * 1024 * 1024;
+    const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp'];
+    const RATIO = 16 / 9;
+    const RATIO_TOLERANCE = 0.02;
+
+    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+    dropZone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropZone.classList.remove('drag-over');
+      const file = e.dataTransfer.files[0];
+      if (file) processFile(file);
+    });
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files[0]) processFile(fileInput.files[0]);
+    });
+    resetBtn.addEventListener('click', reset);
+
+    function reset() {
+      results.style.display = 'none';
+      dropZone.style.display = '';
+      fileInput.value = '';
+    }
+
+    function processFile(file) {
+      const url = URL.createObjectURL(file);
+      const img  = new Image();
+      img.onload = () => {
+        showResults(file, img.naturalWidth, img.naturalHeight, url);
+        URL.revokeObjectURL(url);
+      };
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        alert('Could not read the image file. Make sure it is a valid image.');
+      };
+      img.src = url;
+    }
+
+    function fmtBytes(b) {
+      if (b < 1024) return b + ' B';
+      if (b < 1024 * 1024) return (b / 1024).toFixed(1) + ' KB';
+      return (b / (1024 * 1024)).toFixed(2) + ' MB';
+    }
+
+    function showResults(file, w, h, url) {
+      // Fill metadata
+      document.getElementById('previewImg').src = url;
+      document.getElementById('metaName').textContent = file.name;
+      document.getElementById('metaDims').textContent = w + ' × ' + h + ' px';
+      document.getElementById('metaSize').textContent = fmtBytes(file.size);
+      document.getElementById('metaType').textContent = file.type || 'unknown';
+
+      const checks = [];
+      const fixes  = [];
+
+      // 1 — Dimensions
+      const isPerfect = w === REQUIRED_W && h === REQUIRED_H;
+      const isMeetMin = w >= MIN_W && h >= MIN_H;
+      if (isPerfect) {
+        checks.push({ status: 'pass', label: 'Dimensions', detail: '1280 × 720 px — perfect.' });
+      } else if (isMeetMin) {
+        checks.push({ status: 'warn', label: 'Dimensions', detail: w + ' × ' + h + ' px — meets minimum but will look soft on large screens. Recommended: 1280 × 720 px.' });
+        fixes.push('Resize to exactly 1280 × 720 px for sharpest results on all screens.');
+      } else {
+        checks.push({ status: 'fail', label: 'Dimensions', detail: w + ' × ' + h + ' px — too small. Minimum is 640 × 360 px; recommended is 1280 × 720 px.' });
+        fixes.push('Resize your image to at least 640 × 360 px (ideally 1280 × 720 px).');
+      }
+
+      // 2 — Aspect ratio
+      const ratio = w / h;
+      const ratioOk = Math.abs(ratio - RATIO) <= RATIO_TOLERANCE;
+      const ratioLabel = (Math.round((w / h) * 100) / 100).toFixed(2).replace('.', ':').replace(/^(\d+):(\d+)$/, (_, a, b) => {
+        return (ratio).toFixed(2);
+      });
+      if (ratioOk) {
+        checks.push({ status: 'pass', label: 'Aspect ratio', detail: '16:9 — correct.' });
+      } else {
+        const displayRatio = (w / h).toFixed(2);
+        checks.push({ status: 'fail', label: 'Aspect ratio', detail: 'Ratio is ' + displayRatio + ':1, not 16:9 (1.78:1). YouTube may crop the edges.' });
+        fixes.push('Crop your image to a 16:9 ratio before exporting.');
+      }
+
+      // 3 — File size
+      if (file.size <= MAX_BYTES) {
+        checks.push({ status: 'pass', label: 'File size', detail: fmtBytes(file.size) + ' — under the 2 MB limit.' });
+      } else {
+        checks.push({ status: 'fail', label: 'File size', detail: fmtBytes(file.size) + ' — exceeds the 2 MB limit. YouTube will reject this file.' });
+        fixes.push('Export as JPG at 85–90% quality to reduce file size below 2 MB.');
+      }
+
+      // 4 — Format
+      const typeOk = ACCEPTED_TYPES.includes(file.type);
+      const isWebP  = file.type === 'image/webp';
+      if (typeOk) {
+        const fmt = file.type.split('/')[1].toUpperCase();
+        checks.push({ status: 'pass', label: 'File format', detail: fmt + ' — accepted by YouTube.' });
+      } else if (isWebP) {
+        checks.push({ status: 'fail', label: 'File format', detail: 'WebP is not accepted by YouTube. Convert to JPG or PNG.' });
+        fixes.push('Convert the file to JPG or PNG — YouTube does not accept WebP.');
+      } else {
+        const fmt = file.type || 'unknown';
+        checks.push({ status: 'fail', label: 'File format', detail: fmt + ' — not accepted by YouTube. Use JPG, PNG, GIF, or BMP.' });
+        fixes.push('Save the image as JPG or PNG for best compatibility.');
+      }
+
+      // Overall verdict
+      const failCount = checks.filter(c => c.status === 'fail').length;
+      const warnCount = checks.filter(c => c.status === 'warn').length;
+      const verdictBox   = document.getElementById('verdictBox');
+      const verdictIcon  = document.getElementById('verdictIcon');
+      const verdictTitle = document.getElementById('verdictTitle');
+      const verdictSub   = document.getElementById('verdictSub');
+
+      verdictBox.className = 'verdict';
+      if (failCount > 0) {
+        verdictBox.classList.add('fail');
+        verdictIcon.textContent  = '✗';
+        verdictTitle.textContent = failCount === 1 ? '1 issue found' : failCount + ' issues found';
+        verdictSub.textContent   = 'Fix the issues below before uploading to YouTube.';
+      } else if (warnCount > 0) {
+        verdictBox.classList.add('warn');
+        verdictIcon.textContent  = '⚠';
+        verdictTitle.textContent = 'Passes — but could be better';
+        verdictSub.textContent   = 'YouTube will accept this image, but 1280 × 720 px is recommended for best quality.';
+      } else {
+        verdictBox.classList.add('pass');
+        verdictIcon.textContent  = '✓';
+        verdictTitle.textContent = 'All checks passed';
+        verdictSub.textContent   = 'This thumbnail meets all of YouTube\'s requirements.';
+      }
+
+      // Render check items
+      const checksList = document.getElementById('checksList');
+      checksList.innerHTML = '';
+      checks.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'check-item';
+        const icon = c.status === 'pass' ? '✓' : c.status === 'warn' ? '⚠' : '✗';
+        item.innerHTML = `
+          <div class="check-badge ${c.status}">${icon}</div>
+          <div class="check-content">
+            <div class="check-label">${c.label}</div>
+            <div class="check-detail ${c.status}">${c.detail}</div>
+          </div>`;
+        checksList.appendChild(item);
+      });
+
+      // Fix suggestions
+      const fixBox  = document.getElementById('fixBox');
+      const fixList = document.getElementById('fixList');
+      if (fixes.length > 0) {
+        fixList.innerHTML = fixes.map(f => `<li>${f}</li>`).join('');
+        fixBox.style.display = 'block';
+      } else {
+        fixBox.style.display = 'none';
+      }
+
+      dropZone.style.display = 'none';
+      results.style.display  = 'block';
+    }
+  </script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

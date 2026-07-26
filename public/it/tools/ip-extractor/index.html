@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estrattore di indirizzi IP: estrae gratuitamente tutti gli…</title>
+  <meta name="description" content="Incolla qualsiasi testo ed estrai immediatamente tutti gli indirizzi IPv4 e IPv6. Strumento browser gratuito: file di registro, dump di…" />
+  <link rel="canonical" href="https://wendygostudio.com/it/tools/ip-extractor/" />
+            <link rel="alternate" hreflang="en" href="https://wendygostudio.com/tools/ip-extractor/" />
+  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/tools/ip-extractor/" />
+  <link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/tools/ip-extractor/" />
+  <link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/tools/ip-extractor/" />
+  <link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/tools/ip-extractor/" />
+  <link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/tools/ip-extractor/" />
+  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/tools/ip-extractor/" />
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "IP Address Extractor",
+      "url": "https://wendygostudio.com/tools/ip-extractor/",
+      "description": "Free browser-based tool to extract all IPv4 and IPv6 addresses from any text — log files, config dumps, firewall output. 100% local, no server upload.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Extracts IPv4 addresses from any text",
+        "Extracts IPv6 addresses from any text",
+        "Shows frequency count per unique IP",
+        "Classifies private, public, and loopback ranges",
+        "100% local — no server upload"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://wendygostudio.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "IP Address Extractor", "item": "https://wendygostudio.com/tools/ip-extractor/" }
+      ]
+    },
+    {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+                {
+                      "@type": "Question",
+                      "name": "Does it detect IPv6 addresses too?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, the extractor pulls both IPv4 and IPv6 addresses from any text you paste — logs, firewall output, config dumps, or network traces."
+                      }
+                },
+                {
+                      "@type": "Question",
+                      "name": "How does it classify public vs. private IPs?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "It checks each extracted address against the standard private ranges (like 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16 for IPv4) and labels it public or private accordingly."
+                      }
+                },
+                {
+                      "@type": "Question",
+                      "name": "Can I paste large log files?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, there's no hard size limit — very large pastes may just take a moment longer to process since everything runs in your browser tab."
+                      }
+                },
+                {
+                      "@type": "Question",
+                      "name": "Is the pasted text sent to a server?",
+                      "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. Extraction runs entirely with local JavaScript — nothing leaves your browser, which makes it safe for firewall logs and other sensitive network data."
+                      }
+                }
+          ]
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --green:  #4ade80;
+      --red:    #f87171;
+      --blue:   #60a5fa;
+      --purple: #a78bfa;
+      --r: 9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "Cascadia Code", "Fira Code", "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    /* Page layout */
+    .page-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(40px,7vw,72px) clamp(20px,5vw,40px) 80px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 28px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* Hero */
+    .tool-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(24px,4vw,36px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.6px; margin-bottom: 12px;
+    }
+    .tool-intro { font-size: 16px; color: var(--muted); line-height: 1.65; margin-bottom: 32px; }
+
+    /* Input area */
+    .input-section { margin-bottom: 16px; }
+    .input-label {
+      display: block; font-size: 13px; font-weight: 600; color: var(--muted);
+      margin-bottom: 8px; letter-spacing: .2px;
+    }
+    textarea {
+      width: 100%; background: var(--surf); border: 1px solid var(--line);
+      border-radius: 12px; color: var(--text); font-family: var(--mono);
+      font-size: 13px; line-height: 1.6; padding: 16px 18px;
+      resize: vertical; min-height: 180px; outline: none;
+      transition: border-color .15s;
+    }
+    textarea::placeholder { color: var(--faint); }
+    textarea:focus { border-color: var(--amber); }
+
+    /* Action row */
+    .action-row {
+      display: flex; gap: 12px; align-items: center;
+      margin-bottom: 32px; flex-wrap: wrap;
+    }
+    .extract-btn {
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; padding: 11px 28px;
+      border: none; border-radius: 8px; cursor: pointer;
+      transition: background .15s; white-space: nowrap;
+    }
+    .extract-btn:hover { background: var(--amber2); }
+    .extract-btn:disabled { opacity: .45; cursor: not-allowed; }
+    .char-count { font-size: 13px; color: var(--faint); margin-left: auto; }
+
+    /* Results */
+    #results { display: none; }
+
+    /* Stats row */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      padding: 14px 16px; text-align: center;
+    }
+    .stat-value { font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.1; }
+    .stat-label { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .7px; font-weight: 600; }
+    .stat-card.highlight .stat-value { color: var(--amber); }
+
+    /* Empty state */
+    .empty-state {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 40px 24px; text-align: center; margin-bottom: 24px;
+    }
+    .empty-icon { font-size: 36px; margin-bottom: 12px; display: block; filter: grayscale(1) opacity(.5); }
+    .empty-title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .empty-sub { font-size: 14px; color: var(--muted); }
+
+    /* Output block */
+    .output-block { margin-bottom: 24px; }
+    .output-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 8px; flex-wrap: wrap; gap: 8px;
+    }
+    .output-title { font-size: 14px; font-weight: 700; color: var(--text); }
+    .copy-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; border: 1px solid var(--line); color: var(--muted);
+      font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 6px;
+      cursor: pointer; transition: border-color .15s, color .15s;
+    }
+    .copy-btn:hover { border-color: var(--faint); color: var(--text); }
+    .copy-btn.copied { border-color: var(--green); color: var(--green); }
+    .output-textarea {
+      width: 100%; background: var(--surf2); border: 1px solid var(--line);
+      border-radius: 10px; color: var(--text); font-family: var(--mono);
+      font-size: 13px; line-height: 1.6; padding: 14px 16px;
+      resize: vertical; min-height: 120px; outline: none;
+      transition: border-color .15s;
+    }
+    .output-textarea:focus { border-color: var(--faint); }
+
+    /* Details table */
+    .details-block { margin-bottom: 24px; }
+    .details-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .ip-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .ip-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 10px;
+    }
+    .ip-table td {
+      padding: 10px 10px; border-bottom: 1px solid var(--line);
+      vertical-align: middle; color: var(--text);
+    }
+    .ip-table tr:last-child td { border-bottom: none; }
+    .ip-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--amber2); }
+    .ip-table td.count { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .badge {
+      display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .6px;
+      text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+    }
+    .badge-v4   { background: rgba(96,165,250,.15); color: var(--blue); }
+    .badge-v6   { background: rgba(167,139,250,.15); color: var(--purple); }
+    .badge-priv { background: rgba(139,147,163,.1); color: var(--muted); }
+    .badge-pub  { background: rgba(74,222,128,.1); color: var(--green); }
+    .badge-loop { background: rgba(248,113,113,.1); color: var(--red); }
+
+    /* Reset button */
+    .reset-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; border: 1px solid var(--line); color: var(--muted);
+      font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 7px;
+      cursor: pointer; transition: border-color .15s, color .15s; margin-bottom: 32px;
+    }
+    .reset-btn:hover { border-color: var(--faint); color: var(--text); }
+
+    /* CTA */
+    .cta-box {
+      margin-top: 8px; padding: 28px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .cta-box p { font-size: 14px; color: var(--muted); flex: 1; min-width: 200px; line-height: 1.55; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0;
+      background: var(--amber); color: var(--on-a);
+      font-size: 13px; font-weight: 700; text-decoration: none;
+      padding: 10px 20px; border-radius: 8px; transition: background .15s; white-space: nowrap;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    /* Info section */
+    .info-section { margin-top: 56px; }
+    .info-section h2 { font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+    .info-p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
+    .range-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 24px; }
+    .range-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 10px;
+    }
+    .range-table td {
+      padding: 10px 10px; border-bottom: 1px solid var(--line); color: var(--text);
+    }
+    .range-table tr:last-child td { border-bottom: none; }
+    .range-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--amber2); }
+    .range-table td:last-child { color: var(--muted); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .cta-box { flex-direction: column; }
+      .ip-table td:nth-child(3) { display: none; }
+      .ip-table th:nth-child(3) { display: none; }
+    }
+    @media (max-width: 400px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  
+    /* FAQ */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    .faq-a code {
+      font-family: var(--mono, monospace); font-size: 12px;
+      background: var(--surf2); border: 1px solid var(--line);
+      padding: 1px 5px; border-radius: 3px; color: var(--amber2);
+    }
+
+    /* Related tools */
+    .related { margin: 32px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+  </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wendygo Studio">
+<meta property="og:title" content="IP Address Extractor — Extract All IPs from Any Text Free">
+<meta property="og:description" content="Paste any text and instantly extract all IPv4 and IPv6 addresses. Free browser tool — log files, config dumps, network output. Nothing uploaded to any">
+<meta property="og:url" content="https://wendygostudio.com/tools/ip-extractor/">
+<meta property="og:image" content="https://wendygostudio.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IP Address Extractor — Extract All IPs from Any Text Free">
+<meta name="twitter:description" content="Paste any text and instantly extract all IPv4 and IPv6 addresses. Free browser tool — log files, config dumps, network output. Nothing uploaded to any">
+<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
+<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/it/">
+      <div class="nav-mark">W</div>
+      Wendygo Studio
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/it/#products">Estensioni</a>
+      <a href="/blog/">Blog</a>
+      <a href="/it/tools/">Utensili</a>
+      <a href="/it/#how">Come funziona</a>
+      <a href="/it/#privacy">Privacy</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Lingua</label><select id="wg-language-select" aria-label="Scegli la lingua" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/tools/ip-extractor/">English</option><option value="https://wendygostudio.com/es/tools/ip-extractor/">Español</option><option value="https://wendygostudio.com/de/tools/ip-extractor/">Deutsch</option><option value="https://wendygostudio.com/fr/tools/ip-extractor/">Français</option><option value="https://wendygostudio.com/it/tools/ip-extractor/" selected>Italiano</option><option value="https://wendygostudio.com/pt/tools/ip-extractor/">Português</option></select></div></nav>
+
+  <div class="page-wrap">
+
+    <div class="breadcrumb">
+      <a href="/it/">Casa</a><span>›</span><a href="/it/tools/">Utensili</a><span>›</span>Estrattore di indirizzi IP
+    </div>
+
+    <div class="tool-tag">Strumento gratuito · TextForge</div>
+    <h1>Estrattore di indirizzi IP</h1>
+    <p class="tool-intro">Incolla qualsiasi testo (log del server, output del firewall, dump della configurazione, tracce di rete) ed estrai istantaneamente ogni indirizzo IPv4 e IPv6. Funziona interamente nel tuo browser. Niente viene inviato a nessun server.</p>
+
+    <!-- Input -->
+    <div class="input-section">
+      <label class="input-label" for="inputText">Incolla il tuo testo</label>
+      <textarea id="inputText" placeholder="Paste log files, config output, firewall rules, or any text containing IP addresses...
+
+Example:
+[2026-06-29 12:34:01] Connection from 192.168.1.105 to 10.0.0.1:443
+[2026-06-29 12:34:02] Blocked 203.0.113.42 (policy: geo-block)
+[2026-06-29 12:34:03] DNS query from ::1 for example.com
+[2026-06-29 12:34:04] Forwarding to 2001:db8::1 via eth0"></textarea>
+    </div>
+
+    <div class="action-row">
+      <button class="extract-btn" id="extractBtn">Estrai IP</button>
+      <span class="char-count" id="charCount">0 caratteri</span>
+    </div>
+
+    <!-- Results -->
+    <div id="results">
+
+      <div class="stats-row" id="statsRow">
+        <div class="stat-card highlight">
+          <div class="stat-value" id="statTotal">0</div>
+          <div class="stat-label">Totale trovato</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statUnique">0</div>
+          <div class="stat-label">IP unici</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statV4">0</div>
+          <div class="stat-label">IPv4</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statV6">0</div>
+          <div class="stat-label">IPv6</div>
+        </div>
+      </div>
+
+      <div id="emptyState" class="empty-state" style="display:none;">
+        <span class="empty-icon">🔍</span>
+        <div class="empty-title">Nessun indirizzo IP trovato</div>
+        <div class="empty-sub">Il testo incollato non contiene indirizzi IPv4 o IPv6 riconoscibili.</div>
+      </div>
+
+      <div id="foundContent" style="display:none;">
+
+        <div class="output-block">
+          <div class="output-header">
+            <span class="output-title">IP univoci: uno per riga</span>
+            <button class="copy-btn" id="copyBtn">Copia tutto</button>
+          </div>
+          <textarea class="output-textarea" id="outputText" readonly></textarea>
+        </div>
+
+        <div class="details-block">
+          <div class="details-title">Dettagli</div>
+          <table class="ip-table" id="ipTable">
+            <thead>
+              <tr>
+                <th>Indirizzo IP</th>
+                <th>Contare</th>
+                <th>Tipo</th>
+                <th>Ambito</th>
+              </tr>
+            </thead>
+            <tbody id="ipTableBody"></tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <button class="reset-btn" id="resetBtn">← Estratto dal nuovo testo</button>
+
+      <div class="cta-box">
+        <p>Hai bisogno di estrarre gli IP direttamente da qualsiasi pagina che stai navigando? <strong>TextForge</strong> funziona all'interno di Chrome: aprilo, incolla qualsiasi testo ed estrai email, URL e indirizzi IP con un clic, tutto localmente.</p>
+        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
+          Prova TextForge gratuitamente
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Info section -->
+    <div class="info-section">
+      <h2>Cosa estrae questo strumento</h2>
+      <p class="info-p">L'estrattore trova tutti gli indirizzi IPv4 validi (ad es. <code style="font-family:var(--mono);font-size:12px;background:var(--surf2);border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--amber2)">203.0.113.42</code>) e indirizzi IPv6 (ad es. <code style="font-family:var(--mono);font-size:12px;background:var(--surf2);border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--amber2)">2001:db8::1</code>) nel testo che incolli. Ogni indirizzo univoco viene visualizzato una volta nell'elenco di output, con un conteggio se viene visualizzato più volte.</p>
+
+      <h2>Intervalli IP privati</h2>
+      <table class="range-table">
+        <thead>
+          <tr><th>Allineare</th><th>CIDR</th><th>Uso comune</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10.0.0.0 – 10.255.255.255</td><td>10.0.0.0/8</td><td>Reti private (Classe A)</td></tr>
+          <tr><td>172.16.0.0 – 172.31.255.255</td><td>172.16.0.0/12</td><td>Reti private (Classe B)</td></tr>
+          <tr><td>192.168.0.0 – 192.168.255.255</td><td>192.168.0.0/16</td><td>Reti private (Classe C)</td></tr>
+          <tr><td>127.0.0.0 – 127.255.255.255</td><td>127.0.0.0/8</td><td>Loopback (host locale)</td></tr>
+          <tr><td>169.254.0.0 – 169.254.255.255</td><td>169.254.0.0/16</td><td>Collegamento locale (APIPA)</td></tr>
+        </tbody>
+      </table>
+      <p class="info-p">Gli IP pubblici sono tutti gli indirizzi esterni a questi intervalli riservati. Lo strumento classifica ciascun IP estratto in modo da poter individuare rapidamente quali sono interni e quali instradabili su Internet.</p>
+    </div>
+    <!-- FAQ -->
+    <div class="info-section">
+      <h2>Domande frequenti</h2>
+      <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Rileva anche gli indirizzi IPv6?</p>
+        <p class="faq-a">Sì, l'estrattore estrae sia gli indirizzi IPv4 che IPv6 da qualsiasi testo incollato: registri, output del firewall, dump di configurazione o tracce di rete.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Come classifica gli IP pubblici e privati?</p>
+        <p class="faq-a">Controlla ogni indirizzo estratto rispetto agli intervalli privati ​​standard (come 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16 per IPv4) e lo etichetta di conseguenza come pubblico o privato.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Posso incollare file di registro di grandi dimensioni?</p>
+        <p class="faq-a">Sì, non esiste un limite di dimensione rigido: l'elaborazione di paste molto grandi potrebbe richiedere solo un po' più di tempo poiché tutto viene eseguito nella scheda del browser.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Il testo incollato viene inviato a un server?</p>
+        <p class="faq-a">No. L'estrazione viene eseguita interamente con JavaScript locale: nulla lascia il tuo browser, il che lo rende sicuro per i registri del firewall e altri dati di rete sensibili.</p>
+      </div>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <div class="related-label">Strumenti correlati</div>
+      <div class="related-links">
+          <a class="related-link" href="/it/tools/subnet-calculator/">
+            Calcolatore della sottorete
+            <span>Calcola i dettagli della sottorete per gli IP appena estratti</span>
+          </a>
+          <a class="related-link" href="/it/tools/regex-tester/">
+            Tester Regex in linea
+            <span>Crea modelli di estrazione personalizzati che vadano oltre i soli indirizzi IP</span>
+          </a>
+          <a class="related-link" href="/blog/sanitize-network-config-before-sharing/">
+            Come disinfettare una configurazione di rete prima di condividerla
+            <span>Oscura gli IP che trovi prima di pubblicare una configurazione per chiedere aiuto</span>
+          </a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer>
+    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Isole Canarie</div>
+    <div class="footer-links">
+      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X/Twitter</a>
+      <a href="mailto:wendygostudio@gmail.com">Contatto</a>
+      <a href="/it/privacy">Politica sulla riservatezza</a>
+      <a href="/it/termini">Termini e Condizioni</a>
+    </div>
+  </footer>
+
+  <script>
+    const inputText = document.getElementById('inputText');
+    const extractBtn = document.getElementById('extractBtn');
+    const charCount  = document.getElementById('charCount');
+    const results    = document.getElementById('results');
+    const resetBtn   = document.getElementById('resetBtn');
+    const copyBtn    = document.getElementById('copyBtn');
+    const outputText = document.getElementById('outputText');
+
+    // IPv4: strict octet validation
+    const IPv4_RE = /\b((?:(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d\d?))\b/g;
+
+    // IPv6: covers full, compressed, and loopback forms
+    const IPv6_RE = /(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,7}:|(?:[0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,5}(?::[0-9a-fA-F]{1,4}){1,2}|(?:[0-9a-fA-F]{1,4}:){1,4}(?::[0-9a-fA-F]{1,4}){1,3}|(?:[0-9a-fA-F]{1,4}:){1,3}(?::[0-9a-fA-F]{1,4}){1,4}|(?:[0-9a-fA-F]{1,4}:){1,2}(?::[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:(?::[0-9a-fA-F]{1,4}){1,6}|:(?::[0-9a-fA-F]{1,4}){1,7}|::/g;
+
+    function isLoopback(ip) {
+      if (ip === '::1' || ip === '::') return true;
+      const parts = ip.split('.');
+      if (parts.length === 4) return Number(parts[0]) === 127;
+      return false;
+    }
+
+    function isPrivateIPv4(ip) {
+      const p = ip.split('.').map(Number);
+      return (
+        p[0] === 10 ||
+        (p[0] === 172 && p[1] >= 16 && p[1] <= 31) ||
+        (p[0] === 192 && p[1] === 168) ||
+        (p[0] === 169 && p[1] === 254)
+      );
+    }
+
+    function classifyIPv4(ip) {
+      if (isLoopback(ip)) return 'loopback';
+      if (isPrivateIPv4(ip)) return 'private';
+      return 'public';
+    }
+
+    function classifyIPv6(ip) {
+      const low = ip.toLowerCase();
+      if (low === '::1' || low === '::') return 'loopback';
+      if (low.startsWith('fe80:') || low.startsWith('fc') || low.startsWith('fd')) return 'private';
+      return 'public';
+    }
+
+    function isIPv4(ip) { return /^[\d.]+$/.test(ip); }
+
+    function scopeBadge(scope) {
+      if (scope === 'loopback') return '<span class="badge badge-loop">loopback</span>';
+      if (scope === 'private')  return '<span class="badge badge-priv">private</span>';
+      return '<span class="badge badge-pub">public</span>';
+    }
+
+    function typeBadge(type) {
+      return type === 'IPv4'
+        ? '<span class="badge badge-v4">IPv4</span>'
+        : '<span class="badge badge-v6">IPv6</span>';
+    }
+
+    function extract(text) {
+      const all = [];
+      let m;
+
+      // Collect IPv4
+      IPv4_RE.lastIndex = 0;
+      while ((m = IPv4_RE.exec(text)) !== null) {
+        all.push({ ip: m[1], type: 'IPv4', scope: classifyIPv4(m[1]) });
+      }
+
+      // Collect IPv6 — after stripping IPv4 matches to avoid false positives in IPv4-mapped IPv6
+      IPv6_RE.lastIndex = 0;
+      while ((m = IPv6_RE.exec(text)) !== null) {
+        const ip = m[0];
+        // Skip if already counted as IPv4 fragment (rare edge: ::ffff:192.168.1.1 — keep as IPv6)
+        all.push({ ip, type: 'IPv6', scope: classifyIPv6(ip) });
+      }
+
+      // Count frequency
+      const freq = {};
+      all.forEach(({ ip, type, scope }) => {
+        if (!freq[ip]) freq[ip] = { ip, type, scope, count: 0 };
+        freq[ip].count++;
+      });
+
+      const sorted = Object.values(freq).sort((a, b) => b.count - a.count || a.ip.localeCompare(b.ip));
+      return { all, sorted };
+    }
+
+    inputText.addEventListener('input', () => {
+      const len = inputText.value.length;
+      charCount.textContent = len.toLocaleString() + ' character' + (len === 1 ? '' : 's');
+    });
+
+    extractBtn.addEventListener('click', run);
+    inputText.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') run();
+    });
+
+    function run() {
+      const text = inputText.value;
+      if (!text.trim()) return;
+
+      const { all, sorted } = extract(text);
+
+      document.getElementById('statTotal').textContent  = all.length.toLocaleString();
+      document.getElementById('statUnique').textContent = sorted.length.toLocaleString();
+      document.getElementById('statV4').textContent     = sorted.filter(r => r.type === 'IPv4').length.toLocaleString();
+      document.getElementById('statV6').textContent     = sorted.filter(r => r.type === 'IPv6').length.toLocaleString();
+
+      const emptyState   = document.getElementById('emptyState');
+      const foundContent = document.getElementById('foundContent');
+
+      if (sorted.length === 0) {
+        emptyState.style.display   = '';
+        foundContent.style.display = 'none';
+      } else {
+        emptyState.style.display   = 'none';
+        foundContent.style.display = '';
+
+        // Output textarea
+        outputText.value = sorted.map(r => r.ip).join('\n');
+
+        // Detail table
+        const tbody = document.getElementById('ipTableBody');
+        tbody.innerHTML = '';
+        sorted.forEach(({ ip, type, scope, count }) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${escHtml(ip)}</td>
+            <td class="count">${count}×</td>
+            <td>${typeBadge(type)}</td>
+            <td>${scopeBadge(scope)}</td>`;
+          tbody.appendChild(tr);
+        });
+      }
+
+      results.style.display = '';
+      results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function escHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    copyBtn.addEventListener('click', () => {
+      if (!outputText.value) return;
+      navigator.clipboard.writeText(outputText.value).then(() => {
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.textContent = 'Copy all';
+          copyBtn.classList.remove('copied');
+        }, 1800);
+      }).catch(() => {
+        outputText.select();
+        document.execCommand('copy');
+      });
+    });
+
+    resetBtn.addEventListener('click', () => {
+      results.style.display = 'none';
+      inputText.value = '';
+      charCount.textContent = '0 characters';
+      inputText.focus();
+    });
+  </script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
