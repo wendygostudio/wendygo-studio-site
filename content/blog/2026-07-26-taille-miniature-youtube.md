@@ -3,7 +3,7 @@ schemaVersion: 1
 locale: fr
 translationKey: youtube-thumbnail-resize
 xDefaultPath: /blog/resize-image-youtube-thumbnail-chrome/
-title: "Redimensionner une image pour une miniature YouTube 1280 × 720"
+title: "Miniature YouTube : redimensionner une image (1280 × 720)"
 description: "Adaptez gratuitement une image au format de miniature YouTube 1280 × 720, localement dans Chrome et sans téléversement."
 date: 2026-07-26
 slug: taille-miniature-youtube

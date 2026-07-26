@@ -4,7 +4,7 @@ locale: fr
 translationKey: cyberchef-alternatives
 xDefaultPath: /blog/cyberchef-alternatives/
 title: "5 alternatives à CyberChef selon votre usage (2026)"
-description: "Comparez des alternatives à CyberChef pour le nettoyage de texte, les regex et les transformations locales, avec une explication honnête des cas où CyberChef reste le meilleur choix."
+description: "Comparez des alternatives à CyberChef pour le texte, les regex et les transformations locales."
 date: 2026-07-26
 slug: alternatives-cyberchef
 product: TextForge
