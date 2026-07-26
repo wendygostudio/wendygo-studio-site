@@ -388,6 +388,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generar-uuid-en-linea/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/uuid-lokal-erzeugen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/generer-uuid-localement/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/generare-uuid-locale/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/gerar-uuid-localmente/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
   </url>
   <url>
@@ -968,6 +972,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pulire-testo-online/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/limpar-texto-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/clean-text-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/uuid-lokal-erzeugen/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/uuid-lokal-erzeugen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/generer-uuid-localement/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/generare-uuid-locale/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/gerar-uuid-localmente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/verkaeufer-lehnt-eu-garantieanspruch-ab/</loc>
@@ -2220,6 +2236,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/generer-uuid-localement/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/uuid-lokal-erzeugen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/generer-uuid-localement/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/generare-uuid-locale/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/gerar-uuid-localmente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/minuteur-pomodoro-extension-chrome/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2673,6 +2701,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/generare-uuid-locale/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/uuid-lokal-erzeugen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/generer-uuid-localement/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/generare-uuid-locale/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/gerar-uuid-localmente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/la-tua-estensione-chrome-ti-spia/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -3049,6 +3089,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/gerar-uuid-localmente/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/uuid-lokal-erzeugen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/generer-uuid-localement/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/generare-uuid-locale/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/gerar-uuid-localmente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/generate-uuid-online/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/limpar-texto-online/</loc>
