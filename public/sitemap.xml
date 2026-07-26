@@ -390,6 +390,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/solicitud-acceso-datos-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/dsgvo-auskunft-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/demander-acces-donnees-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/richiedere-accesso-dati-gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pedir-acesso-dados-rgpd/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
   </url>
   <url>
@@ -873,6 +877,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/dsgvo-auskunft-anfordern/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/dsgvo-auskunft-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/demander-acces-donnees-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/richiedere-accesso-dati-gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pedir-acesso-dados-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/email-adressen-aus-text-extrahieren/</loc>
@@ -2392,6 +2408,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/demander-acces-donnees-rgpd/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/dsgvo-auskunft-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/demander-acces-donnees-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/richiedere-accesso-dati-gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pedir-acesso-dados-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/extraire-adresses-email-texte/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3075,6 +3103,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/clean-text-online/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/richiedere-accesso-dati-gdpr/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/dsgvo-auskunft-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/demander-acces-donnees-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/richiedere-accesso-dati-gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pedir-acesso-dados-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/ridimensionare-immagine-instagram/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3546,6 +3586,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pdf-scansionato-testo-ocr/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pdf-digitalizado-texto-ocr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/pedir-acesso-dados-rgpd/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/dsgvo-auskunft-anfordern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/demander-acces-donnees-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/richiedere-accesso-dati-gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pedir-acesso-dados-rgpd/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/gdpr-data-access-request/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/plataforma-rlc-ue-encerrada-alternativa/</loc>
