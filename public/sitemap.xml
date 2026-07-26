@@ -278,6 +278,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/garantia-legal-ue-explicada/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-gewaehrleistung-zwei-jahre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/garantie-legale-ue-deux-ans/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
   </url>
   <url>
@@ -761,6 +765,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/eu-gewaehrleistung-zwei-jahre/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-gewaehrleistung-zwei-jahre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/garantie-legale-ue-deux-ans/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/eu-odr-plattform-geschlossen-alternative/</loc>
@@ -2076,6 +2092,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/garantie-legale-ue-deux-ans/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-gewaehrleistung-zwei-jahre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/garantie-legale-ue-deux-ans/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/minuteur-pomodoro-extension-chrome/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2445,6 +2473,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-gewaehrleistung-zwei-jahre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/garantie-legale-ue-deux-ans/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/la-tua-estensione-chrome-ti-spia/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -2761,6 +2801,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/la-tua-estensione-chrome-ti-spia/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/extensao-chrome-esta-a-espiar-te/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-gewaehrleistung-zwei-jahre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/garantie-legale-ue-deux-ans/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/limpar-texto-online/</loc>
