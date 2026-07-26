@@ -271,6 +271,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/derecho-desistimiento-14-dias-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-widerruf-14-tage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/retractation-14-jours-ue/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/recesso-14-giorni-ue/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-arrependimento-14-dias-ue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
   </url>
   <url>
@@ -926,6 +930,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/piattaforma-odr-ue-chiusa-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/plataforma-rlc-ue-encerrada-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/eu-widerruf-14-tage/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-widerruf-14-tage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/retractation-14-jours-ue/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/recesso-14-giorni-ue/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-arrependimento-14-dias-ue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/forest-app-alternativen-chrome/</loc>
@@ -2626,6 +2642,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/retractation-14-jours-ue/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-widerruf-14-tage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/retractation-14-jours-ue/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/recesso-14-giorni-ue/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-arrependimento-14-dias-ue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3103,6 +3131,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/clean-text-online/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/recesso-14-giorni-ue/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-widerruf-14-tage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/retractation-14-jours-ue/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/recesso-14-giorni-ue/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-arrependimento-14-dias-ue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/richiedere-accesso-dati-gdpr/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3488,6 +3528,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decodificare-jwt-locale/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/descodificar-jwt-localmente/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/direito-arrependimento-14-dias-ue/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/eu-widerruf-14-tage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/retractation-14-jours-ue/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/recesso-14-giorni-ue/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-arrependimento-14-dias-ue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-14-day-return-withdrawal/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/extensao-chrome-esta-a-espiar-te/</loc>
