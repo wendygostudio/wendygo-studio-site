@@ -423,6 +423,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/temporizador-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/minuteur-pomodoro-hors-ligne-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
   </url>
   <url>
@@ -911,6 +915,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/offline-pomodoro-timer-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/minuteur-pomodoro-hors-ligne-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/pdf-zu-text-ocr/</loc>
@@ -2260,6 +2276,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/minuteur-pomodoro-hors-ligne-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/minuteur-pomodoro-hors-ligne-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2824,6 +2852,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/minuteur-pomodoro-hors-ligne-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/venditore-rifiuta-garanzia-legale-ue/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -3236,6 +3276,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-estensione-chrome/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-extensao-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-timer-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/offline-pomodoro-timer-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/minuteur-pomodoro-hors-ligne-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/vendedor-recusa-garantia-legal-ue/</loc>
