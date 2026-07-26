@@ -127,6 +127,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-heic-a-jpg-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/heic-in-jpg-umwandeln/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/convertir-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/convertire-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/converter-heic-jpg/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
   </url>
   <url>
@@ -766,6 +770,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/piattaforma-odr-ue-chiusa-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/plataforma-rlc-ue-encerrada-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/heic-in-jpg-umwandeln/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/heic-in-jpg-umwandeln/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/convertir-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/convertire-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/converter-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/instagram-bildgroesse-anpassen/</loc>
@@ -2032,6 +2048,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/convertir-heic-jpg/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/heic-in-jpg-umwandeln/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/convertir-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/convertire-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/converter-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2352,6 +2380,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/convertire-heic-jpg/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/heic-in-jpg-umwandeln/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/convertir-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/convertire-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/converter-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/cosa-insegna-la-violazione-sonicwall/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -2656,6 +2696,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/converter-heic-jpg/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/heic-in-jpg-umwandeln/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/convertir-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/convertire-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/converter-heic-jpg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-heic-to-jpg-free/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/extensao-chrome-esta-a-espiar-te/</loc>
