@@ -69,6 +69,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagenes-lote-extension-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/bilder-stapelweise-groesse-aendern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/redimensionner-images-par-lot/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/ridimensionare-immagini-in-blocco/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/redimensionar-imagens-em-lote/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
   <url>
@@ -757,6 +761,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/bilder-stapelweise-groesse-aendern/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/bilder-stapelweise-groesse-aendern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/redimensionner-images-par-lot/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/ridimensionare-immagini-in-blocco/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/redimensionar-imagens-em-lote/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/cyberchef-alternativen/</loc>
@@ -2206,6 +2222,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/redimensionner-images-par-lot/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/bilder-stapelweise-groesse-aendern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/redimensionner-images-par-lot/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/ridimensionare-immagini-in-blocco/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/redimensionar-imagens-em-lote/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2587,6 +2615,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/ridimensionare-immagini-in-blocco/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/bilder-stapelweise-groesse-aendern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/redimensionner-images-par-lot/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/ridimensionare-immagini-in-blocco/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/redimensionar-imagens-em-lote/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-rete/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2915,6 +2955,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/ridimensionare-immagine-instagram/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/redimensionar-imagem-instagram/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/redimensionar-imagens-em-lote/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/bilder-stapelweise-groesse-aendern/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/redimensionner-images-par-lot/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/ridimensionare-immagini-in-blocco/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/redimensionar-imagens-em-lote/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/</loc>
