@@ -23,8 +23,8 @@ function alternates(html) {
 for (const file of walk(root)) {
   let html = fs.readFileSync(file, 'utf8');
   const routes = alternates(html);
-  const languages = Object.keys(labels);
-  if (!languages.every((language) => routes[language])) continue;
+  const languages = Object.keys(labels).filter((language) => routes[language]);
+  if (languages.length < 2) continue;
   eligible++;
   const current = html.match(/<html\s+lang=["']([^"']+)/i)?.[1] || 'en';
   const [label, aria] = ui[current] || ui.en;

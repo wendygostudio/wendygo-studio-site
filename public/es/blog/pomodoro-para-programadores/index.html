@@ -249,7 +249,7 @@
       .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     }
   </style>
-</head>
+<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>
 
   <nav>
@@ -265,9 +265,8 @@
       <a href="/tools/">Herramientas</a>
       <a href="/es/#como-funciona">Cómo funciona</a>
       <a href="/es/#privacidad">Privacidad</a>
-      <a href="/blog/pomodoro-timer-for-developers/" class="nav-lang">EN 🌐</a>
     </div>
-  </nav>
+  <div class="wg-language-switcher"><label for="wg-language-select">Idioma</label><select id="wg-language-select" aria-label="Elegir idioma" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/pomodoro-timer-for-developers/">English</option><option value="https://wendygostudio.com/es/blog/pomodoro-para-programadores/" selected>Español</option></select></div></nav>
 
   <div class="article-wrap">
 
