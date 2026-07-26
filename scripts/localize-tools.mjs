@@ -42,6 +42,16 @@ function languageWidget(locale, slug) {
   const options = allLocales.map((language) => `<option value="${url(language, slug)}"${locale === language ? ' selected' : ''}>${labels[language]}</option>`).join('');
   return `<div class="wg-language-switcher"><label for="wg-language-select">${ui[0]}</label><select id="wg-language-select" aria-label="${ui[1]}" onchange="if(this.value)location.href=this.value">${options}</select></div>`;
 }
+function localizedContentPath(locale, section, slug = '') {
+  const englishFile = path.join(root, section, slug, 'index.html');
+  if (fs.existsSync(englishFile)) {
+    const english = fs.readFileSync(englishFile, 'utf8');
+    const language = locale === 'pt' ? 'pt-PT' : locale;
+    const match = english.match(new RegExp(`<link rel="alternate" hreflang="${language}" href="([^"]+)"`, 'i'));
+    if (match) return new URL(match[1]).pathname;
+  }
+  return `/${section}/${slug ? `${slug}/` : ''}`;
+}
 function shorten(text, max) {
   if (text.length <= max) return text;
   return `${text.slice(0, max - 1).replace(/\s+\S*$/, '')}…`;
@@ -54,7 +64,6 @@ function localize(html, locale, slug, map) {
     .replace(/href="\/(?!\/)/g, `href="/${locale}/`)
     .replace(/href="\/${locale}\/tools\/([^"#]+)"/g, `href="/${locale}/tools/$1"`)
     .replace(new RegExp(`href="/${locale}/(favicon[^\"]*|apple-touch-icon\.png)"`, 'g'), 'href="/$1"')
-    .replace(new RegExp(`href="/${locale}/(blog|guides)/`, 'g'), 'href="/$1/')
     .replace(new RegExp(`href="/${locale}/privacy"`, 'g'), `href="/${{ de: 'de/datenschutz', fr: 'fr/confidentialite', it: 'it/privacy', pt: 'pt/privacidade' }[locale]}"`)
     .replace(new RegExp(`href="/${locale}/terms"`, 'g'), `href="/${{ de: 'de/nutzungsbedingungen', fr: 'fr/conditions', it: 'it/termini', pt: 'pt/termos' }[locale]}"`)
     .replace(/>([^<>]+)</g, (full, raw) => {
@@ -69,6 +78,7 @@ function localize(html, locale, slug, map) {
   output = output.replace(/<title>[^<]*<\/title>/i, `<title>${shorten(map.__title || 'Wendygo Studio', 60)}</title>`);
   output = output.replace(/(<meta property="og:locale" content=")[^"]*(")/i, `$1${{ de: 'de_DE', fr: 'fr_FR', it: 'it_IT', pt: 'pt_PT' }[locale]}$2`);
   output = output.replace(/<div class="wg-language-switcher">[\s\S]*?<\/div>/, languageWidget(locale, slug));
+  output = output.replace(new RegExp(`href="/${locale}/(blog|guides)/([^\"#]*)"`, 'g'), (_, section, target) => `href="${localizedContentPath(locale, section, target.replace(/\/$/, ''))}"`);
   return output;
 }
 
