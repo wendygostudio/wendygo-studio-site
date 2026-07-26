@@ -71,6 +71,26 @@ for (const file of governedFiles) {
 const catalog = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
 const requiredCategories = ['text-tools','image-tools','file-conversion','infrastructure-security','eu-consumer-rights','focus-productivity'];
 const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
+const productIds = Object.keys(catalog);
+const articleProduct = (slug, locale = 'en') => {
+  const source = fs.readdirSync('content/blog').find(name => {
+    if (name.endsWith(`-${slug}.md`)) return true;
+    const text = fs.readFileSync(path.join('content/blog', name), 'utf8');
+    return new RegExp(`^slug:\\s*["']?${slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm').test(text);
+  });
+  if (source) {
+    const markdown = fs.readFileSync(path.join('content/blog', source), 'utf8');
+    const declared = markdown.match(/^product:\s*["']?([^\n"']+)["']?\s*$/im)?.[1]?.trim().toLowerCase();
+    if (productIds.includes(declared)) return declared;
+    const body = markdown.replace(/^---[\s\S]*?---\s*/, '');
+    const firstMention = [...body.matchAll(/\b(TextForge|FrameForge|ConvertForge|ScrubForge|ClaimForge|SlimeForge)\b/gi)][0]?.[1]?.toLowerCase();
+    if (productIds.includes(firstMention)) return firstMention;
+  }
+  const rendered = `public/${locale === 'es' ? 'es/' : ''}blog/${slug}/index.html`;
+  if (!fs.existsSync(rendered)) return null;
+  const firstMention = [...fs.readFileSync(rendered, 'utf8').matchAll(/\b(TextForge|FrameForge|ConvertForge|ScrubForge|ClaimForge|SlimeForge)\b/gi)][0]?.[1]?.toLowerCase();
+  return productIds.includes(firstMention) ? firstMention : null;
+};
 for (const [id, product] of Object.entries(catalog)) {
   if (!requiredCategories.includes(product.category)) errors.push(`data/products.json: ${id} has no valid topic category`);
   if (!product.summary?.en || !product.summary?.es) errors.push(`data/products.json: ${id} has incomplete summaries`);
@@ -92,7 +112,16 @@ for (const [id, product] of Object.entries(catalog)) {
 for (const category of requiredCategories) {
   for (const file of [`public/resources/${category}/index.html`, `public/es/recursos/${category}/index.html`]) {
     if (!fs.existsSync(file)) errors.push(`${file}: topic hub missing`);
-    else if (!/CollectionPage/.test(fs.readFileSync(file,'utf8'))) errors.push(`${file}: CollectionPage schema missing`);
+    else {
+      const html = fs.readFileSync(file,'utf8');
+      if (!/CollectionPage/.test(html)) errors.push(`${file}: CollectionPage schema missing`);
+      const expectedProduct = Object.entries(catalog).find(([, product]) => product.category === category)?.[0];
+      for (const slug of [...html.matchAll(/href="\/(?:es\/)?blog\/([^"/]+)\//g)].map(match => match[1])) {
+        const actualProduct = articleProduct(slug, file.includes('/es/recursos/') ? 'es' : 'en');
+        if (!actualProduct) errors.push(`${file}: cannot classify resource article ${slug}`);
+        else if (actualProduct !== expectedProduct) errors.push(`${file}: ${slug} belongs to ${actualProduct}, not ${expectedProduct}`);
+      }
+    }
   }
 }
 for (const file of ['public/forge-ecosystem/index.html','public/es/ecosistema-forge/index.html']) {

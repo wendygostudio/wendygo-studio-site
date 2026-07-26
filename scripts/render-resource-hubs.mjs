@@ -12,12 +12,38 @@ const hubs = {
   'focus-productivity': {product:'slimeforge', en:['Focus and productivity','Build a sustainable focus routine with timers, goals and a companion that grows with you.'], es:['Concentración y productividad','Crea una rutina sostenible con temporizadores, objetivos y una mascota que crece contigo.']}
 };
 const esc = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const productIds = Object.keys(products);
+const normalizeProduct = value => {
+  const normalized = String(value || '').trim().toLowerCase();
+  return productIds.find(id => id === normalized) || null;
+};
+// Resource hubs must use the article's primary product. Searching the rendered
+// HTML is not safe: related links can mention a different Forge and place the
+// article in the wrong thematic hub.
+function sourceProduct(slug, html) {
+  const source = fs.readdirSync('content/blog').find(name => name.endsWith(`-${slug}.md`));
+  if (source) {
+    const markdown = fs.readFileSync(path.join('content/blog', source), 'utf8');
+    const declared = markdown.match(/^product:\s*["']?([^\n"']+)["']?\s*$/im)?.[1];
+    const declaredId = normalizeProduct(declared);
+    if (declaredId) return declaredId;
+    const body = markdown.replace(/^---[\s\S]*?---\s*/, '');
+    const firstMention = [...body.matchAll(/\b(TextForge|FrameForge|ConvertForge|ScrubForge|ClaimForge|SlimeForge)\b/gi)][0]?.[1];
+    const inferredId = normalizeProduct(firstMention);
+    if (inferredId) return inferredId;
+  }
+  // Legacy fallback only when a source article cannot be found. First mention
+  // is intentionally used rather than an "includes" test for the same reason.
+  const firstRenderedMention = [...html.matchAll(/\b(TextForge|FrameForge|ConvertForge|ScrubForge|ClaimForge|SlimeForge)\b/gi)][0]?.[1];
+  return normalizeProduct(firstRenderedMention);
+}
 const articles = locale => {
   const root = locale === 'en' ? 'public/blog' : 'public/es/blog';
   return fs.readdirSync(root,{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>{
     const file=path.join(root,e.name,'index.html'); if(!fs.existsSync(file)) return null;
     const html=fs.readFileSync(file,'utf8');
-    return {url:`/${locale==='en'?'':'es/'}blog/${e.name}/`,title:html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1].replace(/<[^>]+>/g,'').trim(),html};
+    const translationKey = html.match(/hreflang="en" href="https:\/\/wendygostudio\.com\/blog\/([^/]+)\//)?.[1] || e.name;
+    return {url:`/${locale==='en'?'':'es/'}blog/${e.name}/`,title:html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1].replace(/<[^>]+>/g,'').trim(),html,productId:sourceProduct(e.name,html),translationKey};
   }).filter(a=>a?.title);
 };
 const style=`<style>*{box-sizing:border-box}body{margin:0;background:#13151a;color:#e7e9ee;font:16px/1.6 system-ui,sans-serif}a{color:#e8a33d}.wrap{max-width:1100px;margin:auto;padding:32px 24px 80px}nav{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:18px 0;border-bottom:1px solid #2e343f}nav a{text-decoration:none}.hero{padding:72px 0 48px;max-width:800px}.eyebrow{color:#e8a33d;text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:.12em}h1{font-size:clamp(38px,7vw,72px);line-height:1.05;margin:16px 0}h2{font-size:30px;margin-top:56px}.lead{font-size:20px;color:#aeb5c2}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{display:block;border:1px solid #2e343f;background:#1c1f26;border-radius:14px;padding:22px;text-decoration:none;color:#e7e9ee}.card:hover{border-color:#e8a33d}.card strong{display:block;font-size:18px;margin-bottom:8px}.card p{color:#aeb5c2;margin:0}.cta{display:inline-block;background:#e8a33d;color:#13151a!important;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:800;margin:12px 10px 0 0}.secondary{background:transparent;color:#e8a33d!important;border:1px solid #e8a33d}.note{border-left:3px solid #e8a33d;padding:10px 18px;color:#aeb5c2;margin:28px 0}footer{border-top:1px solid #2e343f;margin-top:64px;padding-top:28px;color:#8b93a3}@media(max-width:600px){nav{align-items:flex-start;flex-direction:column}.hero{padding-top:48px}}</style>`;
@@ -27,7 +53,12 @@ for(const locale of ['en','es']){
   const list=articles(locale), es=locale==='es';
   for(const [slug,hub] of Object.entries(hubs)){
     const product=products[hub.product], copy=hub[locale];
-    const matches=list.filter(a=>a.html.toLowerCase().includes(product.name.toLowerCase())).slice(0,12);
+    const seenTranslations = new Set();
+    const matches=list.filter(a => {
+      if (a.productId !== hub.product || seenTranslations.has(a.translationKey)) return false;
+      seenTranslations.add(a.translationKey);
+      return true;
+    }).slice(0,12);
     const useCase=hub.useCase?.[locale];
     const body=`<main><section class="hero"><div class="eyebrow">${es?'Centro temático':'Topic hub'}</div><h1>${copy[0]}</h1><p class="lead">${copy[1]}</p><a class="cta" href="/${es?'es/':''}${hub.product}/">${es?'Conocer':'Explore'} ${product.name}</a><a class="cta secondary" href="/${es?'es/recursos/':'resources/'}">${es?'Todos los recursos':'All resources'}</a></section><section><h2>${es?'Guías seleccionadas':'Selected guides'}</h2><div class="grid">${useCase?`<a class="card" href="${useCase[0]}"><strong>${esc(useCase[1])}</strong><p>${es?'Descripción completa de funciones, privacidad y formatos compatibles.':'Full overview of features, privacy and supported formats.'}</p></a>`:''}${matches.map(a=>`<a class="card" href="${a.url}"><strong>${esc(a.title)}</strong><p>${es?'Guía relacionada con':'A practical guide connected to'} ${product.name}.</p></a>`).join('')||`<div class="card"><strong>${es?'Próximamente':'Coming next'}</strong><p>${es?'Estamos organizando las guías de esta categoría.':'We are organizing guides for this category.'}</p></div>`}</div></section><aside class="note">${esc(product.summary[locale])}</aside></main>`;
     const base=es?`public/es/recursos/${slug}`:`public/resources/${slug}`;
