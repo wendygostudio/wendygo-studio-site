@@ -330,6 +330,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/forest-app-alternativen-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-forest-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
   </url>
   <url>
@@ -846,6 +850,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/piattaforma-odr-ue-chiusa-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/plataforma-rlc-ue-encerrada-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/forest-app-alternativen-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/forest-app-alternativen-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/frameforge-oder-canva-thumbnails/</loc>
@@ -2195,6 +2211,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/alternatives-forest-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/forest-app-alternativen-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/ce-que-la-faille-sonicwall-enseigne/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -2660,6 +2688,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/alternative-forest-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/forest-app-alternativen-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/convertire-heic-jpg/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3096,6 +3136,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/alternativas-forest-chrome/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/forest-app-alternativen-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-forest-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/converter-heic-jpg/</loc>
