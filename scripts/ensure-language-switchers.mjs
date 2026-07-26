@@ -34,6 +34,7 @@ for (const file of walk(root)) {
   html = html
     .replace(/<style id="wg-language-style">[\s\S]*?<\/style>/, '')
     .replace(/<div class="wg-language-switcher">[\s\S]*?<\/div>/, '')
+    .replace(/\s*<a\b(?=[^>]*\bclass=["'][^"']*\bnav-lang\b[^"']*["'])[^>]*>[\s\S]*?<\/a>/gi, '')
     .replace(/\s*<a\b[^>]*>\s*(?:EN|ES|DE|FR|IT|PT)\s*🌐\s*<\/a>/gi, '')
     .replace('</head>', `${style}</head>`);
   html = /<nav\b[^>]*>[\s\S]*?<\/nav>/i.test(html)
