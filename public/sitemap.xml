@@ -527,6 +527,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-pin-bildgroesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-imagem-pin-pinterest/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
   </url>
   <url>
@@ -851,6 +855,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pdf-scansionato-testo-ocr/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pdf-digitalizado-texto-ocr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/pinterest-pin-bildgroesse/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-pin-bildgroesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-imagem-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/pomodoro-timer-chrome-erweiterung/</loc>
@@ -2190,6 +2206,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-pin-bildgroesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-imagem-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/taille-miniature-youtube/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2471,6 +2499,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/dimensioni-pin-pinterest/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-pin-bildgroesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-imagem-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/</loc>
@@ -2900,6 +2940,18 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-router-mikrotik/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-router-mikrotik/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/tamanho-imagem-pin-pinterest/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-pin-bildgroesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-image-epingle-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-imagem-pin-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-pinterest-pin/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/tamanho-miniatura-youtube/</loc>
