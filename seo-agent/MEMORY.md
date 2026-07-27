@@ -56,6 +56,14 @@ intacta aquí hasta que Damián la cambie explícitamente.
   decisión solo si el propio proceso de priorización se vuelve el cuello de
   botella (no antes).
 
+- **[2026-07-27] El aviso legal de ClaimForge se valida en los 6 locales,
+  no solo en/es.** `validate-governance.mjs` comprobaba `data-legal-review`
+  únicamente en `public/blog` y `public/es/blog`, lo que dejó pasar 25
+  artículos de ClaimForge en DE/FR/IT/PT sin el aviso obligatorio (bug de
+  casing en `render-blog.mjs`, corregido el mismo día). No reduzcas ese
+  chequeo de vuelta a solo en/es — el contenido legal de ClaimForge está
+  traducido a los 6 idiomas y el requisito de aviso legal aplica a todos.
+
 ---
 
 ## 2. Memoria SEO — experimentos
@@ -106,4 +114,5 @@ Formato:
 Una línea por ejecución, más reciente arriba. Mantén máximo 15 líneas — al
 añadir una nueva, elimina la más antigua si ya hay 15.
 
+- **2026-07-27 (weekly)**: auditoría técnica completa (0 errores en toda la cadena de validación + 7/7 tests). Hallazgo crítico: 25 artículos de ClaimForge (GDPR/garantía/reparación, sobre todo DE/FR/IT/PT) sin aviso legal por un bug de casing (`ClaimForge` vs `claimforge`) en `render-blog.mjs`, agravado porque `validate-governance.mjs` solo comprobaba en/es. Ambos corregidos y verificados. Observación de contenido: 0 artículos de tipo `comparison` (existe como categoría distinta de `alternatives` mas no se usa). Sin gap competitivo nuevo ni outreach preparado esta semana — no es la palanca de mayor retorno todavía. Informe completo en `journal/weekly-2026-07-27.md`.
 - **2026-07-27 (daily)**: primera ejecución con el prompt Growth Engineer. Corregida codificación rota de `analytics-data.json` (5 bytes Latin-1 sueltos). `analytics-fetch.py` no puede correr desde este sandbox (deps + ruta Windows hardcodeada) — pendiente de refrescar datos desde la máquina real. Detectado hueco real de enlazado interno en `resize-image-for-pinterest-pin` (0 enlaces entrantes) vs. otras páginas en posición 8-20 ya bien enlazadas; añadidos 6 enlaces (3 EN + 3 ES). Experimento `id: 1` registrado, medir 2026-08-26. No se publicó artículo nuevo — sin justificación de mayor impacto que el enlazado.

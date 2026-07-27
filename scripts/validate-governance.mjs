@@ -183,7 +183,11 @@ for (const file of ['public/index.html', 'public/es/index.html']) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
-for (const root of ['public/blog', 'public/es/blog']) {
+// Checked across all 6 locales, not just en/es — ClaimForge legal content
+// (GDPR, warranty, right to repair, etc.) is translated into every language
+// and the disclosure requirement applies regardless of locale. Missing this
+// for de/fr/it/pt let 25 legal articles ship without the mandatory notice.
+for (const root of ['public/blog', 'public/es/blog', 'public/de/blog', 'public/fr/blog', 'public/it/blog', 'public/pt/blog']) {
   for (const file of walk(root).filter(file => file.endsWith('index.html') && path.basename(path.dirname(file)) !== 'blog')) {
     const text = fs.readFileSync(file, 'utf8');
     if (!text.includes('ClaimForge')) continue;

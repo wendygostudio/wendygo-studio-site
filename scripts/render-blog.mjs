@@ -104,7 +104,7 @@ for (const document of documents) {
   };
   const faqs = Array.isArray(data.faqs) ? data.faqs : [];
   const sources = String(data.sourceUrls || '').split(',').map(value => value.trim()).filter(Boolean);
-  const legalReview = data.product === 'claimforge' ? `<aside class="legal-review" data-legal-review data-review-due="${esc(iso(data.reviewDue))}"><p><strong>${STRINGS.legalReviewLabel[loc]}:</strong> ${esc(iso(data.reviewedAt))} · ${esc(data.jurisdiction)}</p><p>${STRINGS.legalDisclaimer[loc]}</p>${sources.length ? `<p>${STRINGS.officialSources[loc]}: ${sources.map((url, index) => `<a href="${esc(url)}" rel="noopener">${index + 1}</a>`).join(' · ')}</p>` : ''}</aside>` : '';
+  const legalReview = String(data.product || '').toLowerCase() === 'claimforge' ? `<aside class="legal-review" data-legal-review data-review-due="${esc(iso(data.reviewDue))}"><p><strong>${STRINGS.legalReviewLabel[loc]}:</strong> ${esc(iso(data.reviewedAt))} · ${esc(data.jurisdiction)}</p><p>${STRINGS.legalDisclaimer[loc]}</p>${sources.length ? `<p>${STRINGS.officialSources[loc]}: ${sources.map((url, index) => `<a href="${esc(url)}" rel="noopener">${index + 1}</a>`).join(' · ')}</p>` : ''}</aside>` : '';
   const prefix = locales[locale].routePrefix ? `/${locales[locale].routePrefix}` : '';
   const values = {
     locale: locales[locale].htmlLang,
