@@ -247,8 +247,12 @@ auto_deploy() {
 
     # Solo el contenido editorial puede cambiar durante una ejecución autónoma.
     # Catálogo, validadores y configuración requieren revisión humana.
+    # seo-agent/MEMORY.md es una excepción deliberada: el prompt diario y el
+    # semanal la actualizan en CADA ejecución (Paso 6 / Paso 11) por diseño,
+    # así que es tan "editorial" como el journal, no una config que requiera
+    # revisión humana.
     local unexpected_paths
-    unexpected_paths=$(git status --porcelain | awk '{print $2}' | grep -Ev '^(public/|content/|seo-agent/journal/)' || true)
+    unexpected_paths=$(git status --porcelain | awk '{print $2}' | grep -Ev '^(public/|content/|seo-agent/journal/|seo-agent/MEMORY\.md$)' || true)
     if [ -n "$unexpected_paths" ]; then
         log "🛑 Cambios fuera del alcance editorial — deploy CANCELADO:"
         echo "$unexpected_paths" | tee -a "$LOG_FILE"

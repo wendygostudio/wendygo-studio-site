@@ -78,9 +78,26 @@ Formato:
   result: "qué pasó realmente (rellenar en measurement_date)"
 ```
 
-_(Todavía no hay experimentos registrados. La próxima ejecución que tome una
-decisión con hipótesis verificable — p. ej. reforzar enlazado interno hacia
-una URL en posición 8-20 — añade la primera entrada aquí con id: 1.)_
+```yaml
+- id: 1
+  date: 2026-07-27
+  hypothesis: "resize-image-for-pinterest-pin (pos 17.0, 36 impresiones, 0
+    enlaces internos entrantes) subirá de posición y/o impresiones al
+    recibir enlazado interno real desde su cluster temático (guías de
+    resize/crop de FrameForge), igual que sus vecinas SÍ enlazadas."
+  action: "Añadidos 6 enlaces internos hacia la guía de Pinterest (3 EN:
+    batch-resize-images-chrome-extension, crop-images-social-media-chrome,
+    free-thumbnail-tool-no-login; 3 ES equivalentes), pasando de 0 a 6
+    enlaces entrantes. No se tocó eu-warranty-rights-explained (9 enlaces
+    ya existentes) ni cyberchef-alternatives (3 ya existentes) — sin hueco
+    real que justificara la acción."
+  expected: "Mejora de posición media y/o aumento de impresiones en
+    resize-image-for-pinterest-pin / redimensionar-imagen-pinterest en la
+    siguiente lectura de Search Console."
+  measurement_date: 2026-08-26
+  status: pending
+  result: ""
+```
 
 ---
 
@@ -89,4 +106,4 @@ una URL en posición 8-20 — añade la primera entrada aquí con id: 1.)_
 Una línea por ejecución, más reciente arriba. Mantén máximo 15 líneas — al
 añadir una nueva, elimina la más antigua si ya hay 15.
 
-- _(vacío — la próxima ejecución añade la primera línea)_
+- **2026-07-27 (daily)**: primera ejecución con el prompt Growth Engineer. Corregida codificación rota de `analytics-data.json` (5 bytes Latin-1 sueltos). `analytics-fetch.py` no puede correr desde este sandbox (deps + ruta Windows hardcodeada) — pendiente de refrescar datos desde la máquina real. Detectado hueco real de enlazado interno en `resize-image-for-pinterest-pin` (0 enlaces entrantes) vs. otras páginas en posición 8-20 ya bien enlazadas; añadidos 6 enlaces (3 EN + 3 ES). Experimento `id: 1` registrado, medir 2026-08-26. No se publicó artículo nuevo — sin justificación de mayor impacto que el enlazado.
