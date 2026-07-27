@@ -72,20 +72,36 @@ const catalog = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
 const requiredCategories = ['text-tools','image-tools','file-conversion','infrastructure-security','eu-consumer-rights','focus-productivity'];
 const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
 const productIds = Object.keys(catalog);
-const articleProduct = (slug, locale = 'en') => {
-  const source = fs.readdirSync('content/blog').find(name => {
-    if (name.endsWith(`-${slug}.md`)) return true;
-    const text = fs.readFileSync(path.join('content/blog', name), 'utf8');
-    return new RegExp(`^slug:\\s*["']?${slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm').test(text);
-  });
-  if (source) {
-    const markdown = fs.readFileSync(path.join('content/blog', source), 'utf8');
-    const declared = markdown.match(/^product:\s*["']?([^\n"']+)["']?\s*$/im)?.[1]?.trim().toLowerCase();
-    if (productIds.includes(declared)) return declared;
+// Precompute slug -> product for every content/blog source in a single pass.
+// (Previously this re-scanned + re-read the entire content/blog directory
+// once PER href found in every resource hub page — O(hrefs * files) reads.
+// With 200+ content files that made validate-governance.mjs take minutes
+// instead of seconds. Building the map once up front is O(files).)
+const blogSourceNames = fs.readdirSync('content/blog');
+const slugToProduct = new Map();
+const bySlugSuffix = new Map();
+for (const name of blogSourceNames) {
+  const markdown = fs.readFileSync(path.join('content/blog', name), 'utf8');
+  const declaredSlug = markdown.match(/^slug:\s*["']?([^\n"']+)["']?\s*$/im)?.[1]?.trim();
+  const declaredProduct = markdown.match(/^product:\s*["']?([^\n"']+)["']?\s*$/im)?.[1]?.trim().toLowerCase();
+  let product = productIds.includes(declaredProduct) ? declaredProduct : null;
+  if (!product) {
     const body = markdown.replace(/^---[\s\S]*?---\s*/, '');
     const firstMention = [...body.matchAll(/\b(TextForge|FrameForge|ConvertForge|ScrubForge|ClaimForge|SlimeForge)\b/gi)][0]?.[1]?.toLowerCase();
-    if (productIds.includes(firstMention)) return firstMention;
+    if (productIds.includes(firstMention)) product = firstMention;
   }
+  if (declaredSlug) slugToProduct.set(declaredSlug, product);
+  // Index by "everything after the date prefix" — matches how the old code's
+  // `name.endsWith(`-${slug}.md`)` check resolved multi-word slugs.
+  const afterDate = name.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
+  bySlugSuffix.set(afterDate, product);
+}
+const articleProduct = (slug, locale = 'en') => {
+  // A cached null (source markdown found but no product resolvable from it)
+  // must still fall through to the rendered-HTML fallback below — matching
+  // the original per-call behavior, just without re-reading every file.
+  const fromSlug = slugToProduct.get(slug) ?? bySlugSuffix.get(slug);
+  if (fromSlug) return fromSlug;
   const rendered = `public/${locale === 'es' ? 'es/' : ''}blog/${slug}/index.html`;
   if (!fs.existsSync(rendered)) return null;
   const firstMention = [...fs.readFileSync(rendered, 'utf8').matchAll(/\b(TextForge|FrameForge|ConvertForge|ScrubForge|ClaimForge|SlimeForge)\b/gi)][0]?.[1]?.toLowerCase();
