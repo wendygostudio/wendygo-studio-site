@@ -4,11 +4,23 @@ Hoy es {{TODAY}}. Ejecuta TODOS los pasos sin pedir confirmación ni aprobación
 
 ---
 
+### Paso 0: Leer la memoria del proyecto
+
+Lee `{{AGENT_DIR}}/MEMORY.md` completo antes de empezar. La sección 1
+(memoria de negocio) contiene decisiones estratégicas vigentes que esta
+revisión no debe contradecir sin documentarlo explícitamente. La sección 2
+(experimentos) puede tener entradas cuya `measurement_date` caiga en esta
+semana — si es así, evalúalas con los datos disponibles y actualiza su
+`status`/`result` como parte del Paso 1.
+
 ### Paso 1: Recopilar datos
 
 1. Lee TODOS los journals de la semana en `{{JOURNAL_DIR}}/`.
 2. Cuenta artículos publicados esta semana (inglés + español + variaciones).
-3. Si hay `analytics-data.json`, analízalo.
+3. Si hay `analytics-data.json`, analízalo. Presta especial atención a
+   consultas/páginas en posición 8-20 (candidatas a Top 10) y a impresiones
+   altas con CTR bajo — son las señales que más importan ahora mismo, más
+   que el volumen de contenido publicado.
 4. Revisa sitemap vs contenido real en `public/`.
 
 ### Paso 2: Auditoría técnica
@@ -152,6 +164,18 @@ Genera `{{JOURNAL_DIR}}/weekly-{{TODAY}}.md`:
 - Verifica `.gitignore`
 - Ejecuta `npm run seo:fix` y `npm run validate` — NO staging, commit ni push
 
+### Paso 11: Actualizar la memoria del proyecto
+
+Actualiza `{{AGENT_DIR}}/MEMORY.md`:
+- Cierra (con `status`/`result`) cualquier experimento de la sección 2 cuya
+  `measurement_date` haya llegado.
+- Si esta revisión detecta que una decisión de la sección 1 ya no encaja con
+  la realidad del proyecto (p. ej. el tráfico superó el umbral que marcaba
+  una fase), NO la borres: añade una línea nueva fechada que la actualice y
+  deja constancia de qué cambió y por qué.
+- Añade una línea al rolling log de la sección 3 resumiendo la semana en una
+  frase.
+
 ---
 
 ## Restricciones
@@ -159,3 +183,4 @@ Genera `{{JOURNAL_DIR}}/weekly-{{TODAY}}.md`:
 - Backlink outreach: SOLO preparar, NUNCA enviar
 - Si propones un cambio estructural grande, marca con `[REQUIERE APROBACIÓN]`
 - Sé honesto en el informe
+- No contradigas una decisión de `MEMORY.md` sección 1 sin dejar constancia explícita de por qué
