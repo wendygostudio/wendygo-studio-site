@@ -235,6 +235,14 @@ prompt=$(echo "$prompt" | sed "s|{{TODAY}}|$TODAY|g")
     return $exit_code
 }
 
+# The Growth Engineer run may deliberately improve existing pages without
+# creating an article. Only fan out to variation/translation/social tasks when
+# a new source article was actually added in this run.
+new_article_created() {
+    git diff --name-only --diff-filter=A -- content/blog 2>/dev/null | grep -q '\.md$' && return 0
+    git ls-files --others --exclude-standard content/blog 2>/dev/null | grep -q '\.md$'
+}
+
 # ── Auto-commit y deploy ──────────────────────────────────
 
 auto_deploy() {
@@ -284,7 +292,7 @@ auto_deploy() {
     fi
 
     log "📦 Deploying cambios..."
-    git add public content seo-agent/journal 2>/dev/null || git add public content
+    git add public content seo-agent/journal seo-agent/MEMORY.md 2>/dev/null || git add public content seo-agent/journal seo-agent/MEMORY.md
     git commit -m "🤖 auto: contenido generado $TODAY"
     git push origin main
     log "🚀 Deploy completado (push a main → auto-deploy)"
@@ -306,16 +314,25 @@ case "${1:-daily}" in
         ensure_dirs
         log "═══ Rutina diaria iniciada ═══"
         run_claude_task "daily-seo" "$PROMPTS_DIR/daily-seo.md"
+        if new_article_created; then
+            DAILY_ARTICLE_CREATED=true
+            log "📰 Se ha creado un artículo nuevo; se ejecutarán variación, traducción y distribución."
+        else
+            DAILY_ARTICLE_CREATED=false
+            log "🧭 No se ha creado artículo nuevo; se omiten variación, traducción y distribución editorial."
+        fi
         auto_deploy
         curl -s "https://www.google.com/ping?sitemap=https://wendygostudio.com/sitemap.xml" > /dev/null 2>&1
         log "📡 Ping a Google enviado"
-        CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "variation" "$PROMPTS_DIR/variation.md"
-        auto_deploy
-        CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "translate-es" "$PROMPTS_DIR/translate-es.md"
-        auto_deploy
-        CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "devto-post" "$PROMPTS_DIR/devto-content.md"
-        CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "bluesky-content" "$PROMPTS_DIR/bluesky-content.md"
-        CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "reddit-draft" "$PROMPTS_DIR/reddit-draft.md"
+        if [ "$DAILY_ARTICLE_CREATED" = true ]; then
+            CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "variation" "$PROMPTS_DIR/variation.md"
+            auto_deploy
+            CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "translate-es" "$PROMPTS_DIR/translate-es.md"
+            auto_deploy
+            CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "devto-post" "$PROMPTS_DIR/devto-content.md"
+            CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "bluesky-content" "$PROMPTS_DIR/bluesky-content.md"
+            CLAUDE_MODEL="claude-haiku-4-5-20251001" run_claude_task "reddit-draft" "$PROMPTS_DIR/reddit-draft.md"
+        fi
         log "═══ Rutina diaria completada ═══"
         ;;
     weekly)
