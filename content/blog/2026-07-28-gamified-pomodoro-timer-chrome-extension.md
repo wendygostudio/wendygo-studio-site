@@ -1,6 +1,6 @@
 ---
 schemaVersion: 1
-title: "Gamified Pomodoro Timer for Focus | Wendygo Studio"
+title: "Gamified Pomodoro Timer: Make Your Focus Sessions Stick"
 description: "Plain timers don't keep you coming back. A gamified pomodoro timer rewards every session with a virtual pet that grows — habit over willpower."
 date: 2026-07-28
 slug: gamified-pomodoro-timer-chrome-extension
@@ -11,8 +11,6 @@ contentType: how-to
 primaryKeyword: "gamified pomodoro timer"
 relatedPages: /slimeforge/,/blog/pomodoro-timer-chrome-extension/,/blog/adhd-pomodoro-timer-chrome-extension/
 ---
-
-# Gamified Pomodoro Timer: Why Rewards Make Focus Sessions Stick
 
 Most people who try a Pomodoro timer stop after a week. Not because the technique is wrong — 25 minutes of focused work genuinely helps — but because finishing a session feels exactly the same as skipping one. There's no reward, no progress, no reason to open the timer again tomorrow.
 
