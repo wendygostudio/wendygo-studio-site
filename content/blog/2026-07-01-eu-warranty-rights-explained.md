@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
-title: "EU 2-Year Warranty Rights Explained: What You're Entitled To and How to Claim It"
-description: "You bought a laptop that stopped working after 14 months. The seller tells you the warranty is only 12 months and there's nothing they can do. You..."
+title: "EU 2-Year Warranty: Rights, Repairs and Claims"
+description: "EU consumers usually have a legal guarantee for faulty goods. Learn when it applies, how to request repair or replacement, and what to do if the seller refuses."
 date: 2026-07-01
 slug: eu-warranty-rights-explained
 locale: en

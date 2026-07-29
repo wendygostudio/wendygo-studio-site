@@ -116,6 +116,7 @@ Formato:
 ## 3. Historial de ejecuciones recientes (rolling log)
 
 - **2026-07-29 (daily)**: mejorado el snippet de `resize-image-for-tiktok-profile-picture` (128 impresiones, posición 15,3, CTR 0,78 %) con un título y una meta description más específicos para 400x400/512x512 y procesamiento local. No se publicó URL nueva; validación 465 HTML/462 canónicas/6 idiomas sin errores.
+- **2026-07-29 (daily 2)**: segunda pasada secuencial del día; mejorado el snippet de `eu-warranty-rights-explained` (55 impresiones, posición 15,4, 0 clics) con un título más corto y una descripción orientada a reparación/reemplazo. Sin URL nueva; validación completa sin errores.
 
 Una línea por ejecución, más reciente arriba. Mantén máximo 15 líneas — al
 añadir una nueva, elimina la más antigua si ya hay 15.
