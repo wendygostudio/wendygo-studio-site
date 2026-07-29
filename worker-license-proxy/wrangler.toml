@@ -1,0 +1,7 @@
+name = "wendygo-license-proxy"
+main = "src/index.js"
+compatibility_date = "2026-07-29"
+
+# Configure CREEM_API_KEY as an encrypted secret in the Worker dashboard:
+# Settings → Variables and Secrets → Production.
+# Do not put the key in this file or in Git.
