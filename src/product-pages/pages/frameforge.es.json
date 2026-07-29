@@ -4,8 +4,8 @@
   "footerColor": "faint",
   "output": "public/es/frameforge/index.html",
   "seo": {
-    "title": "FrameForge — Redimensiona imágenes y miniaturas",
-    "description": "Redimensiona imágenes para YouTube, Instagram, Twitch y X. Elimina fondos y amplía localmente en tu navegador. Sin subidas.",
+    "title": "FrameForge — Editor local y redimensionador de imágenes",
+    "description": "Edita, redimensiona y exporta imágenes para YouTube, Instagram, Twitch y X con IA local, capas y plantillas. Sin subidas.",
     "canonical": "https://wendygostudio.com/es/frameforge/",
     "ogImage": "https://wendygostudio.com/images/og/frameforge-og.png"
   }

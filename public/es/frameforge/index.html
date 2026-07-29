@@ -7,8 +7,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FrameForge — Redimensiona imágenes y miniaturas</title>
-  <meta name="description" content="Redimensiona imágenes para YouTube, Instagram, Twitch y X. Elimina fondos y amplía localmente en tu navegador. Sin subidas." />
+  <title>FrameForge — Editor local y redimensionador de imágenes</title>
+  <meta name="description" content="Edita, redimensiona y exporta imágenes para YouTube, Instagram, Twitch y X con IA local, capas y plantillas. Sin subidas." />
   <link rel="canonical" href="https://wendygostudio.com/es/frameforge/" />
   <link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/" />
   <link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/">
@@ -18,7 +18,7 @@
   <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/">
   <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"FrameForge"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"FrameForge","description":"Redimensionador de imágenes y creador de miniaturas para redes sociales","applicationCategory":"Utility","operatingSystem":"Chrome","url":"https://wendygostudio.com/es/frameforge/","softwareVersion":"2.0.0","downloadUrl":"https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"FrameForge","description":"Editor local de imágenes y redimensionador de miniaturas con capas, plantillas y herramientas de IA local.","applicationCategory":"Utility","operatingSystem":"Chrome","url":"https://wendygostudio.com/es/frameforge/","softwareVersion":"2.0.0","downloadUrl":"https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj"}</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --ink: #13151a; --surf: #1c1f26; --line: #2e343f; --text: #e7e9ee; --muted: #8b93a3; --amber: #e8a33d; --r: 9px; --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
@@ -82,13 +82,13 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wendygo Studio">
-<meta property="og:title" content="FrameForge — Redimensiona imágenes y miniaturas">
-<meta property="og:description" content="Redimensiona imágenes para YouTube, Instagram, Twitch y X. Elimina fondos y amplía localmente en tu navegador. Sin subidas.">
+<meta property="og:title" content="FrameForge — Editor local y redimensionador de imágenes">
+<meta property="og:description" content="Edita, redimensiona y exporta imágenes para YouTube, Instagram, Twitch y X con IA local, capas y plantillas. Sin subidas.">
 <meta property="og:url" content="https://wendygostudio.com/es/frameforge/">
 <meta property="og:image" content="https://wendygostudio.com/images/og/frameforge-og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FrameForge — Redimensiona imágenes y miniaturas">
-<meta name="twitter:description" content="Redimensiona imágenes para YouTube, Instagram, Twitch y X. Elimina fondos y amplía localmente en tu navegador. Sin subidas.">
+<meta name="twitter:title" content="FrameForge — Editor local y redimensionador de imágenes">
+<meta name="twitter:description" content="Edita, redimensiona y exporta imágenes para YouTube, Instagram, Twitch y X con IA local, capas y plantillas. Sin subidas.">
 <meta name="twitter:image" content="https://wendygostudio.com/images/og/frameforge-og.png">
 <style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>
@@ -101,7 +101,7 @@
   <section class="hero">
     <div class="eyebrow">FrameForge</div>
     <h1>Redimensiona imágenes<br><em>rápidamente</em></h1>
-    <p class="hero-sub">Recorta imágenes para YouTube, Instagram, Twitch, X y más. Procesa por lotes, añade efectos y exporta desde el navegador, sin subir archivos.</p>
+    <p class="hero-sub">Edita, recorta y exporta para YouTube, Instagram, Twitch, X y más. Herramientas de IA local, capas, plantillas y efectos creativos, sin subir archivos.</p>
     <a class="cta-button" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank">↗ Añadir a Chrome</a>
   </section>
   <section class="section">
@@ -111,10 +111,13 @@
         <li>Miniaturas de YouTube (1280×720), Shorts, Reels, Instagram, Twitch y cabeceras de X</li>
         <li>Rellenar, ajustar o estirar con zoom y arrastre para colocar la imagen</li>
         <li>Rotación de 90°, volteo horizontal y vertical y recorte circular</li>
-        <li>4 efectos gratuitos: degradado, viñeta, barras de cine y blanco y negro</li>
+        <li>Herramientas locales gratis: eliminar fondos, ampliar 2×/4×, quitar objetos, ampliar lienzo y detectar defectos (las exportaciones IA llevan marca de agua)</li>
+        <li>Capas, plantillas, historial visual, recorte manual, cuentagotas y guías de alineación</li>
+        <li>Progresión Mi taller en la vista normal: 5 prestigios, 6 skins y 14 logros, guardados localmente</li>
+        <li>8 efectos creativos: lupa, remolino, tampón de clonar, ondas, empujar, espejo, caleidoscopio y foco radial</li>
         <li>JPEG, PNG y WebP con vista previa de calidad y tamaño</li>
         <li>Copia al portapapeles y eliminación de metadatos EXIF</li>
-        <li>Pro: 8 efectos adicionales, capas de texto, brillo, contraste y exportación ZIP por lotes</li>
+        <li>Pro: ajustes de color, tipografía real, superposición de logos/imágenes, exportación multiformato, IA sin marca, ZIP por lotes y editor completo</li>
       </ul>
     </div>
   </section>
@@ -129,7 +132,7 @@
       </div>
     </div>
   </section>
-  <section class="section"><div class="section-inner"><div class="section-label">Precios</div><h2 class="section-title">Gratis y Pro</h2><p style="color: var(--muted); margin-top: 20px; margin-bottom: 30px;">Gratis para siempre con las funciones principales. Pro desbloquea el resto, con 5 días de prueba sin tarjeta.</p><div style="background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 24px; max-width: 600px;"><div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; text-align: center;"><div><div style="font-weight: 700; margin-bottom: 12px;">Gratis</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;0</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">funciones principales para siempre</div></div><div><div style="font-weight: 700; margin-bottom: 12px;">Pro Mensual</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;4.99</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">al mes</div></div><div><div style="font-weight: 700; margin-bottom: 12px;">Pro Anual</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;29.99</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">al año</div></div><div><div style="font-weight: 700; margin-bottom: 12px;">Pro Lifetime</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;59.99</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">pago único</div></div></div></div></div></section><section class="section product-proof" data-product-proof data-version="2.0.0"><div class="section-inner"><h2 class="section-title">Prueba, privacidad y límites</h2><p class="hero-sub" style="margin:0">Información verificable para decidir antes de instalar.</p><div class="proof-grid"><div><img class="proof-shot" src="/images/product-ui/frameforge.png" alt="FrameForge vista del producto" width="469" height="881" loading="lazy"><div class="proof-meta"><span>Versión 2.0.0</span><span>Chrome y Edge</span><span>6 idiomas</span></div><a class="promo-link" href="/es/recursos/image-tools/">Ver guías relacionadas →</a></div><div><article class="proof-card"><h3>Cómo trata tus datos</h3><p>El procesamiento principal ocurre en tu dispositivo.</p></article><article class="proof-card"><h3>Permisos declarados</h3><ul><li><code>contextMenus</code></li><li><code>storage</code></li></ul></article><article class="proof-card"><h3>Limitaciones conocidas</h3><ul><li>El tiempo de carga de los modelos de IA depende del dispositivo y aumenta en equipos antiguos.</li><li>Las exportaciones son imágenes rasterizadas; FrameForge no es un editor vectorial completo.</li></ul></article><article class="proof-card"><h3>Fuente oficial</h3><p>Consulta la ficha de Chrome Web Store para la versión publicada, permisos y notas de actualización.</p><a class="promo-link" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">Chrome Web Store →</a></article></div></div></div></section><footer><div><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div><div><a href="/es/privacy" style="color: var(--faint); text-decoration: none;">Privacy</a></div></footer>
+  <section class="section"><div class="section-inner"><div class="section-label">Precios</div><h2 class="section-title">Gratis y Pro</h2><p style="color: var(--muted); margin-top: 20px; margin-bottom: 30px;">Gratis para siempre con las funciones principales. Pro desbloquea el resto, con 5 días de prueba sin tarjeta.</p><div style="background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 24px; max-width: 600px;"><div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; text-align: center;"><div><div style="font-weight: 700; margin-bottom: 12px;">Gratis</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;0</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">funciones principales para siempre</div></div><div><div style="font-weight: 700; margin-bottom: 12px;">Pro Mensual</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;4.99</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">al mes</div></div><div><div style="font-weight: 700; margin-bottom: 12px;">Pro Anual</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;29.99</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">al año</div></div><div><div style="font-weight: 700; margin-bottom: 12px;">Pro Lifetime</div><div style="font-size: 20px; color: var(--amber); font-weight: 700;">&euro;59.99</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px;">pago único</div></div></div></div></div></section><section class="section product-proof" data-product-proof data-version="2.0.0"><div class="section-inner"><h2 class="section-title">Prueba, privacidad y límites</h2><p class="hero-sub" style="margin:0">Información verificable para decidir antes de instalar.</p><div class="proof-grid"><div><img class="proof-shot" src="/images/product-ui/frameforge.png" alt="FrameForge vista del producto" width="469" height="881" loading="lazy"><div class="proof-meta"><span>Versión 2.0.0</span><span>Chrome y Edge</span><span>6 idiomas</span></div><a class="promo-link" href="/es/recursos/image-tools/">Ver guías relacionadas →</a></div><div><article class="proof-card"><h3>Cómo trata tus datos</h3><p>El procesamiento principal ocurre en tu dispositivo.</p></article><article class="proof-card"><h3>Permisos declarados</h3><ul><li><code>contextMenus</code></li><li><code>storage</code></li><li><code>offscreen</code></li><li><code>downloads</code></li><li><code>notifications</code></li></ul></article><article class="proof-card"><h3>Limitaciones conocidas</h3><ul><li>El tiempo de carga de los modelos de IA depende del dispositivo y aumenta en equipos antiguos.</li><li>Las exportaciones con IA son gratuitas, pero incluyen marca de agua; las exportaciones IA limpias y los ZIP por lotes requieren Pro.</li><li>Las exportaciones son imágenes rasterizadas; FrameForge no es un editor vectorial completo.</li></ul></article><article class="proof-card"><h3>Fuente oficial</h3><p>Consulta la ficha de Chrome Web Store para la versión publicada, permisos y notas de actualización.</p><a class="promo-link" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">Chrome Web Store →</a></article></div></div></div></section><footer><div><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div><div><a href="/es/privacy" style="color: var(--faint); text-decoration: none;">Privacy</a></div></footer>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>

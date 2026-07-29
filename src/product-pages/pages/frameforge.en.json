@@ -4,8 +4,8 @@
   "footerColor": "faint",
   "output": "public/frameforge/index.html",
   "seo": {
-    "title": "FrameForge — Image Resizer for YouTube Thumbnails & Social",
-    "description": "Resize and crop images for YouTube, Instagram, Twitch and X. Remove backgrounds and upscale locally in your browser. No uploads.",
+    "title": "FrameForge — Local Image Editor & Thumbnail Resizer",
+    "description": "Edit, resize and export images for YouTube, Instagram, Twitch and X with local AI tools, layers and templates. No uploads.",
     "canonical": "https://wendygostudio.com/frameforge/",
     "ogImage": "https://wendygostudio.com/images/og/frameforge-og.png"
   }

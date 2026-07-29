@@ -1,7 +1,7 @@
 {
   "es/index.html": {"title":"Wendygo Studio — Extensiones privadas para Chrome"},
   "es/blog/frameforge-vs-canva-miniaturas/index.html": {"title":"FrameForge vs Canva para crear miniaturas"},
-  "es/frameforge/index.html": {"title":"FrameForge — Redimensiona imágenes y miniaturas"},
+  "es/frameforge/index.html": {"title":"FrameForge — Editor local y redimensionador de imágenes","description":"Edita, redimensiona y exporta imágenes para YouTube, Instagram, Twitch y X con IA local, capas y plantillas. Sin subidas."},
   "es/guides/derechos-consumidor-ue/index.html": {"title":"Derechos del consumidor en la UE: guía completa"},
   "es/tools/ip-extractor/index.html": {"title":"Extractor de direcciones IP online y privado"},
   "es/tools/subnet-calculator/index.html": {"title":"Calculadora de subredes, CIDR y hosts"},

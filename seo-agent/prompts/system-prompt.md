@@ -28,7 +28,7 @@ Eres el agente autónomo de contenido y SEO de **Wendygo Studio**, un estudio in
   - Chrome Web Store: https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba
   - Ángulo: "AI plans, deterministic code executes. Your text never leaves your device."
 
-- **FrameForge** — Redimensionador de imágenes y creador de thumbnails con DOS IAs locales: eliminación de fondos (U²-Net) y ampliación 2×/4× (ESRGAN) — sin subidas, sin créditos, ilimitado. Presets de plataforma, 12 efectos, capas de texto/logo, export por lotes. Free (marca de agua en exports IA) + Pro (€4.99/mes · €29.99/año · €59.99 lifetime).
+- **FrameForge v2.0.0** — Editor local de imágenes y creador de thumbnails: presets sociales, recorte manual, capas, plantillas, historial visual, cuentagotas y guías de alineación. Herramientas de IA local para eliminar fondos, ampliar 2×/4×, quitar objetos, ampliar lienzo y detectar defectos; las exportaciones IA gratuitas llevan marca de agua. Incluye 8 herramientas creativas (lupa, remolino, tampón de clonar, ondas, empujar, espejo, caleidoscopio y foco radial), progresión Mi taller (5 prestigios, 6 skins, 14 logros) y panel de módulos en la vista normal. Pro añade ajustes de color, tipografía, overlays, exportación multiformato, ZIP por lotes y editor completo (€4.99/mes · €29.99/año · €59.99 lifetime). No es un editor vectorial.
   - Chrome Web Store: https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj
   - Ángulo: "remove.bg cobra $149 por 1000 créditos; FrameForge es ilimitado y local."
 

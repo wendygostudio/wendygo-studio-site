@@ -1,5 +1,9 @@
 # Memoria del Proyecto — Wendygo Studio
 
+## FrameForge 2.0.0 (2026-07-29)
+
+FrameForge se ha actualizado como editor local de imágenes, no solo redimensionador: presets sociales, recorte manual, capas, plantillas, historial visual, cuentagotas y guías de alineación. Sus herramientas de IA local cubren eliminar fondos, ampliar 2×/4×, quitar objetos, ampliar lienzo y detectar defectos; las exportaciones IA gratuitas llevan marca de agua. Incluye ocho herramientas creativas y el sistema local “Mi taller” (5 prestigios, 6 skins y 14 logros) en la vista normal. Pro añade color, tipografía, overlays, exportación multiformato, ZIP por lotes y editor completo. No es un editor vectorial ni una herramienta de capturas. Evita afirmar un número de modelos de IA hasta cerrar la decisión P-009; usa “herramientas de IA local”.
+
 Este archivo es la memoria persistente del agente de crecimiento de Wendygo Studio.
 No es un journal diario (eso ya vive en `journal/YYYY-MM-DD.md`) — es continuidad
 estratégica entre ejecuciones. Léelo COMPLETO al empezar cualquier tarea

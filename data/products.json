@@ -61,7 +61,7 @@
     "name": "FrameForge",
     "category": "image-tools",
     "summary": {
-      "en": "Resize, enhance and export images with local background removal and upscaling.",
+      "en": "Edit, resize and export images locally with social presets, layers, templates and local AI tools.",
       "es": "Redimensiona, mejora y exporta imágenes con eliminación de fondo y escalado local."
     },
     "relatedProducts": [
@@ -71,10 +71,12 @@
     "limitations": {
       "en": [
         "AI model loading time depends on the device and is slower on older hardware.",
+        "AI exports are free but include a watermark; clean AI exports and batch ZIP require Pro.",
         "Exports are raster images; FrameForge is not a full vector design editor."
       ],
       "es": [
         "El tiempo de carga de los modelos de IA depende del dispositivo y aumenta en equipos antiguos.",
+        "Las exportaciones con IA son gratuitas, pero incluyen marca de agua; las exportaciones IA limpias y los ZIP por lotes requieren Pro.",
         "Las exportaciones son imágenes rasterizadas; FrameForge no es un editor vectorial completo."
       ]
     },
@@ -82,7 +84,10 @@
     "storeId": "abdmadomfnijoiklnaklmplifmljgchj",
     "permissions": [
       "contextMenus",
-      "storage"
+      "storage",
+      "offscreen",
+      "downloads",
+      "notifications"
     ],
     "locales": [
       "en",
@@ -93,7 +98,13 @@
       "pt_PT"
     ],
     "claims": {
-      "coreProcessing": "local"
+      "coreProcessing": "local",
+      "localAiTools": ["background removal", "2x/4x upscaling", "object removal", "canvas expansion", "defect detection"],
+      "creativeTools": ["magnifier", "swirl", "clone stamp", "waves", "push", "mirror", "kaleidoscope", "radial focus"],
+      "freeFeatures": ["resize and crop", "manual crop handle", "layers", "templates", "visual history", "eyedropper", "alignment guides", "basic effects", "undo redo compare"],
+      "proFeatures": ["color adjustments", "real typography text", "logo and image overlays", "target-size and multi-size export", "eight creative tools", "extra effects", "batch ZIP export", "full editor"],
+      "progression": "Mi taller: five prestige levels, six skins and fourteen achievements in normal view; localStorage only and resettable",
+      "modulesPanel": "normal view only; full editor remains complete"
     },
     "pricing": {
       "currency": "EUR",
