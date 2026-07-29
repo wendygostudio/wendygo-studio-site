@@ -2,6 +2,9 @@
 # ============================================================
 # Wendygo Studio — Agente Autónomo Orquestador
 # ============================================================
+# LEGACY: no usar para el Daily SEO actual. El flujo oficial lo ejecuta Codex;
+# este script histórico intenta lanzar Claude Code desde Bash/Linux.
+# ============================================================
 # Este script es el punto de entrada principal.
 # Lanza Claude Code con el prompt adecuado según la tarea.
 # ============================================================
