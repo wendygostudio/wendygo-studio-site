@@ -1,6 +1,11 @@
 name = "wendygo-license-proxy"
 main = "src/index.js"
 compatibility_date = "2026-07-29"
+preview_urls = false
+
+routes = [
+  { pattern = "wendygostudio.com/api/license/*", zone_name = "wendygostudio.com" }
+]
 
 # Configure CREEM_API_KEY as an encrypted secret in the Worker dashboard:
 # Settings → Variables and Secrets → Production.
