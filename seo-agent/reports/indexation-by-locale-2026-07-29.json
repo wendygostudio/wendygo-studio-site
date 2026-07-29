@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-07-29",
+  "property": "https://wendygostudio.com/",
+  "method": "Search Console URL Inspection API",
+  "homes": {
+    "en": {"url": "https://wendygostudio.com/", "verdict": "PASS", "coverageState": "Submitted and indexed", "indexingState": "INDEXING_ALLOWED", "lastCrawlTime": "2026-07-28T00:44:29Z"},
+    "es": {"url": "https://wendygostudio.com/es/", "verdict": "PASS", "coverageState": "Submitted and indexed", "indexingState": "INDEXING_ALLOWED", "lastCrawlTime": "2026-07-27T21:30:00Z"},
+    "de": {"url": "https://wendygostudio.com/de/", "verdict": "PASS", "coverageState": "Submitted and indexed", "indexingState": "INDEXING_ALLOWED", "lastCrawlTime": "2026-07-27T13:37:10Z"},
+    "fr": {"url": "https://wendygostudio.com/fr/", "verdict": "PASS", "coverageState": "Submitted and indexed", "indexingState": "INDEXING_ALLOWED", "lastCrawlTime": "2026-07-27T12:00:26Z"},
+    "it": {"url": "https://wendygostudio.com/it/", "verdict": "PASS", "coverageState": "Submitted and indexed", "indexingState": "INDEXING_ALLOWED", "lastCrawlTime": "2026-07-24T18:47:48Z"},
+    "pt": {"url": "https://wendygostudio.com/pt/", "verdict": "PASS", "coverageState": "Submitted and indexed", "indexingState": "INDEXING_ALLOWED", "lastCrawlTime": "2026-07-27T05:31:04Z"}
+  },
+  "sitemap": {"url": "https://wendygostudio.com/sitemap.xml", "lastSubmitted": "2026-07-22T09:26:09.638Z", "lastDownloaded": "2026-07-26T18:02:24.638Z", "errors": 0, "warnings": 0, "submitted": 427, "indexed": 0}
+}
