@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content="Wendygo structured content" />
-  <title>How to Base64 Encode Kubernetes Secrets Without a Web Tool</title>
+  <title>Base64 Encode Kubernetes Secrets Locally (No Web Tool)</title>
   <meta name="description" content="Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site." />
   <link rel="canonical" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Base64 Encode Kubernetes Secrets Without a Web Tool","description":"Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site.","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Base64 Encode Kubernetes Secrets Without a Web Tool"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Base64 Encode Kubernetes Secrets Locally (No Web Tool)","description":"Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site.","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"Base64 Encode Kubernetes Secrets Locally (No Web Tool)"}]}</script>
   
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -285,15 +285,14 @@
 </style>
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Wendygo Studio" />
-  <meta property="og:title" content="How to Base64 Encode Kubernetes Secrets Without a Web Tool" />
+  <meta property="og:title" content="Base64 Encode Kubernetes Secrets Locally (No Web Tool)" />
   <meta property="og:description" content="Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site." />
   <meta property="og:url" content="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" />
   <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How to Base64 Encode Kubernetes Secrets Without a Web Tool" />
+  <meta name="twitter:title" content="Base64 Encode Kubernetes Secrets Locally (No Web Tool)" />
   <meta name="twitter:description" content="Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site." />
-  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
-<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" /><link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>
   <nav>
     <a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
@@ -304,8 +303,8 @@
     </div>
   <div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" selected>English</option><option value="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/">Español</option></select></div></nav>
   <div class="article-wrap">
-    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>How to Base64 Encode Kubernetes Secrets Without a Web Tool</div>
-    <div class="article-meta"><div class="article-tag">how-to · textforge</div><h1>How to Base64 Encode Kubernetes Secrets Without a Web Tool</h1><p class="article-intro">Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site.</p><div class="article-date">June 26, 2026</div></div>
+    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>Base64 Encode Kubernetes Secrets Locally (No Web Tool)</div>
+    <div class="article-meta"><div class="article-tag">how-to · textforge</div><h1>Base64 Encode Kubernetes Secrets Locally (No Web Tool)</h1><p class="article-intro">Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site.</p><div class="article-date">June 26, 2026</div></div>
     
     <hr class="divider" />
     <div class="article-body"><h1>How to Base64 Encode Kubernetes Secrets Without a Web Tool</h1>

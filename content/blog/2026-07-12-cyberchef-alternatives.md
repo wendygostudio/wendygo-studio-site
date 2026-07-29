@@ -1,6 +1,6 @@
 ---
 schemaVersion: 1
-title: "5 Best CyberChef Alternatives by Use Case (2026)"
+title: "CyberChef Alternatives for Everyday Text Tasks (2026)"
 description: "Compare five CyberChef alternatives for text cleanup, regex, command-line pipelines and security analysis, with an honest guide to when CyberChef is best."
 date: 2026-07-12
 slug: cyberchef-alternatives

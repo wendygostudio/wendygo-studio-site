@@ -1,6 +1,6 @@
 ---
 schemaVersion: 1
-title: "How to Resize an Image for Pinterest Pins in Chrome (1000×1500)"
+title: "Resize Pinterest Pins in Chrome (1000×1500)"
 description: "Crop any image to Pinterest's optimal 1000×1500 px format without uploading to Photoshop or Canva. FrameForge resizes entirely in your browser in seconds."
 date: 2026-06-29
 slug: resize-image-for-pinterest-pin

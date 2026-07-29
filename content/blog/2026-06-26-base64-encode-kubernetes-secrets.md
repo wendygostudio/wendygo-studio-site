@@ -1,6 +1,6 @@
 ---
 schemaVersion: 1
-title: "How to Base64 Encode Kubernetes Secrets Without a Web Tool"
+title: "Base64 Encode Kubernetes Secrets Locally (No Web Tool)"
 description: "Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site."
 date: 2026-06-26
 slug: base64-encode-kubernetes-secrets
