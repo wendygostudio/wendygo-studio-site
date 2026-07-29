@@ -1,3 +1,4 @@
+// Git-build deployment marker: 2026-07-29
 const CREEM_BASE = "https://api.creem.io/v1/licenses";
 const ACTIONS = new Set(["validate", "activate"]);
 
