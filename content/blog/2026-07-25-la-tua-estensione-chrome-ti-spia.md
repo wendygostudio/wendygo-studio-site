@@ -9,20 +9,7 @@ translationKey: is-your-chrome-extension-spying-on-you
 product: slimeforge
 contentType: how-to
 primaryKeyword: "la mia estensione Chrome mi spia"
-relatedPages: /it/slimeforge/,/it/blog/cosa-insegna-la-violazione-sonicwall/,/it/risorse/
-sourceUrls: https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html,https://developer.chrome.com/docs/webstore/program-policies/policies,https://developer.chrome.com/blog/cws-policy-updates-2026
-heading: "La Tua Estensione Chrome Ti Spia? Checklist 2026"
-shortTitle: "La tua estensione ti spia?"
-intro: "Il 10 luglio 2026, Google ha rimosso ModHeader, un'estensione affidabile con circa 1,6 milioni di installazioni, dopo che i ricercatori hanno trovato una pipeline completa e dormiente di raccolta dati nella versione ufficiale e firmata. Aveva superato scansioni di sicurezza automatizzate per anni."
-faqs:
-  - question: "Come ha superato ModHeader le scansioni di sicurezza di Chrome per anni?"
-    answer: "Il raccoglitore era cifrato e bloccato dietro una lista di autorizzazione interna pubblicata vuota, quindi il passaggio di upload non veniva mai eseguito durante le scansioni. Uno scanner vede testo cifrato e nessun traffico in uscita, esattamente come appare un'estensione pulita. I ricercatori di Stripe OLT lo hanno trovato solo leggendo direttamente il codice minificato."
-  - question: "Di quali permessi ha davvero bisogno un'estensione di concentrazione o produttività?"
-    answer: "Un'estensione per la concentrazione dovrebbe richiedere solo i permessi necessari alle funzioni dichiarate. SlimeForge dichiara storage, alarms, scripting e activeTab; l'accesso facoltativo ai siti viene richiesto solo quando l'utente attiva funzioni all'interno delle pagine."
-  - question: "Un'estensione popolare e ben valutata è automaticamente sicura?"
-    answer: "No. ModHeader aveva 1,6 milioni di installazioni, una lunga reputazione, e punteggi di rischio automatizzati fino a 95 su 100 che la classificavano a basso rischio — e includeva comunque un raccoglitore di dati funzionante. Il numero di installazioni e la valutazione misurano la popolarità, non ciò che fa il codice dopo un aggiornamento."
-  - question: "Disinstallare un'estensione dannosa rimuove i dati già raccolti?"
-    answer: "Disinstallarla la rimuove dal browser e cancella il suo storage locale, ma non annulla nulla di già inviato ai server dello sviluppatore. Se hai mai incollato chiavi API, token o password nei campi di un'estensione, ruotale indipendentemente dal fatto che quell'estensione risulti compromessa o meno."
+relatedPages: /slimeforge/
 ---
 
 Se usi un'estensione Chrome o Edge per gestire la tua concentrazione, le tue intestazioni HTTP, le tue password o altro, la rimozione di ModHeader merita cinque minuti del tuo tempo. Non perché ModHeader fosse uno strumento marginale — aveva 1,6 milioni di installazioni e un decennio di fiducia — ma per il modo esatto in cui nascondeva ciò che faceva.

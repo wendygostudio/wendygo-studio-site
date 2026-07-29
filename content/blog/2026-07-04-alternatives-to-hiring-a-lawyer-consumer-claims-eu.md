@@ -1,11 +1,19 @@
 ---
+schemaVersion: 1
 title: "Alternatives to Hiring a Lawyer for Consumer Claims in the EU"
-description: "Hiring a lawyer for a €200 dispute costs more than the dispute. These free and low-cost EU alternatives work — and most consumers don't know they exist."
+description: "When a seller refuses your warranty claim or ignores a refund request, hiring a lawyer is the last thing you want to do. Legal fees for a €200..."
 date: 2026-07-04
 slug: alternatives-to-hiring-a-lawyer-consumer-claims-eu
-product: ClaimForge
-type: F
-keyword: "alternatives to hiring a lawyer consumer claims EU"
+locale: en
+translationKey: alternatives-to-hiring-a-lawyer-consumer-claims-eu
+product: claimforge
+contentType: how-to
+primaryKeyword: "wendygo studio guide"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-04
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 When a seller refuses your warranty claim or ignores a refund request, hiring a lawyer is the last thing you want to do. Legal fees for a €200 dispute would cost more than the dispute itself. The good news: EU consumer law was deliberately designed so you don't need a lawyer — but you do need to know the alternatives.

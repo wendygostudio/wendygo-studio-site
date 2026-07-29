@@ -1,40 +1,15 @@
 ---
 schemaVersion: 1
 title: "LinkedIn-Karussell: Bildgröße in Chrome"
-description: >-
-  Bereiten Sie konsistente LinkedIn-Karussellbilder lokal in Chrome vor, ohne
-  Quellgrafiken in einen Online-Editor hochzuladen.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: linkedin-carousel-image-size
 locale: de
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: LinkedIn-Karussell-Bildgröße
-relatedPages: >-
-  /de/frameforge/,/blog/resize-image-for-linkedin-post/,/blog/batch-resize-images-chrome-extension/
-heading: 'LinkedIn-Karussell-Bildgröße: Ein lokaler Chrome-Workflow'
-shortTitle: Bildgröße des LinkedIn-Karussells
-intro: >-
-  Ein LinkedIn-Karussell ist eine Sequenz, kein einzelnes Feed-Bild. Konsistente
-  Abmessungen, sichere Ränder und eine Exportroutine sind wichtiger als das
-  Hinzufügen eines weiteren Designtools zum Workflow.
-faqs:
-  - question: Welche Größe sollten LinkedIn-Karussellbilder haben?
-    answer: >-
-      Verwenden Sie in der gesamten Sequenz eine einheitliche Leinwand und
-      prüfen Sie vor der Veröffentlichung die aktuellen
-      LinkedIn-Upload-Anleitungen. Wichtig ist, dass jede Seite die gleichen
-      Abmessungen und lesbaren Ränder hat.
-  - question: Kann ich die Größe von Karussellgrafiken lokal ändern?
-    answer: >-
-      Ja. Mit einem lokalen Bildworkflow können Sie jede Rasterseite im Browser
-      vorbereiten, ohne Quellbilder an einen Drittanbieter-Editor zu senden.
-  - question: Sollte jede Karussellrutsche das gleiche Erntegut verwenden?
-    answer: >-
-      Die Leinwand sollte konsistent bleiben, aber jedes Quellbild benötigt
-      möglicherweise eine andere Zuschneideposition, um das Motiv sichtbar zu
-      halten.
+primaryKeyword: "LinkedIn-Karussell-Bildgröße"
+relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 LinkedIn-Karussells funktionieren, wenn sie sich wie ein einziges Dokument anfühlen: eine klare Startseite, eine lesbare Reihenfolge und eine Schlussseite, die nicht gequetscht oder beschnitten aussieht. Das praktische Problem ist selten Kreativität. Es bereitet mehrere Bilder mit einem einheitlichen Rahmen vor und schützt gleichzeitig das Quellbildmaterial, das Kundenarbeiten, Screenshots oder internes Produktmaterial umfassen kann.

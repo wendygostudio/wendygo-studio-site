@@ -1,3 +1,21 @@
+---
+schemaVersion: 1
+title: "EU Right to Repair: Can You Use Refurbished Parts?"
+description: "When your device breaks, you have choices under EU law — and the law explicitly supports using refurbished and 3D-printed replacement parts...."
+date: 2026-07-17
+slug: eu-right-to-repair-refurbished-parts
+locale: en
+translationKey: eu-right-to-repair-refurbished-parts
+product: claimforge
+contentType: how-to
+primaryKeyword: "eu right to repair: can you use refurbished parts?"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-17
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
+---
+
 # EU Right to Repair: Can You Use Refurbished Parts?
 
 When your device breaks, you have choices under EU law — and the law explicitly supports using refurbished and 3D-printed replacement parts. Here's what you need to know about part standards, guarantees, and your rights.

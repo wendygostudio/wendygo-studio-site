@@ -1,25 +1,19 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: gdpr-data-access-request
-xDefaultPath: /blog/gdpr-data-access-request/
 title: "Richiedere l'accesso ai dati secondo il GDPR"
 description: "Richiedi una copia dei dati personali ai sensi dell'articolo 15 GDPR e conserva la documentazione."
 date: 2026-07-26
 slug: richiedere-accesso-dati-gdpr
-product: ClaimForge
-jurisdiction: "Unione europea; norme nazionali e circostanze possono modificare la procedura"
+locale: it
+translationKey: gdpr-data-access-request
+product: claimforge
+contentType: workflow
+primaryKeyword: "richiedere accesso dati GDPR"
+relatedPages: /claimforge/
+jurisdiction: Unione europea; norme nazionali e circostanze possono modificare la procedura
 reviewedAt: 2026-07-26
 reviewDue: 2026-10-26
 sourceUrls: https://eur-lex.europa.eu/eli/reg/2016/679/oj,https://commission.europa.eu/law/law-topic/data-protection/data-protection-eu_en
-contentType: workflow
-primaryKeyword: "richiedere accesso dati GDPR"
-relatedPages: "/it/claimforge/,/blog/gdpr-data-access-request/"
-heading: "Richiedere l'accesso ai dati personali"
-intro: "Una richiesta chiara e documentata aiuta a capire il trattamento dei dati."
-faqs:
-  - question: "Devo indicare un motivo?"
-    answer: "In genere no; fornisci informazioni sufficienti affinché l'azienda individui i tuoi dati."
 ---
 
 L'articolo 15 GDPR riconosce un diritto di accesso ai dati personali trattati. Invia la richiesta all'indirizzo privacy o contatto del titolare e conserva una copia datata.

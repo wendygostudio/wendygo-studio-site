@@ -1,8 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Resize an Image for Twitch Panels in Chrome (320×160) — No Upload, No Hassle"
-slug: resize-image-for-twitch-panel-chrome
+description: "Twitch panels sit below your channel bio—small rectangular boxes where streamers drop thumbnails, call-to-actions, and quick links. They're..."
 date: 2026-06-26
-tags: ["how-to", "FrameForge", "Twitch"]
+slug: resize-image-for-twitch-panel-chrome
+locale: en
+translationKey: resize-image-for-twitch-panel-chrome
+product: frameforge
+contentType: how-to
+primaryKeyword: "how to resize an image for twitch panels in chrome (320×160) — no upload, no hassle"
+relatedPages: /frameforge/
 ---
 
 Twitch panels sit below your channel bio—small rectangular boxes where streamers drop thumbnails, call-to-actions, and quick links. They're 320×160 px, which is one of the most awkward aspect ratios to work with. Most image editors assume square or wide formats. A source photo that looks fine at 16:9 gets mangled when you try to squeeze it into a 2:1 ultra-wide rectangle.

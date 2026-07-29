@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: de
-translationKey: pomodoro-for-studying-chrome-extension
-xDefaultPath: /blog/pomodoro-for-studying-chrome-extension/
 title: "Pomodoro-Timer zum Lernen in Chrome"
 description: "Lerne in überschaubaren Fokusblöcken mit Pausen und lokalem Fortschritt in Chrome."
 date: 2026-07-26
 slug: pomodoro-lernen-chrome
-product: SlimeForge
+locale: de
+translationKey: pomodoro-for-studying-chrome-extension
+product: slimeforge
 contentType: how-to
 primaryKeyword: "Pomodoro Timer Lernen Chrome"
-relatedPages: "/de/slimeforge/,/blog/pomodoro-for-studying-chrome-extension/"
-heading: "Mit Pomodoro für Prüfungen lernen"
-intro: "Teile Lernstoff in machbare Einheiten statt in unklare, lange Sitzungen."
-faqs:
-  - question: "Welche Pomodoro-Dauer passt zum Lernen?"
-    answer: "25 Minuten sind ein guter Start; passe die Dauer an Fach und Konzentration an."
+relatedPages: /slimeforge/
 ---
 
 Lange Lernsitzungen ohne Pause werden oft unproduktiv. Ein klarer Fokusblock, eine kurze Pause und eine konkrete Aufgabe machen den Einstieg leichter.

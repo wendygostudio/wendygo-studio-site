@@ -1,13 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Convert Video to Audio Free — No Upload, Works Offline"
+description: "Extract the audio track from any video file entirely in your browser. ConvertForge processes everything locally — no upload, no cloud service, no file size limits."
 date: 2026-07-07
 slug: convert-video-to-audio-free
-product: ConvertForge
-type: how-to
-keyword: "convert video to audio free"
-description: "Extract the audio track from any video file entirely in your browser. ConvertForge processes everything locally — no upload, no cloud service, no file size limits."
-published: true
-hreflang_es: ""
+locale: en
+translationKey: convert-video-to-audio-free
+product: convertforge
+contentType: how-to
+primaryKeyword: "convert video to audio free"
+relatedPages: /convertforge/
 ---
 
 Most video-to-audio converters upload your file to a remote server. ConvertForge extracts the audio track entirely in your browser — local processing, no account, no waiting for upload queues.

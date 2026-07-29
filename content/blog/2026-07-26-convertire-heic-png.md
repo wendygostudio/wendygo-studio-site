@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: heic-to-png-free
-xDefaultPath: /blog/convert-heic-to-png-free/
 title: "Convertire HEIC in PNG localmente"
 description: "Converti foto HEIC in PNG nel browser, senza upload né account."
 date: 2026-07-26
 slug: convertire-heic-png
-product: ConvertForge
+locale: it
+translationKey: heic-to-png-free
+product: convertforge
 contentType: how-to
 primaryKeyword: "convertire HEIC in PNG"
-relatedPages: "/it/convertforge/,/blog/convert-heic-to-png-free/"
-heading: "Convertire HEIC in PNG localmente"
-intro: "Crea un PNG compatibile da una foto iPhone senza caricarla online."
-faqs:
-  - question: "Quando preferire PNG a JPG?"
-    answer: "PNG è utile per lavoro senza perdita, ma con foto i file sono spesso più grandi."
+relatedPages: /convertforge/
 ---
 
 HEIC risparmia spazio su iPhone, ma non tutti i servizi lo supportano. PNG può essere utile per proseguire il lavoro su un'immagine o quando è preferibile un file raster senza perdita.

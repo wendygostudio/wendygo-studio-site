@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: adhd-pomodoro-timer-chrome-extension
-xDefaultPath: /blog/adhd-pomodoro-timer-chrome-extension/
 title: "Usare un timer Pomodoro con ADHD in Chrome"
 description: "Blocchi brevi e progresso visibile come supporto pratico di organizzazione in Chrome."
 date: 2026-07-26
 slug: timer-pomodoro-adhd-chrome
-product: SlimeForge
+locale: it
+translationKey: adhd-pomodoro-timer-chrome-extension
+product: slimeforge
 contentType: how-to
 primaryKeyword: "timer Pomodoro ADHD Chrome"
-relatedPages: "/it/slimeforge/,/blog/adhd-pomodoro-timer-chrome-extension/"
-heading: "Pomodoro come supporto organizzativo con ADHD"
-intro: "Un timer può facilitare l'avvio, ma non sostituisce supporto medico o terapeutico."
-faqs:
-  - question: "Un timer Pomodoro cura l'ADHD?"
-    answer: "No. È uno strumento organizzativo, non un sostituto di consulenza o trattamento professionale."
+relatedPages: /slimeforge/
 ---
 
 Iniziare un'attività può essere difficile. Un blocco breve e definito aiuta a scegliere la prossima azione concreta invece di guardare tutto il lavoro.

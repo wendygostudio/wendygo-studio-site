@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Best Forest App Alternatives for Chrome in 2026"
+description: "For years, Forest has been the default recommendation for people who want a visual reward tied to staying focused. Plant a virtual tree, stay off..."
 date: 2026-07-16
 slug: forest-app-alternatives-chrome
-product: SlimeForge
-type: F (Alternatives)
-keyword: "forest app alternatives chrome"
-description: "Forest for Chrome works, but it's not the only option. Compare the best focus timer Chrome extensions — from minimalist Pomodoro timers to gamified options with a virtual pet."
+locale: en
+translationKey: forest-app-alternatives-chrome
+product: slimeforge
+contentType: how-to
+primaryKeyword: "forest app alternatives chrome"
+relatedPages: /slimeforge/
 ---
 
 For years, Forest has been the default recommendation for people who want a visual reward tied to staying focused. Plant a virtual tree, stay off distracting apps, watch it grow. The concept works. But the Chrome extension is a companion to the mobile app — the fuller experience lives on your phone, and cross-device sync requires the paid plan.

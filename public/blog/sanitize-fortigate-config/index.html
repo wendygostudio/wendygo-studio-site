@@ -2,122 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Safely Share a FortiGate Config | Wendygo Studio</title>
-  <meta name="description" content="FortiGate configs contain VPN keys, API tokens, and admin passwords. Sanitize them locally before sharing." />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>How to Safely Share a FortiGate Firewall Config</title>
+  <meta name="description" content="A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection..." />
   <link rel="canonical" href="https://wendygostudio.com/blog/sanitize-fortigate-config/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-fortigate-config/" />
-  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-config-fortigate/" />
-  <link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/fortigate-konfiguration-bereinigen/" />
-  <link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-fortigate/" />
-  <link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-fortigate/" />
-  <link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-fortigate/" />
-  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-fortigate-config/">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How to Safely Share a FortiGate Config Without Exposing Credentials",
-    "description": "Use ScrubForge to replace VPN keys, API tokens, admin passwords, and other secrets in a FortiGate firewall config with consistent placeholder tokens before sharing with support or AI assistants.",
-    "tool": [{ "@type": "HowToTool", "name": "ScrubForge Chrome extension" }],
-    "step": [
-      {
-        "@type": "HowToStep",
-        "position": 1,
-        "name": "Export your FortiGate config",
-        "text": "Log into FortiGate administration console. Go to System Settings > Configuration > Download to export the full config file."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 2,
-        "name": "Install ScrubForge",
-        "text": "Add ScrubForge from the Chrome Web Store. No account required. Pin the icon to your toolbar."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 3,
-        "name": "Paste and sanitize",
-        "text": "Open ScrubForge. Copy your config text and paste it into the extension. ScrubForge processes locally in your browser and replaces sensitive values with consistent placeholder tokens."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 4,
-        "name": "Review the output",
-        "text": "Scan the sanitized output to confirm no real credentials remain. The config structure — VPN tunnels, interfaces, firewall rules — stays intact for troubleshooting."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 5,
-        "name": "Share safely",
-        "text": "Copy the sanitized config and paste it into your Fortinet TAC ticket, vendor email, or AI assistant chat. Real credentials never leave your machine."
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "How to Safely Share a FortiGate Config"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to Safely Share a FortiGate Config Without Exposing Credentials",
-    "description": "FortiGate configs contain VPN keys, API tokens, and admin passwords. Learn how to sanitize them before sharing with Fortinet support or AI assistants — using ScrubForge, free and local.",
-    "datePublished": "2026-06-30",
-    "dateModified": "2026-06-30",
-    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
-    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Does ScrubForge work with FortiGate configs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. ScrubForge processes plain text from any source. Whether your config is from FortiGate, Cisco, Palo Alto, or Juniper, paste it in and ScrubForge replaces sensitive patterns with consistent tokens."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will the sanitized FortiGate config still be useful for support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. Support engineers care about config structure — VPN tunnels, firewall rules, interface settings. ScrubForge keeps all of that intact while replacing only the credentials. They can follow the logic without seeing the secrets."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does ScrubForge upload my config to a server?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. ScrubForge is a Chrome extension that processes text entirely in your browser. Nothing is sent to Wendygo Studio or any third-party server. Your config stays on your machine."
-        }
-      }
-    ]
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Safely Share a FortiGate Firewall Config","description":"A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection...","datePublished":"2026-06-30","dateModified":"2026-06-30","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Safely Share a FortiGate Firewall Config"}]}</script>
+  
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -186,6 +78,15 @@
 
     .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
 
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
     .article-body { line-height: 1.75; }
     .article-body p { margin-bottom: 20px; }
     .article-body h2 {
@@ -199,74 +100,162 @@
     .article-body strong { color: var(--text); }
     .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
     .article-body a:hover { text-decoration-color: var(--amber); }
-    .article-body code {
-      font-family: var(--mono); font-size: 13px;
-      background: var(--surf2); border: 1px solid var(--line);
-      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
-    }
-    .article-body ul { margin: 16px 0 20px 20px; }
-    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
-    .article-body ul li strong { color: var(--text); }
-    .article-body pre {
-      background: var(--surf2); border: 1px solid var(--line); border-radius: 8px;
-      padding: 16px; overflow-x: auto; font-size: 13px; line-height: 1.6;
-      margin: 20px 0; color: var(--amber2);
-    }
-    .article-body code { background: transparent; border: none; padding: 0; color: inherit; }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
 
-    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
-    .step-card {
-      display: flex; gap: 16px; align-items: flex-start;
-      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
     }
-    .step-num {
-      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
-      color: var(--on-a); font-size: 13px; font-weight: 800;
-      display: grid; place-items: center;
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
     }
-    .step-content { flex: 1; }
-    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
 
     .cta-box {
-      margin: 56px 0 0;
-      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
       text-align: center;
     }
-    .cta-box h2 {
-      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
-    }
-    .cta-box p {
-      font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6;
-    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
     .cta-btn {
-      display: inline-block; background: var(--amber); color: var(--on-a);
-      font-weight: 800; font-size: 14px; letter-spacing: .3px;
-      padding: 12px 28px; border-radius: 8px; text-decoration: none;
-      transition: background .15s;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
     }
     .cta-btn:hover { background: var(--amber2); }
 
-    .faq { margin-top: 56px; }
-    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
-    .faq-item {
-      border: 1px solid var(--line); border-radius: 10px;
-      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
-    }
-    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
-
     footer {
-      border-top: 1px solid var(--line); margin-top: 80px;
-      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
     }
-    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
-  .nav-toggle { display: none; }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
     .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
     .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
     @media (max-width: 600px) {
@@ -286,192 +275,106 @@
       .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
       .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
       .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
     }
-    </style>
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Wendygo Studio">
-<meta property="og:title" content="Safely Share a FortiGate Config | Wendygo Studio">
-<meta property="og:description" content="FortiGate configs contain VPN keys, API tokens, and admin passwords. Sanitize them locally before sharing.">
-<meta property="og:url" content="https://wendygostudio.com/blog/sanitize-fortigate-config/">
-<meta property="og:image" content="https://wendygostudio.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Safely Share a FortiGate Config | Wendygo Studio">
-<meta name="twitter:description" content="FortiGate configs contain VPN keys, API tokens, and admin passwords. Sanitize them locally before sharing.">
-<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
-<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="How to Safely Share a FortiGate Firewall Config" />
+  <meta property="og:description" content="A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection..." />
+  <meta property="og:url" content="https://wendygostudio.com/blog/sanitize-fortigate-config/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Safely Share a FortiGate Firewall Config" />
+  <meta name="twitter:description" content="A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection..." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-config-fortigate/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/fortigate-konfiguration-bereinigen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-fortigate/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-fortigate/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-fortigate/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>
-
-<nav>
-  <a class="nav-brand" href="/">
-    <div class="nav-mark">W</div>
-    Wendygo Studio
-  </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="nav-links">
-    <a href="/blog/">Blog</a>
-    <a href="/#tools">Tools</a>
-  </div>
-<div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/sanitize-fortigate-config/" selected>English</option><option value="https://wendygostudio.com/es/blog/sanitizar-config-fortigate/">Español</option><option value="https://wendygostudio.com/de/blog/fortigate-konfiguration-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-configuration-fortigate/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-configurazione-fortigate/">Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-configuracao-fortigate/">Português</option></select></div></nav>
-
-<main class="article-wrap">
-
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a><span>›</span>
-    <a href="/blog/">Blog</a><span>›</span>
-    <span>Safely Share a FortiGate Config</span>
-  </nav>
-
-  <header class="article-meta">
-    <div class="article-tag">ScrubForge · Security</div>
-    <h1>How to Safely Share a FortiGate Config Without Exposing Credentials</h1>
-    <p class="article-intro">A FortiGate running-config holds VPN keys, API tokens, and admin passwords. Here's how to strip them before the config leaves your machine.</p>
-    <div class="article-date">June 30, 2026</div>
-  </header>
-
-  <hr class="divider" />
-
-  <article class="article-body">
-
-    <p>When you need to troubleshoot a FortiGate firewall, the conversation often goes the same way: "Can you send me your full config?" It's a reasonable ask — your support engineer or a colleague needs to see the complete picture to help. But the complete picture includes everything: VPN tunnel keys, HTTPS inspection certificates, API tokens, admin passwords, and SNMP community strings.</p>
-
-    <p>Sharing that config unmodified is exposing all of those secrets at once.</p>
-
-    <h2>What a FortiGate Config Actually Contains</h2>
-
-    <p>A full FortiGate configuration dump includes several categories of sensitive data that often get overlooked:</p>
-
-    <ul>
-      <li><strong>Admin and user passwords</strong> — encrypted in the config, but still sensitive material</li>
-      <li><strong>VPN tunnel pre-shared keys</strong> — active credentials for site-to-site or client VPN</li>
-      <li><strong>HTTPS inspection certificates and private keys</strong> — used to decrypt HTTPS traffic</li>
-      <li><strong>API tokens</strong> — used for automation, third-party integrations, and programmatic access</li>
-      <li><strong>DNS forwarding credentials</strong> — usernames and passwords for dynamic DNS providers</li>
-      <li><strong>Email alert and syslog authentication</strong> — passwords for external services</li>
-    </ul>
-
-    <h2>Before and After: What Sanitization Looks Like</h2>
-
-    <p>Here's a small snippet from a typical FortiGate config before and after sanitization:</p>
-
-    <pre>--- BEFORE (Raw) ---
-config vpn ipsec phase1
-    edit "site-to-site-main"
-        set psk "Tunnel@KeySecure#2026"
-        set peer "203.0.113.5"
+      <a href="/#products">Extensions</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/#privacy">Privacy</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/sanitize-fortigate-config/" selected>English</option><option value="https://wendygostudio.com/es/blog/sanitizar-config-fortigate/">Español</option><option value="https://wendygostudio.com/de/blog/fortigate-konfiguration-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-configuration-fortigate/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-configurazione-fortigate/">Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-configuracao-fortigate/">Português</option></select></div></nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>How to Safely Share a FortiGate Firewall Config</div>
+    <div class="article-meta"><div class="article-tag">how-to · scrubforge</div><h1>How to Safely Share a FortiGate Firewall Config</h1><p class="article-intro">A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection...</p><div class="article-date">June 30, 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><h1>How to Safely Share a FortiGate Firewall Config</h1>
+<p>A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection certificates, and API tokens — all at risk when the config is shared raw with support.</p>
+<h2>What a FortiGate Config Actually Contains</h2>
+<p>When you run <code>show</code> or export a full config from a FortiGate, you get:</p>
+<ul>
+<li><strong>Admin and user passwords</strong> — encrypted, but still sensitive data in the file</li>
+<li><strong>VPN tunnel pre-shared keys and certificates</strong> — active credentials</li>
+<li><strong>API tokens</strong> — used for automation and third-party integrations</li>
+<li><strong>HTTPS inspection certificates</strong> — private keys that decrypt traffic</li>
+<li><strong>DNS forwarding zones</strong> and dynamic DNS credentials</li>
+<li><strong>Email and alert authentication strings</strong></li>
+</ul>
+<p>Sharing the entire config — even to Fortinet support or an AI assistant — exposes all of these simultaneously.</p>
+<h2>Before and After: FortiGate Sanitization</h2>
+<p>Here&#39;s what a small section looks like:</p>
+<p><strong>Raw:</strong></p>
+<pre><code>config vpn ipsec phase1
+    edit &quot;site-to-site-main&quot;
+        set psk &quot;Tunnel@KeySecure#2026&quot;
+        set peer &quot;203.0.113.5&quot;
     next
 end
 
 config system admin
-    edit "backup-admin"
-        set password "F@rtinet2026"
+    edit &quot;backup-admin&quot;
+        set password &quot;F@rtinet2026&quot;
     next
 end
-
---- AFTER (Sanitized) ---
-config vpn ipsec phase1
-    edit "site-to-site-main"
-        set psk "[VPNKEY_1]"
-        set peer "203.0.113.5"
+</code></pre>
+<p><strong>Sanitized:</strong></p>
+<pre><code>config vpn ipsec phase1
+    edit &quot;site-to-site-main&quot;
+        set psk &quot;[VPNKEY_1]&quot;
+        set peer &quot;203.0.113.5&quot;
     next
 end
 
 config system admin
-    edit "backup-admin"
-        set password "[ADMIN_PASS_1]"
+    edit &quot;backup-admin&quot;
+        set password &quot;[ADMIN_PASS_1]&quot;
     next
-end</pre>
-
-    <p>The tunnel name, peer IP, and structure remain visible. Support engineers can follow the logic without ever seeing the real credentials. The tokens are consistent — if the same password appears multiple times, it gets the same placeholder throughout.</p>
-
-    <h2>How to Sanitize FortiGate Configs</h2>
-
-    <ol class="steps">
-      <li class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Export your FortiGate config</div>
-          <div class="step-desc">Log into the FortiGate console. Go to System > System Settings > Configuration and select Download to export the full config file to your machine.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Install ScrubForge</div>
-          <div class="step-desc">Add ScrubForge from the Chrome Web Store. Free, no account required. Pin the icon to your browser toolbar.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Paste and sanitize</div>
-          <div class="step-desc">Click the ScrubForge icon. Copy your exported config and paste it into ScrubForge. It processes the text in your browser and replaces sensitive values with consistent placeholder tokens instantly.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">Review the output</div>
-          <div class="step-desc">Scan the sanitized output to confirm no real credentials remain. FortiGate uses many custom formats — always review before sharing, especially for non-standard fields.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <div class="step-title">Share safely</div>
-          <div class="step-desc">Copy the sanitized config and paste it into your Fortinet support ticket, vendor email, or AI assistant. Your real credentials stay on your machine.</div>
-        </div>
-      </li>
-    </ol>
-
-    <h2>Why Local Processing Matters</h2>
-
-    <p>Fortinet support cases are stored in Fortinet's systems indefinitely. Configs pasted into ChatGPT or Claude may be logged and used for model training. A sanitized version gives you the benefit of expert help without exposing active credentials to third-party storage.</p>
-
-    <p>ScrubForge processes everything in your browser. Nothing is sent to a server. This is especially important for production firewall configs that contain credentials currently in use across your network.</p>
-
-    <div class="cta-box">
-      <h2>Sanitize FortiGate configs before you share them</h2>
-      <p>ScrubForge is free to install. Paste your config, strip the credentials locally, and share safely — no upload, no account required.</p>
-      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Install ScrubForge — Free</a>
-    </div>
-
-  </article>
-
-  <section class="faq" aria-label="Frequently asked questions">
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <div class="faq-q">Does ScrubForge work with FortiGate configs?</div>
-      <div class="faq-a">Yes. ScrubForge processes plain text from any source. Whether your config is from FortiGate, Cisco, Palo Alto, or Juniper, paste it in and ScrubForge replaces sensitive patterns with consistent tokens.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Will the sanitized FortiGate config still be useful for support?</div>
-      <div class="faq-a">Absolutely. Support engineers care about config structure — VPN tunnels, firewall rules, interface settings. ScrubForge keeps all of that intact while replacing only the credentials. They can follow the logic without seeing the secrets.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Does ScrubForge upload my config to a server?</div>
-      <div class="faq-a">No. ScrubForge is a Chrome extension that processes text entirely in your browser. Nothing is sent to Wendygo Studio or any third-party server. Your config stays on your machine.</div>
-    </div>
-
-  </section>
-
-</main>
-
-<footer>
-  <a class="footer-brand" href="/">Wendygo Studio</a>
-  <div class="footer-links">
-    <a href="/blog/">Blog</a>
-    <a href="/#tools">Tools</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/terms">Terms</a>
+end
+</code></pre>
+<p>The tunnel name and peer IP stay visible for troubleshooting — the secrets are replaced with consistent tokens. Support engineers see the structure; they never see the real credentials.</p>
+<h2>How to Sanitize FortiGate Configs with ScrubForge</h2>
+<ol>
+<li><strong>Export your config</strong> — Log into FortiGate &gt; System Settings &gt; Configuration &gt; Download. Save the full config file locally.</li>
+<li><strong>Open ScrubForge</strong> — Click the extension in your browser toolbar.</li>
+<li><strong>Paste and clean</strong> — Copy the config contents and paste into ScrubForge. It replaces sensitive patterns instantly, in your browser.</li>
+<li><strong>Review the output</strong> — Scan for any remaining exposed values — FortiGate uses many custom secret formats. Always review before sharing.</li>
+<li><strong>Share safely</strong> — Copy the sanitized text into your Fortinet TAC ticket or email. No credentials left behind.</li>
+</ol>
+<h2>Why This Matters</h2>
+<p>Fortinet support cases are stored indefinitely in their systems. Configs pasted into ChatGPT or Claude are logged and may be used for model training. A sanitized version gives support exactly what they need — the config structure and logic — without the active credentials.</p>
+<h2>When to Sanitize</h2>
+<ul>
+<li>Before opening a TAC case with Fortinet support</li>
+<li>Before pasting into AI assistants for config debugging</li>
+<li>Before sharing with vendors or contractors</li>
+<li>Before storing configs in shared repositories or documentation systems</li>
+</ul>
+<p>ScrubForge is free and works on any text — FortiGate, Cisco, Palo Alto, Juniper, or cloud configs. All processing happens in your browser. No upload. No account.</p>
+<p><strong><a href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe">Install ScrubForge — Free</a></strong></p>
+<p>Learn also: <a href="/blog/remove-sensitive-data-cisco-config/">How to Remove Sensitive Data from a Cisco IOS Config</a></p>
+</div>
   </div>
-  <div class="footer-copy">&copy; 2026 Wendygo Studio. All rights reserved.</div>
-</footer>
-
-
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div><div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/privacy">Privacy</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>

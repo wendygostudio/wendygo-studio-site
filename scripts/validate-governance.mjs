@@ -47,7 +47,11 @@ const odrExceptionFiles = new Set([
   'public/it/blog/index.html',
   'public/pt/blog/index.html',
   'public/resources/eu-consumer-rights/index.html',
-  'public/es/recursos/eu-consumer-rights/index.html'
+  'public/es/recursos/eu-consumer-rights/index.html',
+  'public/de/ressourcen/eu-consumer-rights/index.html',
+  'public/fr/ressources/eu-consumer-rights/index.html',
+  'public/it/risorse/eu-consumer-rights/index.html',
+  'public/pt/recursos/eu-consumer-rights/index.html'
 ]);
 for (const file of governedFiles) {
   const rel = path.relative('.', file).split(path.sep).join('/');

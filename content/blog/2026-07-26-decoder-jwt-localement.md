@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: fr
-translationKey: decode-jwt-online
-xDefaultPath: /blog/decode-jwt-online/
 title: "Décoder un JWT localement et lire ses claims"
 description: "Lisez l'en-tête et les claims d'un JWT dans le navigateur, sans téléverser le jeton."
 date: 2026-07-26
 slug: decoder-jwt-localement
-product: TextForge
+locale: fr
+translationKey: decode-jwt-online
+product: textforge
 contentType: how-to
 primaryKeyword: "décoder JWT localement"
-relatedPages: "/fr/textforge/,/blog/decode-jwt-online/"
-heading: "Décoder un JWT localement"
-intro: "Lisez les parties visibles d'un JWT sans l'envoyer à un décodeur en ligne."
-faqs:
-  - question: "Le décodage vérifie-t-il la signature JWT ?"
-    answer: "Non. Lire l'en-tête et la charge utile ne vérifie ni la signature ni la fiabilité."
+relatedPages: /textforge/
 ---
 
 Un JSON Web Token comporte généralement un en-tête, une charge utile et une signature. L'en-tête et la charge utile sont encodés, non chiffrés : vous pouvez lire localement une expiration (`exp`) ou des claims.

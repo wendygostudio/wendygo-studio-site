@@ -1,40 +1,15 @@
 ---
 schemaVersion: 1
 title: "Taille d'image d'un carrousel LinkedIn"
-description: >-
-  Préparez des images de carrousel LinkedIn cohérentes localement dans Chrome,
-  sans télécharger les illustrations sources dans un éditeur en ligne.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: linkedin-carousel-image-size
 locale: fr
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: Taille de l'image du carrousel LinkedIn
-relatedPages: >-
-  /fr/frameforge/,/blog/resize-image-for-linkedin-post/,/blog/batch-resize-images-chrome-extension/
-heading: "Taille de l'image du carrousel LinkedIn\_: un flux de travail Chrome local"
-shortTitle: Taille de l’image du carrousel LinkedIn
-intro: >-
-  Un carrousel LinkedIn est une séquence, pas une image de flux. Des dimensions
-  cohérentes, des marges sûres et une routine d'exportation comptent plus que
-  l'ajout d'un autre outil de conception au flux de travail.
-faqs:
-  - question: Quelle taille les images du carrousel LinkedIn doivent-elles utiliser ?
-    answer: >-
-      Utilisez un canevas cohérent dans toute la séquence et vérifiez les
-      instructions de téléchargement actuelles de LinkedIn avant de publier.
-      L’important est que chaque page utilise les mêmes dimensions et marges
-      lisibles.
-  - question: "Puis-je redimensionner les illustrations du carrousel localement\_?"
-    answer: >-
-      Oui. Un flux de travail d'images local vous permet de préparer chaque page
-      raster dans le navigateur sans envoyer les images source à un éditeur
-      tiers.
-  - question: "Chaque diapositive du carrousel devrait-elle utiliser la même récolte\_?"
-    answer: >-
-      Le canevas doit rester cohérent, mais chaque image source peut nécessiter
-      une position de recadrage différente pour garder son sujet visible.
+primaryKeyword: "Taille de l'image du carrousel LinkedIn"
+relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 Les carrousels LinkedIn fonctionnent lorsqu'ils ressemblent à un seul document : une page d'ouverture claire, une séquence lisible et une page de fermeture qui n'a pas l'air compressée ou rognée. Le problème pratique est rarement la créativité. Il prépare plusieurs images avec un cadre cohérent tout en protégeant les illustrations sources qui peuvent inclure le travail du client, des captures d'écran ou du matériel interne du produit.

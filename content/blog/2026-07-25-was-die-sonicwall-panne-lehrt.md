@@ -9,20 +9,7 @@ translationKey: what-the-sonicwall-backup-breach-teaches-about-config-sharing
 product: scrubforge
 contentType: use-case
 primaryKeyword: "ist mein Firewall-Konfigurations-Backup sicher zu teilen"
-relatedPages: /de/scrubforge/,/de/blog/mikrotik-router-konfiguration-bereinigen/,/de/ressourcen/
-sourceUrls: https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
-heading: "Was Die SonicWall-Panne Über Config-Sharing Lehrt"
-shortTitle: "Lehre aus der SonicWall-Panne"
-intro: "SonicWall bestätigte, dass ein Brute-Force-Angriff auf sein MySonicWall.com-Portal Firewall-Konfigurations-Backup-Dateien für jeden Kunden offenlegte, der den Cloud-Backup-Dienst nutzte — nicht nur einen Teil, alle. Die Dateien stammten direkt aus der offiziellen Backup-Funktion des Herstellers."
-faqs:
-  - question: "Was ist beim SonicWall-Backup-Vorfall tatsächlich passiert?"
-    answer: "Ein Angreifer nutzte Brute-Force-Techniken gegen das Kundenportal MySonicWall.com und griff auf Konfigurations-Backup-Dateien (.EXP) zu. SonicWalls Untersuchung, gemeinsam mit Mandiant durchgeführt, schätzte zunächst unter 5 % der Cloud-Backup-Kunden als betroffen, bestätigte in der finalen Aktualisierung aber, dass alle Kunden betroffen waren, die die Cloud-Backup-Funktion genutzt hatten."
-  - question: "Waren die offengelegten Backup-Dateien verschlüsselt?"
-    answer: "Teilweise. Zugangsdaten und Secrets in der .EXP-Datei sind einzeln verschlüsselt (AES-256 bei Gen-7-Firewalls und neuer, das ältere 3DES bei Gen 6), aber der Rest der Konfiguration ist nur kodiert, nicht verschlüsselt — Topologie, Regeln, IP-Bereiche und andere Details sind nach dem Dekodieren lesbar. SonicWall selbst empfiehlt, jede offengelegte Datei als Anlass für ein Zurücksetzen der Zugangsdaten zu behandeln."
-  - question: "Bedeutet das, dass Cloud-Backups von Herstellern grundsätzlich unsicher sind?"
-    answer: "Nein, SonicWalls Hinweis betrifft ein per Brute-Force kompromittiertes Portal, keinen grundsätzlichen Fehler im Backup-Konzept. Die Lehre ist enger gefasst: Ein Konfigurationsexport enthält mehr nutzbare Details, als die meisten annehmen — überall dort, wo diese Datei oder ihr Inhalt hinreist, ein Cloud-Backup des Herstellers, ein Support-Ticket, ein KI-Chat, verdient dieselbe Vorsicht."
-  - question: "Was sollte ich an meiner eigenen Firewall nach dieser Lektüre prüfen?"
-    answer: "Wenn du die Cloud-Backup-Funktion von MySonicWall nutzt, melde dich an und prüfe unter Product Management > Issue List auf betroffene Seriennummern, dann folge SonicWalls Anleitung zum grundlegenden Zurücksetzen der Zugangsdaten. Unabhängig davon: Bereinige jede Konfigurationsdatei, bevor du sie irgendwo einfügst — ein Support-Ticket, ein Forenbeitrag oder ein KI-Assistent."
+relatedPages: /scrubforge/
 ---
 
 Das eigene Backup eines Herstellers soll eigentlich der sichere Ort für deine Konfiguration sein. Im September 2025 bestätigte SonicWall, dass das für seine Cloud-Backup-Kunden nicht zutraf, und die Details lohnen sich zu lesen, selbst wenn du keine SonicWall-Firewall betreibst.

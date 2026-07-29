@@ -1,12 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Extract Emails from Text Online — No Manual Hunting"
 description: "Pull every email address out of any text block in seconds. TextForge is a free Chrome extension that extracts emails locally — no data uploaded, no regex required."
-slug: extract-emails-from-text
 date: 2026-06-26
-tags: [TextForge, how-to, text-tools]
-keyword: "how to extract emails from text online"
-type: how-to
-product: TextForge
+slug: extract-emails-from-text
+locale: en
+translationKey: extract-emails-from-text
+product: textforge
+contentType: how-to
+primaryKeyword: "how to extract emails from text online"
+relatedPages: /textforge/
 ---
 
 You've been handed a wall of text — a CRM export, a pasted attendee list, a server log, a forwarded email chain — and somewhere inside it are the email addresses you actually need. Manual scanning is slow and error-prone. A regex in a text editor works, but most people don't keep the pattern memorized. An online extractor processes your text on someone else's server.

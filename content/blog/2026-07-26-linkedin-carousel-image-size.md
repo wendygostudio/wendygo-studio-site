@@ -9,17 +9,7 @@ translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
 primaryKeyword: "linkedin carousel image size"
-relatedPages: /frameforge/,/blog/resize-image-for-linkedin-post/,/blog/batch-resize-images-chrome-extension/
-heading: "LinkedIn Carousel Image Size: A Local Chrome Workflow"
-shortTitle: "LinkedIn carousel image size"
-intro: "A LinkedIn carousel is a sequence, not one feed image. Consistent dimensions, safe margins and an export routine matter more than adding another design tool to the workflow."
-faqs:
-  - question: "What size should LinkedIn carousel images use?"
-    answer: "Use one consistent canvas across the sequence and check the current LinkedIn upload guidance before publishing. The important part is that every page uses the same dimensions and readable margins."
-  - question: "Can I resize carousel artwork locally?"
-    answer: "Yes. A local image workflow lets you prepare each raster page in the browser without sending source images to a third-party editor."
-  - question: "Should every carousel slide use the same crop?"
-    answer: "The canvas should stay consistent, but each source image may need a different crop position to keep its subject visible."
+relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 LinkedIn carousels work when they feel like one document: a clear opening page, a readable sequence, and a closing page that does not look squeezed or cropped. The practical problem is rarely creativity. It is preparing several images with a consistent frame while protecting source artwork that may include client work, screenshots or internal product material.

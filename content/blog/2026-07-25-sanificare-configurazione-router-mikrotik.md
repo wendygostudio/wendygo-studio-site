@@ -9,20 +9,7 @@ translationKey: sanitize-mikrotik-router-config
 product: scrubforge
 contentType: how-to
 primaryKeyword: "sanificare una config router MikroTik prima di condividerla"
-relatedPages: /it/scrubforge/,/it/blog/cosa-insegna-la-violazione-sonicwall/,/it/risorse/
-sourceUrls: https://help.mikrotik.com/docs/spaces/ROS/pages/380076066/List+of+menus+with+sensitive+parameters,https://help.mikrotik.com/docs/spaces/ROS/pages/328155/Configuration+Management,https://mikrotik.com/download/changelogs
-heading: "Sanificare una Config Router MikroTik Prima di Condividerla"
-shortTitle: "Sanificare una config MikroTik"
-intro: "RouterOS nasconde le password in /export per impostazione predefinita. Restano comunque topologia, commenti e indirizzi server nel file che incolli in un forum, un ticket o una chat IA."
-faqs:
-  - question: "show-sensitive sostituisce la necessità di sanificare una config MikroTik?"
-    answer: "No. show-sensitive controlla solo se RouterOS stampa il suo elenco predefinito di campi sensibili — password, chiavi, secret. Tutto il resto nell'export, inclusi indirizzi IP, commenti e indirizzi server, resta comunque visibile. È esattamente a questo che serve ScrubForge."
-  - question: "La sanificazione romperà la config se devo reimportarla?"
-    answer: "Sanifica solo una copia destinata alla discussione, a un post sul forum o a un ticket di supporto — non il file che intendi reimportare. Reimportare uno script richiede i valori reali delle credenziali, quindi tieni il tuo export di lavoro separato dalla versione sanificata che condividi pubblicamente."
-  - question: "ScrubForge riconosce specificamente la sintassi RouterOS?"
-    answer: "Sì. RouterOS è una delle dodici sintassi di configurazione dispositivi coperte dalla libreria di pattern di ScrubForge, insieme a Cisco, FortiGate, Juniper e Palo Alto, tra le altre."
-  - question: "Cosa fare se ho già pubblicato una config MikroTik non sanificata?"
-    answer: "Modifica o elimina il post se la piattaforma lo consente, poi ruota qualsiasi credenziale esposta — password, chiavi pre-condivise, secret RADIUS. Cambiare i valori dopo il fatto non annulla ciò che era visibile mentre il post era attivo."
+relatedPages: /scrubforge/
 ---
 
 Pubblicare un export di configurazione router in un thread del forum o in un ticket di supporto è lavoro di routine per un amministratore, e gli admin MikroTik ne hanno fatto molto questo mese: RouterOS 7.21.5 (long-term) e 6.49.20 sono usciti entrambi il 6 luglio 2026, e un aggiornamento di solito significa estrarre un `/export` fresco per confrontare prima e dopo.

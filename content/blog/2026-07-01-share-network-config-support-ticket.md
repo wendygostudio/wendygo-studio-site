@@ -1,10 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Share Network Config with Support Tickets Safely"
-slug: "share-network-config-support-ticket-safely"
-date: "2026-07-01"
-type: "G"
-product: "ScrubForge"
-keyword: "share network config support ticket"
+description: "When your Cisco router goes down or your FortiGate firewall starts dropping traffic, the first call is to vendor support. They'll ask for your..."
+date: 2026-07-01
+slug: share-network-config-support-ticket-safely
+locale: en
+translationKey: share-network-config-support-ticket
+product: scrubforge
+contentType: how-to
+primaryKeyword: "share network config support ticket"
+relatedPages: /scrubforge/,/blog/scrubforge-chatgpt-network-troubleshooting/
 ---
 
 When your Cisco router goes down or your FortiGate firewall starts dropping traffic, the first call is to vendor support. They'll ask for your running config. It's the fastest way to diagnose the problem. The catch: your config contains active credentials that shouldn't leave your network.

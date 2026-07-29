@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: heic-to-jpg-free
-xDefaultPath: /blog/convert-heic-to-jpg-free/
 title: "Convertire HEIC in JPG gratis in Chrome"
 description: "Converti localmente foto HEIC da iPhone in JPG, senza upload né account."
 date: 2026-07-26
 slug: convertire-heic-jpg
-product: ConvertForge
+locale: it
+translationKey: heic-to-jpg-free
+product: convertforge
 contentType: how-to
 primaryKeyword: "convertire HEIC in JPG"
-relatedPages: "/it/convertforge/,/blog/convert-heic-to-jpg-free/"
-heading: "Convertire HEIC in JPG gratis"
-intro: "Converti una foto iPhone in locale quando un modulo o un destinatario richiede JPG."
-faqs:
-  - question: "La foto viene caricata online?"
-    answer: "No. ConvertForge elabora il file localmente nel browser."
+relatedPages: /convertforge/
 ---
 
 HEIC fa risparmiare spazio su iPhone, ma molti moduli, destinatari e programmi meno recenti non lo supportano. JPG rimane più semplice da condividere.

@@ -9,21 +9,7 @@ translationKey: what-the-sonicwall-backup-breach-teaches-about-config-sharing
 product: scrubforge
 contentType: use-case
 primaryKeyword: "is my firewall config backup safe to share"
-relatedPages: /scrubforge/,/blog/sanitize-network-config-before-sharing/,/blog/share-network-config-support-ticket-safely/
-sourceUrls: https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
-alternateUrl: https://wendygostudio.com/es/blog/lo-que-ensena-la-brecha-de-backups-sonicwall-sobre-compartir-configs/
-heading: "What the SonicWall Breach Teaches About Sharing Configs"
-shortTitle: "SonicWall backup breach lesson"
-intro: "SonicWall confirmed that a brute-force attack on its MySonicWall.com portal exposed firewall configuration backup files for every customer who had used its cloud backup service, not a small subset, all of them. The files came straight from the vendor's own official backup feature."
-faqs:
-  - question: "What actually happened in the SonicWall backup incident?"
-    answer: "An attacker used brute-force techniques against the MySonicWall.com customer portal and accessed configuration backup (.EXP) files. SonicWall's investigation, run with Mandiant, initially estimated under 5% of cloud-backup customers were affected, then confirmed in its final update that all customers who had used the cloud backup feature were impacted."
-  - question: "Were the exposed backup files encrypted?"
-    answer: "Partially. Credentials and secrets inside the .EXP file are individually encrypted, AES-256 on Gen 7 and newer firewalls, 3DES on Gen 6, but the rest of the configuration is only encoded, not encrypted, so topology, rules, IP ranges and other details are readable once decoded. SonicWall itself recommends treating any exposed file as a credential-reset trigger."
-  - question: "Does this mean vendor cloud backups are unsafe to use?"
-    answer: "No, SonicWall's advisory is about a portal being breached via brute force, not a flaw in backups as a concept. The lesson is narrower: a config export contains more usable detail than most people assume, so anywhere that file or its contents travels, a vendor's cloud backup, a support ticket, an AI chat, deserves the same scrutiny."
-  - question: "What should I check on my own firewall after reading this?"
-    answer: "If you use MySonicWall's cloud backup feature, log in and check the Product Management > Issue List for affected serial numbers, then follow SonicWall's Essential Credential Reset guidance. Separately, sanitize any config file before pasting it anywhere else, a support ticket, a forum post, or an AI assistant."
+relatedPages: /scrubforge/,/blog/share-network-config-support-ticket-safely/,/blog/sanitize-network-config-before-sharing/
 ---
 
 A vendor's own backup feature is supposed to be the safe place to put your configuration. In September 2025, SonicWall confirmed that wasn't true for its cloud backup customers, and the details are worth reading even if you don't run a SonicWall firewall.

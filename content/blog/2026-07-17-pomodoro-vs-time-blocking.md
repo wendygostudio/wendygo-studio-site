@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Pomodoro vs Time Blocking: Which Focus Method Works Best?"
 description: "Compare Pomodoro and time blocking side by side. Which focus method fits your work style — and when gamification tips the scales."
 date: 2026-07-17
 slug: pomodoro-vs-time-blocking
-product: SlimeForge
-type: B (comparativa)
-keywords: ["pomodoro vs time blocking", "pomodoro technique vs time blocking", "focus method comparison", "gamified pomodoro timer"]
+locale: en
+translationKey: pomodoro-vs-time-blocking
+product: slimeforge
+contentType: how-to
+primaryKeyword: "pomodoro vs time blocking: which focus method works best?"
+relatedPages: /slimeforge/
 ---
 
 Both Pomodoro and time blocking help you work with more intention — but they protect against different failure modes. Pomodoro controls depth within a session; time blocking controls structure across your day. Understanding the difference helps you use each where it actually works.

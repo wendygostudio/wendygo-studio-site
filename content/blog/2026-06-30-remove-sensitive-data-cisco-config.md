@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing"
+description: "Date: 2026-06-30 Slug: remove-sensitive-data-cisco-config Product: ScrubForge Type: How-to / Tutorial técnico (Tipo C) Keyword: remove sensitive..."
+date: 2026-06-30
+slug: remove-sensitive-data-cisco-config
+locale: en
+translationKey: remove-sensitive-data-cisco-config
+product: scrubforge
+contentType: how-to
+primaryKeyword: "how to remove sensitive data from a cisco ios config before sharing"
+relatedPages: /scrubforge/
+---
+
 # How to Remove Sensitive Data from a Cisco IOS Config Before Sharing
 
 **Date:** 2026-06-30  

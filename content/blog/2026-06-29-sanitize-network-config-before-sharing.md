@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Sanitize Network Configs Before Sharing with AI Assistants"
 description: "Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload."
 date: 2026-06-29
 slug: sanitize-network-config-before-sharing
-product: ScrubForge
-type: how-to
-keyword: "sanitize network config"
+locale: en
+translationKey: sanitize-network-config-before-sharing
+product: scrubforge
+contentType: how-to
+primaryKeyword: "sanitize network config"
+relatedPages: /scrubforge/
 ---
 
 # How to Sanitize Network Configs Before Sharing with AI Assistants

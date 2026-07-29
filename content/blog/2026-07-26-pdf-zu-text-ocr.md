@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: de
-translationKey: pdf-to-text-local-ocr
-xDefaultPath: /blog/convert-pdf-to-text-free/
 title: "Gescanntes PDF kostenlos in Text umwandeln – lokale OCR"
 description: "Extrahiere Text aus gescannten PDFs lokal in Chrome. Keine Datei wird hochgeladen; klare Free- und Pro-Grenzen."
 date: 2026-07-26
 slug: pdf-zu-text-ocr
-product: ConvertForge
+locale: de
+translationKey: pdf-to-text-local-ocr
+product: convertforge
 contentType: how-to
 primaryKeyword: "gescanntes PDF in Text umwandeln"
-relatedPages: "/de/convertforge/,/blog/convert-pdf-to-text-free/"
-heading: "Gescanntes PDF kostenlos in Text umwandeln"
-intro: "Lokale OCR liest Bild-PDFs auf deinem Gerät, ohne sie an einen Dienst zu senden."
-faqs:
-  - question: "Braucht jedes PDF OCR?"
-    answer: "Nein. Ein Text-PDF enthält auswählbaren Text; ein gescanntes PDF besteht aus Bildern und benötigt OCR."
+relatedPages: /convertforge/
 ---
 
 Ein gescanntes PDF enthält meist kein auswählbares Textlayer. Für Verträge, Rechnungen oder Belege bedeutet das: Du brauchst OCR, um den Inhalt durchsuchbar und kopierbar zu machen.

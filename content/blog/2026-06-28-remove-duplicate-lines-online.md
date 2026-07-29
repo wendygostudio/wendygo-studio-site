@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "Remove Duplicate Lines Online — Clean Text Without Uploading Data"
+description: "Author: Wendygo Studio Date: 2026-06-28 Type: How-to guide · TextForge"
+date: 2026-06-28
+slug: remove-duplicate-lines-online
+locale: en
+translationKey: remove-duplicate-lines-online
+product: textforge
+contentType: how-to
+primaryKeyword: "remove duplicate lines online — clean text without uploading data"
+relatedPages: /textforge/,/blog/sort-lines-alphabetically-online/,/blog/extract-urls-from-text/,/blog/extract-emails-from-text/
+---
+
 # Remove Duplicate Lines Online — Clean Text Without Uploading Data
 
 **Author:** Wendygo Studio  

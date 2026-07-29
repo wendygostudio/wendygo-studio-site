@@ -1,16 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Use ScrubForge with ChatGPT for Network Troubleshooting"
 description: "Sysadmins use ChatGPT to debug routing issues, VPN misconfigs, and firewall rules. Here's how to safely share your config with AI without exposing live credentials — using ScrubForge before you paste."
 date: 2026-07-01
 slug: scrubforge-chatgpt-network-troubleshooting
-product: ScrubForge
-type: integration
-keywords:
-  - scrubforge chatgpt
-  - share network config with chatgpt
-  - sanitize config before chatgpt
-  - chatgpt network troubleshooting
-  - network config ai assistant
+locale: en
+translationKey: scrubforge-chatgpt-network-troubleshooting
+product: scrubforge
+contentType: how-to
+primaryKeyword: "how to use scrubforge with chatgpt for network troubleshooting"
+relatedPages: /scrubforge/
 ---
 
 # How to Use ScrubForge with ChatGPT for Network Troubleshooting

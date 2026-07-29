@@ -9,20 +9,7 @@ translationKey: is-your-chrome-extension-spying-on-you
 product: slimeforge
 contentType: how-to
 primaryKeyword: "mon extension Chrome m'espionne-t-elle"
-relatedPages: /fr/slimeforge/,/fr/blog/ce-que-la-faille-sonicwall-enseigne/,/fr/ressources/
-sourceUrls: https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html,https://developer.chrome.com/docs/webstore/program-policies/policies,https://developer.chrome.com/blog/cws-policy-updates-2026
-heading: "Ton Extension Chrome T'Espionne-t-elle ? Checklist 2026"
-shortTitle: "Ton extension t'espionne-t-elle ?"
-intro: "Le 10 juillet 2026, Google a retiré ModHeader, une extension de confiance comptant environ 1,6 million d'installations, après la découverte par des chercheurs d'un système complet et dormant de collecte de données intégré dans la version officielle et signée. Elle avait passé des années de scans de sécurité automatisés."
-faqs:
-  - question: "Comment ModHeader a-t-elle passé les scans de sécurité de Chrome pendant des années ?"
-    answer: "Le collecteur était chiffré et verrouillé derrière une liste d'autorisation interne publiée vide, si bien que l'étape d'envoi ne s'exécutait jamais pendant les scans. Un scanner voit du texte chiffré et aucun trafic sortant, exactement l'apparence d'une extension propre. Les chercheurs de Stripe OLT ne l'ont trouvé qu'en lisant directement le code minifié."
-  - question: "De quelles permissions une extension de concentration ou de productivité a-t-elle vraiment besoin ?"
-    answer: "Une extension de concentration ne doit demander que les autorisations nécessaires à ses fonctions déclarées. SlimeForge déclare storage, alarms, scripting et activeTab ; l'accès facultatif aux sites n'est demandé que lorsque l'utilisateur active des fonctions intégrées aux pages."
-  - question: "Une extension populaire et bien notée est-elle automatiquement sûre ?"
-    answer: "Non. ModHeader comptait 1,6 million d'installations, un long historique, et des scores de risque automatisés allant jusqu'à 95 sur 100 la qualifiant de faible risque — et elle embarquait quand même un collecteur de données fonctionnel. Le nombre d'installations et la note mesurent la popularité, pas ce que fait le code après une mise à jour."
-  - question: "Désinstaller une extension malveillante supprime-t-il les données déjà collectées ?"
-    answer: "La désinstaller la retire de ton navigateur et efface son stockage local, mais n'annule rien de ce qui a déjà été envoyé aux serveurs du développeur. Si tu as déjà collé des clés d'API, des jetons ou des mots de passe dans les champs d'une extension, fais-les tourner, que cette extension s'avère compromise ou non."
+relatedPages: /slimeforge/
 ---
 
 Si tu utilises une extension Chrome ou Edge pour gérer ta concentration, tes en-têtes, tes mots de passe ou autre chose, le retrait de ModHeader mérite cinq minutes de ton temps. Pas parce que ModHeader était un outil marginal — elle comptait 1,6 million d'installations et une décennie de confiance —, mais à cause de la manière précise dont elle cachait ce qu'elle faisait.

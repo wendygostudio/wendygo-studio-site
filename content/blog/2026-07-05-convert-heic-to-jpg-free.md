@@ -1,16 +1,15 @@
 ---
+schemaVersion: 1
 title: "HEIC to JPG Converter Free — Private, No Upload"
 description: "Convert HEIC photos to JPG free in Chrome. Single-file conversion runs locally with no upload or account; Pro adds unlimited batch conversion."
 date: 2026-07-05
 slug: convert-heic-to-jpg-free
-product: ConvertForge
-type: how-to
-keywords:
-  - convert HEIC to JPG free
-  - how to convert HEIC to JPG
-  - HEIC to JPG offline
-  - HEIC converter no upload
-  - convert iPhone photos to JPG
+locale: en
+translationKey: convert-heic-to-jpg-free
+product: convertforge
+contentType: how-to
+primaryKeyword: "heic to jpg converter free — private, no upload"
+relatedPages: /convertforge/
 ---
 
 iPhones have saved photos in HEIC format since iOS 11. The format is more efficient than JPG, but it causes friction the moment you try to share or open photos on Windows, email them to someone, or upload them to a service that expects standard formats.

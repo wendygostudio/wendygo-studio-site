@@ -1,16 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Share Network Configs on Reddit Without Exposing Credentials"
 description: "Asking for network troubleshooting help on Reddit? Here's how to post your config safely — sanitize credentials locally with ScrubForge, then paste the clean version."
 date: 2026-07-01
 slug: share-network-config-reddit-safely
-product: ScrubForge
-type: how-to
-keywords:
-  - share network config reddit safely
-  - post cisco config reddit
-  - sanitize config before sharing
-  - network troubleshooting reddit
-  - safe config sharing
+locale: en
+translationKey: share-network-config-reddit-safely
+product: scrubforge
+contentType: how-to
+primaryKeyword: "how to share network configs on reddit without exposing credentials"
+relatedPages: /scrubforge/,/blog/scrubforge-chatgpt-network-troubleshooting/
 ---
 
 # How to Share Network Configs on Reddit Without Exposing Credentials

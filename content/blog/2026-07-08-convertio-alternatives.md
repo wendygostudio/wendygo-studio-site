@@ -1,16 +1,15 @@
 ---
-slug: convertio-alternatives
+schemaVersion: 1
 title: "Best Convertio Alternatives That Don't Upload Your Files (2026)"
 description: "Looking for Convertio alternatives? Compare the best free options — including tools that process files locally without uploading. Find the right converter for your workflow."
 date: 2026-07-08
-product: ConvertForge
-type: F
-keywords:
-  - convertio alternatives
-  - convertio alternative free
-  - file converter without upload
-  - local file converter
-  - cloudconvert alternative
+slug: convertio-alternatives
+locale: en
+translationKey: convertio-alternatives
+product: convertforge
+contentType: how-to
+primaryKeyword: "best convertio alternatives that don't upload your files (2026)"
+relatedPages: /convertforge/
 ---
 
 # Best Convertio Alternatives That Don't Upload Your Files (2026)

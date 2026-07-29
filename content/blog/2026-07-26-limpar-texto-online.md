@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: pt
-translationKey: clean-text-online
-xDefaultPath: /blog/clean-text-online/
 title: "Limpar texto online: espaços e linhas vazias"
 description: "Limpe texto copiado localmente: espaços extra, linhas vazias e quebras de linha inconsistentes."
 date: 2026-07-26
 slug: limpar-texto-online
-product: TextForge
+locale: pt
+translationKey: clean-text-online
+product: textforge
 contentType: how-to
 primaryKeyword: "limpar texto online"
-relatedPages: "/pt/textforge/,/blog/clean-text-online/"
-heading: "Limpar texto online"
-intro: "Organize texto copiado sem o enviar para um editor remoto."
-faqs:
-  - question: "O texto é enviado para um servidor?"
-    answer: "Não. As funções do TextForge executam-se localmente no navegador."
+relatedPages: /textforge/
 ---
 
 Texto copiado de PDFs, folhas de cálculo ou logs traz frequentemente espaços duplicados, indentação e linhas vazias. Corrigir tudo à mão demora; uma expressão regular é demasiado para tarefas simples.

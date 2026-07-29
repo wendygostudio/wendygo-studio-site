@@ -1,16 +1,15 @@
 ---
 schemaVersion: 1
-title: Pomodoro Timer gamificato per Focus | Studio Wendygo
-description: Timer Pomodoro gamificato con un animale virtuale che cresce a ogni sessione di concentrazione.
-date: 2026-07-28T00:00:00.000Z
+title: "Pomodoro Timer gamificato per Focus | Studio Wendygo"
+description: "Timer Pomodoro gamificato con un animale virtuale che cresce a ogni sessione di concentrazione."
+date: 2026-07-28
 slug: gamified-pomodoro-timer-chrome-extension
 locale: it
 translationKey: gamified-pomodoro-timer-chrome-extension
 product: slimeforge
 contentType: how-to
-primaryKeyword: timer pomodoro gamificato
-relatedPages: >-
-  /it/slimeforge/,/it/blog/pomodoro-timer-chrome-extension/,/it/blog/adhd-pomodoro-timer-chrome-extension/
+primaryKeyword: "timer pomodoro gamificato"
+relatedPages: /slimeforge/,/blog/adhd-pomodoro-timer-chrome-extension/,/blog/pomodoro-timer-chrome-extension/
 ---
 
 # Pomodoro Timer gamificato: perché i premi rendono durature le sessioni di focus

@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: fr
-translationKey: pomodoro-for-studying-chrome-extension
-xDefaultPath: /blog/pomodoro-for-studying-chrome-extension/
 title: "Minuteur Pomodoro pour étudier dans Chrome"
 description: "Étudiez par blocs de concentration et pauses avec une progression locale dans Chrome."
 date: 2026-07-26
 slug: pomodoro-etudier-chrome
-product: SlimeForge
+locale: fr
+translationKey: pomodoro-for-studying-chrome-extension
+product: slimeforge
 contentType: how-to
 primaryKeyword: "minuteur Pomodoro étudier Chrome"
-relatedPages: "/fr/slimeforge/,/blog/pomodoro-for-studying-chrome-extension/"
-heading: "Étudier avec Pomodoro pour les examens"
-intro: "Découpez les révisions en unités faisables plutôt qu'en longues séances floues."
-faqs:
-  - question: "Quelle durée choisir pour étudier ?"
-    answer: "Vingt-cinq minutes sont un bon départ ; adaptez-les à la matière et à votre concentration."
+relatedPages: /slimeforge/
 ---
 
 Les longues séances sans pause deviennent souvent peu productives. Un bloc clair, une courte pause et un objectif précis facilitent le démarrage.

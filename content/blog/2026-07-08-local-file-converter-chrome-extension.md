@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Local File Converter Chrome Extension: Images, Audio, Documents — No Upload"
 description: "ConvertForge converts HEIC images, audio files, documents (OCR), and data formats entirely in your browser. No server upload, no account, works offline."
 date: 2026-07-08
 slug: local-file-converter-chrome-extension
-product: ConvertForge
-type: use-case
-keyword: "local file converter chrome extension"
+locale: en
+translationKey: local-file-converter-chrome-extension
+product: convertforge
+contentType: use-case
+primaryKeyword: "local file converter chrome extension"
+relatedPages: /convertforge/
 ---
 
 # Local File Converter Chrome Extension: Images, Audio, Documents — No Upload

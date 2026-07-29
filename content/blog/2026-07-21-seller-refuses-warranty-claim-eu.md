@@ -7,26 +7,13 @@ slug: seller-refuses-warranty-claim-eu
 locale: en
 translationKey: seller-refuses-warranty-claim-eu
 product: claimforge
-jurisdiction: "European Union; national rules may add or vary protections"
-reviewedAt: 2026-07-21
-reviewDue: 2026-10-21
-sourceUrls: https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_en.htm,https://europa.eu/youreurope/citizens/consumers/consumers-dispute-resolution/index_en.htm
 contentType: workflow
 primaryKeyword: "seller refuses warranty claim EU"
 relatedPages: /claimforge/,/blog/eu-warranty-rights-explained/,/blog/how-to-file-consumer-complaint-eu/
-alternateUrl: https://wendygostudio.com/es/blog/vendedor-rechaza-garantia-ue/
-heading: "Seller Refused Your EU Warranty Claim? What to Do Next"
-shortTitle: "Rejected EU warranty claim"
-intro: "A rejection is not necessarily the end of a warranty claim. Build a clear record, invoke the correct legal guarantee and escalate in the right order."
-faqs:
-  - question: "Is the seller or manufacturer responsible under the EU legal guarantee?"
-    answer: "The legal guarantee normally applies to your contract with the seller. A manufacturer's commercial warranty is separate and cannot replace your statutory rights."
-  - question: "Can an EU seller say the warranty lasted only one year?"
-    answer: "Goods bought from an EU trader generally have a minimum two-year legal guarantee. Some national laws provide longer protection, and commercial warranty terms are separate."
-  - question: "Do I automatically get a refund for faulty goods?"
-    answer: "Not always. Repair or replacement is usually the first remedy. A price reduction or refund may follow when those remedies are impossible, disproportionate or not completed reasonably."
-  - question: "What if the seller is in another EU country?"
-    answer: "Your national European Consumer Centre may help with a cross-border dispute involving a trader in another EU country, Iceland or Norway."
+jurisdiction: European Union; national rules may add or vary protections
+reviewedAt: 2026-07-21
+reviewDue: 2026-10-21
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_en.htm,https://europa.eu/youreurope/citizens/consumers/consumers-dispute-resolution/index_en.htm
 ---
 
 A seller's first “no” does not decide whether your claim is valid. Customer-support replies often discuss a manufacturer's warranty, an internal return window or a store policy. Those terms are not necessarily the same as the **EU legal guarantee** that protects consumers when goods are faulty, do not work as advertised or do not match their description.

@@ -9,24 +9,11 @@ translationKey: eu-odr-platform-shutdown-what-to-use-instead
 product: claimforge
 contentType: how-to
 primaryKeyword: "plataforma ODR UE cerrada alternativa"
-relatedPages: /es/claimforge/,/es/blog/como-presentar-reclamacion-consumidor-ue/,/es/blog/alternativas-reclamar-sin-abogado-ue/
-sourceUrls: https://eur-lex.europa.eu/eli/reg/2024/3228/oj,https://consumer-redress.ec.europa.eu/site-relocation_es,https://consumer-redress.ec.europa.eu/dispute-resolution-bodies,https://europa.eu/youreurope/citizens/consumers
-jurisdiction: "Unión Europea; las normas nacionales pueden ampliar o variar las protecciones"
+relatedPages: /claimforge/
+jurisdiction: Unión Europea; las normas nacionales pueden ampliar o variar las protecciones
 reviewedAt: 2026-07-24
 reviewDue: 2026-10-24
-alternateUrl: https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/
-heading: "La Plataforma ODR de la UE Ha Cerrado: Qué Usar Ahora"
-shortTitle: "La plataforma ODR ha cerrado"
-intro: "La plataforma de Resolución de Litigios en Línea (ODR) de la UE dejó de aceptar casos nuevos en marzo de 2025 y cerró definitivamente el 20 de julio de 2025. Si todavía tienes guardado el enlace a ec.europa.eu/consumers/odr, ya no lleva a ningún sitio útil."
-faqs:
-  - question: "¿Por qué cerró la UE la plataforma ODR?"
-    answer: "La Comisión Europea citó un uso muy bajo: unos 200 casos al año en toda la UE, y solo alrededor del 2% de las reclamaciones recibía respuesta del comerciante a través de la plataforma. Se retiró mediante el Reglamento (UE) 2024/3228 por motivos de eficiencia y coste, no porque cambiaran los derechos del consumidor."
-  - question: "¿Qué sustituye a la plataforma ODR en disputas transfronterizas?"
-    answer: "Ya no existe un enrutador automático único. Para un conflicto con un comerciante de otro país de la UE, Islandia o Noruega, contacta con el Centro Europeo del Consumidor (ECC-Net) de tu propio país, o acude directamente al organismo ADR nacional correspondiente según la lista oficial de la Comisión Europea."
-  - question: "¿Siguen funcionando los enlaces antiguos a la plataforma ODR?"
-    answer: "No. ec.europa.eu/consumers/odr redirige ahora a un aviso de reubicación en el dominio consumer-redress.ec.europa.eu de la Comisión Europea que confirma el cierre, con enlaces al ECC-Net y a la lista de organismos ADR nacionales. Cualquier guía, plantilla o página de términos que siga citando la URL antigua está desactualizada."
-  - question: "¿Esto afecta a mis derechos como consumidor o solo a esta herramienta?"
-    answer: "Solo a la herramienta. La garantía legal de 2 años, el derecho de desistimiento de 14 días y tu derecho a usar organismos ADR o el procedimiento de escasa cuantía no han cambiado. Lo único que desapareció fue la web única gestionada por la UE que antes enrutaba las reclamaciones entre países."
+sourceUrls: https://eur-lex.europa.eu/eli/reg/2024/3228/oj,https://consumer-redress.ec.europa.eu/site-relocation_es,https://consumer-redress.ec.europa.eu/dispute-resolution-bodies,https://europa.eu/youreurope/citizens/consumers
 ---
 
 Imagina que compraste algo a un vendedor de otro país de la UE, llegó defectuoso, y el vendedor te ignora. Hace un año el consejo era simple: presenta el caso en la plataforma de Resolución de Litigios en Línea de la UE y deja que ella lo enrute. Esa plataforma ya no existe, y sorprendentemente muchas guías —la nuestra incluida, hasta una limpieza anterior— seguían apuntando ahí.

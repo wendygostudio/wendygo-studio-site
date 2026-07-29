@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: de
-translationKey: pinterest-pin-resize
-xDefaultPath: /blog/resize-image-for-pinterest-pin/
 title: "Pinterest-Pin-Bildgröße anpassen: 1000 × 1500"
 description: "Bilder lokal im Hochformat für Pinterest-Pins zuschneiden und skalieren, ohne Upload."
 date: 2026-07-26
 slug: pinterest-pin-bildgroesse
-product: FrameForge
+locale: de
+translationKey: pinterest-pin-resize
+product: frameforge
 contentType: how-to
 primaryKeyword: "Pinterest Pin Bildgröße"
-relatedPages: "/de/frameforge/,/blog/resize-image-for-pinterest-pin/"
-heading: "Bildgröße für Pinterest-Pins anpassen"
-intro: "Bereite ein vertikales Pin-Bild lokal im Browser vor."
-faqs:
-  - question: "Welches Seitenverhältnis passt für einen Standard-Pin?"
-    answer: "1000 × 1500 Pixel im Verhältnis 2:3 ist ein verbreitetes Hochformat."
+relatedPages: /frameforge/
 ---
 
 Pinterest-Pins funktionieren meist besser im Hochformat als ein quadratisches Bild. Ein Format von 1000 × 1500 Pixeln bietet ein Verhältnis von 2:3 und lässt im Feed ausreichend Raum für Motiv und Text.

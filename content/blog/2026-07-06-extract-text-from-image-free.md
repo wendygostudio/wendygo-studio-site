@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "Extract Text from JPG Image — Free OCR, No Upload"
+description: "Extract text from JPG, PNG, and common image formats entirely in your browser. ConvertForge uses local OCR (Tesseract) — no cloud service, no..."
+date: 2026-07-06
+slug: extract-text-from-image-free
+locale: en
+translationKey: extract-text-from-image-free
+product: convertforge
+contentType: how-to
+primaryKeyword: "extract text from jpg image — free ocr, no upload"
+relatedPages: /convertforge/,/blog/convert-pdf-to-text-free/,/blog/convert-heic-to-jpg-free/
+---
+
 # Extract Text from JPG Image — Free OCR, No Upload
 
 Extract text from JPG, PNG, and common image formats entirely in your browser. ConvertForge uses local OCR (Tesseract) — no cloud service, no account, no files sent to any server.

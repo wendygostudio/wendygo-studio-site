@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Network Config Anonymizer for AI Tools: Paste Safely, Troubleshoot Faster"
 description: "Sysadmins paste configs into AI assistants to debug routing, VPNs, and firewall rules. ScrubForge removes secrets before the config leaves your machine — so the AI gets full context without live credentials."
 date: 2026-07-04
 slug: network-config-anonymizer-for-ai
-product: ScrubForge
-type: use-case
-keyword: "network config anonymizer for AI"
+locale: en
+translationKey: network-config-anonymizer-for-ai
+product: scrubforge
+contentType: use-case
+primaryKeyword: "network config anonymizer for AI"
+relatedPages: /scrubforge/
 ---
 
 # Network Config Anonymizer for AI Tools: Paste Safely, Troubleshoot Faster

@@ -1,45 +1,15 @@
 ---
 schemaVersion: 1
 title: "Dimensioni immagini carosello LinkedIn"
-description: >-
-  Prepara immagini carosello LinkedIn coerenti localmente in Chrome, senza
-  caricare la grafica originale su un editor online.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: linkedin-carousel-image-size
 locale: it
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: dimensione immagine carosello linkedin
-relatedPages: >-
-  /it/frameforge/,/blog/resize-image-for-linkedin-post/,/blog/batch-resize-images-chrome-extension/
-heading: >-
-  Dimensioni dell'immagine del carosello di LinkedIn: un flusso di lavoro Chrome
-  locale
-shortTitle: Dimensioni dell'immagine del carosello di LinkedIn
-intro: >-
-  Un carosello di LinkedIn è una sequenza, non un'immagine del feed. Dimensioni
-  coerenti, margini sicuri e una routine di esportazione sono più importanti
-  dell'aggiunta di un altro strumento di progettazione al flusso di lavoro.
-faqs:
-  - question: >-
-      Che dimensione dovrebbero utilizzare le immagini del carosello di
-      LinkedIn?
-    answer: >-
-      Utilizza un'unica tela coerente nella sequenza e controlla le attuali
-      linee guida per il caricamento di LinkedIn prima della pubblicazione. La
-      parte importante è che ogni pagina utilizza le stesse dimensioni e gli
-      stessi margini leggibili.
-  - question: Posso ridimensionare localmente la grafica del carosello?
-    answer: >-
-      SÌ. Un flusso di lavoro di immagini locali ti consente di preparare ogni
-      pagina raster nel browser senza inviare immagini di origine a un editor di
-      terze parti.
-  - question: Ogni diapositiva del carosello dovrebbe utilizzare lo stesso ritaglio?
-    answer: >-
-      La tela dovrebbe rimanere coerente, ma ciascuna immagine sorgente potrebbe
-      richiedere una posizione di ritaglio diversa per mantenere visibile il
-      soggetto.
+primaryKeyword: "dimensione immagine carosello linkedin"
+relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 I caroselli di LinkedIn funzionano quando sembrano un unico documento: una pagina di apertura chiara, una sequenza leggibile e una pagina di chiusura che non sembra schiacciata o ritagliata. Il problema pratico è raramente la creatività. Sta preparando diverse immagini con una cornice coerente proteggendo al tempo stesso la grafica originale che può includere lavoro del cliente, screenshot o materiale interno del prodotto.

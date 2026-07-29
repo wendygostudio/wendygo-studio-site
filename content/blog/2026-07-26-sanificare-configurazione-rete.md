@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: sanitize-network-config-before-sharing
-xDefaultPath: /blog/sanitize-network-config-before-sharing/
 title: "Sanificare una configurazione di rete prima di condividerla"
 description: "Rimuovi localmente segreti da configurazioni Cisco, FortiGate e cloud prima di inviarle al supporto o a un assistente IA."
 date: 2026-07-26
 slug: sanificare-configurazione-rete
-product: ScrubForge
+locale: it
+translationKey: sanitize-network-config-before-sharing
+product: scrubforge
 contentType: how-to
 primaryKeyword: "sanificare configurazione di rete"
-relatedPages: "/it/scrubforge/,/blog/sanitize-network-config-before-sharing/"
-heading: "Sanificare una configurazione di rete prima di condividerla"
-intro: "Sostituisci i valori sensibili in locale senza perdere la struttura utile per la diagnosi."
-faqs:
-  - question: "ScrubForge trova ogni possibile segreto?"
-    answer: "Riconosce modelli comuni; controlla sempre l'output per valori personalizzati o non standard."
+relatedPages: /scrubforge/
 ---
 
 Una configurazione di rete contiene molto più di semplici impostazioni: password, token API, stringhe SNMP, host interni e indirizzi possono esporre accessi e topologia. Prima di mandare un estratto al supporto, a un forum o a un assistente IA, conviene sanificarlo.

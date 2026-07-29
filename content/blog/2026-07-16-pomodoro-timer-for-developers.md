@@ -1,13 +1,15 @@
 ---
+schemaVersion: 1
 title: "Best Pomodoro Timer for Developers: Deep Work Sessions With SlimeForge"
 description: "Developers need focus timers that support long sessions (45–60 min), not just 25-minute breaks. Learn how SlimeForge works for deep work, why gamification matters, and how on-device AI helps."
-slug: "pomodoro-timer-for-developers"
-date: "2026-07-16"
-keywords:
-  - pomodoro timer developers
-  - best pomodoro timer coding
-  - focus timer for programmers
-  - deep work timer chrome
+date: 2026-07-16
+slug: pomodoro-timer-for-developers
+locale: en
+translationKey: pomodoro-timer-for-developers
+product: slimeforge
+contentType: how-to
+primaryKeyword: "best pomodoro timer for developers: deep work sessions with slimeforge"
+relatedPages: /slimeforge/,/blog/forest-app-alternatives-chrome/
 ---
 
 # Best Pomodoro Timer for Developers: Deep Work Sessions With SlimeForge

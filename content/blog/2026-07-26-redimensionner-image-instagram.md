@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: fr
-translationKey: instagram-image-resize
-xDefaultPath: /blog/resize-image-for-instagram-chrome/
 title: "Redimensionner une image Instagram : 1080 × 1080 dans Chrome"
 description: "Recadrez et redimensionnez localement vos images Instagram : carré, portrait ou paysage, sans téléversement."
 date: 2026-07-26
 slug: redimensionner-image-instagram
-product: FrameForge
+locale: fr
+translationKey: instagram-image-resize
+product: frameforge
 contentType: how-to
 primaryKeyword: "redimensionner image Instagram"
-relatedPages: "/fr/frameforge/,/blog/resize-image-for-instagram-chrome/"
-heading: "Recadrer et redimensionner une image pour Instagram"
-intro: "Préparez un cadrage Instagram sans envoyer la photo à un service web."
-faqs:
-  - question: "Quelle taille utiliser pour une publication carrée ?"
-    answer: "1080 × 1080 pixels, au format 1:1, est un choix fiable."
+relatedPages: /frameforge/
 ---
 
 Une photo verticale ne s'adapte pas automatiquement au fil Instagram carré. Un recadrage trop rapide peut couper un visage ou un détail important ; étirer l'image la déforme.

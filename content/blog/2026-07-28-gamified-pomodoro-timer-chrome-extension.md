@@ -9,7 +9,7 @@ translationKey: gamified-pomodoro-timer-chrome-extension
 product: slimeforge
 contentType: how-to
 primaryKeyword: "gamified pomodoro timer"
-relatedPages: /slimeforge/,/blog/pomodoro-timer-chrome-extension/,/blog/adhd-pomodoro-timer-chrome-extension/
+relatedPages: /slimeforge/,/blog/adhd-pomodoro-timer-chrome-extension/,/blog/pomodoro-timer-chrome-extension/
 ---
 
 Most people who try a Pomodoro timer stop after a week. Not because the technique is wrong — 25 minutes of focused work genuinely helps — but because finishing a session feels exactly the same as skipping one. There's no reward, no progress, no reason to open the timer again tomorrow.

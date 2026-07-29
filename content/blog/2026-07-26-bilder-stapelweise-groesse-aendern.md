@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: de
-translationKey: batch-resize-images-chrome-extension
-xDefaultPath: /blog/batch-resize-images-chrome-extension/
 title: "Bilder stapelweise in Chrome skalieren"
 description: "Mehrere Bilder lokal auf dieselbe Größe bringen und als Kopien exportieren."
 date: 2026-07-26
 slug: bilder-stapelweise-groesse-aendern
-product: FrameForge
+locale: de
+translationKey: batch-resize-images-chrome-extension
+product: frameforge
 contentType: how-to
 primaryKeyword: "Bilder stapelweise skalieren"
-relatedPages: "/de/frameforge/,/blog/batch-resize-images-chrome-extension/"
-heading: "Mehrere Bilder stapelweise skalieren"
-intro: "Einheitliche Bildgrößen erstellen, ohne Dateien an einen Webdienst hochzuladen."
-faqs:
-  - question: "Bleiben die Originalbilder erhalten?"
-    answer: "Exportiere neue Dateien und behalte die Originale unverändert."
+relatedPages: /frameforge/
 ---
 
 Für einen Shop, ein Blog oder mehrere Social-Posts sollen Bilder oft dieselbe Größe haben. Einzeln zu öffnen und zu exportieren kostet unnötig Zeit.

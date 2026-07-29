@@ -1,38 +1,15 @@
 ---
 schemaVersion: 1
 title: "Limpiar texto de tablas copiado localmente"
-description: >-
-  Un flujo de trabajo local para limpiar el texto de la tabla copiado, eliminar
-  espacios ruidosos y conservar los valores que necesita.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: clean-copied-table-text
 locale: es
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: limpiar el texto de la tabla copiada
-relatedPages: '/es/textforge/,/blog/clean-text-online/,/blog/extract-emails-from-text/'
-heading: Limpiar el texto copiado de la tabla antes de pegarlo en cualquier lugar
-shortTitle: Limpiar el texto de la tabla copiada
-intro: >-
-  Las tablas copiadas suelen llegar con espacios invisibles, líneas discontinuas
-  y encabezados repetidos. Un pequeño paso de limpieza local evita que esos
-  artefactos se conviertan en errores en el siguiente documento.
-faqs:
-  - question: ¿Por qué el texto de una tabla copiada parece roto?
-    answer: >-
-      Los archivos PDF, las tablas web y las exportaciones almacenan el diseño
-      de forma diferente. Copiarlos puede agregar saltos de línea y espacios que
-      solo eran posicionamiento visual.
-  - question: ¿Puedo limpiar los datos copiados sin cargarlos?
-    answer: >-
-      Sí. Utilice un flujo de trabajo de texto local basado en navegador cuando
-      los valores copiados incluyan notas, direcciones o identificadores
-      internos.
-  - question: ¿Debo eliminar todos los saltos de línea?
-    answer: >-
-      No. Mantenga los cortes que separan los registros reales y elimine sólo el
-      ruido del diseño después de comprobar una pequeña muestra.
+primaryKeyword: "limpiar el texto de la tabla copiada"
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
 ---
 
 Copiar una tabla desde un PDF, un panel o un portal de soporte a menudo produce un texto que parece casi correcto. Las columnas se separan, una sola celda se convierte en tres líneas y los encabezados aparecen nuevamente a la mitad del pegado. La parte peligrosa es que el resultado aún puede parecer lo suficientemente plausible como para reutilizarlo sin verificarlo.

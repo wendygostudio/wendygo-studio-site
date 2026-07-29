@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Convert a Scanned PDF to Text — Free Local OCR"
 description: "Convert a scanned PDF or PDF image to text with local OCR in Chrome. No upload or account; clear free and Pro limits before you install."
 date: 2026-07-06
 slug: convert-pdf-to-text-free
-product: ConvertForge
-type: how-to
-keyword: "PDF to text converter"
+locale: en
+translationKey: convert-pdf-to-text-free
+product: convertforge
+contentType: how-to
+primaryKeyword: "PDF to text converter"
+relatedPages: /convertforge/
 ---
 
 Need to convert a scanned PDF to text? Scanned PDFs and image-based documents are everywhere: contracts, receipts, invoices, book pages, and medical records. This guide shows how to convert a PDF to text with OCR locally in Chrome, without uploading the document to a cloud service.

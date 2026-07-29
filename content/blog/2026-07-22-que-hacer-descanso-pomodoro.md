@@ -9,20 +9,7 @@ translationKey: what-to-do-during-pomodoro-break
 product: slimeforge
 contentType: how-to
 primaryKeyword: "qué hacer en un descanso Pomodoro"
-relatedPages: /es/slimeforge/,/es/blog/extension-pomodoro-chrome/,/es/blog/pomodoro-vs-bloques-de-tiempo/
-alternateUrl: https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/
-heading: "Qué hacer en un descanso Pomodoro sin perder el foco"
-shortTitle: "Ideas para descansos Pomodoro"
-intro: "Un buen descanso Pomodoro debe ayudarte a recuperar energía y facilitar la vuelta. Estas actividades caben en cinco minutos sin arrastrarte hacia otra tarea."
-faqs:
-  - question: "¿Qué puedo hacer durante un descanso Pomodoro de cinco minutos?"
-    answer: "Levántate, bebe agua, mira a lo lejos, estira o da un paseo breve. Elige una actividad con un final claro y evita abrir un feed infinito."
-  - question: "¿Conviene usar el móvil durante el descanso Pomodoro?"
-    answer: "Normalmente no. Los mensajes y las redes no tienen un punto final natural, así que cinco minutos pueden convertirse fácilmente en muchos más."
-  - question: "¿Puedo seguir trabajando durante el descanso Pomodoro?"
-    answer: "Puedes hacerlo, pero repetirlo elimina la recuperación prevista por el método. Como mínimo, cambia de postura y descansa la vista antes de continuar."
-  - question: "¿Cuánto debería durar el descanso largo de un Pomodoro?"
-    answer: "Mucha gente realiza una pausa más larga después de varias sesiones. Elige una duración que permita comer, caminar o desconectar manteniendo una hora clara de regreso."
+relatedPages: /slimeforge/
 ---
 
 Un descanso Pomodoro puede fallar de dos formas opuestas. O permaneces ante el escritorio y sigues trabajando, por lo que la pausa nunca sucede, o abres una red social y vuelves veinte minutos después. Un buen descanso está entre ambos extremos: cambia tu estado físico o mental **sin iniciar una segunda actividad difícil de abandonar**.

@@ -9,21 +9,7 @@ translationKey: is-your-chrome-extension-spying-on-you
 product: slimeforge
 contentType: how-to
 primaryKeyword: "mi extensión de chrome me espía"
-relatedPages: /es/slimeforge/,/es/blog/temporizador-pomodoro-offline-chrome/,/es/blog/extension-pomodoro-chrome/
-sourceUrls: https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html,https://developer.chrome.com/docs/webstore/program-policies/policies,https://developer.chrome.com/blog/cws-policy-updates-2026
-alternateUrl: https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/
-heading: "¿Tu Extensión de Chrome Te Está Espiando? Checklist 2026"
-shortTitle: "¿Tu extensión te espía?"
-intro: "El 10 de julio de 2026, Google retiró ModHeader, una extensión de confianza para desarrolladores con cerca de 1.6 millones de instalaciones, tras descubrirse un sistema completo y dormido de recopilación de datos integrado en la versión oficial y firmada. Había superado los escáneres de seguridad automáticos durante años."
-faqs:
-  - question: "¿Cómo superó ModHeader los escáneres de seguridad de Chrome durante años?"
-    answer: "El recolector estaba cifrado y bloqueado tras una lista de permitidos interna que se publicó vacía, así que el paso de subida nunca se ejecutaba durante los escaneos. Un escáner ve texto cifrado y ningún tráfico saliente, que es exactamente el aspecto de una extensión limpia. Los investigadores de Stripe OLT solo lo encontraron leyendo directamente el código minificado."
-  - question: "¿Qué permisos necesita realmente una extensión de enfoque o productividad?"
-    answer: "Una extensión de concentración debe solicitar solo los permisos necesarios para sus funciones declaradas. SlimeForge declara storage, alarms, scripting y activeTab; el acceso opcional a sitios solo se solicita cuando el usuario activa funciones dentro de la página."
-  - question: "¿Una extensión popular y bien valorada es automáticamente segura?"
-    answer: "No. ModHeader tenía 1.6 millones de instalaciones, un largo historial, y puntuaciones de riesgo automáticas de hasta 95 sobre 100 calificándola de bajo riesgo, y aun así incluía un recolector de datos funcional. El número de instalaciones y la valoración miden popularidad, no lo que hace el código tras una actualización."
-  - question: "¿Desinstalar una extensión maliciosa elimina los datos ya recopilados?"
-    answer: "Desinstalarla la elimina de tu navegador y borra su almacenamiento local, pero no deshace nada ya enviado a los servidores del desarrollador. Si alguna vez pegaste claves de API, tokens o contraseñas en los campos de una extensión, rótalas independientemente de si esa extensión resulta o no estar comprometida."
+relatedPages: /slimeforge/
 ---
 
 Si usas una extensión de Chrome o Edge para gestionar tu enfoque, tus cabeceras HTTP, tus contraseñas o cualquier otra cosa, la retirada de ModHeader merece cinco minutos de tu tiempo. No porque ModHeader fuera una herramienta marginal, tenía 1.6 millones de instalaciones y una década de confianza, sino por cómo exactamente ocultaba lo que hacía.

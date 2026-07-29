@@ -1,15 +1,15 @@
 ---
-slug: convert-csv-to-json-free
-title: How to Convert CSV to JSON for Free (Locally, Offline)
-description: Convert CSV files to JSON format entirely in your browser with no server upload. Open-source, offline, fast.
+schemaVersion: 1
+title: "How to Convert CSV to JSON for Free (Locally, Offline)"
+description: "Convert CSV files to JSON format entirely in your browser with no server upload. Open-source, offline, fast."
 date: 2026-07-08
-product: ConvertForge
-type: A
-keywords:
-  - convert csv to json
-  - csv to json converter
-  - free csv to json
-  - json converter
+slug: convert-csv-to-json-free
+locale: en
+translationKey: convert-csv-to-json-free
+product: convertforge
+contentType: how-to
+primaryKeyword: "how to convert csv to json for free (locally, offline)"
+relatedPages: /convertforge/
 ---
 
 # How to Convert CSV to JSON for Free (Locally, Offline)

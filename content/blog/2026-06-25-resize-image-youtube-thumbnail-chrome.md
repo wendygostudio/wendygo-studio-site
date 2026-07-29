@@ -1,14 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Resize an Image for YouTube Thumbnails Directly in Your Browser"
 description: "Resize any image to YouTube's required 1280×720 px without Photoshop or uploading to a server — using FrameForge, a free Chrome extension."
 date: 2026-06-25
-keywords:
-  - how to resize image for youtube thumbnail
-  - youtube thumbnail size
-  - resize image chrome extension
-  - youtube thumbnail maker chrome
-  - FrameForge
-type: how-to
+slug: resize-image-youtube-thumbnail-chrome
+locale: en
+translationKey: resize-image-youtube-thumbnail-chrome
+product: frameforge
+contentType: how-to
+primaryKeyword: "how to resize an image for youtube thumbnails directly in your browser"
+relatedPages: /frameforge/
 ---
 
 # How to Resize an Image for YouTube Thumbnails Directly in Your Browser

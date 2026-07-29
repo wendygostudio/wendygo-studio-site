@@ -2,112 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Base64 Encode Kubernetes Secrets Locally | Wendygo Studio</title>
-  <meta name="description" content="Kubernetes Secret data needs Base64 values. Encode them locally in your browser with TextForge — no terminal, no uploads." />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>How to Base64 Encode Kubernetes Secrets Without a Web Tool</title>
+  <meta name="description" content="Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site." />
   <link rel="canonical" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" />
-  <link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/" />
-  <link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How to Base64 Encode Kubernetes Secrets Without a Web Tool",
-    "description": "Use TextForge Chrome extension to encode raw secret values for Kubernetes Secret manifests, locally and without transmitting data to any server.",
-    "tool": [{ "@type": "HowToTool", "name": "TextForge Chrome extension" }],
-    "step": [
-      {
-        "@type": "HowToStep",
-        "position": 1,
-        "name": "Open TextForge",
-        "text": "Click the TextForge icon in your browser toolbar to open the extension panel."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 2,
-        "name": "Paste the raw secret value",
-        "text": "Paste your password, API key, connection string, or any value that needs to be Base64-encoded for the Kubernetes manifest."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 3,
-        "name": "Apply Base64 Encode",
-        "text": "Select Base64 Encode from the tools menu. The encoded string appears immediately."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 4,
-        "name": "Copy and paste into YAML",
-        "text": "Copy the encoded output and paste it into the data: block of your Kubernetes Secret manifest."
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "How to Base64 Encode Kubernetes Secrets Without a Web Tool"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to Base64 Encode Kubernetes Secrets Without a Web Tool",
-    "description": "Kubernetes Secret data fields require Base64-encoded values. Encode your raw secrets locally in your browser using TextForge — no terminal, no third-party site, no data leaks.",
-    "datePublished": "2026-06-26",
-    "dateModified": "2026-06-26",
-    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
-    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is Base64 encoding required for all Kubernetes secrets?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Only for the data: field. If you use stringData:, Kubernetes handles the encoding automatically. The data: field is what you see in most examples and exported manifests."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I encode multi-line values like TLS certificates?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Paste the full certificate including the BEGIN and END header lines into TextForge and encode it. The resulting Base64 string goes into the data: field."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Base64 encryption for Kubernetes secrets?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Base64 is not encryption — anyone with the manifest can decode the values. Kubernetes secrets provide access control at the cluster level. For encryption at rest, you need to configure etcd encryption separately."
-        }
-      }
-    ]
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Base64 Encode Kubernetes Secrets Without a Web Tool","description":"Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site.","datePublished":"2026-06-26","dateModified":"2026-06-26","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Base64 Encode Kubernetes Secrets Without a Web Tool"}]}</script>
+  
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -121,6 +23,7 @@
       --amber:  #e8a33d;
       --amber2: #f0b75a;
       --on-a:   #13151a;
+      --r:      9px;
       --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
     }
@@ -130,6 +33,7 @@
       font-family: var(--sans); font-size: 16px; line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
+
     nav {
       position: sticky; top: 0; z-index: 10;
       background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
@@ -139,7 +43,8 @@
     }
     .nav-brand {
       display: flex; align-items: center; gap: 10px;
-      font-weight: 700; font-size: 15px; text-decoration: none; color: var(--text);
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
     }
     .nav-mark {
       width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
@@ -148,65 +53,172 @@
     .nav-links { display: flex; gap: 28px; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
     .nav-links a:hover { color: var(--text); }
+
     .article-wrap {
       max-width: 720px; margin: 0 auto;
       padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
     }
+
     .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
-    .breadcrumb a { color: var(--faint); text-decoration: none; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
     .breadcrumb a:hover { color: var(--muted); }
     .breadcrumb span { margin: 0 6px; }
+
     .article-meta { margin-bottom: 40px; }
     .article-tag {
       display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
       text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
     }
     .article-meta h1 {
-      font-size: clamp(24px,4vw,36px); font-weight: 800; line-height: 1.15;
-      letter-spacing: -.5px; margin-bottom: 16px;
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
     }
     .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
     .article-date { font-size: 12px; color: var(--faint); }
+
     .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
     .article-body { line-height: 1.75; }
     .article-body p { margin-bottom: 20px; }
-    .article-body h2 { font-size: 22px; font-weight: 700; letter-spacing: -.3px; margin: 40px 0 14px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
     .article-body strong { color: var(--text); }
     .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
     .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
     .article-body code {
-      font-family: var(--mono); font-size: 13px;
-      background: var(--surf2); border: 1px solid var(--line);
-      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
     }
-    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
-    .step-card {
-      display: flex; gap: 16px; align-items: flex-start;
-      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
     }
-    .step-num {
-      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
-      color: var(--on-a); font-size: 13px; font-weight: 800; display: grid; place-items: center;
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
     }
-    .step-content { flex: 1; }
-    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
-    .code-block {
-      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
-      padding: 16px 20px; margin: 16px 0; font-family: var(--mono); font-size: 13px;
-      line-height: 1.7; overflow-x: auto; color: var(--text); white-space: pre;
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
     }
-    .callout {
-      background: var(--surf); border: 1px solid var(--line); border-left: 3px solid var(--amber);
-      border-radius: 8px; padding: 14px 16px; margin: 20px 0; font-size: 14px; color: var(--muted);
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
     }
-    .callout strong { color: var(--text); }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
     .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
-    .faq-item { padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
     .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
     .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
     .related { margin: 48px 0 0; }
-    .related-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); margin-bottom: 14px; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
     .related-links { display: flex; flex-direction: column; gap: 10px; }
     .related-link {
       display: block; padding: 14px 16px;
@@ -216,11 +228,13 @@
     }
     .related-link:hover { border-color: var(--faint); }
     .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
     .cta-box {
       margin-top: 48px; padding: 32px;
       background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
       text-align: center;
     }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
     .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
     .cta-btn {
       display: inline-flex; align-items: center; gap: 8px;
@@ -229,6 +243,7 @@
       padding: 11px 24px; border-radius: 8px; transition: background .15s;
     }
     .cta-btn:hover { background: var(--amber2); }
+
     footer {
       padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
       display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
@@ -239,10 +254,12 @@
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
     .footer-links a:hover { color: var(--muted); }
+
     .nav-toggle { display: none; }
     .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
     .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
-    @media (max-width: 600px) { nav { position: relative; flex-wrap: wrap; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
       .nav-burger { display: flex; }
       .nav-links {
         display: flex; flex-direction: column; align-items: stretch; gap: 0;
@@ -257,170 +274,87 @@
       .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
       .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
       .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
-      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); } }
-  </style>
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Wendygo Studio">
-<meta property="og:title" content="Base64 Encode Kubernetes Secrets Locally | Wendygo Studio">
-<meta property="og:description" content="Kubernetes Secret data needs Base64 values. Encode them locally in your browser with TextForge — no terminal, no uploads.">
-<meta property="og:url" content="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/">
-<meta property="og:image" content="https://wendygostudio.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Base64 Encode Kubernetes Secrets Locally | Wendygo Studio">
-<meta name="twitter:description" content="Kubernetes Secret data needs Base64 values. Encode them locally in your browser with TextForge — no terminal, no uploads.">
-<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">
-<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
-<body>  <nav>
-    <a class="nav-brand" href="/">
-      <div class="nav-mark">W</div>
-      Wendygo Studio
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="How to Base64 Encode Kubernetes Secrets Without a Web Tool" />
+  <meta property="og:description" content="Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site." />
+  <meta property="og:url" content="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Base64 Encode Kubernetes Secrets Without a Web Tool" />
+  <meta name="twitter:description" content="Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <div class="nav-links">
-      <a href="/#products">Extensions</a>
-      <a href="/blog/">Blog</a>
-      <a href="/tools/">Tools</a>
-      <a href="/#how">How it works</a>
-      <a href="/#privacy">Privacy</a>
+      <a href="/#products">Extensions</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/#privacy">Privacy</a>
     </div>
   <div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/base64-encode-kubernetes-secrets/" selected>English</option><option value="https://wendygostudio.com/es/blog/codificar-base64-secretos-kubernetes/">Español</option></select></div></nav>
-
   <div class="article-wrap">
-
-    <div class="breadcrumb">
-      <a href="/">Home</a><span>›</span><a href="/blog/">Blog</a><span>›</span>Base64 encode Kubernetes secrets
-    </div>
-
-    <div class="article-meta">
-      <div class="article-tag">How-to guide · TextForge</div>
-      <h1>How to Base64 Encode Kubernetes Secrets Without a Web Tool</h1>
-      <p class="article-intro">
-        Kubernetes Secret manifests require Base64-encoded values in the <code>data:</code> block. Here's how to encode your raw secrets locally — no terminal, no third-party site, no data leaving your machine.
-      </p>
-      <div class="article-date">June 26, 2026</div>
-    </div>
-
+    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>How to Base64 Encode Kubernetes Secrets Without a Web Tool</div>
+    <div class="article-meta"><div class="article-tag">how-to · textforge</div><h1>How to Base64 Encode Kubernetes Secrets Without a Web Tool</h1><p class="article-intro">Kubernetes Secret manifests require Base64-encoded values. Here's how to encode your raw secrets locally in your browser — no terminal, no third-party site.</p><div class="article-date">June 26, 2026</div></div>
+    
     <hr class="divider" />
-
-    <div class="article-body">
-
-      <p>When you're building a Kubernetes Secret manifest, the <code>data:</code> block requires Base64-encoded values. Many developers handle this by pasting raw passwords and API keys into an online Base64 encoder — which sends those credentials to a third-party server. There's a safer way.</p>
-
-      <h2>Why Kubernetes Uses Base64</h2>
-
-      <p>A Kubernetes Secret manifest looks like this:</p>
-
-      <div class="code-block">apiVersion: v1
+    <div class="article-body"><h1>How to Base64 Encode Kubernetes Secrets Without a Web Tool</h1>
+<p>Kubernetes stores sensitive values in Secret manifests. Unlike ConfigMaps, which accept plain text, Secret <code>data</code> fields require Base64-encoded values. Many developers paste raw passwords and API keys into online Base64 tools — which sends those credentials to a third-party server.</p>
+<p>There&#39;s a safer option: encode directly in your browser using a Chrome extension that never transmits your data.</p>
+<h2>Why Kubernetes Uses Base64</h2>
+<p>Kubernetes Secret manifests look like this:</p>
+<pre><code class="language-yaml">apiVersion: v1
 kind: Secret
 metadata:
   name: db-credentials
 type: Opaque
 data:
   password: c3VwZXJzZWNyZXQ=
-  api-key: c2tfdGVzdF84YzhiNDU2MA==</div>
-
-      <p>The values under <code>data:</code> are Base64-encoded strings. The raw values — <code>supersecret</code>, <code>sk_test_8c8b4560</code> — are not stored in the manifest directly.</p>
-
-      <div class="callout">
-        <strong>Important:</strong> Base64 is not encryption. Anyone with access to the manifest can decode the values instantly. Kubernetes secrets provide cluster-level access control — the encoding is a format requirement of the Kubernetes API, not a security layer.
-      </div>
-
-      <h2>Encoding Secret Values with TextForge</h2>
-
-      <p>TextForge is a Chrome extension with 58 text utilities. Base64 encode runs entirely locally in the free version — no data leaves your browser.</p>
-
-      <ol class="steps">
-        <li class="step-card">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <div class="step-title">Open TextForge</div>
-            <div class="step-desc">Click the TextForge icon in your browser toolbar to open the extension panel.</div>
-          </div>
-        </li>
-        <li class="step-card">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <div class="step-title">Paste the raw secret value</div>
-            <div class="step-desc">Paste your password, API key, connection string, or any value you need in encoded form. Encode one value at a time.</div>
-          </div>
-        </li>
-        <li class="step-card">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <div class="step-title">Apply Base64 Encode</div>
-            <div class="step-desc">Select <strong>Base64 Encode</strong> from the tools menu. The encoded string appears immediately.</div>
-          </div>
-        </li>
-        <li class="step-card">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <div class="step-title">Paste into your YAML manifest</div>
-            <div class="step-desc">Copy the encoded output and paste it as the value under the appropriate key in the <code>data:</code> block.</div>
-          </div>
-        </li>
-      </ol>
-
-      <h2>Using stringData Instead</h2>
-
-      <p>Kubernetes also supports a <code>stringData:</code> field that accepts plain text — the API handles Base64 encoding automatically:</p>
-
-      <div class="code-block">stringData:
-  password: supersecret</div>
-
-      <p><code>stringData</code> is fine for secrets you're creating from scratch. But when you're reading an existing manifest or one generated by a tool, the values will be in <code>data:</code> in Base64 form — which is when you need to decode them for inspection. For that, paste the encoded value into TextForge and apply Base64 Decode.</p>
-
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <p class="faq-q">Is Base64 encoding required for all Kubernetes secrets?</p>
-          <p class="faq-a">Only for the <code>data:</code> field. If you use <code>stringData:</code>, Kubernetes handles the encoding automatically. The <code>data:</code> field is what you see in most examples and in secrets exported with <code>kubectl get secret -o yaml</code>.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-q">Can I encode multi-line values like TLS certificates?</p>
-          <p class="faq-a">Yes. Paste the full certificate — including the <code>-----BEGIN CERTIFICATE-----</code> and <code>-----END CERTIFICATE-----</code> lines — into TextForge and apply Base64 Encode. The resulting string goes into the <code>data:</code> field of a TLS Secret.</p>
-        </div>
-        <div class="faq-item">
-          <p class="faq-q">Is Base64 encryption for Kubernetes secrets?</p>
-          <p class="faq-a">No. Base64 is not encryption — anyone with the manifest can decode the values instantly with any Base64 decoder. Kubernetes secrets provide access control. For encryption at rest, you need to configure etcd encryption separately at the cluster level.</p>
-        </div>
-      </div>
-
-      <div class="related">
-        <div class="related-label">Related guides</div>
-        <div class="related-links">
-          <a class="related-link" href="/blog/base64-encode-decode-online-tool/">
-            Base64 Encode and Decode Online — No Upload, No Command Line
-            <span>Full guide covering all Base64 use cases in the browser</span>
-          </a>
-          <a class="related-link" href="/blog/decode-jwt-token-browser/">
-            How to Decode a JWT Token Payload in Your Browser
-            <span>Inspect JWT claims locally without pasting tokens into jwt.io</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="cta-box">
-        <p>TextForge is free. Base64 encode — and 58 other text utilities — are available without an account or subscription.</p>
-        <a class="cta-btn" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
-          Install TextForge — free
-        </a>
-      </div>
-
-    </div>
+  api-key: c2tfdGVzdF84YzhiNDU2MA==
+</code></pre>
+<p>The values under <code>data:</code> are Base64-encoded. The raw values (<code>supersecret</code>, <code>sk_test_8c8b4560</code>) are never stored directly in the manifest.</p>
+<p><strong>Important:</strong> Base64 is not encryption. Anyone with access to the secret manifest can decode the values instantly. Kubernetes secrets provide access control at the cluster level — the Base64 encoding is purely a format requirement of the API, not a security measure.</p>
+<h2>Encoding Secret Values with TextForge</h2>
+<p>TextForge is a Chrome extension with 50+ text utilities. Base64 encode is available in the free version and runs entirely locally.</p>
+<ol>
+<li><strong>Open TextForge</strong> — click the extension icon in your browser toolbar.</li>
+<li><strong>Paste the raw secret value</strong> — your password, API key, connection string, or any value that needs to go into the manifest.</li>
+<li><strong>Apply Base64 Encode</strong> — the encoded string appears immediately.</li>
+<li><strong>Copy the output</strong> and paste it into the <code>data:</code> block of your Kubernetes YAML.</li>
+</ol>
+<p>No terminal, no web tool, no data leaving your machine.</p>
+<h2>Using <code>stringData</code> Instead</h2>
+<p>Kubernetes also accepts a <code>stringData</code> field that takes plain text values — the API encodes them automatically:</p>
+<pre><code class="language-yaml">stringData:
+  password: supersecret
+</code></pre>
+<p><code>stringData</code> is fine for values you&#39;re creating fresh. But if you&#39;re reading an existing secret manifest, the stored values will always be under <code>data:</code> in Base64 form — which is when you need to decode them for inspection.</p>
+<h2>Decoding to Verify</h2>
+<p>To verify an existing encoded value in a manifest, paste it into TextForge and apply Base64 Decode. You get the raw value immediately, without running:</p>
+<pre><code class="language-bash">kubectl get secret db-credentials -o jsonpath=&#39;{.data.password}&#39; | base64 --decode
+</code></pre>
+<h2>Frequently Asked Questions</h2>
+<p><strong>Is Base64 encoding required for all Kubernetes secrets?</strong>
+Only for the <code>data:</code> field. If you use <code>stringData:</code>, Kubernetes handles the encoding. Most tools and tutorials use <code>data:</code> in examples, which is where the need to encode manually comes from.</p>
+<p><strong>Can I encode multi-line values like TLS certificates?</strong>
+Yes. Paste the full certificate (including the <code>-----BEGIN CERTIFICATE-----</code> header and footer) into TextForge and encode it. The resulting string goes into the <code>data:</code> field.</p>
+<p><strong>Is this function free in TextForge?</strong>
+Yes. Base64 encode and decode are in the free version — no account or subscription required.</p>
+<hr>
+<p><a href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba">Install TextForge from the Chrome Web Store →</a></p>
+</div>
   </div>
-
-  <footer>
-    <div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div>
-    <div class="footer-links">
-      <a href="https://x.com/WendygoStudio" target="_blank" rel="noopener">X / Twitter</a>
-      <a href="mailto:wendygostudio@gmail.com">Contact</a>
-      <a href="/privacy">Privacy policy</a>
-      <a href="/terms">Terms and conditions</a>
-    </div>
-  </footer>
-
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div><div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/privacy">Privacy</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>

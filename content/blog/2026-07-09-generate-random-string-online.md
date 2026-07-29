@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Generate a Random String in Your Browser — Free & Private"
+description: "Generate random strings directly in your browser — no online service, no signup, no data leaving your machine. TextForge includes random string generation as one of its 58 built-in text functions."
 date: 2026-07-09
 slug: generate-random-string-online
-product: TextForge
-type: A (how-to)
-keyword: "how to generate random string online"
-description: "Generate random strings directly in your browser — no online service, no signup, no data leaving your machine. TextForge includes random string generation as one of its 58 built-in text functions."
+locale: en
+translationKey: generate-random-string-online
+product: textforge
+contentType: how-to
+primaryKeyword: "how to generate random string online"
+relatedPages: /textforge/
 ---
 
 ## Summary

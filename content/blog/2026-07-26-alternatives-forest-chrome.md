@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: fr
-translationKey: forest-app-alternatives-chrome
-xDefaultPath: /blog/forest-app-alternatives-chrome/
 title: "Comparer des alternatives à Forest pour Chrome"
 description: "Comparez applications de concentration et extensions Pomodoro locales selon votre méthode de travail."
 date: 2026-07-26
 slug: alternatives-forest-chrome
-product: SlimeForge
+locale: fr
+translationKey: forest-app-alternatives-chrome
+product: slimeforge
 contentType: alternatives
 primaryKeyword: "alternatives Forest Chrome"
-relatedPages: "/fr/slimeforge/,/blog/forest-app-alternatives-chrome/"
-heading: "Alternatives à Forest pour Chrome"
-intro: "Choisissez un outil de concentration selon le système de motivation qui vous aide réellement."
-faqs:
-  - question: "SlimeForge est-il identique à Forest ?"
-    answer: "Non. Les deux utilisent la motivation ludique, mais leurs fonctions et flux de travail diffèrent."
+relatedPages: /slimeforge/
 ---
 
 Forest est connu pour son approche par arbre et ses sessions de concentration. Une alternative peut convenir si vous préférez un minuteur directement dans Chrome, des données locales ou une autre forme de progression.

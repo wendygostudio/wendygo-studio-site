@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Use ScrubForge with Claude AI for Network Troubleshooting"
 description: "Claude's long context window makes it useful for analyzing large network configs. Sanitize with ScrubForge first — live credentials stay off Anthropic's servers."
 date: 2026-07-12
 slug: scrubforge-claude-ai-network-troubleshooting
-product: ScrubForge
-type: G
-keyword: "ScrubForge Claude AI network troubleshooting"
+locale: en
+translationKey: scrubforge-claude-ai-network-troubleshooting
+product: scrubforge
+contentType: how-to
+primaryKeyword: "ScrubForge Claude AI network troubleshooting"
+relatedPages: /scrubforge/,/blog/scrubforge-chatgpt-network-troubleshooting/,/blog/sanitize-network-config-before-sharing/,/blog/remove-sensitive-data-cisco-config/
 ---
 
 Claude, Anthropic's AI assistant, has gained a strong following among engineers for its precise reasoning and large context window. Sysadmins use it to analyze BGP configurations, debug VPN policies, and work through complex firewall rule logic — exactly the kind of structured reasoning where Claude performs well.

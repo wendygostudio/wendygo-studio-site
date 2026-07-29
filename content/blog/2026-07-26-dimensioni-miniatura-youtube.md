@@ -1,22 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: youtube-thumbnail-resize
-xDefaultPath: /blog/resize-image-youtube-thumbnail-chrome/
 title: "Miniatura YouTube: ridimensionare un'immagine (1280 × 720)"
 description: "Prepara gratis un'immagine per la miniatura YouTube 1280 × 720 in Chrome, localmente e senza upload."
 date: 2026-07-26
 slug: dimensioni-miniatura-youtube
-product: FrameForge
+locale: it
+translationKey: youtube-thumbnail-resize
+product: frameforge
 contentType: how-to
 primaryKeyword: "dimensioni miniatura YouTube 1280x720"
-relatedPages: "/it/frameforge/,/blog/resize-image-youtube-thumbnail-chrome/"
-heading: "Ridimensionare un'immagine per una miniatura YouTube 1280 × 720"
-shortTitle: "Dimensioni miniatura YouTube"
-intro: "Crea una miniatura nel formato corretto senza caricare l'immagine su un server."
-faqs:
-  - question: "Quali dimensioni ha una miniatura YouTube?"
-    answer: "La dimensione consigliata è 1280 × 720 pixel, con rapporto 16:9."
+relatedPages: /frameforge/
 ---
 
 YouTube consiglia miniature da **1280 × 720 pixel** con proporzioni 16:9. Allungare una foto la distorce; ritagliarla senza controllo può eliminare il soggetto principale.

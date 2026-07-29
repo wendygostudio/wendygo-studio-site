@@ -9,21 +9,7 @@ translationKey: is-your-chrome-extension-spying-on-you
 product: slimeforge
 contentType: how-to
 primaryKeyword: "is my chrome extension spying on me"
-relatedPages: /slimeforge/,/blog/offline-pomodoro-timer-chrome/,/blog/pomodoro-timer-chrome-extension/
-sourceUrls: https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html,https://developer.chrome.com/docs/webstore/program-policies/policies,https://developer.chrome.com/blog/cws-policy-updates-2026
-alternateUrl: https://wendygostudio.com/es/blog/tu-extension-de-chrome-te-esta-espiando/
-heading: "Is Your Chrome Extension Spying on You? A 2026 Checklist"
-shortTitle: "Is your extension spying on you?"
-intro: "On July 10, 2026, Google pulled ModHeader, a trusted developer extension with roughly 1.6 million installs, after researchers found a complete, dormant data-collection pipeline built into the official, signed version. It had passed automated security scans for years."
-faqs:
-  - question: "How did ModHeader pass Chrome's security scans for years?"
-    answer: "The collector was encrypted and gated behind an internal allow-list that shipped empty, so the upload step never ran during scanning. A scanner sees ciphertext and no outbound traffic, which is exactly what a clean extension looks like too. Researchers at Stripe OLT only found it by reading the minified code directly."
-  - question: "What permissions should a focus or productivity extension actually need?"
-    answer: "A focus extension should request only the permissions its disclosed features need. SlimeForge declares storage, alarms, scripting and activeTab; optional site access is requested only when the user enables page-level features."
-  - question: "Is a popular, highly-rated extension automatically safe?"
-    answer: "No. ModHeader had 1.6 million installs, a long track record, and automated risk scores as high as 95 out of 100 rated low-risk, and still shipped a working data collector. Install count and star rating measure popularity, not what the code does after an update."
-  - question: "Does uninstalling a bad extension remove the data it already collected?"
-    answer: "Uninstalling removes it from your browser and clears its local storage, but it doesn't undo anything already sent to the developer's servers. If you ever pasted API keys, tokens, or passwords into an extension's fields, rotate them regardless of whether that extension turns out to have been compromised."
+relatedPages: /slimeforge/,/blog/pomodoro-timer-chrome-extension/,/blog/offline-pomodoro-timer-chrome/
 ---
 
 If you use a Chrome or Edge extension to manage your focus, your headers, your passwords, or anything else, the ModHeader takedown is worth five minutes of your time. Not because ModHeader itself was a fringe tool, it had 1.6 million installs and a decade of trust, but because of exactly how it hid what it was doing.

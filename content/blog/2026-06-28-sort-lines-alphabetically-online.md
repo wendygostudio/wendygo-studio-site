@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "How to Sort Lines Alphabetically Online — No Excel, No Terminal"
+description: "Keyword: how to sort lines alphabetically online, sort lines online, sort text lines alphabetically"
+date: 2026-06-28
+slug: sort-lines-alphabetically-online
+locale: en
+translationKey: sort-lines-alphabetically-online
+product: textforge
+contentType: how-to
+primaryKeyword: "how to sort lines alphabetically online — no excel, no terminal"
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/extract-urls-from-text/,/blog/base64-encode-decode-online-tool/
+---
+
 # How to Sort Lines Alphabetically Online — No Excel, No Terminal
 
 **Keyword:** how to sort lines alphabetically online, sort lines online, sort text lines alphabetically

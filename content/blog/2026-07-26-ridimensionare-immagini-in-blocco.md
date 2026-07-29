@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: batch-resize-images-chrome-extension
-xDefaultPath: /blog/batch-resize-images-chrome-extension/
 title: "Ridimensionare più immagini in blocco in Chrome"
 description: "Porta più immagini alla stessa dimensione localmente ed esporta copie."
 date: 2026-07-26
 slug: ridimensionare-immagini-in-blocco
-product: FrameForge
+locale: it
+translationKey: batch-resize-images-chrome-extension
+product: frameforge
 contentType: how-to
 primaryKeyword: "ridimensionare immagini in blocco"
-relatedPages: "/it/frameforge/,/blog/batch-resize-images-chrome-extension/"
-heading: "Ridimensionare più immagini in blocco"
-intro: "Crea dimensioni coerenti senza caricare file su un servizio web."
-faqs:
-  - question: "Le immagini originali restano inalterate?"
-    answer: "Esporta nuovi file e conserva gli originali."
+relatedPages: /frameforge/
 ---
 
 Per un negozio, un blog o più post social, le immagini devono spesso avere la stessa dimensione. Aprirle ed esportarle una alla volta richiede tempo.

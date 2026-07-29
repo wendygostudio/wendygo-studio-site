@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "Crop Images for Different Social Media Platforms — Chrome Extension Guide"
+description: "Published 2026-07-14 · How-to guide · FrameForge"
+date: 2026-07-14
+slug: crop-images-social-media-chrome
+locale: en
+translationKey: crop-images-social-media-chrome
+product: frameforge
+contentType: how-to
+primaryKeyword: "crop images for different social media platforms — chrome extension guide"
+relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/
+---
+
 # Crop Images for Different Social Media Platforms — Chrome Extension Guide
 
 Published 2026-07-14 · How-to guide · FrameForge

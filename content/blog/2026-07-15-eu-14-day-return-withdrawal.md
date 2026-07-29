@@ -1,16 +1,19 @@
 ---
-title: EU 14-Day Right of Withdrawal: How to Return Online Purchases Without a Reason
-slug: eu-14-day-return-withdrawal
+schemaVersion: 1
+title: "EU 14-Day Right of Withdrawal: How to Return Online Purchases Without a Reason"
+description: "EU Directive 2011/83/EU (the Consumer Rights Directive) created the right of withdrawal — a cooling-off period that lets you cancel any distance..."
 date: 2026-07-15
-product: ClaimForge
-type: article
-description: You bought something online and changed your mind. EU law gives you 14 days to return it with no reason needed — as long as it was a distance purchase and certain conditions apply. Here's how to do it.
-keywords:
-  - EU right of withdrawal
-  - 14 day return period
-  - cooling off period EU
-  - online purchase return EU
-  - distance selling EU
+slug: eu-14-day-return-withdrawal
+locale: en
+translationKey: eu-14-day-return-withdrawal
+product: claimforge
+contentType: how-to
+primaryKeyword: "wendygo studio guide"
+relatedPages: /claimforge/,/blog/eu-warranty-rights-explained/,/blog/credit-card-chargeback-eu/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-15
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 ## What Is the Right of Withdrawal?

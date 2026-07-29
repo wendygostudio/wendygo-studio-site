@@ -9,21 +9,7 @@ translationKey: what-the-sonicwall-backup-breach-teaches-about-config-sharing
 product: scrubforge
 contentType: use-case
 primaryKeyword: "es seguro compartir un backup de configuración de firewall"
-relatedPages: /es/scrubforge/,/es/blog/sanitizar-configuracion-red-antes-compartir/,/es/blog/compartir-config-red-ticket-soporte/
-sourceUrls: https://www.sonicwall.com/support/knowledge-base/mysonicwall-cloud-backup-file-incident/250915160910330,https://www.cisa.gov/news-events/alerts/2025/09/22/sonicwall-releases-advisory-customers-after-security-incident
-alternateUrl: https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/
-heading: "Lo Que Enseña la Brecha de SonicWall al Compartir Configs"
-shortTitle: "Lección del backup de SonicWall"
-intro: "SonicWall confirmó que un ataque de fuerza bruta contra su portal MySonicWall.com expuso archivos de backup de configuración de firewall de todos los clientes que usaron su servicio de backup en la nube, no un subconjunto, todos. Los archivos venían directamente de la propia función oficial de backup del fabricante."
-faqs:
-  - question: "¿Qué pasó exactamente en el incidente de backups de SonicWall?"
-    answer: "Un atacante usó técnicas de fuerza bruta contra el portal de clientes MySonicWall.com y accedió a archivos de backup de configuración (.EXP). La investigación de SonicWall, realizada con Mandiant, primero estimó que menos del 5% de los clientes con backup en la nube estaban afectados, y en su actualización final confirmó que todos los clientes que habían usado la función de backup en la nube resultaron afectados."
-  - question: "¿Estaban cifrados los archivos de backup expuestos?"
-    answer: "Parcialmente. Las credenciales y secretos dentro del archivo .EXP están cifrados individualmente, AES-256 en firewalls Gen 7 y posteriores, 3DES en Gen 6, pero el resto de la configuración solo está codificado, no cifrado, así que la topología, reglas, rangos de IP y otros detalles son legibles tras decodificarlos. La propia SonicWall recomienda tratar cualquier archivo expuesto como motivo para resetear credenciales."
-  - question: "¿Significa esto que los backups en la nube del fabricante no son seguros?"
-    answer: "No, el aviso de SonicWall trata sobre un portal vulnerado por fuerza bruta, no un fallo en el concepto de backup. La lección es más concreta: un export de configuración contiene más detalle utilizable del que la mayoría asume, así que dondequiera que ese archivo o su contenido viaje, un backup en la nube del fabricante, un ticket de soporte, un chat de IA, merece el mismo escrutinio."
-  - question: "¿Qué debería revisar en mi propio firewall tras leer esto?"
-    answer: "Si usas la función de backup en la nube de MySonicWall, inicia sesión y revisa Product Management > Issue List para ver números de serie afectados, y sigue la guía de reseteo esencial de credenciales de SonicWall. Por separado, sanitiza cualquier archivo de configuración antes de pegarlo en cualquier otro sitio, un ticket de soporte, un foro o un asistente de IA."
+relatedPages: /scrubforge/
 ---
 
 El backup de un fabricante se supone que es el lugar seguro para tu configuración. En septiembre de 2025, SonicWall confirmó que eso no era cierto para sus clientes de backup en la nube, y los detalles merecen leerse aunque no uses un firewall SonicWall.

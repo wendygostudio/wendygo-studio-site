@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Resize an Image for Instagram Posts in Chrome (1080×1080)"
+description: "Crop any photo to Instagram's 1080×1080 square — or portrait and landscape variants — without uploading to a server. FrameForge does it in your browser in seconds."
 date: 2026-06-26
 slug: resize-image-for-instagram-chrome
-description: "Crop any photo to Instagram's 1080×1080 square — or portrait and landscape variants — without uploading to a server. FrameForge does it in your browser in seconds."
-keywords: ["resize image for instagram chrome", "how to resize image for instagram post chrome", "instagram image size 1080x1080", "instagram photo resizer chrome extension"]
-product: FrameForge
-type: how-to
+locale: en
+translationKey: resize-image-for-instagram-chrome
+product: frameforge
+contentType: how-to
+primaryKeyword: "how to resize an image for instagram posts in chrome (1080×1080)"
+relatedPages: /frameforge/
 ---
 
 # How to Resize an Image for Instagram Posts in Chrome (1080×1080)

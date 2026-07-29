@@ -1,38 +1,15 @@
 ---
 schemaVersion: 1
 title: "Kopierten Tabellentext lokal bereinigen"
-description: >-
-  Ein lokaler Arbeitsablauf zum Bereinigen von kopiertem Tabellentext, zum
-  Entfernen störender Abstände und zum Beibehalten der benötigten Werte.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: clean-copied-table-text
 locale: de
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: sauber kopierter Tabellentext
-relatedPages: '/de/textforge/,/blog/clean-text-online/,/blog/extract-emails-from-text/'
-heading: 'Bereinigen Sie den kopierten Tabellentext, bevor Sie ihn irgendwo einfügen'
-shortTitle: Bereinigen Sie den kopierten Tabellentext
-intro: >-
-  Kopierte Tabellen kommen oft mit unsichtbaren Abständen, unterbrochenen Zeilen
-  und wiederholten Überschriften an. Ein kleiner lokaler Bereinigungsschritt
-  verhindert, dass diese Artefakte im nächsten Dokument zu Fehlern werden.
-faqs:
-  - question: Warum sieht der kopierte Tabellentext fehlerhaft aus?
-    answer: >-
-      PDFs, Webtabellen und Exporte speichern das Layout anders. Durch das
-      Kopieren können Zeilenumbrüche und Leerzeichen hinzugefügt werden, die nur
-      der visuellen Positionierung dienten.
-  - question: 'Kann ich kopierte Daten bereinigen, ohne sie hochzuladen?'
-    answer: >-
-      Ja. Verwenden Sie einen browserbasierten lokalen Textworkflow, wenn die
-      kopierten Werte interne Notizen, Adressen oder Kennungen enthalten.
-  - question: Soll ich jeden Zeilenumbruch entfernen?
-    answer: >-
-      Nein. Behalten Sie die Pausen bei, die echte Datensätze trennen, und
-      entfernen Sie nur das Layout-Rauschen, nachdem Sie eine kleine Stichprobe
-      überprüft haben.
+primaryKeyword: "sauber kopierter Tabellentext"
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
 ---
 
 Beim Kopieren einer Tabelle aus einer PDF-Datei, einem Dashboard oder einem Support-Portal entsteht oft ein Text, der fast richtig aussieht. Spalten driften auseinander, aus einer einzelnen Zelle werden drei Zeilen und in der Mitte des Einfügens erscheinen wieder Überschriften. Das Gefährliche daran ist, dass das Ergebnis ohne Überprüfung dennoch plausibel genug erscheinen kann, um es wiederzuverwenden.

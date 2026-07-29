@@ -1,3 +1,21 @@
+---
+schemaVersion: 1
+title: "How to File a Credit Card Chargeback in the EU"
+description: "Date: July 4, 2026 Product: ClaimForge Type: A (how-to) Keyword: \"credit card chargeback EU\", \"how to dispute credit card charge EU\" Slug:..."
+date: 2026-07-04
+slug: credit-card-chargeback-eu
+locale: en
+translationKey: credit-card-chargeback-eu
+product: claimforge
+contentType: how-to
+primaryKeyword: "how to file a credit card chargeback in the eu"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-04
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
+---
+
 # How to File a Credit Card Chargeback in the EU
 
 **Date:** July 4, 2026  

@@ -1,11 +1,19 @@
 ---
+schemaVersion: 1
 title: "EU Right to Repair Law: What Every Consumer Needs to Know"
-slug: right-to-repair-eu-law
+description: "Something broke. The manufacturer says it's out of warranty and you should just buy a new one. EU law now says that's not always their call to make."
 date: 2026-07-17
-product: ClaimForge
-type: A
-keyword: "right to repair EU law"
-description: "The EU Right to Repair Directive gives you the right to have products fixed instead of replaced. Here's what it covers and how to use it."
+slug: right-to-repair-eu-law
+locale: en
+translationKey: right-to-repair-eu-law
+product: claimforge
+contentType: how-to
+primaryKeyword: "wendygo studio guide"
+relatedPages: /claimforge/,/blog/eu-warranty-rights-explained/,/blog/how-to-file-consumer-complaint-eu/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-17
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 Something broke. The manufacturer says it's out of warranty and you should just buy a new one. EU law now says that's not always their call to make.

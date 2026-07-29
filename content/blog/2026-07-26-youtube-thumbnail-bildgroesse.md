@@ -1,22 +1,15 @@
 ---
 schemaVersion: 1
-locale: de
-translationKey: youtube-thumbnail-resize
-xDefaultPath: /blog/resize-image-youtube-thumbnail-chrome/
 title: "Bild für YouTube-Thumbnails auf 1280 × 720 ändern"
 description: "Passe ein Bild kostenlos auf die YouTube-Thumbnail-Größe 1280 × 720 an – lokal in Chrome, ohne Upload."
 date: 2026-07-26
 slug: youtube-thumbnail-bildgroesse
-product: FrameForge
+locale: de
+translationKey: youtube-thumbnail-resize
+product: frameforge
 contentType: how-to
 primaryKeyword: "YouTube Thumbnail Größe 1280x720"
-relatedPages: "/de/frameforge/,/blog/resize-image-youtube-thumbnail-chrome/"
-heading: "Bild für YouTube-Thumbnails auf 1280 × 720 ändern"
-shortTitle: "YouTube-Thumbnail-Größe"
-intro: "Erstelle ein YouTube-Thumbnail im richtigen Seitenverhältnis, ohne dein Bild hochzuladen."
-faqs:
-  - question: "Welche Größe braucht ein YouTube-Thumbnail?"
-    answer: "Die empfohlene Größe ist 1280 × 720 Pixel im Seitenverhältnis 16:9."
+relatedPages: /frameforge/
 ---
 
 Ein Thumbnail entscheidet oft, ob ein Video angeklickt wird. YouTube empfiehlt **1280 × 720 Pixel** im Format 16:9. Wird ein Foto einfach gestreckt, wirkt es unscharf; wird es ohne Kontrolle beschnitten, fehlt häufig das wichtigste Motiv.

@@ -9,20 +9,7 @@ translationKey: is-your-chrome-extension-spying-on-you
 product: slimeforge
 contentType: how-to
 primaryKeyword: "spioniert meine Chrome-Erweiterung mich aus"
-relatedPages: /de/slimeforge/,/de/blog/was-die-sonicwall-panne-lehrt/,/de/ressourcen/
-sourceUrls: https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html,https://developer.chrome.com/docs/webstore/program-policies/policies,https://developer.chrome.com/blog/cws-policy-updates-2026
-heading: "Spioniert Deine Chrome-Erweiterung Dich Aus? Checkliste 2026"
-shortTitle: "Spioniert deine Erweiterung dich aus?"
-intro: "Am 10. Juli 2026 entfernte Google ModHeader, eine vertrauenswürdige Erweiterung mit rund 1,6 Millionen Installationen, nachdem Forscher eine vollständige, inaktive Datensammel-Pipeline in der offiziellen, signierten Version fanden. Sie hatte jahrelang automatisierte Sicherheitsscans bestanden."
-faqs:
-  - question: "Wie hat ModHeader jahrelang Chromes Sicherheitsscans bestanden?"
-    answer: "Der Sammler war verschlüsselt und hinter einer intern leeren Positivliste versteckt, sodass der Upload-Schritt beim Scannen nie ausgeführt wurde. Ein Scanner sieht Chiffretext und keinen ausgehenden Datenverkehr — genau das Bild einer sauberen Erweiterung. Forscher von Stripe OLT fanden es nur, indem sie den minifizierten Code direkt lasen."
-  - question: "Welche Berechtigungen braucht eine Fokus- oder Produktivitätserweiterung wirklich?"
-    answer: "Eine Fokus-Erweiterung sollte nur die Berechtigungen anfordern, die ihre offengelegten Funktionen benötigen. SlimeForge deklariert storage, alarms, scripting und activeTab; optionaler Website-Zugriff wird erst für aktivierte Seitenfunktionen angefordert."
-  - question: "Ist eine beliebte, gut bewertete Erweiterung automatisch sicher?"
-    answer: "Nein. ModHeader hatte 1,6 Millionen Installationen, eine lange Erfolgsgeschichte und automatisierte Risikobewertungen von bis zu 95 von 100 als niedriges Risiko — und lieferte trotzdem einen funktionierenden Datensammler. Installationszahl und Sternebewertung messen Beliebtheit, nicht das, was der Code nach einem Update tut."
-  - question: "Entfernt das Deinstallieren einer schädlichen Erweiterung bereits gesammelte Daten?"
-    answer: "Das Deinstallieren entfernt sie aus deinem Browser und löscht ihren lokalen Speicher, macht aber nichts rückgängig, was bereits an die Server des Entwicklers gesendet wurde. Wenn du jemals API-Schlüssel, Tokens oder Passwörter in die Felder einer Erweiterung eingegeben hast, rotiere sie unabhängig davon, ob sich diese Erweiterung als kompromittiert herausstellt."
+relatedPages: /slimeforge/
 ---
 
 Wenn du eine Chrome- oder Edge-Erweiterung für deinen Fokus, deine Header, deine Passwörter oder irgendetwas anderes nutzt, lohnt sich die ModHeader-Entfernung fünf Minuten deiner Zeit. Nicht weil ModHeader ein Nischentool war — es hatte 1,6 Millionen Installationen und ein Jahrzehnt Vertrauen —, sondern wegen der Art, wie es versteckte, was es tat.

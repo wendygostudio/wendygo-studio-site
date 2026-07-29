@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "5 Best CyberChef Alternatives by Use Case (2026)"
 description: "Compare five CyberChef alternatives for text cleanup, regex, command-line pipelines and security analysis, with an honest guide to when CyberChef is best."
 date: 2026-07-12
 slug: cyberchef-alternatives
-product: TextForge
-type: F
-keyword: "best alternatives to CyberChef"
+locale: en
+translationKey: cyberchef-alternatives
+product: textforge
+contentType: how-to
+primaryKeyword: "best alternatives to CyberChef"
+relatedPages: /textforge/
 ---
 
 CyberChef is a well-known open-source tool from GCHQ that handles encoding, decoding, encryption, compression, and dozens of data transformations. If you work in cybersecurity or need AES encryption in the browser, it is genuinely excellent.

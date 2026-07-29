@@ -1,38 +1,15 @@
 ---
 schemaVersion: 1
 title: "Limpar texto de tabela copiado localmente"
-description: >-
-  Um fluxo de trabalho local para limpar o texto da tabela copiado, removendo o
-  espaçamento ruidoso e preservando os valores necessários.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: clean-copied-table-text
 locale: pt
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: limpar texto da tabela copiado
-relatedPages: '/pt/textforge/,/blog/clean-text-online/,/blog/extract-emails-from-text/'
-heading: Limpe o texto da tabela copiado antes de o colar em qualquer lugar
-shortTitle: Limpar texto da tabela copiado
-intro: >-
-  As tabelas copiadas chegam normalmente com espaçamento invisível, linhas
-  quebradas e cabeçalhos repetidos. Uma pequena etapa de limpeza local evita que
-  estes artefactos se tornem erros no documento seguinte.
-faqs:
-  - question: Porque é que o texto da tabela copiado parece quebrado?
-    answer: >-
-      PDFs, tabelas web e exportações armazenam o layout de forma diferente.
-      Copiá-los pode adicionar quebras de linha e espaços que eram apenas de
-      posicionamento visual.
-  - question: Posso limpar os dados copiados sem os carregar?
-    answer: >-
-      Sim. Utilize um fluxo de trabalho de texto local baseado no browser quando
-      os valores copiados incluírem notas internas, endereços ou
-      identificadores.
-  - question: Devo remover todas as quebras de linha?
-    answer: >-
-      Não. Mantenha as quebras que separam os registos reais e remova apenas o
-      ruído do layout após verificar uma pequena amostra.
+primaryKeyword: "limpar texto da tabela copiado"
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
 ---
 
 Copiar uma tabela de um PDF, painel ou portal de suporte produz frequentemente um texto que parece quase correto. As colunas separam-se, uma única célula transforma-se em três linhas e os cabeçalhos voltam a aparecer no meio da colagem. A parte perigosa é que o resultado pode ainda parecer plausível o suficiente para ser reutilizado sem verificação.

@@ -1,14 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Decode a JWT Token Payload in Your Browser"
 description: "Inspect JWT claims — user ID, expiry, roles — directly in your browser without pasting tokens into jwt.io or a web tool. TextForge decodes Base64url locally."
 date: 2026-06-26
-keywords:
-  - decode jwt token online
-  - decode jwt payload browser
-  - jwt decoder chrome extension
-  - inspect jwt claims
-  - base64url decode
-type: how-to
+slug: decode-jwt-token-browser
+locale: en
+translationKey: decode-jwt-token-browser
+product: textforge
+contentType: how-to
+primaryKeyword: "how to decode a jwt token payload in your browser"
+relatedPages: /textforge/
 ---
 
 # How to Decode a JWT Token Payload in Your Browser

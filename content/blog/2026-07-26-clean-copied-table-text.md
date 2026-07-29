@@ -9,17 +9,7 @@ translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
 primaryKeyword: "clean copied table text"
-relatedPages: /textforge/,/blog/clean-text-online/,/blog/extract-emails-from-text/
-heading: "Clean Copied Table Text Before Pasting It Anywhere"
-shortTitle: "Clean copied table text"
-intro: "Copied tables often arrive with invisible spacing, broken lines and repeated headers. A small local cleanup step prevents those artifacts from becoming mistakes in the next document."
-faqs:
-  - question: "Why does copied table text look broken?"
-    answer: "PDFs, web tables and exports store layout differently. Copying them can add line breaks and spaces that were only visual positioning."
-  - question: "Can I clean copied data without uploading it?"
-    answer: "Yes. Use a browser-based local text workflow when the copied values include internal notes, addresses or identifiers."
-  - question: "Should I remove every line break?"
-    answer: "No. Keep the breaks that separate real records and remove only the layout noise after checking a small sample."
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
 ---
 
 Copying a table from a PDF, dashboard or support portal often produces text that looks almost right. Columns drift apart, a single cell becomes three lines, and headers appear again halfway through the paste. The dangerous part is that the result can still look plausible enough to reuse without checking it.

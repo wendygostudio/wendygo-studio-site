@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "How to Clean Pasted Text Formatting Online"
+description: "Every time you paste text from Word, a PDF, or an email, you get uninvited extras: double spaces, uneven whitespace, broken lines, and wrong case...."
+date: 2026-06-29
+slug: clean-pasted-text-formatting
+locale: en
+translationKey: clean-pasted-text-formatting
+product: textforge
+contentType: how-to
+primaryKeyword: "how to clean pasted text formatting online"
+relatedPages: /textforge/
+---
+
 # How to Clean Pasted Text Formatting Online
 
 Every time you paste text from Word, a PDF, or an email, you get uninvited extras: double spaces, uneven whitespace, broken lines, and wrong case. Here's how to fix all of it in seconds, without sending your text to any server.

@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: de
-translationKey: xlsx-to-csv-free
-xDefaultPath: /blog/convert-xlsx-to-csv-free/
 title: "XLSX lokal in CSV umwandeln"
 description: "Excel-Tabellen lokal im Browser in CSV umwandeln, ohne sie hochzuladen."
 date: 2026-07-26
 slug: xlsx-in-csv-umwandeln
-product: ConvertForge
+locale: de
+translationKey: xlsx-to-csv-free
+product: convertforge
 contentType: how-to
 primaryKeyword: "XLSX in CSV umwandeln"
-relatedPages: "/de/convertforge/,/blog/convert-xlsx-to-csv-free/"
-heading: "XLSX lokal in CSV umwandeln"
-intro: "Exportiere Tabellenwerte als kompatible Textdatei, ohne die Arbeitsmappe hochzuladen."
-faqs:
-  - question: "Behält CSV Formeln und mehrere Tabellenblätter?"
-    answer: "CSV enthält Werte einer Tabelle, aber keine Excel-Formeln, Formatierung oder mehrere Blätter."
+relatedPages: /convertforge/
 ---
 
 CSV ist ein einfaches Textformat für Import, Datenübertragung und Skripte. Es speichert jedoch keine Formatierung, Formeln oder Arbeitsmappenstruktur wie XLSX.

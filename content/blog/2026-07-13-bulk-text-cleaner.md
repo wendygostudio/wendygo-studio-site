@@ -1,12 +1,15 @@
 ---
-slug: bulk-text-cleaner
+schemaVersion: 1
+title: "Bulk Text Cleaner — Process and Transform Large Text Volumes in Chrome"
+description: "When you export a contact list, pull log lines, or scrape a web page, the raw data is rarely clean. You need to remove duplicates, strip extra..."
 date: 2026-07-13
-title: Bulk Text Cleaner — Process and Transform Large Text Volumes in Chrome
-type: E
-product: TextForge
-keyword: "bulk text cleaner"
-url: https://wendygostudio.com/use-cases/bulk-text-cleaner/
-meta: "Clean hundreds of lines at once: remove duplicates, trim whitespace, extract emails, sort, and chain multiple operations into a reusable recipe — locally in Chrome with TextForge."
+slug: bulk-text-cleaner
+locale: en
+translationKey: bulk-text-cleaner
+product: textforge
+contentType: how-to
+primaryKeyword: "bulk text cleaner"
+relatedPages: /textforge/
 ---
 
 # Bulk Text Cleaner: Process and Transform Large Text Volumes in Chrome

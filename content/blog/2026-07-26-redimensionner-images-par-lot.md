@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: fr
-translationKey: batch-resize-images-chrome-extension
-xDefaultPath: /blog/batch-resize-images-chrome-extension/
 title: "Redimensionner plusieurs images par lot dans Chrome"
 description: "Mettez plusieurs images à la même taille localement et exportez des copies."
 date: 2026-07-26
 slug: redimensionner-images-par-lot
-product: FrameForge
+locale: fr
+translationKey: batch-resize-images-chrome-extension
+product: frameforge
 contentType: how-to
 primaryKeyword: "redimensionner images par lot"
-relatedPages: "/fr/frameforge/,/blog/batch-resize-images-chrome-extension/"
-heading: "Redimensionner plusieurs images par lot"
-intro: "Créez des tailles d'image cohérentes sans téléverser vos fichiers à un service web."
-faqs:
-  - question: "Les images originales sont-elles conservées ?"
-    answer: "Exportez de nouveaux fichiers et gardez les originaux intacts."
+relatedPages: /frameforge/
 ---
 
 Pour une boutique, un blog ou une série de publications sociales, les images doivent souvent avoir la même taille. Les ouvrir et exporter une par une est inutilement long.

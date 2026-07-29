@@ -7,25 +7,13 @@ slug: verkaeufer-lehnt-eu-garantieanspruch-ab
 locale: de
 translationKey: seller-refuses-warranty-claim-eu
 product: claimforge
-jurisdiction: "Europäische Union; nationale Vorschriften können zusätzlichen oder abweichenden Schutz bieten"
+contentType: workflow
+primaryKeyword: "Verkäufer lehnt Garantieanspruch EU ab"
+relatedPages: /claimforge/
+jurisdiction: Europäische Union; nationale Vorschriften können zusätzlichen oder abweichenden Schutz bieten
 reviewedAt: 2026-07-25
 reviewDue: 2026-10-25
 sourceUrls: https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_en.htm,https://europa.eu/youreurope/citizens/consumers/consumers-dispute-resolution/index_en.htm
-contentType: workflow
-primaryKeyword: "Verkäufer lehnt Garantieanspruch EU ab"
-relatedPages: /de/claimforge/,/de/blog/eu-odr-plattform-geschlossen-alternative/,/de/ressourcen/
-heading: "Verkäufer Lehnt Garantieanspruch Ab? So Reagierst Du"
-shortTitle: "Garantieanspruch abgelehnt"
-intro: "Eine Ablehnung entscheidet nicht automatisch, ob dein Anspruch berechtigt ist. Dokumentiere sauber, berufe dich auf die richtige gesetzliche Gewährleistung und eskaliere in der richtigen Reihenfolge."
-faqs:
-  - question: "Ist der Verkäufer oder der Hersteller im Rahmen der EU-Gewährleistung verantwortlich?"
-    answer: "Die gesetzliche Gewährleistung gilt normalerweise für deinen Vertrag mit dem Verkäufer. Eine Herstellergarantie ist etwas anderes und ersetzt nicht deine gesetzlichen Rechte."
-  - question: "Kann ein Verkäufer in der EU behaupten, die Garantie gelte nur ein Jahr?"
-    answer: "Bei Waren, die von einem Händler in der EU gekauft wurden, gilt in der Regel eine gesetzliche Mindestgewährleistung von zwei Jahren. Manche nationalen Gesetze sehen einen längeren Schutz vor; kommerzielle Garantiebedingungen sind davon unabhängig."
-  - question: "Bekomme ich bei mangelhafter Ware automatisch eine Rückerstattung?"
-    answer: "Nicht immer. Reparatur oder Ersatz sind in der Regel der erste Schritt. Preisminderung oder Rückerstattung kommen infrage, wenn diese Abhilfen unmöglich, unverhältnismäßig oder nicht angemessen durchgeführt wurden."
-  - question: "Was, wenn der Verkäufer in einem anderen EU-Land sitzt?"
-    answer: "Dein nationales Europäisches Verbraucherzentrum kann bei einem grenzüberschreitenden Streit mit einem Händler in einem anderen EU-Land, Island oder Norwegen helfen."
 ---
 
 Ein erstes „Nein" des Verkäufers entscheidet nicht darüber, ob dein Anspruch berechtigt ist. Antworten des Kundendienstes beziehen sich oft auf eine Herstellergarantie, ein internes Rückgabefenster oder eine Filialrichtlinie. Das sind nicht zwangsläufig dieselben Regeln wie die **gesetzliche EU-Gewährleistung**, die Verbraucher schützt, wenn Waren mangelhaft sind, nicht wie beworben funktionieren oder nicht der Beschreibung entsprechen.

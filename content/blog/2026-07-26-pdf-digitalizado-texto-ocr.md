@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: pt
-translationKey: pdf-to-text-local-ocr
-xDefaultPath: /blog/convert-pdf-to-text-free/
 title: "Converter PDF digitalizado em texto grátis – OCR local"
 description: "Extraia texto de PDFs digitalizados localmente no Chrome, sem carregar o documento."
 date: 2026-07-26
 slug: pdf-digitalizado-texto-ocr
-product: ConvertForge
+locale: pt
+translationKey: pdf-to-text-local-ocr
+product: convertforge
 contentType: how-to
 primaryKeyword: "converter PDF digitalizado em texto"
-relatedPages: "/pt/convertforge/,/blog/convert-pdf-to-text-free/"
-heading: "Converter PDF digitalizado em texto grátis"
-intro: "O OCR local lê PDFs compostos por imagens sem enviar o ficheiro para um serviço externo."
-faqs:
-  - question: "Todos os PDFs precisam de OCR?"
-    answer: "Não. Um PDF de texto já contém texto selecionável; um PDF digitalizado contém imagens e precisa de OCR."
+relatedPages: /convertforge/
 ---
 
 Um PDF vindo de um scanner normalmente não possui uma camada de texto. Para pesquisar, copiar ou reutilizar contratos, faturas e recibos, é necessário OCR.

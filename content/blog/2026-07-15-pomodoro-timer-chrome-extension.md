@@ -1,15 +1,15 @@
 ---
+schemaVersion: 1
 title: "Best Pomodoro Timer Chrome Extension in 2026 — With a Virtual Pet"
-slug: pomodoro-timer-chrome-extension
-date: 2026-07-15
-product: SlimeForge
-type: how-to
 description: "SlimeForge is a Pomodoro timer Chrome extension that adds a virtual pet and gamification to keep you focused. Your slime hatches and grows with every session you complete."
-keywords:
-  - pomodoro timer chrome extension
-  - gamified pomodoro timer
-  - focus timer chrome extension with virtual pet
-  - pomodoro extension chrome 2026
+date: 2026-07-15
+slug: pomodoro-timer-chrome-extension
+locale: en
+translationKey: pomodoro-timer-chrome-extension
+product: slimeforge
+contentType: how-to
+primaryKeyword: "best pomodoro timer chrome extension in 2026 — with a virtual pet"
+relatedPages: /slimeforge/
 ---
 
 Most Pomodoro timers fail you the same way: you set 25 minutes, the alarm rings, you close the tab, and by the next morning you've forgotten the extension exists. SlimeForge fixes this with a virtual slime pet that lives inside your browser and grows only when you focus.

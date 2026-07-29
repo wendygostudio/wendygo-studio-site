@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: de
-translationKey: clean-text-online
-xDefaultPath: /blog/clean-text-online/
 title: "Text online bereinigen: Leerzeichen und Leerzeilen entfernen"
 description: "Bereinige kopierten Text lokal: Leerzeichen kürzen, Leerzeilen entfernen und Zeilen vereinheitlichen."
 date: 2026-07-26
 slug: text-online-bereinigen
-product: TextForge
+locale: de
+translationKey: clean-text-online
+product: textforge
 contentType: how-to
 primaryKeyword: "Text online bereinigen"
-relatedPages: "/de/textforge/,/blog/clean-text-online/"
-heading: "Text online bereinigen"
-intro: "Kopierten Text lokal aufräumen, ohne ihn an einen Online-Editor zu senden."
-faqs:
-  - question: "Wird mein Text hochgeladen?"
-    answer: "Nein. Die Funktionen von TextForge laufen lokal im Browser."
+relatedPages: /textforge/
 ---
 
 Text aus PDFs, Tabellen oder Logdateien enthält oft doppelte Leerzeichen, Einrückungen und leere Zeilen. Manuelles Aufräumen kostet Zeit; für einfache Fälle ist ein regulärer Ausdruck unnötig kompliziert.

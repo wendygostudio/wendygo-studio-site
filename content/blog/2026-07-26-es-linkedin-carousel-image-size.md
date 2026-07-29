@@ -1,40 +1,15 @@
 ---
 schemaVersion: 1
 title: "Tamaño de imagen para carrusel de LinkedIn"
-description: >-
-  Prepare imágenes consistentes del carrusel de LinkedIn localmente en Chrome,
-  sin cargar el material gráfico original en un editor en línea.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: linkedin-carousel-image-size
 locale: es
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: tamaño de imagen del carrusel de linkedin
-relatedPages: >-
-  /es/frameforge/,/blog/resize-image-for-linkedin-post/,/blog/batch-resize-images-chrome-extension/
-heading: 'Tamaño de imagen del carrusel de LinkedIn: un flujo de trabajo local de Chrome'
-shortTitle: Tamaño de la imagen del carrusel de LinkedIn
-intro: >-
-  Un carrusel de LinkedIn es una secuencia, no una imagen de feed. Las
-  dimensiones consistentes, los márgenes seguros y una rutina de exportación son
-  más importantes que agregar otra herramienta de diseño al flujo de trabajo.
-faqs:
-  - question: ¿Qué tamaño deberían utilizar las imágenes del carrusel de LinkedIn?
-    answer: >-
-      Utilice un lienzo coherente en toda la secuencia y consulte la guía de
-      carga actual de LinkedIn antes de publicar. Lo importante es que cada
-      página utilice las mismas dimensiones y márgenes legibles.
-  - question: ¿Puedo cambiar el tamaño de las ilustraciones del carrusel localmente?
-    answer: >-
-      Sí. Un flujo de trabajo de imágenes local le permite preparar cada página
-      rasterizada en el navegador sin enviar las imágenes de origen a un editor
-      externo.
-  - question: ¿Todas las diapositivas de carrusel deberían utilizar el mismo recorte?
-    answer: >-
-      El lienzo debe permanecer consistente, pero cada imagen de origen puede
-      necesitar una posición de recorte diferente para mantener visible al
-      sujeto.
+primaryKeyword: "tamaño de imagen del carrusel de linkedin"
+relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/
 ---
 
 Los carruseles de LinkedIn funcionan cuando se sienten como un solo documento: una página de inicio clara, una secuencia legible y una página de cierre que no parece apretada ni recortada. El problema práctico rara vez es la creatividad. Está preparando varias imágenes con un marco consistente y al mismo tiempo protege el arte original que puede incluir trabajo del cliente, capturas de pantalla o material interno del producto.

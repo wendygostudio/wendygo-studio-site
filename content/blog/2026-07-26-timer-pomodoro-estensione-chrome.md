@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: pomodoro-timer-chrome-extension
-xDefaultPath: /blog/pomodoro-timer-chrome-extension/
 title: "Timer Pomodoro per Chrome con compagno virtuale"
 description: "Usa un timer Pomodoro locale in Chrome con sessioni di concentrazione, pause e un compagno virtuale."
 date: 2026-07-26
 slug: timer-pomodoro-estensione-chrome
-product: SlimeForge
+locale: it
+translationKey: pomodoro-timer-chrome-extension
+product: slimeforge
 contentType: how-to
 primaryKeyword: "timer Pomodoro estensione Chrome"
-relatedPages: "/it/slimeforge/,/blog/pomodoro-timer-chrome-extension/"
-heading: "Usare un timer Pomodoro in Chrome"
-intro: "Organizza periodi di concentrazione e pause nel browser, senza account."
-faqs:
-  - question: "SlimeForge funziona offline?"
-    answer: "Il timer e il compagno funzionano localmente nel browser dopo l'installazione."
+relatedPages: /slimeforge/
 ---
 
 La tecnica Pomodoro alterna intervalli di lavoro concentrato e pause. Venticinque minuti di focus e cinque di pausa sono un buon inizio; usa 15 minuti per compiti brevi o 45-60 minuti per lavoro profondo.

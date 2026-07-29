@@ -1,10 +1,19 @@
 ---
+schemaVersion: 1
 title: "How to Escalate an EU Consumer Complaint to Small Claims Court"
-slug: escalate-consumer-complaint-small-claims-court-eu
+description: "Your ADR complaint was issued. The mediator ruled in your favor. But the seller isn't cooperating — they've refused to honor the decision. When..."
 date: 2026-07-03
-product: ClaimForge
-type: "C"
-keyword: "escalate consumer complaint small claims court EU"
+slug: escalate-consumer-complaint-small-claims-court-eu
+locale: en
+translationKey: escalate-consumer-complaint-small-claims-court-eu
+product: claimforge
+contentType: how-to
+primaryKeyword: "how to escalate an eu consumer complaint to small claims court"
+relatedPages: /claimforge/,/blog/how-to-file-consumer-complaint-eu/,/blog/eu-warranty-rights-explained/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-03
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 # How to Escalate an EU Consumer Complaint to Small Claims Court

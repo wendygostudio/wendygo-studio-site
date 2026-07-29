@@ -9,21 +9,7 @@ translationKey: sanitize-mikrotik-router-config
 product: scrubforge
 contentType: how-to
 primaryKeyword: "sanitize a MikroTik router config before sharing"
-relatedPages: /scrubforge/,/blog/share-network-config-support-ticket-safely/,/blog/sanitize-fortigate-config/
-sourceUrls: https://help.mikrotik.com/docs/spaces/ROS/pages/380076066/List+of+menus+with+sensitive+parameters,https://help.mikrotik.com/docs/spaces/ROS/pages/328155/Configuration+Management,https://mikrotik.com/download/changelogs
-alternateUrl: https://wendygostudio.com/es/blog/sanitizar-configuracion-mikrotik/
-heading: "Sanitize a MikroTik RouterOS Config Before You Share It"
-shortTitle: "Sanitize a MikroTik config"
-intro: "RouterOS hides passwords in /export by default. That still leaves topology, comments and server addresses in the file you paste into a forum, a ticket or an AI chat."
-faqs:
-  - question: "Does show-sensitive replace the need to sanitize a MikroTik config?"
-    answer: "No. show-sensitive only controls whether RouterOS prints its own predefined list of sensitive fields — passwords, keys, secrets. Everything else in the export, including IP addresses, comments and server addresses, stays visible either way. That's what ScrubForge is for."
-  - question: "Will sanitizing break the config if I need to reimport it?"
-    answer: "Only sanitize a copy meant for discussion, a forum post, or a support ticket — not the file you plan to reimport. Reimporting a script needs the real credential values, so keep your working export separate from the sanitized one you share publicly."
-  - question: "Does ScrubForge recognize RouterOS syntax specifically?"
-    answer: "Yes. RouterOS is one of the twelve device configuration syntaxes covered by ScrubForge's pattern library, alongside Cisco, FortiGate, Juniper and Palo Alto, among others."
-  - question: "What if I already posted an unsanitized MikroTik config?"
-    answer: "Edit or delete the post if the platform allows it, then rotate any credential that was exposed — passwords, pre-shared keys, RADIUS secrets. Replacing values after the fact doesn't undo what was already visible while the post was live."
+relatedPages: /scrubforge/,/blog/sanitize-fortigate-config/,/blog/share-network-config-support-ticket-safely/
 ---
 
 Posting a router config in a forum thread or a support ticket is routine sysadmin work, and MikroTik admins did a lot of it this month: RouterOS 7.21.5 (long-term) and 6.49.20 both shipped on July 6, 2026, and an upgrade usually means pulling a fresh `/export` to compare against the old configuration before and after.

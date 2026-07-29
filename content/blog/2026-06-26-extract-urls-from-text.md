@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "How to Extract URLs from Text Online — No Regex, No Terminal"
+description: "Keyword: extract URLs from text, extract links from text online"
+date: 2026-06-26
+slug: extract-urls-from-text
+locale: en
+translationKey: extract-urls-from-text
+product: textforge
+contentType: how-to
+primaryKeyword: "how to extract urls from text online — no regex, no terminal"
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/base64-encode-decode-online-tool/
+---
+
 # How to Extract URLs from Text Online — No Regex, No Terminal
 
 **Keyword:** extract URLs from text, extract links from text online

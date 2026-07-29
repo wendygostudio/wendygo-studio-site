@@ -1,14 +1,15 @@
 ---
+schemaVersion: 1
 title: "ADHD Pomodoro Timer: Why Gamification Helps You Start (and Finish) Sessions"
 description: "How gamified Pomodoro timers help ADHD brains start tasks: external rewards, short sessions, and a virtual pet that makes focus feel worth it."
 date: 2026-07-18
 slug: adhd-pomodoro-timer-chrome-extension
-product: SlimeForge
-type: how-to
-keywords:
-  - adhd pomodoro timer chrome extension
-  - gamified focus timer adhd
-  - pomodoro for adhd
+locale: en
+translationKey: adhd-pomodoro-timer-chrome-extension
+product: slimeforge
+contentType: how-to
+primaryKeyword: "adhd pomodoro timer: why gamification helps you start (and finish) sessions"
+relatedPages: /slimeforge/,/blog/pomodoro-timer-chrome-extension/,/blog/forest-app-alternatives-chrome/
 ---
 
 The hardest part of a focus session for an ADHD brain isn't the work — it's starting. Standard productivity advice ("just begin!") ignores the role of dopamine in initiation. The Pomodoro technique removes one barrier. Gamification removes another.

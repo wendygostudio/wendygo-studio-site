@@ -9,20 +9,7 @@ translationKey: what-to-do-during-pomodoro-break
 product: slimeforge
 contentType: how-to
 primaryKeyword: "what to do during a Pomodoro break"
-relatedPages: /slimeforge/,/blog/pomodoro-timer-chrome-extension/,/blog/pomodoro-vs-time-blocking/
-alternateUrl: https://wendygostudio.com/es/blog/que-hacer-descanso-pomodoro/
-heading: "What to Do During a Pomodoro Break Without Losing Focus"
-shortTitle: "Pomodoro break ideas"
-intro: "A useful Pomodoro break should help you reset and make returning easy. These short activities fit inside five minutes without pulling you into another task."
-faqs:
-  - question: "What should I do during a five-minute Pomodoro break?"
-    answer: "Stand up, drink water, look into the distance, stretch or take a short walk. Choose an activity with a clear stopping point and avoid opening an endless feed."
-  - question: "Should I use my phone during a Pomodoro break?"
-    answer: "Usually not. Messages and social feeds have no natural endpoint, so a five-minute break can easily become much longer."
-  - question: "Can I keep working during a Pomodoro break?"
-    answer: "You can, but doing it repeatedly removes the recovery built into the method. At minimum, change posture and rest your eyes before the next session."
-  - question: "How long should a longer Pomodoro break be?"
-    answer: "Many people take a longer break after several sessions. Choose a duration that lets you eat, walk or reset while preserving a clear time to return."
+relatedPages: /slimeforge/,/blog/pomodoro-vs-time-blocking/,/blog/pomodoro-timer-chrome-extension/
 ---
 
 A Pomodoro break can fail in two opposite ways. You either stay at the desk and keep working, so the break never happens, or you open a social feed and return twenty minutes later. A good break sits between those extremes: it changes your physical or mental state **without starting a second activity that is difficult to stop**.

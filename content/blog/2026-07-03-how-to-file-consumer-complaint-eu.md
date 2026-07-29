@@ -1,11 +1,19 @@
 ---
+schemaVersion: 1
 title: "How to File a Consumer Complaint in the EU: Step-by-Step Guide"
-slug: how-to-file-consumer-complaint-eu
+description: "A warranty claim gets ignored. A refund is refused. The seller stops responding. In the EU, this is where a formal consumer complaint comes in —..."
 date: 2026-07-03
-product: ClaimForge
-type: C (tutorial técnico)
-keyword: "how to file consumer complaint EU"
-description: "When a seller ignores your warranty claim or refuses a return, you have legal options. Here's how to file a formal EU consumer complaint and actually get a resolution."
+slug: how-to-file-consumer-complaint-eu
+locale: en
+translationKey: how-to-file-consumer-complaint-eu
+product: claimforge
+contentType: how-to
+primaryKeyword: "wendygo studio guide"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-03
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 A warranty claim gets ignored. A refund is refused. The seller stops responding. In the EU, this is where a formal consumer complaint comes in — and you have real, enforceable options beyond just hoping the seller changes their mind.

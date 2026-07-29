@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Best Pomofocus Alternatives in 2026 — Free & on Chrome"
+description: "Pomofocus is a clean browser-based Pomodoro timer — but it's a website, not an extension. It doesn't follow you between tabs, doesn't save streaks..."
 date: 2026-07-19
 slug: pomofocus-alternatives
-product: SlimeForge
-type: F
-keyword: "pomofocus alternatives"
-description: "Looking for Pomofocus alternatives? Compare the best free Pomodoro timers in 2026 — including a Chrome extension with gamification."
+locale: en
+translationKey: pomofocus-alternatives
+product: slimeforge
+contentType: how-to
+primaryKeyword: "pomofocus alternatives"
+relatedPages: /slimeforge/
 ---
 
 Pomofocus is a clean browser-based Pomodoro timer — but it's a website, not an extension. It doesn't follow you between tabs, doesn't save streaks locally, and offers no reward loop for finishing sessions. These five alternatives fix that.

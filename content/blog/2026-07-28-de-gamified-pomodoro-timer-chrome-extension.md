@@ -1,16 +1,15 @@
 ---
 schemaVersion: 1
-title: Gamifizierter Pomodoro-Timer für Fokus | Wendygo Studio
-description: Gamifizierter Pomodoro-Timer mit einem virtuellen Haustier, das mit jeder Fokus-Sitzung wächst.
-date: 2026-07-28T00:00:00.000Z
+title: "Gamifizierter Pomodoro-Timer für Fokus | Wendygo Studio"
+description: "Gamifizierter Pomodoro-Timer mit einem virtuellen Haustier, das mit jeder Fokus-Sitzung wächst."
+date: 2026-07-28
 slug: gamified-pomodoro-timer-chrome-extension
 locale: de
 translationKey: gamified-pomodoro-timer-chrome-extension
 product: slimeforge
 contentType: how-to
-primaryKeyword: Gamifizierter Pomodoro-Timer
-relatedPages: >-
-  /de/slimeforge/,/de/blog/pomodoro-timer-chrome-extension/,/de/blog/adhd-pomodoro-timer-chrome-extension/
+primaryKeyword: "Gamifizierter Pomodoro-Timer"
+relatedPages: /slimeforge/,/blog/adhd-pomodoro-timer-chrome-extension/,/blog/pomodoro-timer-chrome-extension/
 ---
 
 # Gamified Pomodoro Timer: Warum Belohnungen dafür sorgen, dass Fokussitzungen hängen bleiben

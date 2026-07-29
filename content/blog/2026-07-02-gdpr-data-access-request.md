@@ -1,12 +1,19 @@
 ---
+schemaVersion: 1
 title: "How to Request Your Personal Data Under GDPR (Article 15)"
-slug: gdpr-data-access-request
+description: "Your right to access personal data (Article 15 of GDPR) lets you request a complete copy of all information a company holds about you — for free,..."
 date: 2026-07-02
-type: how-to
-product: ClaimForge
-keyword: "GDPR data access request"
-description: "Step-by-step guide to requesting all your personal data from a company under GDPR Article 15. Free, simple, and enforceable."
-published_url: /blog/gdpr-data-access-request/
+slug: gdpr-data-access-request
+locale: en
+translationKey: gdpr-data-access-request
+product: claimforge
+contentType: how-to
+primaryKeyword: "wendygo studio guide"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-02
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 Your right to access personal data (Article 15 of GDPR) lets you request a complete copy of all information a company holds about you — for free, within 30 days. This is the first step to understanding your data footprint and the foundation for any further action (deletion, correction, portability).

@@ -1,39 +1,15 @@
 ---
 schemaVersion: 1
 title: "Nettoyer localement un tableau copié"
-description: >-
-  Un flux de travail local pour nettoyer le texte du tableau copié, supprimer
-  les espacements bruyants et préserver les valeurs dont vous avez besoin.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: clean-copied-table-text
 locale: fr
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: nettoyer le texte du tableau copié
-relatedPages: '/fr/textforge/,/blog/clean-text-online/,/blog/extract-emails-from-text/'
-heading: Nettoyer le texte du tableau copié avant de le coller n'importe où
-shortTitle: Nettoyer le texte du tableau copié
-intro: >-
-  Les tableaux copiés arrivent souvent avec un espacement invisible, des lignes
-  brisées et des en-têtes répétés. Une petite étape de nettoyage local évite que
-  ces artefacts ne deviennent des erreurs dans le document suivant.
-faqs:
-  - question: "Pourquoi le texte du tableau copié semble-t-il brisé\_?"
-    answer: >-
-      Les fichiers PDF, les tableaux Web et les exportations stockent la
-      présentation différemment. Les copier peut ajouter des sauts de ligne et
-      des espaces qui n'étaient qu'un positionnement visuel.
-  - question: "Puis-je nettoyer les données copiées sans les télécharger\_?"
-    answer: >-
-      Oui. Utilisez un flux de travail de texte local basé sur un navigateur
-      lorsque les valeurs copiées incluent des notes internes, des adresses ou
-      des identifiants.
-  - question: "Dois-je supprimer chaque saut de ligne\_?"
-    answer: >-
-      Non. Conservez les coupures qui séparent les enregistrements réels et
-      supprimez uniquement le bruit de mise en page après avoir vérifié un petit
-      échantillon.
+primaryKeyword: "nettoyer le texte du tableau copié"
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
 ---
 
 Copier un tableau à partir d'un PDF, d'un tableau de bord ou d'un portail d'assistance produit souvent un texte qui semble presque correct. Les colonnes s'écartent, une seule cellule devient trois lignes et les en-têtes réapparaissent à mi-chemin du collage. Le plus dangereux est que le résultat peut encore paraître suffisamment plausible pour être réutilisé sans le vérifier.

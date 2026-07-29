@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "How to Convert HEIC to PNG Free — Lossless Quality"
+description: "URL: https://wendygostudio.com/blog/convert-heic-to-png-free/"
+date: 2026-07-05
+slug: convert-heic-to-png-free
+locale: en
+translationKey: convert-heic-to-png-free
+product: convertforge
+contentType: how-to
+primaryKeyword: "how to convert heic to png free — lossless quality"
+relatedPages: /convertforge/
+---
+
 # How to Convert HEIC to PNG Free — Lossless Quality
 
 **URL:** https://wendygostudio.com/blog/convert-heic-to-png-free/

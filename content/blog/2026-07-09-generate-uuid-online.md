@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Generate a UUID in Your Browser — Free & Private"
+description: "Generate a UUID directly in your browser — no online service, no signup, no data leaving your machine. TextForge includes UUID generation as one of its 58 built-in text functions."
 date: 2026-07-09
 slug: generate-uuid-online
-product: TextForge
-type: A (how-to)
-keyword: "how to generate uuid in browser"
-description: "Generate a UUID directly in your browser — no online service, no signup, no data leaving your machine. TextForge includes UUID generation as one of its 58 built-in text functions."
+locale: en
+translationKey: generate-uuid-online
+product: textforge
+contentType: how-to
+primaryKeyword: "how to generate uuid in browser"
+relatedPages: /textforge/
 ---
 
 ## Summary

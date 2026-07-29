@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Best CloudConvert Alternatives (2026)"
 description: "Looking for CloudConvert alternatives? Compare the best free options -- local tools that convert files privately without uploading."
 date: 2026-07-20
 slug: cloudconvert-alternatives
-product: ConvertForge
-type: F
-keyword: "cloudconvert alternatives"
+locale: en
+translationKey: cloudconvert-alternatives
+product: convertforge
+contentType: how-to
+primaryKeyword: "best cloudconvert alternatives (2026)"
+relatedPages: /convertforge/
 ---
 
 CloudConvert is one of the most capable file converters around -- supports over 200 formats, has a solid API, and delivers excellent quality. But it's not free for heavy use. The free tier gives you 25 conversion minutes per day, and that runs out faster than expected with video files. Every file also passes through their servers.

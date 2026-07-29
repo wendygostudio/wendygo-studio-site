@@ -1,37 +1,15 @@
 ---
 schemaVersion: 1
 title: "Pulire localmente il testo di una tabella"
-description: >-
-  Un flusso di lavoro locale per pulire il testo della tabella copiata,
-  rimuovere spaziature rumorose e preservare i valori necessari.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: clean-copied-table-text
 locale: it
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: pulire il testo della tabella copiato
-relatedPages: '/it/textforge/,/blog/clean-text-online/,/blog/extract-emails-from-text/'
-heading: Pulisci il testo della tabella copiato prima di incollarlo ovunque
-shortTitle: Pulisci il testo della tabella copiato
-intro: >-
-  Le tabelle copiate spesso arrivano con spaziature invisibili, linee spezzate e
-  intestazioni ripetute. Un piccolo passaggio di pulizia locale impedisce a tali
-  artefatti di diventare errori nel documento successivo.
-faqs:
-  - question: Perché il testo della tabella copiata appare rotto?
-    answer: >-
-      PDF, tabelle Web ed esportazioni memorizzano il layout in modo diverso.
-      Copiandoli è possibile aggiungere interruzioni di riga e spazi che erano
-      solo posizionamenti visivi.
-  - question: Posso pulire i dati copiati senza caricarli?
-    answer: >-
-      SÌ. Utilizza un flusso di lavoro di testo locale basato su browser quando
-      i valori copiati includono note interne, indirizzi o identificatori.
-  - question: Devo rimuovere ogni interruzione di riga?
-    answer: >-
-      No. Mantieni le interruzioni che separano i record reali e rimuovi solo il
-      rumore del layout dopo aver controllato un piccolo campione.
+primaryKeyword: "pulire il testo della tabella copiato"
+relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
 ---
 
 La copia di una tabella da un PDF, da una dashboard o da un portale di supporto spesso produce un testo che sembra quasi corretto. Le colonne si allontanano, una singola cella diventa tre righe e le intestazioni compaiono di nuovo a metà dell'incollaggio. La parte pericolosa è che il risultato può ancora sembrare abbastanza plausibile da poter essere riutilizzato senza controllarlo.

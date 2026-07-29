@@ -1,12 +1,19 @@
 ---
+schemaVersion: 1
 title: "EU Consumer Rights: The Complete Guide for Shoppers in Europe"
+description: "Pillar page for the EU consumer rights content cluster. Consolidates 6 ClaimForge articles into one navigable hub."
 date: 2026-07-15
 slug: eu-consumer-rights-guide
-type: guide
-product: ClaimForge
-keyword: "EU consumer rights"
-url: /guides/eu-consumer-rights/
-description: "Know your rights as an EU consumer. 2-year warranty law, complaint filing, chargebacks, GDPR data rights, small claims court — all explained with step-by-step guides."
+locale: en
+translationKey: eu-consumer-rights-guide
+product: claimforge
+contentType: how-to
+primaryKeyword: "wendygo studio guide"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-15
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 Pillar page for the EU consumer rights content cluster. Consolidates 6 ClaimForge articles into one navigable hub.

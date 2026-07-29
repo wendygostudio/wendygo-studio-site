@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Best Chrome Extensions for Students in 2026"
+description: "Students spend more time in Chrome than in any other app — lectures, research, assignments, all of it. So are the distractions. These five..."
 date: 2026-07-16
 slug: best-chrome-extensions-for-students
-product: SlimeForge
-type: D
-keyword: "best chrome extensions for students"
-description: "Five Chrome extensions that actually help you study: a gamified focus timer, grammar checker, ad blocker, tab manager, and research clipper — all free to start."
+locale: en
+translationKey: best-chrome-extensions-for-students
+product: slimeforge
+contentType: how-to
+primaryKeyword: "best chrome extensions for students"
+relatedPages: /slimeforge/
 ---
 
 Students spend more time in Chrome than in any other app — lectures, research, assignments, all of it. So are the distractions. These five extensions target the real friction points of studying: staying on task, writing better, keeping tabs under control, and protecting your attention.

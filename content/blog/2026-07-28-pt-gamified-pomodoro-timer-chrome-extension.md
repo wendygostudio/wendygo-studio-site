@@ -1,16 +1,15 @@
 ---
 schemaVersion: 1
-title: Temporizador Pomodoro gamificado para foco | Estúdio Wendygo
-description: Temporizador Pomodoro gamificado com uma mascote virtual que cresce a cada sessão de foco.
-date: 2026-07-28T00:00:00.000Z
+title: "Temporizador Pomodoro gamificado para foco | Estúdio Wendygo"
+description: "Temporizador Pomodoro gamificado com uma mascote virtual que cresce a cada sessão de foco."
+date: 2026-07-28
 slug: gamified-pomodoro-timer-chrome-extension
 locale: pt
 translationKey: gamified-pomodoro-timer-chrome-extension
 product: slimeforge
 contentType: how-to
-primaryKeyword: temporizador pomodoro gamificado
-relatedPages: >-
-  /pt/slimeforge/,/pt/blog/pomodoro-timer-chrome-extension/,/pt/blog/adhd-pomodoro-timer-chrome-extension/
+primaryKeyword: "temporizador pomodoro gamificado"
+relatedPages: /slimeforge/,/blog/adhd-pomodoro-timer-chrome-extension/,/blog/pomodoro-timer-chrome-extension/
 ---
 
 # Cronómetro Pomodoro Gamificado: Porque é que as recompensas fazem com que as sessões de foco permaneçam

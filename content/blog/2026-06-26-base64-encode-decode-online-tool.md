@@ -1,15 +1,15 @@
 ---
+schemaVersion: 1
 title: "Base64 Encode and Decode Online — No Upload, No Command Line"
 description: "Encode and decode Base64 in your browser without uploading anything. TextForge is a free Chrome extension with instant Base64 conversion plus 50+ other text utilities."
 date: 2026-06-26
-keywords:
-  - base64 encode decode online
-  - base64 encoder decoder
-  - base64 online tool
-  - base64 chrome extension
-  - base64 developer tool
-  - encode base64 browser
-type: how-to
+slug: base64-encode-decode-online-tool
+locale: en
+translationKey: base64-encode-decode-online-tool
+product: textforge
+contentType: how-to
+primaryKeyword: "base64 encode and decode online — no upload, no command line"
+relatedPages: /textforge/
 ---
 
 # Base64 Encode and Decode Directly in Your Browser

@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: pt
-translationKey: decode-jwt-online
-xDefaultPath: /blog/decode-jwt-online/
 title: "Descodificar um JWT localmente e ler claims"
 description: "Leia o cabeçalho e os claims de um JWT no navegador sem carregar o token."
 date: 2026-07-26
 slug: descodificar-jwt-localmente
-product: TextForge
+locale: pt
+translationKey: decode-jwt-online
+product: textforge
 contentType: how-to
 primaryKeyword: "descodificar JWT localmente"
-relatedPages: "/pt/textforge/,/blog/decode-jwt-online/"
-heading: "Descodificar um JWT localmente"
-intro: "Leia as partes visíveis de um JWT sem o enviar para um descodificador online."
-faqs:
-  - question: "Descodificar verifica a assinatura JWT?"
-    answer: "Não. Ler cabeçalho e payload não verifica a assinatura nem a confiança."
+relatedPages: /textforge/
 ---
 
 Um JSON Web Token contém normalmente cabeçalho, payload e assinatura. Cabeçalho e payload são codificados, não cifrados: pode ler localmente a expiração (`exp`) ou os claims.

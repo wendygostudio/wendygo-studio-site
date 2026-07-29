@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: it
-translationKey: pdf-to-text-local-ocr
-xDefaultPath: /blog/convert-pdf-to-text-free/
 title: "Convertire un PDF scansionato in testo gratis – OCR locale"
 description: "Estrai testo da PDF scansionati localmente in Chrome, senza caricare il documento."
 date: 2026-07-26
 slug: pdf-scansionato-testo-ocr
-product: ConvertForge
+locale: it
+translationKey: pdf-to-text-local-ocr
+product: convertforge
 contentType: how-to
 primaryKeyword: "convertire PDF scansionato in testo"
-relatedPages: "/it/convertforge/,/blog/convert-pdf-to-text-free/"
-heading: "Convertire un PDF scansionato in testo gratis"
-intro: "L'OCR locale legge i PDF composti da immagini senza inviarli a un servizio esterno."
-faqs:
-  - question: "Ogni PDF richiede l'OCR?"
-    answer: "No. Un PDF testuale contiene testo selezionabile; un PDF scansionato contiene immagini e richiede OCR."
+relatedPages: /convertforge/
 ---
 
 Un PDF ottenuto da scanner spesso non contiene testo selezionabile. Per cercare, copiare o riutilizzare contratti, ricevute e fatture serve quindi l'OCR.

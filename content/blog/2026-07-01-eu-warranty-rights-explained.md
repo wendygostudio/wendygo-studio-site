@@ -1,16 +1,19 @@
 ---
+schemaVersion: 1
 title: "EU 2-Year Warranty Rights Explained: What You're Entitled To and How to Claim It"
-description: "EU law guarantees you a minimum 2-year warranty on any product you buy. Learn exactly what's covered, what sellers must do, and how to file a warranty claim if they refuse."
+description: "You bought a laptop that stopped working after 14 months. The seller tells you the warranty is only 12 months and there's nothing they can do. You..."
 date: 2026-07-01
 slug: eu-warranty-rights-explained
-product: ClaimForge
-type: A
-keywords:
-  - EU warranty 2 years law
-  - how to claim warranty in Europe
-  - EU consumer rights warranty
-  - EU legal guarantee 2 years
-  - European warranty rights
+locale: en
+translationKey: eu-warranty-rights-explained
+product: claimforge
+contentType: how-to
+primaryKeyword: "eu 2-year warranty rights explained: what you're entitled to and how to claim it"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-01
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 # EU 2-Year Warranty Rights Explained: What You're Entitled To and How to Claim It

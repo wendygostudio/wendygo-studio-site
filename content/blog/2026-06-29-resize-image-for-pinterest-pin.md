@@ -1,10 +1,15 @@
 ---
-title: How to Resize an Image for Pinterest Pins in Chrome (1000×1500)
-slug: resize-image-for-pinterest-pin
+schemaVersion: 1
+title: "How to Resize an Image for Pinterest Pins in Chrome (1000×1500)"
+description: "Crop any image to Pinterest's optimal 1000×1500 px format without uploading to Photoshop or Canva. FrameForge resizes entirely in your browser in seconds."
 date: 2026-06-29
-type: how-to
-product: FrameForge
-description: Crop any image to Pinterest's optimal 1000×1500 px format without uploading to Photoshop or Canva. FrameForge resizes entirely in your browser in seconds.
+slug: resize-image-for-pinterest-pin
+locale: en
+translationKey: resize-image-for-pinterest-pin
+product: frameforge
+contentType: how-to
+primaryKeyword: "how to resize an image for pinterest pins in chrome (1000×1500)"
+relatedPages: /frameforge/
 ---
 
 Pinterest's algorithm favors vertical pins. When you size images for the platform, you are competing with thousands of other pins for space in users' feeds — and the wrong dimensions get cropped or stretched.

@@ -7,25 +7,13 @@ slug: vendeur-refuse-garantie-legale-ue
 locale: fr
 translationKey: seller-refuses-warranty-claim-eu
 product: claimforge
-jurisdiction: "Union européenne ; les règles nationales peuvent ajouter ou faire varier les protections"
+contentType: workflow
+primaryKeyword: "vendeur refuse garantie légale UE"
+relatedPages: /claimforge/
+jurisdiction: Union européenne ; les règles nationales peuvent ajouter ou faire varier les protections
 reviewedAt: 2026-07-25
 reviewDue: 2026-10-25
 sourceUrls: https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_en.htm,https://europa.eu/youreurope/citizens/consumers/consumers-dispute-resolution/index_en.htm
-contentType: workflow
-primaryKeyword: "vendeur refuse garantie légale UE"
-relatedPages: /fr/claimforge/,/fr/blog/plateforme-rlc-ue-fermee-alternative/,/fr/ressources/
-heading: "Le Vendeur Refuse Ta Garantie ? Voici Quoi Faire"
-shortTitle: "Garantie refusée par le vendeur"
-intro: "Un refus ne détermine pas automatiquement si ta réclamation est valide. Constitue un dossier clair, invoque la bonne garantie légale et fais escalader dans le bon ordre."
-faqs:
-  - question: "Le vendeur ou le fabricant est-il responsable au titre de la garantie légale de l'UE ?"
-    answer: "La garantie légale s'applique normalement à ton contrat avec le vendeur. La garantie commerciale d'un fabricant est distincte et ne remplace pas tes droits légaux."
-  - question: "Un vendeur de l'UE peut-il dire que la garantie ne durait qu'un an ?"
-    answer: "Les biens achetés auprès d'un professionnel de l'UE bénéficient généralement d'une garantie légale minimale de deux ans. Certaines lois nationales prévoient une protection plus longue, et les conditions de garantie commerciale sont distinctes."
-  - question: "Ai-je automatiquement droit à un remboursement pour un bien défectueux ?"
-    answer: "Pas toujours. La réparation ou le remplacement sont généralement le premier recours. Une réduction de prix ou un remboursement peuvent suivre lorsque ces solutions sont impossibles, disproportionnées ou non réalisées dans un délai raisonnable."
-  - question: "Que faire si le vendeur est dans un autre pays de l'UE ?"
-    answer: "Ton Centre Européen des Consommateurs national peut t'aider en cas de litige transfrontalier avec un professionnel établi dans un autre pays de l'UE, en Islande ou en Norvège."
 ---
 
 Un premier « non » du vendeur ne détermine pas si ta réclamation est valide. Les réponses du service client évoquent souvent une garantie du fabricant, un délai de retour interne ou une politique de magasin. Ce ne sont pas nécessairement les mêmes règles que la **garantie légale de l'UE**, qui protège les consommateurs lorsqu'un bien est défectueux, ne fonctionne pas comme annoncé ou ne correspond pas à sa description.

@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "Pomodoro Timer for Studying: How Gamification Keeps You Focused During Exam Prep"
+description: "Fecha: 2026-07-18 Slug: pomodoro-for-studying-chrome-extension Producto: SlimeForge Tipo: A (guía práctica) Keyword principal: pomodoro timer for..."
+date: 2026-07-18
+slug: pomodoro-for-studying-chrome-extension
+locale: en
+translationKey: pomodoro-for-studying-chrome-extension
+product: slimeforge
+contentType: how-to
+primaryKeyword: "pomodoro timer for studying: how gamification keeps you focused during exam prep"
+relatedPages: /slimeforge/
+---
+
 # Pomodoro Timer for Studying: How Gamification Keeps You Focused During Exam Prep
 
 **Fecha:** 2026-07-18  

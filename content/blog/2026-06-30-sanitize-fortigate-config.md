@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "How to Safely Share a FortiGate Firewall Config"
+description: "A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection..."
+date: 2026-06-30
+slug: sanitize-fortigate-config
+locale: en
+translationKey: sanitize-fortigate-config
+product: scrubforge
+contentType: how-to
+primaryKeyword: "how to safely share a fortigate firewall config"
+relatedPages: /scrubforge/,/blog/remove-sensitive-data-cisco-config/
+---
+
 # How to Safely Share a FortiGate Firewall Config
 
 A FortiGate running-config contains far more than firewall rules. It holds VPN tunnels, interface IP blocks, admin credentials, HTTPS inspection certificates, and API tokens — all at risk when the config is shared raw with support.

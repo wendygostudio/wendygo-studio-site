@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: pt
-translationKey: extract-emails-from-text
-xDefaultPath: /blog/extract-emails-from-text/
 title: "Extrair endereços de email de texto localmente"
 description: "Extraia, limpe e liste endereços de email num texto localmente."
 date: 2026-07-26
 slug: extrair-emails-de-texto
-product: TextForge
+locale: pt
+translationKey: extract-emails-from-text
+product: textforge
 contentType: how-to
 primaryKeyword: "extrair emails de texto"
-relatedPages: "/pt/textforge/,/blog/extract-emails-from-text/"
-heading: "Extrair endereços de email de texto"
-intro: "Encontre endereços num excerto sem o enviar para um serviço online."
-faqs:
-  - question: "Uma lista extraída implica consentimento?"
-    answer: "Não. Respeite as regras aplicáveis de privacidade e consentimento."
+relatedPages: /textforge/
 ---
 
 Os endereços de email aparecem muitas vezes em notas, exportações de suporte ou texto copiado. Com [TextForge](/pt/textforge/), analise um excerto localmente e obtenha uma lista. Confirme o resultado, remova duplicados e corrija entradas incompletas.

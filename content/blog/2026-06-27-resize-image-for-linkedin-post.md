@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "How to Resize an Image for LinkedIn Posts in Chrome (1200×627)"
+description: "LinkedIn renders feed images at a narrow horizontal crop, similar to X and Facebook. Square photos lose the vertical edges. Portrait shots get..."
+date: 2026-06-27
+slug: resize-image-for-linkedin-post
+locale: en
+translationKey: resize-image-for-linkedin-post
+product: frameforge
+contentType: how-to
+primaryKeyword: "how to resize an image for linkedin posts in chrome (1200×627)"
+relatedPages: /frameforge/,/blog/resize-image-for-x-twitter-post/,/blog/resize-image-for-instagram-chrome/,/blog/resize-image-youtube-thumbnail-chrome/
+---
+
 # How to Resize an Image for LinkedIn Posts in Chrome (1200×627)
 
 LinkedIn renders feed images at a narrow horizontal crop, similar to X and Facebook. Square photos lose the vertical edges. Portrait shots get squeezed. The fix: post at 1200×627 px (roughly 1.9:1) and the image displays in full in the LinkedIn feed preview without unexpected cropping.

@@ -9,23 +9,11 @@ translationKey: eu-odr-platform-shutdown-what-to-use-instead
 product: claimforge
 contentType: how-to
 primaryKeyword: "plateforme RLC UE fermée alternative"
-relatedPages: /fr/claimforge/,/fr/blog/vendeur-refuse-garantie-legale-ue/,/fr/ressources/
-sourceUrls: https://eur-lex.europa.eu/eli/reg/2024/3228/oj,https://consumer-redress.ec.europa.eu/site-relocation_en,https://consumer-redress.ec.europa.eu/dispute-resolution-bodies,https://europa.eu/youreurope/citizens/consumers
-jurisdiction: "Union européenne ; les règles nationales peuvent ajouter ou faire varier les protections"
+relatedPages: /claimforge/
+jurisdiction: Union européenne ; les règles nationales peuvent ajouter ou faire varier les protections
 reviewedAt: 2026-07-25
 reviewDue: 2026-10-25
-heading: "La Plateforme RLC de l'UE a Fermé : Que Faire Maintenant"
-shortTitle: "La plateforme RLC UE a fermé"
-intro: "La plateforme de règlement en ligne des litiges de l'UE a cessé de prendre de nouveaux dossiers en mars 2025 et a fermé définitivement le 20 juillet 2025. Si tu as encore ec.europa.eu/consumers/odr en favori, ce lien ne mène plus nulle part d'utile."
-faqs:
-  - question: "Pourquoi l'UE a-t-elle fermé la plateforme RLC ?"
-    answer: "La Commission européenne a cité une faible utilisation : environ 200 dossiers par an dans toute l'UE, et seulement environ 2 % des réclamations obtenaient une réponse du professionnel via la plateforme. Elle a été supprimée en vertu du règlement (UE) 2024/3228 pour des raisons d'efficacité et de coût, pas parce que les droits des consommateurs ont changé."
-  - question: "Qu'est-ce qui remplace la plateforme RLC pour les litiges transfrontaliers ?"
-    answer: "Il n'y a plus de routeur automatique unique. Pour un litige avec un professionnel dans un autre pays de l'UE, en Islande ou en Norvège, contacte le Centre Européen des Consommateurs (ECC-Net) de ton propre pays, ou consulte directement la liste des organismes nationaux de règlement des litiges de la Commission européenne."
-  - question: "Les anciens liens vers la plateforme RLC fonctionnent-ils encore ?"
-    answer: "Non. ec.europa.eu/consumers/odr redirige désormais vers un avis de fermeture sur le domaine consumer-redress.ec.europa.eu de la Commission européenne, confirmant la fermeture et renvoyant vers ECC-Net et la liste des organismes nationaux de résolution extrajudiciaire des litiges. Tout guide, modèle ou page de conditions générales citant encore l'ancienne URL est obsolète."
-  - question: "Cela affecte-t-il mes droits réels de consommateur, ou juste cet outil ?"
-    answer: "Juste l'outil. La garantie légale de deux ans, le droit de rétractation de 14 jours et ton droit d'utiliser des organismes de résolution extrajudiciaire ou la procédure de petites créances restent inchangés. Seul le site unique géré par l'UE qui routait les réclamations entre pays a disparu."
+sourceUrls: https://eur-lex.europa.eu/eli/reg/2024/3228/oj,https://consumer-redress.ec.europa.eu/site-relocation_en,https://consumer-redress.ec.europa.eu/dispute-resolution-bodies,https://europa.eu/youreurope/citizens/consumers
 ---
 
 Imagine que tu as acheté quelque chose chez un vendeur d'un autre pays de l'UE, que l'article est arrivé cassé, et que le vendeur t'ignore. Il y a un an, le conseil était simple : dépose une réclamation sur la plateforme de règlement en ligne des litiges (RLC) de l'UE et laisse-la orienter le dossier. Cette plateforme n'existe plus, et un nombre surprenant de guides — le nôtre y compris, jusqu'à un précédent nettoyage — y renvoyaient encore.

@@ -1,11 +1,15 @@
 ---
-slug: clean-text-online
+schemaVersion: 1
+title: "Clean Text Online - Remove Whitespace, Trim, Delete Blank Lines"
+description: "When you copy text from a PDF, web page, or log file, you often get unwanted whitespace: leading spaces on every line, trailing tabs, double blank..."
 date: 2026-07-12
-title: Clean Text Online - Remove Whitespace, Trim, Delete Blank Lines
-type: A
-product: TextForge
-keyword: "clean text online"
-meta: "Remove extra spaces, trim lines, delete blank lines, and clean messy text online — locally with TextForge."
+slug: clean-text-online
+locale: en
+translationKey: clean-text-online
+product: textforge
+contentType: how-to
+primaryKeyword: "clean text online"
+relatedPages: /textforge/,/blog/cyberchef-alternatives/
 ---
 
 # Clean Text Online — Remove Whitespace, Trim Lines, Delete Blank Lines

@@ -9,23 +9,11 @@ translationKey: eu-odr-platform-shutdown-what-to-use-instead
 product: claimforge
 contentType: how-to
 primaryKeyword: "EU-ODR-Plattform geschlossen Alternative"
-relatedPages: /de/claimforge/,/de/blog/verkaeufer-lehnt-eu-garantieanspruch-ab/,/de/ressourcen/
-sourceUrls: https://eur-lex.europa.eu/eli/reg/2024/3228/oj,https://consumer-redress.ec.europa.eu/site-relocation_en,https://consumer-redress.ec.europa.eu/dispute-resolution-bodies,https://europa.eu/youreurope/citizens/consumers
-jurisdiction: "Europäische Union; nationale Vorschriften können zusätzlichen oder abweichenden Schutz bieten"
+relatedPages: /claimforge/
+jurisdiction: Europäische Union; nationale Vorschriften können zusätzlichen oder abweichenden Schutz bieten
 reviewedAt: 2026-07-25
 reviewDue: 2026-10-25
-heading: "Die EU-ODR-Plattform Ist Weg: Was Du Jetzt Nutzt"
-shortTitle: "EU-ODR-Plattform ist weg"
-intro: "Die Online-Streitbeilegungsplattform der EU nahm ab März 2025 keine neuen Fälle mehr an und schloss am 20. Juli 2025 endgültig. Wer ec.europa.eu/consumers/odr noch als Lesezeichen hat, landet nirgends mehr."
-faqs:
-  - question: "Warum hat die EU die ODR-Plattform geschlossen?"
-    answer: "Die Europäische Kommission nannte geringe Nutzung als offiziellen Grund: rund 200 Fälle pro Jahr in der gesamten EU, und nur etwa 2 % der Beschwerden erhielten über das System eine Antwort des Händlers. Sie wurde unter der Verordnung (EU) 2024/3228 aus Effizienz- und Kostengründen eingestellt, nicht wegen veränderter Verbraucherrechte."
-  - question: "Was ersetzt die ODR-Plattform für grenzüberschreitende Streitfälle?"
-    answer: "Es gibt keinen einzigen automatischen Vermittler mehr. Bei einem Streit mit einem Händler in einem anderen EU-Land, Island oder Norwegen wendest du dich an dein nationales Europäisches Verbraucherzentrum (ECC-Net) oder direkt an die zuständige nationale Schlichtungsstelle aus der Liste der Europäischen Kommission."
-  - question: "Funktionieren alte Links zur ODR-Plattform noch?"
-    answer: "Nein. ec.europa.eu/consumers/odr leitet jetzt auf einen Hinweis zur Standortverlegung auf der Domain consumer-redress.ec.europa.eu der Europäischen Kommission weiter, der die Schließung bestätigt und auf ECC-Net sowie die Liste der nationalen Schlichtungsstellen verweist. Jeder Leitfaden, jede Vorlage oder AGB-Seite, die noch die alte URL nennt, ist veraltet."
-  - question: "Betrifft das meine eigentlichen Verbraucherrechte, oder nur dieses eine Tool?"
-    answer: "Nur das Tool. Die zweijährige gesetzliche Gewährleistung, das 14-tägige Widerrufsrecht und dein Recht, Schlichtungsstellen oder das Kleinforderungsverfahren zu nutzen, bleiben unverändert. Nur die eine EU-weite Website, die früher Beschwerden zwischen Ländern vermittelte, ist verschwunden."
+sourceUrls: https://eur-lex.europa.eu/eli/reg/2024/3228/oj,https://consumer-redress.ec.europa.eu/site-relocation_en,https://consumer-redress.ec.europa.eu/dispute-resolution-bodies,https://europa.eu/youreurope/citizens/consumers
 ---
 
 Angenommen, du hast bei einem Verkäufer in einem anderen EU-Land etwas gekauft, es kam defekt an, und der Verkäufer ignoriert dich. Vor einem Jahr war der Rat einfach: Reiche es auf der Online-Streitbeilegungsplattform (ODR) der EU ein und lass sie den Fall vermitteln. Diese Plattform gibt es nicht mehr, und erstaunlich viele Leitfäden — unsere eingeschlossen, bis zu einer früheren Bereinigung — verwiesen noch immer darauf.

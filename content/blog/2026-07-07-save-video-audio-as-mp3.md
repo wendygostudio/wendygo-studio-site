@@ -1,13 +1,15 @@
 ---
+schemaVersion: 1
 title: "Save Video Audio as MP3 Free — Portable Audio Format, No Upload"
+description: "Extract video audio in MP3 format entirely in your browser. ConvertForge saves the audio track as MP3 locally — no upload, no file size limits, playable on any device."
 date: 2026-07-07
 slug: save-video-audio-as-mp3
-product: ConvertForge
-type: how-to
-keyword: "save video audio as mp3"
-description: "Extract video audio in MP3 format entirely in your browser. ConvertForge saves the audio track as MP3 locally — no upload, no file size limits, playable on any device."
-published: true
-hreflang_es: ""
+locale: en
+translationKey: save-video-audio-as-mp3
+product: convertforge
+contentType: how-to
+primaryKeyword: "save video audio as mp3"
+relatedPages: /convertforge/,/blog/convert-video-to-audio-free/
 ---
 
 MP3 is the most universal audio format. Every phone, every browser, every media player supports it. So when you need to extract audio from a video, saving it as MP3 makes the result immediately portable — no format conversion needed, no compatibility surprises. ConvertForge handles this extraction locally in your browser.

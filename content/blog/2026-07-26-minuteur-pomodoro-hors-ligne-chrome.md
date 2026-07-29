@@ -1,21 +1,15 @@
 ---
 schemaVersion: 1
-locale: fr
-translationKey: offline-pomodoro-timer-chrome
-xDefaultPath: /blog/offline-pomodoro-timer-chrome/
 title: "Minuteur Pomodoro hors ligne pour Chrome"
 description: "Utilisez localement sessions de concentration, pauses et séries dans Chrome, même sans internet."
 date: 2026-07-26
 slug: minuteur-pomodoro-hors-ligne-chrome
-product: SlimeForge
+locale: fr
+translationKey: offline-pomodoro-timer-chrome
+product: slimeforge
 contentType: how-to
 primaryKeyword: "minuteur Pomodoro hors ligne Chrome"
-relatedPages: "/fr/slimeforge/,/blog/offline-pomodoro-timer-chrome/"
-heading: "Utiliser un minuteur Pomodoro sans internet dans Chrome"
-intro: "Organisez concentration et pauses localement quand le Wi-Fi n'est pas disponible."
-faqs:
-  - question: "Le minuteur continue-t-il sans Wi-Fi ?"
-    answer: "Après installation, le minuteur et la progression locale fonctionnent sans internet."
+relatedPages: /slimeforge/
 ---
 
 Un minuteur n'a pas besoin de cloud. Un Pomodoro hors ligne est utile en voyage, dans le train ou lorsque vous choisissez de travailler déconnecté.

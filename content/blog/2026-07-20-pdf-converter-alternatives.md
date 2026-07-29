@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "PDF Converter Alternatives: Best Free Tools (2026)"
+description: "Slug: pdf-converter-alternatives Keyword: pdf converter alternatives Product: ConvertForge Type: F (Competitors alternatives) Published: 2026-07-20"
+date: 2026-07-20
+slug: pdf-converter-alternatives
+locale: en
+translationKey: pdf-converter-alternatives
+product: convertforge
+contentType: how-to
+primaryKeyword: "pdf converter alternatives: best free tools (2026)"
+relatedPages: /convertforge/,/blog/cloudconvert-alternatives/
+---
+
 # PDF Converter Alternatives: Best Free Tools (2026)
 
 **Slug:** pdf-converter-alternatives  

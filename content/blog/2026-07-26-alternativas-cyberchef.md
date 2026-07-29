@@ -1,22 +1,15 @@
 ---
 schemaVersion: 1
-locale: pt
-translationKey: cyberchef-alternatives
-xDefaultPath: /blog/cyberchef-alternatives/
 title: "5 alternativas ao CyberChef por caso de uso (2026)"
 description: "Compare alternativas ao CyberChef para texto, regex e transformações locais no navegador."
 date: 2026-07-26
 slug: alternativas-cyberchef
-product: TextForge
+locale: pt
+translationKey: cyberchef-alternatives
+product: textforge
 contentType: alternatives
 primaryKeyword: "alternativas ao CyberChef"
-relatedPages: "/pt/textforge/,/blog/cyberchef-alternatives/"
-heading: "5 alternativas ao CyberChef por caso de uso"
-shortTitle: "Alternativas ao CyberChef"
-intro: "O CyberChef é excelente para análise de segurança. Para tarefas breves de texto, uma ferramenta focada costuma ser mais rápida."
-faqs:
-  - question: "O TextForge substitui totalmente o CyberChef?"
-    answer: "Não. O TextForge cobre tarefas de texto do dia a dia; o CyberChef continua mais adequado para criptografia, análise binária e protocolos."
+relatedPages: /textforge/
 ---
 
 O CyberChef é uma ferramenta open source conhecida, criada pelo GCHQ, para codificação, descodificação, cifragem, compressão e muitas transformações de dados. Para CTFs, análise de payloads ou AES, é excelente.

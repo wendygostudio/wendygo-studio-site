@@ -1,41 +1,15 @@
 ---
 schemaVersion: 1
 title: "Tamanho de imagem para carrossel LinkedIn"
-description: >-
-  Prepare imagens consistentes do carrossel do LinkedIn localmente no Chrome,
-  sem enviar a arte original para um editor online.
-date: 2026-07-26T00:00:00.000Z
+description: ">-"
+date: 2026-07-26
 slug: linkedin-carousel-image-size
 locale: pt
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: tamanho da imagem do carrossel do LinkedIn
-relatedPages: >-
-  /pt/frameforge/,/blog/resize-image-for-linkedin-post/,/blog/batch-resize-images-chrome-extension/
-heading: >-
-  Tamanho da imagem do carrossel do LinkedIn: um fluxo de trabalho local do
-  Chrome
-shortTitle: Tamanho da imagem do carrossel do LinkedIn
-intro: >-
-  Um carrossel do LinkedIn é uma sequência, não uma imagem de feed. Dimensões
-  consistentes, margens seguras e uma rotina de exportação são mais importantes
-  do que adicionar outra ferramenta de design ao fluxo de trabalho.
-faqs:
-  - question: Que tamanho devem usar as imagens do carrossel do LinkedIn?
-    answer: >-
-      Utilize um ecrã consistente em toda a sequência e verifique as orientações
-      atuais de carregamento do LinkedIn antes de publicar. O importante é que
-      cada página utilize as mesmas dimensões e margens legíveis.
-  - question: Posso redimensionar a arte do carrossel localmente?
-    answer: >-
-      Sim. Um fluxo de trabalho de imagem local permite preparar cada página
-      raster no browser sem enviar imagens de origem para um editor de
-      terceiros.
-  - question: Todos os slides do carrossel devem usar o mesmo corte?
-    answer: >-
-      O ecrã deve permanecer consistente, mas cada imagem de origem pode
-      necessitar de uma posição de corte diferente para manter o motivo visível.
+primaryKeyword: "tamanho da imagem do carrossel do LinkedIn"
+relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 Os carrosséis do LinkedIn funcionam quando parecem um único documento: uma página de abertura clara, uma sequência legível e uma página de fecho que não parece comprimida ou cortada. O problema prático raramente é a criatividade. Prepara várias imagens com uma moldura consistente enquanto protege a arte original que pode incluir trabalho do cliente, capturas de ecrã ou material interno do produto.

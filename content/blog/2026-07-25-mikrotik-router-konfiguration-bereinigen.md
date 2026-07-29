@@ -9,20 +9,7 @@ translationKey: sanitize-mikrotik-router-config
 product: scrubforge
 contentType: how-to
 primaryKeyword: "MikroTik-Router-Konfiguration vor dem Teilen bereinigen"
-relatedPages: /de/scrubforge/,/de/blog/was-die-sonicwall-panne-lehrt/,/de/ressourcen/
-sourceUrls: https://help.mikrotik.com/docs/spaces/ROS/pages/380076066/List+of+menus+with+sensitive+parameters,https://help.mikrotik.com/docs/spaces/ROS/pages/328155/Configuration+Management,https://mikrotik.com/download/changelogs
-heading: "MikroTik-RouterOS-Konfiguration Vor Dem Teilen Bereinigen"
-shortTitle: "MikroTik-Konfiguration bereinigen"
-intro: "RouterOS versteckt Passwörter in /export standardmäßig. Topologie, Kommentare und Serveradressen bleiben trotzdem in der Datei, die du in einem Forum, einem Ticket oder einem KI-Chat einfügst."
-faqs:
-  - question: "Ersetzt show-sensitive die Notwendigkeit, eine MikroTik-Konfiguration zu bereinigen?"
-    answer: "Nein. show-sensitive steuert nur, ob RouterOS seine eigene, vordefinierte Liste sensibler Felder ausgibt — Passwörter, Schlüssel, Secrets. Alles andere im Export, einschließlich IP-Adressen, Kommentare und Serveradressen, bleibt so oder so sichtbar. Dafür ist ScrubForge da."
-  - question: "Bricht das Bereinigen die Konfiguration, wenn ich sie wieder importieren muss?"
-    answer: "Bereinige nur eine Kopie für die Diskussion, einen Forenbeitrag oder ein Support-Ticket — nicht die Datei, die du reimportieren willst. Ein Reimport braucht die echten Zugangsdaten, halte deinen Arbeitsexport also getrennt von der bereinigten Version, die du öffentlich teilst."
-  - question: "Erkennt ScrubForge speziell RouterOS-Syntax?"
-    answer: "Ja. RouterOS ist eine von zwölf Gerätesyntaxen, die von ScrubForges Musterbibliothek abgedeckt werden, neben Cisco, FortiGate, Juniper und Palo Alto."
-  - question: "Was, wenn ich bereits eine unbereinigte MikroTik-Konfiguration gepostet habe?"
-    answer: "Bearbeite oder lösche den Beitrag, wenn die Plattform das erlaubt, und rotiere danach jede offengelegte Zugangsdaten — Passwörter, Pre-Shared Keys, RADIUS-Secrets. Werte im Nachhinein zu ändern macht nicht ungeschehen, was sichtbar war, solange der Beitrag live war."
+relatedPages: /scrubforge/
 ---
 
 Einen Router-Konfigurationsexport in einem Forenthread oder einem Support-Ticket zu posten, ist Routinearbeit für Admins, und MikroTik-Admins haben diesen Monat viel davon getan: RouterOS 7.21.5 (Long-Term) und 6.49.20 erschienen beide am 6. Juli 2026, und ein Upgrade bedeutet meist, einen frischen `/export` zu ziehen, um vorher und nachher zu vergleichen.

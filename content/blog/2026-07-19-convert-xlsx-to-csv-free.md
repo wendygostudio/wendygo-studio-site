@@ -1,3 +1,17 @@
+---
+schemaVersion: 1
+title: "Convert XLSX to CSV Free — No Upload Needed"
+description: "Fecha: 2026-07-19 Slug: convert-xlsx-to-csv-free Producto: ConvertForge Keyword: convert xlsx to csv free Tipo: A (how-to guide)"
+date: 2026-07-19
+slug: convert-xlsx-to-csv-free
+locale: en
+translationKey: convert-xlsx-to-csv-free
+product: convertforge
+contentType: how-to
+primaryKeyword: "convert xlsx to csv free — no upload needed"
+relatedPages: /convertforge/,/blog/convert-csv-to-json-free/
+---
+
 # Convert XLSX to CSV Free — No Upload Needed
 
 **Fecha:** 2026-07-19

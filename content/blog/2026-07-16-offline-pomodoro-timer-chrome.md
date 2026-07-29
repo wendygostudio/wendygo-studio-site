@@ -1,11 +1,15 @@
 ---
+schemaVersion: 1
 title: "Offline Pomodoro Timer Chrome Extension — Works Without Internet"
 description: "A Pomodoro timer that works offline in Chrome — no WiFi required. Set sessions, track streaks, and build focus habits whether you're remote, traveling, or in a café."
-date: "2026-07-16"
-type: "Productivity"
-slug: "offline-pomodoro-timer-chrome"
-product: "SlimeForge"
-keyword: "offline pomodoro timer chrome"
+date: 2026-07-16
+slug: offline-pomodoro-timer-chrome
+locale: en
+translationKey: offline-pomodoro-timer-chrome
+product: slimeforge
+contentType: how-to
+primaryKeyword: "offline pomodoro timer chrome extension — works without internet"
+relatedPages: /slimeforge/
 ---
 
 Productivity apps often require a cloud connection: sync your sessions, track stats across devices, push notifications to your phone. But a timer doesn't need any of that. A true offline Pomodoro timer runs entirely in your browser — no internet, no login, no data sent anywhere.

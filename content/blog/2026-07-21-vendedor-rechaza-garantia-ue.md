@@ -7,26 +7,13 @@ slug: vendedor-rechaza-garantia-ue
 locale: es
 translationKey: seller-refuses-warranty-claim-eu
 product: claimforge
-jurisdiction: "Unión Europea; las normas nacionales pueden ampliar o variar la protección"
+contentType: workflow
+primaryKeyword: "vendedor rechaza garantía UE"
+relatedPages: /claimforge/
+jurisdiction: Unión Europea; las normas nacionales pueden ampliar o variar la protección
 reviewedAt: 2026-07-21
 reviewDue: 2026-10-21
 sourceUrls: https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_es.htm,https://europa.eu/youreurope/citizens/consumers/consumers-dispute-resolution/index_es.htm
-contentType: workflow
-primaryKeyword: "vendedor rechaza garantía UE"
-relatedPages: /es/claimforge/,/es/blog/garantia-legal-ue-explicada/,/es/blog/como-presentar-reclamacion-consumidor-ue/
-alternateUrl: https://wendygostudio.com/blog/seller-refuses-warranty-claim-eu/
-heading: "¿El vendedor rechaza tu garantía en la UE? Qué hacer ahora"
-shortTitle: "Garantía rechazada en la UE"
-intro: "Una negativa no siempre pone fin a una reclamación de garantía. Reúne pruebas, invoca la garantía legal correcta y escala el caso en el orden adecuado."
-faqs:
-  - question: "¿Responde el vendedor o el fabricante de la garantía legal de la UE?"
-    answer: "La garantía legal se aplica normalmente al contrato con el vendedor. La garantía comercial del fabricante es independiente y no sustituye tus derechos legales."
-  - question: "¿Puede un vendedor decir que la garantía solo duraba un año?"
-    answer: "Los bienes comprados a un comerciante de la UE suelen tener una garantía legal mínima de dos años. Algunos países ofrecen una protección más larga."
-  - question: "¿Tengo derecho automático al reembolso?"
-    answer: "No siempre. La reparación o sustitución suele ser el primer remedio. La rebaja o el reembolso pueden proceder si esas soluciones no son viables o no se completan razonablemente."
-  - question: "¿Qué hago si el vendedor está en otro país de la UE?"
-    answer: "El Centro Europeo del Consumidor de tu país puede ayudar en determinados conflictos transfronterizos con comerciantes de otro país de la UE, Islandia o Noruega."
 ---
 
 El primer “no” de un vendedor no determina si tu reclamación es válida. Muchas respuestas de atención al cliente hablan de la garantía del fabricante, de un plazo interno de devolución o de la política de la tienda. Esas condiciones no son necesariamente lo mismo que la **garantía legal de la UE**, que protege al consumidor cuando un bien es defectuoso, no funciona como se anunció o no coincide con su descripción.

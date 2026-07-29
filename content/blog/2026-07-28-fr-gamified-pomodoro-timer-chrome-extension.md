@@ -1,16 +1,15 @@
 ---
 schemaVersion: 1
-title: Minuterie Pomodoro gamifiée pour Focus | Studio Wendygo
-description: Minuteur Pomodoro gamifié avec un compagnon virtuel qui grandit à chaque session de concentration.
-date: 2026-07-28T00:00:00.000Z
+title: "Minuterie Pomodoro gamifiée pour Focus | Studio Wendygo"
+description: "Minuteur Pomodoro gamifié avec un compagnon virtuel qui grandit à chaque session de concentration."
+date: 2026-07-28
 slug: gamified-pomodoro-timer-chrome-extension
 locale: fr
 translationKey: gamified-pomodoro-timer-chrome-extension
 product: slimeforge
 contentType: how-to
-primaryKeyword: minuterie pomodoro gamifiée
-relatedPages: >-
-  /fr/slimeforge/,/fr/blog/pomodoro-timer-chrome-extension/,/fr/blog/adhd-pomodoro-timer-chrome-extension/
+primaryKeyword: "minuterie pomodoro gamifiée"
+relatedPages: /slimeforge/,/blog/adhd-pomodoro-timer-chrome-extension/,/blog/pomodoro-timer-chrome-extension/
 ---
 
 # Minuterie Pomodoro gamifiée : pourquoi les récompenses font en sorte que les séances de concentration durent

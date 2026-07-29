@@ -1,15 +1,15 @@
 ---
+schemaVersion: 1
 title: "How to Batch Resize Images for Multiple Social Platforms Using a Chrome Extension"
 description: "Resize one image to YouTube, Instagram, Twitch, and X dimensions without uploading anything — using FrameForge, a Chrome extension that processes everything locally."
 date: 2026-07-14
 slug: batch-resize-images-chrome-extension
-product: FrameForge
-type: how-to
-keywords:
-  - batch resize images chrome extension
-  - resize image for multiple platforms
-  - image resizer chrome extension
-  - batch image resizer browser
+locale: en
+translationKey: batch-resize-images-chrome-extension
+product: frameforge
+contentType: how-to
+primaryKeyword: "how to batch resize images for multiple social platforms using a chrome extension"
+relatedPages: /frameforge/
 ---
 
 Content creators who post to multiple platforms face the same inefficiency daily: one good image, four different dimension requirements, four manual resize operations. This guide covers how to handle that with a Chrome extension that keeps everything local and includes platform presets for the major networks.

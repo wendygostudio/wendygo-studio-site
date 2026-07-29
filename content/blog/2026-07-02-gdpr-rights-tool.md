@@ -1,12 +1,19 @@
 ---
-title: "GDPR Rights Tool: Exercise Your EU Data Rights in Minutes"
-slug: gdpr-rights-tool
+schemaVersion: 1
+title: "How to Exercise Your GDPR Rights in the EU"
+description: "Under the General Data Protection Regulation (GDPR), every EU resident has six enforceable rights over their personal data. This guide explains..."
 date: 2026-07-02
-type: use-case
-product: ClaimForge
-keyword: "GDPR rights tool"
-description: "Know your GDPR rights and how to use them. Access, erasure, portability, objection — step-by-step guide plus a free browser tool for EU consumer rights."
-published_url: /use-cases/gdpr-rights-tool/
+slug: gdpr-rights-tool
+locale: en
+translationKey: gdpr-rights-tool
+product: claimforge
+contentType: how-to
+primaryKeyword: "wendygo studio guide"
+relatedPages: /claimforge/
+jurisdiction: EU and national consumer rules
+reviewedAt: 2026-07-02
+reviewDue: 2026-12-31
+sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 ---
 
 Under the General Data Protection Regulation (GDPR), every EU resident has six enforceable rights over their personal data. This guide explains each right, shows you how to exercise them, and introduces ClaimForge — a free browser extension built for EU consumer rights.
