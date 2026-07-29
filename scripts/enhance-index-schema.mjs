@@ -9,6 +9,15 @@ function jsonLd(type, name, url) {
 }
 for (const locale of locales) {
   const prefix = locale ? `${locale}/` : '';
+  const home = path.join('public', prefix, 'index.html');
+  if (fs.existsSync(home)) {
+    const current = fs.readFileSync(home, 'utf8');
+    if (!current.includes('application/ld+json')) {
+      const url = `https://wendygostudio.com/${prefix}`;
+      const output = current.replace('</head>', `${jsonLd('WebSite', 'Wendygo Studio', url)}${jsonLd('Organization', 'Wendygo Studio', 'https://wendygostudio.com/') }</head>`);
+      if (output !== current) { changed++; if (!check) fs.writeFileSync(home, output, 'utf8'); }
+    }
+  }
   for (const [section, type, name] of [['blog', 'Blog', 'Wendygo Studio Blog'], ['tools', 'CollectionPage', 'Wendygo Studio tools']]) {
     const file = path.join('public', prefix, section, 'index.html');
     if (!fs.existsSync(file)) continue;
