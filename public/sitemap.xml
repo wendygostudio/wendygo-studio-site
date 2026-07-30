@@ -405,6 +405,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kostenlose-alternativen-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-gratuites-nettoyer-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-gratuite-sanificare-configurazione/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-gratuitas-sanitizar-configuracao/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
   </url>
   <url>
@@ -535,6 +539,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/openai-privacy-filter-network-configs/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/pdf-converter-alternatives/</loc>
@@ -726,6 +743,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/blog/sanitize-arista-config/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-arista/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/arista-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-arista/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-arista/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-arista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sanitize-checkpoint-config/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/checkpoint-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/blog/sanitize-fortigate-config/</loc>
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -737,6 +780,32 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-fortigate/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-fortigate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sanitize-huawei-config/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/huawei-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sanitize-juniper-config/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/juniper-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/sanitize-mikrotik-router-config/</loc>
@@ -763,6 +832,32 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sanitize-paloalto-config/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/sanitize-ubiquiti-config/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/ubiquiti-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/save-video-audio-as-mp3/</loc>
@@ -919,6 +1014,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/de/blog/arista-konfiguration-bereinigen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-arista/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/arista-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-arista/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-arista/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-arista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/de/blog/bilder-stapelweise-groesse-aendern/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -930,6 +1038,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/ridimensionare-immagini-in-blocco/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/redimensionar-imagens-em-lote/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/checkpoint-konfiguration-bereinigen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/checkpoint-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/cisco-ios-konfiguration-bereinigen/</loc>
@@ -1140,6 +1261,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-heic-to-png-free/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/de/blog/huawei-konfiguration-bereinigen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/huawei-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/de/blog/instagram-bildgroesse-anpassen/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -1153,6 +1287,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/resize-image-for-instagram-chrome/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/de/blog/juniper-konfiguration-bereinigen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/juniper-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/de/blog/jwt-lokal-dekodieren/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -1164,6 +1311,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decodificare-jwt-locale/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/descodificar-jwt-localmente/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/kostenlose-alternativen-konfiguration-bereinigen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kostenlose-alternativen-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-gratuites-nettoyer-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-gratuite-sanificare-configurazione/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-gratuitas-sanitizar-configuracao/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/linkedin-carousel-image-size/</loc>
@@ -1216,6 +1376,32 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/timer-pomodoro-offline-chrome/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/temporizador-pomodoro-offline-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/offline-pomodoro-timer-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/pdf-zu-text-ocr/</loc>
@@ -1294,6 +1480,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pulire-testo-online/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/limpar-texto-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/clean-text-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/ubiquiti-konfiguration-bereinigen/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/ubiquiti-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/uuid-lokal-erzeugen/</loc>
@@ -1379,12 +1578,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/convertforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/datenschutz</loc>
@@ -1548,12 +1747,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/slimeforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/textforge/</loc>
@@ -1561,12 +1760,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/textforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/textforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/textforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/textforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/textforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/tools/</loc>
@@ -1784,6 +1983,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kostenlose-alternativen-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-gratuites-nettoyer-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-gratuite-sanificare-configurazione/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-gratuitas-sanitizar-configuracao/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
   </url>
   <url>
@@ -2197,6 +2400,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/best-chrome-extensions-for-students/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/ordenar-lineas-alfabeticamente-online/</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -2369,6 +2585,58 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-arista/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-arista/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/arista-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-arista/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-arista/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-arista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-checkpoint/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/checkpoint-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-huawei/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/huawei-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-juniper/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/juniper-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-mikrotik/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -2382,6 +2650,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -2393,6 +2674,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/ubiquiti-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/</loc>
@@ -2930,6 +3224,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/alternatives-gratuites-nettoyer-configuration/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kostenlose-alternativen-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-gratuites-nettoyer-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-gratuite-sanificare-configurazione/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-gratuitas-sanitizar-configuracao/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/ce-que-la-faille-sonicwall-enseigne/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -3151,6 +3458,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-arista/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-arista/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/arista-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-arista/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-arista/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-arista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-checkpoint/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/checkpoint-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-cisco-ios/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3175,6 +3508,45 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-fortigate/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-fortigate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-huawei/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/huawei-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-juniper/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/juniper-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/</loc>
@@ -3203,6 +3575,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/nettoyer-configuration-ubiquiti/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/ubiquiti-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/nettoyer-texte-en-ligne/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3214,6 +3599,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pulire-testo-online/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/limpar-texto-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/clean-text-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/blog/pdf-scane-texte-ocr/</loc>
@@ -3390,12 +3788,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/convertforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/ecosysteme-forge/</loc>
@@ -3533,12 +3931,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/slimeforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/textforge/</loc>
@@ -3546,12 +3944,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/textforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/textforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/textforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/textforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/textforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/tools/</loc>
@@ -3776,6 +4174,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/alternative-gratuite-sanificare-configurazione/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kostenlose-alternativen-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-gratuites-nettoyer-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-gratuite-sanificare-configurazione/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-gratuitas-sanitizar-configuracao/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/clean-copied-table-text/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3984,6 +4395,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/linkedin-carousel-image-size/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/pdf-scansionato-testo-ocr/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4088,6 +4512,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-arista/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-arista/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/arista-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-arista/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-arista/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-arista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-checkpoint/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/checkpoint-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-cisco-ios/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4114,6 +4564,45 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-huawei/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/huawei-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-juniper/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/juniper-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-rete/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4138,6 +4627,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-router-mikrotik/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-router-mikrotik/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/ubiquiti-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/blog/timer-pomodoro-adhd-chrome/</loc>
@@ -4210,12 +4712,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/convertforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/ecosistema-forge/</loc>
@@ -4366,12 +4868,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/slimeforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/termini</loc>
@@ -4392,12 +4894,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/textforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/textforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/textforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/textforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/textforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/tools/</loc>
@@ -4593,6 +5095,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-forest-chrome/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-forest-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/forest-app-alternatives-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/alternativas-gratuitas-sanitizar-configuracao/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/alternativas-sanitizador-config-gratis/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kostenlose-alternativen-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/alternatives-gratuites-nettoyer-configuration/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-gratuite-sanificare-configurazione/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-gratuitas-sanitizar-configuracao/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/clean-copied-table-text/</loc>
@@ -4803,6 +5318,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/pt/blog/pdf-digitalizado-texto-ocr/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4881,6 +5409,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/batch-resize-images-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-arista/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-arista/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/arista-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-arista/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-arista/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-arista/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-arista-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-checkpoint/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/checkpoint-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-checkpoint/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-cisco-ios/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4907,6 +5461,45 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-fortigate-config/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-huawei/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/huawei-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-huawei/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-huawei-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-juniper/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/juniper-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-juniper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-juniper-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4931,6 +5524,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-router-mikrotik/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-router-mikrotik/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-mikrotik-router-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/ubiquiti-konfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/tamanho-imagem-pin-pinterest/</loc>
@@ -5029,12 +5635,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/convertforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/convertforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/convertforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/convertforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/ecossistema-forge/</loc>
@@ -5185,12 +5791,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/slimeforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/slimeforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/slimeforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/slimeforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/termos</loc>
@@ -5211,12 +5817,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/textforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/textforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/textforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/textforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/textforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/textforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/textforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/tools/</loc>

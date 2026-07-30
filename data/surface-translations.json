@@ -320,7 +320,6 @@
       "Consistent tokens preserve topology — same IP always gets same token": "Konsistente Token bewahren die Topologie – dieselbe IP erhält immer dasselbe Token",
       "BYOK: your Claude/GPT-4o/Gemini/Groq/Mistral key, we never see queries": "BYOK: Ihr Claude/GPT-4o/Gemini/Groq/Mistral-Schlüssel, wir sehen nie Abfragen",
       "120 patterns: network IPs, secrets, PII, infrastructure keys": "120 Muster: Netzwerk-IPs, Geheimnisse, PII, Infrastrukturschlüssel",
-      "Expert: batch processing, question obfuscation, all vendor profiles": "Experte: Stapelverarbeitung, Verschleierung von Fragen, alle Anbieterprofile",
       "Version 1.13.1": "Version 1.13.1",
       "Core sanitization is local. Data only leaves when you explicitly invoke an external BYOK provider.": "Die Kernsanierung erfolgt lokal. Daten werden nur dann ausgegeben, wenn Sie explizit einen externen BYOK-Anbieter aufrufen.",
       "Automatic detection must be reviewed before sharing sensitive material.": "Bevor sensibles Material geteilt wird, muss die automatische Erkennung überprüft werden.",
@@ -336,7 +335,6 @@
       "Redact configs": "Konfigurationen redigieren",
       "Version 1.4.0": "Version 1.4.0",
       "Claim data is processed locally; always verify the linked official sources.": "Anspruchsdaten werden lokal verarbeitet; Überprüfen Sie immer die verlinkten offiziellen Quellen.",
-      "Pro: format-aware tokens, AI chat, custom dictionaries, audit mode": "Pro: formatfähige Token, KI-Chat, benutzerdefinierte Wörterbücher, Prüfmodus",
       "Right-to-repair: appliances, electronics, vehicles covered under directives": "Recht auf Reparatur: Geräte, Elektronik, Fahrzeuge, die unter die Richtlinien fallen",
       "12 vendor profiles: Cisco, FortiGate, MikroTik, Juniper, Palo Alto, Dell, etc": "12 Anbieterprofile: Cisco, FortiGate, MikroTik, Juniper, Palo Alto, Dell usw",
       "Information is general guidance, not legal advice, and national implementation can differ.": "Bei den Informationen handelt es sich um allgemeine Hinweise und nicht um Rechtsberatung. Die nationale Umsetzung kann unterschiedlich sein.",
@@ -360,7 +358,8 @@
       "Version 1.8.0": "Version 1.8.0",
       "Optional Gemini Nano features depend on browser and device availability.": "Optionale Gemini Nano-Funktionen hängen von der Browser- und Geräteverfügbarkeit ab.",
       "Focus blocking can be bypassed by disabling the extension and is not parental-control software.": "Die Fokusblockierung kann durch Deaktivieren der Erweiterung umgangen werden und ist keine Kindersicherungssoftware.",
-      "Pro: multi-language templates, AI claim analysis, dispute strategy advisor": "Vorteile: mehrsprachige Vorlagen, KI-Schadensanalyse, Berater für Streitbeilegungsstrategien"
+      "Pro: multi-language templates, AI claim analysis, dispute strategy advisor": "Vorteile: mehrsprachige Vorlagen, KI-Schadensanalyse, Berater für Streitbeilegungsstrategien",
+      "Pro: deep scan, audit mode, batch processing, question obfuscation, BYOK chat and custom dictionaries": "Pro: Tiefenscan, Prüfmodus, Stapelverarbeitung, Verschleierung von Fragen, BYOK-Chat und benutzerdefinierte Wörterbücher"
     },
     "fr": {
       "Ressources": "Ressources",
@@ -679,14 +678,12 @@
       "Conçu pour l’infrastructure": "Conçu pour l’infrastructure",
       "Consistent tokens preserve topology — same IP always gets same token": "Les jetons cohérents préservent la topologie : la même adresse IP obtient toujours le même jeton",
       "BYOK: your Claude/GPT-4o/Gemini/Groq/Mistral key, we never see queries": "BYOK : votre clé Claude/GPT-4o/Gemini/Groq/Mistral, on ne voit jamais de requêtes",
-      "Expert: batch processing, question obfuscation, all vendor profiles": "Expert : traitement par lots, obscurcissement des questions, tous profils de fournisseurs",
       "Version 1.13.1": "Version 1.13.1",
       "Core sanitization is local. Data only leaves when you explicitly invoke an external BYOK provider.": "La désinfection du noyau est locale. Les données ne sont supprimées que lorsque vous appelez explicitement un fournisseur BYOK externe.",
       "Automatic detection must be reviewed before sharing sensitive material.": "La détection automatique doit être revue avant de partager du matériel sensible.",
       "When optional BYOK AI is invoked, data goes directly to the selected external provider under its terms.": "Lorsque BYOK AI en option est invoqué, les données sont directement transmises au fournisseur externe sélectionné selon ses conditions.",
       "Claimforge en français | Wendygo Studio": "Claimforge en français | Wendygo Studio",
       "120 patterns: network IPs, secrets, PII, infrastructure keys": "120 modèles : IP réseau, secrets, informations personnelles, clés d'infrastructure",
-      "Pro: format-aware tokens, AI chat, custom dictionaries, audit mode": "Pro : jetons sensibles au format, chat IA, dictionnaires personnalisés, mode audit",
       "Your consumer": "Votre consommateur",
       "rights advocate": "défenseur des droits",
       "Navigate EU warranties, returns, and right-to-repair with confidence. Templates, letter generators, seller lookup. Gratuit browser extension.": "Parcourez les garanties, les retours et le droit de réparation de l'UE en toute confiance. Modèles, générateurs de lettres, recherche de vendeurs. Extension de navigateur gratuite.",
@@ -720,7 +717,8 @@
       "Version 1.8.0": "Version 1.8.0",
       "one creature, full pomodoro, forever": "une créature, pomodoro complet, pour toujours",
       "Optional Gemini Nano features depend on browser and device availability.": "Les fonctionnalités facultatives de Gemini Nano dépendent de la disponibilité du navigateur et de l'appareil.",
-      "Focus blocking can be bypassed by disabling the extension and is not parental-control software.": "Le blocage du focus peut être contourné en désactivant l'extension et ne constitue pas un logiciel de contrôle parental."
+      "Focus blocking can be bypassed by disabling the extension and is not parental-control software.": "Le blocage du focus peut être contourné en désactivant l'extension et ne constitue pas un logiciel de contrôle parental.",
+      "Pro: deep scan, audit mode, batch processing, question obfuscation, BYOK chat and custom dictionaries": "Pro : analyse approfondie, mode audit, traitement par lots, obscurcissement des questions, chat BYOK et dictionnaires personnalisés"
     },
     "it": {
       "Ecosistema": "Ecosistema",
@@ -1038,11 +1036,9 @@
       "Get it converted.": "Convertilo.",
       "Consistent tokens preserve topology — same IP always gets same token": "I token coerenti preservano la topologia: lo stesso IP ottiene sempre lo stesso token",
       "BYOK: your Claude/GPT-4o/Gemini/Groq/Mistral key, we never see queries": "BYOK: la tua chiave Claude/GPT-4o/Gemini/Groq/Mistral, non vediamo mai query",
-      "Expert: batch processing, question obfuscation, all vendor profiles": "Esperto: elaborazione batch, offuscamento delle domande, tutti i profili dei fornitori",
       "Version 1.13.1": "Versione 1.13.1",
       "Core sanitization is local. Data only leaves when you explicitly invoke an external BYOK provider.": "La sanificazione del nucleo è locale. I dati escono solo quando si richiama esplicitamente un provider BYOK esterno.",
       "120 patterns: network IPs, secrets, PII, infrastructure keys": "120 modelli: IP di rete, segreti, PII, chiavi di infrastruttura",
-      "Pro: format-aware tokens, AI chat, custom dictionaries, audit mode": "Pro: token compatibili con il formato, chat AI, dizionari personalizzati, modalità di controllo",
       "12 vendor profiles: Cisco, FortiGate, MikroTik, Juniper, Palo Alto, Dell, etc": "12 profili di fornitori: Cisco, FortiGate, MikroTik, Juniper, Palo Alto, Dell, ecc.",
       "Automatic detection must be reviewed before sharing sensitive material.": "Il rilevamento automatico deve essere esaminato prima di condividere materiale sensibile.",
       "When optional BYOK AI is invoked, data goes directly to the selected external provider under its terms.": "Quando viene richiamato BYOK AI opzionale, i dati vanno direttamente al fornitore esterno selezionato secondo i suoi termini.",
@@ -1079,7 +1075,8 @@
       "Version 1.8.0": "Versione 1.8.0",
       "Optional Gemini Nano features depend on browser and device availability.": "Le funzionalità opzionali di Gemini Nano dipendono dalla disponibilità del browser e del dispositivo.",
       "Right-to-repair: appliances, electronics, vehicles covered under directives": "Diritto alla riparazione: elettrodomestici, elettronica, veicoli coperti dalle direttive",
-      "Focus blocking can be bypassed by disabling the extension and is not parental-control software.": "Il blocco della messa a fuoco può essere aggirato disabilitando l'estensione e non è un software di controllo parentale."
+      "Focus blocking can be bypassed by disabling the extension and is not parental-control software.": "Il blocco della messa a fuoco può essere aggirato disabilitando l'estensione e non è un software di controllo parentale.",
+      "Pro: deep scan, audit mode, batch processing, question obfuscation, BYOK chat and custom dictionaries": "Pro: scansione approfondita, modalità di controllo, elaborazione batch, offuscamento delle domande, chat BYOK e dizionari personalizzati"
     },
     "pt": {
       "Recursos": "Recursos",
@@ -1396,7 +1393,6 @@
       "Scrubforge em português | Wendygo Studio": "Scrubforge em português | Wendygo Studio",
       "Consistent tokens preserve topology — same IP always gets same token": "Tokens consistentes preservam a topologia – o mesmo IP recebe sempre o mesmo token",
       "Convertforge em português | Wendygo Studio": "Convertforge em português | Wendygo Studio",
-      "Expert: batch processing, question obfuscation, all vendor profiles": "Especialista: processamento em lote, ofuscação de perguntas, todos os perfis de fornecedores",
       "BYOK: your Claude/GPT-4o/Gemini/Groq/Mistral key, we never see queries": "BYOK: a sua chave Claude/GPT-4o/Gemini/Groq/Mistral, nunca vemos consultas",
       "Version 1.13.1": "Versão 1.13.1",
       "Core sanitization is local. Data only leaves when you explicitly invoke an external BYOK provider.": "A higienização do núcleo é local. Os dados só saem quando invoca explicitamente um fornecedor BYOK externo.",
@@ -1434,11 +1430,11 @@
       "Convert images, documents, audio and data locally.": "Converta imagens, documentos, áudio e dados localmente.",
       "Version 1.8.0": "Versão 1.8.0",
       "Right-to-repair: appliances, electronics, vehicles covered under directives": "Direito à reparação: electrodomésticos, electrónica, veículos abrangidos pelas directivas",
-      "Pro: format-aware tokens, AI chat, custom dictionaries, audit mode": "Pro: tokens com reconhecimento de formato, chat com IA, dicionários personalizados, modo de auditoria",
       "Optional Gemini Nano features depend on browser and device availability.": "As características opcionais do Gemini Nano dependem da disponibilidade do browser e do dispositivo.",
       "Focus blocking can be bypassed by disabling the extension and is not parental-control software.": "O bloqueio de focagem pode ser contornado desativando a extensão e não é um software de controlo parental.",
       "120 patterns: network IPs, secrets, PII, infrastructure keys": "120 normas: IPs de rede, segredos, PII, chaves de infraestrutura",
-      "Slimeforge em português | Wendygo Studio": "Slimeforge em português | Wendygo Studio"
+      "Slimeforge em português | Wendygo Studio": "Slimeforge em português | Wendygo Studio",
+      "Pro: deep scan, audit mode, batch processing, question obfuscation, BYOK chat and custom dictionaries": "Pro: análise profunda, modo de auditoria, processamento em lote, ofuscação de perguntas, chat BYOK e dicionários personalizados"
     }
   }
 }

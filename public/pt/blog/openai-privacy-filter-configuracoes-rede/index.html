@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>O Privacy Filter da OpenAI Não Sabe o Que É uma Palavra-Passe BGP</title>
+  <meta name="description" content="A OpenAI lançou como open source um modelo que redige PII antes de chegar a uma IA. Isto é exatamente o que ele deteta, o que nunca foi construído para detetar, e porque as configs de rede continuam a precisar de uma ferramenta dedicada." />
+  <link rel="canonical" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"O Privacy Filter da OpenAI Não Sabe o Que É uma Palavra-Passe BGP","description":"A OpenAI lançou como open source um modelo que redige PII antes de chegar a uma IA. Isto é exatamente o que ele deteta, o que nunca foi construído para detetar, e porque as configs de rede continuam a precisar de uma ferramenta dedicada.","datePublished":"2026-07-29","dateModified":"2026-07-29","author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://wendygostudio.com/pt/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/pt/blog/"},{"@type":"ListItem","position":3,"name":"O Privacy Filter da OpenAI Não Sabe o Que É uma Palavra-Passe BGP"}]}</script>
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="O Privacy Filter da OpenAI Não Sabe o Que É uma Palavra-Passe BGP" />
+  <meta property="og:description" content="A OpenAI lançou como open source um modelo que redige PII antes de chegar a uma IA. Isto é exatamente o que ele deteta, o que nunca foi construído para detetar, e porque as configs de rede continuam a precisar de uma ferramenta dedicada." />
+  <meta property="og:url" content="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="O Privacy Filter da OpenAI Não Sabe o Que É uma Palavra-Passe BGP" />
+  <meta name="twitter:description" content="A OpenAI lançou como open source um modelo que redige PII antes de chegar a uma IA. Isto é exatamente o que ele deteta, o que nunca foi construído para detetar, e porque as configs de rede continuam a precisar de uma ferramenta dedicada." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/pt/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/pt/#products">Extensões</a><a href="/pt/blog/">Blog</a><a href="/pt/tools/">Ferramentas</a><a href="/pt/#privacy">Privacidade</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Idioma</label><select id="wg-language-select" aria-label="Escolher idioma" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/openai-privacy-filter-network-configs/">English</option><option value="https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/">Español</option><option value="https://wendygostudio.com/de/blog/openai-privacy-filter-netzwerkkonfigurationen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/">Français</option><option value="https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/">Italiano</option><option value="https://wendygostudio.com/pt/blog/openai-privacy-filter-configuracoes-rede/" selected>Português</option></select></div></nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/pt/">Início</a><span>&#8250;</span><a href="/pt/blog/">Blog</a><span>&#8250;</span>O Privacy Filter da OpenAI Não Sabe o Que É uma Palavra-Passe BGP</div>
+    <div class="article-meta"><div class="article-tag">use-case · scrubforge</div><h1>O Privacy Filter da OpenAI Não Sabe o Que É uma Palavra-Passe BGP</h1><p class="article-intro">A OpenAI lançou como open source um modelo que redige PII antes de chegar a uma IA. Isto é exatamente o que ele deteta, o que nunca foi construído para detetar, e porque as configs de rede continuam a precisar de uma ferramenta dedicada.</p><div class="article-date">29 de julho de 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><p>A OpenAI lançou recentemente o Privacy Filter como open source, um modelo pequeno construído para detetar e redigir informação pessoal identificável em texto, que corre localmente, num portátil ou diretamente no navegador, e reporta um F1 de 96-97% na deteção de PII. É um lançamento genuinamente útil. Também não foi construído para proteger o que a maioria dos engenheiros de rede realmente cola num chat de IA: uma configuração de router ou firewall.</p>
+<h2>Para que serve realmente o Privacy Filter</h2>
+<div class="key-points">
+  <h3>O que o modelo visa</h3>
+  <ul>
+    <li>Nomes, emails, números de telefone, moradas — PII clássica, do tipo que aparece em emails, tickets de suporte e documentos legais.</li>
+    <li>Deteção consciente do contexto em documentos longos, até 128.000 tokens numa única passagem, uma conquista de engenharia real para esse caso de uso.</li>
+    <li>Corre no dispositivo, pesos abertos, licença Apache 2.0 — nenhum dado sai da máquina para ser redigido, o modelo de privacidade correto.</li>
+  </ul>
+</div><p>É uma ferramenta sólida para aquilo para que foi construída: documentos legais, threads de email, registos de clientes. É um modelo de PII de propósito geral, treinado no tipo de dados pessoais que aparece em qualquer indústria.</p>
+<h2>O que nunca foi treinado para reconhecer</h2>
+<p>Um ficheiro de configuração de rede não se parece com um documento legal ou um registo de cliente. Parece-se com isto:</p>
+<pre><code>enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+snmp-server community publicRW RW
+router bgp 65001
+ neighbor 203.0.113.1 remote-as 65002
+ neighbor 203.0.113.1 password 7 08351A5D0713
+</code></pre>
+<div class="step-card">
+  <span class="step-label">Verificação da realidade</span>
+  <strong>Nada disto é PII, e tudo isto é uma credencial</strong>
+  <p>Uma community string SNMP, uma palavra-passe de vizinho BGP, uma chave de autenticação OSPF, uma chave de servidor TACACS+, uma chave pré-partilhada WPA — nada disto corresponde à distribuição de treino de um modelo de PII genérico, porque não são nomes, emails ou telefones. São segredos específicos de domínio que só fazem sentido no contexto da sintaxe de configuração de rede, e um modelo treinado com dados legais e de clientes nunca teve motivo para ter visto um.</p>
+</div><p>Existe uma segunda lacuna igualmente importante: <strong>a robustez da credencial</strong>. <code>enable secret 5</code> é um hash MD5. <code>password 7</code> é uma cifra Cisco tipo 7, trivialmente reversível com ferramentas que existem há mais de uma década. Um modelo de redação de PII não tem qualquer conceito de &quot;este hash é fraco&quot; ou &quot;esta codificação é reversível&quot; — ou reconhece um padrão como PII ou não reconhece. Distinguir um hash bcrypt forte de uma palavra-passe Cisco tipo 7 reversível requer conhecer os esquemas de codificação do fabricante, não apenas reconhecer texto com aspeto sensível.</p>
+<h2>Testar a lacuna</h2>
+<p>Passe um export real de Cisco, FortiGate ou MikroTik por um detetor de PII genérico e o padrão é consistente: apanha algo se houver um endereço de email ou um hostname que pareça um domínio, e passa completamente ao lado do <code>enable secret</code>, da community SNMP, da palavra-passe de vizinho BGP e da chave pré-partilhada. Isto não é uma falha do modelo. Está simplesmente fora daquilo para que foi treinado a procurar, da mesma forma que um corretor ortográfico não está avariado por não detetar um erro matemático.</p>
+<h2>O que isto significa se cola configs em ferramentas de IA</h2>
+<p>A leitura correta do lançamento da OpenAI não é &quot;a redação já é um problema resolvido&quot;. É o oposto: a redação de PII de propósito geral está a caminhar para ser gratuita e comoditizada, o que é genuinamente bom para quem lida com nomes, emails e dados de clientes. Mas torna ainda mais nítido onde está a lacuna que resta: segredos específicos de domínio em formatos técnicos estruturados, sendo as configs de rede um dos exemplos mais claros.</p>
+<table>
+<tr><th>Coberto por modelos de PII genéricos</th><th>Não coberto, precisa de deteção consciente do fabricante</th></tr>
+<tr><td>Nomes, emails, telefones</td><td>Community strings SNMP</td></tr>
+<tr><td>Moradas físicas</td><td>Chaves de autenticação BGP / OSPF / HSRP</td></tr>
+<tr><td>Números de cartão de crédito</td><td>Chaves de servidor TACACS+ / RADIUS</td></tr>
+<tr><td>Formatos genéricos de chaves de API</td><td>Codificações de palavra-passe específicas de fabricante (ex. Cisco tipo 7)</td></tr>
+<tr><td>—</td><td>Classificação de robustez de hash/cifra</td></tr>
+</table><p>Se está a colar uma config no ChatGPT, Claude ou Gemini para depurar um problema de encaminhamento, um filtro de PII genérico a correr em segundo plano não vai apanhar a parte que realmente importa. O <a href="/pt/scrubforge/">ScrubForge</a> foi construído especificamente para essa lacuna: 12 perfis de fabricante, deteção de segredos ao nível do protocolo (BGP, OSPF, HSRP, TACACS+, RADIUS, SNMP), e classificação de robustez de hash, a correr inteiramente em local, com um chat BYOK opcional que só vê a versão tokenizada da sua config.</p>
+<h2>Perguntas frequentes</h2>
+<h3>O Privacy Filter da OpenAI protege palavras-passe numa config de router ou firewall?</h3>
+<p>Não de forma fiável. Está treinado para detetar PII genérica, nomes, emails, telefones, não credenciais de rede específicas de fabricante como community strings SNMP ou palavras-passe de vizinho BGP, que seguem uma sintaxe completamente diferente e não fizeram parte do seu foco de treino.</p>
+<h3>Se o ChatGPT vier a adicionar redação de PII integrada, as configs de rede continuarão em risco?</h3>
+<p>Sim, pelo mesmo motivo. Uma redação integrada orientada para a conformidade geral de PII não estará calibrada para reconhecer a sintaxe de configuração de router ou firewall a menos que um fornecedor treine especificamente para isso, o que é um caso de uso estreito e de baixo volume comparado com os padrões de PII que aparecem em qualquer outro tipo de documento.</p>
+<h3>Qual é a diferença prática entre redação de PII e sanitização de configs?</h3>
+<p>A redação de PII protege dados pessoais, informação que identifica uma pessoa. A sanitização de configs protege segredos de infraestrutura, credenciais e topologia que identificam e concedem acesso a uma rede. Sobrepõem-se em quase nenhum caso, e uma ferramenta construída para uma raramente cobre bem a outra.</p>
+<h3>Continua a ser necessário sanitizar configs manualmente se confiar no fornecedor de IA?</h3>
+<p>Sanitizar antes de colar protege-o independentemente do que qualquer fornecedor prometa sobre o tratamento de dados, e protege contra o risco mais simples de um colega, um ecrã partilhado, ou um log de chat copiado e colado levar uma credencial ativa para algum sítio onde não deveria ir.</p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Ilhas Canárias</div><div class="footer-links"><a href="/pt/">Início</a><a href="/pt/blog/">Blog</a><a href="/pt/tools/">Ferramentas</a><a href="/pt/privacidade">Privacidade</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
