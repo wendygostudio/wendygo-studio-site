@@ -1,0 +1,327 @@
+[
+  {
+    "date": "2026-06-27",
+    "type": "tipo_1",
+    "text": "Chrome DevTools tip about Ctrl+Shift+V paste without formatting",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpbaym7zgh2b"
+  },
+  {
+    "date": "2026-06-28",
+    "type": "tipo_2",
+    "text": "Stop pasting lists into Excel or the terminal. TextForge's Sort Lines handles it in your browser — servers, requirements.txt, env vars, all alphabetically ordered in seconds.",
+    "url": "https://wendygostudio.com/blog/sort-lines-alphabetically-online/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpdv6ucs5a2p"
+  },
+  {
+    "date": "2026-06-29",
+    "type": "tipo_4",
+    "text": "Building indie tools in the Canary Islands, no VC.\n\nJust shipping what solves the problem we use daily.\n\nLatest: an honest take comparing FrameForge vs Canva for thumbnails.",
+    "url": "https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpgqn7cig72q"
+  },
+  {
+    "date": "2026-06-30",
+    "type": "tipo_3",
+    "text": "The best productivity tools are the ones you forget are there.\n\nYou paste text, hit a button, and it's cleaned. No dialog, no upload.\n\nExtensions are finally shipping this right.",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mph7ht474e2q"
+  },
+  {
+    "date": "2026-07-01",
+    "type": "tipo_5",
+    "text": "When troubleshooting network issues with ChatGPT, do you paste full configs first? Or do you always strip sensitive data — IPs, credentials, hostnames? Curious what most people do.",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpl4z6limg2b"
+  },
+  {
+    "date": "2026-07-02",
+    "type": "tipo_2",
+    "text": "Your data, your rules. GDPR gives you the right to delete, access, or correct what companies store about you.\n\nJust published a step-by-step guide on how to actually do it.",
+    "url": "https://wendygostudio.com/use-cases/gdpr-rights-tool/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpo6ky7ud42i"
+  },
+  {
+    "date": "2026-07-03",
+    "type": "tipo_1",
+    "text": "💡 DevTools tip: Need to check what data a website stores? Open DevTools → Application tab → Storage.\n\nYou'll see cookies, LocalStorage, SessionStorage, IndexedDB. Clear one tab, refresh, and spot what comes back — that's what the site really needs to work.",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpqpwopu322i"
+  },
+  {
+    "date": "2026-07-04",
+    "type": "tipo_2",
+    "text": "No lawyer needed.\n\nWronged by a company in the EU? Try chargebacks, ADR, or small claims — in that order.\n\n→ wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/",
+    "url": "https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpt6aa3bl72x"
+  },
+  {
+    "date": "2026-07-06",
+    "type": "tipo_1",
+    "text": "💡 OCR privacy tip: When you upload PDFs to \"convert to text\" websites, your documents go to their servers.\n\nTesseract (open source OCR) runs locally on your machine. Your sensitive files never leave your device.\n\nText extraction does not require the cloud.",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mpyfezbfyg2r"
+  },
+  {
+    "date": "2026-07-07",
+    "type": "tipo_2",
+    "text": "Extract audio from your videos and save as MP3 — works offline in your browser, no upload needed.\n\nPodcasters and content creators: stop uploading to sketchy sites. 30 seconds in your browser.",
+    "url": "https://wendygostudio.com/blog/save-video-audio-as-mp3/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mq2uwog7pa2g"
+  },
+  {
+    "date": "2026-07-08",
+    "type": "tipo_3",
+    "text": "The cloud conversion trend is reversing.\n\nUsed to: upload everything for processing.\n\nNow: offline-first. Your data, your device, your rules. No servers, no tracking.\n\nBrowser automation and local processing are finally getting good. The ecosystem is shifting.",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mq4ux6xeam2z"
+  },
+  {
+    "date": "2026-07-09",
+    "type": "tipo_2",
+    "text": "Remove duplicate lines from any list — emails, URLs, server IPs, dependencies — straight in your browser without leaving the tab.\n\nNo manual cleanup, no copy-paste into sketchy tools. 30 seconds.",
+    "url": "https://wendygostudio.com/blog/remove-duplicate-lines-online/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mq5cugc4tf2h",
+    "engagement": {
+      "likes": 3,
+      "follows": 3,
+      "executed_at": "2026-07-09T18:15:00Z"
+    }
+  },
+  {
+    "date": "2026-07-12",
+    "type": "tipo_1",
+    "text": "💡 Chrome tip: Test your site on real user speeds. DevTools → Network tab → throttle to \"3G Fast\" or \"4G\".\n\nMost of us have fiber. Your users might not. 5MB homepage loads in 2 seconds for you, 15 seconds for them.",
+    "url": null,
+    "posted": true,
+    "engagement": {
+      "likes": 3,
+      "follows": 4,
+      "executed_at": "2026-07-12T10:45:00Z"
+    }
+  },
+  {
+    "date": "2026-07-13",
+    "type": "tipo_2",
+    "text": "No server uploads needed for text cleanup.\n\nRemove duplicates, sanitize emails, fix formatting on CSV exports — all offline in your browser.\n\n→ wendygostudio.com/use-cases/bulk-text-cleaner/",
+    "url": "https://wendygostudio.com/use-cases/bulk-text-cleaner/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mqkhvifecx2d",
+    "engagement": {
+      "likes": 5,
+      "follows": 4,
+      "executed_at": "2026-07-13T19:45:00Z"
+    }
+  },
+  {
+    "date": "2026-07-14",
+    "type": "tipo_3",
+    "text": "The indie software market is splitting: services vs. toolkits.\n\nServices want your data, subscription, lock-in.\n\nToolkits hand you control: offline-first, open source, pay-once or free.\n\nWe're betting on toolkits. Users are noticing the difference.",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mqmxl7ebnt2b",
+    "engagement": {
+      "likes": 3,
+      "follows": 4,
+      "executed_at": "2026-07-14T20:55:00Z",
+      "liked_posts": [
+        "WikiMed by Kiwix (offline encyclopedia)",
+        "fleeky.bsky.social (offline-first method)",
+        "arden.rip (offline lifestyle)"
+      ],
+      "followed_accounts": [
+        "otuny.bsky.social (Open source tools)",
+        "simonwillison.net (Datasette, open source tools)",
+        "cybdetective.bsky.social (OSINT tools)",
+        "loekni.bsky.social (Godot solo gamedev)"
+      ]
+    }
+  },
+  {
+    "date": "2026-07-15",
+    "type": "tipo_2",
+    "text": "Stop wondering if you can return online purchases.\n\nEU law gives you 14 days to change your mind — no reason needed, full refund. Applies to almost everything you buy online in Europe.",
+    "url": "https://wendygostudio.com/blog/eu-14-day-return-withdrawal/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mqow7a5lrc2p"
+  },
+  {
+    "date": "2026-07-16",
+    "type": "tipo_1",
+    "text": "Go offline. DevTools → Network tab → \"Offline\" mode → reload.\n\nIf your site breaks completely, it relies on the internet. If it degrades gracefully, you're handling offline better than 90% of the web.\n\nProgressive enhancement matters.",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mqqncbniqg2j",
+    "engagement": {
+      "round_1": {
+        "likes": 3,
+        "follows": 4,
+        "executed_at": "2026-07-16T13:30:00Z",
+        "liked_posts": [
+          "iaindelaney.com — DevTools source code tip",
+          "slabgorb.com — Chrome DevTools meme (32 likes)",
+          "matisyahu.blog — Chrome security bugs"
+        ],
+        "followed_accounts": [
+          "ktg0215.bsky.social — S-Hub Chrome Extension Dev",
+          "connectmate.bsky.social — ConnectMate LinkedIn Extension",
+          "briskteaching.bsky.social — Brisk Teaching AI Extension",
+          "cranq.bsky.social — CRANQ CRM Extension"
+        ]
+      },
+      "round_2": {
+        "likes": 4,
+        "follows": 4,
+        "executed_at": "2026-07-16T18:45:00Z",
+        "liked_posts": [
+          "heyshigeru.bsky.social — New Chrome extension OGee (OG preview)",
+          "privacyrebel.bsky.social — Chrome extension security vulnerability",
+          "yellowduck.be — Command line as future of IDEs",
+          "davefarley77.bsky.social — Developer productivity and refactoring"
+        ],
+        "followed_accounts": [
+          "productivitydir.bsky.social — Productivity Directory",
+          "samade.bsky.social — Sam Ade | Indie Hacker",
+          "adityakumarsaroj.bsky.social — Aditya | Indie Hacker",
+          "ilyathedev.bsky.social — Ilya | Indie Hacker"
+        ]
+      }
+    }
+  },
+  {
+    "date": "2026-07-17",
+    "type": "tipo_5",
+    "text": "File format nightmares: what's the weirdest conversion you've had to do?\n\nI just dealt with a client's export from an obscure accounting software that created .XLS files that broke in modern Excel.\n\nWhat's your worst format conversion story?",
+    "url": null,
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mqtyut7yaw22",
+    "engagement": {
+      "likes": 3,
+      "follows": 2,
+      "executed_at": "2026-07-17T15:08:00Z",
+      "liked_posts": [
+        "kathleenweldon.bsky.social — File format conversion puzzle perspective",
+        "karaboo.bsky.social — Helping others with conversion tools",
+        "ghostconvert.cc — Client-only in-browser file conversion competitor"
+      ],
+      "followed_accounts": [
+        "heliographe.studio — Indie dev tools for photographers",
+        "buildmode.bsky.social — Fullstack indie dev for creators"
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "type": "tipo_2",
+    "text": "ADHD brains struggle to start tasks, not complete them.\n\nThe Pomodoro Technique removes one barrier. Gamification removes another.\n\nBuilt a deep guide on why gamified Pomodoro timers work for ADHD focus.",
+    "url": "https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/",
+    "posted": true,
+    "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mqwaqh3sew2s",
+    "engagement": {
+      "likes": 4,
+      "follows": 0,
+      "executed_at": "2026-07-18T14:30:00Z",
+      "liked_posts": [
+        "blazetrends.bsky.social — Focus Traveler: Pomodoro timer + mountain climbing game",
+        "microtoolkit.bsky.social — 5 ADHD Productivity Tools That Actually Work",
+        "jecture-a11y.bsky.social — Productivity apps and ADHD shame research",
+        "the-14.com — Focus apps failing neurodivergent minds study"
+      ]
+    }
+  }
+,
+{
+  "date": "2026-07-19",
+  "type": "tipo_1",
+  "text": "Time blocking works better than Pomodoro when you have deep work.\n\nPomodoro = fixed intervals (25m sprints)\nTime blocking = your own rhythm\n\nPick 2-4 hour blocks for focused work. No task-switching. No 'just one more thing.'\n\nTry it for a week. Most people never go back.",
+  "url": null,
+  "posted": true,
+  "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mqyukmvxmr2v"
+},
+{
+  "date": "2026-07-20",
+  "type": "tipo_4",
+  "text": "The hardest part of indie software isn't building the tool.\n\nIt's figuring out what people are actually searching for.\n\nYesterday: 2 new articles on alternative products. Today: translating to Spanish. Most people don't realize — what your customers search for is the blueprint for your content.",
+  "url": null,
+  "posted": true,
+  "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mr3nhepcxj2i",
+  "engagement": {
+    "likes": 4,
+    "follows": 3,
+    "executed_at": "2026-07-20T16:30:00Z",
+    "liked_posts": [
+      "beanlings.bsky.social — Indie game dev Beanlings",
+      "assethunts.bsky.social — Game dev icons and assets",
+      "sebastianjanas.bsky.social — Corporate vs indie hacker",
+      "bguyle.itch.io — Indie publishing insights"
+    ],
+    "followed_accounts": [
+      "alexblizky.bsky.social — Web tools developer",
+      "lenymo.bsky.social — Glenn McComb (front end dev)",
+      "blueskyforeveryone.bsky.social — Chrome extension for Bluesky"
+    ]
+  }
+},
+{
+  "date": "2026-07-21",
+  "type": "tipo_2",
+  "text": "'Warranty expired' may only describe the manufacturer's warranty — not your EU legal guarantee. Before giving up, ask what was rejected, request the reason in writing, and keep a clear timeline. We made a practical workflow for the next steps.",
+  "url": "https://wendygostudio.com/blog/seller-refuses-warranty-claim-eu/",
+  "posted": true,
+  "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mr6ardfgde2s",
+  "engine": "Codex GPT-5.6 Sol",
+  "engagement": {
+    "likes": 4,
+    "follows": 4,
+    "liked_posts": [
+      "unsplintering.bsky.social — Right to Repair Europe coalition complaint",
+      "news.abc.net.au — warranty repair and refund delays",
+      "playswave.com — EU repairability rules",
+      "eurogamer.bsky.social — European right-to-repair coverage"
+    ],
+    "followed_accounts": [
+      "r2reurope.bsky.social — Right to Repair Europe",
+      "ifixit.com — iFixit",
+      "imco.europarl.europa.eu — European Parliament IMCO Committee",
+      "kwiens.bsky.social — Kyle Wiens"
+    ]
+  }
+}
+,
+{
+  "date": "2026-08-01",
+  "type": "tipo_1",
+  "text": "Chrome tip: before trusting an extension, open chrome://extensions and compare its permissions with its actual job. A text tool rarely needs access to every site you visit.",
+  "url": null,
+  "posted": true,
+  "bluesky_url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mry4szwa7l2p",
+  "engine": "Codex GPT-5.6 Sol",
+  "engagement": {
+    "likes": 3,
+    "follows": 3,
+    "executed_at": "2026-08-01",
+    "liked_posts": [
+      "nativeprime.bsky.social — Chrome QA tools developer post",
+      "davidcorto.bsky.social — npm and infoSec post",
+      "cheersderek.com — Hono and Deno web development post"
+    ],
+    "followed_accounts": [
+      "webdevs.firefox.com — Firefox for Web Developers",
+      "northerndev.bsky.social — Web developer",
+      "reacien.dev — Web developer"
+    ]
+  }
+}
+]
