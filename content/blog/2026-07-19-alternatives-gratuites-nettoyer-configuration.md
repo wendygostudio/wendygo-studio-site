@@ -5,7 +5,7 @@ description: "Comparez les outils que les sysadmins utilisent vraiment pour reti
 date: 2026-07-19
 slug: alternatives-gratuites-nettoyer-configuration
 locale: fr
-translationKey: free-config-sanitizer-alternatives
+translationKey: free-config-sanitizer-alternatives-2026
 product: scrubforge
 contentType: how-to
 primaryKeyword: "alternatives gratuites pour nettoyer une configuration (2026)"

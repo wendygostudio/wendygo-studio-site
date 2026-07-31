@@ -5,7 +5,7 @@ description: "Vergleich der Tools, die Sysadmins wirklich nutzen, um Passwörter
 date: 2026-07-19
 slug: kostenlose-alternativen-konfiguration-bereinigen
 locale: de
-translationKey: free-config-sanitizer-alternatives
+translationKey: free-config-sanitizer-alternatives-2026
 product: scrubforge
 contentType: how-to
 primaryKeyword: "kostenlose alternativen konfiguration bereinigen (2026)"

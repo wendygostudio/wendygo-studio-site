@@ -5,7 +5,7 @@ description: "Confronta gli strumenti che i sysadmin usano davvero per rimuovere
 date: 2026-07-19
 slug: alternative-gratuite-sanificare-configurazione
 locale: it
-translationKey: free-config-sanitizer-alternatives
+translationKey: free-config-sanitizer-alternatives-2026
 product: scrubforge
 contentType: how-to
 primaryKeyword: "alternative gratuite per sanificare configurazioni (2026)"

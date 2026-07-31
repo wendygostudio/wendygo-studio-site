@@ -1,11 +1,11 @@
 ---
 schemaVersion: 1
-title: "Free Config Sanitizer Alternatives (2026)"
-description: "Compare the real tools sysadmins use to strip passwords from network configs before sharing: bash, VSCode, CyberChef, Netconan, generic AI-privacy extensions, or ScrubForge."
+title: "Free Network Config Sanitizer Alternatives"
+description: "Compare practical ways to remove passwords from network configs before sharing, from scripts and CyberChef to ScrubForge."
 date: 2026-07-19
-slug: free-config-sanitizer-alternatives
+slug: free-config-sanitizer-alternatives-2026
 locale: en
-translationKey: free-config-sanitizer-alternatives
+translationKey: free-config-sanitizer-alternatives-2026
 product: scrubforge
 contentType: how-to
 primaryKeyword: "free config sanitizer alternatives (2026)"

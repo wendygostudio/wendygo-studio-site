@@ -1,11 +1,11 @@
 ---
 schemaVersion: 1
-title: "Alternativas Gratis para Sanitizar Configuraciones (2026)"
+title: "Alternativas gratis a los sanitizadores de configuración (2026)"
 description: "Compara las herramientas reales que usan los sysadmins para quitar contraseñas de configs de red antes de compartirlas: bash, VSCode, CyberChef, Netconan, extensiones genéricas de privacidad IA o ScrubForge."
 date: 2026-07-19
-slug: alternativas-sanitizador-config-gratis
+slug: alternativas-gratis-sanitizar-configuracion
 locale: es
-translationKey: free-config-sanitizer-alternatives
+translationKey: free-config-sanitizer-alternatives-2026
 product: scrubforge
 contentType: how-to
 primaryKeyword: "alternativas gratis para sanitizar configuraciones (2026)"
