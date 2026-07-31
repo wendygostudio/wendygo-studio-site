@@ -25,7 +25,7 @@ function shorten(value, max) {
 }
 const escapeBareAmpersands=value=>value.replace(/&(?!(?:amp|quot|lt|gt|#\d+|#x[0-9a-f]+);)/gi,'&amp;');
 walk(root);
-let titles=0, descriptions=0, analytics=0;
+let titles=0, descriptions=0, analytics=0, openGraph=0;
 for (const file of files) {
   if(generatedOutputs.has(path.resolve(file))) continue;
   let html=fs.readFileSync(file,'utf8');
@@ -39,8 +39,15 @@ for (const file of files) {
   const override=overrides[rel];
   if(override?.title){html=html.replace(/<title>[\s\S]*?<\/title>/i,`<title>${override.title}</title>`).replace(/(<meta\s+(?:property|name)=["'](?:og:title|twitter:title)["']\s+content=["'])[^"']*(["'])/gi,`$1${override.title}$2`);}
   if(override?.description){html=html.replace(/(<meta\s+name=["']description["']\s+content=["'])[^"']*(["'])/i,`$1${override.description}$2`).replace(/(<meta\s+(?:property|name)=["'](?:og:description|twitter:description)["']\s+content=["'])[^"']*(["'])/gi,`$1${override.description}$2`);}
+  if(!/property=["']og:title["']/i.test(html)) {
+    const title=html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() || 'Wendygo Studio';
+    const description=html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)/i)?.[1]?.trim() || '';
+    const canonical=html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)/i)?.[1] || '';
+    const social=`<meta property="og:type" content="website">\n<meta property="og:title" content="${escapeBareAmpersands(title)}">\n<meta property="og:description" content="${escapeBareAmpersands(description)}">\n<meta property="og:url" content="${canonical}">\n<meta property="og:image" content="https://wendygostudio.com/og-image.png">\n<meta property="og:site_name" content="Wendygo Studio">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="${escapeBareAmpersands(title)}">\n<meta name="twitter:description" content="${escapeBareAmpersands(description)}">\n<meta name="twitter:image" content="https://wendygostudio.com/og-image.png">`;
+    html=html.replace(/<\/head>/i,`${social}\n</head>`); openGraph++;
+  }
   for(const [from,to] of Object.entries(linkFixes)) html=html.replaceAll(from,to);
   html=html.replace(/<meta\b[^>]*>/gi,tag=>tag.replace(/content=(['"])([\s\S]*?)\1/i,(_,quote,value)=>`content=${quote}${escapeBareAmpersands(value)}${quote}`));
   fs.writeFileSync(file,html,'utf8');
 }
-console.log(JSON.stringify({files:files.length,titles,descriptions,analytics},null,2));
+console.log(JSON.stringify({files:files.length,titles,descriptions,analytics,openGraph},null,2));

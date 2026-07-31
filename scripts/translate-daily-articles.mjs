@@ -34,6 +34,10 @@ for (const slug of requestedSlugs) {
     for (const key of ['heading', 'shortTitle', 'intro']) if (source.data[key]) data[key] = await translate(source.data[key], locale);
     if (Array.isArray(source.data.faqs)) data.faqs = await Promise.all(source.data.faqs.map(async (faq) => ({ question: await translate(faq.question, locale), answer: await translate(faq.answer, locale) })));
     data.relatedPages = source.data.relatedPages.split(',').map(page => page.replace(/^\/blog\//, `/${locale}/blog/`).replace(new RegExp(`^\/${source.data.product}\/`), `/${locale}/${source.data.product}/`)).join(',');
+    if (!data.title || !data.description || /^>-?\s*$/.test(String(data.title)) || /^>-?\s*$/.test(String(data.description))) {
+      console.error(`${locale}/${slug} skipped: translation provider returned invalid metadata`);
+      continue;
+    }
     const output = matter.stringify(body.join('\n'), data);
     fs.writeFileSync(targetFile, output);
     console.log(`${locale}/${slug}`);

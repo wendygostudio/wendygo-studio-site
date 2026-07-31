@@ -68,6 +68,14 @@ for (const locale of Object.keys(locales)) {
 }
 let changed = 0;
 const comparable = html => html.replace(/<style id="wg-language-style">[\s\S]*?<\/style>/g, '').replace(/<div class="wg-language-switcher">[\s\S]*?<\/div>/g, '');
-for (const [file, html] of writes) { const current = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : ''; if (comparable(current) !== comparable(html)) { changed++; if (!check) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, html, 'utf8'); } } }
+for (const [file, rawHtml] of writes) {
+  const title = rawHtml.match(/<title>([^<]+)/i)?.[1] || 'Wendygo Studio';
+  const description = rawHtml.match(/<meta name="description" content="([^"]*)/i)?.[1] || '';
+  const canonicalUrl = rawHtml.match(/<link rel="canonical" href="([^"]+)/i)?.[1] || '';
+  const social = `<meta property="og:type" content="website"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonicalUrl}"><meta property="og:image" content="https://wendygostudio.com/og-image.png"><meta property="og:site_name" content="Wendygo Studio"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="https://wendygostudio.com/og-image.png">`;
+  const html = /property="og:title"/.test(rawHtml) ? rawHtml : rawHtml.replace('</head>', `${social}</head>`);
+  const current = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '';
+  if (comparable(current) !== comparable(html)) { changed++; if (!check) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, html, 'utf8'); } }
+}
 console.log(`${check ? 'Checked' : 'Rendered'} ${writes.length} resource pages; ${changed} ${check ? 'out of sync' : 'updated'}`);
 if (check && changed) process.exit(1);

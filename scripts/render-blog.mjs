@@ -90,6 +90,10 @@ for (const document of documents) {
     description: data.description,
     datePublished: iso(data.date),
     dateModified: iso(data.updated || data.date),
+    inLanguage: locales[locale].htmlLang,
+    image: 'https://wendygostudio.com/og-image.png',
+    mainEntityOfPage: {'@type': 'WebPage', '@id': canonical},
+    wordCount: parsed.content.trim().split(/\s+/).filter(Boolean).length,
     author: {'@type': 'Organization', name: 'Wendygo Studio', url: 'https://wendygostudio.com/'},
     publisher: {'@type': 'Organization', name: 'Wendygo Studio', url: 'https://wendygostudio.com/'}
   };

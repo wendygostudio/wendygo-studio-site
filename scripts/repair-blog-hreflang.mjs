@@ -15,6 +15,15 @@ for (const [locale, root] of Object.entries(locales)) {
 const read = file => fs.readFileSync(file, 'utf8');
 const canonical = html => html.match(/<link\s+rel=["']canonical["'][\s\S]*?href=["']([^"']+)/i)?.[1];
 const links = html => Object.fromEntries([...html.matchAll(/<link\s+rel=["']alternate["']\s+hreflang=["']([^"']+)["'][\s\S]*?href=["']([^"']+)["'][^>]*>/gi)].map(m => [m[1], m[2]]));
+const routeExists = url => {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    let rel = parsed.pathname.replace(/^\//, '');
+    if (!rel.endsWith('/')) rel += '/';
+    return fs.existsSync(path.resolve('public', rel, 'index.html')) || fs.existsSync(path.resolve('public', `${rel.slice(0, -1)}.html`));
+  } catch { return false; }
+};
 const historical = file => { try { return execFileSync('git', ['show', `HEAD:${path.relative('.', file).replaceAll('\\', '/')}`], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }); } catch { return ''; } };
 const byEnglish = new Map();
 for (const item of files) { const current = read(item.file); const old = item.locale === 'en' ? '' : historical(item.file); const en = (links(old).en && links(old).en !== canonical(old) ? links(old).en : null) || (links(current).en && links(current).en !== canonical(current) ? links(current).en : null) || (item.locale === 'en' ? canonical(current) : null); if (en) { if (!byEnglish.has(en)) byEnglish.set(en, {}); byEnglish.get(en)[item.locale] = canonical(current); } }
@@ -23,7 +32,8 @@ for (const item of files) {
   const html = read(item.file); const old = item.locale === 'en' ? '' : historical(item.file); const oldLinks = links(old); const currentLinks = links(html);
   const en = item.locale === 'en' ? canonical(html) : (oldLinks.en && oldLinks.en !== canonical(old) ? oldLinks.en : null) || (currentLinks.en && currentLinks.en !== canonical(html) ? currentLinks.en : null);
   const group = byEnglish.get(en) || { en: item.locale === 'en' ? canonical(html) : en };
-  const routes = { ...group, en: group.en || en };
+  const routes = Object.fromEntries(Object.entries({ ...group, en: group.en || en }).filter(([, url]) => routeExists(url)));
+  if (!routes.en && routeExists(en)) routes.en = en;
   const tags = Object.entries(routes).filter(([, url]) => url).map(([locale, url]) => `<link rel="alternate" hreflang="${locale === 'pt' ? 'pt-PT' : locale}" href="${url}">`).join('') + `<link rel="alternate" hreflang="x-default" href="${routes.en}">`;
   const output = html.replace(/\s*<link\s+rel=["']alternate["'][^>]*>/gi, '').replace('</head>', `${tags}</head>`);
   if (output !== html) { changed++; if (!check) fs.writeFileSync(item.file, output, 'utf8'); }

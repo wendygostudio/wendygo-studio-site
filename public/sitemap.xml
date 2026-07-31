@@ -54,7 +54,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-encode-decode-online-tool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
   </url>
   <url>
@@ -737,7 +737,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -1567,7 +1567,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -2019,7 +2019,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-encode-decode-online-tool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
   </url>
   <url>
@@ -2576,7 +2576,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -3788,7 +3788,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -4164,6 +4164,8 @@
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/guides/base64-encoding/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/guides/base64-encoding/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/guides/eu-consumer-rights/</loc>
@@ -4179,12 +4181,16 @@
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/guides/image-resizing-social-media/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/guides/image-resizing-social-media/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/guides/text-data-extraction/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/guides/text-data-extraction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/guides/text-data-extraction/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/</loc>
@@ -4348,7 +4354,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -5635,7 +5641,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -6311,5 +6317,7 @@
     <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/"/>
   </url>
 </urlset>
