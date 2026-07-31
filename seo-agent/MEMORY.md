@@ -115,6 +115,8 @@ Formato:
 
 ## 3. Historial de ejecuciones recientes (rolling log)
 
+- **2026-08-01 (daily)**: mejorado el snippet de `resize-image-for-tiktok-profile-picture` (149 impresiones, posición 15,1, CTR 0,67 %) y completadas las traducciones ES de cuatro grupos con deuda de una sola lengua. Se eliminaron duplicados ES, se repararon enlaces/hreflang y se regeneraron sitemap/GEO. Validación 0 errores y tests 7/7.
+
 - **2026-07-31 (daily)**: mejorado el snippet de `cyberchef-alternatives` (53 impresiones, posición 13,2, CTR 1,89 %) con un título y una meta description orientados a herramientas de texto de uso diario; corregida además una colisión de slug en la traducción ES de `free-config-sanitizer-alternatives`. Validación completa: 0 errores y 7/7 tests.
 - **2026-07-31 (daily 2)**: mejorado el snippet de `forest-app-alternatives-chrome` (163 impresiones, posición 21,4, CTR 0 %) con un título y una descripción completos orientados a alternativas de Forest para Chrome. En la misma ejecución se completaron las traducciones ES estructuradas de Forest y CyberChef; no se creó URL nueva de producto.
 - **2026-07-31 (paridad EN/ES)**: corregidas las seis páginas públicas EN que no tenían destino ES recíproco. Se añadieron cinco traducciones ES desde fuentes estructuradas y se normalizó el artículo heredado de secretos de Kubernetes con fuente EN/ES. Resultado: 86/86 páginas EN con `hreflang` ES y validación sin errores.

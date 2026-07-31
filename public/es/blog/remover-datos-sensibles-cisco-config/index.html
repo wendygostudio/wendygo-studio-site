@@ -2,137 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eliminar Datos Sensibles de una Config de Cisco | Wendygo</title>
-  <meta name="description" content="Las configs de Cisco IOS contienen contraseñas y claves VPN. Sanitízalas antes de compartir con TAC o proveedores." />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>Cómo eliminar datos sensibles de una config Cisco IOS</title>
+  <meta name="description" content="Sanitiza contraseñas, SNMP, VPN e IP de una configuración Cisco IOS antes de compartirla, sin subir el archivo fuera del navegador." />
   <link rel="canonical" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing",
-    "description": "Use ScrubForge to replace passwords, SNMP community strings, VPN keys, and other secrets in a Cisco IOS running-config with consistent placeholder tokens before sharing with support or AI assistants.",
-    "tool": [{ "@type": "HowToTool", "name": "ScrubForge Chrome extension" }],
-    "step": [
-      {
-        "@type": "HowToStep",
-        "position": 1,
-        "name": "Install ScrubForge",
-        "text": "Install ScrubForge from the Chrome Web Store. No account required. Pin the icon to your toolbar from the Extensions menu."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 2,
-        "name": "Export your Cisco IOS running-config",
-        "text": "On your Cisco device, run 'show running-config' and copy the full output to your clipboard."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 3,
-        "name": "Open ScrubForge",
-        "text": "Click the ScrubForge icon in your browser toolbar to open the extension panel."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 4,
-        "name": "Paste and sanitize",
-        "text": "Paste the config into ScrubForge. It processes the text locally in your browser and replaces sensitive values with consistent placeholder tokens."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 5,
-        "name": "Review the output",
-        "text": "Scan the sanitized output to confirm no real credentials remain. The logical structure — interfaces, ACLs, routing — stays intact."
-      },
-      {
-        "@type": "HowToStep",
-        "position": 6,
-        "name": "Share safely",
-        "text": "Copy the sanitized config and paste it into your TAC ticket, vendor email, or AI assistant chat. Real credentials never leave your machine."
-      }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wendygostudio.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://wendygostudio.com/es/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "Cómo eliminar datos sensibles de una configuración de Cisco IOS"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to Remove Sensitive Data from a Cisco IOS Config Before Sharing",
-    "description": "Use ScrubForge to replace passwords, SNMP community strings, VPN keys, and other secrets in a Cisco IOS running-config with consistent placeholder tokens before sharing with support or AI assistants.",
-    "datePublished": "2026-06-30",
-    "dateModified": "2026-06-30",
-    "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
-    "publisher": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"}
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Does ScrubForge upload my Cisco config to a server?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. ScrubForge is a Chrome extension that processes text entirely in your browser. Nothing is sent to Wendygo Studio or any third-party server. Your config stays on your machine."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does it work with Cisco IOS-XE and IOS-XR as well?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ScrubForge works on plain text from any source you can copy. It processes the text you paste regardless of the Cisco OS variant — IOS, IOS-XE, IOS-XR, or NX-OS."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will the sanitized config still be useful for troubleshooting?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. ScrubForge replaces values with consistent tokens — the same password always becomes the same placeholder throughout the config. Interface names, IP addresses (optionally), ACL names, and routing structures remain intact so support engineers can follow the logic."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of secrets does ScrubForge detect in Cisco configs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ScrubForge sanitizes infrastructure configuration text and targets values that appear in common sensitive patterns: passwords, hash strings, community strings, pre-shared keys, and similar fields. Always review the sanitized output before sharing for any unusual custom formats."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is ScrubForge free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. ScrubForge is free to install and use from the Chrome Web Store. No account or subscription required."
-        }
-      }
-    ]
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo eliminar datos sensibles de una config Cisco IOS","description":"Sanitiza contraseñas, SNMP, VPN e IP de una configuración Cisco IOS antes de compartirla, sin subir el archivo fuera del navegador.","datePublished":"2026-06-30","dateModified":"2026-06-30","inLanguage":"es","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/"},"wordCount":280,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://wendygostudio.com/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/es/blog/"},{"@type":"ListItem","position":3,"name":"Cómo eliminar datos sensibles de una config Cisco IOS"}]}</script>
+  
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -201,6 +78,15 @@
 
     .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
 
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
     .article-body { line-height: 1.75; }
     .article-body p { margin-bottom: 20px; }
     .article-body h2 {
@@ -214,93 +100,162 @@
     .article-body strong { color: var(--text); }
     .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
     .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
     .article-body code {
-      font-family: var(--mono); font-size: 13px;
-      background: var(--surf2); border: 1px solid var(--line);
-      padding: 1px 6px; border-radius: 4px; color: var(--amber2);
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
     }
-    .article-body ul { margin: 16px 0 20px 20px; }
-    .article-body ul li { margin-bottom: 8px; color: var(--muted); }
-    .article-body ul li strong { color: var(--text); }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
 
-    .steps { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
-    .step-card {
-      display: flex; gap: 16px; align-items: flex-start;
-      padding: 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
     }
-    .step-num {
-      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--amber);
-      color: var(--on-a); font-size: 13px; font-weight: 800;
-      display: grid; place-items: center;
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
     }
-    .step-content { flex: 1; }
-    .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
 
-    .example-wrap {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
     }
-    @media (max-width: 600px) { .example-wrap { grid-template-columns: 1fr; } }
-    .example-block {
-      background: var(--surf2); border: 1px solid var(--line); border-radius: 10px;
-      padding: 16px 20px; font-family: var(--mono); font-size: 12.5px;
-      line-height: 1.75; overflow-x: auto;
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
     }
-    .example-block .label {
-      font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; color: var(--faint); margin-bottom: 10px; display: block;
-    }
-    .example-block .val { color: var(--text); white-space: pre; display: block; }
-    .example-block .val .secret { color: #e05c6d; }
-    .example-block .val .token { color: var(--amber2); }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
 
-    .warning-box {
-      padding: 16px 20px; background: var(--surf); border: 1px solid var(--amber);
-      border-radius: 10px; margin: 24px 0; font-size: 14px; line-height: 1.6;
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
     }
-    .warning-box strong { color: var(--amber); display: block; margin-bottom: 6px; }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
 
-    /* CTA box */
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
     .cta-box {
-      margin: 56px 0 0;
-      padding: 32px; background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
       text-align: center;
     }
-    .cta-box h2 {
-      font-size: 20px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px;
-    }
-    .cta-box p {
-      font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.6;
-    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
     .cta-btn {
-      display: inline-block; background: var(--amber); color: var(--on-a);
-      font-weight: 800; font-size: 14px; letter-spacing: .3px;
-      padding: 12px 28px; border-radius: 8px; text-decoration: none;
-      transition: background .15s;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
     }
     .cta-btn:hover { background: var(--amber2); }
 
-    /* FAQ */
-    .faq { margin-top: 56px; }
-    .faq h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; }
-    .faq-item {
-      border: 1px solid var(--line); border-radius: 10px;
-      padding: 20px 22px; margin-bottom: 12px; background: var(--surf);
-    }
-    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
-    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
-
     footer {
-      border-top: 1px solid var(--line); margin-top: 80px;
-      padding: clamp(32px,4vw,48px) clamp(20px,5vw,60px);
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
     }
-    .footer-brand { font-size: 14px; font-weight: 700; color: var(--text); text-decoration: none; }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color .15s; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-copy { width: 100%; text-align: center; font-size: 12px; color: var(--faint); margin-top: 8px; }
-  .nav-toggle { display: none; }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
     .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
     .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
     @media (max-width: 600px) {
@@ -320,236 +275,77 @@
       .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
       .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
       .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
     }
-    </style>
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Wendygo Studio">
-<meta property="og:title" content="Eliminar Datos Sensibles de una Config de Cisco | Wendygo">
-<meta property="og:description" content="Las configs de Cisco IOS contienen contraseñas y claves VPN. Sanitízalas antes de compartir con TAC o proveedores.">
-<meta property="og:url" content="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/">
-<meta property="og:image" content="https://wendygostudio.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Eliminar Datos Sensibles de una Config de Cisco | Wendygo">
-<meta name="twitter:description" content="Las configs de Cisco IOS contienen contraseñas y claves VPN. Sanitízalas antes de compartir con TAC o proveedores.">
-<meta name="twitter:image" content="https://wendygostudio.com/og-image.png"><link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/cisco-ios-konfiguration-bereinigen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-cisco-ios/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-cisco-ios/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-cisco-ios/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="Cómo eliminar datos sensibles de una config Cisco IOS" />
+  <meta property="og:description" content="Sanitiza contraseñas, SNMP, VPN e IP de una configuración Cisco IOS antes de compartirla, sin subir el archivo fuera del navegador." />
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cómo eliminar datos sensibles de una config Cisco IOS" />
+  <meta name="twitter:description" content="Sanitiza contraseñas, SNMP, VPN e IP de una configuración Cisco IOS antes de compartirla, sin subir el archivo fuera del navegador." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/cisco-ios-konfiguration-bereinigen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-cisco-ios/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-cisco-ios/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-cisco-ios/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>
-
-<nav>
-  <a class="nav-brand" href="/">
-    <div class="nav-mark">W</div>
-    Wendygo Studio
-  </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+  <nav>
+    <a class="nav-brand" href="/es/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></label>
     <div class="nav-links">
-    <a href="/es/blog/">Blog</a>
-    <a href="/#tools">Herramientas</a>
+      <a href="/es/#products">Extensiones</a><a href="/es/blog/">Blog</a><a href="/es/tools/">Herramientas</a><a href="/es/#privacy">Privacidad</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Idioma</label><select id="wg-language-select" aria-label="Elegir idioma" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/">English</option><option value="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/" selected>Español</option><option value="https://wendygostudio.com/de/blog/cisco-ios-konfiguration-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-configuration-cisco-ios/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-configurazione-cisco-ios/">Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-configuracao-cisco-ios/">Português</option></select></div></nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/es/">Inicio</a><span>&#8250;</span><a href="/es/blog/">Blog</a><span>&#8250;</span>Cómo eliminar datos sensibles de una config Cisco IOS</div>
+    <div class="article-meta"><div class="article-tag">how-to · scrubforge</div><h1>Cómo eliminar datos sensibles de una config Cisco IOS</h1><p class="article-intro">Sanitiza contraseñas, SNMP, VPN e IP de una configuración Cisco IOS antes de compartirla, sin subir el archivo fuera del navegador.</p><div class="article-date">30 de junio de 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><h1>Cómo eliminar datos confidenciales de una configuración de Cisco IOS antes de compartirlos</h1>
+<p><strong>Fecha:</strong> 2026-06-30
+<strong>Slug:</strong> eliminar-datos-sensibles-cisco-config
+<strong>Producto:</strong> ScrubForge
+<strong>Tipo:</strong> How-to / Tutorial técnico (Tipo C)
+<strong>Palabra clave:</strong> eliminar datos confidenciales de cisco config/cisco config sanitizer</p>
+<hr>
+<p>Cada vez que un ingeniero de redes abre un caso de TAC o le pide a un asistente de IA que lo ayude a depurar un problema de enrutamiento, el ingeniero de soporte solicita la configuración en ejecución. El problema: <code>show running-config</code> en un dispositivo Cisco IOS no solo muestra interfaces y rutas, sino que lo muestra todo. Habilite contraseñas, cadenas de comunidad SNMP, claves VPN precompartidas y secretos compartidos RADIUS. Todo en una sola pasta.</p>
+<h2>Qué contiene realmente una configuración de IOS de Cisco</h2>
+<ul>
+<li>Habilitar contraseña/habilitar secreto</li>
+<li>Cadenas de comunidad SNMP</li>
+<li>Claves VPN precompartidas (clave criptográfica isakmp)</li>
+<li>RADIUS y TACACS+ secretos compartidos</li>
+<li>Pares de nombre de usuario/contraseña (codificado tipo 7 = reversible)</li>
+<li>Contraseñas de vecinos BGP</li>
+</ul>
+<h2>Antes y después</h2>
+<p>La misma cadena de comunidad siempre se convierte en el mismo token en toda la configuración desinfectada. Se conserva la estructura lógica (interfaces, ACL, enrutamiento).</p>
+<h2>Pasos</h2>
+<ol>
+<li>Instale ScrubForge desde Chrome Web Store (gratis)</li>
+<li>Ejecute <code>show running-config</code> en su dispositivo Cisco</li>
+<li>Abra ScrubForge, pegue la configuración</li>
+<li>Revisar la salida desinfectada</li>
+<li>Copia y comparte de forma segura</li>
+</ol>
+<h2>Por qué es importante el procesamiento local</h2>
+<p>ScrubForge se ejecuta completamente en la pestaña de su navegador. Sin servidor, sin carga. Es fundamental para las configuraciones de dispositivos de producción y los tickets TAC almacenados indefinidamente en sistemas externos.</p>
+<h2>Enlaces internos</h2>
+<ul>
+<li>/blog/desinfectar-red-config-antes-de-compartir/</li>
+</ul>
+<h2>llamada a la acción</h2>
+<p>Instale ScrubForge: <a href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe">https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe</a></p>
+</div>
   </div>
-<div class="wg-language-switcher"><label for="wg-language-select">Idioma</label><select id="wg-language-select" aria-label="Elegir idioma" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/">English</option><option value="https://wendygostudio.com/es/blog/remover-datos-sensibles-cisco-config/" selected>Español</option><option value="https://wendygostudio.com/de/blog/cisco-ios-konfiguration-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-configuration-cisco-ios/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-configurazione-cisco-ios/">Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-configuracao-cisco-ios/">Português</option></select></div></nav>
-
-<main class="article-wrap">
-
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Inicio</a><span>›</span>
-    <a href="/es/blog/">Blog</a><span>›</span>
-    <span>Eliminar datos sensibles de configuración Cisco</span>
-  </nav>
-
-  <header class="article-meta">
-    <div class="article-tag">ScrubForge · Seguridad</div>
-    <h1>Cómo eliminar datos sensibles de una configuración de Cisco IOS antes de compartirla</h1>
-    <p class="article-intro">Una configuración de running-config en Cisco es una mina de oro para solucionar problemas — y un pasivo cuando se comparte sin filtrar. Así es cómo eliminar las credenciales antes de que la configuración salga de tu máquina.</p>
-    <div class="article-date">30 de junio de 2026</div>
-  </header>
-
-  <hr class="divider" />
-
-  <article class="article-body">
-
-    <p>Cada vez que un ingeniero de redes abre un caso de TAC o le pide ayuda a un asistente de IA para depurar un problema de enrutamiento, ocurre lo mismo: el ingeniero de soporte dice "¿puedes compartir tu running-config?" Y entonces tienes que tomar una decisión.</p>
-
-    <p>El problema es que <code>show running-config</code> en un dispositivo Cisco IOS no solo te muestra interfaces y rutas. Te muestra <strong>todo</strong> — la contraseña enable, strings de comunidad SNMP, claves VPN pre-compartidas, secretos RADIUS compartidos, contraseñas de vecinos BGP. Todo, en un solo pegado.</p>
-
-    <p>Compartir esa configuración sin modificar es una fuga de credenciales esperando suceder.</p>
-
-    <h2>Qué contiene realmente una configuración de Cisco IOS</h2>
-
-    <p>Una configuración típica de running-config de Cisco IOS incluye varias categorías de datos sensibles que la mayoría de la gente no considera dos veces al copiar:</p>
-
-    <ul>
-      <li><strong>Contraseña enable / secreto enable</strong> — el hash de tu contraseña de modo privilegiado</li>
-      <li><strong>Strings de comunidad SNMP</strong> — a menudo configurados como <code>public</code> o un string de sitio usado en docenas de dispositivos</li>
-      <li><strong>Claves VPN pre-compartidas</strong> — líneas <code>crypto isakmp key</code> con la frase de paso real</li>
-      <li><strong>Secretos compartidos RADIUS y TACACS+</strong> — <code>radius-server key</code> y <code>tacacs-server key</code></li>
-      <li><strong>Pares usuario/contraseña</strong> — cuentas de usuario locales con hashes de contraseña o contraseñas codificadas tipo-7</li>
-      <li><strong>Contraseñas de vecino BGP</strong> — claves de autenticación MD5 para sesiones BGP</li>
-    </ul>
-
-    <p>Las contraseñas tipo-7 son particularmente peligrosas porque usan una codificación reversible específica de Cisco, no un hash real. Cualquiera con el string codificado y una herramienta decodificadora puede recuperar la contraseña original en segundos.</p>
-
-    <div class="warning-box">
-      <strong>El problema del asistente de IA</strong>
-      Cuando pegas una configuración en ChatGPT, Claude o cualquier chat de IA, ese texto puede ser usado para mejorar el modelo, visible para el personal de soporte que revisa conversaciones, o almacenado en el historial de la plataforma. Una configuración sanitizada te proporciona la misma ayuda para solucionar problemas sin la exposición.
-    </div>
-
-    <h2>Antes y después: cómo se ve la sanitización</h2>
-
-    <p>Aquí hay un fragmento de una configuración típica de Cisco IOS antes y después de pasar por <a href="/es/blog/remover-datos-sensibles-cisco-config/">un sanitizador de configuración</a>:</p>
-
-    <div class="example-wrap">
-      <div class="example-block">
-        <span class="label">Antes — config sin filtrar</span>
-        <span class="val">username admin privilege 15
- password 7 <span class="secret">13061E010803557878</span>
-!
-enable secret 5 <span class="secret">$1$mERr$hx5rVt7rPNoS4</span>
-!
-snmp-server community <span class="secret">corp-mon-2026</span> RO
-snmp-server community <span class="secret">corp-mon-2026</span> RW
-!
-crypto isakmp key <span class="secret">Tunnel$ecret99</span>
- address 203.0.113.10
-!
-radius-server key <span class="secret">RAD_shared_key_42</span></span>
-      </div>
-      <div class="example-block">
-        <span class="label">Después — output sanitizado</span>
-        <span class="val">username admin privilege 15
- password 7 <span class="token">[PASSWORD_1]</span>
-!
-enable secret 5 <span class="token">[SECRET_HASH_1]</span>
-!
-snmp-server community <span class="token">[COMMUNITY_1]</span> RO
-snmp-server community <span class="token">[COMMUNITY_1]</span> RW
-!
-crypto isakmp key <span class="token">[VPNKEY_1]</span>
- address 203.0.113.10
-!
-radius-server key <span class="token">[RADIUS_KEY_1]</span></span>
-      </div>
-    </div>
-
-    <p>Observa que <code>[COMMUNITY_1]</code> aparece dos veces en el output sanitizado — el mismo token para el mismo valor original. Esa consistencia es crítica: un ingeniero de soporte puede ver que ambas entradas SNMP usan el mismo string de comunidad sin saber cuál es. La estructura lógica de la configuración se preserva completamente.</p>
-
-    <h2>Cómo sanitizar tu configuración de Cisco con ScrubForge</h2>
-
-    <p>ScrubForge es una extensión de Chrome que procesa texto de configuración localmente en tu navegador. Nada se sube. Aquí está el flujo de trabajo:</p>
-
-    <ol class="steps">
-      <li class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <div class="step-title">Instala ScrubForge</div>
-          <div class="step-desc">Añade ScrubForge desde la Chrome Web Store. Gratuito, sin cuenta requerida. Fija el icono a tu barra de herramientas para que esté a un clic de distancia.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <div class="step-title">Exporta tu running-config de Cisco IOS</div>
-          <div class="step-desc">Conéctate a tu dispositivo Cisco vía SSH o terminal. Ejecuta <code>show running-config</code> (o <code>show run</code>) y copia el output completo.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <div class="step-title">Abre ScrubForge y pega</div>
-          <div class="step-desc">Haz clic en el icono de ScrubForge en tu barra de herramientas del navegador. Pega la configuración en el área de entrada. ScrubForge procesa el texto inmediatamente — sin botón de envío, sin llamada al servidor.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <div class="step-title">Revisa el output sanitizado</div>
-          <div class="step-desc">Escanea el output sanitizado para valores sensibles restantes. ScrubForge se enfoca en patrones conocidos — revisa el resultado antes de compartir, especialmente si tu configuración usa formatos de secreto personalizados.</div>
-        </div>
-      </li>
-      <li class="step-card">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <div class="step-title">Copia y comparte</div>
-          <div class="step-desc">Copia el texto sanitizado y pégalo en tu ticket de TAC, correo del proveedor, o chat del asistente de IA. El ingeniero de soporte obtiene todo lo que necesita para ayudarte. Tus credenciales permanecen en tu máquina.</div>
-        </div>
-      </li>
-    </ol>
-
-    <h2>Por qué el procesamiento local es importante</h2>
-
-    <p>La mayoría de herramientas "sanitizadoras" que encuentras en línea funcionan enviando tu texto a un servidor, procesándolo allí, y devolviendo la versión limpia. Eso está bien para eliminar markdown — no está bien para configuraciones de red con credenciales activas.</p>
-
-    <p>ScrubForge procesa todo en tu pestaña del navegador. La extensión no tiene componente de servidor. El texto de configuración que pegas en ella no viaja a ningún lado. Esto es particularmente importante para:</p>
-
-    <ul>
-      <li><strong>Configuraciones de dispositivos en producción</strong> que contienen credenciales usadas en toda tu red</li>
-      <li><strong>Configuraciones compartidas en tickets de TAC</strong> almacenadas en los sistemas de soporte de Cisco indefinidamente</li>
-      <li><strong>Sesiones de asistentes de IA</strong> que pueden ser registradas o usadas para entrenamiento de modelos</li>
-      <li><strong>Mensajes de Slack o Teams</strong> donde las configuraciones se pegan y se olvidan</li>
-    </ul>
-
-    <h2>Qué hacer después de sanitizar</h2>
-
-    <p>Sanitizar antes de compartir es un buen hábito. Pero también vale la pena incorporarlo en el procedimiento operativo estándar de tu equipo para cualquier participación de soporte. Algunas cosas que vale la pena documentar en tu runbook:</p>
-
-    <ul>
-      <li>Siempre sanitiza antes de abrir tickets externos — incluso para comparticiones "solo para verificar"</li>
-      <li>Después de que se cierre un caso de TAC, rota cualquier credencial que haya aparecido en configuraciones compartidas (sanitizadas o no)</li>
-      <li>Mantén una nota de cuál placeholder mapea a cuál valor original en caso de que el equipo de soporte necesite aclaración — el archivo original en tu workstation es el mapeo</li>
-    </ul>
-
-    <p>Si compartes configuraciones con proveedores externos frecuentemente, ve también: <a href="/es/blog/remover-datos-sensibles-cisco-config/">Cómo sanitizar configuraciones de red antes de compartir con asistentes de IA</a> para un vistazo más amplio a flujos de trabajo multi-vendedor incluyendo FortiGate y AWS.</p>
-
-    <div class="cta-box">
-      <h2>Sanitiza configuraciones de Cisco antes de que salgan de tu máquina</h2>
-      <p>ScrubForge es gratuito para instalar. Pega tu configuración, elimina las credenciales localmente, y comparte de forma segura — sin subidas, sin cuenta requerida.</p>
-      <a class="cta-btn" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">Instala ScrubForge — Gratuito</a>
-    </div>
-
-  </article>
-
-  <section class="faq" aria-label="Preguntas frecuentes">
-    <h2>Preguntas Frecuentes</h2>
-
-    <div class="faq-item">
-      <div class="faq-q">¿ScrubForge sube mi configuración de Cisco a un servidor?</div>
-      <div class="faq-a">No. ScrubForge es una extensión de Chrome que procesa texto completamente en tu navegador. Nada se envía a Wendygo Studio ni a ningún servidor de terceros. Tu configuración permanece en tu máquina.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">¿Funciona también con Cisco IOS-XE e IOS-XR?</div>
-      <div class="faq-a">ScrubForge funciona en texto plano de cualquier fuente que puedas copiar. Procesa el texto que pegas sin importar la variante del SO de Cisco — IOS, IOS-XE, IOS-XR, o NX-OS.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">¿Seguirá siendo útil la configuración sanitizada para solucionar problemas?</div>
-      <div class="faq-a">Sí. ScrubForge reemplaza valores con tokens consistentes — la misma contraseña siempre se convierte en el mismo placeholder en toda la configuración. Los nombres de interfaz, nombres de ACL, y estructuras de enrutamiento permanecen intactos para que los ingenieros de soporte puedan seguir la lógica sin ver las credenciales reales.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">¿Qué tipos de secretos detecta ScrubForge en configuraciones Cisco?</div>
-      <div class="faq-a">ScrubForge sanitiza texto de configuración de infraestructura y apunta a valores que aparecen en patrones sensibles comunes: contraseñas, strings de hash, strings de comunidad, claves pre-compartidas, y campos similares. Siempre revisa el output sanitizado antes de compartir para cualquier formato de secreto personalizado inusual.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">¿ScrubForge es gratuito?</div>
-      <div class="faq-a">Sí. ScrubForge es gratuito para instalar y usar desde la Chrome Web Store. Sin cuenta ni suscripción requerida.</div>
-    </div>
-
-  </section>
-
-</main>
-
-<footer>
-  <a class="footer-brand" href="/">Wendygo Studio</a>
-  <div class="footer-links">
-    <a href="/es/blog/">Blog</a>
-    <a href="/#tools">Herramientas</a>
-    <a href="/es/privacy">Privacidad</a>
-    <a href="/es/terms">Términos</a>
-  </div>
-  <div class="footer-copy">&copy; 2026 Wendygo Studio. Todos los derechos reservados.</div>
-</footer>
-
-
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div><div class="footer-links"><a href="/es/">Inicio</a><a href="/es/blog/">Blog</a><a href="/es/tools/">Herramientas</a><a href="/es/privacy">Privacidad</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
 </body>
 </html>

@@ -49,7 +49,7 @@ El aviso de SonicWall es explícito: incluso con las credenciales cifradas, "la 
 
 ## Antes de compartir una config en cualquier sitio
 
-Si vas a [compartir una config de red con un equipo de soporte](/es/blog/compartir-config-red-ticket-soporte/), el incidente de SonicWall es un buen argumento para [sanitizarla primero](/es/blog/sanitizar-configuracion-red-antes-compartir/), sin importar el portal del fabricante, el asistente de IA o el foro donde la publiques. [ScrubForge](/es/scrubforge/) elimina exactamente el detalle que filtra un archivo de backup: credenciales, rangos de IP, hostnames y topología, manteniendo la estructura de la config lo bastante intacta como para obtener ayuda de verdad.
+Si vas a [compartir una config de red con un equipo de soporte](/es/blog/compartir-config-red-ticket-soporte/), el incidente de SonicWall es un buen argumento para [sanitizarla primero](/es/blog/sanitize-network-config-before-sharing/), sin importar el portal del fabricante, el asistente de IA o el foro donde la publiques. [ScrubForge](/es/scrubforge/) elimina exactamente el detalle que filtra un archivo de backup: credenciales, rangos de IP, hostnames y topología, manteniendo la estructura de la config lo bastante intacta como para obtener ayuda de verdad.
 
 Si usas la función de backup en la nube de MySonicWall, revisa tu cuenta directamente en lugar de confiar solo en este artículo: el aviso de SonicWall tiene los pasos exactos, y el apartado Product Management > Issue List de tu cuenta MySonicWall mostrará si alguno de tus números de serie fue marcado.
 

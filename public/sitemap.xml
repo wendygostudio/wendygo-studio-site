@@ -54,7 +54,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-encode-decode-online-tool/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
   </url>
   <url>
@@ -737,7 +737,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -841,7 +841,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
@@ -1372,7 +1372,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
@@ -1567,7 +1567,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -2019,7 +2019,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-encode-decode-online-tool/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/base64-codificador-decodificador-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
   </url>
   <url>
@@ -2576,7 +2576,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -2741,19 +2741,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"/>
   </url>
   <url>
-    <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-  </url>
-  <url>
     <loc>https://wendygostudio.com/es/blog/sanitizar-configuracion-ubiquiti/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -2765,6 +2752,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-ubiquiti/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-ubiquiti/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-ubiquiti-config/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/scrubforge-chatgpt-troubleshooting-red/</loc>
@@ -3632,7 +3632,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
@@ -3788,7 +3788,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -4354,7 +4354,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>
@@ -4692,7 +4692,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
@@ -5589,7 +5589,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-red-antes-compartir/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"/>
@@ -5641,7 +5641,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/resize-image-youtube-thumbnail-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/redimensionar-imagen-miniatura-youtube/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/youtube-thumbnail-bildgroesse/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-miniature-youtube/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-miniatura-youtube/"/>

@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
-title: "Resize a TikTok Profile Picture in Chrome | 400x400 Guide"
-description: "Resize a TikTok profile picture to 400x400 or 512x512 in Chrome. FrameForge keeps your image local and ready for a clean, centered upload."
+title: "TikTok Profile Picture Size in Chrome | 400x400"
+description: "TikTok profile picture size: resize to 400x400 or 512x512 in Chrome. FrameForge keeps images local and centers the crop for a clean upload."
 date: 2026-06-29
 slug: resize-image-for-tiktok-profile-picture
 locale: en
