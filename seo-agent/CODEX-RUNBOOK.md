@@ -21,7 +21,12 @@ actual de Wendygo Studio.
 4. Ejecutar `npm.cmd test`.
 5. En la misma ejecución, resolver una tanda de 2–4 grupos de artículos que aún no tengan las seis versiones lingüísticas, priorizando señales de Search Console y grupos a los que solo les falte una lengua.
 6. Actualizar `seo-agent/journal/YYYY-MM-DD.md` y `MEMORY.md`.
-6. Solo tras superar las validaciones, hacer commit y push a `main` si el
+7. Tras superar las validaciones, ejecutar el ciclo externo prudente: Bluesky
+   (publicacion util o engagement organico aunque no haya articulo nuevo) y
+   Dev.to cuando exista un articulo nuevo o una actualizacion con aportacion
+   editorial real. Si no hay novedad suficiente para Dev.to, documentar el
+   salto; nunca publicar por llenar cuota.
+8. Solo tras superar las validaciones, hacer commit y push a `main` si el
    usuario lo solicita.
 
 Las credenciales de `seo-agent/config/agent.env` no se leen ni se exponen para

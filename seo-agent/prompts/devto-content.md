@@ -21,6 +21,12 @@ node {{AGENT_DIR}}/scripts/devto-post.js --file "TITULO" "RUTA_AL_MARKDOWN" "tag
 
 6. Documenta en el journal qué publicaste en Dev.to.
 
+## Regla de novedad
+
+Si no existe articulo nuevo, solo usa un articulo actualizado ese dia cuando la
+adaptacion aporte un angulo, evidencia o flujo realmente nuevo. Si no, salta y
+documenta el motivo; nunca publiques por llenar cuota.
+
 ## Restricciones
 - Máximo 1 publicación en Dev.to por ejecución
 - 400-600 palabras, NO más

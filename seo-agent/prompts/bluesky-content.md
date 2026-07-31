@@ -152,3 +152,10 @@ Máximo 5 follows y 5 likes por ejecución.
 - El cron se encarga del horario, pero para referencia:
 - España/Europa: 13:00-15:00 CET
 - US: 9:00-11:00 ET
+
+## Sin articulo nuevo
+
+Si no hay articulo nuevo en el journal, elige un tip tecnico breve, una
+observacion util o una respuesta pertinente. No fuerces un enlace ni una
+mencion comercial. Mantén el limite de un post diario y el engagement organico
+con criterios estrictos.
