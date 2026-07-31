@@ -1,8 +1,7 @@
 import fs from 'node:fs';
 import matter from 'gray-matter';
 
-const date = '2026-07-28';
-const slugs = ['gamified-pomodoro-timer-chrome-extension'];
+const requestedSlugs = (process.env.DAILY_SLUGS || 'gamified-pomodoro-timer-chrome-extension').split(',').filter(Boolean);
 const locales = (process.env.DAILY_LOCALES || 'es,de,fr,it,pt').split(',').filter(Boolean);
 const labels = { es: 'Español', de: 'Deutsch', fr: 'Français', it: 'Italiano', pt: 'Português' };
 
@@ -14,8 +13,11 @@ async function translate(text, locale) {
   return (await response.json())[0].map((part) => part[0]).join('');
 }
 
-for (const slug of slugs) {
-  const source = matter(fs.readFileSync(`content/blog/${date}-${slug}.md`, 'utf8'));
+for (const slug of requestedSlugs) {
+  const sourceFile = fs.readdirSync('content/blog').find((file) => file.endsWith('.md') && matter(fs.readFileSync(`content/blog/${file}`, 'utf8')).data.slug === slug && matter(fs.readFileSync(`content/blog/${file}`, 'utf8')).data.locale === 'en');
+  if (!sourceFile) { console.error(`English source not found: ${slug}`); continue; }
+  const source = matter(fs.readFileSync(`content/blog/${sourceFile}`, 'utf8'));
+  const date = sourceFile.slice(0, 10);
   for (const locale of locales) {
     const targetFile = `content/blog/${date}-${locale}-${slug}.md`;
     if (fs.existsSync(targetFile)) { console.log(`${locale}/${slug} (existing)`); continue; }

@@ -94,6 +94,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/bulk-text-cleaner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/bulk-text-cleaner/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/bulk-text-cleaner/"/>
   </url>
   <url>
@@ -304,6 +305,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-consumer-rights-guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eu-consumer-rights-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-consumer-rights-guide/"/>
   </url>
   <url>
@@ -461,6 +463,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-rights-tool/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/gdpr-rights-tool/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/gdpr-rights-tool/"/>
   </url>
   <url>
@@ -526,6 +529,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/local-file-converter-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/local-file-converter-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/local-file-converter-chrome-extension/"/>
   </url>
   <url>
@@ -534,6 +538,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/network-config-anonymizer-for-ai/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/network-config-anonymizer-for-ai/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/network-config-anonymizer-for-ai/"/>
   </url>
   <url>
@@ -639,6 +644,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-secretos-config-kubernetes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/"/>
   </url>
   <url>
@@ -2017,6 +2023,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/bulk-text-cleaner/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/bulk-text-cleaner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/bulk-text-cleaner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/bulk-text-cleaner/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/clean-copied-table-text/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2220,6 +2235,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/remove-duplicate-lines-online/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/eliminar-secretos-config-kubernetes/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eliminar-secretos-config-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/remove-secrets-kubernetes-config/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -2227,6 +2251,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/eu-consumer-rights-guide/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/eu-consumer-rights-guide/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/eu-consumer-rights-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-consumer-rights-guide/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/extension-pomodoro-chrome/</loc>
@@ -2310,6 +2343,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/garanzia-legale-ue-due-anni/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/garantia-legal-ue-dois-anos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-warranty-rights-explained/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/gdpr-rights-tool/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/gdpr-rights-tool/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/gdpr-rights-tool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/gdpr-rights-tool/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/generar-cadena-aleatoria-online/</loc>
@@ -2400,6 +2442,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/local-file-converter-chrome-extension/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/local-file-converter-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/local-file-converter-chrome-extension/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/local-file-converter-chrome-extension/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/mejores-alternativas-pomofocus/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -2416,6 +2467,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/best-chrome-extensions-for-students/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/mejores-extensiones-chrome-estudiantes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/best-chrome-extensions-for-students/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/network-config-anonymizer-for-ai/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/network-config-anonymizer-for-ai/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/network-config-anonymizer-for-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/network-config-anonymizer-for-ai/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/openai-privacy-filter-configuraciones-red/</loc>
