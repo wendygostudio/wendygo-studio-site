@@ -19,7 +19,8 @@ actual de Wendygo Studio.
    errores críticos, Search Console, enlazado, mejora existente o artículo.
 3. Ejecutar `npm.cmd run seo:fix` y `npm.cmd run validate` en Windows.
 4. Ejecutar `npm.cmd test`.
-5. Actualizar `seo-agent/journal/YYYY-MM-DD.md` y `MEMORY.md`.
+5. En la misma ejecución, resolver una tanda de 2–4 grupos de artículos que aún no tengan las seis versiones lingüísticas, priorizando señales de Search Console y grupos a los que solo les falte una lengua.
+6. Actualizar `seo-agent/journal/YYYY-MM-DD.md` y `MEMORY.md`.
 6. Solo tras superar las validaciones, hacer commit y push a `main` si el
    usuario lo solicita.
 

@@ -351,6 +351,21 @@ Cómo usar nuestras extensiones con otras herramientas populares.
 
 ---
 
+## Paso 4f: Reducir deuda de traducciones (obligatorio cuando sea posible)
+
+La acción principal de la ejecución no termina el trabajo del día. Después de
+resolverla, inspecciona los grupos de `translationKey` que no tienen EN, ES,
+DE, FR, IT y PT. Traduce **2–4 grupos por ejecución**, empezando por los que
+solo carecen de una lengua y por los que tienen impresiones o posiciones útiles
+en Search Console. Si todos los grupos prioritarios ya están completos, no
+inventes traducciones: documenta que no había deuda de alto impacto.
+
+Cada grupo traducido debe conservar la intención, claims y enlaces válidos del
+original, y pasar por el pipeline normal de renderizado, `hreflang`, sitemap,
+validación y tests. No cuentes una página localizada heredada o una URL
+duplicada como traducción válida: debe existir una fuente estructurada con el
+`translationKey` compartido.
+
 ## Paso 5: Quality Gate
 
 Antes de dar por terminada la ejecución, comprueba (además de `npm run
@@ -393,6 +408,9 @@ Ejecuta `npm run seo:fix` y `npm run validate`. No hagas staging, commit ni push
 
 - Máximo 1 artículo por ejecución. Si el orquestador quiere 2 artículos ese día, ejecuta esta rutina completa dos veces de forma secuencial (nunca en paralelo) — no generes 2 artículos dentro de la misma ejecución.
 - No borres contenido existente
+- Una ejecución que mejora solo un snippet debe aprovechar el mismo ciclo para
+  reducir la deuda de traducciones; no se considera completa si deja sin tratar
+  una tanda prioritaria de 2–4 grupos disponibles.
 - **NUNCA atribuyas funcionalidades falsas a los productos**
 - Si no encuentras una buena keyword, no publiques — documéntalo en el journal
 - **No publiques un artículo simplemente porque hoy toca publicar.** Publica únicamente si representa la acción de mayor impacto disponible hoy según la jerarquía de prioridades. Si mejorar contenido existente o reforzar el enlazado interno genera más crecimiento que un artículo nuevo, prioriza eso.
