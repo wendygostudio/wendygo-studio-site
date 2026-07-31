@@ -116,6 +116,7 @@ Formato:
 ## 3. Historial de ejecuciones recientes (rolling log)
 
 - **2026-07-31 (daily)**: mejorado el snippet de `cyberchef-alternatives` (53 impresiones, posición 13,2, CTR 1,89 %) con un título y una meta description orientados a herramientas de texto de uso diario; corregida además una colisión de slug en la traducción ES de `free-config-sanitizer-alternatives`. Validación completa: 0 errores y 7/7 tests.
+- **2026-07-31 (daily 2)**: mejorado el snippet de `forest-app-alternatives-chrome` (163 impresiones, posición 21,4, CTR 0 %) con un título y una descripción completos orientados a alternativas de Forest para Chrome. No se creó URL nueva; validación pendiente hasta completar el pipeline.
 
 - **2026-07-29 (daily)**: mejorado el snippet de `resize-image-for-tiktok-profile-picture` (128 impresiones, posición 15,3, CTR 0,78 %) con un título y una meta description más específicos para 400x400/512x512 y procesamiento local. No se publicó URL nueva; validación 465 HTML/462 canónicas/6 idiomas sin errores.
 - **2026-07-29 (daily 2)**: segunda pasada secuencial del día; mejorado el snippet de `eu-warranty-rights-explained` (55 impresiones, posición 15,4, 0 clics) con un título más corto y una descripción orientada a reparación/reemplazo. Sin URL nueva; validación completa sin errores.
