@@ -40,7 +40,10 @@ wendygostudio.com/api/license/*
 Así la web seguirá en el Worker actual y solo `/api/license/validate` y
 `/api/license/activate` pasarán al proxy nuevo.
 
-## Registro de trials
+## Registro de trials (legado, actualmente sin uso)
+
+Las extensiones actuales usan un trial local y no llaman a este endpoint. Esta
+ruta se conserva únicamente por compatibilidad con despliegues anteriores.
 
 El Worker también expone `POST /api/trial/register`. Recibe únicamente un UUID
 v4 generado por la extensión y guarda su primera fecha de uso en el namespace
