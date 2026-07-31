@@ -40,6 +40,32 @@ wendygostudio.com/api/license/*
 Así la web seguirá en el Worker actual y solo `/api/license/validate` y
 `/api/license/activate` pasarán al proxy nuevo.
 
+## Registro de trials
+
+El Worker también expone `POST /api/trial/register`. Recibe únicamente un UUID
+v4 generado por la extensión y guarda su primera fecha de uso en el namespace
+KV `TRIAL_IDS`. El UUID no contiene información del dispositivo, hardware, IP
+ni correo electrónico.
+
+El binding KV está declarado en `worker-license-proxy/wrangler.toml`. El
+namespace de producción es `TRIAL_IDS` y su ID está configurado allí; el ID no
+es un secreto.
+
+Prueba de registro:
+
+```powershell
+Invoke-RestMethod `
+  -Method Post `
+  -Uri "https://wendygostudio.com/api/trial/register" `
+  -ContentType "application/json" `
+  -Body '{"id":"00000000-0000-4000-8000-000000000001"}'
+```
+
+La primera petición devuelve `used: false`; repetirla con el mismo UUID debe
+devolver `used: true`. La extensión debe conservar el UUID en
+`chrome.storage.sync` y aplicar los 5 días normales más un máximo de 2 días de
+gracia si el Worker no responde.
+
 ## Prueba
 
 Antes de cambiar ScrubForge, verifica que una petición llega al Worker:

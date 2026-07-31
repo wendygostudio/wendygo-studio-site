@@ -3,8 +3,13 @@ main = "src/index.js"
 compatibility_date = "2026-07-29"
 preview_urls = false
 
+[[kv_namespaces]]
+binding = "TRIAL_IDS"
+id = "3ba399802bbd4cf3b92c4272c77a6d18"
+
 routes = [
-  { pattern = "wendygostudio.com/api/license/*", zone_name = "wendygostudio.com" }
+  { pattern = "wendygostudio.com/api/license/*", zone_name = "wendygostudio.com" },
+  { pattern = "wendygostudio.com/api/trial/*", zone_name = "wendygostudio.com" }
 ]
 
 # Configure CREEM_API_KEY as an encrypted secret in the Worker dashboard:
