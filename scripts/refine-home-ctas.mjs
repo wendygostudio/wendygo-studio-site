@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+const labels = { en: { textforge:'Try TextForge', frameforge:'Try FrameForge', scrubforge:'Try ScrubForge', claimforge:'Try ClaimForge', convertforge:'Try ConvertForge', slimeforge:'Try SlimeForge' }, es: { textforge:'Probar TextForge', frameforge:'Probar FrameForge', scrubforge:'Probar ScrubForge', claimforge:'Probar ClaimForge', convertforge:'Probar ConvertForge', slimeforge:'Probar SlimeForge' }, de: { textforge:'TextForge testen', frameforge:'FrameForge testen', scrubforge:'ScrubForge testen', claimforge:'ClaimForge testen', convertforge:'ConvertForge testen', slimeforge:'SlimeForge testen' }, fr: { textforge:'Essayer TextForge', frameforge:'Essayer FrameForge', scrubforge:'Essayer ScrubForge', claimforge:'Essayer ClaimForge', convertforge:'Essayer ConvertForge', slimeforge:'Essayer SlimeForge' }, it: { textforge:'Prova TextForge', frameforge:'Prova FrameForge', scrubforge:'Prova ScrubForge', claimforge:'Prova ClaimForge', convertforge:'Prova ConvertForge', slimeforge:'Prova SlimeForge' }, pt: { textforge:'Experimentar TextForge', frameforge:'Experimentar FrameForge', scrubforge:'Experimentar ScrubForge', claimforge:'Experimentar ClaimForge', convertforge:'Experimentar ConvertForge', slimeforge:'Experimentar SlimeForge' } };
+for (const [locale, map] of Object.entries(labels)) {
+  const file = locale === 'en' ? 'public/index.html' : `public/${locale}/index.html`;
+  let html = fs.readFileSync(file, 'utf8');
+  for (const [slug, label] of Object.entries(map)) html = html.replace(new RegExp(`(href="/${locale === 'en' ? '' : `${locale}/`}${slug}/"[^>]*>)[^<]*(</a>)`), `$1${label}$2`);
+  fs.writeFileSync(file, html);
+}

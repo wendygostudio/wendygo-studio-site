@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wendygo Studio — Privacy-First Chrome Extensions & Focus Pet</title>
+  <title>Local Chrome Tools for Private Work | Wendygo Studio</title>
   <meta name="description" content="Six privacy-first Chrome extensions: text, images, file conversion, network configs, EU consumer rights and a pomodoro focus pet. 100% local." />
   <link rel="canonical" href="https://wendygostudio.com/" />
   <link rel="alternate" hreflang="en" href="https://wendygostudio.com/" />
@@ -333,6 +333,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com","description":"Six privacy-first Chrome extensions for text manipulation, image resizing, file conversion, network config sanitization, EU consumer rights and pomodoro focus with a virtual pet","sameAs":["https://bsky.app/profile/wendygostudio.bsky.social","https://dev.to/wendygostudio"]}
 </script>
+<style id="home-conversion-styles">.home-use-cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}.home-use-case{display:flex;flex-direction:column;gap:7px;padding:20px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);color:inherit;text-decoration:none;transition:border-color .2s,transform .2s}.home-use-case:hover{border-color:var(--amber);transform:translateY(-2px)}.home-use-case strong{font-size:17px;color:var(--ink)}.home-use-case span{color:var(--muted);font-size:14px}.home-comparison{overflow:auto;margin-top:28px;border:1px solid var(--line);border-radius:14px}.home-comparison table{width:100%;border-collapse:collapse;min-width:620px}.home-comparison th,.home-comparison td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}.home-comparison th{color:var(--amber);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.home-comparison tr:last-child td{border-bottom:0}.product-card-featured{border-color:var(--amber);box-shadow:0 0 0 1px rgba(232,163,61,.18),0 18px 42px rgba(0,0,0,.16)}.product-featured-label{display:inline-flex;align-items:center;gap:6px;margin:-8px 0 14px;padding:5px 9px;border:1px solid rgba(232,163,61,.5);border-radius:999px;color:var(--amber);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.home-proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}.home-proof div{padding:16px;border:1px solid var(--line);border-radius:12px}.home-proof strong{display:block;color:var(--amber);font-size:20px}.home-proof span{display:block;margin-top:4px;color:var(--muted);font-size:13px}@media(max-width:800px){.home-use-cases{grid-template-columns:repeat(2,minmax(0,1fr))}.home-proof{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.home-use-cases{grid-template-columns:1fr}.home-proof{grid-template-columns:1fr}.home-comparison{margin-left:-4px;margin-right:-4px}}</style>
 <style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>  <nav>
     <a class="nav-brand" href="/">
@@ -355,13 +356,13 @@
   <section class="hero">
     <div class="embers" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
     <div class="eyebrow">Wendygo Studio</div>
-    <h1>Free, Privacy-First <em>Chrome Extensions</em></h1>
+    <h1>Local tools for better work <em>in Chrome</em></h1>
     <p class="hero-sub">Six extensions for Chrome and Edge that transform text, resize images, convert files, sanitize infrastructure configs, defend your EU consumer rights — and keep you focused with a pomodoro pet.</p>
     <div class="hero-term"><span class="prompt">$</span> where does my data go? <b>→ core processing stays local. external AI runs only when you choose it.</b></div>
     <div class="hero-ctas">
-      <a class="cta-primary" href="#products">Browse the six Forges ↓</a>
+      <a class="cta-primary" href="#find-your-tool">Find your tool</a>
       <a class="cta-ghost" href="/forge-ecosystem/">Explore the ecosystem</a>
-      <a class="cta-ghost" href="/blog/">Read the blog</a>
+      <a class="cta-ghost" href="/blog/">Read practical guides</a>
     </div>
     <div class="hero-badges">
       <span class="badge"><span class="dot"></span>Minimal permissions</span>
@@ -378,6 +379,23 @@
     </div>
   </section>
 
+  <section class="section" id="find-your-tool">
+    <div class="section-inner">
+      <div class="section-label">Start with a job</div>
+      <h2 class="section-title">What are you trying to do?</h2>
+      <p class="section-sub">Choose the workflow that matches your next task. Each card takes you straight to the Forge built for it.</p>
+      <div class="home-use-cases">
+        <a class="home-use-case" href="#product-textforge"><strong>Clean or transform text</strong><span>Extract, format, encode and build repeatable recipes → TextForge</span></a>
+        <a class="home-use-case" href="#product-frameforge"><strong>Prepare an image</strong><span>Resize, crop, enhance and export social-ready files → FrameForge</span></a>
+        <a class="home-use-case" href="#product-convertforge"><strong>Convert a file locally</strong><span>Drop images, documents, audio or data into the right converter → ConvertForge</span></a>
+        <a class="home-use-case" href="#product-scrubforge"><strong>Share a sensitive config</strong><span>Sanitize secrets while preserving useful structure → ScrubForge</span></a>
+        <a class="home-use-case" href="#product-claimforge"><strong>Make a consumer claim</strong><span>Understand EU routes and prepare a clearer letter → ClaimForge</span></a>
+        <a class="home-use-case" href="#product-slimeforge"><strong>Restart a focus habit</strong><span>Turn each Pomodoro session into progress for a growing pet → SlimeForge</span></a>
+      </div>
+      <div class="home-proof" aria-label="Wendygo Studio principles"><div><strong>6</strong><span>focused browser tools</span></div><div><strong>0</strong><span>Wendygo content-processing servers</span></div><div><strong>5 days</strong><span>free PRO trial, no card</span></div><div><strong>6</strong><span>interface languages</span></div></div>
+    </div>
+  </section>
+
   <section class="section products" id="products">
     <div class="section-inner">
       <div class="section-label">Extensions</div>
@@ -388,7 +406,7 @@
       <div class="product-grid">
 
         <!-- TextForge -->
-        <div class="product-card">
+        <div class="product-card" id="product-textforge">
           <div class="product-head">
             <img alt="TextForge extension preview" class="product-mark-img" src="/images/icons/textforge.png" width="44" height="44" loading="lazy">
             <div>
@@ -435,7 +453,7 @@ jane-doe</div>
               <span class="price-pro">€3.99<small style="font-size:12px;font-weight:400">/mo</small></span>
               <span class="price-once">· €24.99/yr · €59.99 lifetime</span>
             </div>
-            <a class="btn-store learn" href="/textforge/">Learn more</a>
+            <a class="btn-store learn" href="/textforge/">Try TextForge</a>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/cnmlojgahikinilbefkkfadkfamchlba" target="_blank" rel="noopener">
               ↗ Chrome Web Store
             </a>
@@ -443,7 +461,7 @@ jane-doe</div>
         </div>
 
         <!-- FrameForge -->
-        <div class="product-card">
+        <div class="product-card" id="product-frameforge">
           <div class="product-head">
             <img alt="FrameForge extension preview" class="product-mark-img" src="/images/icons/frameforge.png" width="44" height="44" loading="lazy">
             <div>
@@ -485,7 +503,7 @@ jane-doe</div>
               <span class="price-pro">€4.99<small style="font-size:12px;font-weight:400">/mo</small></span>
               <span class="price-once">· €29.99/yr · €59.99 lifetime</span>
             </div>
-            <a class="btn-store learn" href="/frameforge/">Learn more</a>
+            <a class="btn-store learn" href="/frameforge/">Try FrameForge</a>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj" target="_blank" rel="noopener">
               ↗ Chrome Web Store
             </a>
@@ -493,7 +511,7 @@ jane-doe</div>
         </div>
 
         <!-- ScrubForge -->
-        <div class="product-card">
+        <div class="product-card" id="product-scrubforge">
           <div class="product-head">
             <img alt="ScrubForge extension preview" class="product-mark-img" src="/images/icons/scrubforge.png" width="44" height="44" loading="lazy">
             <div>
@@ -535,7 +553,7 @@ snmp-server community <span class="tk">[SNMP_RO_1]</span> RO</div>
               <span class="price-pro">€5.99<small style="font-size:12px;font-weight:400">/mo</small></span>
               <span class="price-once">· €34.99/yr · €69.99 lifetime</span>
             </div>
-            <a class="btn-store learn" href="/scrubforge/">Learn more</a>
+            <a class="btn-store learn" href="/scrubforge/">Try ScrubForge</a>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/pjaohhipefhjfopoaepjbmiienagaffe" target="_blank" rel="noopener">
               ↗ Chrome Web Store
             </a>
@@ -543,7 +561,7 @@ snmp-server community <span class="tk">[SNMP_RO_1]</span> RO</div>
         </div>
 
         <!-- ClaimForge -->
-        <div class="product-card">
+        <div class="product-card" id="product-claimforge">
           <div class="product-head">
             <img alt="ClaimForge extension preview" class="product-mark-img" src="/images/icons/claimforge.png" width="44" height="44" loading="lazy">
             <div>
@@ -585,7 +603,7 @@ Seller says warranty is "only 1 year"…</div>
               <span class="price-pro">€3.99<small style="font-size:12px;font-weight:400">/mo</small></span>
               <span class="price-once">· €24.99/yr · €49.99 lifetime</span>
             </div>
-            <a class="btn-store learn" href="/claimforge/">Learn more</a>
+            <a class="btn-store learn" href="/claimforge/">Try ClaimForge</a>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/mlnjadkolgplpgbheklkdjcglojfakcg" target="_blank" rel="noopener">
               ↗ Chrome Web Store
             </a>
@@ -593,7 +611,7 @@ Seller says warranty is "only 1 year"…</div>
         </div>
 
         <!-- ConvertForge -->
-        <div class="product-card">
+        <div class="product-card" id="product-convertforge">
           <div class="product-head">
             <img alt="ConvertForge extension preview" class="product-mark-img" src="/images/icons/convertforge.png" width="44" height="44" loading="lazy">
             <div>
@@ -634,7 +652,7 @@ Seller says warranty is "only 1 year"…</div>
               <span class="price-pro">€4.99<small style="font-size:12px;font-weight:400">/mo</small></span>
               <span class="price-once">· €29.99/yr · €69.99 lifetime</span>
             </div>
-            <a class="btn-store learn" href="/convertforge/">Learn more</a>
+            <a class="btn-store learn" href="/convertforge/">Try ConvertForge</a>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/mjmamnnhophdhccknmgnppcdkojkpagj" target="_blank" rel="noopener">
               ↗ Chrome Web Store
             </a>
@@ -642,7 +660,8 @@ Seller says warranty is "only 1 year"…</div>
         </div>
 
         <!-- SlimeForge -->
-        <div class="product-card">
+        <div class="product-card product-card-featured" id="product-slimeforge">
+          <div class="product-featured-label">★ Most engaging in current GA4 signal</div>
           <div class="product-head">
             <img alt="SlimeForge extension preview" class="product-mark-img" src="/images/icons/slimeforge.png" width="44" height="44" loading="lazy">
             <div>
@@ -694,7 +713,7 @@ Seller says warranty is "only 1 year"…</div>
               <span class="price-pro">€1.99<small style="font-size:12px;font-weight:400">/mo</small></span>
               <span class="price-once">· €9.99/yr · €19.99 lifetime</span>
             </div>
-            <a class="btn-store learn" href="/slimeforge/">Learn more</a>
+            <a class="btn-store learn" href="/slimeforge/">Try SlimeForge</a>
             <a class="btn-store" href="https://chromewebstore.google.com/detail/dobhabpmcmpfdihchnhbickecelihhbc" target="_blank" rel="noopener">
               ↗ Chrome Web Store
             </a>
@@ -759,7 +778,7 @@ Seller says warranty is "only 1 year"…</div>
           <div class="priv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6"/><path d="M4.5 12v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"/><path d="M16 16l5 5m0-5l-5 5"/></svg></div>
           <div>
             <div class="priv-label">No extension content collected</div>
-            <div class="priv-desc">We do not collect, store or transmit any personal data or usage analytics.</div>
+            <div class="priv-desc">We do not collect, store or transmit your extension content. Minimal product events such as installs and sessions may be measured in aggregate to improve the tools.</div>
           </div>
         </div>
         <div class="priv-item">
@@ -793,5 +812,24 @@ Seller says warranty is "only 1 year"…</div>
   </footer>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Wendygo Studio","url":"https://wendygostudio.com/","inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Wendygo Studio Chrome extensions","itemListElement":[{"@type":"ListItem","position":1,"url":"https://wendygostudio.com/textforge/","name":"TextForge"},{"@type":"ListItem","position":2,"url":"https://wendygostudio.com/frameforge/","name":"FrameForge"},{"@type":"ListItem","position":3,"url":"https://wendygostudio.com/scrubforge/","name":"ScrubForge"},{"@type":"ListItem","position":4,"url":"https://wendygostudio.com/claimforge/","name":"ClaimForge"},{"@type":"ListItem","position":5,"url":"https://wendygostudio.com/convertforge/","name":"ConvertForge"},{"@type":"ListItem","position":6,"url":"https://wendygostudio.com/slimeforge/","name":"SlimeForge"}]}</script>
+  <section class="section" id="compare">
+    <div class="section-inner">
+      <div class="section-label">Choose with confidence</div>
+      <h2 class="section-title">One ecosystem, different jobs</h2>
+      <p class="section-sub">Every Forge has a free tier, no account requirement and local-first core processing.</p>
+      <div class="home-comparison"><table><thead><tr><th>Need</th><th>Forge</th><th>Core processing</th><th>Account</th></tr></thead><tbody>
+        <tr><td>Text cleanup and transforms</td><td><a href="/textforge/">TextForge</a></td><td>On device</td><td>Not required</td></tr>
+        <tr><td>Images and social sizes</td><td><a href="/frameforge/">FrameForge</a></td><td>On device</td><td>Not required</td></tr>
+        <tr><td>File conversion</td><td><a href="/convertforge/">ConvertForge</a></td><td>On device</td><td>Not required</td></tr>
+        <tr><td>Network config sanitization</td><td><a href="/scrubforge/">ScrubForge</a></td><td>Local / BYOK optional</td><td>Not required</td></tr>
+        <tr><td>EU consumer claims</td><td><a href="/claimforge/">ClaimForge</a></td><td>On device</td><td>Not required</td></tr>
+        <tr><td>Focus sessions</td><td><a href="/slimeforge/">SlimeForge</a></td><td>On device</td><td>Not required</td></tr>
+      </tbody></table></div>
+      <div class="hero-ctas" style="margin-top:28px;margin-bottom:0"><a class="cta-primary" href="#products">See all six tools</a><a class="cta-ghost" href="/privacy">Read the privacy policy</a></div>
+    </div>
+  </section>
+
 </body>
 </html>

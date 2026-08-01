@@ -25,6 +25,7 @@ seo-agent/STOP
 .env
 *.env.local
 __pycache__/
+backups/
 
 # Analytics data (pulled by agent, not committed)
 analytics-data.json
