@@ -28,3 +28,5 @@ __pycache__/
 
 # Analytics data (pulled by agent, not committed)
 analytics-data.json
+seo-agent/config/ga-token.json
+ga-analytics-data.json

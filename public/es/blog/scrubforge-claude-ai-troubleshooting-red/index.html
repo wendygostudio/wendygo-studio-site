@@ -32,13 +32,13 @@
         "@type": "HowToStep",
         "position": 2,
         "name": "Open ScrubForge",
-        "text": "Click the ScrubForge icon in your Chrome toolbar. The extension opens locally — nothing is uploaded at this step."
+        "text": "Click the ScrubForge icon in your Chrome toolbar. The extension opens locally â€” nothing is uploaded at this step."
       },
       {
         "@type": "HowToStep",
         "position": 3,
         "name": "Paste and sanitize",
-        "text": "Paste the raw config into ScrubForge. It detects passwords, pre-shared keys, API tokens, private keys, and SNMP strings — replacing each unique value with a consistent placeholder token like [PSK_1] or [ADMIN_PASS_1]."
+        "text": "Paste the raw config into ScrubForge. It detects passwords, pre-shared keys, API tokens, private keys, and SNMP strings â€” replacing each unique value with a consistent placeholder token like [PSK_1] or [ADMIN_PASS_1]."
       },
       {
         "@type": "HowToStep",
@@ -73,7 +73,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How to Use ScrubForge with Claude AI for Network Troubleshooting",
-    "description": "Claude's long context window makes it useful for analyzing large network configs. Sanitize with ScrubForge first — live credentials stay off Anthropic's servers.",
+    "description": "Claude's long context window makes it useful for analyzing large network configs. Sanitize with ScrubForge first â€” live credentials stay off Anthropic's servers.",
     "datePublished": "2026-07-12",
     "dateModified": "2026-07-12",
     "author": {"@type": "Organization", "name": "Wendygo Studio", "url": "https://wendygostudio.com"},
@@ -91,12 +91,12 @@
         "name": "Does ScrubForge work the same way with Claude as with ChatGPT?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. ScrubForge sanitizes locally regardless of which AI assistant you use afterward. The sanitization step is identical — paste config, scrub credentials, copy clean output. Where you paste that output is up to you."
+          "text": "Yes. ScrubForge sanitizes locally regardless of which AI assistant you use afterward. The sanitization step is identical â€” paste config, scrub credentials, copy clean output. Where you paste that output is up to you."
         }
       },
       {
         "@type": "Question",
-        "name": "Claude has a large context window — does that help with big configs?",
+        "name": "Claude has a large context window â€” does that help with big configs?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "It helps. Claude can ingest a complete, multi-thousand-line config without requiring you to truncate it. This is useful when the issue spans multiple sections of a large configuration file. Sanitize the full export and paste it whole."
@@ -115,7 +115,7 @@
         "name": "Does Anthropic train on my Claude conversations?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Anthropic's data handling policies vary by plan and API usage. Check the current Anthropic privacy policy for specifics. For sensitive configurations, the safest approach is to ensure credentials never reach the server in the first place — which is what ScrubForge handles."
+          "text": "Anthropic's data handling policies vary by plan and API usage. Check the current Anthropic privacy policy for specifics. For sensitive configurations, the safest approach is to ensure credentials never reach the server in the first place â€” which is what ScrubForge handles."
         }
       },
       {
@@ -123,7 +123,7 @@
         "name": "Is the free version of ScrubForge enough for this workflow?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The core sanitization feature works for free — paste a config, get a sanitized version with credentials replaced by tokens. The Pro version adds custom dictionary import/export, context profiles for different vendor types, and unlimited saved replacements."
+          "text": "The core sanitization feature works for free â€” paste a config, get a sanitized version with credentials replaced by tokens. The Pro version adds custom dictionary import/export, context profiles for different vendor types, and unlimited saved replacements."
         }
       }
     ]
@@ -349,8 +349,8 @@
 
   <header class="article-meta">
     <div class="article-tag">ScrubForge &middot; Flujo de trabajo</div>
-    <h1>Cómo Usar ScrubForge con Claude AI para Troubleshooting de Red</h1>
-    <p class="article-intro">La gran ventana de contexto de Claude maneja bien las configs de red completas. El truco: pegar una config en bruto envía credenciales activas a los servidores de Anthropic. Sanitiza con ScrubForge primero &mdash; el arreglo lleva menos de un minuto.</p>
+    <h1>CÃ³mo Usar ScrubForge con Claude AI para Troubleshooting de Red</h1>
+    <p class="article-intro">La gran ventana de contexto de Claude maneja bien las configs de red completas. El truco: pegar una config en bruto envÃ­a credenciales activas a los servidores de Anthropic. Sanitiza con ScrubForge primero &mdash; el arreglo lleva menos de un minuto.</p>
     <div class="article-date">12 de julio de 2026</div>
   </header>
 
@@ -358,82 +358,82 @@
 
   <article class="article-body">
 
-    <p>Claude, el asistente de IA de Anthropic, se ha ganado un público fiel entre ingenieros por su razonamiento preciso y su gran ventana de contexto. Los sysadmins lo usan para analizar configuraciones BGP, depurar políticas de VPN y desentrañar lógicas complejas de reglas de firewall &mdash; exactamente el tipo de razonamiento estructurado en el que Claude rinde bien.</p>
+    <p>Claude, el asistente de IA de Anthropic, se ha ganado un pÃºblico fiel entre ingenieros por su razonamiento preciso y su gran ventana de contexto. Los sysadmins lo usan para analizar configuraciones BGP, depurar polÃ­ticas de VPN y desentraÃ±ar lÃ³gicas complejas de reglas de firewall &mdash; exactamente el tipo de razonamiento estructurado en el que Claude rinde bien.</p>
 
-    <p>El problema de las credenciales es idéntico al de cualquier otro asistente de IA. Cuando pegas una config de red en Claude, ese texto va a los servidores de Anthropic. Tus claves precompartidas de VPN activas, contraseñas de administrador, tokens de API y community strings de SNMP van con él.</p>
+    <p>El problema de las credenciales es idÃ©ntico al de cualquier otro asistente de IA. Cuando pegas una config de red en Claude, ese texto va a los servidores de Anthropic. Tus claves precompartidas de VPN activas, contraseÃ±as de administrador, tokens de API y community strings de SNMP van con Ã©l.</p>
 
-    <p><strong>ScrubForge lo resuelve:</strong> sanitiza la config en local, en Chrome, y luego pega la versión limpia en Claude sin ninguna credencial activa adjunta.</p>
+    <p><strong>ScrubForge lo resuelve:</strong> sanitiza la config en local, en Chrome, y luego pega la versiÃ³n limpia en Claude sin ninguna credencial activa adjunta.</p>
 
-    <h2>Por qué los sysadmins usan Claude para configs de red</h2>
+    <h2>Por quÃ© los sysadmins usan Claude para configs de red</h2>
 
-    <p>Claude maneja bien el texto denso y estructurado. Una config de FortiGate de 1.500 líneas o un export de Cisco IOS-XR con múltiples VRFs cabe en su ventana de contexto &mdash; Claude puede analizarlo como documento completo en vez de como fragmento truncado.</p>
+    <p>Claude maneja bien el texto denso y estructurado. Una config de FortiGate de 1.500 lÃ­neas o un export de Cisco IOS-XR con mÃºltiples VRFs cabe en su ventana de contexto &mdash; Claude puede analizarlo como documento completo en vez de como fragmento truncado.</p>
 
     <p>Casos de uso comunes donde Claude aporta valor:</p>
 
     <ul>
-      <li><strong>Depuración de IPsec e IKEv2</strong> &mdash; identificar parámetros de fase 1/fase 2 desajustados, inconsistencias en los timers de DPD o un orden de propuestas incorrecto</li>
-      <li><strong>Análisis de políticas BGP</strong> &mdash; explicar la lógica de route-maps, revisar el manejo de community tags, señalar configuraciones de peers ausentes</li>
-      <li><strong>Revisión de políticas de firewall</strong> &mdash; encontrar reglas en shadow, detectar denys ausentes, revisar el orden del NAT</li>
-      <li><strong>VLANs y spanning-tree</strong> &mdash; detectar desajustes de trunks, inconsistencias de VLAN nativa, problemas de topología STP</li>
+      <li><strong>DepuraciÃ³n de IPsec e IKEv2</strong> &mdash; identificar parÃ¡metros de fase 1/fase 2 desajustados, inconsistencias en los timers de DPD o un orden de propuestas incorrecto</li>
+      <li><strong>AnÃ¡lisis de polÃ­ticas BGP</strong> &mdash; explicar la lÃ³gica de route-maps, revisar el manejo de community tags, seÃ±alar configuraciones de peers ausentes</li>
+      <li><strong>RevisiÃ³n de polÃ­ticas de firewall</strong> &mdash; encontrar reglas en shadow, detectar denys ausentes, revisar el orden del NAT</li>
+      <li><strong>VLANs y spanning-tree</strong> &mdash; detectar desajustes de trunks, inconsistencias de VLAN nativa, problemas de topologÃ­a STP</li>
     </ul>
 
-    <p>Claude también soporta sesiones largas de troubleshooting de ida y vuelta en las que puedes compartir contexto adicional de forma incremental &mdash; útil cuando el análisis inicial destapa preguntas de seguimiento.</p>
+    <p>Claude tambiÃ©n soporta sesiones largas de troubleshooting de ida y vuelta en las que puedes compartir contexto adicional de forma incremental &mdash; Ãºtil cuando el anÃ¡lisis inicial destapa preguntas de seguimiento.</p>
 
     <h2>El riesgo de credenciales es el mismo</h2>
 
-    <p>La ventana de contexto de Claude no cambia el problema de privacidad subyacente. Cuando envías un mensaje a Claude, el texto va a la infraestructura de Anthropic. Según el tipo de cuenta y la configuración de uso, puede retenerse para revisión de abusos, monitorización de seguridad o mejora del producto.</p>
+    <p>La ventana de contexto de Claude no cambia el problema de privacidad subyacente. Cuando envÃ­as un mensaje a Claude, el texto va a la infraestructura de Anthropic. SegÃºn el tipo de cuenta y la configuraciÃ³n de uso, puede retenerse para revisiÃ³n de abusos, monitorizaciÃ³n de seguridad o mejora del producto.</p>
 
-    <p>Una config de firewall de producción con credenciales activas no pinta nada en ningún servidor externo &mdash; da igual qué asistente de IA uses.</p>
+    <p>Una config de firewall de producciÃ³n con credenciales activas no pinta nada en ningÃºn servidor externo &mdash; da igual quÃ© asistente de IA uses.</p>
 
     <h2>El flujo ScrubForge + Claude</h2>
 
-    <p>El paso de sanitización lleva menos de un minuto. El resto del flujo es idéntico a lo que harías con cualquier asistente de IA.</p>
+    <p>El paso de sanitizaciÃ³n lleva menos de un minuto. El resto del flujo es idÃ©ntico a lo que harÃ­as con cualquier asistente de IA.</p>
 
     <ol class="steps">
       <li class="step-card">
         <div class="step-num">1</div>
         <div class="step-content">
           <div class="step-title">Exporta tu running config</div>
-          <div class="step-desc">Usa tu método habitual: <code>show running-config</code> en Cisco IOS, <code>get system config</code> en la CLI de FortiGate, o una descarga de configuración desde tu interfaz de gestión.</div>
+          <div class="step-desc">Usa tu mÃ©todo habitual: <code>show running-config</code> en Cisco IOS, <code>get system config</code> en la CLI de FortiGate, o una descarga de configuraciÃ³n desde tu interfaz de gestiÃ³n.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">2</div>
         <div class="step-content">
           <div class="step-title">Abre ScrubForge</div>
-          <div class="step-desc">Haz clic en el icono de ScrubForge en tu barra de Chrome. La extensión se abre en local &mdash; en este paso no se sube nada.</div>
+          <div class="step-desc">Haz clic en el icono de ScrubForge en tu barra de Chrome. La extensiÃ³n se abre en local &mdash; en este paso no se sube nada.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">3</div>
         <div class="step-content">
           <div class="step-title">Pega y sanitiza</div>
-          <div class="step-desc">Pega la config en bruto. ScrubForge detecta contraseñas, claves precompartidas, tokens de API, claves privadas y strings de SNMP &mdash; sustituyendo cada valor único por un placeholder consistente como <code>[PSK_1]</code> o <code>[ADMIN_PASS_1]</code>. La topología de red queda intacta.</div>
+          <div class="step-desc">Pega la config en bruto. ScrubForge detecta contraseÃ±as, claves precompartidas, tokens de API, claves privadas y strings de SNMP &mdash; sustituyendo cada valor Ãºnico por un placeholder consistente como <code>[PSK_1]</code> o <code>[ADMIN_PASS_1]</code>. La topologÃ­a de red queda intacta.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">4</div>
         <div class="step-content">
           <div class="step-title">Revisa la salida sanitizada</div>
-          <div class="step-desc">Dedica 30 segundos a buscar cualquier cosa que parezca una credencial activa. ScrubForge cubre más de 120 patrones de 12 fabricantes, pero una revisión rápida antes de compartir es buena práctica.</div>
+          <div class="step-desc">Dedica 30 segundos a buscar cualquier cosa que parezca una credencial activa. ScrubForge cubre mÃ¡s de 120 patrones de 12 fabricantes, pero una revisiÃ³n rÃ¡pida antes de compartir es buena prÃ¡ctica.</div>
         </div>
       </li>
       <li class="step-card">
         <div class="step-num">5</div>
         <div class="step-content">
           <div class="step-title">Pega en Claude con contexto</div>
-          <div class="step-desc">Abre Claude, describe tu problema y pega la config sanitizada. Claude puede analizar toda la estructura lógica sin ver ninguna credencial real.</div>
+          <div class="step-desc">Abre Claude, describe tu problema y pega la config sanitizada. Claude puede analizar toda la estructura lÃ³gica sin ver ninguna credencial real.</div>
         </div>
       </li>
     </ol>
 
     <div class="callout">
-      <strong>Ejemplo de prompt:</strong> &ldquo;Aquí va una config de Cisco IOS sanitizada (credenciales sustituidas por tokens placeholder &mdash; la estructura de red está intacta). Mi túnel IPsec site-to-site hacia 198.51.100.10 se cae cada 6 horas y no se recupera automáticamente. ¿Puedes identificar causas probables a partir de la config?&rdquo;
+      <strong>Ejemplo de prompt:</strong> &ldquo;AquÃ­ va una config de Cisco IOS sanitizada (credenciales sustituidas por tokens placeholder &mdash; la estructura de red estÃ¡ intacta). Mi tÃºnel IPsec site-to-site hacia 198.51.100.10 se cae cada 6 horas y no se recupera automÃ¡ticamente. Â¿Puedes identificar causas probables a partir de la config?&rdquo;
     </div>
 
-    <h2>Antes y después: qué recibe Claude</h2>
+    <h2>Antes y despuÃ©s: quÃ© recibe Claude</h2>
 
-    <p>Un fragmento que muestra cómo queda la sanitización en la práctica:</p>
+    <p>Un fragmento que muestra cÃ³mo queda la sanitizaciÃ³n en la prÃ¡ctica:</p>
 
     <pre>--- ANTES (en bruto) ---
 crypto isakmp key MyS3cr3tK3y address 203.0.113.5
@@ -442,43 +442,43 @@ snmp-server community C0mmun1ty! RO
 ip vrf MGMT
  rd 65001:100
 
---- DESPUÉS (sanitizado por ScrubForge) ---
+--- DESPUÃ‰S (sanitizado por ScrubForge) ---
 crypto isakmp key [PSK_1] address 203.0.113.5
 username admin password 7 [ENC_PASS_1]
 snmp-server community [SNMP_RO_1] RO
 ip vrf MGMT
  rd 65001:100</pre>
 
-    <p>La IP del peer, el identificador de routing y el nombre del VRF se quedan en su sitio. Claude ve la estructura lógica completa sin ninguna credencial activa. Y como los tokens son consistentes &mdash; la misma contraseña que aparece cinco veces se convierte en <code>[ADMIN_PASS_1]</code> en todas ellas &mdash; Claude aún puede razonar sobre patrones de reutilización sin ver el valor real.</p>
+    <p>La IP del peer, el identificador de routing y el nombre del VRF se quedan en su sitio. Claude ve la estructura lÃ³gica completa sin ninguna credencial activa. Y como los tokens son consistentes &mdash; la misma contraseÃ±a que aparece cinco veces se convierte en <code>[ADMIN_PASS_1]</code> en todas ellas &mdash; Claude aÃºn puede razonar sobre patrones de reutilizaciÃ³n sin ver el valor real.</p>
 
-    <h2>Qué hace bien Claude con configs sanitizadas</h2>
+    <h2>QuÃ© hace bien Claude con configs sanitizadas</h2>
 
     <p>Los puntos fuertes de Claude encajan bien con las tareas de troubleshooting de red:</p>
 
     <ul>
-      <li><strong>Análisis de configs extensas.</strong> Claude puede ingerir un export completo sin obligarte a truncarlo. Esto importa cuando el fallo está en la interacción entre políticas y no en un bloque aislado.</li>
-      <li><strong>Razonamiento estructurado.</strong> Claude tiende a explicar <em>por qué</em> algo está mal, no solo a señalarlo &mdash; útil cuando necesitas entender la causa raíz en vez de aplicar un parche a ciegas.</li>
-      <li><strong>Sesiones iterativas.</strong> Puedes seguir con contexto adicional (&ldquo;aquí va la salida de <code>show ip bgp summary</code>&rdquo; o &ldquo;esto es lo que cambió en las últimas 48 horas&rdquo;) dentro de la misma conversación.</li>
-      <li><strong>Configs multi-fabricante.</strong> Si estás depurando un camino que cruza un router Cisco, un firewall FortiGate y un Palo Alto, puedes pegar varias configs sanitizadas en una sola sesión y pedir a Claude que busque inconsistencias entre dispositivos.</li>
+      <li><strong>AnÃ¡lisis de configs extensas.</strong> Claude puede ingerir un export completo sin obligarte a truncarlo. Esto importa cuando el fallo estÃ¡ en la interacciÃ³n entre polÃ­ticas y no en un bloque aislado.</li>
+      <li><strong>Razonamiento estructurado.</strong> Claude tiende a explicar <em>por quÃ©</em> algo estÃ¡ mal, no solo a seÃ±alarlo &mdash; Ãºtil cuando necesitas entender la causa raÃ­z en vez de aplicar un parche a ciegas.</li>
+      <li><strong>Sesiones iterativas.</strong> Puedes seguir con contexto adicional (&ldquo;aquÃ­ va la salida de <code>show ip bgp summary</code>&rdquo; o &ldquo;esto es lo que cambiÃ³ en las Ãºltimas 48 horas&rdquo;) dentro de la misma conversaciÃ³n.</li>
+      <li><strong>Configs multi-fabricante.</strong> Si estÃ¡s depurando un camino que cruza un router Cisco, un firewall FortiGate y un Palo Alto, puedes pegar varias configs sanitizadas en una sola sesiÃ³n y pedir a Claude que busque inconsistencias entre dispositivos.</li>
     </ul>
 
-    <h2>Usar Proyectos de Claude para análisis de config continuado</h2>
+    <h2>Usar Proyectos de Claude para anÃ¡lisis de config continuado</h2>
 
-    <p>La función de Proyectos de Claude te permite organizar conversaciones relacionadas bajo un contexto compartido. Para troubleshooting de red, puedes añadir una config base sanitizada a un Proyecto una vez y referenciarla en múltiples sesiones sin volver a pegarla cada vez.</p>
+    <p>La funciÃ³n de Proyectos de Claude te permite organizar conversaciones relacionadas bajo un contexto compartido. Para troubleshooting de red, puedes aÃ±adir una config base sanitizada a un Proyecto una vez y referenciarla en mÃºltiples sesiones sin volver a pegarla cada vez.</p>
 
-    <p>Aplica la misma regla: añade a un Proyecto solo configs sanitizadas. Un Proyecto sigue estando alojado en la nube. Una config sanitizada con tokens placeholder es segura de almacenar ahí; una config en bruto con credenciales activas, no.</p>
+    <p>Aplica la misma regla: aÃ±ade a un Proyecto solo configs sanitizadas. Un Proyecto sigue estando alojado en la nube. Una config sanitizada con tokens placeholder es segura de almacenar ahÃ­; una config en bruto con credenciales activas, no.</p>
 
     <h2>Esto funciona con cualquier asistente de IA</h2>
 
-    <p>El flujo de ScrubForge es agnóstico de la IA. Uses Claude, ChatGPT, Gemini o Copilot, el paso de sanitización es idéntico &mdash; pega la config, limpia las credenciales, copia la salida limpia. El riesgo de credenciales es el mismo sea cual sea la IA que lo reciba; el arreglo también.</p>
+    <p>El flujo de ScrubForge es agnÃ³stico de la IA. Uses Claude, ChatGPT, Gemini o Copilot, el paso de sanitizaciÃ³n es idÃ©ntico &mdash; pega la config, limpia las credenciales, copia la salida limpia. El riesgo de credenciales es el mismo sea cual sea la IA que lo reciba; el arreglo tambiÃ©n.</p>
 
     <div class="related-links">
-      <h3>Guías relacionadas</h3>
+      <h3>GuÃ­as relacionadas</h3>
       <ul>
         <li><a href="/es/blog/scrubforge-chatgpt-troubleshooting-red/">ScrubForge + ChatGPT para troubleshooting de red</a></li>
-        <li><a href="/es/blog/sanitize-network-config-before-sharing/">Cómo sanitizar cualquier config de red antes de compartirla</a></li>
+        <li><a href="/es/blog/sanitize-network-config-before-sharing/">CÃ³mo sanitizar cualquier config de red antes de compartirla</a></li>
         <li><a href="/es/blog/remover-datos-sensibles-cisco-config/">Eliminar datos sensibles de configs de Cisco</a></li>
-        <li><a href="/es/blog/sanitizar-config-fortigate/">Cómo compartir una config de FortiGate de forma segura</a></li>
+        <li><a href="/es/blog/sanitize-fortigate-config/">CÃ³mo compartir una config de FortiGate de forma segura</a></li>
       </ul>
     </div>
 
@@ -494,28 +494,28 @@ ip vrf MGMT
     <h2>Preguntas frecuentes</h2>
 
     <div class="faq-item">
-      <div class="faq-q">¿ScrubForge funciona igual con Claude que con ChatGPT?</div>
-      <div class="faq-a">Sí. ScrubForge sanitiza en local independientemente del asistente de IA que uses después. El paso de sanitización es idéntico &mdash; pegar config, limpiar credenciales, copiar salida limpia. Dónde pegues esa salida depende de ti.</div>
+      <div class="faq-q">Â¿ScrubForge funciona igual con Claude que con ChatGPT?</div>
+      <div class="faq-a">SÃ­. ScrubForge sanitiza en local independientemente del asistente de IA que uses despuÃ©s. El paso de sanitizaciÃ³n es idÃ©ntico &mdash; pegar config, limpiar credenciales, copiar salida limpia. DÃ³nde pegues esa salida depende de ti.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Claude tiene una ventana de contexto grande &mdash; ¿ayuda con configs grandes?</div>
-      <div class="faq-a">Ayuda. Claude puede ingerir una config completa de varios miles de líneas sin obligarte a truncarla. Es útil cuando el problema abarca varias secciones de un fichero de configuración grande. Sanitiza el export completo y pégalo entero.</div>
+      <div class="faq-q">Claude tiene una ventana de contexto grande &mdash; Â¿ayuda con configs grandes?</div>
+      <div class="faq-a">Ayuda. Claude puede ingerir una config completa de varios miles de lÃ­neas sin obligarte a truncarla. Es Ãºtil cuando el problema abarca varias secciones de un fichero de configuraciÃ³n grande. Sanitiza el export completo y pÃ©galo entero.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">¿Puedo usar los Proyectos de Claude para guardar una config sanitizada como referencia?</div>
-      <div class="faq-a">Sí, y es un flujo razonable para trabajo de infraestructura continuado. Añade la config sanitizada como fichero de contexto en un Proyecto. Como las credenciales están sustituidas por tokens, es seguro guardarla en un Proyecto alojado en la nube. Guardar ahí una config en bruto sería el equivalente a enviarla por email en texto plano.</div>
+      <div class="faq-q">Â¿Puedo usar los Proyectos de Claude para guardar una config sanitizada como referencia?</div>
+      <div class="faq-a">SÃ­, y es un flujo razonable para trabajo de infraestructura continuado. AÃ±ade la config sanitizada como fichero de contexto en un Proyecto. Como las credenciales estÃ¡n sustituidas por tokens, es seguro guardarla en un Proyecto alojado en la nube. Guardar ahÃ­ una config en bruto serÃ­a el equivalente a enviarla por email en texto plano.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">¿Anthropic entrena con mis conversaciones de Claude?</div>
-      <div class="faq-a">Las políticas de manejo de datos de Anthropic varían según el plan y el uso de la API. Consulta la política de privacidad vigente de Anthropic para los detalles. Para configuraciones sensibles, lo más seguro es garantizar que las credenciales no lleguen nunca al servidor &mdash; que es justo lo que hace ScrubForge.</div>
+      <div class="faq-q">Â¿Anthropic entrena con mis conversaciones de Claude?</div>
+      <div class="faq-a">Las polÃ­ticas de manejo de datos de Anthropic varÃ­an segÃºn el plan y el uso de la API. Consulta la polÃ­tica de privacidad vigente de Anthropic para los detalles. Para configuraciones sensibles, lo mÃ¡s seguro es garantizar que las credenciales no lleguen nunca al servidor &mdash; que es justo lo que hace ScrubForge.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">¿La versión gratuita de ScrubForge basta para este flujo?</div>
-      <div class="faq-a">La función principal de sanitización funciona gratis &mdash; pegas una config y obtienes una versión sanitizada con las credenciales sustituidas por tokens. La versión Pro añade importación/exportación de diccionarios personalizados, perfiles de contexto para distintos tipos de fabricante y reemplazos guardados ilimitados.</div>
+      <div class="faq-q">Â¿La versiÃ³n gratuita de ScrubForge basta para este flujo?</div>
+      <div class="faq-a">La funciÃ³n principal de sanitizaciÃ³n funciona gratis &mdash; pegas una config y obtienes una versiÃ³n sanitizada con las credenciales sustituidas por tokens. La versiÃ³n Pro aÃ±ade importaciÃ³n/exportaciÃ³n de diccionarios personalizados, perfiles de contexto para distintos tipos de fabricante y reemplazos guardados ilimitados.</div>
     </div>
 
   </section>
@@ -528,7 +528,7 @@ ip vrf MGMT
     <a href="/es/blog/">Blog</a>
     <a href="/#tools">Herramientas</a>
     <a href="/es/privacy">Privacidad</a>
-    <a href="/es/terms">Términos</a>
+    <a href="/es/terms">TÃ©rminos</a>
   </div>
   <div class="footer-copy">&copy; 2026 Wendygo Studio. Todos los derechos reservados.</div>
 </footer>

@@ -13,20 +13,29 @@ actual de Wendygo Studio.
 
 ## Flujo de Codex
 
-1. Leer `MEMORY.md`, el journal anterior, `data/products.json` y
-   `analytics-data.json`.
-2. Aplicar la primera acción con impacto real según la jerarquía del prompt:
+1. Leer `MEMORY.md`, el journal anterior, `data/products.json`,
+   `analytics-data.json` y `ga-analytics-data.json` si existe.
+2. Antes de elegir una acción, comparar Search Console con GA4. GA4 se usa
+   para detectar tendencia de las extensiones, no para sustituir las señales
+   SEO. Si existe `seo-agent/config/ga-token.json`, refrescar primero
+   `seo-agent/scripts/analytics-ga-fetch.py`. No comparar una semana parcial
+   con una semana completa.
+3. Aplicar la matriz de decisión conjunta del prompt: una señal aislada se
+   documenta, pero no dispara cambios. La acción debe corresponder al cruce de
+   Search Console, GA4, calidad técnica y distribución externa.
+4. Aplicar la primera acción con impacto real según la jerarquía del prompt:
    errores críticos, Search Console, enlazado, mejora existente o artículo.
-3. Ejecutar `npm.cmd run seo:fix` y `npm.cmd run validate` en Windows.
-4. Ejecutar `npm.cmd test`.
-5. En la misma ejecución, resolver una tanda de 2–4 grupos de artículos que aún no tengan las seis versiones lingüísticas, priorizando señales de Search Console y grupos a los que solo les falte una lengua.
-6. Actualizar `seo-agent/journal/YYYY-MM-DD.md` y `MEMORY.md`.
-7. Tras superar las validaciones, ejecutar el ciclo externo prudente: Bluesky
+5. Ejecutar `npm.cmd run seo:fix` y `npm.cmd run validate` en Windows.
+6. Ejecutar `npm.cmd test`.
+7. En la misma ejecución, resolver una tanda de 2–4 grupos de artículos que aún no tengan las seis versiones lingüísticas, priorizando señales de Search Console y grupos a los que solo les falte una lengua.
+8. Actualizar `seo-agent/journal/YYYY-MM-DD.md` y `MEMORY.md`, incluyendo
+   eventos GA4 faltantes, semanas incompletas y cualquier cambio de tracción.
+9. Tras superar las validaciones, ejecutar el ciclo externo prudente: Bluesky
    (publicacion util o engagement organico aunque no haya articulo nuevo) y
    Dev.to cuando exista un articulo nuevo o una actualizacion con aportacion
    editorial real. Si no hay novedad suficiente para Dev.to, documentar el
    salto; nunca publicar por llenar cuota.
-8. Solo tras superar las validaciones, hacer commit y push a `main` si el
+10. Solo tras superar las validaciones, hacer commit y push a `main` si el
    usuario lo solicita.
 
 Las credenciales de `seo-agent/config/agent.env` no se leen ni se exponen para

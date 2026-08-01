@@ -19,6 +19,11 @@ sin más) y **memoria SEO** (qué se hizo, qué se esperaba, qué ocurrió).
   (54 impresiones, posición 16,9, CTR 1,85 %) y completadas las traducciones ES
   de cuatro grupos técnicos: UUID, limpieza de texto, JWT y redimensionado por
   lotes. Validación: 0 errores; tests 7/7; 518 HTML sin problemas.
+- **2026-08-01 (daily 3)**: GA4 refrescado para las seis extensiones; no hay
+  caída general en las dos semanas completas y SlimeForge mantiene la mejor
+  señal. ConvertForge no registra `install`, por lo que se marcó como deuda de
+  instrumentación. Añadidas traducciones ES de garantía UE, FortiGate y
+  desistimiento UE; la cuarta quedó pendiente por timeout del proveedor.
 
 ## 1. Memoria de negocio (decisiones estratégicas)
 

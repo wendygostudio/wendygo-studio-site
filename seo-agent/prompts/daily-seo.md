@@ -78,8 +78,10 @@ solo porque es la más familiar — es la última, no la primera.
 1. **Corregir errores críticos.** `npm run validate` en rojo, enlaces internos
    rotos, contenido con afirmaciones incorrectas sobre un producto, problemas
    legales (ver `validate-legal-content.mjs`, `validate-governance.mjs`).
-2. **Actuar sobre Search Console Intelligence** (Paso 1 más abajo) si hay
-   `analytics-data.json` con señales claras.
+2. **Comparar Search Console y extensiones** (Pasos 1 y 1A más abajo). Usa
+   `analytics-data.json` para SEO y `ga-analytics-data.json` para tracción de
+   producto. Si GA4 no existe o está desactualizado, documenta la limitación
+   y no inventes una caída.
 3. **Reforzar enlazado interno** (Paso 2) hacia páginas en posición 8-20 —
    son las que más rápido pueden entrar en Top 10 sin escribir nada nuevo.
 4. **Mejorar contenido existente** con impresiones altas y CTR bajo, o
@@ -116,6 +118,62 @@ días"), regístralo en `MEMORY.md` sección 2 siguiendo el formato indicado all
 
 Si no existe `analytics-data.json`, documenta su ausencia en el journal y pasa
 al Paso 2 usando solo la estructura del sitio (sin datos de Search Console).
+
+## Paso 1A: Extension Intelligence (GA4)
+
+Si existe `{{SITE_DIR}}/ga-analytics-data.json`, analiza las seis propiedades
+configuradas en `seo-agent/config/ga-properties.json` antes de decidir cambios
+de producto o distribución:
+
+1. Compara únicamente semanas completas. La semana actual solo se muestra como
+   tendencia provisional si tiene siete días; nunca la compares directamente
+   con una semana completa si está incompleta.
+2. Revisa por extensión `activeUsers`, `sessions` y el evento `install`.
+3. Comprueba la instrumentación: registra qué extensiones no envían `install`,
+   `first_open`, `activation`, `feature_use`, `trial_start`, `pro_purchase` o
+   `return_session`. Un cero sin evento instrumentado no es una caída.
+4. Si dos semanas completas muestran una variación de al menos 20 % en usuarios
+   o sesiones, cruza la señal con Search Console, cambios de producto,
+   publicaciones y versiones antes de actuar.
+5. Prioriza una acción de producto o ficha solo cuando la señal se repita en
+   dos semanas completas y la medición sea comparable. Si no, registra el
+   hallazgo como pendiente.
+
+El lector se ejecuta con `seo-agent/scripts/analytics-ga-fetch.py` al inicio de
+la ejecución si existe `seo-agent/config/ga-token.json`. No pidas de nuevo
+credenciales si el token es válido; si la autorización falta, documenta el
+bloqueo y continúa con Search Console. El archivo `ga-analytics-data.json`
+contiene datos agregados y no se commitea.
+
+## Paso 1B: Matriz de decisión conjunta
+
+Cruza las señales antes de actuar. El resultado debe quedar registrado en el
+journal con `signals`, `confidence` y `action`:
+
+| Señal combinada | Interpretación | Acción permitida |
+|---|---|---|
+| Impresiones GSC suben y CTR baja | El snippet pierde atractivo | Mejorar título/descripción de la URL existente |
+| Posición 8–20 y CTR razonable | Hay oportunidad de entrar en Top 10 | Añadir enlazado interno o profundidad, sin URL duplicada |
+| GA4 baja en usuarios/sesiones y GSC también baja | Caída de adquisición o demanda | Revisar SEO, distribución y cambios recientes; no crear contenido automáticamente |
+| GA4 baja pero GSC estable | Problema de activación, producto o medición | Revisar eventos, onboarding y ficha; no reescribir SEO sin señal |
+| Instalaciones GA4 bajan y `install` está instrumentado | Menor adquisición de la extensión | Auditar ficha CWS, propuesta, capturas y fuentes externas |
+| Cero instalaciones pero falta el evento | Medición incompleta | Crear tarea de instrumentación; no afirmar pérdida de tracción |
+| Usuarios activos bajan con instalaciones estables | Problema de activación o retención | Revisar primer uso, errores y fricción; no cambiar precio sin evidencia |
+| Una sola semana parcial cambia más de 20 % | Señal insuficiente | Esperar una semana completa y documentar pendiente |
+| Validación técnica falla | Riesgo prioritario | Corregir primero; bloquear publicación externa |
+
+Reglas adicionales:
+
+1. Una caída solo es accionable si aparece en dos semanas completas o si existe
+   un error técnico reproducible.
+2. Si GA4, Search Console y distribución no cubren la misma fecha, declara la
+   desalineación y no calcules porcentajes combinados.
+3. El Daily SEO puede modificar contenido, enlaces, metadatos, traducciones y
+   configuración de medición. No debe publicar una nueva versión de una
+   extensión ni cambiar precios automáticamente.
+4. Si faltan datos de Chrome Web Store, la conclusión debe indicar
+   `CWS_DATA_REQUIRED`; GA4 no sustituye las impresiones o instalaciones
+   oficiales de la tienda.
 
 ## Paso 2: Enlazado interno dirigido
 
