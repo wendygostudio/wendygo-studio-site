@@ -58,12 +58,8 @@
     .nav-links a:hover { color: var(--text); }
 
     /* ── Forge glow & embers (2026-07-17) ── */
-    .hero { position: relative; overflow: visible; }
-    .hero::before {
-      content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
-      width: min(560px, 80vw); height: 180px; pointer-events: none;
-      background: radial-gradient(ellipse at center bottom, rgba(232,163,61,.11), transparent 72%);
-    }
+    .hero { position: relative; overflow: visible; background: radial-gradient(ellipse at 50% 78%, rgba(232,163,61,.09), transparent 42%); }
+    .hero::before { display: none; }
     .embers { position: absolute; inset: 0; pointer-events: none; overflow: hidden; mask-image: linear-gradient(to top, transparent 0%, #000 14%, #000 78%, transparent 100%); -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 14%, #000 78%, transparent 100%); }
     .embers span {
       position: absolute; bottom: 8%; width: 4px; height: 4px; border-radius: 50%;
