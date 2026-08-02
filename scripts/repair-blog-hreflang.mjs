@@ -34,7 +34,12 @@ for (const item of files) {
   const group = byEnglish.get(en) || { en: item.locale === 'en' ? canonical(html) : en };
   const routes = Object.fromEntries(Object.entries({ ...group, en: group.en || en }).filter(([, url]) => routeExists(url)));
   if (!routes.en && routeExists(en)) routes.en = en;
-  const tags = Object.entries(routes).filter(([, url]) => url).map(([locale, url]) => `<link rel="alternate" hreflang="${locale === 'pt' ? 'pt-PT' : locale}" href="${url}">`).join('') + `<link rel="alternate" hreflang="x-default" href="${routes.en}">`;
+  if (!routes.en) routes.en = canonical(html);
+  const desired = Object.fromEntries(Object.entries(routes).filter(([, url]) => url).map(([locale, url]) => [locale === 'pt' ? 'pt-PT' : locale, url]));
+  desired['x-default'] = routes.en;
+  const current = links(html);
+  if (Object.keys(desired).length === Object.keys(current).length && Object.entries(desired).every(([key, url]) => current[key] === url)) continue;
+  const tags = Object.entries(desired).map(([locale, url]) => `<link rel="alternate" hreflang="${locale}" href="${url}">`).join('');
   const output = html.replace(/\s*<link\s+rel=["']alternate["'][^>]*>/gi, '').replace('</head>', `${tags}</head>`);
   if (output !== html) { changed++; if (!check) fs.writeFileSync(item.file, output, 'utf8'); }
 }

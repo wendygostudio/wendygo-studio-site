@@ -1,15 +1,17 @@
 ---
 schemaVersion: 1
-title: "Limpar texto de tabela copiado localmente"
-description: ">-"
-date: 2026-07-26
+title: Limpe o texto da tabela copiado antes de o colar em qualquer lugar
+description: >-
+  Um fluxo de trabalho local para limpar o texto da tabela copiado, removendo o
+  espaçamento ruidoso e preservando os valores necessários.
+date: 2026-07-26T00:00:00.000Z
 slug: clean-copied-table-text
 locale: pt
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: "limpar texto da tabela copiado"
-relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
+primaryKeyword: limpar texto da tabela copiado
+relatedPages: '/textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/'
 ---
 
 Copiar uma tabela de um PDF, painel ou portal de suporte produz frequentemente um texto que parece quase correto. As colunas separam-se, uma única célula transforma-se em três linhas e os cabeçalhos voltam a aparecer no meio da colagem. A parte perigosa é que o resultado pode ainda parecer plausível o suficiente para ser reutilizado sem verificação.

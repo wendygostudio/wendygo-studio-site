@@ -1,19 +1,22 @@
 ---
 schemaVersion: 1
-title: "Garantía UE de 2 años: derechos, reparaciones y reclamaciones"
-description: ">-"
-date: 2026-07-01
+title: 'Garantía UE de 2 años: derechos, reparaciones y reclamaciones'
+description: >-
+  Los consumidores de la UE suelen tener una garantía legal para los productos
+  defectuosos. Conozca cuándo se aplica, cómo solicitar reparación o reemplazo y
+  qué hacer si el vendedor se niega.
+date: 2026-07-01T00:00:00.000Z
 slug: eu-warranty-rights-explained
 locale: es
 translationKey: eu-warranty-rights-explained
 product: claimforge
 contentType: how-to
-primaryKeyword: ">-"
+primaryKeyword: '>-'
 relatedPages: /claimforge/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-01T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
-sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
+sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
 # Explicación de los derechos de la garantía de 2 años de la UE: a qué tiene derecho y cómo reclamarlo

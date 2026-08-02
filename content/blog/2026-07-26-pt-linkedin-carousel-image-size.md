@@ -1,15 +1,20 @@
 ---
 schemaVersion: 1
-title: "Tamanho de imagem para carrossel LinkedIn"
-description: ">-"
-date: 2026-07-26
+title: >-
+  Tamanho da imagem do carrossel do LinkedIn: um fluxo de trabalho local do
+  Chrome
+description: >-
+  Prepare imagens consistentes do carrossel do LinkedIn localmente no Chrome,
+  sem enviar a arte original para um editor online.
+date: 2026-07-26T00:00:00.000Z
 slug: linkedin-carousel-image-size
 locale: pt
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: "tamanho da imagem do carrossel do LinkedIn"
-relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
+primaryKeyword: tamanho da imagem do carrossel do LinkedIn
+relatedPages: >-
+  /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 Os carrosséis do LinkedIn funcionam quando parecem um único documento: uma página de abertura clara, uma sequência legível e uma página de fecho que não parece comprimida ou cortada. O problema prático raramente é a criatividade. Prepara várias imagens com uma moldura consistente enquanto protege a arte original que pode incluir trabalho do cliente, capturas de ecrã ou material interno do produto.

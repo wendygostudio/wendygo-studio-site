@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>Cómo convertir CSV a JSON gratis (localmente, sin conexión)</title>
+  <meta name="description" content="Convierta archivos CSV a formato JSON completamente en su navegador sin cargarlos en el servidor. Código abierto, fuera de línea, rápido." />
+  <link rel="canonical" href="https://wendygostudio.com/es/blog/convert-csv-to-json-free/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo convertir CSV a JSON gratis (localmente, sin conexión)","description":"Convierta archivos CSV a formato JSON completamente en su navegador sin cargarlos en el servidor. Código abierto, fuera de línea, rápido.","datePublished":"2026-07-08","dateModified":"2026-07-08","inLanguage":"es","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/es/blog/convert-csv-to-json-free/"},"wordCount":571,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://wendygostudio.com/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/es/blog/"},{"@type":"ListItem","position":3,"name":"Cómo convertir CSV a JSON gratis (localmente, sin conexión)"}]}</script>
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="Cómo convertir CSV a JSON gratis (localmente, sin conexión)" />
+  <meta property="og:description" content="Convierta archivos CSV a formato JSON completamente en su navegador sin cargarlos en el servidor. Código abierto, fuera de línea, rápido." />
+  <meta property="og:url" content="https://wendygostudio.com/es/blog/convert-csv-to-json-free/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cómo convertir CSV a JSON gratis (localmente, sin conexión)" />
+  <meta name="twitter:description" content="Convierta archivos CSV a formato JSON completamente en su navegador sin cargarlos en el servidor. Código abierto, fuera de línea, rápido." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/convert-csv-to-json-free/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/convertir-csv-a-json-gratis/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/convert-csv-to-json-free/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/convert-csv-to-json-free/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/convert-csv-to-json-free/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/convert-csv-to-json-free/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-csv-to-json-free/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/es/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menú"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/es/#products">Extensiones</a><a href="/es/blog/">Blog</a><a href="/es/tools/">Herramientas</a><a href="/es/#privacy">Privacidad</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Idioma</label><select id="wg-language-select" aria-label="Elegir idioma" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/convert-csv-to-json-free/">English</option><option value="https://wendygostudio.com/es/blog/convertir-csv-a-json-gratis/" selected>Español</option><option value="https://wendygostudio.com/de/blog/convert-csv-to-json-free/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/convert-csv-to-json-free/">Français</option><option value="https://wendygostudio.com/it/blog/convert-csv-to-json-free/">Italiano</option><option value="https://wendygostudio.com/pt/blog/convert-csv-to-json-free/">Português</option></select></div></nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/es/">Inicio</a><span>&#8250;</span><a href="/es/blog/">Blog</a><span>&#8250;</span>Cómo convertir CSV a JSON gratis (localmente, sin conexión)</div>
+    <div class="article-meta"><div class="article-tag">how-to · convertforge</div><h1>Cómo convertir CSV a JSON gratis (localmente, sin conexión)</h1><p class="article-intro">Convierta archivos CSV a formato JSON completamente en su navegador sin cargarlos en el servidor. Código abierto, fuera de línea, rápido.</p><div class="article-date">8 de julio de 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><h1>Cómo convertir CSV a JSON gratis (localmente, sin conexión)</h1>
+<p>CSV y JSON son formatos de datos comunes, pero tienen propósitos diferentes. CSV (valores separados por comas) se puede leer en aplicaciones de hojas de cálculo como Excel. JSON es el estándar para API, archivos de configuración y aplicaciones JavaScript. La conversión entre ellos es una tarea rutinaria para desarrolladores, analistas de datos e ingenieros de DevOps.</p>
+<p>Existen convertidores en línea, pero cargan su archivo a un servidor remoto. Si su CSV contiene datos de clientes, claves API o configuraciones internas, probablemente no debería enviarlo a ninguna parte. ConvertForge convierte CSV a JSON completamente dentro de su navegador: nada sale de su máquina.</p>
+<h2>¿Por qué convertir CSV a JSON?</h2>
+<p><strong>API e integraciones.</strong> La mayoría de las API modernas aceptan JSON. Si importa datos a una aplicación web, migra registros a un nuevo sistema o crea una canalización de datos, JSON es el formato estándar. La conversión de CSV a JSON le permite canalizar los datos directamente a sus herramientas.</p>
+<p><strong>Legibilidad del código.</strong> JSON está estructurado con pares clave-valor claros, lo que facilita a los desarrolladores su análisis y manipulación. Los scripts y las aplicaciones consumen JSON de forma nativa.</p>
+<p><strong>Sin participación del servidor.</strong> Un convertidor local significa que sus datos nunca salen de su máquina, algo fundamental si trabaja con información confidencial, registros de clientes o configuraciones internas.</p>
+<h2>Cómo convertir CSV a JSON localmente</h2>
+<p><strong>1. Instale ConvertForge.</strong> Agregue ConvertForge a Chrome. No se requiere cuenta.</p>
+<p><strong>2. Abra el convertidor.</strong> Haga clic en el icono ConvertForge en su barra de herramientas. Es un panel local: nada se conecta a ningún servidor.</p>
+<p><strong>3. Suelta tu archivo CSV.</strong> Arrastra tu CSV al enrutador universal. ConvertForge detecta el tipo de archivo automáticamente.</p>
+<p><strong>4. Seleccione JSON como salida.</strong> ConvertForge muestra los formatos disponibles para su archivo. Seleccione JSON.</p>
+<p><strong>5. Convertir y descargar.</strong> Haga clic en convertir. El archivo JSON se descarga directamente a su dispositivo. Hecho.</p>
+<p>Todo el procesamiento se realiza localmente mediante las API del navegador. Su archivo original permanece en su máquina.</p>
+<h2>Sin conexión después de la instalación</h2>
+<p>Una vez instalado ConvertForge, puede convertir archivos completamente sin conexión. No se necesita conexión a Internet. Esto es importante cuando trabaja en un avión, en una red restringida o en una máquina con espacio de aire.</p>
+<h2>Sin límites de tamaño de archivo</h2>
+<p>Los convertidores en la nube suelen limitar el tamaño de los archivos a entre 10 y 25 MB. ConvertForge no tiene límites artificiales: sólo lo que la RAM de su navegador puede soportar. Convierta grandes conjuntos de datos sin fragmentación ni soluciones alternativas.</p>
+<h2>Preguntas frecuentes</h2>
+<p><strong>¿La estructura JSON coincide con mis encabezados CSV?</strong>
+Sí. ConvertForge usa la primera fila de su CSV como claves en los objetos JSON resultantes. Comportamiento estándar.</p>
+<p><strong>¿Qué pasa si mi CSV tiene comas dentro de los campos?</strong>
+Las comillas con escape correcto en CSV (como &quot;campo con, coma&quot;`) se manejan correctamente. ConvertForge respeta la especificación CSV.</p>
+<p><strong>¿Puedo volver a convertir JSON a CSV?</strong>
+Sí. ConvertForge admite la conversión bidireccional. JSON → CSV funciona de la misma manera: arrastrar, seleccionar formato, descargar.</p>
+<p><strong>¿Esto es realmente gratis?</strong>
+ConvertForge tiene un nivel gratuito sin cuenta. Visite la página de ConvertForge para conocer los precios actuales y los detalles del plan.</p>
+<hr>
+<p><strong>¿Listo para convertir?</strong> <a href="https://wendygostudio.com/convertforge/">Obtenga ConvertForge</a> y maneje la conversión de CSV a JSON localmente. O obtenga más información sobre [conversión de archivos locales sin carga] (<a href="https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/">https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/</a>).</p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Islas Canarias</div><div class="footer-links"><a href="/es/">Inicio</a><a href="/es/blog/">Blog</a><a href="/es/tools/">Herramientas</a><a href="/es/privacy">Privacidad</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

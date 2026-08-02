@@ -1,15 +1,18 @@
 ---
 schemaVersion: 1
-title: "LinkedIn-Karussell: Bildgröße in Chrome"
-description: ">-"
-date: 2026-07-26
+title: 'LinkedIn-Karussell-Bildgröße: Ein lokaler Chrome-Workflow'
+description: >-
+  Bereiten Sie konsistente LinkedIn-Karussellbilder lokal in Chrome vor, ohne
+  Quellgrafiken in einen Online-Editor hochzuladen.
+date: 2026-07-26T00:00:00.000Z
 slug: linkedin-carousel-image-size
 locale: de
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: "LinkedIn-Karussell-Bildgröße"
-relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
+primaryKeyword: LinkedIn-Karussell-Bildgröße
+relatedPages: >-
+  /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 LinkedIn-Karussells funktionieren, wenn sie sich wie ein einziges Dokument anfühlen: eine klare Startseite, eine lesbare Reihenfolge und eine Schlussseite, die nicht gequetscht oder beschnitten aussieht. Das praktische Problem ist selten Kreativität. Es bereitet mehrere Bilder mit einem einheitlichen Rahmen vor und schützt gleichzeitig das Quellbildmaterial, das Kundenarbeiten, Screenshots oder internes Produktmaterial umfassen kann.

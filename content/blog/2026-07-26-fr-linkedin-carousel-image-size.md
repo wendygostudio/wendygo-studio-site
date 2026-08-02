@@ -1,15 +1,18 @@
 ---
 schemaVersion: 1
-title: "Taille d'image d'un carrousel LinkedIn"
-description: ">-"
-date: 2026-07-26
+title: "Taille de l'image du carrousel LinkedIn\_: un flux de travail Chrome local"
+description: >-
+  Préparez des images de carrousel LinkedIn cohérentes localement dans Chrome,
+  sans télécharger les illustrations sources dans un éditeur en ligne.
+date: 2026-07-26T00:00:00.000Z
 slug: linkedin-carousel-image-size
 locale: fr
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: "Taille de l'image du carrousel LinkedIn"
-relatedPages: /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
+primaryKeyword: Taille de l'image du carrousel LinkedIn
+relatedPages: >-
+  /frameforge/,/blog/batch-resize-images-chrome-extension/,/blog/resize-image-for-linkedin-post/
 ---
 
 Les carrousels LinkedIn fonctionnent lorsqu'ils ressemblent à un seul document : une page d'ouverture claire, une séquence lisible et une page de fermeture qui n'a pas l'air compressée ou rognée. Le problème pratique est rarement la créativité. Il prépare plusieurs images avec un cadre cohérent tout en protégeant les illustrations sources qui peuvent inclure le travail du client, des captures d'écran ou du matériel interne du produit.

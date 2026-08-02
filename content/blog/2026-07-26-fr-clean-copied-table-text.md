@@ -1,15 +1,17 @@
 ---
 schemaVersion: 1
-title: "Nettoyer localement un tableau copié"
-description: ">-"
-date: 2026-07-26
+title: Nettoyer le texte du tableau copié avant de le coller n'importe où
+description: >-
+  Un flux de travail local pour nettoyer le texte du tableau copié, supprimer
+  les espacements bruyants et préserver les valeurs dont vous avez besoin.
+date: 2026-07-26T00:00:00.000Z
 slug: clean-copied-table-text
 locale: fr
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: "nettoyer le texte du tableau copié"
-relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
+primaryKeyword: nettoyer le texte du tableau copié
+relatedPages: '/textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/'
 ---
 
 Copier un tableau à partir d'un PDF, d'un tableau de bord ou d'un portail d'assistance produit souvent un texte qui semble presque correct. Les colonnes s'écartent, une seule cellule devient trois lignes et les en-têtes réapparaissent à mi-chemin du collage. Le plus dangereux est que le résultat peut encore paraître suffisamment plausible pour être réutilisé sans le vérifier.

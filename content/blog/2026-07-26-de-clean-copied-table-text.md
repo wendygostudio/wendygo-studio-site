@@ -1,15 +1,17 @@
 ---
 schemaVersion: 1
-title: "Kopierten Tabellentext lokal bereinigen"
-description: ">-"
-date: 2026-07-26
+title: 'Bereinigen Sie den kopierten Tabellentext, bevor Sie ihn irgendwo einfügen'
+description: >-
+  Ein lokaler Arbeitsablauf zum Bereinigen von kopiertem Tabellentext, zum
+  Entfernen störender Abstände und zum Beibehalten der benötigten Werte.
+date: 2026-07-26T00:00:00.000Z
 slug: clean-copied-table-text
 locale: de
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: "sauber kopierter Tabellentext"
-relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
+primaryKeyword: sauber kopierter Tabellentext
+relatedPages: '/textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/'
 ---
 
 Beim Kopieren einer Tabelle aus einer PDF-Datei, einem Dashboard oder einem Support-Portal entsteht oft ein Text, der fast richtig aussieht. Spalten driften auseinander, aus einer einzelnen Zelle werden drei Zeilen und in der Mitte des Einfügens erscheinen wieder Überschriften. Das Gefährliche daran ist, dass das Ergebnis ohne Überprüfung dennoch plausibel genug erscheinen kann, um es wiederzuverwenden.

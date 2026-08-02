@@ -54,9 +54,9 @@ let changed = 0;
 for (const name of fs.readdirSync(root).filter(file => file.endsWith('.md'))) {
   const file = path.join(root, name); const raw = fs.readFileSync(file, 'utf8');
   if (raw.startsWith('---') && /schemaVersion:\s*1/.test(raw.slice(0, 2000))) {
-    const parsed = parseLegacy(raw); const body = parsed.content.replace(/^(?:\s*(?:jurisdiction|reviewedAt|reviewDue|sourceUrls|schemaVersion|title|description|date|slug|locale|translationKey|product|contentType|primaryKeyword|relatedPages):[^\n]*\n|---\s*\n)+/i, '');
-    const normalized = buildFrontmatter(parsed.data, name, body) + body.trim() + '\n';
-    if (normalized !== raw) { changed++; if (!check) fs.writeFileSync(file, normalized, 'utf8'); }
+    // Canonical structured sources are already normalized. Re-parsing them
+    // with the legacy line parser loses folded YAML metadata and makes every
+    // Daily SEO run rewrite the same files indefinitely.
     continue;
   }
   const parsed = parseLegacy(raw);

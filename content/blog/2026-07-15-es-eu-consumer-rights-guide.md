@@ -1,19 +1,21 @@
 ---
 schemaVersion: 1
-title: "Derechos del consumidor en la UE: la guía completa para compradores en Europa"
-description: ">-"
-date: 2026-07-15
+title: 'Derechos del consumidor en la UE: la guía completa para compradores en Europa'
+description: >-
+  Página pilar del grupo de contenidos sobre derechos del consumidor de la UE.
+  Consolida 6 artículos de ClaimForge en un centro navegable.
+date: 2026-07-15T00:00:00.000Z
 slug: eu-consumer-rights-guide
 locale: es
 translationKey: eu-consumer-rights-guide
 product: claimforge
 contentType: how-to
-primaryKeyword: "guía del estudio wendygo"
+primaryKeyword: guía del estudio wendygo
 relatedPages: /claimforge/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-15T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
-sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
+sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
 Página pilar del grupo de contenidos sobre derechos del consumidor de la UE. Consolida 6 artículos de ClaimForge en un centro navegable.

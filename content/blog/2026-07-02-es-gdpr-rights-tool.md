@@ -1,19 +1,22 @@
 ---
 schemaVersion: 1
-title: "Cómo ejercer sus derechos GDPR en la UE"
-description: ">-"
-date: 2026-07-02
+title: Cómo ejercer sus derechos GDPR en la UE
+description: >-
+  Según el Reglamento General de Protección de Datos (GDPR), cada residente de
+  la UE tiene seis derechos exigibles sobre sus datos personales. Esta guía
+  explica...
+date: 2026-07-02T00:00:00.000Z
 slug: gdpr-rights-tool
 locale: es
 translationKey: gdpr-rights-tool
 product: claimforge
 contentType: how-to
-primaryKeyword: "guía del estudio wendygo"
+primaryKeyword: guía del estudio wendygo
 relatedPages: /claimforge/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-02T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
-sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
+sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
 Según el Reglamento General de Protección de Datos (GDPR), cada residente de la UE tiene seis derechos exigibles sobre sus datos personales. Esta guía explica cada derecho, le muestra cómo ejercerlos y presenta ClaimForge, una extensión de navegador gratuita creada para los derechos de los consumidores de la UE.

@@ -1,15 +1,18 @@
 ---
 schemaVersion: 1
-title: "Cómo compartir de forma segura una configuración de firewall FortiGate"
-description: ">-"
-date: 2026-06-30
+title: Cómo compartir de forma segura una configuración de firewall FortiGate
+description: >-
+  Una configuración en ejecución de FortiGate contiene mucho más que reglas de
+  firewall. Contiene túneles VPN, bloques de IP de interfaz, credenciales de
+  administrador, inspección HTTPS...
+date: 2026-06-30T00:00:00.000Z
 slug: sanitize-fortigate-config
 locale: es
 translationKey: sanitize-fortigate-config
 product: scrubforge
 contentType: how-to
-primaryKeyword: "cómo compartir de forma segura una configuración de firewall fortigate"
-relatedPages: /scrubforge/,/blog/remove-SENSITIVE-Data-cisco-config/
+primaryKeyword: cómo compartir de forma segura una configuración de firewall fortigate
+relatedPages: '/scrubforge/,/blog/remove-SENSITIVE-Data-cisco-config/'
 ---
 
 # Cómo compartir de forma segura una configuración de firewall FortiGate

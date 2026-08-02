@@ -1,19 +1,25 @@
 ---
 schemaVersion: 1
-title: ">-"
-description: ">-"
-date: 2026-07-15
+title: >-
+  Derecho de desistimiento de 14 días de la UE: cómo devolver compras en línea
+  sin ningún motivo
+description: >-
+  La Directiva de la UE 2011/83/UE (la Directiva sobre derechos del consumidor)
+  creó el derecho de desistimiento: un período de reflexión que le permite
+  cancelar cualquier distancia...
+date: 2026-07-15T00:00:00.000Z
 slug: eu-14-day-return-withdrawal
 locale: es
 translationKey: eu-14-day-return-withdrawal
 product: claimforge
 contentType: how-to
-primaryKeyword: "guía del estudio wendygo"
-relatedPages: /claimforge/,/blog/eu-warranty-rights-explained/,/blog/credit-card-chargeback-eu/
+primaryKeyword: guía del estudio wendygo
+relatedPages: >-
+  /claimforge/,/blog/eu-warranty-rights-explained/,/blog/credit-card-chargeback-eu/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-15T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
-sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
+sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
 ## ¿Qué es el derecho de desistimiento?

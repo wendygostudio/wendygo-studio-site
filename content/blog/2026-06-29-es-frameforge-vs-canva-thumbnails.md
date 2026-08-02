@@ -1,14 +1,17 @@
 ---
 schemaVersion: 1
-title: "FrameForge vs Canva para miniaturas rápidas: ¿cuál será más rápido en 2026?"
-description: ">-"
-date: 2026-06-29
+title: 'FrameForge vs Canva para miniaturas rápidas: ¿cuál será más rápido en 2026?'
+description: >-
+  Ambas herramientas pueden producir una miniatura de YouTube o una imagen lista
+  para la plataforma. Pero resuelven el problema desde puntos de partida
+  opuestos, y eligiendo...
+date: 2026-06-29T00:00:00.000Z
 slug: frameforge-vs-canva-thumbnails
 locale: es
 translationKey: frameforge-vs-canva-thumbnails
 product: frameforge
 contentType: how-to
-primaryKeyword: "frameforge vs canva para miniaturas rápidas: ¿cuál es más rápido en 2026?"
+primaryKeyword: 'frameforge vs canva para miniaturas rápidas: ¿cuál es más rápido en 2026?'
 relatedPages: /frameforge/
 ---
 

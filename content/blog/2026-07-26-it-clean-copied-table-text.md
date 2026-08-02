@@ -1,15 +1,17 @@
 ---
 schemaVersion: 1
-title: "Pulire localmente il testo di una tabella"
-description: ">-"
-date: 2026-07-26
+title: Pulisci il testo della tabella copiato prima di incollarlo ovunque
+description: >-
+  Un flusso di lavoro locale per pulire il testo della tabella copiata,
+  rimuovere spaziature rumorose e preservare i valori necessari.
+date: 2026-07-26T00:00:00.000Z
 slug: clean-copied-table-text
 locale: it
 translationKey: clean-copied-table-text
 product: textforge
 contentType: workflow
-primaryKeyword: "pulire il testo della tabella copiato"
-relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/
+primaryKeyword: pulire il testo della tabella copiato
+relatedPages: '/textforge/,/blog/extract-emails-from-text/,/blog/clean-text-online/'
 ---
 
 La copia di una tabella da un PDF, da una dashboard o da un portale di supporto spesso produce un testo che sembra quasi corretto. Le colonne si allontanano, una singola cella diventa tre righe e le intestazioni compaiono di nuovo a metà dell'incollaggio. La parte pericolosa è che il risultato può ancora sembrare abbastanza plausibile da poter essere riutilizzato senza controllarlo.
