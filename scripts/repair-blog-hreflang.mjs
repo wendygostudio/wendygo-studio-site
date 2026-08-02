@@ -43,5 +43,32 @@ for (const item of files) {
   const output = html.replace(/\s*<link\s+rel=["']alternate["'][^>]*>/gi, '').replace('</head>', `${tags}</head>`);
   if (output !== html) { changed++; if (!check) fs.writeFileSync(item.file, output, 'utf8'); }
 }
+// Final reciprocity pass: legacy and newly translated routes can coexist. Make
+// every declared alternate point back to the source canonical URL.
+if (!check) {
+  for (const item of files) {
+    const sourceHtml = read(item.file);
+    const sourceCanonical = canonical(sourceHtml);
+    const sourceLang = item.locale === 'pt' ? 'pt-PT' : item.locale;
+    for (const [, url] of Object.entries(links(sourceHtml))) {
+      if (!url || url === sourceCanonical || url.includes('x-default')) continue;
+      let targetFile = null;
+      try {
+        const parsed = new URL(url); let rel = parsed.pathname.replace(/^\//, '');
+        if (!rel.endsWith('/')) rel += '/';
+        const candidate = path.resolve('public', rel, 'index.html');
+        if (fs.existsSync(candidate)) targetFile = candidate;
+      } catch { /* ignore malformed external URLs */ }
+      if (!targetFile) continue;
+      const targetHtml = read(targetFile); const targetLinks = links(targetHtml);
+      if (Object.values(targetLinks).includes(sourceCanonical)) continue;
+      const merged = {...targetLinks}; delete merged['x-default']; merged[sourceLang] = sourceCanonical;
+      merged['x-default'] = merged.en || canonical(targetHtml);
+      const tags = Object.entries(merged).map(([lang, href]) => `<link rel="alternate" hreflang="${lang}" href="${href}">`).join('');
+      const output = targetHtml.replace(/\s*<link\s+rel=["']alternate["'][^>]*>/gi, '').replace('</head>', `${tags}</head>`);
+      if (output !== targetHtml) { fs.writeFileSync(targetFile, output, 'utf8'); changed++; }
+    }
+  }
+}
 console.log(`${check ? 'Checked' : 'Repaired'} blog hreflang reciprocity; ${changed} ${check ? 'out of sync' : 'pages updated'}`);
 if (check && changed) process.exit(1);
