@@ -27,14 +27,16 @@ actual de Wendygo Studio.
    errores críticos, Search Console, enlazado, mejora existente o artículo.
 5. Ejecutar `npm.cmd run seo:fix` y `npm.cmd run validate` en Windows.
 6. Ejecutar `npm.cmd test`.
-7. En la misma ejecución, resolver una tanda de 2–4 grupos de artículos que aún no tengan las seis versiones lingüísticas, priorizando señales de Search Console y grupos a los que solo les falte una lengua.
+7. En la misma ejecución, resolver una tanda de 2–4 grupos de artículos que aún no tengan las seis versiones lingüísticas, priorizando señales de Search Console y grupos a los que solo les falte una lengua. Recalcular la deuda al final y mantenerla abierta en el journal hasta que no queden grupos prioritarios.
 8. Actualizar `seo-agent/journal/YYYY-MM-DD.md` y `MEMORY.md`, incluyendo
    eventos GA4 faltantes, semanas incompletas y cualquier cambio de tracción.
-9. Tras superar las validaciones, ejecutar el ciclo externo prudente: Bluesky
-   (publicacion util o engagement organico aunque no haya articulo nuevo) y
-   Dev.to cuando exista un articulo nuevo o una actualizacion con aportacion
-   editorial real. Si no hay novedad suficiente para Dev.to, documentar el
-   salto; nunca publicar por llenar cuota.
+9. Tras superar las validaciones, ejecutar siempre el ciclo externo prudente:
+   Bluesky (publicación útil o engagement orgánico aunque no haya artículo
+   nuevo) y Dev.to (publicación solo cuando exista artículo nuevo o una
+   actualización con aportación editorial real). Registrar siempre el estado,
+   URI y likes/follows, o el motivo del salto/bloqueo. Si la red no es accesible,
+   dejar la acción en `pending-publish/` y marcar `socialDebt: OPEN`; nunca
+   simular actividad ni dar por cerrado el ciclo.
 10. Solo tras superar las validaciones, hacer commit y push a `main` si el
    usuario lo solicita.
 

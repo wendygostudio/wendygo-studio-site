@@ -424,6 +424,32 @@ validación y tests. No cuentes una página localizada heredada o una URL
 duplicada como traducción válida: debe existir una fuente estructurada con el
 `translationKey` compartido.
 
+**Puerta persistente de traducción:** al inicio y al final de cada ejecución
+calcula de nuevo los grupos incompletos. Mientras quede cualquier grupo
+prioritario sin EN, ES, DE, FR, IT y PT, el journal debe marcar
+`translationDebt: OPEN`, incluir los grupos pendientes y reservar la siguiente
+ejecución para continuar la tanda (2–4 grupos). No declares el Daily SEO
+completo por haber publicado o actualizado un solo artículo.
+
+## Paso 4g: Ciclo externo obligatorio (Bluesky + Dev.to)
+
+Después de la validación y en la misma ejecución, revisa siempre las dos redes:
+
+- **Bluesky:** publica como máximo un post útil al día cuando haya una pieza
+  editorial disponible; si no la hay, realiza engagement orgánico prudente
+  (búsqueda temática, 1–3 likes y hasta 1–3 follows relevantes), respetando
+  los límites y evitando repetir cuentas o mensajes. Registra URI, likes,
+  follows o el motivo exacto del salto.
+- **Dev.to:** publica como máximo una adaptación cuando exista artículo nuevo o
+  una actualización editorial sustancial. Si no corresponde publicar, revisa
+  el estado de borradores pendientes y documenta el salto; no se considera una
+  revisión completa si se omitió comprobarlo.
+
+Si la red no es accesible desde el entorno, deja el borrador/comando en
+`seo-agent/pending-publish/`, marca `socialDebt: OPEN` en el journal y conserva
+la tarea para la siguiente ejecución. Nunca simules una publicación, like o
+follow.
+
 ## Paso 5: Quality Gate
 
 Antes de dar por terminada la ejecución, comprueba (además de `npm run
@@ -437,6 +463,8 @@ validate`, que ya cubre buena parte de esto automáticamente):
 - ✓ Schema, sitemap, canonical, hreflang (`npm run validate` los cubre — no lo saltes)
 - ✓ Claims técnicos y legales verificados, no asumidos de memoria
 - ✓ El contenido nuevo o modificado responde con claridad qué hace el producto, cuándo usarlo, cuándo NO usarlo, y en qué se diferencia de alternativas — evita relleno de marketing
+- ✓ Deuda de traducciones recalculada y registrada (`translationDebt`)
+- ✓ Bluesky y Dev.to comprobados y registrados (`socialDebt`)
 
 ## Paso 6: Journal y memoria
 
@@ -469,6 +497,10 @@ Ejecuta `npm run seo:fix` y `npm run validate`. No hagas staging, commit ni push
 - Una ejecución que mejora solo un snippet debe aprovechar el mismo ciclo para
   reducir la deuda de traducciones; no se considera completa si deja sin tratar
   una tanda prioritaria de 2–4 grupos disponibles.
+- **No cierres una ejecución con `translationDebt: OPEN` o `socialDebt: OPEN`
+  sin dejar explícitamente la cola de trabajo y el siguiente paso en el
+  journal. Estas dos colas se arrastran al siguiente Daily SEO hasta quedar
+  cerradas con evidencia.**
 - **NUNCA atribuyas funcionalidades falsas a los productos**
 - Si no encuentras una buena keyword, no publiques — documéntalo en el journal
 - **No publiques un artículo simplemente porque hoy toca publicar.** Publica únicamente si representa la acción de mayor impacto disponible hoy según la jerarquía de prioridades. Si mejorar contenido existente o reforzar el enlazado interno genera más crecimiento que un artículo nuevo, prioriza eso.

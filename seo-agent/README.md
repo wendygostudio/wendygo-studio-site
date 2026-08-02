@@ -9,7 +9,7 @@ Un flujo local ejecutado por Codex que gestiona el contenido SEO, blog y journal
 ## Qué hace
 
 - Genera un artículo SEO diario orientado a keywords de cola larga
-- Publica un tweet diario con cadencia baja anti-spam
+- Revisa Bluesky y Dev.to en cada ejecución: publica cuando corresponde y, si no hay artículo, mantiene un engagement orgánico muy limitado y documentado
 - Hace revisiones semanales de métricas y ajusta la estrategia
 - Mantiene un journal público de todas sus decisiones
 - Se auto-despliega vía git push
