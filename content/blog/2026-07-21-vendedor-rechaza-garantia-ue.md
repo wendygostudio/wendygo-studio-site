@@ -29,7 +29,7 @@ Guarda la confirmación del pedido, factura, anuncio del producto y documentos d
 
 Crea una cronología breve en lugar de enviar un relato emocional. Por ejemplo: “Recibido el 3 de marzo; la pantalla empezó a parpadear el 18 de junio; restablecimiento realizado el 19; contacto con la tienda el 20; reclamación rechazada el 22”.
 
-Si necesitas repasar las reglas básicas, consulta nuestra explicación sobre la [garantía legal de dos años en la UE](/es/blog/garantia-legal-ue-explicada/) antes de redactar la respuesta.
+Si necesitas repasar las reglas básicas, consulta nuestra explicación sobre la [garantía legal de dos años en la UE](/es/blog/eu-warranty-rights-explained/) antes de redactar la respuesta.
 
 ## 2. Identifica qué ha rechazado realmente
 

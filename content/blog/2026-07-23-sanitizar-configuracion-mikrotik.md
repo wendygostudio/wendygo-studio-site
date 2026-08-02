@@ -58,7 +58,7 @@ Fíjate en que la dirección del peer permanece. Eso es lo que un lector del for
 
 ## La misma costumbre funciona con cualquier fabricante
 
-Ya hemos cubierto este flujo antes para [configs de Cisco y FortiGate](/es/blog/sanitizar-config-fortigate/). MikroTik es una de las doce sintaxis de fabricante que reconoce ScrubForge, junto a Juniper y Palo Alto: la misma idea, con nombres de campo distintos cada vez. Si vas a pegar en un [ticket de soporte](/es/blog/compartir-config-red-ticket-soporte/) en lugar de un foro público, aplica la misma costumbre de sanitizar primero antes de que el archivo salga de tu máquina.
+Ya hemos cubierto este flujo antes para [configs de Cisco y FortiGate](/es/blog/sanitize-fortigate-config/). MikroTik es una de las doce sintaxis de fabricante que reconoce ScrubForge, junto a Juniper y Palo Alto: la misma idea, con nombres de campo distintos cada vez. Si vas a pegar en un [ticket de soporte](/es/blog/compartir-config-red-ticket-soporte/) en lugar de un foro público, aplica la misma costumbre de sanitizar primero antes de que el archivo salga de tu máquina.
 
 ## Antes de publicar
 
