@@ -59,6 +59,9 @@ for (const locale of localeOrder) {
     }
     posts.push({href, title, description, date, product});
   }
+  const uniquePosts = new Map(posts.map((post) => [post.href, post]));
+  posts.length = 0;
+  posts.push(...uniquePosts.values());
   posts.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, labels[locale].tag));
   const cards = posts.map((post) => `    <a class="post-item" href="${esc(post.href)}">
       <div class="post-date">${new Intl.DateTimeFormat(labels[locale].tag, {dateStyle: 'long', timeZone: 'UTC'}).format(new Date(post.date))}</div>

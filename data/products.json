@@ -286,7 +286,7 @@
         "El bloqueo de distracciones puede eludirse desactivando la extensión y no es software de control parental."
       ]
     },
-    "version": "1.8.0",
+    "version": "1.9.13",
     "storeId": "dobhabpmcmpfdihchnhbickecelihhbc",
     "permissions": [
       "storage",

@@ -15,6 +15,8 @@ sin más) y **memoria SEO** (qué se hizo, qué se esperaba, qué ocurrió).
 
 ---
 
+- **2026-08-03 (daily SEO)**: ejecutada tanda de traducción de cuatro grupos (JWT, reclamaciones de pequeña cuantía, contracargo y recorte de imágenes), corregidas cuatro rutas ES duplicadas como alias `noindex`, actualizados metadatos de SlimeForge 1.9.13 y reparada la idempotencia de los regeneradores de superficies/índices. DEV.to y Bluesky ya se publicaron en la tanda anterior del mismo día; no se repitió actividad social.
+
 - **2026-08-01 (daily 2)**: mejorado el snippet de `resize-image-for-pinterest-pin`
   (54 impresiones, posición 16,9, CTR 1,85 %) y completadas las traducciones ES
   de cuatro grupos técnicos: UUID, limpieza de texto, JWT y redimensionado por
@@ -24,6 +26,13 @@ sin más) y **memoria SEO** (qué se hizo, qué se esperaba, qué ocurrió).
   señal. ConvertForge no registra `install`, por lo que se marcó como deuda de
   instrumentación. Añadidas traducciones ES de garantía UE, FortiGate y
   desistimiento UE; la cuarta quedó pendiente por timeout del proveedor.
+
+ - **2026-08-03 (auditoría semanal)**: GA4 actualizado hasta el 31 de julio.
+   SlimeForge cae de 6 a 1 `install` y de 27 a 18 sesiones entre las dos últimas
+   semanas completas; investigar ficha, onboarding e instrumentación antes de
+   cambiar precios. FrameForge y ClaimForge también bajan, con muestras pequeñas.
+   Search Console queda bloqueado por `invalid_grant` del refresh token y no se
+   deben combinar señales orgánicas hasta reautorizarlo.
 
 ## 1. Memoria de negocio (decisiones estratégicas)
 

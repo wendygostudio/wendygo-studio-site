@@ -263,6 +263,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/credit-card-chargeback-eu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
   </url>
   <url>
@@ -272,6 +276,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/crop-images-social-media-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
   </url>
   <url>
@@ -307,6 +315,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/decode-jwt-token-browser/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
   </url>
   <url>
@@ -316,6 +328,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
   </url>
   <url>
@@ -1243,6 +1259,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convertio-alternatives/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/de/blog/credit-card-chargeback-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/crop-images-social-media-chrome/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/de/blog/cyberchef-alternativen/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -1254,6 +1296,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/alternative-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/alternativas-cyberchef/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/decode-jwt-token-browser/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/dsgvo-auskunft-anfordern/</loc>
@@ -1280,6 +1335,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/estrarre-email-da-testo/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/extrair-emails-de-texto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/extract-emails-from-text/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/escalate-consumer-complaint-small-claims-court-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/eu-gewaehrleistung-zwei-jahre/</loc>
@@ -1716,12 +1784,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/convertforge/</loc>
@@ -1768,12 +1836,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/nutzungsbedingungen</loc>
@@ -1885,12 +1953,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/slimeforge/</loc>
@@ -2278,6 +2346,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/credit-card-chargeback-eu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
   </url>
   <url>
@@ -2391,6 +2463,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/decode-jwt-token-browser/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
   </url>
   <url>
@@ -2449,6 +2525,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
   </url>
   <url>
@@ -2727,6 +2807,10 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/crop-images-social-media-chrome/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
   </url>
   <url>
@@ -3652,6 +3736,45 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-xlsx-to-csv-free/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/credit-card-chargeback-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/crop-images-social-media-chrome/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/decode-jwt-token-browser/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/decoder-jwt-localement/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -3689,6 +3812,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/diritto-riparazione-ue/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-reparacao-ue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/escalate-consumer-complaint-small-claims-court-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/blog/extraire-adresses-email-texte/</loc>
@@ -4099,12 +4235,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/conditions</loc>
@@ -4164,12 +4300,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/ressources/</loc>
@@ -4268,12 +4404,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/slimeforge/</loc>
@@ -4712,6 +4848,45 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/credit-card-chargeback-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/crop-images-social-media-chrome/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/decode-jwt-token-browser/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/decodificare-jwt-locale/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -4762,6 +4937,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/diritto-riparazione-ue/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-reparacao-ue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/escalate-consumer-complaint-small-claims-court-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/blog/estrarre-email-da-testo/</loc>
@@ -5159,12 +5347,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/convertforge/</loc>
@@ -5198,12 +5386,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/privacy</loc>
@@ -5315,12 +5503,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/slimeforge/</loc>
@@ -5726,6 +5914,45 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convertio-alternatives/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/pt/blog/credit-card-chargeback-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/contracargo-tarjeta-credito-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/credit-card-chargeback-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/credit-card-chargeback-eu/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/crop-images-social-media-chrome/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/recortar-imagenes-redes-sociales-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/crop-images-social-media-chrome/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/crop-images-social-media-chrome/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/decode-jwt-token-browser/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/decodificar-token-jwt-navegador/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/decode-jwt-token-browser/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-token-browser/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/pt/blog/descodificar-jwt-localmente/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -5763,6 +5990,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/diritto-riparazione-ue/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/direito-reparacao-ue/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/right-to-repair-eu-law/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/escalate-consumer-complaint-small-claims-court-eu/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/escalar-reclamacion-escasa-cuantia-ue/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/escalate-consumer-complaint-small-claims-court-eu/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/extensao-chrome-esta-a-espiar-te/</loc>
@@ -6186,12 +6426,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/claimforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/claimforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/claimforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/claimforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/convertforge/</loc>
@@ -6225,12 +6465,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/frameforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/frameforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/frameforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/frameforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/privacidade</loc>
@@ -6342,12 +6582,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/scrubforge/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/scrubforge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/scrubforge/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/scrubforge/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/slimeforge/</loc>
