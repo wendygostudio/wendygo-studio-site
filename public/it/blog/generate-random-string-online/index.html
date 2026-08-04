@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>Come generare una stringa casuale nel tuo browser: gratuita e privata</title>
+  <meta name="description" content="Genera stringhe casuali direttamente nel tuo browser: nessun servizio online, nessuna registrazione, nessun dato che esce dal tuo computer. TextForge include la generazione di stringhe casuali come una delle sue 58 funzioni di testo integrate." />
+  <link rel="canonical" href="https://wendygostudio.com/it/blog/generate-random-string-online/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/generate-random-string-online/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/generate-random-string-online/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/generate-random-string-online/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/generate-random-string-online/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/generate-random-string-online/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/generate-random-string-online/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/generate-random-string-online/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Come generare una stringa casuale nel tuo browser: gratuita e privata","description":"Genera stringhe casuali direttamente nel tuo browser: nessun servizio online, nessuna registrazione, nessun dato che esce dal tuo computer. TextForge include la generazione di stringhe casuali come una delle sue 58 funzioni di testo integrate.","datePublished":"2026-07-09","dateModified":"2026-07-09","inLanguage":"it","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/it/blog/generate-random-string-online/"},"wordCount":715,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/it/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/it/blog/"},{"@type":"ListItem","position":3,"name":"Come generare una stringa casuale nel tuo browser: gratuita e privata"}]}</script>
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="Come generare una stringa casuale nel tuo browser: gratuita e privata" />
+  <meta property="og:description" content="Genera stringhe casuali direttamente nel tuo browser: nessun servizio online, nessuna registrazione, nessun dato che esce dal tuo computer. TextForge include la generazione di stringhe casuali come una delle sue 58 funzioni di testo integrate." />
+  <meta property="og:url" content="https://wendygostudio.com/it/blog/generate-random-string-online/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Come generare una stringa casuale nel tuo browser: gratuita e privata" />
+  <meta name="twitter:description" content="Genera stringhe casuali direttamente nel tuo browser: nessun servizio online, nessuna registrazione, nessun dato che esce dal tuo computer. TextForge include la generazione di stringhe casuali come una delle sue 58 funzioni di testo integrate." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/it/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/it/#products">Estensioni</a><a href="/it/blog/">Blog</a><a href="/it/tools/">Strumenti</a><a href="/it/#privacy">Privacy</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Lingua</label><select id="wg-language-select" aria-label="Scegli la lingua" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/generate-random-string-online/">English</option><option value="https://wendygostudio.com/es/blog/generate-random-string-online/">Español</option><option value="https://wendygostudio.com/de/blog/generate-random-string-online/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/generate-random-string-online/">Français</option><option value="https://wendygostudio.com/it/blog/generate-random-string-online/" selected>Italiano</option><option value="https://wendygostudio.com/pt/blog/generate-random-string-online/">Português</option></select></div></nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/it/">Home</a><span>&#8250;</span><a href="/it/blog/">Blog</a><span>&#8250;</span>Come generare una stringa casuale nel tuo browser: gratuita e privata</div>
+    <div class="article-meta"><div class="article-tag">how-to · textforge</div><h1>Come generare una stringa casuale nel tuo browser: gratuita e privata</h1><p class="article-intro">Genera stringhe casuali direttamente nel tuo browser: nessun servizio online, nessuna registrazione, nessun dato che esce dal tuo computer. TextForge include la generazione di stringhe casuali come una delle sue 58 funzioni di testo integrate.</p><div class="article-date">9 luglio 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><h2>Riepilogo</h2>
+<p>La generazione di stringhe casuali è una funzione integrata in TextForge v1.5. Apri l&#39;estensione, applica Genera stringa casuale e ottieni immediatamente una stringa casuale univoca: nessun server coinvolto, nessun account richiesto. TextForge ti consente di controllare la lunghezza e i set di caratteri (caratteri alfanumerici, maiuscoli, minuscoli, speciali).</p>
+<h2>Perché le stringhe casuali sono importanti per gli sviluppatori</h2>
+<p>Le stringhe casuali sono identificatori di 8-32 caratteri utilizzati per:</p>
+<ul>
+<li>Token API e chiavi di autenticazione</li>
+<li>Identificatori di sessione e codici di accesso temporanei</li>
+<li>Token CSRF e nonce di sicurezza</li>
+<li>Valori iniziali del database e dispositivi di prova</li>
+<li>Password monouso (OTP) e codici di verifica</li>
+<li>Collegamenti per la reimpostazione della password e token di invito</li>
+</ul>
+<p>Il problema con la maggior parte dei siti &quot;generatori di stringhe casuali&quot;: stai inviando una richiesta a un server di terze parti. Per i token e i segreti che vivranno nei tuoi sistemi di produzione, generarli localmente è più sicuro e veloce.</p>
+<h2>Come generare una stringa casuale con TextForge</h2>
+<p>TextForge è un&#39;estensione di Chrome con 58 funzioni di testo integrate. La generazione casuale di stringhe è una di queste ed è disponibile nella versione gratuita.</p>
+<p><strong>Passaggi:</strong></p>
+<ol>
+<li>Installa TextForge dal Chrome Web Store</li>
+<li>Fai clic sull&#39;icona TextForge nella barra degli strumenti del browser</li>
+<li>Apri il pannello delle estensioni e seleziona &quot;Genera stringa casuale&quot; dal menu Strumenti</li>
+<li>Una nuova stringa casuale viene generata immediatamente nell&#39;area di output</li>
+<li>Fare clic per copiarlo negli appunti</li>
+</ol>
+<p>Il risultato rimane nel tuo browser: nulla viene inviato a nessun server.</p>
+<h2>Quando utilizzare stringhe casuali e UUID</h2>
+<p>Entrambi generano identificatori univoci, ma per scopi diversi:</p>
+<ul>
+<li><strong>Stringhe casuali</strong>: ideale per token, chiavi e codici di cui controlli il formato. L&#39;utente imposta la lunghezza (solitamente 8-32 caratteri) e il set di caratteri (solo lettere, alfanumerici, con caratteri speciali, ecc.). Più breve, più flessibile, in alcuni casi leggibile dall&#39;uomo.</li>
+<li><strong>UUID</strong>: ideale quando è necessario un identificatore standardizzato a 128 bit senza rischio di collisione tra i sistemi. Sempre 36 caratteri (con trattini) o 32 (senza). Il formato definito li rende adatti alle chiavi primarie e alle API del database.</li>
+</ul>
+<p>Per i token API e gli ID di sessione, spesso si preferiscono stringhe casuali perché è possibile mantenerle compatte (12-16 caratteri) anziché l&#39;overhead UUID di 36 caratteri.</p>
+<h2>Uscite di esempio</h2>
+<p><strong>Stringa casuale (16 caratteri, alfanumerico):</strong></p>
+<pre><code>kJ9mPqRwL2vXyZaB
+</code></pre>
+<p><strong>Stringa casuale (24 caratteri, con caratteri speciali):</strong></p>
+<pre><code>kJ9m!Pq@RwL#2vX$yZa%Ba
+</code></pre>
+<p>TextForge genera valori casuali crittograficamente sicuri: senza schemi, senza prevedibilità.</p>
+<h2>Domande frequenti</h2>
+<p><strong>La generazione casuale di stringhe è gratuita in TextForge?</strong>
+SÌ. Genera stringa casuale è incluso nella versione gratuita di TextForge. Nessun account o abbonamento richiesto.</p>
+<p><strong>TextForge invia i miei dati a un server durante la generazione di stringhe?</strong>
+No. TextForge è un&#39;estensione di Chrome che funziona interamente nel tuo browser. Nessun dato viene inviato ai server di Wendygo Studio o a qualsiasi servizio di terze parti.</p>
+<p><strong>Posso personalizzare la lunghezza e il set di caratteri?</strong>
+SÌ. TextForge ti consente di configurare la lunghezza della stringa (in genere 8–32 caratteri) e scegliere quali tipi di caratteri includere (lettere minuscole, lettere maiuscole, numeri, caratteri speciali, trattini, trattini bassi).</p>
+<p><strong>Posso concatenare la generazione casuale di stringhe con altre funzioni di TextForge?</strong>
+SÌ. La generazione di stringhe casuali può essere inclusa in una ricetta TextForge, ad esempio generare una stringa casuale e quindi applicare la conversione in maiuscolo o aggiungere un prefisso in un unico passaggio della pipeline.</p>
+<p><strong>Qual è la differenza tra stringhe casuali e UUID?</strong>
+Le stringhe casuali sono più corte e più flessibili: sei tu a controllare la lunghezza e il set di caratteri. Gli UUID sono sempre di 36 caratteri (con trattini) e seguono un formato standardizzato. Per i token API e gli ID di sessione, spesso si preferiscono stringhe casuali; per le chiavi primarie del database, gli UUID sono più affidabili.</p>
+<h2>Guide correlate</h2>
+<ul>
+<li><a href="https://wendygostudio.com/blog/generate-uuid-online/">How to Generate a UUID in Your Browser</a> — Generate standardized 128-bit identifiers with TextForge</li>
+<li><a href="https://wendygostudio.com/blog/base64-encode-decode-online-tool/">Base64 Encode and Decode Online</a> — Encode random strings or binary data for API transmission</li>
+<li><a href="https://wendygostudio.com/blog/extract-emails-from-text/">Extract Emails from Text Online</a> — Pull email addresses and other structured data from text blocks</li>
+</ul>
+<hr>
+<p>TextForge include la generazione di stringhe casuali insieme ad altre 57 utilità di testo, tutte eseguite localmente nel tuo browser.</p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Isole Canarie</div><div class="footer-links"><a href="/it/">Home</a><a href="/it/blog/">Blog</a><a href="/it/tools/">Strumenti</a><a href="/it/privacy">Privacy</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

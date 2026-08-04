@@ -51,6 +51,7 @@ const jobs = [
 
 let changed = 0;
 for (const {file, replacements} of jobs) {
+  if (!fs.existsSync(file)) continue;
   const before = fs.readFileSync(file, 'utf8');
   let after = before;
   for (const [pattern, replacement] of replacements) after = after.replace(pattern, replacement);

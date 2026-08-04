@@ -134,6 +134,10 @@ Formato:
 
 ## 3. Historial de ejecuciones recientes (rolling log)
 
+- **2026-08-04 (daily 2)**: traducidos tres grupos adicionales a los cinco locales, integrada la herramienta `social-media-image-sizes` en seis idiomas y corregidos los enlaces/aliases que rompían el pipeline; resultado 614 URLs canónicas, 616 HTML y validación 0 errores con tests 7/7.
+
+- **2026-08-04 (weekly)**: revisión semanal ejecutada sin el wrapper heredado de Claude. Se cerraron cuatro grupos de traducción, se eliminaron rutas ES duplicadas, se verificaron 580 URLs canónicas/582 HTML sin errores y se mantuvo SlimeForge como primera investigación de rendimiento; GA4 sigue siendo la última fuente completa disponible mientras Search Console continúa con `invalid_grant`.
+
 - **2026-08-01 (daily)**: mejorado el snippet de `resize-image-for-tiktok-profile-picture` (149 impresiones, posición 15,1, CTR 0,67 %) y completadas las traducciones ES de cuatro grupos con deuda de una sola lengua. Se eliminaron duplicados ES, se repararon enlaces/hreflang y se regeneraron sitemap/GEO. Validación 0 errores y tests 7/7.
 
 - **2026-07-31 (daily)**: mejorado el snippet de `cyberchef-alternatives` (53 impresiones, posición 13,2, CTR 1,89 %) con un título y una meta description orientados a herramientas de texto de uso diario; corregida además una colisión de slug en la traducción ES de `free-config-sanitizer-alternatives`. Validación completa: 0 errores y 7/7 tests.

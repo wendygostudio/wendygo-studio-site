@@ -5,7 +5,7 @@ const root = path.resolve('public');
 const locales = ['de', 'fr', 'it', 'pt'];
 const allLocales = ['en', 'es', ...locales];
 const labels = { en: 'English', es: 'Español', de: 'Deutsch', fr: 'Français', it: 'Italiano', pt: 'Português' };
-const tools = ['', 'ip-extractor', 'json-formatter', 'password-generator', 'regex-tester', 'slug-generator', 'subnet-calculator', 'uuid-generator', 'youtube-thumbnail-checker'];
+const tools = ['', 'ip-extractor', 'json-formatter', 'password-generator', 'regex-tester', 'slug-generator', 'social-media-image-sizes', 'subnet-calculator', 'uuid-generator', 'youtube-thumbnail-checker'];
 const refresh = process.argv.includes('--refresh');
 const check = process.argv.includes('--check');
 const requestedLocale = process.argv.find((argument) => argument.startsWith('--locale='))?.slice(9);
@@ -59,7 +59,7 @@ function shorten(text, max) {
 function localize(html, locale, slug, map) {
   let output = html
     .replace(/<html\s+lang=["'][^"']+["']/i, `<html lang="${locale === 'pt' ? 'pt-PT' : locale}"`)
-    .replace(/<link rel="canonical" href="[^"]+"\s*\/>/i, `<link rel="canonical" href="${url(locale, slug)}" />`)
+    .replace(/<link rel="canonical" href="[^"]+"\s*\/?\s*>/i, `<link rel="canonical" href="${url(locale, slug)}" />`)
     .replace(/<link rel="alternate"[\s\S]*?<link rel="alternate" hreflang="x-default" href="[^"]+"\s*\/>/i, alternates(slug))
     .replace(/href="\/(?!\/)/g, `href="/${locale}/`)
     .replace(/href="\/${locale}\/tools\/([^"#]+)"/g, `href="/${locale}/tools/$1"`)
@@ -76,6 +76,8 @@ function localize(html, locale, slug, map) {
     });
   output = output.replace(/(<meta name="description" content=")[^"]*(")/i, '$1' + shorten(map.__description || '', 150) + '$2');
   output = output.replace(/<title>[^<]*<\/title>/i, `<title>${shorten(map.__title || 'Wendygo Studio', 60)}</title>`);
+  output = output.replace(/(<meta property="og:title" content=")[^"]*(")/i, '$1' + map.__title + '$2');
+  output = output.replace(/(<meta property="og:description" content=")[^"]*(")/i, '$1' + shorten(map.__description || '', 150) + '$2');
   output = output.replace(/(<meta property="og:locale" content=")[^"]*(")/i, `$1${{ de: 'de_DE', fr: 'fr_FR', it: 'it_IT', pt: 'pt_PT' }[locale]}$2`);
   output = output.replace(/<div class="wg-language-switcher">[\s\S]*?<\/div>/, languageWidget(locale, slug));
   output = output.replace(new RegExp(`href="/${locale}/(blog|guides)/([^\"#]*)"`, 'g'), (_, section, target) => `href="${localizedContentPath(locale, section, target.replace(/\/$/, ''))}"`);
@@ -89,8 +91,11 @@ if (refresh) {
     return [...visible(html), html.match(/<title>([^<]*)<\/title>/i)?.[1] || '', html.match(/<meta name="description" content="([^"]*)"/i)?.[1] || ''];
   }).filter(Boolean))];
   for (const locale of locales.filter((locale) => !requestedLocale || locale === requestedLocale)) {
-    if (cache.locales[locale]) { console.log(`${locale}: using cached translations`); continue; }
-    cache.locales[locale] = await pool(phrases, (text) => translate(text, locale));
+    const existing = cache.locales[locale] || {};
+    const missing = phrases.filter((text) => !existing[text]);
+    if (!missing.length) { console.log(`${locale}: using cached translations`); continue; }
+    const additions = await pool(missing, (text) => translate(text, locale));
+    cache.locales[locale] = { ...existing, ...additions };
     fs.writeFileSync(cacheFile, `${JSON.stringify(cache, null, 2)}\n`);
     console.log(`${locale}: translated ${phrases.length} phrases`);
   }
