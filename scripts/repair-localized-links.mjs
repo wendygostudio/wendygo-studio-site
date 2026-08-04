@@ -4,6 +4,8 @@ const replacements = {
   '/es/blog/codificar-base64-secretos-kubernetes/': '/es/blog/base64-encode-kubernetes-secrets/',
   '/es/blog/convertir-video-a-audio-gratis/': '/es/blog/convert-video-to-audio-free/',
   '/es/blog/alternativas-reclamar-sin-abogado-ue/': '/es/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/',
+  '/es/blog/extraer-urls-de-texto/': '/es/blog/extract-urls-from-text/',
+  '/es/blog/extraer-texto-de-imagen-gratis/': '/es/blog/extract-text-from-image-free/',
 };
 function walk(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? walk(path.join(dir,e.name)) : e.name.endsWith('.html') ? [path.join(dir,e.name)] : []); }
 let changed = 0;
