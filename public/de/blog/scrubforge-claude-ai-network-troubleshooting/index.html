@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>So verwenden Sie ScrubForge mit Claude AI zur Netzwerk-Fehlerbehebung</title>
+  <meta name="description" content="Das lange Kontextfenster von Claude macht es nützlich für die Analyse großer Netzwerkkonfigurationen. Bereinigen Sie zuerst mit ScrubForge – Live-Zugangsdaten bleiben von den Servern von Anthropic fern." />
+  <link rel="canonical" href="https://wendygostudio.com/de/blog/scrubforge-claude-ai-network-troubleshooting/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"So verwenden Sie ScrubForge mit Claude AI zur Netzwerk-Fehlerbehebung","description":"Das lange Kontextfenster von Claude macht es nützlich für die Analyse großer Netzwerkkonfigurationen. Bereinigen Sie zuerst mit ScrubForge – Live-Zugangsdaten bleiben von den Servern von Anthropic fern.","datePublished":"2026-07-12","dateModified":"2026-07-12","inLanguage":"de","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/de/blog/scrubforge-claude-ai-network-troubleshooting/"},"wordCount":1153,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://wendygostudio.com/de/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/de/blog/"},{"@type":"ListItem","position":3,"name":"So verwenden Sie ScrubForge mit Claude AI zur Netzwerk-Fehlerbehebung"}]}</script>
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="So verwenden Sie ScrubForge mit Claude AI zur Netzwerk-Fehlerbehebung" />
+  <meta property="og:description" content="Das lange Kontextfenster von Claude macht es nützlich für die Analyse großer Netzwerkkonfigurationen. Bereinigen Sie zuerst mit ScrubForge – Live-Zugangsdaten bleiben von den Servern von Anthropic fern." />
+  <meta property="og:url" content="https://wendygostudio.com/de/blog/scrubforge-claude-ai-network-troubleshooting/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="So verwenden Sie ScrubForge mit Claude AI zur Netzwerk-Fehlerbehebung" />
+  <meta name="twitter:description" content="Das lange Kontextfenster von Claude macht es nützlich für die Analyse großer Netzwerkkonfigurationen. Bereinigen Sie zuerst mit ScrubForge – Live-Zugangsdaten bleiben von den Servern von Anthropic fern." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" /><link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/scrubforge-claude-ai-network-troubleshooting/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/scrubforge-claude-ai-network-troubleshooting/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/scrubforge-claude-ai-network-troubleshooting/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/scrubforge-claude-ai-network-troubleshooting/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/scrubforge-claude-ai-network-troubleshooting/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/de/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menü"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/de/#products">Erweiterungen</a><a href="/de/blog/">Blog</a><a href="/de/tools/">Werkzeuge</a><a href="/de/#privacy">Datenschutz</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Sprache</label><select id="wg-language-select" aria-label="Sprache wählen" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/">English</option><option value="https://wendygostudio.com/es/blog/scrubforge-claude-ai-network-troubleshooting/">Español</option><option value="https://wendygostudio.com/de/blog/scrubforge-claude-ai-network-troubleshooting/" selected>Deutsch</option><option value="https://wendygostudio.com/fr/blog/scrubforge-claude-ai-network-troubleshooting/">Français</option><option value="https://wendygostudio.com/it/blog/scrubforge-claude-ai-network-troubleshooting/">Italiano</option><option value="https://wendygostudio.com/pt/blog/scrubforge-claude-ai-network-troubleshooting/">Português</option></select></div></nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/de/">Startseite</a><span>&#8250;</span><a href="/de/blog/">Blog</a><span>&#8250;</span>So verwenden Sie ScrubForge mit Claude AI zur Netzwerk-Fehlerbehebung</div>
+    <div class="article-meta"><div class="article-tag">how-to · scrubforge</div><h1>So verwenden Sie ScrubForge mit Claude AI zur Netzwerk-Fehlerbehebung</h1><p class="article-intro">Das lange Kontextfenster von Claude macht es nützlich für die Analyse großer Netzwerkkonfigurationen. Bereinigen Sie zuerst mit ScrubForge – Live-Zugangsdaten bleiben von den Servern von Anthropic fern.</p><div class="article-date">12. Juli 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><p>Claude, der KI-Assistent von Anthropic, hat aufgrund seiner präzisen Argumentation und seines großen Kontextfensters eine große Anhängerschaft unter Ingenieuren gewonnen. Systemadministratoren verwenden es, um BGP-Konfigurationen zu analysieren, VPN-Richtlinien zu debuggen und komplexe Firewall-Regellogik durchzuarbeiten – genau die Art von strukturiertem Denken, bei der Claude gute Leistungen erbringt.</p>
+<p>Das Anmeldeinformationsproblem ist identisch mit jedem anderen KI-Assistenten. Wenn Sie eine Netzwerkkonfiguration in Claude einfügen, wird dieser Text an die Server von Anthropic gesendet. Dazu gehören Ihre vorinstallierten Live-VPN-Schlüssel, Administratorkennwörter, API-Tokens und SNMP-Community-Strings.</p>
+<p>ScrubForge löst dieses Problem: Bereinigen Sie die Konfiguration lokal in Chrome und fügen Sie dann die saubere Version ohne angehängte Live-Anmeldeinformationen in Claude ein.</p>
+<h2>Warum Systemadministratoren Claude für Netzwerkkonfigurationen verwenden</h2>
+<p>Claude kommt gut mit dichtem, strukturiertem Text zurecht. Eine FortiGate-Konfiguration mit 1.500 Zeilen oder ein Multi-vRF-Cisco IOS-XR-Export befindet sich in seinem Kontextfenster – Claude kann es als vollständiges Dokument und nicht als abgeschnittenes Snippet analysieren.</p>
+<p>Häufige Anwendungsfälle, in denen Claude einen Mehrwert schafft:</p>
+<ul>
+<li><strong>IPsec- und IKEv2-Debugging</strong> – Identifizierung nicht übereinstimmender Phase-1-/Phase-2-Parameter, DPD-Timer-Inkonsistenzen oder falscher Angebotsreihenfolge</li>
+<li><strong>BGP-Richtlinienanalyse</strong> – Erläuterung der Route-Map-Logik, Überprüfung der Handhabung von Community-Tags, Kennzeichnung fehlender Peer-Konfigurationen</li>
+<li><strong>Überprüfung der Firewall-Richtlinien</strong> – Auffinden verdeckter Regeln, Identifizieren fehlender Ablehnungsanweisungen, Überprüfen der NAT-Reihenfolge</li>
+<li><strong>VLAN und Spanning-Tree</strong> – Erkennung von Trunk-Inkonsistenzen, nativen VLAN-Inkonsistenzen und STP-Topologieproblemen</li>
+</ul>
+<p>Claude unterstützt auch lange Hin- und Her-Troubleshooting-Sitzungen, in denen Sie schrittweise zusätzlichen Kontext weitergeben können – nützlich, wenn bei der ersten Analyse Folgefragen auftauchen.</p>
+<h2>Das Anmelderisiko ist dasselbe</h2>
+<p>Claudes Kontextfenster ändert nichts am zugrunde liegenden Datenschutzproblem. Wenn Sie eine Nachricht an Claude senden (claude.ai, die API oder ein anderes von Claude betriebenes Produkt), wird der Text an die Infrastruktur von Anthropic gesendet. Je nach Kontotyp und Nutzungseinstellungen können sie zur Missbrauchsüberprüfung, Sicherheitsüberwachung oder Produktverbesserung aufbewahrt werden.</p>
+<p>Eine Produktions-Firewall-Konfiguration mit Live-Anmeldeinformationen gehört nicht auf einen externen Server – unabhängig vom verwendeten KI-Assistenten.</p>
+<h2>Der ScrubForge + Claude-Workflow</h2>
+<p>Der Desinfektionsschritt dauert weniger als eine Minute. Der übrige Arbeitsablauf ist identisch mit dem, was Sie mit jedem KI-Assistenten tun würden.</p>
+<p><strong>Schritt 1: Exportieren Sie Ihre laufende Konfiguration</strong></p>
+<p>Verwenden Sie Ihre Standardmethode: „show running-config“ auf Cisco IOS, „get system config“ auf FortiGate CLI oder einen Konfigurationsexport von Ihrer Verwaltungsoberfläche.</p>
+<p><strong>Schritt 2: ScrubForge öffnen</strong></p>
+<p>Klicken Sie in Ihrer Chrome-Symbolleiste auf das ScrubForge-Symbol. Die Erweiterung wird lokal geöffnet – in diesem Schritt wird nichts hochgeladen.</p>
+<p><strong>Schritt 3: Einfügen und desinfizieren</strong></p>
+<p>Fügen Sie die Rohkonfiguration ein. ScrubForge erkennt Passwörter, Pre-Shared Keys, API-Tokens, private Schlüssel und SNMP-Strings und ersetzt jeden eindeutigen Wert durch ein konsistentes Platzhalter-Token wie „[PSK_1]“ oder „[ADMIN_PASS_1]“. Die Netzwerktopologie, Routing-Konfiguration und Richtlinienstruktur bleiben erhalten.</p>
+<p><strong>Schritt 4: Überprüfen Sie die Ausgabe</strong></p>
+<p>Verbringen Sie 30 Sekunden damit, nach allem zu suchen, was wie ein Live-Ausweis aussieht. ScrubForge deckt mehr als 120 Muster von 12 Anbietern ab, eine kurze Überprüfung vor dem Teilen ist jedoch eine gute Vorgehensweise.</p>
+<p><strong>Schritt 5: Mit Kontext in Claude einfügen</strong></p>
+<p>Öffnen Sie Claude, beschreiben Sie Ihr Problem und fügen Sie die bereinigte Konfiguration ein. Da die Struktur erhalten bleibt, kann Claude über das vollständige logische Layout nachdenken, ohne jemals Ihre tatsächlichen Anmeldeinformationen zu sehen.</p>
+<p>Beispielaufforderung:</p>
+<blockquote>
+<p>„Hier ist eine bereinigte Cisco IOS-Konfiguration (Anmeldeinformationen durch Platzhalter-Tokens ersetzt – Netzwerkstruktur ist intakt). Mein Site-to-Site-IPsec-Tunnel zu 198.51.100.10 bricht alle 6 Stunden ab und wird nicht automatisch wiederhergestellt. Können Sie anhand der Konfiguration wahrscheinliche Ursachen identifizieren?“</p>
+</blockquote>
+<h2>Was Claude mit bereinigten Konfigurationen gut macht</h2>
+<p>Claudes Stärken passen gut zu Netzwerk-Fehlerbehebungsaufgaben:</p>
+<p><strong>Umfassende Konfigurationsanalyse.</strong> Claude kann einen vollständigen Export durchführen – nicht nur einen Ausschnitt – was wichtig ist, wenn der Fehler in der Interaktion zwischen Richtlinien und nicht in einem isolierten Block liegt.</p>
+<p><strong>Strukturiertes Denken.</strong> Claude neigt dazu, zu erklären, <em>warum</em> etwas nicht stimmt, und nicht nur darauf hinzuweisen. Nützlich, wenn Sie die Grundursache verstehen müssen, anstatt nur eine Lösung anzuwenden.</p>
+<p><strong>Iterative Sitzungen.</strong> Sie können innerhalb derselben Konversation mit zusätzlichem Kontext („hier ist, was sich in den letzten 48 Stunden geändert hat“ oder „hier ist die Ausgabe von show ip bgp summary“) nachfassen. Die bereinigte Konfiguration aus Schritt 1 bleibt als Referenzpunkt.</p>
+<p><strong>Konfigurationen mehrerer Anbieter.</strong> Wenn Sie einen Pfad beheben, der einen Cisco-Router, eine FortiGate-Firewall und einen Palo Alto kreuzt, können Sie mehrere bereinigte Konfigurationen in eine Sitzung einfügen und Claude bitten, nach geräteübergreifenden Inkonsistenzen zu suchen.</p>
+<h2>Verwendung von Claude Projects für die fortlaufende Konfigurationsanalyse</h2>
+<p>Mit der Projektfunktion von Claude können Sie verwandte Gespräche in einem gemeinsamen Kontext organisieren. Für die Fehlerbehebung im Netzwerk bedeutet dies, dass Sie einem Projekt einmal eine bereinigte Basiskonfiguration hinzufügen und über mehrere Sitzungen hinweg darauf verweisen können – ohne sie jedes Mal erneut einfügen zu müssen.</p>
+<p>Es gilt die gleiche Regel: Fügen Sie einem Projekt nur bereinigte Konfigurationen hinzu. Ein Projekt wird immer noch in der Cloud gehostet. Eine bereinigte Konfiguration mit Platzhalter-Tokens kann dort sicher gespeichert werden; Eine Rohkonfiguration mit Live-Anmeldeinformationen ist nicht verfügbar.</p>
+<h2>Vorher und Nachher: ​​Wie die bereinigte Konfiguration aussieht</h2>
+<p>Ein Fragment, das zeigt, was Claude erhält, nachdem ScrubForge ausgeführt wird:</p>
+<pre><code>--- VORHER (roh) ---
+Krypto-Isakmp-Schlüssel MyS3cr3tK3y-Adresse 203.0.113.5
+Benutzername Admin-Passwort 7 0822455D0A16
+SNMP-Server-Community C0mmun1ty! RO
+IP VRF MGMT
+rd 65001:100
+
+--- NACHHER (von ScrubForge desinfiziert) ---
+Krypto-Isakmp-Schlüssel [PSK_1] Adresse 203.0.113.5
+Benutzername Admin-Passwort 7 [ENC_PASS_1]
+SNMP-Server-Community [SNMP_RO_1] RO
+IP VRF MGMT
+rd 65001:100
+</code></pre>
+<p>Die Peer-IP-Adresse, die Routing-ID und der VRF-Name bleiben erhalten. Claude sieht die vollständige logische Struktur ohne Live-Anmeldeinformationen.</p>
+<h2>Verwandte Leitfäden</h2>
+<ul>
+<li><a href="/blog/scrubforge-chatgpt-network-troubleshooting/">ScrubForge + ChatGPT for network troubleshooting</a> — the same workflow for ChatGPT users</li>
+<li><a href="/blog/sanitize-network-config-before-sharing/">How to sanitize any network config before sharing</a></li>
+<li><a href="/blog/remove-sensitive-data-cisco-config/">Remove sensitive data from Cisco configs</a></li>
+</ul>
+<h2>Häufig gestellte Fragen</h2>
+<p><strong>Funktioniert ScrubForge mit Claude genauso wie mit ChatGPT?</strong>
+Ja. ScrubForge desinfiziert lokal, unabhängig davon, welchen KI-Assistenten Sie anschließend verwenden. Der Bereinigungsschritt ist identisch – Konfiguration einfügen, Anmeldeinformationen löschen, saubere Ausgabe kopieren. Wo Sie diese Ausgabe einfügen, bleibt Ihnen überlassen.</p>
+<p><strong>Claude hat ein großes Kontextfenster – hilft das bei großen Konfigurationen?</strong>
+Es hilft. Claude kann eine vollständige Konfiguration mit mehreren tausend Zeilen aufnehmen, ohne dass Sie sie abschneiden müssen. Dies ist nützlich, wenn sich das Problem über mehrere Abschnitte einer großen Konfigurationsdatei erstreckt. Bereinigen Sie den vollständigen Export und fügen Sie ihn vollständig ein.</p>
+<p><strong>Kann ich Claude Projects verwenden, um eine bereinigte Konfiguration als Referenz zu speichern?</strong>
+Ja, und es ist ein sinnvoller Arbeitsablauf für laufende Infrastrukturarbeiten. Fügen Sie die bereinigte Konfiguration als Kontextdatei in einem Projekt hinzu. Da Anmeldeinformationen durch Token ersetzt werden, ist die Speicherung in einem in der Cloud gehosteten Projekt sicher. Das Speichern einer Rohkonfiguration dort wäre gleichbedeutend damit, sie im Klartext per E-Mail zu versenden.</p>
+<p><strong>Trainiert Anthropic meine Claude-Gespräche?</strong>
+Die Datenverarbeitungsrichtlinien von Anthropic variieren je nach Plan und API-Nutzung. Einzelheiten finden Sie in der aktuellen Datenschutzrichtlinie von Anthropic. Bei sensiblen Konfigurationen besteht der sicherste Ansatz darin, sicherzustellen, dass Anmeldeinformationen überhaupt nicht den Server erreichen – und genau das übernimmt ScrubForge.</p>
+<p><strong>Ist die kostenlose Version von ScrubForge für diesen Workflow ausreichend?</strong>
+Die Kernbereinigungsfunktion funktioniert kostenlos – fügen Sie eine Konfiguration ein und erhalten Sie eine bereinigte Version, bei der die Anmeldeinformationen durch Token ersetzt werden. Die Pro-Version bietet den Import/Export von benutzerdefinierten Wörterbüchern, Kontextprofile für verschiedene Anbietertypen und unbegrenzte gespeicherte Ersetzungen.</p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Kanarische Inseln</div><div class="footer-links"><a href="/de/">Startseite</a><a href="/de/blog/">Blog</a><a href="/de/tools/">Werkzeuge</a><a href="/de/datenschutz">Datenschutz</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

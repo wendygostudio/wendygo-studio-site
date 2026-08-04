@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>Minuteur Pomodoro pour le TDAH : Pourquoi la gamification vous aide à démarrer (et terminer) des sessions</title>
+  <meta name="description" content="Comment les minuteries Pomodoro gamifi�es aident les cerveaux atteints de TDAH � d�marrer des t�ches�: des r�compenses externes, des sessions courtes et un animal de compagnie virtuel qui donne l'impression que la concentration en vaut la peine." />
+  <link rel="canonical" href="https://wendygostudio.com/fr/blog/adhd-pomodoro-timer-chrome-extension/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Minuteur Pomodoro pour le TDAH : Pourquoi la gamification vous aide à démarrer (et terminer) des sessions","description":"Comment les minuteries Pomodoro gamifi�es aident les cerveaux atteints de TDAH � d�marrer des t�ches�: des r�compenses externes, des sessions courtes et un animal de compagnie virtuel qui donne l'impression que la concentration en vaut la peine.","datePublished":"2026-07-18","dateModified":"2026-07-18","inLanguage":"fr","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/fr/blog/adhd-pomodoro-timer-chrome-extension/"},"wordCount":1205,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://wendygostudio.com/fr/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/fr/blog/"},{"@type":"ListItem","position":3,"name":"Minuteur Pomodoro pour le TDAH : Pourquoi la gamification vous aide à démarrer (et terminer) des sessions"}]}</script>
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="Minuteur Pomodoro pour le TDAH : Pourquoi la gamification vous aide à démarrer (et terminer) des sessions" />
+  <meta property="og:description" content="Comment les minuteries Pomodoro gamifi�es aident les cerveaux atteints de TDAH � d�marrer des t�ches�: des r�compenses externes, des sessions courtes et un animal de compagnie virtuel qui donne l'impression que la concentration en vaut la peine." />
+  <meta property="og:url" content="https://wendygostudio.com/fr/blog/adhd-pomodoro-timer-chrome-extension/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Minuteur Pomodoro pour le TDAH : Pourquoi la gamification vous aide à démarrer (et terminer) des sessions" />
+  <meta name="twitter:description" content="Comment les minuteries Pomodoro gamifi�es aident les cerveaux atteints de TDAH � d�marrer des t�ches�: des r�compenses externes, des sessions courtes et un animal de compagnie virtuel qui donne l'impression que la concentration en vaut la peine." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" /><link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/adhd-pomodoro-timer-chrome-extension/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/adhd-pomodoro-timer-chrome-extension/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/adhd-pomodoro-timer-chrome-extension/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/adhd-pomodoro-timer-chrome-extension/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/adhd-pomodoro-timer-chrome-extension/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/fr/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/fr/#products">Extensions</a><a href="/fr/blog/">Blog</a><a href="/fr/tools/">Outils</a><a href="/fr/#privacy">Confidentialité</a>
+    </div>
+  <div class="wg-language-switcher"><label for="wg-language-select">Langue</label><select id="wg-language-select" aria-label="Choisir la langue" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/">English</option><option value="https://wendygostudio.com/es/blog/adhd-pomodoro-timer-chrome-extension/">Español</option><option value="https://wendygostudio.com/de/blog/adhd-pomodoro-timer-chrome-extension/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/adhd-pomodoro-timer-chrome-extension/" selected>Français</option><option value="https://wendygostudio.com/it/blog/adhd-pomodoro-timer-chrome-extension/">Italiano</option><option value="https://wendygostudio.com/pt/blog/adhd-pomodoro-timer-chrome-extension/">Português</option></select></div></nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/fr/">Accueil</a><span>&#8250;</span><a href="/fr/blog/">Blog</a><span>&#8250;</span>Minuteur Pomodoro pour le TDAH : Pourquoi la gamification vous aide à démarrer (et terminer) des sessions</div>
+    <div class="article-meta"><div class="article-tag">how-to · slimeforge</div><h1>Minuteur Pomodoro pour le TDAH : Pourquoi la gamification vous aide à démarrer (et terminer) des sessions</h1><p class="article-intro">Comment les minuteries Pomodoro gamifi�es aident les cerveaux atteints de TDAH � d�marrer des t�ches�: des r�compenses externes, des sessions courtes et un animal de compagnie virtuel qui donne l'impression que la concentration en vaut la peine.</p><div class="article-date">18 juillet 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><p>La partie la plus difficile d’une séance de concentration pour un cerveau atteint de TDAH n’est pas le travail : il commence. Les conseils standards en matière de productivité (« Commencez simplement ! ») ignorent le rôle de la dopamine dans l’initiation. La technique Pomodoro supprime une barrière. La gamification en supprime un autre.</p>
+<h2>Pourquoi les conseils de concentration traditionnels échouent dans les cerveaux atteints de TDAH</h2>
+<p>Le TDAH se caractérise par un dysfonctionnement exécutif et une dérégulation de la dopamine – et non par la paresse ou le manque de désir de travailler. Le système de récompense du cerveau ne libère pas de dopamine en prévision de récompenses futures de la même manière qu’un cerveau neurotypique. Cela signifie que « pensez simplement à quel point vous vous sentirez bien quand ce sera fait » ne crée pas le signal chimique nécessaire pour démarrer.</p>
+<p>Les longues s�ances aggravent la situation. Un bloc de deux heures semble impossible avant de commencer, alors vous ne commencez pas. La r�compense interne r�sultant de laccomplissement de la t�che arrive trop tard et de mani�re trop abstraite pour conduire � linitiation.</p>
+<h2>Comment la technique Pomodoro répond aux défis du TDAH</h2>
+<p>La technique Pomodoro déplace la structure hors de votre tête. Une minuterie externe supprime les questions « quand dois-je commencer » et « quand dois-je arrêter » – qui sont toutes deux des points où le cerveau du TDAH reste bloqué. Vingt-cinq minutes sont suffisamment courtes pour permettre de survivre même les jours à faible teneur en dopamine. Et le nombre de sessions vous donne une mesure visible au lieu d&#39;un vague « J&#39;ai travaillé dur aujourd&#39;hui ».</p>
+<p>Une minuterie Pomodoro gamifiée pour Chrome comme <a href="/slimeforge/">SlimeForge</a> prend en charge quatre durées de session – 15, 25, 45 et 60 minutes – afin que vous puissiez adapter la minuterie à votre capacité réelle ce jour-là. Commencer par 15 minutes les jours difficiles ne signifie pas abandonner ; cela supprime l&#39;obstacle à la première séance, qui est presque toujours la plus difficile.</p>
+<p>Les pauses structur�es sont �galement importantes. Une pause de 5 minutes toutes les 25 minutes r�duit la fatigue d�cisionnelle qui s&#39;aggrave tout au long de la journ�e et donne � votre cerveau atteint de TDAH une raison socialement acceptable de s&#39;arr�ter avant que l&#39;hyperconcentration ne vous �loigne compl�tement de la t�che.</p>
+<h2>Ce que la gamification ajoute en plus</h2>
+<p>Une minuterie Pomodoro standard fait une chose : elle compte à rebours et vous avertit. C&#39;est précieux. Mais cela ne résout pas l’autre moitié du problème de concentration du TDAH : rester motivé pendant une semaine complète de séances lorsque la nouveauté s’estompe.</p>
+<p>La gamification ajoute une boucle de r�compense qui ne d�pend pas du fait que la t�che elle-m�me soit gratifiante. Dans SlimeForge, votre premi�re session termin�e fait �clore un animal de compagnie virtuel. Cet animal grandit � mesure que vous terminez plus de sessions, gagnant des Brasas =% qui d�bloquent 16 esp�ces de slime, missions et mini-jeux diff�rents. Lanimal peut �galement parcourir les onglets de votre navigateur et discuter en six langues  quelque chose � esp�rer pendant les pauses plut�t que de sauter dune tabulation � lautre.</p>
+<p>Cela change le calcul : au lieu de � Je devrais faire une autre s�ance parce que j&#39;ai plus de travail � faire �, cela devient � Je veux faire une autre s�ance parce que mon slime est sur le point d&#39;�voluer �. Pour les cerveaux atteints de TDAH qui r�agissent � des r�compenses imm�diates et concr�tes, lanimal est un meilleur facteur de motivation que le b�n�fice abstrait de laccomplissement de la t�che.</p>
+<p>Les <a href="/blog/pomodoro-timer-chrome-extension/">meilleures extensions Chrome de minuterie Pomodoro</a> pour le TDAH vous offrent spécifiquement quelque chose de visible pendant la session - un compte à rebours qui ressemble à une course - et quelque chose à espérer par la suite. La combinaison est plus efficace que l’une ou l’autre seule.</p>
+<h2>Choisir la bonne durée de séance pour le TDAH</h2>
+<p>Toutes les sessions Pomodoro ne devraient pas durer 25 minutes.</p>
+<ul>
+<li><strong>15 minutes</strong> – idéal pour tout ce qui semble accablant avant de commencer. Une fois que vous avez commencé, vous pouvez toujours continuer.</li>
+<li><strong>25 minutes</strong>  le classique�; fonctionne bien une fois que vous avez un �lan et une t�che d�finie.</li>
+<li><strong>45 à 60 minutes</strong> — à utiliser uniquement après avoir déjà établi le flux. Commencer ici est plus difficile pour les cerveaux atteints de TDAH.</li>
+</ul>
+<p>Une règle pratique : si vous redoutez de commencer, fixez-vous 15 minutes. Le but de la première séance est simplement de commencer. Les séances suivantes peuvent être plus longues.</p>
+<h2>Construire des habitudes de concentration sans épuisement professionnel</h2>
+<p>Les séquences aident les cerveaux atteints de TDAH à constater des progrès, mais la pression de « ne brisez pas la chaîne » peut se retourner contre vous. Manquer un jour crée de la culpabilité, la culpabilité crée l&#39;évitement et l&#39;évitement brise complètement l&#39;habitude.</p>
+<p>SlimeForge gère cela en suivant les Brasas 🔥 par session plutôt que par semaine parfaite. Manquer une journée ne réinitialise pas l’espèce de votre animal ni vos progrès gagnés – cela interrompt simplement sa croissance. C’est important parce que la spirale « J’ai déjà rompu ma séquence, pourquoi s’embêter » est un véritable mode d’échec du TDAH.</p>
+<p>Si vous avez essayé d&#39;autres applications ciblées qui reposent sur une motivation négative (culpabilité à propos de votre arbre mourant, séquences perdues), <a href="/blog/forest-app-alternatives-chrome/">Alternatives aux applications forestières</a> qui utilisent à la place des boucles de récompense positives peuvent mieux correspondre à la façon dont les cerveaux du TDAH réagissent réellement aux systèmes d&#39;habitudes.</p>
+<h2>Foire aux questions</h2>
+<p><strong>Pomodoro est-il bon pour le TDAH ?</strong></p>
+<p>Oui, en particulier parce qu’il extériorise la structure que le cerveau du TDAH a du mal à maintenir en interne. Le minuteur supprime les décisions « quand commencer, quand arrêter », les sessions courtes réduisent le dépassement et un décompte des sessions fournit des progrès quotidiens concrets.</p>
+<p><strong>Combien de temps doivent durer les séances Pomodoro pour le TDAH ?</strong></p>
+<p>Commencez par 15 minutes les jours difficiles et 25 minutes lorsque vous avez de l&#39;élan. Réservez des séances de 45 à 60 minutes pour les jours où vous êtes déjà en flux. Faire correspondre la durée de la session à votre état réel est plus important que de suivre une formule fixe.</p>
+<p><strong>Qu&#39;est-ce qui différencie Pomodoro gamifié pour le TDAH ?</strong></p>
+<p>La gamification ajoute une r�compense imm�diate qui ne d�pend pas de la t�che elle-m�me. Terminer une session rapporte quelque chose de visible  un animal de compagnie en pleine croissance, de la monnaie, du contenu � d�bloquer  ce qui donne au syst�me de r�compense du TDAH un signal concret de dopamine � court terme, pas seulement apr�s des heures de travail.</p>
+<p><strong>Puis-je utiliser une minuterie Pomodoro sans Internet ?</strong></p>
+<p>Oui. SlimeForge s&#39;exécute entièrement localement dans votre navigateur. Les sessions, les séries, votre animal de compagnie et tous les progrès gagnés fonctionnent hors ligne. Aucun compte n&#39;est requis : tout est stocké dans votre navigateur.</p>
+<p><strong>Est-ce que SlimeForge est gratuit ?</strong></p>
+<p>Le minuteur principal de Pomodoro, l&#39;animal virtuel, les sessions de base et les statistiques sont gratuits. Un essai Pro dure 5 jours et comprend des fonctionnalités supplémentaires. Après cela, les fonctionnalités gratuites restent disponibles indéfiniment.</p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Îles Canaries</div><div class="footer-links"><a href="/fr/">Accueil</a><a href="/fr/blog/">Blog</a><a href="/fr/tools/">Outils</a><a href="/fr/confidentialite">Confidentialité</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>
