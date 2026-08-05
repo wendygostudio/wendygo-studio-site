@@ -90,6 +90,8 @@ Si tiene TDAH o grandes dificultades para mantener la atención, el sistema de r
 
 Para obtener un desglose detallado de la duración de las sesiones, las configuraciones de descanso y cómo funciona la [extensión de Chrome del temporizador Pomodoro](/blog/pomodoro-timer-chrome-extension/) día a día, consulte la guía de configuración completa.
 
+Para el trabajo profundo, el bloque de concentración completado sigue siendo la unidad principal. El temporizador mide la atención; el compañero hace visible lo que realmente has avanzado.
+
 ## Preguntas frecuentes
 
 ### ¿Qué es un temporizador Pomodoro gamificado?

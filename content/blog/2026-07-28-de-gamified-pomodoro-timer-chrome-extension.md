@@ -90,6 +90,8 @@ Wenn Sie an ADHS leiden oder große Schwierigkeiten haben, die Aufmerksamkeit au
 
 Eine detaillierte Aufschlüsselung der Sitzungslängen, Pausenkonfigurationen und der täglichen Funktionsweise der [Pomodoro-Timer-Chrome-Erweiterung](/blog/pomodoro-timer-chrome-extension/) finden Sie in der vollständigen Einrichtungsanleitung.
 
+Für tiefe Arbeit bleibt der abgeschlossene Fokusblock die wichtigste Einheit. Der Timer misst die Aufmerksamkeit; der Begleiter macht sichtbar, was du tatsächlich vorangebracht hast.
+
 ## Häufig gestellte Fragen
 
 ### Was ist ein spielerischer Pomodoro-Timer?

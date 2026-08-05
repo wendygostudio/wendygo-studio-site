@@ -90,6 +90,8 @@ Se soffri di ADHD o hai grandi difficoltà a mantenere l'attenzione, il sistema 
 
 Per un'analisi dettagliata della durata delle sessioni, delle configurazioni delle interruzioni e del funzionamento quotidiano dell'[estensione Pomodoro timer Chrome](/blog/pomodoro-timer-chrome-extension/), consulta la guida completa alla configurazione.
 
+Per il lavoro profondo, il blocco di concentrazione completato resta l’unità principale. Il timer misura l’attenzione; il compagno rende visibile ciò che hai davvero fatto avanzare.
+
 ## Domande frequenti
 
 ### Cos'è un timer Pomodoro gamificato?

@@ -90,6 +90,8 @@ Se tem PHDA ou muita dificuldade em manter a atenção, o sistema de recompensa 
 
 Para obter uma análise detalhada da duração das sessões, das definições de intervalo e de como a [extensão Pomodoro timer do Chrome](/blog/pomodoro-timer-chrome-extension/) funciona no dia a dia, consulte o guia de configuração completo.
 
+Para trabalho profundo, o bloco de foco concluído continua a ser a unidade principal. O temporizador mede a atenção; o companheiro torna visível o que realmente avançaste.
+
 ## Perguntas frequentes
 
 ### O que é um temporizador Pomodoro gamificado?

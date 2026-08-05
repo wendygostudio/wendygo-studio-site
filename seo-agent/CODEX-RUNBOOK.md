@@ -2,6 +2,13 @@
 
 ## Motor autorizado
 
+La polÃ­tica persistente de salida estÃ¡ en
+`seo-agent/docs/DAILY-SEO-POLICY.md` y prevalece sobre el wording histÃ³rico:
+cada ejecuciÃ³n crea exactamente un artÃ­culo, revisa/mejora al menos un
+artÃ­culo existente con seÃ±ales de rendimiento y comprueba siempre DEV.to y
+Bluesky. Si una API externa falla, se documenta como `socialDebt: OPEN` y se
+deja el borrador/comando pendiente; nunca se simula actividad.
+
 El Daily SEO se ejecuta desde Codex dentro de la sesión de trabajo del proyecto.
 Codex lee `prompts/daily-seo.md`, revisa `analytics-data.json`, modifica el
 sitio cuando corresponde, ejecuta las validaciones y deja el journal diario.

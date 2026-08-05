@@ -16,6 +16,11 @@ Most people who try a Pomodoro timer stop after a week. Not because the techniqu
 
 A gamified Pomodoro timer solves that by adding a feedback loop: each session you complete earns you something tangible. Not a notification badge, but a growing virtual companion that reflects how much work you've actually done.
 
+For deep work, keep the work block as the unit you judge. The 25-minute timer
+measures attention; the completed block measures what you actually moved
+forward. The companion simply makes that second unit easier to notice, so the
+next block has a visible starting point.
+
 ## What "Gamified" Means for a Focus Timer
 
 A plain Pomodoro timer counts down and rings. That's it. A gamified one connects your focused effort to visible progress in a separate system — usually through earned currency, unlockable content, or a companion that evolves.

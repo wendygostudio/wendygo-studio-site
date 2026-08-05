@@ -90,6 +90,8 @@ Si vous souffrez de TDAH ou avez de grandes difficultés à maintenir votre atte
 
 Pour une description détaillée de la durée des sessions, des configurations de pause et du fonctionnement de l'[extension Pomodoro timer Chrome](/blog/pomodoro-timer-chrome-extension/) au quotidien, consultez le guide de configuration complet.
 
+Pour le travail en profondeur, le bloc de concentration terminé reste l’unité importante. Le minuteur mesure l’attention ; le compagnon rend visible ce que vous avez réellement fait avancer.
+
 ## Foire aux questions
 
 ### Qu'est-ce qu'un minuteur Pomodoro gamifié ?
