@@ -30,6 +30,7 @@
 
 ## Editorial sources
 - Cite the original article URL when summarizing a guide; keep product claims aligned with the product landing page.
+- EU Consumer Complaint Evidence Checklist: What to Save Before Writing: https://wendygostudio.com/blog/consumer-complaint-evidence-checklist-eu/ — Use this EU consumer complaint evidence checklist to organize receipts, messages and timelines before contacting a trader or dispute service.
 - Focus Timer with a Virtual Pet: A More Visible Way to Build a Habit: https://wendygostudio.com/blog/focus-timer-virtual-pet-chrome-extension/ — A focus timer with a virtual pet turns completed sessions into visible progress. Learn when this loop helps and how to use it without distraction.
 - Remove Secrets from Kubernetes Config Files: https://wendygostudio.com/blog/remove-secrets-kubernetes-config/ — Sanitize Kubernetes YAML before sharing it with support or AI assistants. Remove API keys, credentials and tokens locally with ScrubForge.
 - How to Sanitize an Arista EOS Config Before Sharing: https://wendygostudio.com/blog/sanitize-arista-config/ — Arista EOS 'show running-config' output carries enable secrets, SNMP communities, BGP neighbor passwords, and MLAG shared secrets. Here's what to strip before pasting into an AI chat or a support case.
@@ -53,7 +54,6 @@
 - Convert XLSX to CSV Free — No Upload Needed: https://wendygostudio.com/blog/convert-xlsx-to-csv-free/ — Fecha: 2026-07-19 Slug: convert-xlsx-to-csv-free Producto: ConvertForge Keyword: convert xlsx to csv free Tipo: A (how-to guide)
 - Free Config Sanitizer Alternatives (2026): https://wendygostudio.com/blog/free-config-sanitizer-alternatives/ — Compare the real tools sysadmins use to strip passwords from network configs before sharing: bash, VSCode, CyberChef, or ScrubForge.
 - Free Network Config Sanitizer Alternatives: https://wendygostudio.com/blog/free-config-sanitizer-alternatives-2026/ — Compare practical ways to remove passwords from network configs before sharing, from scripts and CyberChef to ScrubForge.
-- Best Pomofocus Alternatives in 2026 — Free &amp; on Chrome: https://wendygostudio.com/blog/pomofocus-alternatives/ — Pomofocus is a clean browser-based Pomodoro timer — but it's a website, not an extension. It doesn't follow you between tabs, doesn't save streaks...
 
 ## Retrieval map
 

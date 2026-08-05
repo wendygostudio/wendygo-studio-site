@@ -18,6 +18,8 @@ sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 
 A warranty claim gets ignored. A refund is refused. The seller stops responding. In the EU, this is where a formal consumer complaint comes in — and you have real, enforceable options beyond just hoping the seller changes their mind.
 
+Before writing, use the [EU consumer complaint evidence checklist](/blog/consumer-complaint-evidence-checklist-eu/) to organize receipts, messages and a dated timeline. A clear file makes the next step easier to assess.
+
 ## When to File a Formal Complaint
 
 A complaint is different from a warranty claim. You send a claim directly to the seller; a complaint goes to a third party — a consumer authority, dispute resolution body, or regulator — when the seller fails to fix the problem on their own.
