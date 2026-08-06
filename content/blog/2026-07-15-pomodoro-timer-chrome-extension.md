@@ -14,6 +14,8 @@ relatedPages: /slimeforge/
 
 Most Pomodoro timers fail you the same way: you set 25 minutes, the alarm rings, you close the tab, and by the next morning you've forgotten the extension exists. SlimeForge fixes this with a virtual slime pet that lives inside your browser and grows only when you focus.
 
+If your main interruption is a predictable website rather than the timer itself, pair the routine with the new [Pomodoro Focus Shield guide](/blog/pomodoro-focus-shield-chrome/). It explains how to keep essential research tabs available while reducing the sites that repeatedly pull you away.
+
 ## What Is the Pomodoro Technique?
 
 The Pomodoro Technique splits your work into intervals — typically 25 minutes of focused work followed by a short break. After four cycles, you take a longer break. It's one of the most researched time-management methods because it makes the act of sitting down to work feel manageable and bounded.
