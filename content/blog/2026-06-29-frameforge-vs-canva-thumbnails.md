@@ -24,6 +24,8 @@ Both tools can produce a YouTube thumbnail or a platform-ready image. But they s
 
 The distinction matters: Canva adds design on top of an image. FrameForge resizes an image you already have.
 
+If the design is already finished and the remaining risk is inconsistent padding, use the [safe-margins workflow for social images](/blog/safe-margins-social-media-images-chrome/). It keeps the practical comparison honest: FrameForge is a local raster editor for preparing an existing asset, not a replacement for a full vector design suite.
+
 ## Side-by-Side Comparison
 
 | Feature | FrameForge | Canva |
