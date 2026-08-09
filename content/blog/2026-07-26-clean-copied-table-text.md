@@ -14,6 +14,8 @@ relatedPages: /textforge/,/blog/extract-emails-from-text/,/blog/clean-text-onlin
 
 Copying a table from a PDF, dashboard or support portal often produces text that looks almost right. Columns drift apart, a single cell becomes three lines, and headers appear again halfway through the paste. The dangerous part is that the result can still look plausible enough to reuse without checking it.
 
+If the source is specifically a Markdown table, the newer [Markdown-to-plain-text Chrome workflow](/blog/convert-markdown-table-plain-text-chrome/) gives you a shorter sequence for removing pipes and alignment rows while preserving the values.
+
 > **Treat copied layout as untrusted formatting.** Keep the values, but verify which spaces and line breaks carry meaning before you transform them.
 
 ## Separate records from layout noise
