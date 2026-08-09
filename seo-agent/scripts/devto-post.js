@@ -33,7 +33,14 @@ const title = process.argv[fileMode ? 3 : 2];
 const bodyArg = process.argv[fileMode ? 4 : 3];
 const tags = process.argv[fileMode ? 5 : 4] || '';
 const explicitCanonical = process.argv[fileMode ? 6 : 5] || '';
-const body = fileMode ? require('fs').readFileSync(bodyArg, 'utf8') : bodyArg;
+const rawBody = fileMode ? require('fs').readFileSync(bodyArg, 'utf8') : bodyArg;
+
+// Queue files intentionally use `published: false` as a local safety default.
+// DEV gives article front matter precedence over JSON fields, so normalize it
+// before sending a publication request.
+const body = rawBody.replace(/^(---\s*\n[\s\S]*?\n---\s*\n)/, (frontMatter) =>
+  frontMatter.replace(/^(published:\s*)(?:true|false)\s*$/m, '$1true')
+);
 
 if (!title || !body) {
   console.error('Usage: node devto-post.js "Title" "markdown_body" "tag1,tag2,tag3"');
@@ -80,6 +87,9 @@ async function post() {
   }
 
   const result = await res.json();
+  if (result.published !== true) {
+    throw new Error(`Dev.to accepted the request but kept the article unpublished (${result.url || 'no URL returned'})`);
+  }
   console.log(`🚀 Published on Dev.to!`);
   console.log(`   Title: ${result.title}`);
   console.log(`   URL: ${result.url}`);
