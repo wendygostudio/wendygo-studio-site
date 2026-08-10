@@ -16,6 +16,8 @@ relatedPages: /convertforge/
 
 Most online converters take your file, send it to a server, process it there, and return a result. Your photo, document, or spreadsheet lives briefly on someone else's infrastructure. ConvertForge converts files entirely inside your browser — nothing leaves your machine.
 
+For image-only work, the [WebP-to-JPG local workflow](/blog/convert-webp-to-jpg-locally-chrome/) covers quality, transparency and size checks before downloading the result.
+
 ## What ConvertForge Converts
 
 ConvertForge is a universal conversion router with a drag-and-drop interface. Drop a file and it detects the type automatically:

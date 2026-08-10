@@ -30,6 +30,7 @@
 
 ## Editorial sources
 - Cite the original article URL when summarizing a guide; keep product claims aligned with the product landing page.
+- Convert WebP to JPG Locally in Chrome: https://wendygostudio.com/blog/convert-webp-to-jpg-locally-chrome/ — Convert a WebP image to JPG in Chrome without uploading the file, using a local ConvertForge workflow for quality and size control.
 - Convert a Markdown Table to Plain Text in Chrome: https://wendygostudio.com/blog/convert-markdown-table-plain-text-chrome/ — Turn copied Markdown tables into readable plain text in Chrome with a local TextForge workflow for cleanup, line joins and quick export.
 - How to Build a Focus Ritual in Chrome Before a Pomodoro: https://wendygostudio.com/blog/focus-rituals-pomodoro-chrome/ — Turn a vague intention into a repeatable focus ritual in Chrome with a clear outcome, the right timer and SlimeForge's local-first workflow.
 - Safe Margins for Social Media Images: A Chrome Workflow: https://wendygostudio.com/blog/safe-margins-social-media-images-chrome/ — Keep text and logos inside safe margins when preparing social media images in Chrome with a local, repeatable FrameForge workflow.
@@ -53,4 +54,3 @@
 - Sanitize a MikroTik RouterOS Config Before You Share It: https://wendygostudio.com/blog/sanitize-mikrotik-router-config/ — MikroTik hides passwords in RouterOS exports by default. Topology, comments and server addresses still leak. Here's what to check before sharing.
 - What to Do During a Pomodoro Break: 12 Ideas: https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/ — Use your Pomodoro break to reset without losing focus. Try 12 short break ideas and return to work on time.
 - Seller Refused Your EU Warranty Claim? What to Do: https://wendygostudio.com/blog/seller-refuses-warranty-claim-eu/ — Learn what to document, request and escalate when an EU seller rejects a valid warranty claim for faulty goods.
-- Best CloudConvert Alternatives (2026): https://wendygostudio.com/blog/cloudconvert-alternatives/ — Looking for CloudConvert alternatives? Compare the best free options -- local tools that convert files privately without uploading.

@@ -87,7 +87,9 @@ async function post() {
   }
 
   const result = await res.json();
-  if (result.published !== true) {
+  // The create response may omit `published`; a false value is the actual
+  // failure signal. The article URL is verified by the daily flow afterwards.
+  if (result.published === false) {
     throw new Error(`Dev.to accepted the request but kept the article unpublished (${result.url || 'no URL returned'})`);
   }
   console.log(`🚀 Published on Dev.to!`);
