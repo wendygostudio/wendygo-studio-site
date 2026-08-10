@@ -12,5 +12,9 @@
   "guides/base64-encoding/index.html": {"description":"Learn Base64 encoding and decoding, JWT tokens, Kubernetes secrets and Basic Auth without uploading your data."},
   "guides/eu-consumer-rights/index.html": {"title":"EU Consumer Rights: Complete Guide for Shoppers","description":"Understand EU warranties, complaints, chargebacks, GDPR rights and small claims with this practical consumer guide."},
   "tools/subnet-calculator/index.html": {"description":"Calculate network address, broadcast, host range and wildcard mask from any IP and CIDR prefix, locally in your browser."},
-  "use-cases/network-config-anonymizer-for-ai/index.html": {"description":"Remove passwords, SNMP strings, IPsec keys and other secrets before sharing network configurations with an AI assistant."}
+  "use-cases/network-config-anonymizer-for-ai/index.html": {"description":"Remove passwords, SNMP strings, IPsec keys and other secrets before sharing network configurations with an AI assistant."},
+  "use-cases/bulk-text-cleaner/index.html": {"title":"Bulk Text Cleaner Use Case: Process Large Text Volumes"},
+  "use-cases/local-file-converter-chrome-extension/index.html": {"title":"Local File Converter Use Case: Images and Documents"},
+  "es/blog/resize-image-for-linkedin-post/index.html": {"title":"Cómo cambiar el tamaño de una imagen para LinkedIn"},
+  "fr/blog/resize-image-for-linkedin-post/index.html": {"title":"Redimensionner une image pour LinkedIn"}
 }
