@@ -18,6 +18,7 @@ The site is technically healthy and its content/localization system is now consi
 - Sitemap, GEO files, resource links, product canonicals, structured data and Open Graph checks pass.
 - Four duplicate-title warnings that had remained in the i18n validator were fixed with durable SEO overrides: two blog/use-case aliases and the Spanish/French LinkedIn image pages. The validator now reports 0 errors.
 - Metadata guard reports 0 pending title or description fixes; the structured-blog path continues to receive the same length protection as legacy pages.
+- Audited the existing free `regex-tester` tool in English, Spanish, German, French, Italian and Portuguese; confirmed local matching, FAQPage schema, related-tool links and reciprocal links from the JSON/slug tools.
 
 ## Measurement and traction
 

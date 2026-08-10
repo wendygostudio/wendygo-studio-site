@@ -134,7 +134,7 @@ Formato:
 
 ## 3. Historial de ejecuciones recientes (rolling log)
 
-- **2026-08-10 (weekly)**: auditoría profunda con 761 URLs canónicas/763 HTML, 0 errores en todas las validaciones y 7/7 tests; corregidos cuatro títulos duplicados mediante overrides durables, añadido el informe competitivo y actualizado el plan de medición. GA4 sigue detenido en el 31 de julio y Search Console/Cloudflare Web Analytics siguen sin acceso.
+- **2026-08-10 (weekly)**: auditoría profunda con 761 URLs canónicas/763 HTML, 0 errores en todas las validaciones y 7/7 tests; corregidos cuatro títulos duplicados mediante overrides durables, auditada la herramienta local `regex-tester` en seis idiomas, añadido el informe competitivo y actualizado el plan de medición. GA4 sigue detenido en el 31 de julio y Search Console/Cloudflare Web Analytics siguen sin acceso.
 
 - **2026-08-04 (daily 2)**: traducidos tres grupos adicionales a los cinco locales, integrada la herramienta `social-media-image-sizes` en seis idiomas y corregidos los enlaces/aliases que rompían el pipeline; resultado 614 URLs canónicas, 616 HTML y validación 0 errores con tests 7/7.
 

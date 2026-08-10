@@ -2,7 +2,7 @@
 
 ## Priorities
 
-- Monday: refresh the technical/measurement baseline and close duplicate metadata (completed in weekly review).
+- Monday: refresh the technical/measurement baseline, close duplicate metadata and audit the existing Regex Tester tool (completed in weekly review).
 - Tuesday: prioritize one existing page with a Search Console impression signal once access is restored; otherwise improve the weakest internal-link hub.
 - Wednesday: review SlimeForge's acquisition and activation instrumentation; no pricing or CTA changes without evidence.
 - Thursday: maintain one differentiated article or update only when it closes a measured query gap; translate to all six locales.

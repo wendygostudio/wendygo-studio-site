@@ -33,6 +33,8 @@ If your CyberChef usage is mostly text operations — sorting lines, extracting 
 
 It runs entirely locally (no data sent anywhere), opens from the toolbar in one click, and includes over 58 text functions. You paste text, apply a function, copy the result. For the common tasks where CyberChef is technically capable but heavy, TextForge is faster.
 
+For quick pattern checks before applying a transformation, use the local [Regex Tester](/tools/regex-tester/) to inspect matches and capture groups in a sample.
+
 What TextForge does that overlaps with CyberChef's text operations:
 
 - Base64 encode and decode
