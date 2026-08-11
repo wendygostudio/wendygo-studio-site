@@ -6,7 +6,7 @@ title: >-
 description: >-
   Quando um vendedor recusa a sua reclamação de garantia ou ignora um pedido de
   reembolso, contratar um advogado é a última coisa que quer fazer. Honorários
-  de Advogado por 200€...
+  de Advogado por 200�...
 date: 2026-07-04T00:00:00.000Z
 slug: alternatives-to-hiring-a-lawyer-consumer-claims-eu
 locale: pt
@@ -48,7 +48,7 @@ Exemplos bem conhecidos incluem o Verbraucherzentrale (Alemanha), DGCCRF (Franç
 
 ## Alternativa 3: ECC-Net para compras transfronteiriças
 
-Se comprou a um comerciante noutro pa�s da UE, na Isl�ndia ou na Noruega, contacte o Centro Europeu do Consumidor do seu pa�s. A ECC-Net pode explicar as rotas dispon�veis, ajud�-lo a comunicar atrav�s das fronteiras e pode ajudar na procura de uma solu��o amig�vel. Normalmente, deve contactar primeiro o comerciante e guardar as provas dessa tentativa.
+Se comprou a um comerciante noutro país da UE, na Islândia ou na Noruega, contacte o Centro Europeu do Consumidor do seu país. A ECC-Net pode explicar as rotas disponíveis, ajudá-lo a comunicar atravès das fronteiras e pode ajudar na procura de uma solução amigável. Normalmente, deve contactar primeiro o comerciante e guardar as provas dessa tentativa.
 
 Utilize esta opção se o vendedor estiver sediado num país da UE diferente do seu.
 
@@ -79,7 +79,7 @@ O ClaimForge é uma extensão gratuita do Chrome que revela os direitos específ
 ## Quando um advogado vale realmente a pena
 
 Há casos em que a representação legal faz sentido:
-- A disputa ultrapassa os 2.000� e o vendedor est� a bloquear depois de esgotados todos os canais
+- A disputa ultrapassa os 2.000� e o vendedor está a bloquear depois de esgotados todos os canais
 - Existem sinais de fraude deliberada, não apenas de negligência
 - Precisa de executar uma RAL vinculativa ou uma decisão judicial que o vendedor está a ignorar
 - É possível uma ação coletiva (vários consumidores com a mesma reclamação)
@@ -103,4 +103,4 @@ Sim, na maioria dos casos. Os organismos de RAL certificados pela UE devem ser g
 Depende de quem é o vendedor e de onde o comerciante está estabelecido. A garantia A-to-z da própria Amazon também pode estar disponível. Para um litígio transfronteiriço elegível, contacte o Centro Europeu do Consumidor do seu país depois de tentar resolvê-lo com o comerciante.
 
 **Quando faz sentido contratar um advogado para uma reclamação de um consumidor?**
-Quando o montante em jogo for elevado (mais de 2.000�) e todos os outros canais estiverem esgotados, ou quando existam ind�cios de fraude deliberada que exija aplica��o legal. Para disputas de garantia padr�o, devolu��o ou RGPD, as alternativas gratuitas s�o quase sempre suficientes.
+Quando o montante em jogo for elevado (mais de 2.000�) e todos os outros canais estiverem esgotados, ou quando existam indícios de fraude deliberada que exija aplica��o legal. Para disputas de garantia padrão, devolu��o ou RGPD, as alternativas gratuitas são quase sempre suficientes.

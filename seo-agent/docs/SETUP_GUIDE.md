@@ -109,6 +109,24 @@ pip install tweepy --break-system-packages
 4. Para acceso API: crea credenciales OAuth2 en Google Cloud Console
 5. Descarga el JSON de credenciales y guárdalo como `config/gsc-credentials.json`
 
+### 2.7 Extracción diaria sin caducidad de OAuth
+
+Para evitar que un token de usuario termine en `invalid_grant`, usa una cuenta de servicio compartida con permisos de lectura:
+
+1. En Google Cloud Console → **IAM y administración → Cuentas de servicio**, crea `wendygo-seo-reader`.
+2. En esa cuenta, **Claves → Añadir clave → Crear clave nueva → JSON**.
+3. Guarda el archivo descargado como `seo-agent/config/google-service-account.json`.
+4. Activa **Google Search Console API** y **Google Analytics Data API** en el mismo proyecto.
+5. En Search Console → **Configuración → Usuarios y permisos**, añade el correo `client_email` del JSON con permiso **Restringido**.
+6. En GA4 → **Administrador → Gestión de accesos** de la cuenta o propiedad, añade ese mismo correo como **Viewer/Visualizador** en las seis propiedades.
+7. Ejecuta desde la raíz de la integración:
+
+```powershell
+npm.cmd run analytics:refresh
+```
+
+El refrescador detecta automáticamente `google-service-account.json`, obtiene tokens de corta duración en cada ejecución y no depende de una sesión personal. El JSON está excluido de Git; nunca lo subas al repositorio.
+
 ---
 
 ## 3. Estructura del Proyecto

@@ -23,7 +23,7 @@ Pomofocus est un minuteur Pomodoro propre basé sur un navigateur, mais c'est un
 - Capacité hors ligne
 - Statistiques et séquences de sessions
 - Durées de minuterie personnalisables
-- Mécaniques de motivation au-delà d’un simple compte à rebours
+- Mécaniques de motivation au-delà d"un simple compte à rebours
 
 ## Meilleures alternatives Pomofocus en 2026
 
@@ -41,9 +41,9 @@ Plantez un arbre virtuel lorsque vous démarrez une session ; il meurt si vous 
 
 Aucune extension Chrome officielle. Idéalement, si votre téléphone est votre principale source de distraction.
 
-### 3. Focus To-Do  Id�al pour l'int�gration de la gestion des t�ches
+### 3. Focus To-Do – Idéal pour l'int�gration de la gestion des tâches
 
-Combine une minuterie Pomodoro avec une liste de t�ches. Attribuez des sessions � des t�ches sp�cifiques et suivez le nombre de sessions que chaque t�che a n�cessit�es. Disponible sur Windows, Mac, iOS, Android et en tant qu'extension Chrome.
+Combine une minuterie Pomodoro avec une liste de tâches. Attribuez des sessions � des tâches sp�cifiques et suivez le nombre de sessions que chaque tâche a nécessitées. Disponible sur Windows, Mac, iOS, Android et en tant qu'extension Chrome.
 
 ### 4. Soyez concentré – Idéal pour Mac et iOS
 
@@ -69,13 +69,13 @@ Principalement un outil de suivi du temps pour les indépendants et les équipes
 Pomofocus lui-même ne propose pas d'extension Chrome officielle. Il fonctionne dans n'importe quel onglet du navigateur, mais ne persiste pas dans les onglets et n'apparaît pas dans la barre d'outils.
 
 **Quelle est la meilleure extension Chrome gratuite de minuterie Pomodoro en 2026 ?**
-SlimeForge et Focus To-Do sont les options gratuites les plus puissantes. SlimeForge comprend un minuteur complet, un animal de compagnie virtuel et des s�quences sans frais. Focus To-Do propose des plans gratuits avec int�gration de t�ches.
+SlimeForge et Focus To-Do sont les options gratuites les plus puissantes. SlimeForge comprend un minuteur complet, un animal de compagnie virtuel et des s�quences sans frais. Focus To-Do propose des plans gratuits avec int�gration de tâches.
 
 **Qu'est-ce qui manque à Pomofocus par rapport aux extensions Chrome ?**
-Pomofocus est basé sur des onglets : il ne s'exécute pas dans la barre d'outils et ne vous suit pas entre les pages. Il n’a pas de mode hors ligne, de système de séquences ou de gamification. Une extension dédiée résout les trois.
+Pomofocus est basé sur des onglets : il ne s'exécute pas dans la barre d'outils et ne vous suit pas entre les pages. Il n"a pas de mode hors ligne, de système de séquences ou de gamification. Une extension dédiée résout les trois.
 
 **Est-ce que SlimeForge est entièrement gratuit ?**
-Le minuteur principal, l'animal virtuel, les statistiques de session et les séquences sont gratuits indéfiniment. Un essai Pro de 5 jours débloque des fonctionnalités supplémentaires ; les fonctionnalités gratuites restent après l’essai.
+Le minuteur principal, l'animal virtuel, les statistiques de session et les séquences sont gratuits indéfiniment. Un essai Pro de 5 jours débloque des fonctionnalités supplémentaires ; les fonctionnalités gratuites restent après l"essai.
 
 **Puis-je utiliser une minuterie Pomodoro pendant la navigation sans changer d'onglet ?**
 Oui — Les extensions Chrome comme SlimeForge s'ouvrent à partir de la barre d'outils sous forme de fenêtre contextuelle, vous ne quittez donc jamais votre onglet actuel.

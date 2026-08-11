@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
-title: "How to Resize an Image for X (Twitter) Posts in Chrome (1200×675)"
-description: "Post images at the correct 1200×675 px without anything getting cropped in the X feed. FrameForge resizes in your browser — no upload, no Photoshop."
+title: "X (Twitter) Image Size: Resize Posts to 1200×675 in Chrome"
+description: "Resize images to 1200×675 for X (Twitter) without cropping. FrameForge works locally in Chrome, with no upload or Photoshop."
 date: 2026-06-27
 slug: resize-image-for-x-twitter-post
 locale: en
@@ -10,9 +10,7 @@ product: frameforge
 contentType: how-to
 primaryKeyword: "how to resize image for x twitter post"
 relatedPages: /frameforge/
----
-
-X renders tweet images at a 2:1 crop in the feed preview. Square photos get the bottom half cut off. Portrait shots get squeezed into an awkward center slice. The fix is simple: post at 1200×675 px (16:9) and nothing gets cropped in either the feed preview or the full-size expanded view.
+---X renders tweet images at a 2:1 crop in the feed preview. Square photos get the bottom half cut off. Portrait shots get squeezed into an awkward center slice. The fix is simple: post at 1200×675 px (16:9) and nothing gets cropped in either the feed preview or the full-size expanded view.
 
 FrameForge is a Chrome extension that resizes images entirely in your browser. No upload, no account, no waiting for a remote server to process your file.
 

@@ -15,9 +15,7 @@ primaryKeyword: >-
   cómo cambiar el tamaño de la imagen de perfil de tiktok: obtén el cuadrado
   perfecto en segundos
 relatedPages: /es/frameforge/
----
-
-# Cómo cambiar el tamaño de la imagen de perfil de TikTok: obtenga el cuadrado perfecto en segundos
+---# Cómo cambiar el tamaño de la imagen de perfil de TikTok: obtenga el cuadrado perfecto en segundos
 
 Una imagen de perfil de TikTok debe ser un cuadrado perfecto: 400×400 píxeles, idealmente al menos 512×512 para claridad HD. Si su imagen es rectangular o tiene las dimensiones incorrectas, TikTok la recortará automáticamente, cortando partes importantes de su cara o logotipo.
 

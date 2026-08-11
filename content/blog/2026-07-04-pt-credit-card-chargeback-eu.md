@@ -78,7 +78,7 @@ O seu banco investiga e normalmente toma uma decisão no prazo de 4 a 6 semanas.
 ### Estorno versus outras opções
 Um estorno é rápido, mas não é a única opção. Se o seu estorno falhar ou se pretender uma segunda opinião antes de registar:
 - **RAL (Resolução Alternativa de Litígios):** demora até 90 dias, mas é geralmente mais bem-sucedido para litígios de qualidade
-- **ECC-Net:** Pode ajudar com um lit�gio eleg�vel que envolva um comerciante de outro pa�s da UE, Isl�ndia ou Noruega
+- **ECC-Net:** Pode ajudar com um litígio eleg�vel que envolva um comerciante de outro país da UE, Islândia ou Noruega
 - **Autoridade Nacional do Consumidor:** Pode pressionar o comerciante se este for reincidente; livre para arquivar
 - **Tribunal de Pequenas Causas:** Último recurso, mas muitas vezes os vendedores chegam a um acordo antes do julgamento
 

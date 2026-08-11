@@ -74,7 +74,7 @@ Todos os três formatos funcionam no Instagram, mas têm comportamentos diferent
 
 **Retrato (4:5)** ocupa mais espaço vertical no feed — cerca de 20% mais espaço no ecrã do que um quadrado. Para fotos que já estão na vertical, este formato permite mostrar mais da imagem sem cortar de forma tão agressiva. O FrameForge pode lidar com isto com uma proporção de corte personalizada.
 
-**Paisagem (1,91:1)** ideal para fotos panor�micas e composi��es amplas. Mostra menos imagem na visualiza��o do feed, mas pode funcionar bem para cenas em que a largura � mais importante do que a altura.
+**Paisagem (1,91:1)** ideal para fotos panorâmicas e composições amplas. Mostra menos imagem na visualização do feed, mas pode funcionar bem para cenas em que a largura é mais importante do que a altura.
 
 ## Redimensionamento para múltiplas plataformas
 

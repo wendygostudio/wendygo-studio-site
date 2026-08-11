@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
-title: "TikTok Profile Picture Size in Chrome | 400x400"
-description: "TikTok profile picture size: resize to 400x400 or 512x512 in Chrome. FrameForge keeps images local and centers the crop for a clean upload."
+title: "TikTok Profile Picture Size: Resize to 400×400 in Chrome"
+description: "Resize a TikTok profile picture to 400×400 in Chrome. FrameForge crops locally and exports a clean, upload-ready square."
 date: 2026-06-29
 slug: resize-image-for-tiktok-profile-picture
 locale: en
@@ -10,9 +10,7 @@ product: frameforge
 contentType: how-to
 primaryKeyword: "how to resize image for tiktok profile picture: get the perfect square in seconds"
 relatedPages: /frameforge/
----
-
-# How to Resize Image for TikTok Profile Picture: Get the Perfect Square in Seconds
+---# How to Resize Image for TikTok Profile Picture: Get the Perfect Square in Seconds
 
 A TikTok profile picture needs to be a perfect square—400×400 pixels, ideally at least 512×512 for HD clarity. If your image is rectangular or the wrong dimensions, TikTok will crop it automatically, cutting off important parts of your face or logo.
 

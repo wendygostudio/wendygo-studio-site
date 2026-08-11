@@ -186,6 +186,62 @@ def fetch_plausible_data(site_id: str, api_key: str, days: int = 28) -> dict:
     }
 
 
+def fetch_ga4_data(property_ids: list[str], days: int = 28) -> dict:
+    """Obtiene eventos GA4 agregados por propiedad usando OAuth de solo lectura.
+
+    Requiere que la cuenta OAuth tenga el rol Viewer en cada propiedad y que
+    Analytics Data API esté habilitada. No usa credenciales de escritura.
+    """
+    try:
+        from google.analytics.data_v1beta import BetaAnalyticsDataClient
+        from google.analytics.data_v1beta.types import DateRange, Dimension, Metric, RunReportRequest
+        from google.oauth2.credentials import Credentials
+        from google_auth_oauthlib.flow import InstalledAppFlow
+        from google.auth.transport.requests import Request
+    except ImportError:
+        logger.warning("Dependencias GA4 no instaladas; se omite GA4")
+        return {}
+
+    scopes = ["https://www.googleapis.com/auth/analytics.readonly"]
+    token_file = CONFIG_DIR / "ga4-token.json"
+    credentials_file = CONFIG_DIR / "gsc-credentials.json"
+    creds = Credentials.from_authorized_user_file(str(token_file), scopes) if token_file.exists() else None
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        elif credentials_file.exists():
+            flow = InstalledAppFlow.from_client_secrets_file(str(credentials_file), scopes)
+            creds = flow.run_local_server(port=0)
+        else:
+            logger.warning("No se encontró el cliente OAuth para GA4")
+            return {}
+        token_file.write_text(creds.to_json(), encoding="utf-8")
+
+    client = BetaAnalyticsDataClient(credentials=creds)
+    start = f"{days}daysAgo"
+    result = {}
+    for prop in property_ids:
+        property_id = prop.removeprefix("properties/")
+        request = RunReportRequest(
+            property=f"properties/{property_id}",
+            dimensions=[Dimension(name="eventName")],
+            metrics=[Metric(name="eventCount"), Metric(name="totalUsers")],
+            date_ranges=[DateRange(start_date=start, end_date="yesterday")],
+            limit=100,
+        )
+        try:
+            response = client.run_report(request)
+            result[property_id] = [
+                {"event": row.dimension_values[0].value,
+                 "event_count": int(row.metric_values[0].value),
+                 "users": int(row.metric_values[1].value)}
+                for row in response.rows
+            ]
+        except Exception as exc:
+            logger.warning("GA4 property %s no disponible: %s", property_id, exc)
+    return result
+
+
 def main():
     output_file = SITE_DIR / "analytics-data.json"
 
@@ -214,6 +270,11 @@ def main():
         analytics["web_analytics"] = fetch_plausible_data(
             plausible_site, plausible_key
         )
+
+    ga4_ids = [value.strip() for value in os.environ.get("GA4_PROPERTY_IDS", "").split(",") if value.strip()]
+    if ga4_ids:
+        logger.info("Obteniendo eventos GA4 de %s propiedades...", len(ga4_ids))
+        analytics["ga4"] = fetch_ga4_data(ga4_ids)
 
     # Guardar
     output_file.write_text(json.dumps(analytics, indent=2, ensure_ascii=False))

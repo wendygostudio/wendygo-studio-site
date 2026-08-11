@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
-title: "Decode JWT Token Online (No Server Upload, No Third-Party)"
-description: "JWT (JSON Web Token) is the standard for stateless authentication. Every time you log into an app, your browser holds a JWT. But reading one..."
+title: "Decode a JWT Token Online — Private, Local and No Upload"
+description: "Decode a JWT header and payload in your browser without sending the token to a third-party server."
 date: 2026-07-12
 slug: decode-jwt-online
 locale: en
@@ -10,9 +10,7 @@ product: textforge
 contentType: how-to
 primaryKeyword: "decode jwt token online (no server upload, no third-party)"
 relatedPages: /textforge/,/blog/cyberchef-alternatives/,/blog/base64-encode-decode-online-tool/
----
-
-# Decode JWT Token Online (No Server Upload, No Third-Party)
+---# Decode JWT Token Online (No Server Upload, No Third-Party)
 
 JWT (JSON Web Token) is the standard for stateless authentication. Every time you log into an app, your browser holds a JWT. But reading one requires decoding — and most online JWT decoders send your token to a third-party server.
 

@@ -1,5 +1,12 @@
 # Memoria del Proyecto — Wendygo Studio
 
+## Estado operativo vigente (2026-08-11)
+
+- Search Console ya está operativo mediante la cuenta de servicio `wendygo-seo-reader@project-d87fed0e-c2d8-4b88-9ae.iam.gserviceaccount.com`: la última extracción devolvió 50 páginas y 50 consultas.
+- GA4 sigue pendiente de permisos de propiedad; no tomar decisiones de rendimiento de extensiones con datos GA4 hasta resolverlo.
+- La deuda de traducción está cerrada: no quedan grupos pendientes y las validaciones locales pasan sin errores.
+- No repetir diagnósticos antiguos que indiquen Search Console vacío, `invalid_grant` de GSC o nueve grupos de traducción pendientes; quedan como histórico, no como estado actual.
+
 ## FrameForge 2.0.0 (2026-07-29)
 
 FrameForge se ha actualizado como editor local de imágenes, no solo redimensionador: presets sociales, recorte manual, capas, plantillas, historial visual, cuentagotas y guías de alineación. Sus herramientas de IA local cubren eliminar fondos, ampliar 2×/4×, quitar objetos, ampliar lienzo y detectar defectos; las exportaciones IA gratuitas llevan marca de agua. Incluye ocho herramientas creativas y el sistema local “Mi taller” (5 prestigios, 6 skins y 14 logros) en la vista normal. Pro añade color, tipografía, overlays, exportación multiformato, ZIP por lotes y editor completo. No es un editor vectorial ni una herramienta de capturas. Evita afirmar un número de modelos de IA hasta cerrar la decisión P-009; usa “herramientas de IA local”.
@@ -133,6 +140,11 @@ Formato:
 ---
 
 ## 3. Historial de ejecuciones recientes (rolling log)
+
+- **2026-08-11 (resolución de bloqueos)**: retiradas y archivadas 28 fuentes localizadas duplicadas del 26-07; la deuda de traducción queda cerrada y la validación pasa con 790 URLs canónicas/792 HTML. Añadido `analytics:refresh` en Node; Search Console y GA4 devuelven `invalid_grant`, y PageSpeed público respondió 429.
+- **2026-08-11 (rendimiento)**: Lighthouse local de la home: 98 mobile (LCP 2,2 s, CLS 0, TBT 0 ms) y 100 desktop (LCP 0,7 s, CLS 0, TBT 0 ms); falta CrUX para sustituir la captura por datos reales de usuarios.
+
+- **2026-08-11 (auditoría integral)**: matriz SEO/GEO/medición/autoridad/producto ejecutada; corregido el truncado de titulares en `llms.txt` usando el `headline` completo del JSON-LD. La técnica local sigue en 0 errores; Search Console, CWS, Core Web Vitals y GA4 reciente siguen siendo las limitaciones externas.
 
 - **2026-08-11 (daily)**: completadas tres tandas estructuradas de traducción de Pomodoro/foco a los seis idiomas; Search Console sigue vacío y GA4 detenido en el 31 de julio, por lo que no se tomó una decisión de rendimiento. Dev.to comprobado sin duplicar publicación y Bluesky registró 2 likes; quedan 9 grupos de traducción pendientes, varios sin fuente EN estructurada.
 

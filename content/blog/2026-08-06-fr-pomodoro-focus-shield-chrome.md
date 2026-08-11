@@ -16,7 +16,7 @@ relatedPages: >-
   /fr/slimeforge/,/fr/blog/pomodoro-timer-chrome-extension/,/fr/blog/offline-pomodoro-timer-chrome/
 ---
 
-Un minuteur de mise au point peut vous demander de travailler pendant 25 minutes, mais un onglet distrayant peut toujours �tre � port�e de clic. Un Pomodoro Focus Shield pour Chrome ajoute une petite quantit� de friction entre la session et les sites qui l'interrompent habituellement. Le but nest pas de verrouiller tout le navigateur. Il sagit de prot�ger le bloc de travail tout en conservant les outils, les r�f�rences et les canaux de communication dont la t�che a r�ellement besoin.
+Un minuteur de mise au point peut vous demander de travailler pendant 25 minutes, mais un onglet distrayant peut toujours �tre � port�e de clic. Un Pomodoro Focus Shield pour Chrome ajoute une petite quantit� de friction entre la session et les sites qui l'interrompent habituellement. Le but nest pas de verrouiller tout le navigateur. Il sagit de prot�ger le bloc de travail tout en conservant les outils, les r�f�rences et les canaux de communication dont la tâche a r�ellement besoin.
 
 ## Ce qu'un Focus Shield devrait faire
 
@@ -28,7 +28,7 @@ La version utile est prévisible. Vous choisissez une session, définissez les s
 | Keep project tabs available | Open anything needed for the next block |
 | Show the remaining session time | Decide what to focus on next |
 
-> **Bloquez la distraction, pas le contexte.** Si la recherche, la documentation ou une discussion en �quipe font partie de la t�che, autorisez-la et supprimez uniquement les sites qui d�tournent votre attention de mani�re r�p�t�e.
+> **Bloquez la distraction, pas le contexte.** Si la recherche, la documentation ou une discussion en �quipe font partie de la tâche, autorisez-la et supprimez uniquement les sites qui d�tournent votre attention de mani�re r�pétée.
 
 ## Comment configurer une session Chrome ciblée
 
@@ -43,15 +43,15 @@ La version utile est prévisible. Vous choisissez une session, définissez les s
 
 [SlimeForge](/slimeforge/) combines Pomodoro sessions with an optional Focus Shield. You can choose 15, 25, 45 or 60 minutes, add a goal and let the companion grow as sessions are completed. The shield is a focus aid, not parental-control software: it can be bypassed by disabling the extension, so it works best as a deliberate commitment rather than a security boundary.
 
-Gardez les param�tres locaux � la t�che. Une session d'�criture peut n�cessiter un site de documentation�; un bloc de codage peut n�cessiter un r�f�rentiel ou un outil de suivi des probl�mes. La liste de droite change avec le projet, et un bouclier qui bloque le contexte n�cessaire vous apprendra � le d�sactiver.
+Gardez les param�tres locaux à la tâche. Une session d'�criture peut n�cessiter un site de documentation�; un bloc de codage peut n�cessiter un r�f�rentiel ou un outil de suivi des problèmes. La liste de droite change avec le projet, et un bouclier qui bloque le contexte nécessaire vous apprendra à le dèsactiver.
 
-Le minuteur principal et le compagnon sont d'abord locaux et ne nécessitent pas de compte. Les fonctionnalités d’IA facultatives sur l’appareil dépendent de la prise en charge du navigateur et de l’appareil. Vous pouvez donc utiliser le bloc focus sans envoyer vos objectifs ni votre contexte de navigation à un service distant.
+Le minuteur principal et le compagnon sont d'abord locaux et ne nécessitent pas de compte. Les fonctionnalités d"IA facultatives sur l"appareil dépendent de la prise en charge du navigateur et de l"appareil. Vous pouvez donc utiliser le bloc focus sans envoyer vos objectifs ni votre contexte de navigation à un service distant.
 
 Pour la méthode de session sous-jacente, consultez notre [Guide Chrome de la minuterie Pomodoro](/blog/pomodoro-timer-chrome-extension/). Si vous avez besoin d'une minuterie qui fonctionne sans connexion Internet, comparez-la avec le [guide d'extension Pomodoro hors ligne](/blog/offline-pomodoro-timer-chrome/).
 
 ## Erreurs courantes du Focus Shield
 
-- Bloquer tous les sites sociaux ou de recherche, y compris les ressources n�cessaires � la t�che.
+- Bloquer tous les sites sociaux ou de recherche, y compris les ressources nécessaires à la tâche.
 - Changer la liste toutes les quelques minutes au lieu de démarrer le bloc.
 - Traiter un avertissement comme un échec lorsqu'il vous aide à revenir avec succès.
 - Rendre le blocage si long qu'une session manquée semble impossible à récupérer.
@@ -59,13 +59,13 @@ Pour la méthode de session sous-jacente, consultez notre [Guide Chrome de la mi
 ## Foire aux questions
 
 ### Un Focus Shield bloque-t-il tout Internet ?
-Non. Il est conçu pour réduire l’accès à des sites de distraction sélectionnés au cours d’une session. Gardez le contexte de travail essentiel disponible.
+Non. Il est conçu pour réduire l"accès à des sites de distraction sélectionnés au cours d"une session. Gardez le contexte de travail essentiel disponible.
 
 ### Puis-je utiliser différents sites pour différents projets ?
-Oui. Une liste �troite qui correspond � la t�che en cours est moins perturbatrice qu'une liste globale.
+Oui. Une liste �troite qui correspond à la tâche en cours est moins perturbatrice qu'une liste globale.
 
 ### Est-ce que Focus Shield est un logiciel de contrôle parental ?
-Non. Il s’agit d’une aide à la concentration qui peut être contournée en désactivant l’extension.
+Non. Il s"agit d"une aide à la concentration qui peut être contournée en désactivant l"extension.
 
 ### SlimeForge nécessite-t-il un compte ?
 Non. Le minuteur principal, les objectifs et le compagnon sont d'abord locaux et ne nécessitent pas de compte.

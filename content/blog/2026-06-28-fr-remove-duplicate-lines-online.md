@@ -73,7 +73,7 @@ Quatre entrées uniques au lieu de six. Aucune donnée n'a quitté votre navigat
 
 ## Pourquoi les alternatives manuelles ne suffisent pas
 
-**D�duplication de la feuille de calcul**  Copiez dans Excel, utilisez Donn�es > Supprimer les doublons, recopiez. Plus d�tapes que la t�che ne le m�rite.
+**Déduplication de la feuille de calcul** — Copiez dans Excel, utilisez Données > Supprimer les doublons, recopiez. Plus d’étapes que la tâche ne le mérite.
 
 **Révision manuelle** — L'analyse visuelle d'une liste pour repérer et supprimer les correspondances est sujette aux erreurs au-delà de 20 éléments.
 

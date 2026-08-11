@@ -15,9 +15,7 @@ primaryKeyword: >-
   come ridimensionare l'immagine per l'immagine del profilo tiktok: ottieni il
   quadrato perfetto in pochi secondi
 relatedPages: /it/frameforge/
----
-
-# Come ridimensionare l'immagine per l'immagine del profilo TikTok: ottieni il quadrato perfetto in pochi secondi
+---# Come ridimensionare l'immagine per l'immagine del profilo TikTok: ottieni il quadrato perfetto in pochi secondi
 
 Un’immagine del profilo TikTok deve essere un quadrato perfetto: 400×400 pixel, idealmente almeno 512×512 per la chiarezza HD. Se la tua immagine è rettangolare o ha dimensioni sbagliate, TikTok la ritaglierà automaticamente, tagliando parti importanti del tuo viso o del tuo logo.
 

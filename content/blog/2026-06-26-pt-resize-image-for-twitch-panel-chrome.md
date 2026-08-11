@@ -19,7 +19,7 @@ primaryKeyword: >-
 relatedPages: /pt/frameforge/
 ---
 
-Os pain�is do Twitch est�o abaixo da biografia do seu canal  pequenas caixas retangulares onde os streamers colocam miniaturas, chamadas � a��o e links r�pidos. T�m 320�160 px, que � uma das propor��es mais dif�ceis de trabalhar. A maioria dos editores de imagem assume formatos quadrados ou largos. Uma fotografia de origem que parece boa em 16:9 fica distorcida quando se tenta comprimi-la num ret�ngulo ultralargo de 2:1.
+Os painéis do Twitch estáo abaixo da biografia do seu canal – pequenas caixas retangulares onde os streamers colocam miniaturas, chamadas à ação e links rápidos. Têm 320×160 px, que � uma das proporções mais difíceis de trabalhar. A maioria dos editores de imagem assume formatos quadrados ou largos. Uma fotografia de origem que parece boa em 16:9 fica distorcida quando se tenta comprimi-la num retângulo ultralargo de 2:1.
 
 Este guia mostra como redimensionar imagens para painéis do Twitch utilizando o **FrameForge**, uma extensão do Chrome que faz a matemática por si e mantém as suas imagens locais (sem carregamento para um servidor).
 
@@ -37,7 +37,7 @@ Os painéis são muitas vezes esquecidos no design do canal, mas são a primeira
 
 ## O desafio do corte
 
-Um ret�ngulo 2:1 corta muito na vertical. Se tiver uma fotografia de retrato (9:16) ou mesmo uma fotografia de rosto 3:4, a moldura do painel mostrar� apenas uma fatia horizontal fina. As paisagens (16:9) est�o mais pr�ximas, mas ainda requerem um cultivo espec�fico para n�o deixar espa�os mortos.
+Um retângulo 2:1 corta muito na vertical. Se tiver uma fotografia de retrato (9:16) ou mesmo uma fotografia de rosto 3:4, a moldura do painel mostrará apenas uma fatia horizontal fina. As paisagens (16:9) estáo mais próximas, mas ainda requerem um cultivo específico para não deixar espaços mortos.
 
 **O FrameForge inclui uma predefinição de painel Twitch**, para que não tenha de calcular manualmente as dimensões ou experimentar proporções de corte. Carregue a sua imagem, selecione a predefinição e ajuste a sobreposição de corte.
 

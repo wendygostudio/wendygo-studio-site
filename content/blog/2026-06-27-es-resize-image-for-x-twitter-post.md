@@ -15,9 +15,7 @@ product: frameforge
 contentType: how-to
 primaryKeyword: cómo cambiar el tamaño de la imagen para x publicación de Twitter
 relatedPages: /es/frameforge/
----
-
-X representa imágenes de tweets con un recorte 2:1 en la vista previa del feed. A las fotografías cuadradas se les corta la mitad inferior. Los retratos quedan comprimidos en un incómodo corte central. La solución es simple: publique a 1200 × 675 px (16:9) y no se recortará nada ni en la vista previa del feed ni en la vista ampliada de tamaño completo.
+---X representa imágenes de tweets con un recorte 2:1 en la vista previa del feed. A las fotografías cuadradas se les corta la mitad inferior. Los retratos quedan comprimidos en un incómodo corte central. La solución es simple: publique a 1200 × 675 px (16:9) y no se recortará nada ni en la vista previa del feed ni en la vista ampliada de tamaño completo.
 
 FrameForge es una extensión de Chrome que cambia el tamaño de las imágenes por completo en su navegador. Sin carga, sin cuenta, sin esperar a que un servidor remoto procese su archivo.
 

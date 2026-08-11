@@ -10,9 +10,7 @@ product: frameforge
 contentType: how-to
 primaryKeyword: "comment redimensionner l'image pour la photo de profil tiktok\_: obtenez le carré parfait en quelques secondes"
 relatedPages: /fr/frameforge/
----
-
-# Comment redimensionner l'image de la photo de profil TikTok : obtenez le carré parfait en quelques secondes
+---# Comment redimensionner l'image de la photo de profil TikTok : obtenez le carré parfait en quelques secondes
 
 Une photo de profil TikTok doit être un carré parfait : 400 × 400 pixels, idéalement au moins 512 × 512 pour une clarté HD. Si votre image est rectangulaire ou de mauvaises dimensions, TikTok la recadrera automatiquement, coupant des parties importantes de votre visage ou de votre logo.
 

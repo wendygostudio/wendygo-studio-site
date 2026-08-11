@@ -69,7 +69,7 @@ Tu mensaje debe incluir datos de compra, defecto, cronología, negativa del vend
 
 Si el primer nivel de soporte repite la negativa, solicita que el asunto pase al equipo de reclamaciones o a un responsable. Utiliza el procedimiento formal del comerciante y conserva el justificante de presentación.
 
-En un conflicto transfronterizo, la Red de Centros Europeos del Consumidor puede ayudar cuando el comerciante se encuentra en otro país de la UE, Islandia o Noruega. Según el país y el caso, también pueden ser relevantes un organismo de resolución alternativa, la autoridad nacional de consumo o el proceso europeo de escasa cuantía. Nuestra guía para [presentar una reclamación de consumo en la UE](/es/blog/como-presentar-reclamacion-consumidor-ue/) explica estas vías.
+En un conflicto transfronterizo, la Red de Centros Europeos del Consumidor puede ayudar cuando el comerciante se encuentra en otro país de la UE, Islandia o Noruega. Según el país y el caso, también pueden ser relevantes un organismo de resolución alternativa, la autoridad nacional de consumo o el proceso europeo de escasa cuantía. Nuestra guía para [presentar una reclamación de consumo en la UE](/es/blog/how-to-file-consumer-complaint-eu/) explica estas vías.
 
 Antes de escalar, consulta la información oficial vigente en tu país. Las normas europeas establecen una base común, pero los plazos, presunciones probatorias y procedimientos varían.
 

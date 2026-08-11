@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
 title: "CyberChef Alternatives: 5 Tools for Everyday Text"
-description: "Compare five CyberChef alternatives for text cleanup, regex, command-line work and security analysis, with an honest use-case guide."
+description: "Compare five CyberChef alternatives for everyday text cleanup, regex and local browser workflows, with an honest use-case guide."
 date: 2026-07-12
 slug: cyberchef-alternatives
 locale: en

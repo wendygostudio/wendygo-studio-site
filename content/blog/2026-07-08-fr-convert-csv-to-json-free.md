@@ -16,7 +16,7 @@ relatedPages: /convertforge/
 
 # Comment convertir CSV en JSON gratuitement (localement, hors ligne)
 
-CSV et JSON sont tous deux des formats de donn�es courants, mais ils servent � des fins diff�rentes. Le CSV (valeurs s�par�es par des virgules) est lisible dans les applications de feuilles de calcul comme Excel. JSON est la norme pour les API, les fichiers de configuration et les applications JavaScript. La conversion entre eux est une t�che de routine pour les d�veloppeurs, les analystes de donn�es et les ing�nieurs DevOps.
+CSV et JSON sont tous deux des formats de donn�es courants, mais ils servent � des fins diff�rentes. Le CSV (valeurs s�par�es par des virgules) est lisible dans les applications de feuilles de calcul comme Excel. JSON est la norme pour les API, les fichiers de configuration et les applications JavaScript. La conversion entre eux est une tâche de routine pour les d�veloppeurs, les analystes de donn�es et les ing�nieurs DevOps.
 
 Des convertisseurs en ligne existent, mais ils téléchargent votre fichier sur un serveur distant. Si votre CSV contient des données client, des clés API ou des configurations internes, vous ne devriez probablement l'envoyer nulle part. ConvertForge convertit entièrement le CSV en JSON dans votre navigateur : rien ne quitte votre machine.
 

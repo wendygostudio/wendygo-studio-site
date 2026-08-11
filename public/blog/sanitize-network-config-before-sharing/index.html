@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content="Wendygo structured content" />
-  <title>How to Sanitize Network Configs Before Sharing with AI</title>
-  <meta name="description" content="Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with" />
+  <title>How to Sanitize Network Configs Before Sharing with AI Assistants</title>
+  <meta name="description" content="Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload." />
   <link rel="canonical" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Sanitize Network Configs Before Sharing with AI Assistants","description":"Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload.","datePublished":"2026-06-29","dateModified":"2026-06-29","inLanguage":"en","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"},"wordCount":858,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Sanitize Network Configs Before Sharing with AI Assistants"}]}</script>
   
@@ -285,15 +286,15 @@
 </style>
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Wendygo Studio" />
-  <meta property="og:title" content="How to Sanitize Network Configs Before Sharing with AI" />
-  <meta property="og:description" content="Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with" />
+  <meta property="og:title" content="How to Sanitize Network Configs Before Sharing with AI Assistants" />
+  <meta property="og:description" content="Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload." />
   <meta property="og:url" content="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/" />
   <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How to Sanitize Network Configs Before Sharing with AI" />
-  <meta name="twitter:description" content="Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with" />
+  <meta name="twitter:title" content="How to Sanitize Network Configs Before Sharing with AI Assistants" />
+  <meta name="twitter:description" content="Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload." />
   <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
-<link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/"><style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
+<style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>
   <nav>
     <a class="nav-brand" href="/"><div class="nav-mark">W</div>Wendygo Studio</a>
@@ -302,13 +303,13 @@
     <div class="nav-links">
       <a href="/#products">Extensions</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/#privacy">Privacy</a>
     </div>
-  <div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/" selected>English</option><option value="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/">Español</option></select></div></nav>
+  <div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/sanitize-network-config-before-sharing/" selected>English</option><option value="https://wendygostudio.com/es/blog/sanitize-network-config-before-sharing/">Español</option><option value="https://wendygostudio.com/de/blog/netzwerkkonfiguration-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-configuration-reseau/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-configurazione-rete/">Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-configuracao-rede/">Português</option></select></div></nav>
   <div class="article-wrap">
     <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>How to Sanitize Network Configs Before Sharing with AI Assistants</div>
     <div class="article-meta"><div class="article-tag">how-to · scrubforge</div><h1>How to Sanitize Network Configs Before Sharing with AI Assistants</h1><p class="article-intro">Share Cisco, FortiGate, or AWS configs with AI assistants without exposing real credentials. ScrubForge replaces IPs, passwords, and secrets with consistent tokens — locally, no upload.</p><div class="article-date">June 29, 2026</div></div>
     
     <hr class="divider" />
-    <div class="article-body"><h1>How to Sanitize Network Configs Before Sharing with AI Assistants</h1>
+    <div class="article-body"><h2>How to Sanitize Network Configs Before Sharing with AI Assistants</h2>
 <p>You&#39;re debugging a Cisco ACL or tracing a FortiGate policy issue and you want to paste the config into ChatGPT or Claude to get a second opinion. But the config has real IP addresses, hostnames, shared secrets, and SNMP community strings in it. Sharing any of those is a security incident waiting to happen.</p>
 <p>ScrubForge is a Chrome extension that solves this problem. Paste your config, and ScrubForge detects sensitive values — IPs, passwords, keys, hostnames, credentials — and replaces each one with a consistent placeholder token. The structure of the config stays intact; the sensitive data does not leave your machine.</p>
 <h2>Why Configs Are Sensitive</h2>

@@ -15,9 +15,7 @@ product: frameforge
 contentType: how-to
 primaryKeyword: So ändern Sie die Bildgröße für x Twitter-Beitrag
 relatedPages: /de/frameforge/
----
-
-X rendert Tweet-Bilder in der Feed-Vorschau mit einem 2:1-Zuschnitt. Bei quadratischen Fotos wird die untere Hälfte abgeschnitten. Porträtaufnahmen werden in einen unangenehmen Mittelausschnitt gequetscht. Die Lösung ist einfach: Posten Sie mit 1200 x 675 Pixel (16:9) und weder in der Feed-Vorschau noch in der erweiterten Vollbildansicht wird etwas abgeschnitten.
+---X rendert Tweet-Bilder in der Feed-Vorschau mit einem 2:1-Zuschnitt. Bei quadratischen Fotos wird die untere Hälfte abgeschnitten. Porträtaufnahmen werden in einen unangenehmen Mittelausschnitt gequetscht. Die Lösung ist einfach: Posten Sie mit 1200 x 675 Pixel (16:9) und weder in der Feed-Vorschau noch in der erweiterten Vollbildansicht wird etwas abgeschnitten.
 
 FrameForge ist eine Chrome-Erweiterung, die die Größe von Bildern vollständig in Ihrem Browser ändert. Kein Upload, kein Konto, kein Warten darauf, dass ein Remote-Server Ihre Datei verarbeitet.
 

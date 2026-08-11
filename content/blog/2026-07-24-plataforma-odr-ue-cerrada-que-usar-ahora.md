@@ -52,7 +52,7 @@ No hay una web sucesora única que enrute automáticamente tu reclamación como 
 | Una sola web para todas las disputas de consumo | Dividido: ECC-Net/ADR para compras, organismos DSA para disputas de cuenta en plataformas |
 | Caso gestionado en tu idioma por defecto | Depende del organismo ADR o ECC contactado; pregúntalo primero |
 
-La ley de fondo no ha cambiado. La [garantía legal de 2 años](/es/blog/eu-warranty-rights-explained/) sigue aplicando, puedes seguir [presentando una reclamación formal](/es/blog/como-presentar-reclamacion-consumidor-ue/) directamente al vendedor, y —si un abogado no compensa para la cantidad en juego— las [alternativas gratuitas o de bajo coste](/es/blog/alternativas-reclamar-sin-abogado-ue/) que ya cubrimos siguen ahí. Lo único que desapareció fue la puerta única compartida.
+La ley de fondo no ha cambiado. La [garantía legal de 2 años](/es/blog/eu-warranty-rights-explained/) sigue aplicando, puedes seguir [presentando una reclamación formal](/es/blog/how-to-file-consumer-complaint-eu/) directamente al vendedor, y —si un abogado no compensa para la cantidad en juego— las [alternativas gratuitas o de bajo coste](/es/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/) que ya cubrimos siguen ahí. Lo único que desapareció fue la puerta única compartida.
 
 ## Antes de volver a buscar "ODR UE" (recuerda: ya cerrada)
 

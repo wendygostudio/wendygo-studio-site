@@ -23,7 +23,7 @@ La plupart des minuteries Pomodoro échouent de la même manière : vous régle
 
 Si votre interruption principale est un site Web prévisible plutôt que la minuterie elle-même, associez la routine au nouveau [guide Pomodoro Focus Shield](/blog/pomodoro-focus-shield-chrome/). Il explique comment conserver les onglets de recherche essentiels disponibles tout en réduisant les sites qui vous éloignent à plusieurs reprises.
 
-Pour les lecteurs qui disposent déjà d'un minuteur mais qui ont du mal avec la première minute, le [guide rituel de mise au point](/blog/focus-rituals-pomodoro-chrome/) ajoute un résultat concret et une première action avant le démarrage du chronomètre. Il s’agit du plus petit changement qui rend ce flux de travail plus facile à répéter.
+Pour les lecteurs qui disposent déjà d'un minuteur mais qui ont du mal avec la première minute, le [guide rituel de mise au point](/blog/focus-rituals-pomodoro-chrome/) ajoute un résultat concret et une première action avant le démarrage du chronomètre. Il s"agit du plus petit changement qui rend ce flux de travail plus facile à répéter.
 
 ## Qu'est-ce que la technique Pomodoro ?
 
@@ -37,7 +37,7 @@ SlimeForge fonctionne entièrement dans votre navigateur Chrome. Pas de compte, 
 
 Lorsque vous ouvrez l'extension, vous choisissez la durée de votre session :
 
-- **15 minutes**  mode sprint pour les petites t�ches
+- **15 minutes** — mode sprint pour les petites tâches
 - **25 minutes** — Pomodoro classique
 - **45 minutes** — blocs de travail approfondis
 - **60 minutes** – sessions sur l'état du flux
@@ -56,7 +56,7 @@ Il y a 16 espèces de slime à découvrir. Vous n'achetez pas d'espèces, vous l
 
 SlimeForge ajoute plusieurs couches en plus du minuteur de base :
 
-Les **Missions** vous donnent des objectifs spécifiques à atteindre (terminer X séances cette semaine, atteindre une durée de séquence, etc.). Ils sont facultatifs mais utiles si vous avez besoin d’objectifs à court terme pour rester motivé.
+Les **Missions** vous donnent des objectifs spécifiques à atteindre (terminer X séances cette semaine, atteindre une durée de séquence, etc.). Ils sont facultatifs mais utiles si vous avez besoin d"objectifs à court terme pour rester motivé.
 
 **Crafting** vous permet de combiner les objets que vous gagnez lors des sessions pour créer de nouvelles choses pour votre slime. Il ajoute un élément de jeu inactif léger avec lequel vous pouvez participer autant ou aussi peu que vous le souhaitez.
 
@@ -66,7 +66,7 @@ Les **Missions** vous donnent des objectifs spécifiques à atteindre (terminer 
 
 **Chat Gemini Nano** : votre slime peut avoir une courte conversation avec vous via Gemini Nano, fonctionnant entièrement sur l'appareil en 6 langues. Aucun appel d'API externe.
 
-**Gacha �thique**�: SlimeForge a un syst�me gacha, mais l'argent r�el n'ach�te jamais de r�sultats al�atoires. Si vous payez, vous obtenez ce pour quoi vous avez pay�. Le hasard se gagne gr�ce � des s�ances de concentration et non � des achats.
+**Gacha �thique**�: SlimeForge a un syst�me gacha, mais l'argent r�el n'ach�te jamais de rèsultats aléatoires. Si vous payez, vous obtenez ce pour quoi vous avez payé. Le hasard se gagne gr�ce � des séances de concentration et non � des achats.
 
 ## Comment commencer
 
@@ -81,7 +81,7 @@ Les **Missions** vous donnent des objectifs spécifiques à atteindre (terminer 
 
 L'essai PRO dure 5 jours et déverrouille l'ensemble des fonctionnalités. La version gratuite fonctionne comme une minuterie et vous donne les bases des animaux de compagnie.
 
-## À qui s’adresse SlimeForge ?
+## À qui s"adresse SlimeForge ?
 
 SlimeForge fonctionne mieux pour les personnes qui ont essayé les minuteries Pomodoro simples et les ont trouvées oubliables. Si le problème est que vous démarrez un chronomètre et que vous dérivez ensuite vers Twitter parce qu'il n'y a aucune conséquence dans les deux cas, un animal qui ne grandit que lorsque vous vous concentrez modifie ce calcul.
 
@@ -102,7 +102,7 @@ Oui, via Gemini Nano exécuté sur votre appareil. La conversation est locale et
 Les Brasas 🔥 sont la monnaie d'extension que vous gagnez en complétant des séances de concentration. Ils sont utilisés pour fabriquer et faire pousser votre slime – ils ne peuvent pas être achetés avec de l'argent réel.
 
 **Le gacha en argent réel existe-t-il ?**
-SlimeForge a une m�canique gacha, mais l'argent r�el n'ach�te jamais de r�sultats al�atoires. Tout achat avec de l'argent r�el vous donne droit � un objet connu. Le hasard est r�serv� aux Brasas gagn�s gr�ce � la concentration.
+SlimeForge a une mécanique gacha, mais l'argent r�el n'ach�te jamais de rèsultats aléatoires. Tout achat avec de l'argent r�el vous donne droit � un objet connu. Le hasard est réservé aux Brasas gagnès gr�ce à la concentration.
 
 **Est-ce que mon slime mourra si j'arrête d'utiliser l'application ?**
 Non. Votre slime n'a pas de jauge de santé qui s'épuise : il cesse simplement de croître si vous arrêtez de terminer des sessions. Il sera toujours là à votre retour.

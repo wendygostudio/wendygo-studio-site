@@ -18,7 +18,7 @@ relatedPages: >-
   /pt/slimeforge/,/pt/blog/pomodoro-timer-chrome-extension/,/pt/blog/offline-pomodoro-timer-chrome/
 ---
 
-Um cron�metro de focagem pode dizer-lhe para trabalhar durante 25 minutos, mas uma guia que distraia ainda pode estar � dist�ncia de um clique. Um Pomodoro Focus Shield para Chrome acrescenta um pouco de atrito entre a sess�o e os sites que normalmente a interrompem. O objetivo n�o � bloquear todo o browser. � proteger o bloco de trabalho, mantendo as ferramentas, refer�ncias e canais de comunica��o que a tarefa realmente necessita.
+Um cronómetro de focagem pode dizer-lhe para trabalhar durante 25 minutos, mas uma guia que distraia ainda pode estar à distância de um clique. Um Pomodoro Focus Shield para Chrome acrescenta um pouco de atrito entre a sessão e os sites que normalmente a interrompem. O objetivo não � bloquear todo o browser. � proteger o bloco de trabalho, mantendo as ferramentas, refer�ncias e canais de comunica��o que a tarefa realmente necessita.
 
 ## O que deve fazer um Focus Shield
 

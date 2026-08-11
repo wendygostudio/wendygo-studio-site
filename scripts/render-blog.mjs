@@ -136,7 +136,11 @@ for (const document of documents) {
     heading: data.heading || data.title,
     intro: data.intro || data.description,
     displayDate: new Intl.DateTimeFormat(INTL_TAG[loc] || 'en-US', {dateStyle: 'long', timeZone: 'UTC'}).format(new Date(data.date)),
-    content: marked.parse(parsed.content),
+    // The article shell owns the page's single H1. Older Markdown sources
+    // often repeat the title as a leading H1; demote only that leading
+    // heading so the article keeps a clean H1 -> H2 hierarchy without
+    // changing headings written intentionally inside the body.
+    content: marked.parse(parsed.content).replace(/^\s*<h1(\b[^>]*)>([\s\S]*?)<\/h1>\s*/i, '<h2$1>$2</h2>\n'),
     regionLabel: STRINGS.region[loc],
     privacyPath: `${prefix}/${PRIVACY_SLUG[locale]}`,
     ogImage: data.ogImage || 'https://wendygostudio.com/og-image.png'

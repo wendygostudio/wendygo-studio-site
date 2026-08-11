@@ -44,7 +44,7 @@ O SlimeForge é uma extensão do Chrome criada para o efeito. Executa um cronóm
 - O Gemini Nano é executado no dispositivo (sem chamadas de API, sem envio de dados) — útil para depuração rápida ou chats rápidos com IA durante os intervalos
 - Totalmente local – sem conta, sem sincronização, sem rastreio
 
-A gamifica��o � o objetivo: ap�s 5 sess�es focadas de 60 minutos, o teu slime atinge o n�vel 2. Ap�s 20, desbloqueias uma nova esp�cie. N�o se trata do jogo  trata-se da �ncora exterior que o faz voltar amanh�.
+A gamificação � o objetivo: apès 5 sessões focadas de 60 minutos, o teu slime atinge o nível 2. Apès 20, desbloqueias uma nova espécie. N�o se trata do jogo – trata-se da âncora exterior que o faz voltar amanhã.
 
 ## Como é que isso se encaixa no fluxo de trabalho de um developer
 

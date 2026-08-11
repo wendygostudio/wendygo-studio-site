@@ -45,7 +45,7 @@ O dimensionamento para 1200×675 elimina a incompatibilidade. A imagem já está
 
 ## Tratamento de imagens de origem em retrato
 
-As fotografias de retrato (9:16, padr�o da c�mara do telefone) precisam de mais ajustes para caber num enquadramento 16:9:
+As fotografias de retrato (9:16, padrão da câmara do telefone) precisam de mais ajustes para caber num enquadramento 16:9:
 
 - **Cortar para preencher (recomendado):** O quadro 16:9 é preenchido na íntegra. O excesso de cima e de baixo é cortado. Arraste a sobreposição de corte para manter o elemento-chave no quadro.
 - **Ajuste com preenchimento:** O retrato completo é visível, com barras pretas ou coloridas à esquerda e à direita. O preenchimento intencional pode parecer deliberado, mas as barras vazias parecem muitas vezes um erro.

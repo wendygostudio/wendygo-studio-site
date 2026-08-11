@@ -15,9 +15,7 @@ primaryKeyword: >-
   So ändern Sie die Bildgröße für ein Tiktok-Profilbild: Erhalten Sie in
   Sekundenschnelle das perfekte Quadrat
 relatedPages: /de/frameforge/
----
-
-# So ändern Sie die Bildgröße für ein TikTok-Profilbild: Erhalten Sie in Sekundenschnelle das perfekte Quadrat
+---# So ändern Sie die Bildgröße für ein TikTok-Profilbild: Erhalten Sie in Sekundenschnelle das perfekte Quadrat
 
 Ein TikTok-Profilbild muss ein perfektes Quadrat sein – 400 x 400 Pixel, idealerweise mindestens 512 x 512 für HD-Klarheit. Wenn Ihr Bild rechteckig ist oder die falschen Abmessungen hat, schneidet TikTok es automatisch zu und schneidet wichtige Teile Ihres Gesichts oder Logos ab.
 

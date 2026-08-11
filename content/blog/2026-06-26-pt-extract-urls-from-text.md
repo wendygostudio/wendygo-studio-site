@@ -88,7 +88,7 @@ O TextForge também pode extrair **e-mails** e **endereços IP** de texto — ú
 **O TextForge extrai URLs de tags HTML?**
 Sim. Os URLs dentro de `href=`, `src=` e outros atributos HTML são correspondidos, assim como os URLs simples em texto.
 
-**O TextForge pode lidar com URLs com par�metros de consulta?**
+**O TextForge pode lidar com URLs com parâmetros de consulta?**
 Sim. O URL inteiro, incluindo o caminho, a string de consulta e o fragmento (#), é extraído como uma unidade.
 
 **A extração de URLs é gratuita no TextForge?**

@@ -37,7 +37,7 @@ Existem três canais principais na UE:
 
 1. **Órgãos ADR (Resolução Alternativa de Litígios)** — mediadores independentes que resolvem litígios entre vendedores e consumidores. Gratuito ou de baixo custo, é normalmente resolvido em 90 dias.
 2. **A sua autoridade nacional do consumidor** — agências governamentais que podem sancionar os vendedores que não estejam em conformidade. Demora mais tempo, mas carrega mais peso.
-3. **Centro Europeu do Consumidor (ECC-Net)**  contacte o centro do seu pa�s para obter ajuda junto de um comerciante noutro pa�s da UE, na Isl�ndia ou na Noruega.
+3. **Centro Europeu do Consumidor (ECC-Net)** — contacte o centro do seu país para obter ajuda junto de um comerciante noutro país da UE, na Islândia ou na Noruega.
 
 Autoridades nacionais para referência: Verbraucherzentrale (Alemanha), DGCCRF (França), OCU ou OMIC (Espanha), AGCM (Itália), ACM (Países Baixos).
 
@@ -67,7 +67,7 @@ Esta carta serve também como prova de que tentou de boa fé.
 
 **Autoridade nacional do consumidor:** Ideal para violações graves ou reincidentes. Faça uma denúncia – mesmo que não intervenham no seu caso específico, queixas suficientes podem desencadear ações de fiscalização.
 
-**Centro Europeu do Consumidor:** Para compras a um comerciante noutro pa�s da UE, na Isl�ndia ou na Noruega. Contacte o centro do seu pa�s para obter orienta��o e poss�vel ajuda para chegar a um acordo amig�vel.
+**Centro Europeu do Consumidor:** Para compras a um comerciante noutro país da UE, na Islândia ou na Noruega. Contacte o centro do seu país para obter orientação e possível ajuda para chegar a um acordo amigável.
 
 ### Passo 4: envie a sua reclamação
 
@@ -81,7 +81,7 @@ O organismo de RAL deve explicar o seu procedimento, o calendário previsto, os 
 
 ## Compras transfronteiriças
 
-Para compras a um comerciante noutro pa�s da UE, na Isl�ndia ou na Noruega, contacte o Centro Europeu do Consumidor do seu pa�s. Pode explicar os seus direitos, sugerir o caminho adequado e ajudar a procurar um acordo amig�vel com o comerciante estrangeiro.
+Para compras a um comerciante noutro país da UE, na Islândia ou na Noruega, contacte o Centro Europeu do Consumidor do seu país. Pode explicar os seus direitos, sugerir o caminho adequado e ajudar a procurar um acordo amigável com o comerciante estrangeiro.
 
 ## O que esperar
 
@@ -93,7 +93,7 @@ Para compras a um comerciante noutro pa�s da UE, na Isl�ndia ou na Noruega, 
 ## Perguntas frequentes
 
 **Posso apresentar uma queixa do consumidor se comprei na Amazon?**
-A sua reclama��o � normalmente contra o vendedor individual, n�o contra a Amazon. A garantia A-to-z da pr�pria Amazon tamb�m pode estar dispon�vel. Para um lit�gio transfronteiri�o com um comerciante da UE, da Isl�ndia ou da Noruega, o seu Centro Europeu do Consumidor nacional poder� ajudar.
+A sua reclamação � normalmente contra o vendedor individual, não contra a Amazon. A garantia A-to-z da própria Amazon também pode estar disponível. Para um litígio transfronteiri�o com um comerciante da UE, da Islândia ou da Noruega, o seu Centro Europeu do Consumidor nacional poderá ajudar.
 
 **Uma decisão de RAL é juridicamente vinculativa?**
 Depende do órgão de RAL, da legislação nacional e do acordo das partes para participar. Verifique as regras atuais do organismo antes de registar e não presuma que todos os resultados da RAL têm o mesmo efeito jurídico.

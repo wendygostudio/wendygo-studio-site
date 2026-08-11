@@ -102,7 +102,7 @@ Sim, através do Gemini Nano em execução no seu dispositivo. A conversação �
 As brasas 🔥 são a moeda de extensão que ganha ao completar sessões de foco. São utilizados para criar e cultivar o seu lodo – não podem ser adquiridos com dinheiro real.
 
 **A gacha com dinheiro real existe?**
-O SlimeForge tem uma mec�nica de gacha, mas o dinheiro real nunca compra resultados aleat�rios. Qualquer compra com dinheiro real d�-lhe um item conhecido. A aleatoriedade est� reservada �s Brasas conquistadas atrav�s do foco.
+O SlimeForge tem uma mecânica de gacha, mas o dinheiro real nunca compra resultados aleatórios. Qualquer compra com dinheiro real dá-lhe um item conhecido. A aleatoriedade está reservada ès Brasas conquistadas atravès do foco.
 
 **O meu slime morrerá se deixar de usar a aplicação?**
 Não. O seu slime não tem um medidor de saúde que se esgota – simplesmente para de crescer se parar de completar as sessões. Ele ainda estará lá quando regressar.

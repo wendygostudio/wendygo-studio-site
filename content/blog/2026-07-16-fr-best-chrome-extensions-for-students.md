@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
 title: "Meilleures extensions Chrome pour les étudiants en 2026"
-description: "Les �tudiants passent plus de temps dans Chrome que dans n'importe quelle autre application�: cours, recherches, devoirs, tout cela. Les..."
+description: "Les étudiants passent plus de temps dans Chrome que dans n'importe quelle autre application�: cours, recherches, devoirs, tout cela. Les..."
 date: 2026-07-16
 slug: best-chrome-extensions-for-students
 locale: fr
@@ -12,7 +12,7 @@ primaryKeyword: "meilleures extensions Chrome pour les étudiants"
 relatedPages: /slimeforge/
 ---
 
-Les �tudiants passent plus de temps dans Chrome que dans n'importe quelle autre application�: cours, recherches, devoirs, tout cela. Les distractions aussi. Ces cinq extensions ciblent les v�ritables points de friction de l'�tude�: rester concentr� sur la t�che, mieux �crire, garder un Sil sous contr�le et prot�ger votre attention.
+Les étudiants passent plus de temps dans Chrome que dans n'importe quelle autre application�: cours, recherches, devoirs, tout cela. Les distractions aussi. Ces cinq extensions ciblent les véritables points de friction de l'étude�: rester concentr� sur la tâche, mieux écrire, garder un Sil sous contrôle et prot�ger votre attention.
 
 ## 1. SlimeForge – Gamified Focus Timer (choix de l'éditeur)
 
@@ -24,7 +24,7 @@ Tout cela fonctionne localement : pas de compte, pas de cloud, pas de données t
 
 ## 2. Grammaire – Écrivez sans hésiter
 
-Grammarly vérifie la grammaire, l'orthographe et le style en ligne au fur et à mesure que vous tapez, dans Google Docs, Gmail et la plupart des zones de texte Chrome. Le niveau gratuit couvre la grammaire et l’orthographe pour la plupart des besoins des étudiants. Compte requis.
+Grammarly vérifie la grammaire, l'orthographe et le style en ligne au fur et à mesure que vous tapez, dans Google Docs, Gmail et la plupart des zones de texte Chrome. Le niveau gratuit couvre la grammaire et l"orthographe pour la plupart des besoins des étudiants. Compte requis.
 
 ## 3. uBlock Origin — Supprimez les distractions à la source
 
@@ -40,7 +40,7 @@ Clipse n'importe quelle page Web directement dans votre espace de travail Notion
 
 ## Lequel devriez-vous installer en premier ?
 
-Commencez par SlimeForge et uBlock Origin – ils s’attaquent aux deux plus gros bloqueurs d’étude (concentration et distractions ambiantes) sans maintenance quotidienne.
+Commencez par SlimeForge et uBlock Origin – ils s"attaquent aux deux plus gros bloqueurs d"étude (concentration et distractions ambiantes) sans maintenance quotidienne.
 
 ## FAQ
 

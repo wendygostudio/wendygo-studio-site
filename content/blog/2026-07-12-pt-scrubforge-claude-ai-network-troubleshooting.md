@@ -28,7 +28,7 @@ Claude lida bem com textos densos e estruturados. Uma configuração do FortiGat
 
 Casos de uso comuns onde Claude acrescenta valor:
 
-- **Depura��o IPsec e IKEv2**  identifica��o de par�metros de fase 1/fase 2 incompat�veis, inconsist�ncias do temporizador DPD ou ordem de proposta incorreta
+- **Depura��o IPsec e IKEv2** — identifica��o de parâmetros de fase 1/fase 2 incompatíveis, inconsistências do temporizador DPD ou ordem de proposta incorreta
 - **Análise de políticas BGP** — explicando a lógica do mapa de rotas, verificando o tratamento de etiquetas da comunidade, sinalizando as definições de pares em falta
 - **Revisão da política de firewall** — localização de regras obscuras, identificação de declarações de negação em falta, revisão da ordem NAT
 - **VLAN e spanning-tree** — deteção de incompatibilidades de tronco, inconsistências de VLAN nativas, problemas de topologia STP

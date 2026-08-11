@@ -58,7 +58,7 @@ O TextForge é uma extensão do Chrome com mais de 50 funções utilitárias de 
 
 ### Codificação: Texto → Base64
 
-1. **Instale o TextForge** na Chrome Web Store. Fixe o �cone na sua barra de ferramentas para que esteja sempre � dist�ncia de um clique.
+1. **Instale o TextForge** na Chrome Web Store. Fixe o ícone na sua barra de ferramentas para que esteja sempre à distância de um clique.
 2. **Abra a extensão** clicando no ícone TextForge na barra de ferramentas do browser.
 3. **Cole o seu texto** — a string que pretende codificar. Pode ser texto simples, URL, JSON ou qualquer string necessária no formato Base64.
 4. **Aplicar codificação Base64** — selecione a função no menu de ferramentas. A saída codificada aparece imediatamente.

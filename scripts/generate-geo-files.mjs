@@ -27,7 +27,15 @@ if (fs.existsSync(blogRoot)) {
     if (!fs.existsSync(file)) continue;
     const html = fs.readFileSync(file, 'utf8');
     const canonical = html.match(/<link rel="canonical" href="([^"]+)/i)?.[1];
-    const title = html.match(/<title>([^<]+)/i)?.[1]?.replace(/\s+\|\s+Wendygo Studio.*$/i, '').trim();
+    // Use the complete editorial headline for GEO citations. The HTML title is
+    // intentionally capped for SERP snippets and can end mid-sentence.
+    let title = '';
+    const jsonLdHeadline = html.match(/"headline":"((?:\\.|[^"\\])*)"/i)?.[1];
+    if (jsonLdHeadline) {
+      try { title = JSON.parse(`"${jsonLdHeadline}"`); } catch { title = jsonLdHeadline; }
+    }
+    if (!title) title = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, '').trim() || '';
+    if (!title) title = html.match(/<title>([^<]+)/i)?.[1]?.replace(/\s+\|\s+Wendygo Studio.*$/i, '').trim() || '';
     const description = html.match(/<meta name="description" content="([^"]+)/i)?.[1]?.trim();
     const date = html.match(/"datePublished":"(\d{4}-\d{2}-\d{2})"/)?.[1] || '';
     if (canonical && title && description) editorial.push({canonical, title, description, date});

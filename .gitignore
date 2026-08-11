@@ -17,6 +17,7 @@ dist/
 seo-agent/config/agent.env
 seo-agent/config/gsc-credentials.json
 seo-agent/config/gsc-token.json
+seo-agent/config/google-service-account.json
 seo-agent/logs/
 seo-agent/temp/
 seo-agent/STOP

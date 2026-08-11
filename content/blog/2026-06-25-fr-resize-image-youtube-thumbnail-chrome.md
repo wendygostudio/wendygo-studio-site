@@ -23,9 +23,9 @@ relatedPages: /fr/frameforge/
 
 Vous avez terminé le montage de votre vidéo, écrit le titre et vous êtes sur le point de cliquer sur la publication. Vous réalisez alors que votre vignette n'a pas la bonne taille. YouTube le rejette, ou pire, l'accepte et recadre maladroitement, coupant le visage de votre sujet ou le texte clé sur lequel vous avez passé du temps.
 
-Les miniatures YouTube ont une exigence spécifique : **1 280 × 720 pixels**, format 16:9, moins de 2 Mo. Le problème est que la plupart des images sources n’ont pas la bonne forme. Les photos sur smartphone sont en portrait (9:16). Les captures d'écran varient selon la résolution du moniteur. Les photos d’archives sont disponibles dans toutes sortes de dimensions.
+Les miniatures YouTube ont une exigence spécifique : **1 280 × 720 pixels**, format 16:9, moins de 2 Mo. Le problème est que la plupart des images sources n"ont pas la bonne forme. Les photos sur smartphone sont en portrait (9:16). Les captures d'écran varient selon la résolution du moniteur. Les photos d"archives sont disponibles dans toutes sortes de dimensions.
 
-La solution habituelle consiste � ouvrir Photoshop, � cr�er un nouveau document 1280 � 720, � coller votre image, � ajuster le recadrage et � l'exporter. Cinq � huit �tapes pour une t�che qui devrait prendre trente secondes.
+La solution habituelle consiste à ouvrir Photoshop, à créer un nouveau document 1280 × 720, à coller votre image, à ajuster le recadrage et à l'exporter. Cinq à huit étapes pour une tâche qui devrait prendre trente secondes.
 
 Il existe un moyen plus rapide de conserver vos images hors des serveurs tiers.
 
@@ -43,7 +43,7 @@ Avant toute chose, les spécifications officielles :
 | Maximum file size | 2 MB |
 | Safe zone | Keep important elements away from the bottom-right corner |
 
-La norme 1280×720 est nette sur toutes les tailles d’écran, y compris les moniteurs 4K. Le minimum de 640 × 360 semblera flou sur les écrans modernes – ne l'utilisez pas.
+La norme 1280×720 est nette sur toutes les tailles d"écran, y compris les moniteurs 4K. Le minimum de 640 × 360 semblera flou sur les écrans modernes – ne l'utilisez pas.
 
 YouTube superpose la durée de la vidéo dans le coin inférieur droit de chaque vignette des résultats de recherche. Gardez les visages, le texte et les visuels clés éloignés de cette zone.
 
@@ -75,7 +75,7 @@ Dans la liste déroulante **Plateforme**, sélectionnez **Vignette YouTube**. La
 
 Si votre image source est supérieure à 1280 × 720, faites glisser la superposition de recadrage pour encadrer la partie de l'image souhaitée. Pour les photos de portrait, positionnez la superposition sur votre sujet – généralement le visage pour les vignettes de la tête parlante, ou l'élément visuel principal pour les photos de produits ou de scènes.
 
-Si votre image source est inférieure à 1280 × 720, FrameForge la mettra à l'échelle. Gardez à l’esprit que la mise à l’échelle à partir d’une source basse résolution semblera floue : commencez par la version la plus haute résolution de votre image.
+Si votre image source est inférieure à 1280 × 720, FrameForge la mettra à l'échelle. Gardez à l"esprit que la mise à l"échelle à partir d"une source basse résolution semblera floue : commencez par la version la plus haute résolution de votre image.
 
 ### Étape 5 : Exporter
 
@@ -91,7 +91,7 @@ Les images de portrait (photos verticales prises au téléphone, images fixes vi
 
 **Ajuster avec rembourrage** — L'image entière est visible, mais vous obtenez des barres à gauche et à droite (letterbox). Peut paraître brut à moins que le rembourrage ne soit un choix de conception délibéré.
 
-**Étirer pour remplir** — Déforme l'image horizontalement pour remplir le cadre. Cela a presque toujours l’air mauvais. Évitez à moins que vous souhaitiez spécifiquement l’effet.
+**Étirer pour remplir** — Déforme l'image horizontalement pour remplir le cadre. Cela a presque toujours l"air mauvais. Évitez à moins que vous souhaitiez spécifiquement l"effet.
 
 FrameForge vous permet de basculer entre les modes de remplissage avant d'exporter, afin que vous puissiez comparer et choisir.
 
@@ -99,11 +99,11 @@ FrameForge vous permet de basculer entre les modes de remplissage avant d'export
 
 ## Conseils sur la qualité des vignettes
 
-Obtenir les bonnes dimensions est une exigence technique. Obtenir des clics est un problème différent. Quelques éléments qui font bouger l’aiguille de manière fiable :
+Obtenir les bonnes dimensions est une exigence technique. Obtenir des clics est un problème différent. Quelques éléments qui font bouger l"aiguille de manière fiable :
 
 **Utilisez un visage.** Les recherches menées par l'équipe YouTube confirment que les miniatures avec des visages humains visibles suscitent en moyenne plus d'engagement. Si votre vidéo met en scène une personne, mettez son visage en évidence.
 
-**Contraste élevé.** Votre vignette rivalise avec des dizaines d'autres dans une grille. Un sujet clair sur un fond sombre (ou vice versa) se démarque davantage qu’une composition plate et de milieu de gamme.
+**Contraste élevé.** Votre vignette rivalise avec des dizaines d'autres dans une grille. Un sujet clair sur un fond sombre (ou vice versa) se démarque davantage qu"une composition plate et de milieu de gamme.
 
 **Texte lisible.** Si vous superposez des mots sur la vignette, limitez-la à 3 à 5 mots. Testez la lisibilité en affichant la vignette en petite taille : si le texte est difficile à lire à 200 × 112 px, il est trop petit ou trop clair.
 

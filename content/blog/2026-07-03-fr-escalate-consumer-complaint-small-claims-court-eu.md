@@ -1,11 +1,11 @@
 ---
 schemaVersion: 1
 title: >-
-  Comment transmettre une plainte d'un consommateur de l'UE à la Cour des
-  petites créances
+  Comment transmettre une plainte d'un consommateur de l'UE Ã  la Cour des
+  petites crÃ©ances
 description: >-
-  Votre plainte ADR a été émise. Le médiateur a tranché en votre faveur. Mais le
-  vendeur ne coopère pas : il a refusé d’honorer la décision. Quand...
+  Votre plainte ADR a Ã©tÃ© Ã©mise. Le mÃ©diateur a tranchÃ© en votre faveur. Mais le
+  vendeur ne coopÃ¨re pas : il a refusÃ© d™honorer la dÃ©cision. Quand...
 date: 2026-07-03T00:00:00.000Z
 slug: escalate-consumer-complaint-small-claims-court-eu
 locale: fr
@@ -14,7 +14,7 @@ product: claimforge
 contentType: how-to
 primaryKeyword: >-
   comment transmettre une plainte d'un consommateur de l'UE au tribunal des
-  petites créances
+  petites crÃ©ances
 relatedPages: >-
   /fr/claimforge/,/fr/blog/how-to-file-consumer-complaint-eu/,/fr/blog/eu-warranty-rights-explained/
 jurisdiction: EU and national consumer rules
@@ -23,50 +23,50 @@ reviewDue: 2026-12-31T00:00:00.000Z
 sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
-# Comment transmettre une plainte d'un consommateur de l'UE à la Cour des petites créances
+# Comment transmettre une plainte d'un consommateur de l'UE Ã  la Cour des petites crÃ©ances
 
-Votre plainte ADR a été émise. Le médiateur a tranché en votre faveur. Mais le vendeur ne coopère pas : il a refusé d’honorer la décision. Lorsque la diplomatie échoue et que la médiation ne suffit pas, la Cour des petites créances est l'endroit où vous faites valoir vos droits.
+Votre plainte ADR a Ã©tÃ© Ã©mise. Le mÃ©diateur a tranchÃ© en votre faveur. Mais le vendeur ne coopÃ¨re pas : il a refusÃ© d™honorer la dÃ©cision. Lorsque la diplomatie Ã©choue et que la mÃ©diation ne suffit pas, la Cour des petites crÃ©ances est l'endroit oÃ¹ vous faites valoir vos droits.
 
 ## Quand recourir au tribunal
 
-La plupart des décisions ADR sont contraignantes pour les commerçants, mais tous les vendeurs ne s’y conforment pas volontairement. Vous pouvez saisir la Cour des petites créances si :
+La plupart des dÃ©cisions ADR sont contraignantes pour les commerÃ§ants, mais tous les vendeurs ne s™y conforment pas volontairement. Vous pouvez saisir la Cour des petites crÃ©ances siÂ :
 
-- L'organisme ADR a statué en votre faveur, mais le vendeur a ignoré la décision
-- Le vendeur a fait appel ou contesté le résultat de l'ADR
-- Le litige porte sur plus de 2 000 � et d�passe le cadre de l'ADR
-- Vous souhaitez un jugement formel doté d’un pouvoir d’exécution légale
+- L'organisme ADR a statuÃ© en votre faveur, mais le vendeur a ignorÃ© la dÃ©cision
+- Le vendeur a fait appel ou contestÃ© le rÃ©sultat de l'ADR
+- Le litige porte sur plus de 2 000 ï¿½ et dï¿½passe le cadre de l'ADR
+- Vous souhaitez un jugement formel dotÃ© d™un pouvoir d™exÃ©cution lÃ©gale
 
-## La procédure européenne de règlement des petits litiges
+## La procÃ©dure europÃ©enne de rÃ¨glement des petits litiges
 
-Le **R�glement europ�en sur les petits litiges** simplifie les litiges transfrontaliers jusqu'� 5 000 �. Principales caract�ristiques�:
+Le **Rï¿½glement europï¿½en sur les petits litiges** simplifie les litiges transfrontaliers jusqu'ï¿½ 5 000 ï¿½. Principales caractï¿½ristiquesï¿½:
 
-- **Dépôt simplifié :** Formulaire en ligne dans la plupart des pays de l'UE
-- **Langue :** Vous pouvez déposer dans votre propre langue ; la traduction relève de la responsabilité du tribunal
-- **Faible co�t�:** Frais de d�p�t g�n�ralement de 20 � 150�� selon le pays
-- **Procédure accélérée :** Les cas sont souvent résolus dans un délai de 6 à 12 mois.
-- **Exécution :** Un jugement d'un pays de l'UE est reconnu et exécutoire dans tous les autres.
+- **DÃ©pÃ´t simplifiÃ©Â :** Formulaire en ligne dans la plupart des pays de l'UE
+- **LangueÂ :** Vous pouvez dÃ©poser dans votre propre langueÂ ; la traduction relÃ¨ve de la responsabilitÃ© du tribunal
+- **Faible coï¿½tï¿½:** Frais de dï¿½pï¿½t gï¿½nï¿½ralement de 20 ï¿½ 150ï¿½ï¿½ selon le pays
+- **ProcÃ©dure accÃ©lÃ©rÃ©eÂ :** Les cas sont souvent rÃ©solus dans un dÃ©lai de 6 Ã  12Â mois.
+- **ExÃ©cutionÂ :** Un jugement d'un pays de l'UE est reconnu et exÃ©cutoire dans tous les autres.
 
-## 4 étapes pour déposer une plainte à la Cour des petites créances
+## 4 Ã©tapes pour dÃ©poser une plainte Ã  la Cour des petites crÃ©ances
 
-**Étape 1 : Déterminer la compétence.** Le tribunal du pays du vendeur est compétent. La plupart des pays de l'UE autorisent le dépôt en ligne ou par courrier.
+**Ãtape 1Â : DÃ©terminer la compÃ©tence.** Le tribunal du pays du vendeur est compÃ©tent. La plupart des pays de l'UE autorisent le dÃ©pÃ´t en ligne ou par courrier.
 
-**Étape 2 : Rassemblez des preuves.** Récupérez votre décision ADR, toute la correspondance, la preuve d'achat, les photos des défauts et le refus du vendeur de se conformer. Organisez chronologiquement.
+**Ãtape 2Â : Rassemblez des preuves.** RÃ©cupÃ©rez votre dÃ©cision ADR, toute la correspondance, la preuve d'achat, les photos des dÃ©fauts et le refus du vendeur de se conformer. Organisez chronologiquement.
 
-**Étape 3 : Remplissez le formulaire de réclamation.** Le formulaire est standardisé dans tous les pays de l'UE. Incluez vos coordonnées, les coordonnées du vendeur, le montant dû, un résumé clair des faits et vos preuves. Joindre la décision ADR le cas échéant.
+**Ãtape 3Â : Remplissez le formulaire de rÃ©clamation.** Le formulaire est standardisÃ© dans tous les pays de l'UE. Incluez vos coordonnÃ©es, les coordonnÃ©es du vendeur, le montant dÃ», un rÃ©sumÃ© clair des faits et vos preuves. Joindre la dÃ©cision ADR le cas Ã©chÃ©ant.
 
-**Étape 4 : Soumettre et suivre.** Déposer via le portail en ligne du tribunal ou par courrier recommandé. Vous recevrez un numéro de dossier. Le vendeur dispose de 14 à 30 jours pour répondre selon le pays.
+**Ãtape 4Â : Soumettre et suivre.** DÃ©poser via le portail en ligne du tribunal ou par courrier recommandÃ©. Vous recevrez un numÃ©ro de dossier. Le vendeur dispose de 14 Ã  30 jours pour rÃ©pondre selon le pays.
 
 ## Que se passe-t-il ensuite
 
-Le vendeur reçoit la réclamation et peut soit :
+Le vendeur reÃ§oit la rÃ©clamation et peut soit :
 
-- **Règlement :** De nombreux vendeurs paient plutôt que de se défendre devant les tribunaux
-- **Répondez :** Le tribunal examine les arguments et les preuves des deux parties.
-- **Ignorer :** S'ils ne répondent pas, vous gagnez généralement par défaut
+- **RÃ¨glementÂ :** De nombreux vendeurs paient plutÃ´t que de se dÃ©fendre devant les tribunaux
+- **RÃ©pondezÂ :** Le tribunal examine les arguments et les preuves des deux parties.
+- **IgnorerÂ :** S'ils ne rÃ©pondent pas, vous gagnez gÃ©nÃ©ralement par dÃ©faut
 
-Si l’affaire est jugée, le tribunal rendra une décision. Si vous gagnez, vous avez le droit d'exiger le recouvrement des actifs du vendeur.
+Si l™affaire est jugÃ©e, le tribunal rendra une dÃ©cision. Si vous gagnez, vous avez le droit d'exiger le recouvrement des actifs du vendeur.
 
-## Coûts clés et calendrier
+## CoÃ»ts clÃ©s et calendrier
 
 | Cost | Amount |
 |------|--------|
@@ -76,15 +76,15 @@ Si l’affaire est jugée, le tribunal rendra une décision. Si vous gagnez, vou
 | Filing to seller response | 30–60 days |
 | Total case duration | 6–18 months |
 
-## Application transfrontalière
+## Application transfrontaliÃ¨re
 
-Un jugement de faible importance rendu dans n’importe quel pays de l’UE est automatiquement reconnu dans tous les autres. Si le vendeur n'a aucun actif dans son pays d'origine, vous pouvez poursuivre l'exécution dans son pays de résidence ou là où il exerce ses activités.
+Un jugement de faible importance rendu dans n™importe quel pays de l™UE est automatiquement reconnu dans tous les autres. Si le vendeur n'a aucun actif dans son pays d'origine, vous pouvez poursuivre l'exÃ©cution dans son pays de rÃ©sidence ou lÃ  oÃ¹ il exerce ses activitÃ©s.
 
 ---
 
-## Appel à l'action
+## Appel Ã  l'action
 
-**Ne laissez pas un vendeur ignorer une décision de justice.** ClaimForge vous aide à documenter chaque étape, depuis la réclamation initiale via l'ADR jusqu'à l'exécution, afin que vous disposiez d'un dossier hermétique si vous devez saisir le tribunal.
+**Ne laissez pas un vendeur ignorer une dÃ©cision de justice.** ClaimForge vous aide Ã  documenter chaque Ã©tape, depuis la rÃ©clamation initiale via l'ADR jusqu'Ã  l'exÃ©cution, afin que vous disposiez d'un dossier hermÃ©tique si vous devez saisir le tribunal.
 
 [Install ClaimForge Free](https://chromewebstore.google.com/detail/mlnjadkolgplpgbheklkdjcglojfakcg)
 

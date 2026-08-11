@@ -30,7 +30,7 @@ relatedPages: /pt/slimeforge/
 
 ## Resumo
 
-Artigo de varia��o que enfatiza o �ngulo de estudantes e exames. O principal (adhd-pomodoro-timer) cubri� PHDA + dopamina + culpa. Esta varia��o cubre estudantes + estrutura + motiva��o sustentada durante semanas de est�dio.
+Artigo de variação que enfatiza o ângulo de estudantes e exames. O principal (adhd-pomodoro-timer) cubri� PHDA + dopamina + culpa. Esta variação cubre estudantes + estrutura + motivação sustentada durante semanas de estádio.
 
 Contém:
 - Problema: estudantes estudian mal (sessões longas que caem)
@@ -38,7 +38,7 @@ Contém:
 - Diferencial: gamificação mantém motivação ao longo de semanas de exame
 - FAQ: 3 perguntas (porque falharam as sessões longas, pomodoro vs cramming, gamificação para estúdio)
 - CTA: mesmo SlimeForge que o principal
-- Links internos: principal de TDAH (diferencia de �ngulos) + pomodoro timer best guide
+- Links internos: principal de TDAH (diferencia de ângulos) + pomodoro timer best guide
 
 ## Palavras: ~420 (dentro do intervalo 300-500)
 

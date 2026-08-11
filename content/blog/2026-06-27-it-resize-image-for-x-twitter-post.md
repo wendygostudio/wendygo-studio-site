@@ -13,9 +13,7 @@ product: frameforge
 contentType: how-to
 primaryKeyword: come ridimensionare l'immagine per x post su Twitter
 relatedPages: /it/frameforge/
----
-
-X esegue il rendering delle immagini dei tweet con un ritaglio 2:1 nell'anteprima del feed. Nelle foto quadrate viene tagliata la metà inferiore. I ritratti vengono compressi in una scomoda sezione centrale. La soluzione è semplice: pubblica a 1200×675 px (16:9) e nulla verrà ritagliato né nell'anteprima del feed né nella visualizzazione espansa a dimensione intera.
+---X esegue il rendering delle immagini dei tweet con un ritaglio 2:1 nell'anteprima del feed. Nelle foto quadrate viene tagliata la metà inferiore. I ritratti vengono compressi in una scomoda sezione centrale. La soluzione è semplice: pubblica a 1200×675 px (16:9) e nulla verrà ritagliato né nell'anteprima del feed né nella visualizzazione espansa a dimensione intera.
 
 FrameForge è un'estensione di Chrome che ridimensiona completamente le immagini nel tuo browser. Nessun caricamento, nessun account, nessuna attesa per un server remoto per elaborare il tuo file.
 

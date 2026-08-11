@@ -45,7 +45,7 @@ Conservez le WebP lorsque la destination le prend en charge et que la taille du 
 
 ConvertForge est conçu pour le traitement local et ne nécessite pas de compte ni de téléchargement sur un serveur pour cette conversion d'image. Cela le rend utile pour les captures d'écran, les actifs clients et les images qui ne doivent pas être copiés dans un convertisseur en ligne uniquement pour modifier le format de fichier.
 
-Le navigateur a encore besoin de suffisamment de m�moire pour le fichier. Les images tr�s volumineuses peuvent �tre limit�es par la m�moire disponible du navigateur. Testez donc un fichier repr�sentatif avant de d�marrer un lot volumineux. Si l'image fait partie d'une t�che de pr�paration plus large, [FrameForge](/frameforge/) peut g�rer localement le pr�r�glage de recadrage et de plate-forme avant de convertir la copie finale.
+Le navigateur a encore besoin de suffisamment de mémoire pour le fichier. Les images très volumineuses peuvent �tre limitées par la mémoire disponible du navigateur. Testez donc un fichier représentatif avant de démarrer un lot volumineux. Si l'image fait partie d'une tâche de préparation plus large, [FrameForge](/frameforge/) peut g�rer localement le pr�r�glage de recadrage et de plate-forme avant de convertir la copie finale.
 
 ## Qualité JPG et taille du fichier
 

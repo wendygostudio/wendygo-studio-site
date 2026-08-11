@@ -12,9 +12,7 @@ product: frameforge
 contentType: how-to
 primaryKeyword: comment redimensionner l'image pour x post Twitter
 relatedPages: /fr/frameforge/
----
-
-X restitue les images des tweets avec un recadrage 2:1 dans l'aperçu du flux. Les photos carrées ont la moitié inférieure coupée. Les portraits sont regroupés dans une tranche centrale peu pratique. La solution est simple : publiez à 1 200 × 675 px (16:9) et rien n’est recadré ni dans l’aperçu du flux, ni dans la vue développée en taille réelle.
+---X restitue les images des tweets avec un recadrage 2:1 dans l'aperçu du flux. Les photos carrées ont la moitié inférieure coupée. Les portraits sont regroupés dans une tranche centrale peu pratique. La solution est simple : publiez à 1 200 × 675 px (16:9) et rien n’est recadré ni dans l’aperçu du flux, ni dans la vue développée en taille réelle.
 
 FrameForge est une extension Chrome qui redimensionne entièrement les images dans votre navigateur. Pas de téléchargement, pas de compte, pas d'attente qu'un serveur distant traite votre fichier.
 

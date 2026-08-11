@@ -62,7 +62,7 @@ O ScrubForge utiliza o mesmo token em todos os locais onde o mesmo segredo apare
 Isto significa que os assistentes de IA ainda podem:
 - Rastrear relações vizinhas do protocolo de encaminhamento
 - Detetar regras ACL assimétricas
-- Identifique os par�metros de fase IKE incompat�veis
+- Identifique os parâmetros de fase IKE incompatíveis
 - Sinalizar entradas de política em falta ou contraditórias
 
 Simplesmente não podem registar, armazenar ou expor acidentalmente os valores reais das credenciais.

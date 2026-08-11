@@ -59,7 +59,7 @@ Muitos profissionais usam ambos. O bloqueio de horário define a estrutura do di
 
 ## A vantagem da gamificação
 
-Gamified Pomodoro acrescenta um ciclo de recompensa para al�m da mesma mec�nica de cron�metro. Isto � o que mais importa para a motiva��o come�ar  a parte mais dif�cil de qualquer m�todo de foco. SlimeForge adiciona um animal de estima��o slime virtual que eclode ap�s a sua primeira sess�o e cresce � medida que completa sprints, ganhando Brasas =%. 16 esp�cies, miss�es e minijogos  todos realizados localmente, sem conta ou liga��o � Internet.
+Gamified Pomodoro acrescenta um ciclo de recompensa para além da mesma mecânica de cronómetro. Isto � o que mais importa para a motivação come�ar – a parte mais difícil de qualquer m�todo de foco. SlimeForge adiciona um animal de estima��o slime virtual que eclode apès a sua primeira sessão e cresce � medida que completa sprints, ganhando Brasas =%. 16 espécies, missões e minijogos – todos realizados localmente, sem conta ou liga��o � Internet.
 
 ## Perguntas frequentes
 

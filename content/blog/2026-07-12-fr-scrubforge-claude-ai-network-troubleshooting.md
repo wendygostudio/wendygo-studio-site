@@ -18,7 +18,7 @@ relatedPages: >-
 
 Claude, l'assistant IA d'Anthropic, a gagné une forte popularité parmi les ingénieurs pour son raisonnement précis et sa grande fenêtre contextuelle. Les administrateurs système l'utilisent pour analyser les configurations BGP, déboguer les politiques VPN et travailler sur une logique de règles de pare-feu complexe – exactement le genre de raisonnement structuré dans lequel Claude fonctionne bien.
 
-Le problème des informations d’identification est identique à celui de tout autre assistant IA. Lorsque vous collez une configuration réseau dans Claude, ce texte est envoyé aux serveurs d'Anthropic. Vos clés pré-partagées VPN en direct, vos mots de passe administrateur, vos jetons API et vos chaînes de communauté SNMP l'accompagnent.
+Le problème des informations d"identification est identique à celui de tout autre assistant IA. Lorsque vous collez une configuration réseau dans Claude, ce texte est envoyé aux serveurs d'Anthropic. Vos clés pré-partagées VPN en direct, vos mots de passe administrateur, vos jetons API et vos chaînes de communauté SNMP l'accompagnent.
 
 ScrubForge résout ce problème : nettoyez la configuration localement dans Chrome, puis collez la version propre dans Claude sans aucune information d'identification en direct.
 
@@ -71,13 +71,13 @@ Exemple d'invite :
 
 ## Ce que Claude fait bien avec des configurations aseptisées
 
-Les atouts de Claude correspondent bien aux t�ches de d�pannage r�seau�:
+Les atouts de Claude correspondent bien aux tâches de dépannage réseau�:
 
 **Analyse de grandes configurations.** Claude peut gérer une exportation complète (pas seulement un extrait de code), ce qui est important lorsque le bogue réside dans l'interaction entre les politiques plutôt que dans un bloc isolé.
 
 **Raisonnement structuré.** Claude a tendance à expliquer *pourquoi* quelque chose ne va pas, pas seulement à le signaler. Utile lorsque vous avez besoin de comprendre la cause première plutôt que de simplement appliquer un correctif.
 
-**Séances itératives.** Vous pouvez effectuer un suivi avec un contexte supplémentaire (« voici ce qui a changé au cours des dernières 48 heures » ou « voici le résultat de show ip bgp summary ») au sein de la même conversation. La configuration nettoyée de l’étape 1 reste comme point de référence.
+**Séances itératives.** Vous pouvez effectuer un suivi avec un contexte supplémentaire (« voici ce qui a changé au cours des dernières 48 heures » ou « voici le résultat de show ip bgp summary ») au sein de la même conversation. La configuration nettoyée de l"étape 1 reste comme point de référence.
 
 **Configurations multi-fournisseurs.** Si vous dépannez un chemin qui traverse un routeur Cisco, un pare-feu FortiGate et un Palo Alto, vous pouvez coller plusieurs configurations nettoyées dans une seule session et demander à Claude de rechercher les incohérences entre appareils.
 
@@ -121,10 +121,10 @@ L'adresse IP du homologue, l'identifiant de routage et le nom du VRF restent en 
 Oui. ScrubForge nettoie localement, quel que soit l'assistant IA que vous utilisez par la suite. L'étape de désinfection est identique : coller la configuration, nettoyer les informations d'identification, copier la sortie propre. L'endroit où vous collez cette sortie dépend de vous.
 
 **Claude a une grande fenêtre contextuelle — est-ce que cela aide avec les grosses configurations ?**
-Cela aide. Claude peut ingérer une configuration complète de plusieurs milliers de lignes sans que vous ayez à la tronquer. Ceci est utile lorsque le problème s'étend sur plusieurs sections d'un fichier de configuration volumineux. Désinfectez l’exportation complète et collez-la entière.
+Cela aide. Claude peut ingérer une configuration complète de plusieurs milliers de lignes sans que vous ayez à la tronquer. Ceci est utile lorsque le problème s'étend sur plusieurs sections d'un fichier de configuration volumineux. Désinfectez l"exportation complète et collez-la entière.
 
 **Puis-je utiliser Claude Projects pour stocker une configuration nettoyée à titre de référence ?**
-Oui, et il s'agit d'un flux de travail raisonnable pour les travaux d'infrastructure en cours. Ajoutez la configuration nettoyée en tant que fichier contextuel dans un projet. Étant donné que les informations d'identification sont remplacées par des jetons, leur stockage est sécurisé dans un projet hébergé dans le cloud. Stocker une configuration brute là-bas équivaudrait à l’envoyer par courrier électronique en texte brut.
+Oui, et il s'agit d'un flux de travail raisonnable pour les travaux d'infrastructure en cours. Ajoutez la configuration nettoyée en tant que fichier contextuel dans un projet. Étant donné que les informations d'identification sont remplacées par des jetons, leur stockage est sécurisé dans un projet hébergé dans le cloud. Stocker une configuration brute là-bas équivaudrait à l"envoyer par courrier électronique en texte brut.
 
 **Est-ce qu'Anthropic s'entraîne sur mes conversations Claude ?**
 Les politiques de traitement des données d'Anthropic varient selon le forfait et l'utilisation de l'API. Consultez la politique de confidentialité actuelle d'Anthropic pour plus de détails. Pour les configurations sensibles, l'approche la plus sûre consiste à garantir que les informations d'identification n'atteignent jamais le serveur en premier lieu, ce que gère ScrubForge.

@@ -4,7 +4,7 @@ title: "Que faire pendant une pause Pomodoro\_: 12 idées"
 description: >-
   Utilisez votre pause Pomodoro pour réinitialiser sans perdre votre
   concentration. Essayez 12 idées de courtes pauses et retournez au travail à
-  l’heure.
+  l"heure.
 date: 2026-07-22T00:00:00.000Z
 slug: what-to-do-during-pomodoro-break
 locale: fr
@@ -23,13 +23,13 @@ Une pause Pomodoro peut échouer de deux manières opposées. Soit vous restez a
 
 ## À quoi sert réellement une pause de cinq minutes
 
-La courte pause nest pas suffisante pour accomplir une autre t�che significative. Son objectif est de cr�er une fronti�re entre les sessions de focus. Cela peut signifier bouger apr�s �tre rest� assis, changer la distance visuelle apr�s avoir regard� un �cran ou effacer la derni�re t�che de votre attention.
+La courte pause nest pas suffisante pour accomplir une autre tâche significative. Son objectif est de créer une fronti�re entre les sessions de focus. Cela peut signifier bouger après �tre restá assis, changer la distance visuelle après avoir regard� un �cran ou effacer la dernière tâche de votre attention.
 
 Si vous êtes encore en train de décider quelle structure d'intervalle correspond à votre travail, notre comparaison de [Pomodoro et le blocage du temps](/blog/pomodoro-vs-time-blocking/) explique comment une minuterie peut protéger la concentration à l'intérieur d'un bloc de calendrier plus grand.
 
 ## 12 idées de rupture Pomodoro avec des points d'arrêt clairs
 
-Choisissez une ou deux options plutôt que d’essayer de compléter la liste entière :
+Choisissez une ou deux options plutôt que d"essayer de compléter la liste entière :
 
 1. **Debout et étirez-vous :** bougez doucement vos épaules, vos poignets et vos hanches.
 2. **Remplissez votre eau :** le voyage crée du mouvement et a un point final naturel.
@@ -55,7 +55,7 @@ Choisissez une ou deux options plutôt que d’essayer de compléter la liste en
 
 ## Interrompre les activités qui volent généralement la prochaine session
 
-�vitez les activit�s con�ues autour de la continuation�: vid�os courtes, flux d'actualit�s, bo�tes de r�ception, jeux multijoueurs et ��juste une t�che rapide��. Aucune nest intrins�quement mauvaise, mais chacune introduit de nouvelles d�cisions ou un r�sultat impr�visible.
+Évitez les activités conçues autour de la continuation�: vidéos courtes, flux d'actualitès, bo�tes de r�ception, jeux multijoueurs et ��juste une tâche rapide��. Aucune nest intrinsèquement mauvaise, mais chacune introduit de nouvelles décisions ou un rèsultat impr�visible.
 
 | Break choice | Why it expands | Bounded alternative |
 |---|---|---|
@@ -64,7 +64,7 @@ Choisissez une ou deux options plutôt que d’essayer de compléter la liste en
 | News homepage | Many competing links | Look out of a window |
 | Starting chores | Scope keeps growing | Tidy one small surface |
 
-Votre téléphone peut toujours être utile comme alarme, mais le raccrocher devrait faire partie de la routine. Si l’activité de pause nécessite une autre minuterie pour éviter qu’elle ne prenne le relais, elle peut être mieux adaptée à une pause plus longue.
+Votre téléphone peut toujours être utile comme alarme, mais le raccrocher devrait faire partie de la routine. Si l"activité de pause nécessite une autre minuterie pour éviter qu"elle ne prenne le relais, elle peut être mieux adaptée à une pause plus longue.
 
 ## Laissez un signal de redémarrage avant de vous lever
 
@@ -94,16 +94,16 @@ La meilleure pause Pomodoro est rarement la plus divertissante. C'est celui qui 
 
 ### Que dois-je faire pendant une pause Pomodoro de cinq minutes ?
 
-Levez-vous, buvez de l’eau, regardez au loin, étirez-vous ou faites une petite promenade. Choisissez une activité avec un point d’arrêt clair et évitez d’ouvrir un flux sans fin.
+Levez-vous, buvez de l"eau, regardez au loin, étirez-vous ou faites une petite promenade. Choisissez une activité avec un point d"arrêt clair et évitez d"ouvrir un flux sans fin.
 
 ### Dois-je utiliser mon téléphone pendant une pause Pomodoro ?
 
-Généralement non. Les messages et les flux sociaux n’ont pas de point final naturel, donc une pause de cinq minutes peut facilement devenir beaucoup plus longue.
+Généralement non. Les messages et les flux sociaux n"ont pas de point final naturel, donc une pause de cinq minutes peut facilement devenir beaucoup plus longue.
 
 ### Puis-je continuer à travailler pendant une pause Pomodoro ?
 
 Vous pouvez, mais le faire à plusieurs reprises supprime la récupération intégrée à la méthode. Au minimum, changez de posture et reposez vos yeux avant la prochaine séance.
 
-### Quelle doit être la durée d’une pause Pomodoro plus longue ?
+### Quelle doit être la durée d"une pause Pomodoro plus longue ?
 
 De nombreuses personnes font une pause plus longue après plusieurs séances. Choisissez une durée qui vous permet de manger, de marcher ou de vous réinitialiser tout en préservant une heure claire pour revenir.

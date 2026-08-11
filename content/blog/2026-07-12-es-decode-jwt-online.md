@@ -10,9 +10,7 @@ product: textforge
 contentType: how-to
 primaryKeyword: "decodificar el token jwt en línea (sin carga del servidor, sin terceros)"
 relatedPages: /textforge/,/blog/cyberchef-alternatives/,/blog/base64-encode-decode-online-tool/
----
-
-# Decodificar token JWT en línea (sin carga de servidor, sin terceros)
+---# Decodificar token JWT en línea (sin carga de servidor, sin terceros)
 
 JWT (JSON Web Token) es el estándar para la autenticación sin estado. Cada vez que inicia sesión en una aplicación, su navegador contiene un JWT. Pero leer uno requiere decodificarlo, y la mayoría de los decodificadores JWT en línea envían su token a un servidor de terceros.
 

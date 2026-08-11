@@ -29,7 +29,7 @@ O TextForge é uma extensão gratuita do Chrome com uma função Remover Duplica
 
 **Desduplicação de resposta de API** — Os seus registos de API ou rastreios de pedidos incluem o mesmo endpoint chamado várias vezes. A desduplicação da lista mostra os endpoints únicos sem que as repetições atrapalhem a visualização.
 
-**Limpeza de dom�nio e nome de host**  as consultas DNS, as auditorias de certificados ou as exporta��es de subdom�nios incluem, normalmente, o mesmo dom�nio v�rias vezes. Uma lista desduplicada facilita a visualiza��o do �mbito real dos dom�nios que est� a monitorizar.
+**Limpeza de domínio e nome de host** — as consultas DNS, as auditorias de certificados ou as exportações de subdomínios incluem, normalmente, o mesmo domínio várias vezes. Uma lista desduplicada facilita a visualização do âmbito real dos domínios que está a monitorizar.
 
 **Agregação e filtragem de registos** — Depois de extrair mensagens de erro, códigos de estado ou tipos de aviso de uma grande secção de registo, aparecem duplicados porque o mesmo evento se repete em pedidos diferentes. Removê-los revela os tipos de eventos exclusivos.
 

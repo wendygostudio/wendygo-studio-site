@@ -62,7 +62,7 @@ Reivindicações comuns a procurar:
 
 ## Porque não usar jwt.io?
 
-jwt.io � a ferramenta padr�o e � conveniente. Mas envia o seu JWT para um servidor. Para tokens que cont�m dados reais de utilizadores, IDs de utilizadores internos ou declara��es de �mbito, col�-los numa ferramenta de terceiros � um h�bito que vale a pena evitar, especialmente na depura��o de produ��o.
+jwt.io é a ferramenta padrão e � conveniente. Mas envia o seu JWT para um servidor. Para tokens que contêm dados reais de utilizadores, IDs de utilizadores internos ou declarações de âmbito, colá-los numa ferramenta de terceiros é um hábito que vale a pena evitar, especialmente na depuração de produção.
 
 O TextForge descodifica localmente. O token nunca sai do seu browser.
 
