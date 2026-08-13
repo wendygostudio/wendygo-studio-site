@@ -42,6 +42,10 @@ async function serviceAccountToken(file, scope) {
 async function accessToken(tokenFile, scope) {
   const serviceAccountFile = process.env.GOOGLE_SERVICE_ACCOUNT_FILE || path.join(configDir, 'google-service-account.json');
   if (fs.existsSync(serviceAccountFile)) return serviceAccountToken(serviceAccountFile, scope);
+  return oauthRefreshToken(tokenFile, scope);
+}
+
+async function oauthRefreshToken(tokenFile, scope = 'OAuth') {
   const token = JSON.parse(fs.readFileSync(tokenFile, 'utf8'));
   if (!token.refresh_token) throw new Error(`No refresh_token in ${tokenFile}`);
   const body = new URLSearchParams({
@@ -113,8 +117,21 @@ async function run() {
   let gaOk = false;
   try { output.gsc = await gsc(await accessToken(path.join(configDir, 'gsc-token.json'), 'https://www.googleapis.com/auth/webmasters.readonly')); gscOk = true; }
   catch (error) { errors.push(error.message); }
-  try { output.ga4 = await ga4(await accessToken(path.join(configDir, 'ga-token.json'), 'https://www.googleapis.com/auth/analytics.readonly')); gaOk = true; }
-  catch (error) { errors.push(error.message); }
+  try {
+    output.ga4 = await ga4(await accessToken(path.join(configDir, 'ga-token.json'), 'https://www.googleapis.com/auth/analytics.readonly'));
+    gaOk = true;
+  } catch (serviceAccountError) {
+    // A service account can be valid in Cloud but still lack GA4 property
+    // access. Fall back to the existing user's read-only OAuth grant so the
+    // Daily can continue while the property permissions are being repaired.
+    try {
+      output.ga4 = await ga4(await oauthRefreshToken(path.join(configDir, 'ga-token.json'), 'GA4'));
+      gaOk = true;
+      console.warn(`GA4 service account unavailable; OAuth fallback succeeded: ${serviceAccountError.message}`);
+    } catch (oauthError) {
+      errors.push(`${serviceAccountError.message}; OAuth fallback: ${oauthError.message}`);
+    }
+  }
   // Never erase a previous export when OAuth has expired or an API is down.
   // A failed refresh is a measurement gap, not a valid zero-data result.
   if (gscOk) fs.writeFileSync(path.join(siteDir, 'analytics-data.json'), JSON.stringify({ fetched_at: output.fetched_at, gsc: output.gsc, web_analytics: output.web_analytics }, null, 2) + '\n');

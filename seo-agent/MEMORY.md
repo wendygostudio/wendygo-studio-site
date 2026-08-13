@@ -1,5 +1,11 @@
 # Memoria del Proyecto — Wendygo Studio
 
+## LÃ­nea base GA4 manual (2026-08-13)
+
+- Seis exportaciones `Informe_panorÃ¡mico*.csv` cubren 2026-05-15â€“2026-08-12.
+- Tendencia semanal: SlimeForge 11â†’21â†’14â†’13â†’7; FrameForge 10â†’6â†’5â†’4â†’1; ClaimForge 5â†’8â†’5â†’2â†’2; ScrubForge 2â†’4â†’6â†’2â†’3; ConvertForge 3â†’2â†’4â†’4â†’1; TextForge 3â†’2â†’1â†’3â†’3.
+- SlimeForge tiene la mejor seÃ±al de Organic Search (17 usuarios nuevos); FrameForge registra 1. Es una lÃ­nea base comparativa, no usuarios Ãºnicos acumulados.
+
 ## Estado operativo vigente (2026-08-11)
 
 - Search Console ya está operativo mediante la cuenta de servicio `wendygo-seo-reader@project-d87fed0e-c2d8-4b88-9ae.iam.gserviceaccount.com`: la última extracción devolvió 50 páginas y 50 consultas.

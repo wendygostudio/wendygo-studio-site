@@ -2,7 +2,7 @@
 """
 Wendygo Studio — Analytics Fetcher
 Lee datos de Google Search Console y genera analytics-data.json
-para que el agente Claude Code lo use en sus decisiones.
+para que el flujo Growth de Codex lo use en sus decisiones.
 
 Uso:
     python3 analytics-fetch.py

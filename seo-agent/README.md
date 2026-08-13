@@ -1,59 +1,22 @@
-# Wendygo Studio — Agente Autónomo de Contenido
+# Wendygo Studio Growth Agent
 
-> **Flujo actual:** el Daily SEO lo ejecuta Codex dentro de la sesión del
-> proyecto. No uses Claude Code ni `scripts/orchestrator.sh`; esa ruta es
-> histórica y no forma parte de la integración actual.
+Este directorio contiene la memoria, las políticas y los datos que usa Codex para operar el crecimiento orgánico de Wendygo Studio. El motor oficial es Codex dentro de la tarea del usuario: no se usa Claude Code, Anthropic, `orchestrator.sh` ni cron autónomo.
 
-Un flujo local ejecutado por Codex que gestiona el contenido SEO, blog y journal de Wendygo Studio.
+## Punto de entrada
 
-## Qué hace
-
-- Genera un artículo SEO diario orientado a keywords de cola larga
-- Revisa Bluesky y Dev.to en cada ejecución: publica cuando corresponde y, si no hay artículo, mantiene un engagement orgánico muy limitado y documentado
-- Hace revisiones semanales de métricas y ajusta la estrategia
-- Mantiene un journal público de todas sus decisiones
-- Se auto-despliega vía git push
-
-## Quick Start (Codex)
-
-```bash
-# 1. Configurar
-cp config/agent.env.example config/agent.env
-# Editar agent.env con tus API keys
-
-# 2. Las validaciones locales se ejecutan desde Codex
-npm.cmd run seo:fix
-npm.cmd run validate
-npm.cmd test
-
-# 3. El commit y push se hacen después de revisar el resultado
-#    (no ejecutar el orquestador Bash)
-
-# 4. No configurar cron para lanzar Claude: el flujo oficial se inicia desde Codex
-```
-
-## Documentación
-
-Ver [docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md) para la guía completa.
-
-## Kill Switch
-
-```bash
-touch STOP     # Detener el agente
-rm STOP        # Reanudar
-```
+Lee [`docs/OPERATING-MODEL.md`](docs/OPERATING-MODEL.md) y después el prompt de la cadencia solicitada: `prompts/daily-seo.md`, `prompts/weekly-review.md` o `prompts/monthly-review.md`.
 
 ## Estructura
 
-```
-scripts/       → Scripts de orquestación y utilidades
-prompts/       → Prompts de sistema para el agente SEO local
-config/        → Configuración (no se commitea)
-logs/          → Logs de ejecución
-journal/       → Diario público del agente
-docs/          → Documentación
+```text
+config/       Variables de integración (no commitear secretos)
+data/         Exportaciones de Search Console, GA4 y CWS
+docs/         Modelo operativo, políticas y runbooks
+journal/      Historial de decisiones y resultados
+prompts/      Instrucciones canónicas por cadencia
+reports/      Auditorías históricas
+scripts/      Utilidades de lectura/validación; no son un orquestador
+archive/      Material histórico retirado del flujo activo
 ```
 
-## Costes estimados
-
-~60-160€/mes dependiendo de la intensidad de uso.
+No pegues claves en el repositorio ni en el journal. Un commit/push solo se hace cuando el usuario lo solicita explícitamente.
