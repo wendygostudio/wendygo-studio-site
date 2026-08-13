@@ -37,8 +37,8 @@ En el Worker nuevo, añade una route:
 wendygostudio.com/api/license/*
 ```
 
-Así la web seguirá en el Worker actual y solo `/api/license/validate` y
-`/api/license/activate` pasarán al proxy nuevo.
+Así la web seguirá en el Worker actual y `/api/license/validate`,
+`/api/license/activate` y `/api/license/deactivate` pasarán al proxy nuevo.
 
 ## Registro de trials (legado, actualmente sin uso)
 
@@ -78,6 +78,30 @@ curl -X POST https://wendygostudio.com/api/license/validate \
   -H "Content-Type: application/json" \
   -d '{"key":"licencia-de-prueba"}'
 ```
+
+## Cierre de la migración Creem
+
+IDs confirmados para restringir CORS cuando las seis extensiones usen el proxy:
+
+```text
+chrome-extension://cnmlojgahikinilbefkkfadkfamchlba  # TextForge
+chrome-extension://abdmadomfnijoiklnaklmplifmljgchj  # FrameForge
+chrome-extension://mjmamnnhophdhccknmgnppcdkojkpagj  # ConvertForge
+chrome-extension://pjaohhipefhjfopoaepjbmiienagaffe  # ScrubForge
+chrome-extension://mlnjadkolgplpgbheklkdjcglojfakcg  # ClaimForge
+chrome-extension://dobhabpmcmpfdihchnhbickecelihhbc  # SlimeForge
+```
+
+Estado comprobado el 13 de agosto de 2026: `CREEM_API_KEY`, las rutas
+`/api/license/*` y `/api/trial/*`, y el KV `TRIAL_IDS` están configurados. La
+lista `ALLOWED_ORIGINS` sigue vacía temporalmente, por lo que el CORS está en
+modo abierto para facilitar la migración; no es el estado final seguro.
+
+Para cerrar ConvertForge faltan: confirmar que el paquete no contiene una
+clave Creem y usa `https://wendygostudio.com/api/license`; probar `/validate`
+desde la extensión empaquetada con una licencia de prueba válida; y probar
+`/activate` con un `instance_id` nuevo. Después debe rotarse cualquier clave
+antigua que haya sido distribuida.
 
 Una respuesta `proxy_misconfigured` significa que la ruta funciona pero falta
 el secreto. Un `404` significa que la route todavía no está conectada.

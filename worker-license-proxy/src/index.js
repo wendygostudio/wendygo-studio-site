@@ -1,6 +1,6 @@
 // Git-build deployment marker: 2026-07-29
 const CREEM_BASE = "https://api.creem.io/v1/licenses";
-const ACTIONS = new Set(["validate", "activate"]);
+const ACTIONS = new Set(["validate", "activate", "deactivate"]);
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const TRIAL_KEY_PREFIX = "trial:";
 
@@ -83,7 +83,7 @@ export default {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers });
     if (request.method !== "POST") return json({ valid: false, error: "method_not_allowed" }, 405, headers);
     if (/^\/api\/trial\/register\/?$/.test(url.pathname)) return registerTrial(request, env);
-    const match = url.pathname.match(/^\/api\/license\/(validate|activate)\/?$/);
+    const match = url.pathname.match(/^\/api\/license\/(validate|activate|deactivate)\/?$/);
     return match ? handle(request, env, match[1]) : json({ valid: false, error: "not_found" }, 404, headers);
   },
 };
