@@ -9,11 +9,13 @@ translationKey: forest-app-alternatives-chrome
 product: slimeforge
 contentType: alternatives
 primaryKeyword: "alternativas Forest Chrome"
-relatedPages: /slimeforge/
+relatedPages: /pt/slimeforge/,/pt/blog/forest-vs-temporizador-pomodoro/
 ---
 
 O Forest é conhecido pela abordagem de árvores e sessões de foco. Uma alternativa pode ser adequada se preferir um temporizador no Chrome, dados locais ou outra forma de progresso.
 
 [SlimeForge](/pt/slimeforge/) combina sessões Pomodoro, companheiro virtual local e objetivos opcionais. É adequado se organiza sessões no navegador e não quer depender de conta ou cloud para o temporizador principal.
+
+Se pretende comparar os dois mecanismos de motivação em vez de uma lista de produtos, o guia [Forest ou temporizador Pomodoro](/pt/blog/forest-vs-temporizador-pomodoro/) distingue o compromisso visual no telemóvel do ritmo de trabalho e pausa no navegador.
 
 Teste primeiro o ritmo: escolha uma duração, elimine distrações, faça a pausa e veja após alguns dias se começa com mais regularidade. Um sistema motivacional não deve tornar-se uma distração.

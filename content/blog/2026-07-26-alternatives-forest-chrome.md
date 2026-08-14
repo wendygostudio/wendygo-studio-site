@@ -9,11 +9,13 @@ translationKey: forest-app-alternatives-chrome
 product: slimeforge
 contentType: alternatives
 primaryKeyword: "alternatives Forest Chrome"
-relatedPages: /slimeforge/
+relatedPages: /fr/slimeforge/,/fr/blog/forest-vs-minuteur-pomodoro/
 ---
 
 Forest est connu pour son approche par arbre et ses sessions de concentration. Une alternative peut convenir si vous préférez un minuteur directement dans Chrome, des données locales ou une autre forme de progression.
 
 [SlimeForge](/fr/slimeforge/) associe sessions Pomodoro, compagnon virtuel local et objectifs facultatifs. Il convient si vous organisez vos sessions dans le navigateur et ne voulez pas dépendre d'un compte ou du cloud pour le minuteur de base.
+
+Si vous comparez les deux formes de motivation plutôt qu'une liste de produits, le guide [Forest ou minuteur Pomodoro](/fr/blog/forest-vs-minuteur-pomodoro/) distingue l'engagement visuel sur téléphone du rythme travail-pause dans le navigateur.
 
 Testez d'abord le rythme : choisissez une durée, éliminez les distractions, prenez la pause et observez après quelques jours si le démarrage devient plus régulier. Un système de motivation ne doit pas devenir une distraction.

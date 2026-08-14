@@ -16,14 +16,16 @@ contentType: how-to
 primaryKeyword: >-
   meilleure extension chrome de minuterie pomodoro en 2026 — avec un animal de
   compagnie virtuel
-relatedPages: /fr/slimeforge/
+relatedPages: /fr/slimeforge/,/fr/blog/forest-vs-minuteur-pomodoro/
 ---
 
 La plupart des minuteries Pomodoro échouent de la même manière : vous réglez 25 minutes, l'alarme sonne, vous fermez l'onglet et le lendemain matin, vous avez oublié que l'extension existe. SlimeForge corrige ce problème avec un animal de compagnie slime virtuel qui vit dans votre navigateur et ne grandit que lorsque vous vous concentrez.
 
-Si votre interruption principale est un site Web prévisible plutôt que la minuterie elle-même, associez la routine au nouveau [guide Pomodoro Focus Shield](/blog/pomodoro-focus-shield-chrome/). Il explique comment conserver les onglets de recherche essentiels disponibles tout en réduisant les sites qui vous éloignent à plusieurs reprises.
+Si votre interruption principale est un site web prévisible plutôt que le minuteur lui-même, associez la routine au [guide Pomodoro Focus Shield](/fr/blog/pomodoro-focus-shield-chrome/). Il explique comment conserver les onglets de recherche essentiels tout en limitant les sites qui vous détournent régulièrement de la tâche.
 
-Pour les lecteurs qui disposent déjà d'un minuteur mais qui ont du mal avec la première minute, le [guide rituel de mise au point](/blog/focus-rituals-pomodoro-chrome/) ajoute un résultat concret et une première action avant le démarrage du chronomètre. Il s"agit du plus petit changement qui rend ce flux de travail plus facile à répéter.
+Pour les lecteurs qui disposent déjà d'un minuteur mais ont du mal avec la première minute, le [guide du rituel de concentration](/fr/blog/focus-rituals-pomodoro-chrome/) ajoute un résultat concret et une première action avant le démarrage du chronomètre. Il s'agit du plus petit changement qui rend ce flux de travail plus facile à répéter.
+
+Si vous hésitez entre l'engagement d'un arbre à faire pousser et une routine fondée sur les intervalles, la comparaison [Forest ou minuteur Pomodoro](/fr/blog/forest-vs-minuteur-pomodoro/) propose un test sur sept jours plutôt qu'un classement de fonctions supplémentaire.
 
 ## Qu'est-ce que la technique Pomodoro ?
 
@@ -66,17 +68,17 @@ Les **Missions** vous donnent des objectifs spécifiques à atteindre (terminer 
 
 **Chat Gemini Nano** : votre slime peut avoir une courte conversation avec vous via Gemini Nano, fonctionnant entièrement sur l'appareil en 6 langues. Aucun appel d'API externe.
 
-**Gacha �thique**�: SlimeForge a un syst�me gacha, mais l'argent r�el n'ach�te jamais de rèsultats aléatoires. Si vous payez, vous obtenez ce pour quoi vous avez payé. Le hasard se gagne gr�ce � des séances de concentration et non � des achats.
+**Gacha éthique** : SlimeForge comprend un système gacha, mais l'argent réel n'achète jamais de résultat aléatoire. Si vous payez, vous recevez l'objet annoncé. Le hasard se gagne grâce aux séances de concentration, et non grâce à des achats.
 
 ## Comment commencer
 
 <ol>
-<li>Install SlimeForge from the Chrome Web Store and pin the icon to your toolbar.</li>
-<li>Click the SlimeForge icon to open the extension panel.</li>
-<li>Choose your session length — 25 minutes is a good default start.</li>
-<li>Click Start. Work until the timer ends without closing the tab.</li>
-<li>Take your break when prompted, then start the next session.</li>
-<li>After your first completed session, your slime hatches. Keep going to help it grow.</li>
+<li>Installez SlimeForge depuis le Chrome Web Store et épinglez son icône dans la barre d'outils.</li>
+<li>Cliquez sur l'icône SlimeForge pour ouvrir le panneau de l'extension.</li>
+<li>Choisissez la durée de la session ; 25 minutes constituent un bon point de départ.</li>
+<li>Lancez le minuteur et travaillez jusqu'à la fin de l'intervalle.</li>
+<li>Prenez la pause proposée, puis commencez la session suivante.</li>
+<li>Votre slime éclot après la première session terminée. Continuez pour le faire grandir.</li>
 </ol>
 
 L'essai PRO dure 5 jours et déverrouille l'ensemble des fonctionnalités. La version gratuite fonctionne comme une minuterie et vous donne les bases des animaux de compagnie.
@@ -102,7 +104,7 @@ Oui, via Gemini Nano exécuté sur votre appareil. La conversation est locale et
 Les Brasas 🔥 sont la monnaie d'extension que vous gagnez en complétant des séances de concentration. Ils sont utilisés pour fabriquer et faire pousser votre slime – ils ne peuvent pas être achetés avec de l'argent réel.
 
 **Le gacha en argent réel existe-t-il ?**
-SlimeForge a une mécanique gacha, mais l'argent r�el n'ach�te jamais de rèsultats aléatoires. Tout achat avec de l'argent r�el vous donne droit � un objet connu. Le hasard est réservé aux Brasas gagnès gr�ce à la concentration.
+SlimeForge comprend une mécanique gacha, mais l'argent réel n'achète jamais de résultat aléatoire. Tout achat en argent réel correspond à un objet connu. Le hasard est réservé aux Brasas gagnées grâce à la concentration.
 
 **Est-ce que mon slime mourra si j'arrête d'utiliser l'application ?**
 Non. Votre slime n'a pas de jauge de santé qui s'épuise : il cesse simplement de croître si vous arrêtez de terminer des sessions. Il sera toujours là à votre retour.

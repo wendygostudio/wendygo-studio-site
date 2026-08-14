@@ -141,12 +141,21 @@ Formato:
   measurement_date: 2026-08-26
   status: pending
   result: ""
+- id: 2
+  date: 2026-08-14
+  hypothesis: "Una comparación Forest vs Pomodoro con intención propia y enlaces recíprocos puede ampliar el cluster de foco sin canibalizar las guías existentes. El baseline observado es 337 impresiones/posición 23,2 para forest-app-alternatives-chrome y 59 impresiones/posición 23,5 para pomodoro-timer-chrome-extension."
+  action: "Publicadas localmente seis URLs de forest-app-vs-pomodoro-timer, con FAQ schema y enlaces localizados; añadidos enlaces recíprocos desde las guías Forest y Pomodoro en seis idiomas. Sin publicación externa."
+  expected: "Primeras impresiones para la URL nueva y mejora de impresiones o posición en al menos una de las dos páginas soporte, sin caída simultánea atribuible a canibalización."
+  measurement_date: 2026-09-11
+  status: pending
+  result: ""
 ```
 
 ---
 
 ## 3. Historial de ejecuciones recientes (rolling log)
 
+- **2026-08-14 (daily)**: GSC refrescado (2026-07-15→2026-08-11); creada la comparación Forest vs Pomodoro en seis idiomas y mejoradas las guías Forest, Pomodoro FR y carrusel LinkedIn ES. Validación 804 HTML/738 canónicas, 0 errores, tests 7/7. GA4/CWS/Plausible siguen bloqueados; detectada deuda de codificación en 32 fuentes. DEV.to y Bluesky solo lectura, sin publicación.
 - **2026-08-11 (resolución de bloqueos)**: retiradas y archivadas 28 fuentes localizadas duplicadas del 26-07; la deuda de traducción queda cerrada y la validación pasa con 790 URLs canónicas/792 HTML. Añadido `analytics:refresh` en Node; Search Console y GA4 devuelven `invalid_grant`, y PageSpeed público respondió 429.
 - **2026-08-11 (rendimiento)**: Lighthouse local de la home: 98 mobile (LCP 2,2 s, CLS 0, TBT 0 ms) y 100 desktop (LCP 0,7 s, CLS 0, TBT 0 ms); falta CrUX para sustituir la captura por datos reales de usuarios.
 

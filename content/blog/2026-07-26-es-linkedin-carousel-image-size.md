@@ -1,74 +1,87 @@
 ---
 schemaVersion: 1
-title: 'Tamaño de imagen del carrusel de LinkedIn: un flujo de trabajo local de Chrome'
-description: >-
-  Prepare imágenes consistentes del carrusel de LinkedIn localmente en Chrome,
-  sin cargar el material gráfico original en un editor en línea.
-date: 2026-07-26T00:00:00.000Z
+title: "Medidas del carrusel de LinkedIn: guía local"
+description: "Prepara un carrusel de LinkedIn con páginas consistentes, texto legible y un PDF final, sin subir las imágenes originales a un editor web."
+date: 2026-07-26
+updated: 2026-08-14
 slug: linkedin-carousel-image-size
 locale: es
 translationKey: linkedin-carousel-image-size
 product: frameforge
 contentType: tutorial
-primaryKeyword: tamaño de imagen del carrusel de linkedin
-relatedPages: '/frameforge/,/blog/batch-resize-images-chrome-extension/'
+primaryKeyword: "medidas carrusel LinkedIn"
+relatedPages: /es/frameforge/,/es/blog/batch-resize-images-chrome-extension/,/es/blog/resize-image-for-linkedin-post/
+faqs:
+  - question: "¿Qué medidas debe tener un carrusel de LinkedIn?"
+    answer: "LinkedIn no fija una única medida en píxeles para las publicaciones de documentos. Usa el mismo tamaño y proporción en todas las páginas; 1080 × 1080 y 1080 × 1350 son lienzos de trabajo habituales, no requisitos oficiales."
+  - question: "¿El carrusel de LinkedIn se sube como imágenes o como PDF?"
+    answer: "La ayuda oficial lo trata como una publicación de documento y recomienda convertir el archivo a PDF cuando sea posible."
+  - question: "¿Puedo preparar las diapositivas de forma local?"
+    answer: "Sí. Puedes recortar y exportar cada imagen con el mismo lienzo en FrameForge y montar después esas páginas en el documento final."
 ---
 
-Los carruseles de LinkedIn funcionan cuando se sienten como un solo documento: una página de inicio clara, una secuencia legible y una página de cierre que no parece apretada ni recortada. El problema práctico rara vez es la creatividad. Está preparando varias imágenes con un marco consistente y al mismo tiempo protege el arte original que puede incluir trabajo del cliente, capturas de pantalla o material interno del producto.
+Las medidas de un carrusel de LinkedIn no se reducen a un número obligatorio. En una publicación orgánica, LinkedIn muestra el carrusel como un **documento con varias páginas**. Lo importante es que todas compartan tamaño, proporción y márgenes, y que el texto siga siendo legible en el feed.
 
-> **Empiece con coherencia, no con una dimensión mágica.** Elija un lienzo para toda la secuencia, mantenga el texto importante alejado de los bordes y obtenga una vista previa de cada diapositiva en el tamaño que las personas realmente verán en el feed.
+> **Respuesta corta:** usa un lienzo cuadrado de **1080 × 1080 px** o uno vertical de **1080 × 1350 px** como decisión de diseño, mantén esa medida en todas las páginas y genera un PDF final. Esas cifras son lienzos prácticos, no requisitos oficiales de LinkedIn.
 
-## Construye la secuencia antes de cambiar el tamaño.
+## Requisitos oficiales y decisiones de diseño
 
-Primero escriba un breve resumen. Una secuencia útil suele tener de cinco a ocho páginas:
+La [ayuda oficial para compartir documentos en LinkedIn](https://www.linkedin.com/help/linkedin/answer/a518909/upload-and-share-documents-on-linkedin?lang=es) admite PDF, PPT, PPTX, DOC y DOCX, recomienda convertir el archivo a PDF y exige que las páginas de tamaños distintos se ajusten a un mismo tamaño. También indica un máximo de 100 MB y 300 páginas.
 
-| Slide | Job |
-|---|---|
-| 1 | State the problem or result clearly |
-| 2–6 | Explain one idea per page |
-| Final | Give a concise next step |
+| Elemento | Qué debes hacer |
+| --- | --- |
+| Formato final | Preferiblemente PDF |
+| Tamaño de página | El mismo en toda la secuencia |
+| Límite oficial | 100 MB y 300 páginas |
+| Lienzo cuadrado práctico | 1080 × 1080 px |
+| Lienzo vertical práctico | 1080 × 1350 px |
 
-Ese esquema evita un error común: cambiar el tamaño de un lote de capturas de pantalla no relacionadas e intentar que la historia funcione después. También te indica qué imágenes necesitan espacio para un título, una anotación o un detalle del producto.
+Los dos lienzos en píxeles son puntos de partida para preparar imágenes rasterizadas. LinkedIn no los presenta como una obligación. Si tu herramienta trabaja con páginas físicas o diapositivas, conserva una sola proporción desde la portada hasta el cierre.
 
-<div class="step-card">
-  <span class="step-label">Step 1</span>
-  <strong>Create a master canvas</strong>
-  <p>Use the same target dimensions for every slide. Keep a generous safe margin so text is not crowded when LinkedIn renders the preview on a smaller screen.</p>
-</div>
+## Elige la proporción antes de diseñar
 
-## Cambiar el tamaño de cada fuente sin perder el tema
-
-[FrameForge](/frameforge/) is useful when the source is already an image and you need to prepare a consistent raster export locally. Open one slide, choose the target canvas, then use the crop and fit controls deliberately. A portrait photo may need a crop that protects the face; a wide screenshot may need fit mode so labels remain visible.
-
-No utilice el modo estirado para diapositivas con mucho texto. Cambia la forma de las letras y hace que el carrusel parezca sin pulir. Si una fuente es demasiado pequeña, simplifique la diapositiva o utilice un original de mayor resolución en lugar de depender de una ampliación agresiva.
+Un carrusel cuadrado deja un sistema sencillo de reutilizar. El formato vertical ofrece más altura para titulares, capturas o diagramas, pero exige revisar con cuidado los márgenes y el tamaño de letra en una pantalla pequeña.
 
 <div class="key-points">
-  <h3>Quick pre-export check</h3>
-  <ul>
-    <li>The same canvas is used for every page.</li>
-    <li>Headlines and UI labels have breathing room from each edge.</li>
-    <li>Each crop keeps its actual subject, not just the middle of the file.</li>
-  </ul>
+<h3>Comprobación antes de crear las páginas</h3>
+<ul>
+<li>Elige una sola proporción para todo el documento.</li>
+<li>Reserva un margen estable alrededor de títulos y elementos de interfaz.</li>
+<li>Limita cada página a una idea principal.</li>
+<li>Decide el orden antes de invertir tiempo en recortes.</li>
+</ul>
 </div>
 
-## Mantenga el flujo de trabajo local y repetible
+## Prepara las imágenes localmente con FrameForge
 
-Para un carrusel con varias capturas de pantalla, revise los archivos uno a la vez y nombre las exportaciones en secuencia: `01-cover`, `02-problem`, `03-workflow`. Esto mantiene el orden de carga obvio y hace que la corrección sea económica. Si el carrusel proviene de una demostración de producto, compárelo con un [flujo de trabajo de cambio de tamaño de imágenes por lotes en Chrome](/blog/batch-resize-images-chrome-extension/) para que pueda decidir si el posicionamiento individual o un patrón de exportación repetido es más importante.
+[FrameForge](/es/frameforge/) sirve para preparar las imágenes de cada página sin subir los archivos originales a un editor web. Es útil cuando el carrusel contiene capturas de un producto, materiales internos o trabajo de un cliente.
 
-La [guía de imágenes de publicaciones de LinkedIn] anterior (/blog/resize-image-for-linkedin-post/) sigue siendo útil para gráficos de feeds únicos. Un carrusel necesita la misma disciplina, pero en todas las páginas: proporciones consistentes, márgenes legibles y sin distorsiones accidentales.
+<ol class="steps">
+<li><strong>Crea el lienzo maestro.</strong> Elige 1080 × 1080 o 1080 × 1350 y no cambies de proporción a mitad de la secuencia.</li>
+<li><strong>Recorta cada fuente.</strong> Protege el sujeto de una foto y usa ajuste, no estiramiento, para capturas con texto.</li>
+<li><strong>Mantén márgenes constantes.</strong> Coloca titulares, números de página y llamadas finales dentro de la misma zona segura.</li>
+<li><strong>Exporta en orden.</strong> Usa nombres como <code>01-portada</code>, <code>02-problema</code> y <code>03-proceso</code>.</li>
+<li><strong>Monta el documento.</strong> Inserta las páginas en una herramienta que genere PDF y comprueba que todas conserven el mismo tamaño.</li>
+</ol>
 
-Antes de publicar, vea los archivos exportados en la pantalla de una computadora portátil normal y en un teléfono. Si no puede leer un encabezado sin hacer zoom, reduzca la copia o amplíela. El propósito de un carrusel es hacer que una idea sea más fácil de escanear, no comprimir una publicación de blog en imágenes.
+Si tienes muchas imágenes con el mismo tratamiento, compara este proceso con el [flujo de redimensionado por lotes en Chrome](/es/blog/batch-resize-images-chrome-extension/). El lote ahorra tiempo cuando el encuadre puede repetirse; el ajuste individual sigue siendo mejor cuando cada captura tiene un punto de interés distinto.
+
+## No confundas una imagen de LinkedIn con un carrusel
+
+Una publicación con una sola imagen y una publicación de documento no son el mismo formato. La [guía para redimensionar una imagen de LinkedIn](/es/blog/resize-image-for-linkedin-post/) ayuda con gráficos individuales. Para un carrusel necesitas además continuidad entre páginas, un orden claro y un PDF coherente.
+
+Antes de publicar, abre el PDF en un teléfono y en un portátil. Si un título requiere zoom, reduce el texto o aumenta su tamaño. Si una captura no se entiende sin contexto, añade una anotación breve en lugar de encoger una explicación completa dentro de la página.
 
 ## Preguntas frecuentes
 
-### ¿Qué tamaño deberían utilizar las imágenes del carrusel de LinkedIn?
+### ¿Qué medidas debe tener un carrusel de LinkedIn?
 
-Utilice un lienzo coherente en toda la secuencia y confirme la guía de carga actual de LinkedIn antes de publicar. La coherencia y la legibilidad son más importantes que perseguir un solo número.
+LinkedIn no fija una única medida en píxeles para las publicaciones de documentos. Usa el mismo tamaño en todas las páginas. Como lienzos de trabajo, 1080 × 1080 y 1080 × 1350 son opciones prácticas, no requisitos oficiales.
 
-### ¿Puedo cambiar el tamaño de las ilustraciones del carrusel localmente?
+### ¿El carrusel se sube como imágenes o como PDF?
 
-Sí. FrameForge prepara imágenes rasterizadas en el navegador, para que pueda tomar decisiones de exportación local sin cargar el material gráfico original en un editor en línea.
+LinkedIn lo trata como una publicación de documento y recomienda PDF cuando sea posible. Prepara las imágenes, ordénalas y genera el documento antes de subirlo.
 
-### ¿Todas las diapositivas de carrusel deberían utilizar el mismo recorte?
+### ¿Puedo preparar las diapositivas de forma local?
 
-Mantenga el lienzo consistente, pero coloque cada recorte según su propio tema. Un marco uniforme no requiere una ubicación idéntica del cultivo.
+Sí. FrameForge puede recortar y exportar cada imagen localmente. Después necesitas una herramienta que reúna las páginas en el PDF final.

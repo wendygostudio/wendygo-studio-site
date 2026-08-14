@@ -30,6 +30,7 @@
 
 ## Editorial sources
 - Cite the original article URL when summarizing a guide; keep product claims aligned with the product landing page.
+- Forest App vs Pomodoro Timer: Which Focus Loop Fits?: https://wendygostudio.com/blog/forest-app-vs-pomodoro-timer/ — Compare Forest's visual commitment loop with a Pomodoro timer's work-break cadence, then run a seven-day test to choose without guesswork.
 - Focus Block vs Pomodoro Timer: Which Unit Fits Deep Work?: https://wendygostudio.com/blog/focus-block-vs-pomodoro-timer/ — A focus block measures the work while a Pomodoro timer measures attention. Learn when each unit helps and how SlimeForge combines both locally.
 - Convert WebP to JPG Locally in Chrome: https://wendygostudio.com/blog/convert-webp-to-jpg-locally-chrome/ — Convert a WebP image to JPG in Chrome without uploading the file, using a local ConvertForge workflow for quality and size control.
 - Convert a Markdown Table to Plain Text in Chrome: https://wendygostudio.com/blog/convert-markdown-table-plain-text-chrome/ — Turn copied Markdown tables into readable plain text in Chrome with a local TextForge workflow for cleanup, line joins and quick export.
@@ -53,7 +54,6 @@
 - What the SonicWall Breach Teaches About Sharing Configs: https://wendygostudio.com/blog/what-the-sonicwall-backup-breach-teaches-about-config-sharing/ — SonicWall's own cloud backups leaked config data for every customer who used them. If a vendor backup isn't safe, neither is a support-ticket paste.
 - The EU's ODR Platform Is Gone: What to Use Instead: https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/ — The EU Online Dispute Resolution platform closed for good in 2025. Here's what replaced it, and where to actually file a cross-border consumer complaint now.
 - Sanitize a MikroTik RouterOS Config Before You Share It: https://wendygostudio.com/blog/sanitize-mikrotik-router-config/ — MikroTik hides passwords in RouterOS exports by default. Topology, comments and server addresses still leak. Here's what to check before sharing.
-- What to Do During a Pomodoro Break: 12 Ideas: https://wendygostudio.com/blog/what-to-do-during-pomodoro-break/ — Use your Pomodoro break to reset without losing focus. Try 12 short break ideas and return to work on time.
 
 ## Retrieval map
 

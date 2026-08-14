@@ -14,7 +14,7 @@ contentType: how-to
 primaryKeyword: >-
   La mejor extensión de Chrome con temporizador Pomodoro en 2026: con una
   mascota virtual
-relatedPages: /es/slimeforge/
+relatedPages: /es/slimeforge/,/es/blog/forest-vs-temporizador-pomodoro/
 ---
 
 La mayoría de los temporizadores Pomodoro fallan de la misma manera: configuras 25 minutos, suena la alarma, cierras la pestaña y a la mañana siguiente te olvidas de que existe la extensión. SlimeForge soluciona este problema con una mascota limo virtual que vive dentro de tu navegador y crece sólo cuando te concentras.
@@ -22,6 +22,8 @@ La mayoría de los temporizadores Pomodoro fallan de la misma manera: configuras
 Si su principal interrupción es un sitio web predecible en lugar del cronómetro en sí, combine la rutina con la nueva [guía Pomodoro Focus Shield](/blog/pomodoro-focus-shield-chrome/). Explica cómo mantener disponibles las pestañas de investigación esenciales y al mismo tiempo reducir los sitios que lo alejan repetidamente.
 
 Para los lectores que ya tienen un cronómetro pero tienen dificultades con el primer minuto, la [guía de ritual de enfoque](/blog/focus-rituals-pomodoro-chrome/) agrega un resultado concreto y una primera acción antes de que comience el cronómetro. Ese es el cambio más pequeño que hace que este flujo de trabajo sea más fácil de repetir.
+
+Si estás decidiendo entre el compromiso de hacer crecer un árbol y una rutina basada en intervalos, la comparación [Forest frente a temporizador Pomodoro](/es/blog/forest-vs-temporizador-pomodoro/) propone una prueba de siete días en lugar de otra clasificación de funciones.
 
 ## ¿Qué es la técnica Pomodoro?
 

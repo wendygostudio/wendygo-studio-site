@@ -16,7 +16,7 @@ contentType: how-to
 primaryKeyword: >-
   Beste Pomodoro-Timer-Chrom-Erweiterung im Jahr 2026 – mit einem virtuellen
   Haustier
-relatedPages: /de/slimeforge/
+relatedPages: /de/slimeforge/,/de/blog/forest-vs-pomodoro-timer/
 ---
 
 Die meisten Pomodoro-Timer scheitern auf die gleiche Weise: Sie stellen 25 Minuten ein, der Wecker klingelt, Sie schließen die Lasche und am nächsten Morgen haben Sie vergessen, dass die Verlängerung existiert. SlimeForge behebt dieses Problem mit einem virtuellen Schleimhaustier, das in Ihrem Browser lebt und nur wächst, wenn Sie sich konzentrieren.
@@ -24,6 +24,8 @@ Die meisten Pomodoro-Timer scheitern auf die gleiche Weise: Sie stellen 25 Minut
 Wenn Ihre Hauptunterbrechung eine vorhersehbare Website und nicht der Timer selbst ist, kombinieren Sie die Routine mit dem neuen [Pomodoro Focus Shield-Leitfaden](/blog/pomodoro-focus-shield-chrome/). Es erklärt, wie Sie wichtige Rechercheregister verfügbar halten und gleichzeitig die Websites reduzieren, die Sie immer wieder abschrecken.
 
 Für Leser, die bereits einen Timer haben, aber mit der ersten Minute zu kämpfen haben, fügt der [Fokus-Ritual-Leitfaden](/blog/focus-rituals-pomodoro-chrome/) ein konkretes Ergebnis und eine erste Aktion hinzu, bevor die Uhr startet. Das ist die kleinste Änderung, die die Wiederholung dieses Arbeitsablaufs erleichtert.
+
+Wenn du zwischen einer baumbasierten Bindung und einem Intervall-Rhythmus entscheidest, bietet der Vergleich [Forest vs. Pomodoro-Timer](/de/blog/forest-vs-pomodoro-timer/) einen Sieben-Tage-Test statt einer weiteren Funktionsrangliste.
 
 ## Was ist die Pomodoro-Technik?
 

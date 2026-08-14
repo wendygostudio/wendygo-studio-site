@@ -9,7 +9,7 @@ translationKey: pomodoro-timer-chrome-extension
 product: slimeforge
 contentType: how-to
 primaryKeyword: "best pomodoro timer chrome extension in 2026 — with a virtual pet"
-relatedPages: /slimeforge/
+relatedPages: /slimeforge/,/blog/forest-app-vs-pomodoro-timer/
 ---
 
 Most Pomodoro timers fail you the same way: you set 25 minutes, the alarm rings, you close the tab, and by the next morning you've forgotten the extension exists. SlimeForge fixes this with a virtual slime pet that lives inside your browser and grows only when you focus.
@@ -17,6 +17,8 @@ Most Pomodoro timers fail you the same way: you set 25 minutes, the alarm rings,
 If your main interruption is a predictable website rather than the timer itself, pair the routine with the new [Pomodoro Focus Shield guide](/blog/pomodoro-focus-shield-chrome/). It explains how to keep essential research tabs available while reducing the sites that repeatedly pull you away.
 
 For readers who already have a timer but struggle with the first minute, the [focus ritual guide](/blog/focus-rituals-pomodoro-chrome/) adds a concrete outcome and first action before the clock starts. That is the smallest change that makes this workflow easier to repeat.
+
+If you are deciding between a tree-growing commitment and an interval-first routine, the [Forest app vs Pomodoro timer comparison](/blog/forest-app-vs-pomodoro-timer/) includes a seven-day test instead of another feature ranking.
 
 ## What Is the Pomodoro Technique?
 
