@@ -111,4 +111,4 @@ La subida no es permanente y debe revisarse en el Weekly.
 - [ ] Validación técnica ejecutada.
 - [ ] DEV.to y Bluesky revisados.
 - [ ] Journal actualizado con resultados y bloqueos.
-- [ ] Commit/push solo si el usuario lo solicita.
+- [ ] Si las validaciones pasan, commit/push automático de los cambios propios del Daily; excluir ajenos, temporales y secretos, y registrar el hash.

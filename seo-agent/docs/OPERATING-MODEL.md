@@ -20,8 +20,9 @@ Presupuesto máximo: **120.000 tokens**. Se consume de forma adaptativa y puede 
 5. Publicar **un artículo nuevo** localizado en los seis idiomas, con fuente inglesa estructurada, enlaces internos recíprocos, schema y sitemap.
 6. Mejorar entre una y tres piezas existentes con evidencia. No reescribir por gusto.
 7. Revisar consistencia de las seis traducciones y eliminar textos corruptos o asociaciones de producto incorrectas.
-8. Preparar o publicar como máximo una adaptación en DEV.to y una interacción prudente en Bluesky; nunca duplicar contenido ni automatizar spam. Si no hay credencial o no aporta valor, dejarlo documentado.
+8. Preparar o publicar como máximo una adaptación útil y no duplicada en DEV.to y una interacción o publicación prudente en Bluesky; nunca automatizar spam. Con credenciales válidas, la autorización del Daily permite publicar o interactuar dentro de esos límites; si no aporta valor, dejarlo documentado.
 9. Ejecutar validaciones, escribir journal y resumir cambios, métricas, bloqueos y siguiente experimento.
+10. Si las validaciones pasan, hacer automáticamente commit y push de los cambios propios de esta ejecución a `origin/main`. Excluir archivos ajenos, índices temporales, secretos y cambios preexistentes no relacionados; registrar el hash y el resultado en el journal.
 
 ### Weekly — optimización de sistema
 
@@ -38,7 +39,7 @@ Presupuesto máximo: **240.000 tokens**. Auditoría completa de 28–90 días: i
 - No crear URLs localizadas heredadas con hreflang incorrecto.
 - Verificar una sola etiqueta `h1`, canonical, alternates, JSON-LD, enlaces internos y sitemap.
 - Mantener privacidad: procesamiento local por defecto y medición técnica mínima.
-- No hacer commit ni push sin petición explícita del usuario.
+- El Daily tiene autorización explícita para commit y push automáticos después de validaciones correctas, limitada a sus propios cambios y con hash registrado en el journal.
 
 ## Artefactos
 
