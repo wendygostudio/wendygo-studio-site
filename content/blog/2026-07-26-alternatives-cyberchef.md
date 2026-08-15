@@ -9,7 +9,7 @@ translationKey: cyberchef-alternatives
 product: textforge
 contentType: alternatives
 primaryKeyword: "alternatives à CyberChef"
-relatedPages: /textforge/
+relatedPages: /fr/textforge/,/fr/blog/cyberchef-vs-textforge/
 ---
 
 CyberChef est l'outil open source de GCHQ pour l'encodage, le décodage, le chiffrement, la compression et de nombreuses transformations. Pour un CTF, l'analyse d'un payload ou l'AES, il est excellent.
@@ -29,3 +29,5 @@ regex101 convient mieux lorsque vous devez voir les groupes, correspondances et 
 ## Quand garder CyberChef
 
 TextForge ne remplace pas le chiffrement, le hachage, l'analyse de fichiers binaires, la stéganographie ni le décodage de protocoles. Pour ces besoins, CyberChef reste le bon choix, y compris en auto-hébergement. Pour les manipulations de texte quotidiennes, un outil ciblé est généralement plus rapide.
+
+Pour choisir entre un atelier de recettes complet et une extension ciblée, comparez [CyberChef et TextForge](/fr/blog/cyberchef-vs-textforge/).

@@ -9,7 +9,7 @@ translationKey: cyberchef-alternatives
 product: textforge
 contentType: alternatives
 primaryKeyword: "alternativas a CyberChef"
-relatedPages: /textforge/
+relatedPages: /es/textforge/,/es/blog/cyberchef-vs-textforge/
 ---
 
 ## Alternativas a CyberChef para tareas de texto diarias
@@ -81,3 +81,5 @@ Sí. Un editor con búsqueda regex o un flujo guardado puede cubrir sustitucione
 ### ¿Es seguro pegar una contraseña en CyberChef?
 
 El procesamiento local reduce la exposición, pero la práctica más segura es no pegar secretos reales. Usa valores ficticios o sanitiza antes de experimentar.
+
+Si dudas entre una bancada amplia y una extensión enfocada, compara los flujos en [CyberChef frente a TextForge](/es/blog/cyberchef-vs-textforge/).

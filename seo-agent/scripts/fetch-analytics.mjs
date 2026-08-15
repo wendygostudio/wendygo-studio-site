@@ -64,20 +64,28 @@ async function gsc(token) {
   const site = env.GSC_SITE_URL;
   if (!site) throw new Error('GSC_SITE_URL is not configured');
   const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/searchAnalytics/query`;
-  const query = async dimensions => {
+  const query = async (dimensions, rowLimit = 50) => {
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ startDate: iso(start), endDate: iso(end), dimensions, rowLimit: 50, dataState: 'final' }),
+      body: JSON.stringify({ startDate: iso(start), endDate: iso(end), dimensions, rowLimit, dataState: 'final' }),
     });
     const payload = await response.json();
     if (!response.ok) throw new Error(`GSC query failed (${response.status}): ${payload.error?.message || 'unknown error'}`);
-    return (payload.rows || []).map(row => ({
-      [dimensions[0]]: row.keys[0], clicks: row.clicks, impressions: row.impressions,
-      ctr: Math.round(row.ctr * 10000) / 100, position: Math.round(row.position * 10) / 10,
-    }));
+    return (payload.rows || []).map(row => Object.fromEntries([
+      ...dimensions.map((dimension, index) => [dimension, row.keys[index]]),
+      ['clicks', row.clicks],
+      ['impressions', row.impressions],
+      ['ctr', Math.round(row.ctr * 10000) / 100],
+      ['position', Math.round(row.position * 10) / 10],
+    ]));
   };
-  return { period: { start: iso(start), end: iso(end) }, queries: await query(['query']), pages: await query(['page']) };
+  return {
+    period: { start: iso(start), end: iso(end) },
+    queries: await query(['query']),
+    pages: await query(['page']),
+    query_pages: await query(['query', 'page'], 250),
+  };
 }
 
 async function ga4(token) {
