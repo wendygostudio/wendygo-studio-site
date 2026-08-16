@@ -14,10 +14,10 @@ contentType: how-to
 primaryKeyword: >-
   cómo cambiar el tamaño de la imagen de perfil de tiktok: obtén el cuadrado
   perfecto en segundos
-relatedPages: /es/frameforge/
+relatedPages: /es/frameforge/,/es/blog/tiktok-profile-picture-safe-area/
 ---# Cómo cambiar el tamaño de la imagen de perfil de TikTok: obtenga el cuadrado perfecto en segundos
 
-Una imagen de perfil de TikTok debe ser un cuadrado perfecto: 400×400 píxeles, idealmente al menos 512×512 para claridad HD. Si su imagen es rectangular o tiene las dimensiones incorrectas, TikTok la recortará automáticamente, cortando partes importantes de su cara o logotipo.
+La imagen de perfil de TikTok se muestra dentro de un marco circular, por lo que exportarla en formato cuadrado permite controlar mejor el recorte. Considera 400×400 o 512×512 como objetivos prácticos, no como un mínimo oficial: la [guía de soporte actual de TikTok](https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video) indica que las fotos subidas deben tener al menos 20×20 píxeles y que se pueden recortar en la aplicación. Si tu imagen es rectangular o el sujeto está cerca de un borde, el recorte puede cortar partes importantes de tu cara o logotipo.
 
 Esta guía le muestra cómo cambiar el tamaño de cualquier imagen a las dimensiones exactas de la imagen de perfil de TikTok en una pestaña del navegador, sin cargar nada.
 
@@ -25,10 +25,9 @@ Esta guía le muestra cómo cambiar el tamaño de cualquier imagen a las dimensi
 
 TikTok muestra tu foto de perfil como un círculo, pero el archivo en sí es un cuadrado:
 
-- **Tamaño recomendado:** 512×512 píxeles (calidad HD)
-- **Tamaño mínimo:** 400×400 píxeles
+- **Objetivo práctico de exportación:** 512×512 píxeles para un cuadrado nítido
+- **Mínimo oficial de carga:** 20×20 píxeles, según la página de soporte de TikTok
 - **Formato:** JPG, PNG o WebP
-- **Límite de tamaño de archivo:** Generalmente menos de 10 MB
 
 Si subes una imagen rectangular, TikTok la recorta para que se ajuste al cuadrado. Si subes una imagen de baja resolución, se estira y se ve borrosa en el móvil.
 
@@ -83,5 +82,6 @@ FrameForge mantiene sus imágenes locales: no se carga ni almacena nada. Tu foto
 **[Instalar FrameForge — Gratis](https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj)**
 
 Ver también:
+- [Zona segura de la foto de perfil de TikTok: mantén visibles las caras y los logotipos](https://wendygostudio.com/es/blog/tiktok-profile-picture-safe-area/)
 - [How to Resize Images for Instagram Posts (1080×1080)](https://wendygostudio.com/blog/resize-image-for-instagram-chrome/)
 - [FrameForge vs Canva for Quick Thumbnails](https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/)

@@ -14,10 +14,10 @@ contentType: how-to
 primaryKeyword: >-
   come ridimensionare l'immagine per l'immagine del profilo tiktok: ottieni il
   quadrato perfetto in pochi secondi
-relatedPages: /it/frameforge/
+relatedPages: /it/frameforge/,/it/blog/tiktok-profile-picture-safe-area/
 ---# Come ridimensionare l'immagine per l'immagine del profilo TikTok: ottieni il quadrato perfetto in pochi secondi
 
-Un’immagine del profilo TikTok deve essere un quadrato perfetto: 400×400 pixel, idealmente almeno 512×512 per la chiarezza HD. Se la tua immagine è rettangolare o ha dimensioni sbagliate, TikTok la ritaglierà automaticamente, tagliando parti importanti del tuo viso o del tuo logo.
+L’immagine del profilo TikTok viene mostrata dentro una cornice circolare, quindi un’esportazione quadrata rende il ritaglio più prevedibile. Considera 400×400 o 512×512 come obiettivi pratici, non come un minimo ufficiale: l’[attuale guida del supporto TikTok](https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video) indica che le foto caricate devono essere di almeno 20×20 pixel e possono essere ritagliate nell’app. Se l’immagine è rettangolare o il soggetto è vicino a un bordo, il ritaglio può comunque tagliare parti importanti del viso o del logo.
 
 Questa guida ti mostra come ridimensionare qualsiasi immagine alle dimensioni esatte dell'immagine del profilo di TikTok in una scheda del browser, senza caricare nulla.
 
@@ -25,10 +25,9 @@ Questa guida ti mostra come ridimensionare qualsiasi immagine alle dimensioni es
 
 TikTok mostra la tua immagine del profilo come un cerchio, ma il file stesso è un quadrato:
 
-- **Dimensione consigliata:** 512×512 pixel (qualità HD)
-- **Dimensione minima:** 400×400 pixel
+- **Obiettivo pratico di esportazione:** 512×512 pixel per un quadrato nitido
+- **Minimo ufficiale per il caricamento:** 20×20 pixel, secondo la pagina di supporto TikTok
 - **Formato:** JPG, PNG o WebP
-- **Limite dimensione file:** Solitamente inferiore a 10 MB
 
 Se carichi un'immagine rettangolare, TikTok la ritaglia per adattarla al quadrato. Se carichi un'immagine a bassa risoluzione, questa verrà allungata e apparirà sfocata sui dispositivi mobili.
 
@@ -83,5 +82,6 @@ FrameForge mantiene le tue immagini locali: nulla viene caricato o archiviato. L
 **[Installa FrameForge — Gratuito](https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj)**
 
 Vedi anche:
+- [Area sicura dell’immagine del profilo TikTok: mantieni visibili volti e loghi](https://wendygostudio.com/it/blog/tiktok-profile-picture-safe-area/)
 - [How to Resize Images for Instagram Posts (1080×1080)](https://wendygostudio.com/blog/resize-image-for-instagram-chrome/)
 - [FrameForge vs Canva for Quick Thumbnails](https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/)

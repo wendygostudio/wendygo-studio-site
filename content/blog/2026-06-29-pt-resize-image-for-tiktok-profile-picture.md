@@ -14,10 +14,10 @@ contentType: how-to
 primaryKeyword: >-
   como redimensionar a imagem para a foto de perfil do tiktok: obter o quadrado
   perfeito em segundos
-relatedPages: /pt/frameforge/
+relatedPages: /pt/frameforge/,/pt/blog/tiktok-profile-picture-safe-area/
 ---# Como redimensionar a imagem de perfil do TikTok: obtenha o quadrado perfeito em segundos
 
-Uma imagem de perfil do TikTok precisa de ser um quadrado perfeito – 400×400 pixels, de preferência pelo menos 512×512 para uma clareza HD. Se a sua imagem for retangular ou tiver dimensões erradas, o TikTok irá cortá-la automaticamente, cortando partes importantes do seu rosto ou logótipo.
+A imagem de perfil do TikTok é apresentada dentro de uma moldura circular, por isso uma exportação quadrada torna o corte mais previsível. Considere 400×400 ou 512×512 como objetivos práticos, não como um mínimo oficial: a [orientação atual do suporte do TikTok](https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video) indica que as fotografias carregadas devem ter pelo menos 20×20 píxeis e podem ser cortadas na aplicação. Se a imagem for retangular ou o motivo estiver junto a uma margem, o corte pode ainda eliminar partes importantes do rosto ou do logótipo.
 
 Este guia mostra como redimensionar qualquer imagem para as dimensões exatas da imagem de perfil do TikTok num separador do browser, sem carregar nada.
 
@@ -25,10 +25,9 @@ Este guia mostra como redimensionar qualquer imagem para as dimensões exatas da
 
 O TikTok exibe a fotografia do seu perfil como um círculo, mas o ficheiro em si é um quadrado:
 
-- **Tamanho recomendado:** 512×512 pixéis (qualidade HD)
-- **Tamanho mínimo:** 400×400 pixéis
+- **Objetivo prático de exportação:** 512×512 pixéis para um quadrado nítido
+- **Mínimo oficial de carregamento:** 20×20 pixéis, segundo a página de suporte do TikTok
 - **Formato:** JPG, PNG ou WebP
-- **Limite do tamanho do ficheiro:** Geralmente inferior a 10 MB
 
 Se enviar uma imagem retangular, o TikTok irá cortá-la para caber no quadrado. Se enviar uma imagem de baixa resolução, esta ficará esticada e ficará desfocada no telemóvel.
 
@@ -83,5 +82,6 @@ O FrameForge mantém as suas imagens locais – nada é carregado ou armazenado.
 **[Instalar o FrameForge — Gratuito](https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj)**
 
 Veja também:
+- [Área segura da imagem de perfil do TikTok: mantenha rostos e logótipos visíveis](https://wendygostudio.com/pt/blog/tiktok-profile-picture-safe-area/)
 - [How to Resize Images for Instagram Posts (1080×1080)](https://wendygostudio.com/blog/resize-image-for-instagram-chrome/)
 - [FrameForge vs Canva for Quick Thumbnails](https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/)

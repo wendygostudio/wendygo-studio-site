@@ -9,10 +9,10 @@ translationKey: resize-image-for-tiktok-profile-picture
 product: frameforge
 contentType: how-to
 primaryKeyword: "comment redimensionner l'image pour la photo de profil tiktok\_: obtenez le carré parfait en quelques secondes"
-relatedPages: /fr/frameforge/
----# Comment redimensionner l'image de la photo de profil TikTok : obtenez le carré parfait en quelques secondes
+relatedPages: /fr/frameforge/,/fr/blog/tiktok-profile-picture-safe-area/
+---# Comment redimensionner l'image de la photo de profil TikTok : obtenez le carré parfait en quelques secondes
 
-Une photo de profil TikTok doit être un carré parfait : 400 × 400 pixels, idéalement au moins 512 × 512 pour une clarté HD. Si votre image est rectangulaire ou de mauvaises dimensions, TikTok la recadrera automatiquement, coupant des parties importantes de votre visage ou de votre logo.
+La photo de profil TikTok s'affiche dans un cadre circulaire : un export carré rend donc le recadrage plus prévisible. Considérez 400 × 400 ou 512 × 512 comme des formats de travail pratiques, et non comme un minimum officiel : la [documentation actuelle de l'assistance TikTok](https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video) indique que les photos importées doivent mesurer au moins 20 × 20 pixels et peuvent être recadrées dans l'application. Si votre image est rectangulaire ou si le sujet est proche d'un bord, le recadrage peut tout de même couper une partie importante de votre visage ou de votre logo.
 
 Ce guide vous montre comment redimensionner n'importe quelle image aux dimensions exactes de la photo de profil de TikTok dans un seul onglet de navigateur, sans rien télécharger.
 
@@ -20,10 +20,9 @@ Ce guide vous montre comment redimensionner n'importe quelle image aux dimension
 
 TikTok affiche votre photo de profil sous forme de cercle, mais le fichier lui-même est un carré :
 
-- **Taille recommandée :** 512 × 512 pixels (qualité HD)
-- **Taille minimale :** 400×400 pixels
-- **Format :** JPG, PNG ou WebP
-- **Limite de taille de fichier :** Généralement inférieure à 10 Mo
+- **Format d'export pratique :** 512 × 512 pixels pour un carré net
+- **Minimum officiel à l'importation :** 20 × 20 pixels, selon l'assistance TikTok
+- **Format :** JPG, PNG ou WebP
 
 Si vous téléchargez une image rectangulaire, TikTok la recadre pour l'adapter au carré. Si vous téléchargez une image basse résolution, elle s’étire et semble floue sur mobile.
 
@@ -78,5 +77,6 @@ FrameForge conserve vos images locales : rien n'est téléchargé ou stocké. Vo
 **[Installer FrameForge — Gratuit](https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj)**
 
 Voir aussi :
+- [Zone sûre d'une photo de profil TikTok : garder les visages et les logos visibles](https://wendygostudio.com/fr/blog/tiktok-profile-picture-safe-area/)
 - [How to Resize Images for Instagram Posts (1080×1080)](https://wendygostudio.com/blog/resize-image-for-instagram-chrome/)
 - [FrameForge vs Canva for Quick Thumbnails](https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/)

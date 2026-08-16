@@ -9,10 +9,10 @@ translationKey: resize-image-for-tiktok-profile-picture
 product: frameforge
 contentType: how-to
 primaryKeyword: "how to resize image for tiktok profile picture: get the perfect square in seconds"
-relatedPages: /frameforge/
+relatedPages: /frameforge/,/blog/tiktok-profile-picture-safe-area/
 ---# How to Resize Image for TikTok Profile Picture: Get the Perfect Square in Seconds
 
-A TikTok profile picture needs to be a perfect square—400×400 pixels, ideally at least 512×512 for HD clarity. If your image is rectangular or the wrong dimensions, TikTok will crop it automatically, cutting off important parts of your face or logo.
+A TikTok profile picture is shown inside a circular frame, so a square export gives you a predictable crop. Treat 400×400 or 512×512 as practical working targets rather than an official minimum: TikTok's current [support guidance](https://support.tiktok.com/en/getting-started/setting-up-your-profile/adding-a-profile-photo-or-video) says uploaded photos must be at least 20×20 pixels and can be cropped in the app. If your image is rectangular or the subject sits near an edge, the crop can still cut off important parts of your face or logo.
 
 This guide shows you how to resize any image to TikTok's exact profile picture dimensions in one browser tab, without uploading anything.
 
@@ -20,10 +20,9 @@ This guide shows you how to resize any image to TikTok's exact profile picture d
 
 TikTok displays your profile picture as a circle, but the file itself is a square:
 
-- **Recommended size:** 512×512 pixels (HD quality)
-- **Minimum size:** 400×400 pixels
+- **Practical export target:** 512×512 pixels for a crisp square
+- **Official upload minimum:** 20×20 pixels, according to TikTok's support page
 - **Format:** JPG, PNG, or WebP
-- **File size limit:** Usually under 10 MB
 
 If you upload a rectangular image, TikTok crops it to fit the square. If you upload a low-resolution image, it gets stretched and looks blurry on mobile.
 
@@ -78,5 +77,6 @@ FrameForge keeps your images local—nothing is uploaded or stored. Your profile
 **[Install FrameForge — Free](https://chromewebstore.google.com/detail/abdmadomfnijoiklnaklmplifmljgchj)**
 
 See also:
+- [TikTok Profile Picture Safe Area: Keep Faces and Logos Visible](https://wendygostudio.com/blog/tiktok-profile-picture-safe-area/)
 - [How to Resize Images for Instagram Posts (1080×1080)](https://wendygostudio.com/blog/resize-image-for-instagram-chrome/)
 - [FrameForge vs Canva for Quick Thumbnails](https://wendygostudio.com/blog/frameforge-vs-canva-thumbnails/)
