@@ -9,7 +9,7 @@ translationKey: eu-warranty-rights-explained
 product: claimforge
 contentType: workflow
 primaryKeyword: "garantia legal UE dois anos"
-relatedPages: /claimforge/
+relatedPages: /pt/claimforge/,/pt/blog/garantia-legal-ue-vs-garantia-comercial/
 jurisdiction: União Europeia; a legislação nacional pode acrescentar ou especificar regras
 reviewedAt: 2026-07-26
 reviewDue: 2026-10-26
@@ -20,4 +20,4 @@ Para bens comprados a um profissional na União Europeia, aplica-se em princípi
 
 Guarde fatura, confirmação da encomenda, fotografias e comunicações. Descreva o defeito de forma factual e peça uma solução ao vendedor por escrito. Reparação ou substituição são frequentemente os primeiros remédios; redução do preço ou reembolso dependem do caso.
 
-Este texto é informação geral sobre direitos do consumidor, não aconselhamento jurídico individual. Confirme as regras do seu país e, em litígios transfronteiriços, consulte as entidades europeias oficiais de apoio ao consumidor.
+Este texto é informação geral sobre direitos do consumidor, não aconselhamento jurídico individual. Se o vendedor mencionar uma garantia do fabricante, consulta a [comparação entre garantia legal e garantia comercial](/pt/blog/garantia-legal-ue-vs-garantia-comercial/). Confirma as regras do teu país e, em litígios transfronteiriços, consulta as entidades europeias oficiais de apoio ao consumidor.

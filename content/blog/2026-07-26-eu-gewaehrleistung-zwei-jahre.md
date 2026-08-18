@@ -9,7 +9,7 @@ translationKey: eu-warranty-rights-explained
 product: claimforge
 contentType: workflow
 primaryKeyword: "EU Gewährleistung zwei Jahre"
-relatedPages: /claimforge/
+relatedPages: /de/claimforge/,/de/blog/eu-gewaehrleistung-vs-herstellergarantie/
 jurisdiction: Europäische Union; nationales Recht kann zusätzliche oder abweichende Regeln vorsehen
 reviewedAt: 2026-07-26
 reviewDue: 2026-10-26
@@ -20,4 +20,4 @@ Beim Kauf von Waren bei einem gewerblichen Verkäufer in der EU gilt grundsätzl
 
 Sammle Rechnung, Bestellbestätigung, Fotos und die bisherige Kommunikation. Beschreibe den Mangel sachlich und fordere den Verkäufer schriftlich zu einer Lösung auf. Reparatur oder Ersatz stehen häufig am Anfang; eine Preisminderung oder Rückzahlung kommt je nach Fall später in Betracht.
 
-Diese Übersicht ist allgemeine Verbraucherinformation, keine individuelle Rechtsberatung. Prüfe die Regeln deines Landes und nutze bei grenzüberschreitenden Problemen die offiziellen europäischen Verbraucherberatungsstellen.
+Diese Übersicht ist allgemeine Verbraucherinformation, keine individuelle Rechtsberatung. Wenn ein Verkäufer auf eine Herstellergarantie verweist, hilft dir der [Vergleich von EU-Gewährleistung und Herstellergarantie](/de/blog/eu-gewaehrleistung-vs-herstellergarantie/). Prüfe die Regeln deines Landes und nutze bei grenzüberschreitenden Problemen die offiziellen europäischen Verbraucherberatungsstellen.

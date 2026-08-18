@@ -12,14 +12,16 @@ translationKey: eu-warranty-rights-explained
 product: claimforge
 contentType: how-to
 primaryKeyword: '>-'
-relatedPages: /claimforge/
+relatedPages: /es/claimforge/,/es/blog/garantia-legal-ue-vs-garantia-comercial/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-01T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
 sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
-# Explicación de los derechos de la garantía de 2 años de la UE: a qué tiene derecho y cómo reclamarlo
+# Explicación de los derechos de la garantía legal de 2 años de la UE: a qué tiene derecho y cómo reclamarlo
+
+Si el vendedor menciona una garantía del fabricante, consulta la [comparación entre garantía legal y garantía comercial](/es/blog/garantia-legal-ue-vs-garantia-comercial/) antes de responder.
 
 Compraste una computadora portátil que dejó de funcionar después de 14 meses. El vendedor te dice que la garantía es de sólo 12 meses y que no pueden hacer nada. Lo aceptas porque no conoces la ley.
 

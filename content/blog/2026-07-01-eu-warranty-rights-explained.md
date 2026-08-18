@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
-title: "EU 2-Year Warranty: Rights, Repairs and Claims"
-description: "EU consumers usually have a legal guarantee for faulty goods. Learn when it applies, how to request repair or replacement, and what to do if the seller refuses."
+title: "EU 2-Year Legal Guarantee: Rights, Repairs and Claims"
+description: "Understand the EU two-year legal guarantee for faulty goods, how it differs from a commercial warranty, and how to request a remedy."
 date: 2026-07-01
 slug: eu-warranty-rights-explained
 locale: en
@@ -9,7 +9,7 @@ translationKey: eu-warranty-rights-explained
 product: claimforge
 contentType: how-to
 primaryKeyword: "eu 2-year warranty rights explained: what you're entitled to and how to claim it"
-relatedPages: /claimforge/
+relatedPages: /claimforge/,/blog/eu-legal-guarantee-vs-commercial-warranty/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-01
 reviewDue: 2026-12-31
@@ -24,7 +24,7 @@ That's exactly what retailers count on.
 
 EU law gives you a **minimum 2-year legal guarantee** on any product you buy from an EU seller. It doesn't matter what the box says, what the seller's "policy" is, or whether the brand is based in another country. The law supersedes all of that.
 
-Here's what you're actually entitled to — and how to claim it.
+Here's what you're actually entitled to — and how to claim it. If a seller mentions a manufacturer's warranty, compare the two routes in our [EU legal guarantee vs commercial warranty guide](/blog/eu-legal-guarantee-vs-commercial-warranty/) before you reply.
 
 ## What the EU Legal Guarantee Says
 
