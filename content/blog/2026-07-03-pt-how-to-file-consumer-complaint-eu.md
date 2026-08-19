@@ -11,8 +11,8 @@ locale: pt
 translationKey: how-to-file-consumer-complaint-eu
 product: claimforge
 contentType: how-to
-primaryKeyword: guia do estúdio wendygo
-relatedPages: /pt/claimforge/
+primaryKeyword: apresentar uma reclamação de consumidor na UE
+relatedPages: /pt/claimforge/,/pt/blog/consumer-complaint-letter-eu/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-03T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
@@ -20,6 +20,8 @@ sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
 Uma reclamação de garantia é ignorada. Um reembolso é recusado. O vendedor deixa de responder. Na UE, é aqui que entra uma reclamação formal do consumidor – e tem opções reais e aplicáveis ​​para além de apenas esperar que o vendedor mude de ideias.
+
+Para escrever a mensagem direta ao vendedor, consulte a nossa [estrutura de carta de reclamação de consumo na UE](/pt/blog/consumer-complaint-letter-eu/) e separe factos, solução, provas e uma data razoável para resposta.
 
 ## Quando apresentar uma reclamação formal
 
@@ -57,7 +59,7 @@ Antes de arquivar, monte o seu rasto de papel:
 A legislação da UE e a maioria dos organismos de RAL exigem que faça uma última tentativa direta antes de escalar. Escreva uma carta de reclamação formal (o e-mail é suficiente) que:
 - Afirma claramente o problema e a solução específica que pretende
 - Cita a lei aplicável (Diretiva UE 2019/771 para produtos defeituosos ou Diretiva 2011/83/UE para devoluções)
-- Dá ao vendedor um prazo claro – 14 dias é o padrão
+- Dá ao vendedor uma data clara e razoável, compatível com a regra ou o procedimento nacional aplicável
 
 Esta carta serve também como prova de que tentou de boa fé.
 

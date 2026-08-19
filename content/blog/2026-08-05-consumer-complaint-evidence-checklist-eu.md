@@ -9,7 +9,7 @@ translationKey: consumer-complaint-evidence-checklist-eu
 product: claimforge
 contentType: how-to
 primaryKeyword: "EU consumer complaint evidence checklist"
-relatedPages: /claimforge/,/blog/how-to-file-consumer-complaint-eu/,/blog/eu-consumer-rights-guide/
+relatedPages: /claimforge/,/blog/how-to-file-consumer-complaint-eu/,/blog/consumer-complaint-letter-eu/,/blog/eu-consumer-rights-guide/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-08-05
 reviewDue: 2026-11-03

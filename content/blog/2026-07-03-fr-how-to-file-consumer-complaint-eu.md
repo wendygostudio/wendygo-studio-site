@@ -11,8 +11,8 @@ locale: fr
 translationKey: how-to-file-consumer-complaint-eu
 product: claimforge
 contentType: how-to
-primaryKeyword: guide du studio wendygo
-relatedPages: /fr/claimforge/
+primaryKeyword: déposer une plainte de consommateur dans l'UE
+relatedPages: /fr/claimforge/,/fr/blog/consumer-complaint-letter-eu/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-03T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
@@ -20,6 +20,8 @@ sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
 Une demande de garantie est ignorée. Un remboursement est refusé. Le vendeur ne répond plus. Dans l’UE, c’est là qu’intervient une plainte officielle d’un consommateur – et vous disposez d’options réelles et exécutoires au-delà du simple fait d’espérer que le vendeur change d’avis.
+
+Pour rédiger le message direct au vendeur, consultez notre [structure de lettre de réclamation de consommateur dans l'UE](/fr/blog/consumer-complaint-letter-eu/) afin de séparer les faits, la solution, les preuves et une date de réponse raisonnable.
 
 ## Quand déposer une plainte formelle
 
@@ -57,7 +59,7 @@ Avant de déposer, rassemblez votre trace écrite :
 Le droit de l'UE et la plupart des organismes ADR exigent que vous fassiez une dernière tentative directe avant de passer à l'étape suivante. Rédigez une lettre de plainte officielle (un e-mail suffit) qui :
 - Énonce clairement le problème et le remède spécifique que vous souhaitez
 - Cite la loi applicable (Directive UE 2019/771 pour les marchandises défectueuses, ou Directive 2011/83/UE pour les retours)
-- Donne au vendeur un délai clair – 14 jours est la norme
+- Donne au vendeur une date de réponse claire et raisonnable, conforme à la règle ou à la procédure nationale applicable
 
 Cette lettre sert également de preuve que vous avez essayé de bonne foi.
 

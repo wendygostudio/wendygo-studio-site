@@ -13,8 +13,8 @@ locale: it
 translationKey: how-to-file-consumer-complaint-eu
 product: claimforge
 contentType: how-to
-primaryKeyword: guida allo studio wendygo
-relatedPages: /it/claimforge/
+primaryKeyword: presentare un reclamo dei consumatori nell'UE
+relatedPages: /it/claimforge/,/it/blog/consumer-complaint-letter-eu/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-03T00:00:00.000Z
 reviewDue: 2026-12-31T00:00:00.000Z
@@ -22,6 +22,8 @@ sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
 Una richiesta di garanzia viene ignorata. Un rimborso viene rifiutato. Il venditore smette di rispondere. Nell'UE, è qui che entra in gioco un reclamo formale da parte del consumatore e hai opzioni reali e applicabili oltre alla semplice speranza che il venditore cambi idea.
+
+Per scrivere il messaggio diretto al venditore, consulta la nostra [struttura per una lettera di reclamo dei consumatori nell'UE](/it/blog/consumer-complaint-letter-eu/) e separa fatti, soluzione, prove e una data ragionevole per la risposta.
 
 ## Quando presentare un reclamo formale
 
@@ -59,7 +61,7 @@ Prima di archiviare, assembla la tua documentazione cartacea:
 La legislazione dell'UE e la maggior parte degli organismi ADR impongono di effettuare un ultimo tentativo diretto prima di procedere all'escalation. Scrivi una lettera di reclamo formale (è sufficiente l'e-mail) che:
 - Indica chiaramente il problema e il rimedio specifico che desideri
 - Cita la legge applicabile (Direttiva UE 2019/771 per i beni difettosi o Direttiva 2011/83/UE per i resi)
-- Fornisce al venditore una scadenza chiara: 14 giorni è lo standard
+- Fornisce al venditore una data chiara e ragionevole, coerente con la norma o la procedura nazionale applicabile
 
 Questa lettera serve anche come prova che hai provato in buona fede.
 

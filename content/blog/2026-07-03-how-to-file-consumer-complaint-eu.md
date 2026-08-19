@@ -8,8 +8,8 @@ locale: en
 translationKey: how-to-file-consumer-complaint-eu
 product: claimforge
 contentType: how-to
-primaryKeyword: "wendygo studio guide"
-relatedPages: /claimforge/
+primaryKeyword: "how to file a consumer complaint in the EU"
+relatedPages: /claimforge/,/blog/consumer-complaint-letter-eu/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-07-03
 reviewDue: 2026-12-31
@@ -19,6 +19,8 @@ sourceUrls: https://europa.eu/youreurope/citizens/consumers/index_en.htm
 A warranty claim gets ignored. A refund is refused. The seller stops responding. In the EU, this is where a formal consumer complaint comes in — and you have real, enforceable options beyond just hoping the seller changes their mind.
 
 Before writing, use the [EU consumer complaint evidence checklist](/blog/consumer-complaint-evidence-checklist-eu/) to organize receipts, messages and a dated timeline. A clear file makes the next step easier to assess.
+
+For the direct message to the seller, use our [EU consumer complaint letter structure](/blog/consumer-complaint-letter-eu/) to separate facts, remedy, evidence and a reasonable reply date.
 
 ## When to File a Formal Complaint
 
@@ -56,7 +58,7 @@ Before filing, assemble your paper trail:
 EU law and most ADR bodies require you to make a final direct attempt before escalating. Write a formal complaint letter (email is sufficient) that:
 - States the problem clearly and the specific remedy you want
 - Cites the applicable law (EU Directive 2019/771 for defective goods, or Directive 2011/83/EU for returns)
-- Gives the seller a clear deadline — 14 days is standard
+- Gives the seller a clear, reasonable reply date that fits the applicable national rule or procedure
 
 This letter also serves as evidence that you tried in good faith.
 

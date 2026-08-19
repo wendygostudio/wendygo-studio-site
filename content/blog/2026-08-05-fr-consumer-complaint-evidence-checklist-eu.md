@@ -13,7 +13,7 @@ product: claimforge
 contentType: how-to
 primaryKeyword: Liste de contrôle des preuves des plaintes des consommateurs dans l'UE
 relatedPages: >-
-  /fr/claimforge/,/fr/blog/how-to-file-consumer-complaint-eu/,/fr/blog/eu-consumer-rights-guide/
+  /fr/claimforge/,/fr/blog/how-to-file-consumer-complaint-eu/,/fr/blog/consumer-complaint-letter-eu/,/fr/blog/eu-consumer-rights-guide/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-08-05T00:00:00.000Z
 reviewDue: 2026-11-03T00:00:00.000Z

@@ -15,7 +15,7 @@ product: claimforge
 contentType: how-to
 primaryKeyword: Checkliste für EU-Beweisnachweise für Verbraucherbeschwerden
 relatedPages: >-
-  /de/claimforge/,/de/blog/how-to-file-consumer-complaint-eu/,/de/blog/eu-consumer-rights-guide/
+  /de/claimforge/,/de/blog/how-to-file-consumer-complaint-eu/,/de/blog/consumer-complaint-letter-eu/,/de/blog/eu-consumer-rights-guide/
 jurisdiction: EU and national consumer rules
 reviewedAt: 2026-08-05T00:00:00.000Z
 reviewDue: 2026-11-03T00:00:00.000Z
