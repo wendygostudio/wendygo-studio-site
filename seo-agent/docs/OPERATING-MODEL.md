@@ -20,7 +20,7 @@ Presupuesto máximo: **120.000 tokens**. Se consume de forma adaptativa y puede 
 5. Publicar **un artículo nuevo** localizado en los seis idiomas, con fuente inglesa estructurada, enlaces internos recíprocos, schema y sitemap.
 6. Mejorar entre una y tres piezas existentes con evidencia. No reescribir por gusto.
 7. Revisar consistencia de las seis traducciones y eliminar textos corruptos o asociaciones de producto incorrectas.
-8. Preparar o publicar como máximo una adaptación útil y no duplicada en DEV.to y una interacción o publicación prudente en Bluesky; nunca automatizar spam. Con credenciales válidas, la autorización del Daily permite publicar o interactuar dentro de esos límites; si no aporta valor, dejarlo documentado.
+8. Realizar una acción de calidad en cada red cuando su API y credencial sean válidas: como máximo una adaptación útil y no duplicada en DEV.to y una interacción o publicación prudente en Bluesky. El tema puede ser adyacente al artículo del día si aporta valor; nunca automatizar spam. Si la red está bloqueada o la credencial no funciona, registrar el bloqueo sin simular actividad.
 9. Ejecutar validaciones, escribir journal y resumir cambios, métricas, bloqueos y siguiente experimento.
 10. Si las validaciones pasan, hacer automáticamente commit y push de los cambios propios de esta ejecución a `origin/main`. Excluir archivos ajenos, índices temporales, secretos y cambios preexistentes no relacionados; registrar el hash y el resultado en el journal.
 

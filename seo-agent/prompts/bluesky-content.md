@@ -10,7 +10,7 @@ No uses cron, Claude ni un orquestador.
 - No duplicar el artículo del blog; aportar contexto, una observación o una pregunta.
 - Como engagement, 1–3 likes y hasta 1–3 follows relevantes, únicamente si la API
   está autorizada y las cuentas son claramente pertinentes.
-- Si no hay API válida, registra el bloqueo y no simules actividad.
+- Si no hay API válida, registra el bloqueo y no simules actividad. Si la API es válida pero no existe una conversación temática adecuada, publica una nota breve y útil sobre un tema adyacente de privacidad, herramientas locales, productividad o desarrollo; no fuerces likes, follows ni respuestas irrelevantes.
 
 ## Registro
 

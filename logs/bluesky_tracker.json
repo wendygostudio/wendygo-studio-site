@@ -22,5 +22,13 @@
     "url": "wendygostudio.com/blog/sort-lines-alphabetically-online/",
     "posted": true,
     "reason": "Promotes new sort-lines article published today — technical, solves specific dev workflow pain point (ordering lists without external tools)"
+  },
+  {
+    "date": "2026-08-19",
+    "type": "tipo_1",
+    "text": "Local-first tools are easiest to trust when the boundary is concrete: no login, browser-side processing, and a short permissions list. Privacy works best as something you can inspect, not just a marketing adjective.",
+    "url": "https://bsky.app/profile/wendygostudio.bsky.social/post/3mtg72o3mnx2y",
+    "posted": true,
+    "reason": "Useful standalone note about verifiable privacy criteria; adjacent topic chosen to maintain consistent network activity without duplicating the Daily article."
   }
 ]
