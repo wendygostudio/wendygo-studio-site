@@ -8,7 +8,7 @@ Codex es el único motor de ejecución. No se debe lanzar Claude Code, Anthropic
 
 ### Daily — adquisición y conversión
 
-Presupuesto máximo: **120.000 tokens**. Se consume de forma adaptativa y puede terminar antes si no quedan acciones con evidencia.
+Presupuesto máximo: **120.000 tokens**. Es un techo operativo, no una excusa para cerrar al cumplir la lista mínima: el Daily debe agotar de forma razonada las líneas de trabajo con evidencia antes de terminar. Solo puede cerrar antes cuando ya recorrió las puertas de datos, técnica, oportunidad, contenido, mejoras, traducciones, distribución y validación, o cuando las fuentes disponibles están bloqueadas y no queda una acción segura con impacto plausible. Si el runtime no expone el consumo real, no se estima: el journal registra la cobertura completada y `telemetría de tokens: no expuesta`.
 
 1. Leer memoria, el último journal, datos disponibles y estado de Git.
 2. Hacer un diagnóstico técnico rápido: HTML, canonicals, hreflang, schema, enlaces, accesibilidad estática y errores de codificación.
@@ -23,6 +23,10 @@ Presupuesto máximo: **120.000 tokens**. Se consume de forma adaptativa y puede 
 8. Realizar una acción de calidad en cada red cuando su API y credencial sean válidas: como máximo una adaptación útil y no duplicada en DEV.to y una interacción o publicación prudente en Bluesky. El tema puede ser adyacente al artículo del día si aporta valor; nunca automatizar spam. Si la red está bloqueada o la credencial no funciona, registrar el bloqueo sin simular actividad.
 9. Ejecutar validaciones, escribir journal y resumir cambios, métricas, bloqueos y siguiente experimento.
 10. Si las validaciones pasan, hacer automáticamente commit y push de los cambios propios de esta ejecución a `origin/main`. Excluir archivos ajenos, índices temporales, secretos y cambios preexistentes no relacionados; registrar el hash y el resultado en el journal.
+
+#### Profundidad obligatoria del Daily
+
+La secuencia se ejecuta en dos pasadas. La primera cubre el entregable principal; antes de cerrar, la segunda debe buscar el siguiente trabajo de mayor valor demostrable: comparar oportunidades candidatas, ampliar la auditoría del cluster afectado, mejorar hasta tres piezas existentes, revisar enlaces/schema/hreflang/codificación de las seis versiones, comprobar indexación y distribución, y dejar una hipótesis medible para el siguiente periodo. No se detiene la tarea solo porque ya exista un artículo nuevo y la validación básica sea verde.
 
 ### Weekly — optimización de sistema
 

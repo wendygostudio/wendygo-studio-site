@@ -13,8 +13,13 @@ crear deuda técnica, lingüística o de medición.
 | Weekly | 180.000 tokens | Análisis agregado y selección de experimentos |
 | Monthly | 240.000 tokens | Auditoría estratégica y decisión del siguiente ciclo |
 
-Los máximos son adaptativos. El agente debe detenerse cuando no queden acciones
-con evidencia suficiente; consumir más tokens no es un objetivo por sí mismo.
+Los máximos son adaptativos, pero el Daily debe trabajar con profundidad hasta
+agotar las acciones con evidencia suficiente. Consumir más tokens no es un
+objetivo por sí mismo; cerrar tras el artículo, una edición y una validación
+básica sí es insuficiente si quedan oportunidades, deuda técnica o QA
+multilingüe de alto valor. Si no existe telemetría real de tokens, se registra
+la cobertura de fases y `telemetría de tokens: no expuesta`, sin inventar un
+consumo.
 
 ## Fase 0 — Medición (días 1–3)
 
@@ -60,6 +65,12 @@ Cada Daily debe:
 3. mejorar entre una y tres piezas existentes;
 4. añadir enlaces internos recíprocos y schema;
 5. registrar hipótesis y métrica de éxito en el journal.
+
+Después del entregable principal, cada Daily debe ejecutar una segunda pasada
+de expansión: contrastar la oportunidad elegida con alternativas, revisar el
+cluster y sus enlaces, corregir problemas técnicos o lingüísticos relacionados,
+y buscar mejoras adicionales con evidencia antes de cerrar. El mínimo de la
+checklist es una puerta de calidad, no el objetivo de profundidad.
 
 No se publican artículos genéricos solo para llenar cuota.
 
@@ -108,7 +119,9 @@ La subida no es permanente y debe revisarse en el Weekly.
 - [ ] Hipótesis elegida antes de editar.
 - [ ] Artículo nuevo en seis idiomas.
 - [ ] Una a tres mejoras existentes.
+- [ ] Segunda pasada profunda: alternativas, cluster, enlaces, técnica y QA de los seis idiomas.
 - [ ] Validación técnica ejecutada.
 - [ ] DEV.to y Bluesky revisados.
 - [ ] Journal actualizado con resultados y bloqueos.
+- [ ] Cobertura de fases y estado de telemetría de tokens registrados sin estimaciones.
 - [ ] Si las validaciones pasan, commit/push automático de los cambios propios del Daily; excluir ajenos, temporales y secretos, y registrar el hash.
