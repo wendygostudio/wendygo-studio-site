@@ -30,6 +30,7 @@
 
 ## Editorial sources
 - Cite the original article URL when summarizing a guide; keep product claims aligned with the product landing page.
+- CloudConvert vs a Local File Converter: Which Should You Use?: https://wendygostudio.com/blog/cloudconvert-vs-local-converter/ — Compare CloudConvert's hosted workflow with a local converter for privacy, limits, offline work and common file conversions.
 - EU Consumer Complaint Letter: What to Include Before You Escalate: https://wendygostudio.com/blog/consumer-complaint-letter-eu/ — A practical EU consumer complaint letter structure: state the facts, choose a remedy, attach focused evidence and set a reasonable reply date.
 - EU Legal Guarantee vs Commercial Warranty: Which One Applies?: https://wendygostudio.com/blog/eu-legal-guarantee-vs-commercial-warranty/ — Compare the EU two-year legal guarantee with a manufacturer's commercial warranty, including who to contact and what each can cover.
 - TikTok Profile Picture Safe Area: Keep Faces and Logos Visible: https://wendygostudio.com/blog/tiktok-profile-picture-safe-area/ — Prepare a square TikTok profile picture with a practical safe area so circular cropping keeps faces, logos and text readable.
@@ -53,7 +54,6 @@
 - OpenAI's Privacy Filter Doesn't Know What a BGP Password Is: https://wendygostudio.com/blog/openai-privacy-filter-network-configs/ — OpenAI open-sourced a model that redacts PII before it reaches an AI. Here's exactly what it catches, what it was never built to catch, and why network configs still need a dedicated tool.
 - Gamified Pomodoro Timer: Make Your Focus Sessions Stick: https://wendygostudio.com/blog/gamified-pomodoro-timer-chrome-extension/ — Plain timers don't keep you coming back. A gamified pomodoro timer rewards every session with a virtual pet that grows — habit over willpower.
 - Clean Copied Table Text Before Pasting It Anywhere: https://wendygostudio.com/blog/clean-copied-table-text/ — A local workflow for cleaning copied table text, removing noisy spacing and preserving the values you need.
-- LinkedIn Carousel Image Size: A Local Chrome Workflow: https://wendygostudio.com/blog/linkedin-carousel-image-size/ — Prepare consistent LinkedIn carousel images locally in Chrome, without uploading source artwork to an online editor.
 
 ## Retrieval map
 

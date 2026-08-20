@@ -3,7 +3,7 @@ schemaVersion: 1
 title: Le migliori alternative a CloudConvert (2026)
 description: >-
   Cerchi alternative a CloudConvert? Confronta le migliori opzioni gratuite:
-  strumenti locali che convertono i file in privato senza caricarli.
+  strumenti locali che convertono i file in privato senza caricarli. Limiti e conservazione verificati nelle pagine ufficiali.
 date: 2026-07-20T00:00:00.000Z
 slug: cloudconvert-alternatives
 locale: it
@@ -11,16 +11,16 @@ translationKey: cloudconvert-alternatives
 product: convertforge
 contentType: how-to
 primaryKeyword: migliori alternative a cloudconvert (2026)
-relatedPages: /it/convertforge/
+relatedPages: /it/convertforge/,/it/blog/cloudconvert-vs-convertitore-locale/
 ---
 
-CloudConvert è uno dei convertitori di file più capaci in circolazione: supporta oltre 200 formati, ha un'API solida e offre una qualità eccellente. Ma non è gratuito per un uso intensivo. Il livello gratuito ti offre 25 minuti di conversione al giorno e questo si esaurisce più velocemente del previsto con i file video. Ogni file passa anche attraverso i loro server.
+CloudConvert è un convertitore ospitato con molti formati e un'API. La [pagina prezzi ufficiale](https://cloudconvert.com/pricing) indica attualmente 10 conversioni al giorno, 1 GB massimo per file e 5 minuti massimi di elaborazione nel piano gratuito. Ogni file caricato passa temporaneamente dai suoi server.
 
 Se il costo o la privacy sono importanti per te, ecco le migliori alternative a CloudConvert.
 
 ## Perché le persone passano da CloudConvert
 
-- Costo: 25 minuti gratuiti al giorno non sono molti per i video; i crediti scadono
+- Costi e limiti: attualmente 10 conversioni al giorno, 1 GB per file e 5 minuti massimi nel piano gratuito
 - Caricamenti di file: tutto va prima ai server di CloudConvert
 - Account richiesto per cronologia, API e minuti extra
 - Eccessivo per attività semplici come la conversione di una foto HEIC o di un CSV
@@ -28,7 +28,7 @@ Se il costo o la privacy sono importanti per te, ecco le migliori alternative a 
 
 ## 1. ConvertForge: il migliore per la conversione di file locali
 
-ConvertForge è un'estensione di Chrome che converte i file interamente nel tuo browser. Niente lascia il tuo dispositivo. Gestisce i formati più comuni: da HEIC a JPG/PNG, da PDF a testo (OCR), da video ad audio, CSV/JSON/YAML/XLSX. Nessun account, nessun limite di dimensione del file, nessun limite giornaliero. Funziona offline.
+ConvertForge è un'estensione Chrome che converte i file interamente nel browser. Il flusso locale non carica il file di input. Gestisce formati comuni: HEIC in JPG/PNG, OCR di PDF e immagini, video in audio, CSV/JSON/YAML/XLSX. Funziona offline dopo l'installazione, in base ai formati e alla memoria del browser.
 
 ## 2. FFmpeg: il migliore per video e audio
 
@@ -49,7 +49,7 @@ Se desideri un'interfaccia web senza installazione, Convertio supporta oltre 300
 ## Domande frequenti
 
 1. CloudConvert è gratuito?
-25 minuti di conversione/giorno. I file video vengono consumati in base alla durata; le conversioni di documenti/immagini rientrano generalmente nel limite.
+La pagina prezzi attuale indica 10 conversioni al giorno, 1 GB per file e 5 minuti massimi di elaborazione nel piano gratuito. Controlla la pagina ufficiale per eventuali modifiche.
 
 2. Qual è la migliore alternativa gratuita a CloudConvert?
 ConvertForge per formati comuni senza caricamenti, FFmpeg per video, LibreOffice per documenti.
@@ -58,7 +58,7 @@ ConvertForge per formati comuni senza caricamenti, FFmpeg per video, LibreOffice
 SÌ. ConvertForge, FFmpeg, HandBrake e LibreOffice elaborano tutti i file localmente.
 
 4. CloudConvert ha un limite alla dimensione del file?
-1 GB per file nel livello gratuito. Gli strumenti locali non hanno limiti imposti dal server.
+Il piano gratuito indica 1 GB per file e 5 minuti massimi di elaborazione. Gli strumenti locali evitano un limite di upload del server, ma hanno limiti di dispositivo, browser e formato.
 
 5. CloudConvert è sicuro?
-Servizio legittimo utilizzato dalle imprese. Per i file sensibili, un convertitore locale elimina completamente il rischio lato server.
+La [privacy policy](https://cloudconvert.com/privacy) indica che i file caricati vengono eliminati automaticamente entro 24 ore al massimo. Un convertitore locale evita l'invio del file di input; leggi il [confronto con un convertitore locale](/it/blog/cloudconvert-vs-convertitore-locale/) per valutare il compromesso.
