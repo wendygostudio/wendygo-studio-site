@@ -20,6 +20,8 @@ Forest popularizó una idea sencilla: una sesión de concentración hace crecer 
 
 Si la duda no es qué producto elegir, sino qué tipo de motivación te conviene, la comparación [Forest frente a temporizador Pomodoro](/es/blog/forest-vs-temporizador-pomodoro/) separa el compromiso visual en el móvil del ritmo de trabajo y pausas en el navegador.
 
+Si primero quieres comprobar si Forest funciona en Chrome, consulta la [guía de la extensión Forest para Chrome](/es/blog/guia-extension-forest-chrome/), que distingue la ficha oficial de temas y extensiones no relacionadas.
+
 ## Qué conviene comparar
 
 | Criterio | Por qué importa |
