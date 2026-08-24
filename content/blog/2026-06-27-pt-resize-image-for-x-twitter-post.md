@@ -11,10 +11,10 @@ translationKey: resize-image-for-x-twitter-post
 product: frameforge
 contentType: how-to
 primaryKeyword: como redimensionar imagem para x post no Twitter
-relatedPages: /pt/frameforge/
+relatedPages: /pt/frameforge/,/pt/blog/tamanho-foto-perfil-cabecalho-x-twitter/
 ---
 
-X renderiza imagens de tweet num corte de 2:1 na visualização do feed. As fotos quadradas têm a metade inferior cortada. As fotos de retrato ficam espremidas numa estranha fatia central. A correção é simples: publique a 1200×675 px (16:9) e nada será cortado na vista de feed ou na vista expandida em tamanho real.
+A ajuda atual do X diz que uma fotografia individual com uma proporção padrão entre 2:1 e 3:4 pode ser apresentada por inteiro. Uma exportação de 1200×675 px (16:9) continua a ser um objetivo prático e repetível para uma publicação larga, mas não é um requisito universal do X nem uma garantia para todos os clientes.
 
 O FrameForge é uma extensão do Chrome que redimensiona as imagens inteiramente no seu browser. Sem upload, sem conta, sem espera que um servidor remoto processe o seu ficheiro.
 
@@ -23,17 +23,17 @@ O FrameForge é uma extensão do Chrome que redimensiona as imagens inteiramente
 | Format | Dimensions | Aspect ratio |
 |--------|------------|--------------|
 | Standard post image | 1200×675 px | 16:9 |
-| Feed preview crop | ~2:1 center | — |
+| Proporção para uma fotografia individual | Entre 2:1 e 3:4 | O X diz que pode ser apresentada por inteiro |
 | Max file size | 5 MB (JPG/PNG) | — |
-| Accepted formats | JPG, PNG, WebP, GIF | — |
+| Formatos aceites | JPEG, PNG, GIF | — |
 
-1200×675 é o ponto ideal: preenche exatamente o corte de visualização 2:1 e a imagem completa é mostrada sem caixa de correio ou caixa de pilar quando o visualizador a expande.
+1200×675 é uma predefinição 16:9 prática para uma composição larga e consistente. Use a pré-visualização do corte para posicionar o motivo e não presuma um corte fixo de 2:1 em todos os dispositivos.
 
 ## Por que razão as imagens quadradas e em retrato são cortadas
 
-X aplica um corte central ao exibir imagens incorporadas no feed. Uma imagem quadrada 1:1 transforma-se numa fatia 2:1: o quarto superior e o quarto inferior desaparecem. As imagens de retrato (9:16) são ainda mais cortadas – perde cerca de 80% da altura da imagem na visualização do feed.
+A ajuda do X diz que uma fotografia individual com proporção padrão entre 2:1 e 3:4 pode ser apresentada por inteiro. A apresentação exata pode variar conforme o cliente e o esquema; mantenha o motivo longe das margens extremas e verifique a pré-visualização antes de publicar.
 
-O dimensionamento para 1200×675 elimina a incompatibilidade. A imagem já está em 16:9, pelo que a pré-visualização do feed 2:1 mostra apenas a largura total à altura normal – sem cortes inesperados.
+1200×675 oferece uma composição 16:9 previsível e um bom ponto de partida para gráficos largos. Não substitui a verificação no compositor atual, sobretudo com fontes verticais ou várias imagens.
 
 ## Passo a passo: Redimensionar para X com o FrameForge
 
@@ -72,7 +72,7 @@ Redimensione uma vez por plataforma, exporte cada versão com apenas alguns cliq
 1200×675px em 16:9. Este preenche a visualização do feed sem cortar e é apresentado em dimensões completas quando expandido. Mantenha o ficheiro com menos de 5 MB para JPG/PNG.
 
 **O X corta imagens no feed?**
-Sim. X aplica um corte central às imagens incorporadas no feed do tweet, renderizando-as aproximadamente em 2:1. As imagens publicadas a 1200×675 px (16:9) correspondem às proporções de visualização do feed e aparecem sem cortes inesperados.
+Depende da proporção da imagem e do cliente. O X diz que uma fotografia individual com proporção padrão entre 2:1 e 3:4 pode ser apresentada por inteiro; verifique o compositor em vez de presumir um corte fixo de 2:1. 1200×675 px é uma opção prática 16:9 para publicações largas.
 
 **O FrameForge carrega imagens para um servidor?**
 Não. O FrameForge é uma extensão do Chrome que processa imagens inteiramente no seu browser. Nada é enviado para nenhum servidor. Nenhuma conta é necessária.

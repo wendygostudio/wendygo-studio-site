@@ -12,8 +12,9 @@ translationKey: resize-image-for-x-twitter-post
 product: frameforge
 contentType: how-to
 primaryKeyword: come ridimensionare l'immagine per x post su Twitter
-relatedPages: /it/frameforge/
----X esegue il rendering delle immagini dei tweet con un ritaglio 2:1 nell'anteprima del feed. Nelle foto quadrate viene tagliata la metà inferiore. I ritratti vengono compressi in una scomoda sezione centrale. La soluzione è semplice: pubblica a 1200×675 px (16:9) e nulla verrà ritagliato né nell'anteprima del feed né nella visualizzazione espansa a dimensione intera.
+relatedPages: /it/frameforge/,/it/blog/dimensioni-foto-profilo-intestazione-x-twitter/
+---
+L'aiuto attuale di X dice che una singola foto con proporzioni standard tra 2:1 e 3:4 può essere mostrata per intero. Un export da 1200×675 px (16:9) resta un obiettivo pratico e ripetibile per un post largo, ma non è un requisito universale di X né una garanzia per ogni client.
 
 FrameForge è un'estensione di Chrome che ridimensiona completamente le immagini nel tuo browser. Nessun caricamento, nessun account, nessuna attesa per un server remoto per elaborare il tuo file.
 
@@ -22,17 +23,17 @@ FrameForge è un'estensione di Chrome che ridimensiona completamente le immagini
 | Format | Dimensions | Aspect ratio |
 |--------|------------|--------------|
 | Standard post image | 1200×675 px | 16:9 |
-| Feed preview crop | ~2:1 center | — |
+| Proporzione per una singola foto | Tra 2:1 e 3:4 | X dice che può essere mostrata per intero |
 | Max file size | 5 MB (JPG/PNG) | — |
-| Accepted formats | JPG, PNG, WebP, GIF | — |
+| Formati supportati | JPEG, PNG, GIF | — |
 
-1200×675 è il punto debole: riempie esattamente il ritaglio dell'anteprima 2:1 e l'immagine completa viene mostrata senza letter-boxing o pillar-boxing quando lo spettatore la espande.
+1200×675 è un preset 16:9 pratico per una composizione larga e coerente. Usa l'anteprima di ritaglio per posizionare il soggetto e non dare per scontato un ritaglio fisso 2:1 su ogni dispositivo.
 
 ## Perché le immagini quadrate e verticali vengono ritagliate
 
-X applica un ritaglio centrale durante la visualizzazione di immagini in linea nel feed. Un'immagine quadrata 1:1 diventa una sezione 2:1: il quarto superiore e quello inferiore scompaiono. Le immagini con ritratto (9:16) vengono ritagliate ancora più duramente: perdi circa l'80% dell'altezza dell'immagine nell'anteprima del feed.
+L'aiuto di X dice che una singola foto con proporzioni standard tra 2:1 e 3:4 può essere mostrata per intero. La presentazione esatta può variare in base al client e al layout: tieni il soggetto lontano dai bordi estremi e controlla l'anteprima prima di pubblicare.
 
-Il dimensionamento a 1200×675 elimina la mancata corrispondenza. L'immagine è già in formato 16:9, quindi l'anteprima del feed in formato 2:1 mostra solo l'intera larghezza ad altezza normale, senza ritagli imprevisti.
+1200×675 offre una composizione 16:9 prevedibile e un buon punto di partenza per grafiche larghe. Non sostituisce il controllo nel composer attuale, soprattutto con fonti verticali o più immagini.
 
 ## Passo dopo passo: ridimensiona per X con FrameForge
 
@@ -71,7 +72,7 @@ Ridimensiona una volta per piattaforma, esporta ogni versione in pochi clic, sen
 1200×675px a 16:9. Ciò riempie l'anteprima del feed senza ritagliarla e viene visualizzata a dimensioni intere quando viene espansa. Mantieni il file sotto i 5 MB per JPG/PNG.
 
 **X ritaglia le immagini nel feed?**
-SÌ. X applica un ritaglio centrale alle immagini in linea nel feed tweet, rendendole a circa 2:1. Le immagini pubblicate a 1200×675 px (16:9) corrispondono alle proporzioni dell'anteprima del feed e vengono visualizzate senza ritagli imprevisti.
+Dipende dalle proporzioni dell'immagine e dal client. X dice che una singola foto con proporzioni standard tra 2:1 e 3:4 può essere mostrata per intero; controlla il composer invece di presumere un ritaglio fisso 2:1. 1200×675 px è un'opzione pratica 16:9 per i post larghi.
 
 **FrameForge carica immagini su un server?**
 No. FrameForge è un'estensione di Chrome che elabora le immagini interamente nel tuo browser. Niente viene inviato a nessun server. Non è richiesto alcun account.

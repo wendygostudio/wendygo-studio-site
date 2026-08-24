@@ -9,8 +9,9 @@ translationKey: resize-image-for-x-twitter-post
 product: frameforge
 contentType: how-to
 primaryKeyword: "how to resize image for x twitter post"
-relatedPages: /frameforge/
----X renders tweet images at a 2:1 crop in the feed preview. Square photos get the bottom half cut off. Portrait shots get squeezed into an awkward center slice. The fix is simple: post at 1200×675 px (16:9) and nothing gets cropped in either the feed preview or the full-size expanded view.
+relatedPages: /frameforge/,/blog/x-twitter-profile-header-image-size/
+---
+X's current help says that a single photo with a standard aspect ratio between 2:1 and 3:4 can display in full. A 1200×675 px (16:9) export remains a practical, repeatable target for a wide post, but it is not a universal X requirement or a guarantee about every client preview.
 
 FrameForge is a Chrome extension that resizes images entirely in your browser. No upload, no account, no waiting for a remote server to process your file.
 
@@ -19,17 +20,17 @@ FrameForge is a Chrome extension that resizes images entirely in your browser. N
 | Format | Dimensions | Aspect ratio |
 |--------|------------|--------------|
 | Standard post image | 1200×675 px | 16:9 |
-| Feed preview crop | ~2:1 center | — |
+| Supported single-photo ratio | Between 2:1 and 3:4 | X says it can display in full |
 | Max file size | 5 MB (JPG/PNG) | — |
-| Accepted formats | JPG, PNG, WebP, GIF | — |
+| Accepted formats | JPEG, PNG, GIF | — |
 
-1200×675 is the sweet spot: it fills the 2:1 preview crop exactly, and the full image is shown without letter-boxing or pillar-boxing when the viewer expands it.
+1200×675 is a useful 16:9 preset when you want a consistent wide composition. Use the crop preview to place the subject, and do not assume that X will apply one fixed 2:1 crop on every device.
 
 ## Why Square and Portrait Images Get Cropped
 
-X applies a center-crop when displaying inline images in the feed. A 1:1 square image becomes a 2:1 slice: the top quarter and bottom quarter disappear. Portrait images (9:16) are cropped even harder — you lose roughly 80% of the image height in the feed preview.
+X's help center says that a single photo with a standard aspect ratio between 2:1 and 3:4 can display in full. The exact presentation can still vary by client and layout, so keep the important subject away from extreme edges and inspect the preview before posting.
 
-Sizing to 1200×675 eliminates the mismatch. The image is already 16:9, so the 2:1 feed preview just shows the full width at normal height — no unexpected cropping.
+Sizing to 1200×675 gives you a predictable 16:9 composition and a good starting point for wide social graphics. It does not replace checking the live composer, especially for portrait sources or multiple images.
 
 ## Step-by-Step: Resize for X with FrameForge
 
@@ -68,7 +69,7 @@ Resize once per platform, export each version in a few clicks — without switch
 1200×675 px at 16:9. This fills the feed preview without cropping and displays at full dimensions when expanded. Keep the file under 5 MB for JPG/PNG.
 
 **Does X crop images in the feed?**
-Yes. X applies a center-crop to inline images in the tweet feed, rendering them at roughly 2:1. Images posted at 1200×675 px (16:9) match the feed preview proportions and appear without unexpected cropping.
+The presentation depends on the image ratio and the client. X says that a single photo with a standard aspect ratio between 2:1 and 3:4 can display in full; check the live composer rather than assuming a fixed 2:1 crop. A 1200×675 px export is a practical 16:9 option for wide posts.
 
 **Does FrameForge upload images to a server?**
 No. FrameForge is a Chrome extension that processes images entirely in your browser. Nothing is sent to any server. No account is required.

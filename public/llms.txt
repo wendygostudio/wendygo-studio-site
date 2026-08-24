@@ -30,6 +30,7 @@
 
 ## Editorial sources
 - Cite the original article URL when summarizing a guide; keep product claims aligned with the product landing page.
+- X (Twitter) Profile Picture and Header Size Guide: https://wendygostudio.com/blog/x-twitter-profile-header-image-size/ — Prepare an X profile picture and header that stay readable: official dimensions, crop-safe composition and a local Chrome workflow.
 - EU Digital Content Refunds: When the 14-Day Withdrawal Right Applies: https://wendygostudio.com/blog/eu-digital-content-withdrawal/ — Understand the EU withdrawal rules for downloads, streaming and online services, and what consent can change before you request a refund.
 - CloudConvert vs a Local File Converter: Which Should You Use?: https://wendygostudio.com/blog/cloudconvert-vs-local-converter/ — Compare CloudConvert's hosted workflow with a local converter for privacy, limits, offline work and common file conversions.
 - EU Consumer Complaint Letter: What to Include Before You Escalate: https://wendygostudio.com/blog/consumer-complaint-letter-eu/ — A practical EU consumer complaint letter structure: state the facts, choose a remedy, attach focused evidence and set a reasonable reply date.

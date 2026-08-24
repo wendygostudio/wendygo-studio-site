@@ -11,8 +11,9 @@ translationKey: resize-image-for-x-twitter-post
 product: frameforge
 contentType: how-to
 primaryKeyword: comment redimensionner l'image pour x post Twitter
-relatedPages: /fr/frameforge/
----X restitue les images des tweets avec un recadrage 2:1 dans l'aperçu du flux. Les photos carrées ont la moitié inférieure coupée. Les portraits sont regroupés dans une tranche centrale peu pratique. La solution est simple : publiez à 1 200 × 675 px (16:9) et rien n’est recadré ni dans l’aperçu du flux, ni dans la vue développée en taille réelle.
+relatedPages: /fr/frameforge/,/fr/blog/taille-photo-profil-banniere-x-twitter/
+---
+L'aide actuelle de X indique qu'une photo individuelle avec un rapport standard entre 2:1 et 3:4 peut s'afficher entièrement. Un export de 1 200 × 675 px (16:9) reste une cible pratique et répétable pour une publication large, mais ce n'est pas une exigence universelle de X ni une garantie pour chaque client.
 
 FrameForge est une extension Chrome qui redimensionne entièrement les images dans votre navigateur. Pas de téléchargement, pas de compte, pas d'attente qu'un serveur distant traite votre fichier.
 
@@ -21,17 +22,17 @@ FrameForge est une extension Chrome qui redimensionne entièrement les images da
 | Format | Dimensions | Aspect ratio |
 |--------|------------|--------------|
 | Standard post image | 1200×675 px | 16:9 |
-| Feed preview crop | ~2:1 center | — |
+| Rapport d'une photo individuelle | Entre 2:1 et 3:4 | X indique qu'elle peut s'afficher entièrement |
 | Max file size | 5 MB (JPG/PNG) | — |
-| Accepted formats | JPG, PNG, WebP, GIF | — |
+| Formats acceptés | JPEG, PNG, GIF | — |
 
-1200 × 675 est le point idéal : il remplit exactement le recadrage de l'aperçu 2: 1, et l'image complète est affichée sans letter-boxing ni pillar-boxing lorsque le spectateur l'agrandit.
+1 200 × 675 est un préréglage 16:9 pratique pour une composition large et cohérente. Utilisez l'aperçu de recadrage pour placer le sujet et ne supposez pas un recadrage fixe de 2:1 sur tous les appareils.
 
 ## Pourquoi les images carrées et portraits sont recadrées
 
-X applique un recadrage central lors de l'affichage d'images en ligne dans le flux. Une image carrée 1:1 devient une tranche 2:1 : le quart supérieur et le quart inférieur disparaissent. Les images de portrait (9:16) sont encore plus recadrées : vous perdez environ 80 % de la hauteur de l'image dans l'aperçu du flux.
+L'aide de X indique qu'une photo individuelle avec un rapport standard entre 2:1 et 3:4 peut s'afficher entièrement. L'affichage exact peut varier selon le client et la mise en page : gardez le sujet loin des bords extrêmes et vérifiez l'aperçu avant de publier.
 
-Le dimensionnement à 1200×675 élimine l’inadéquation. L'image est déjà au format 16:9, donc l'aperçu du flux 2:1 affiche simplement toute la largeur à la hauteur normale — pas de recadrage inattendu.
+Le format 1 200 × 675 donne une composition 16:9 prévisible et un bon point de départ pour les visuels larges. Il ne remplace pas la vérification dans le composeur actuel, surtout avec une source verticale ou plusieurs images.
 
 ## Étape par étape : redimensionner pour X avec FrameForge
 
@@ -70,7 +71,7 @@ Redimensionnez une fois par plateforme, exportez chaque version en quelques clic
 1200×675 px à 16:9. Cela remplit l'aperçu du flux sans recadrage et s'affiche en pleine dimension une fois développé. Conservez le fichier sous 5 Mo pour JPG/PNG.
 
 **Est-ce que X recadre les images dans le flux ?**
-Oui. X applique un recadrage central aux images en ligne dans le flux tweet, les rendant à environ 2:1. Les images publiées à 1 200 × 675 px (16:9) correspondent aux proportions de l’aperçu du flux et apparaissent sans recadrage inattendu.
+Cela dépend du rapport de l'image et du client. X indique qu'une photo individuelle avec un rapport standard entre 2:1 et 3:4 peut s'afficher entièrement ; vérifiez le composeur plutôt que de supposer un recadrage fixe de 2:1. 1 200 × 675 px est une option 16:9 pratique pour les publications larges.
 
 **FrameForge télécharge-t-il des images sur un serveur ?**
 Non. FrameForge est une extension Chrome qui traite entièrement les images dans votre navigateur. Rien n'est envoyé à un serveur. Aucun compte n'est requis.
