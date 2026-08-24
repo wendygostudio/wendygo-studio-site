@@ -14,8 +14,9 @@ translationKey: resize-image-for-x-twitter-post
 product: frameforge
 contentType: how-to
 primaryKeyword: So ändern Sie die Bildgröße für x Twitter-Beitrag
-relatedPages: /de/frameforge/
----X rendert Tweet-Bilder in der Feed-Vorschau mit einem 2:1-Zuschnitt. Bei quadratischen Fotos wird die untere Hälfte abgeschnitten. Porträtaufnahmen werden in einen unangenehmen Mittelausschnitt gequetscht. Die Lösung ist einfach: Posten Sie mit 1200 x 675 Pixel (16:9) und weder in der Feed-Vorschau noch in der erweiterten Vollbildansicht wird etwas abgeschnitten.
+relatedPages: /de/frameforge/,/de/blog/x-twitter-profilbild-header-groesse/
+---
+Die aktuelle X-Hilfe erklärt, dass ein einzelnes Foto mit einem Standard-Seitenverhältnis zwischen 2:1 und 3:4 vollständig angezeigt werden kann. Ein Export mit 1200 x 675 Pixeln (16:9) bleibt ein praktisches, wiederholbares Ziel für einen breiten Beitrag, ist aber keine universelle X-Pflicht und keine Garantie für jeden Client.
 
 FrameForge ist eine Chrome-Erweiterung, die die Größe von Bildern vollständig in Ihrem Browser ändert. Kein Upload, kein Konto, kein Warten darauf, dass ein Remote-Server Ihre Datei verarbeitet.
 
@@ -24,17 +25,17 @@ FrameForge ist eine Chrome-Erweiterung, die die Größe von Bildern vollständig
 | Format | Dimensions | Aspect ratio |
 |--------|------------|--------------|
 | Standard post image | 1200×675 px | 16:9 |
-| Feed preview crop | ~2:1 center | — |
+| Verhältnis für einzelne Fotos | Zwischen 2:1 und 3:4 | Laut X kann es vollständig angezeigt werden |
 | Max file size | 5 MB (JPG/PNG) | — |
-| Accepted formats | JPG, PNG, WebP, GIF | — |
+| Unterstützte Formate | JPEG, PNG, GIF | — |
 
-1200 x 675 ist der Sweet Spot: Es füllt den 2:1-Vorschauausschnitt exakt aus und das vollständige Bild wird ohne Letterboxing oder Pillarboxing angezeigt, wenn der Betrachter es erweitert.
+1200 x 675 ist ein praktisches 16:9-Preset für eine einheitliche breite Komposition. Nutze die Vorschau, um das Motiv zu platzieren, und gehe nicht von einem festen 2:1-Zuschnitt auf jedem Gerät aus.
 
 ## Warum quadratische und Porträtbilder beschnitten werden
 
-X wendet einen zentrierten Zuschnitt an, wenn Inline-Bilder im Feed angezeigt werden. Aus einem quadratischen 1:1-Bild wird ein 2:1-Slice: Das obere Viertel und das untere Viertel verschwinden. Porträtbilder (9:16) werden noch stärker zugeschnitten – Sie verlieren etwa 80 % der Bildhöhe in der Feed-Vorschau.
+Die X-Hilfe sagt, dass ein einzelnes Foto mit einem Standard-Seitenverhältnis zwischen 2:1 und 3:4 vollständig angezeigt werden kann. Die genaue Darstellung kann je nach Client und Layout variieren. Halte das Motiv von den äußersten Rändern fern und prüfe die Vorschau vor dem Posten.
 
-Durch die Dimensionierung auf 1200 x 675 wird die Diskrepanz beseitigt. Das Bild ist bereits im Format 16:9, daher zeigt die 2:1-Feed-Vorschau nur die volle Breite in normaler Höhe – kein unerwarteter Zuschnitt.
+1200 x 675 bietet eine vorhersehbare 16:9-Komposition und einen guten Ausgangspunkt für breite Grafiken. Prüfe den aktuellen Composer trotzdem, besonders bei Hochformatquellen oder mehreren Bildern.
 
 ## Schritt-für-Schritt: Größe für X mit FrameForge ändern
 
@@ -73,7 +74,7 @@ Wenn Sie denselben Inhalt am selben Tag auf mehreren Plattformen veröffentliche
 1200×675 Pixel bei 16:9. Dadurch wird die Feed-Vorschau ohne Zuschneiden gefüllt und beim Erweitern in voller Größe angezeigt. Halten Sie die Datei für JPG/PNG unter 5 MB.
 
 **Schneidet X Bilder im Feed zu?**
-Ja. X wendet einen Mittelzuschnitt auf Inline-Bilder im Tweet-Feed an und rendert sie so im Verhältnis 2:1. Bilder, die mit 1200 x 675 Pixel (16:9) gepostet werden, entsprechen den Proportionen der Feed-Vorschau und werden ohne unerwartete Beschnitte angezeigt.
+Das hängt vom Seitenverhältnis und vom Client ab. X sagt, dass ein einzelnes Foto mit einem Standard-Verhältnis zwischen 2:1 und 3:4 vollständig angezeigt werden kann. Prüfe daher die Live-Vorschau statt von einem festen 2:1-Zuschnitt auszugehen. 1200 x 675 Pixel sind eine praktische 16:9-Option für breite Beiträge.
 
 **Ladet FrameForge Bilder auf einen Server hoch?**
 Nein. FrameForge ist eine Chrome-Erweiterung, die Bilder vollständig in Ihrem Browser verarbeitet. Es wird nichts an einen Server gesendet. Es ist kein Konto erforderlich.

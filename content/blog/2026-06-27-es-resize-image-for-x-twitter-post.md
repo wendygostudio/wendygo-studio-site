@@ -14,8 +14,9 @@ translationKey: resize-image-for-x-twitter-post
 product: frameforge
 contentType: how-to
 primaryKeyword: cómo cambiar el tamaño de la imagen para x publicación de Twitter
-relatedPages: /es/frameforge/
----X representa imágenes de tweets con un recorte 2:1 en la vista previa del feed. A las fotografías cuadradas se les corta la mitad inferior. Los retratos quedan comprimidos en un incómodo corte central. La solución es simple: publique a 1200 × 675 px (16:9) y no se recortará nada ni en la vista previa del feed ni en la vista ampliada de tamaño completo.
+relatedPages: /es/frameforge/,/es/blog/tamano-foto-perfil-encabezado-x-twitter/
+---
+La ayuda actual de X indica que una foto individual con una proporción estándar entre 2:1 y 3:4 puede mostrarse completa. Una exportación de 1200 × 675 px (16:9) sigue siendo un objetivo práctico y repetible para una publicación ancha, pero no es un requisito universal ni garantiza el mismo resultado en todos los clientes.
 
 FrameForge es una extensión de Chrome que cambia el tamaño de las imágenes por completo en su navegador. Sin carga, sin cuenta, sin esperar a que un servidor remoto procese su archivo.
 
@@ -24,17 +25,17 @@ FrameForge es una extensión de Chrome que cambia el tamaño de las imágenes po
 | Format | Dimensions | Aspect ratio |
 |--------|------------|--------------|
 | Standard post image | 1200×675 px | 16:9 |
-| Feed preview crop | ~2:1 center | — |
+| Proporción admitida para una foto individual | Entre 2:1 y 3:4 | X indica que puede mostrarse completa |
 | Max file size | 5 MB (JPG/PNG) | — |
-| Accepted formats | JPG, PNG, WebP, GIF | — |
+| Formatos admitidos | JPEG, PNG, GIF | — |
 
-1200 × 675 es el punto ideal: llena exactamente el recorte de vista previa 2:1 y la imagen completa se muestra sin formato tipo letterboxing o pillar-boxing cuando el espectador la expande.
+1200 × 675 es un ajuste práctico de 16:9 cuando quieres una composición ancha constante. Usa la vista previa de recorte para colocar el sujeto y no supongas que X aplicará un recorte fijo 2:1 en todos los dispositivos.
 
 ## Por qué se recortan las imágenes cuadradas y verticales
 
-X aplica un recorte central cuando se muestran imágenes en línea en el feed. Una imagen cuadrada 1:1 se convierte en un corte 2:1: el cuarto superior y el cuarto inferior desaparecen. Las imágenes de retrato (9:16) se recortan aún más: se pierde aproximadamente el 80% de la altura de la imagen en la vista previa del feed.
+La ayuda de X indica que una foto individual con una proporción estándar entre 2:1 y 3:4 puede mostrarse completa. La presentación exacta puede variar según el cliente y el diseño, así que mantén el sujeto lejos de los extremos y revisa la vista previa antes de publicar.
 
-El tamaño de 1200×675 elimina la discrepancia. La imagen ya es 16:9, por lo que la vista previa del feed 2:1 solo muestra el ancho completo a la altura normal, sin recortes inesperados.
+El tamaño 1200×675 ofrece una composición 16:9 predecible y un buen punto de partida para gráficos anchos. No sustituye la comprobación del compositor actual, sobre todo con fuentes verticales o varias imágenes.
 
 ## Paso a paso: cambiar el tamaño de X con FrameForge
 
@@ -73,7 +74,7 @@ Cambie el tamaño una vez por plataforma, exporte cada versión con unos pocos c
 1200×675 píxeles a 16:9. Esto llena la vista previa del feed sin recortar y se muestra en dimensiones completas cuando se expande. Mantenga el archivo por debajo de 5 MB para JPG/PNG.
 
 **¿X recorta imágenes en el feed?**
-Sí. X aplica un recorte central a las imágenes en línea en el feed de tweets, renderizándolas aproximadamente en 2:1. Las imágenes publicadas a 1200×675 px (16:9) coinciden con las proporciones de la vista previa del feed y aparecen sin recortes inesperados.
+Depende de la proporción de la imagen y del cliente. X dice que una foto individual con una proporción estándar entre 2:1 y 3:4 puede mostrarse completa; comprueba el compositor en lugar de suponer un recorte fijo 2:1. 1200×675 px es una opción práctica de 16:9 para publicaciones anchas.
 
 **¿FrameForge carga imágenes a un servidor?**
 No. FrameForge es una extensión de Chrome que procesa imágenes completamente en su navegador. No se envía nada a ningún servidor. No se requiere cuenta.
