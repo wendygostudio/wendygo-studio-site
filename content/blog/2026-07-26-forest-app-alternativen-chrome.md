@@ -18,4 +18,6 @@ Forest ist für den Baum-Ansatz und Fokusphasen bekannt. Eine Alternative ist si
 
 Wenn du nicht Produkte, sondern die beiden Motivationsprinzipien vergleichen willst, trennt der Leitfaden [Forest vs. Pomodoro-Timer](/de/blog/forest-vs-pomodoro-timer/) visuelle Bindung am Handy von einem Arbeits-Pausen-Rhythmus im Browser.
 
+Wenn du zuerst prüfen möchtest, ob Forest in Chrome funktioniert, lies den [Leitfaden zur Forest-Chrome-Erweiterung](/de/blog/forest-chrome-erweiterung-anleitung/). Er unterscheidet den offiziellen Eintrag von ähnlichen Themes und Erweiterungen.
+
 Teste zuerst den Ablauf: Dauer wählen, Ablenkungen schließen, Pause einhalten und nach einigen Tagen prüfen, ob du regelmäßiger startest. Ein Motivationssystem ist nur dann nützlich, wenn es dich nicht selbst ablenkt.

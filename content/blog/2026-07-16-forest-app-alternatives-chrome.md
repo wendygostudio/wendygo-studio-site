@@ -18,6 +18,8 @@ If you spend most of your focused work time in a browser and want something that
 
 If your decision is specifically about the motivation loop rather than a list of products, start with the [Forest vs Pomodoro timer comparison](/blog/forest-app-vs-pomodoro-timer/). It separates phone-first visual commitment from a browser-first work-and-break cadence.
 
+If you are checking whether Forest itself works in Chrome, see the new [Forest Chrome extension guide](/blog/forest-chrome-extension-guide/) first. It distinguishes the official browser listing from unrelated extensions and themes.
+
 ## What to Look For in a Forest Alternative
 
 Before comparing options, it helps to be clear about what you actually need from a focus timer. The main dimensions:

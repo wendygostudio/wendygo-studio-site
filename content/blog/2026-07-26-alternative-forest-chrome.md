@@ -18,4 +18,6 @@ Forest è noto per l'approccio con gli alberi e le sessioni di concentrazione. U
 
 Se vuoi confrontare i due meccanismi di motivazione invece di un elenco di prodotti, la guida [Forest o timer Pomodoro](/it/blog/forest-vs-timer-pomodoro/) distingue l'impegno visivo sul telefono dal ritmo lavoro-pausa nel browser.
 
+Se vuoi prima verificare se Forest funziona su Chrome, consulta la [guida all'estensione Forest per Chrome](/it/blog/guida-estensione-forest-chrome/), che distingue la scheda ufficiale da temi ed estensioni non collegate.
+
 Prova prima il ritmo: scegli una durata, elimina distrazioni, fai la pausa e verifica dopo alcuni giorni se inizi più regolarmente. Un sistema motivazionale non deve diventare una distrazione.
