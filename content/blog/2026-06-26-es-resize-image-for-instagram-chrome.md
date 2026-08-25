@@ -16,7 +16,7 @@ contentType: how-to
 primaryKeyword: >-
   cómo cambiar el tamaño de una imagen para publicaciones de Instagram en Chrome
   (1080×1080)
-relatedPages: /es/frameforge/
+relatedPages: /es/frameforge/,/es/blog/tamano-foto-perfil-instagram-zona-segura/
 ---
 
 # Cómo cambiar el tamaño de una imagen para publicaciones de Instagram en Chrome (1080×1080)

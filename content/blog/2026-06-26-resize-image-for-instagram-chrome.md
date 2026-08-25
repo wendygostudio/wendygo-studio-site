@@ -9,7 +9,7 @@ translationKey: resize-image-for-instagram-chrome
 product: frameforge
 contentType: how-to
 primaryKeyword: "how to resize an image for instagram posts in chrome (1080×1080)"
-relatedPages: /frameforge/
+relatedPages: /frameforge/,/blog/instagram-profile-picture-size-safe-area/
 ---
 
 # How to Resize an Image for Instagram Posts in Chrome (1080×1080)

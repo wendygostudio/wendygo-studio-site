@@ -16,7 +16,7 @@ contentType: how-to
 primaryKeyword: >-
   So ändern Sie die Größe eines Bildes für Instagram-Beiträge in Chrome (1080 ×
   1080)
-relatedPages: /de/frameforge/
+relatedPages: /de/frameforge/,/de/blog/instagram-profilbild-groesse-sicherheitsbereich/
 ---
 
 # So ändern Sie die Größe eines Bildes für Instagram-Beiträge in Chrome (1080×1080)
