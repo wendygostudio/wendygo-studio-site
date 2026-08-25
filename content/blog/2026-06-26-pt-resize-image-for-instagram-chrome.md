@@ -16,7 +16,7 @@ contentType: how-to
 primaryKeyword: >-
   como redimensionar uma imagem para publicações do Instagram no Chrome
   (1080×1080)
-relatedPages: /pt/frameforge/
+relatedPages: /pt/frameforge/,/pt/blog/tamanho-foto-perfil-instagram-area-segura/
 ---
 
 # Como redimensionar uma imagem para publicações do Instagram no Chrome (1080×1080)
