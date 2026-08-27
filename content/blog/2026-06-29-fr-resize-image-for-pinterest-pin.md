@@ -11,12 +11,13 @@ contentType: how-to
 primaryKeyword: >-
   comment redimensionner une image pour les épingles Pinterest en chrome
   (1000×1500)
-relatedPages: /fr/frameforge/
+relatedPages: /fr/frameforge/,/fr/blog/taille-couverture-profil-pinterest/
+sourceUrls: https://help.pinterest.com/en-gb/article/review-pin-specs,https://help.pinterest.com/en/business/article/pin-performance-and-distribution
 ---
 
-L'algorithme de Pinterest privilégie les épingles verticales. Lorsque vous dimensionnez des images pour la plate-forme, vous êtes en concurrence avec des milliers d'autres épingles pour l'espace dans les flux des utilisateurs – et les mauvaises dimensions sont rognées ou étirées.
+Pinterest prend en charge plusieurs formats d'épingles. Son [guide officiel des spécifications](https://help.pinterest.com/en-gb/article/review-pin-specs) publie des zones sûres selon le format, tandis que ses [conseils pour les entreprises](https://help.pinterest.com/en/business/article/pin-performance-and-distribution) recommandent un rapport 2:3 pour les images et vidéos d'épingles de 15 à 60 secondes. La toile 1 000 × 1 500 ci-dessous est une cible pratique en 2:3, pas une exigence universelle pour chaque épingle.
 
-La taille standard des épingles Pinterest est de **1 000 × 1 500 px** (rapport hauteur/largeur 2:3). Certains créateurs utilisent 1 000 × 1 200 px ou 1 000 × 1 300 px, mais le format 1 000 × 1 500 s'affiche parfaitement sur les flux mobiles et de bureau sans recadrage automatique.
+Utilisez **1 000 × 1 500 px** pour créer une épingle image nette au rapport 2:3. Gardez le texte et les éléments importants à distance des bords, car Pinterest publie des zones sûres et l'affichage peut varier selon l'appareil. Pour la couverture d'un profil professionnel, consultez le [guide séparé de taille de couverture Pinterest](/fr/blog/taille-couverture-profil-pinterest/).
 
 ## Le moyen le plus rapide : FrameForge
 

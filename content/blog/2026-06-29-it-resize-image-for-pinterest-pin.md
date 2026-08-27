@@ -12,12 +12,13 @@ translationKey: resize-image-for-pinterest-pin
 product: frameforge
 contentType: how-to
 primaryKeyword: come ridimensionare un'immagine per i pin di Pinterest in cromo (1000×1500)
-relatedPages: /it/frameforge/
+relatedPages: /it/frameforge/,/it/blog/dimensioni-copertina-profilo-pinterest/
+sourceUrls: https://help.pinterest.com/en-gb/article/review-pin-specs,https://help.pinterest.com/en/business/article/pin-performance-and-distribution
 ---
 
-L'algoritmo di Pinterest favorisce i pin verticali. Quando ridimensioni le immagini per la piattaforma, stai competendo con migliaia di altri segnaposti per lo spazio nei feed degli utenti e le dimensioni sbagliate vengono ritagliate o allungate.
+Pinterest supporta diversi formati di Pin. La [guida ufficiale alle specifiche](https://help.pinterest.com/en-gb/article/review-pin-specs) pubblica zone sicure in base al formato, mentre la [guida per le aziende](https://help.pinterest.com/en/business/article/pin-performance-and-distribution) consiglia un rapporto 2:3 per immagini e video Pin da 15 a 60 secondi. La tela 1000×1500 qui sotto è un obiettivo pratico 2:3, non un requisito universale per ogni Pin.
 
-La dimensione standard dei pin Pinterest è **1000×1500 px** (proporzioni 2:3). Alcuni creatori utilizzano 1000×1200 px o 1000×1300 px, ma il formato 1000×1500 viene visualizzato perfettamente sia sui feed mobili che su quelli desktop senza ritaglio automatico.
+Usa **1000×1500 px** quando vuoi creare un Pin immagine pulito in 2:3. Tieni testo ed elementi importanti lontani dai bordi, perché Pinterest pubblica zone sicure e la visualizzazione può variare in base al dispositivo. Per la copertina di un profilo aziendale, consulta la [guida separata alle dimensioni della copertina Pinterest](/it/blog/dimensioni-copertina-profilo-pinterest/).
 
 ## Il modo più veloce: FrameForge
 

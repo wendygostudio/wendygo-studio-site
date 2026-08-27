@@ -12,12 +12,13 @@ translationKey: resize-image-for-pinterest-pin
 product: frameforge
 contentType: how-to
 primaryKeyword: So ändern Sie die Größe eines Bildes für Pinterest-Pins in Chrom (1000 × 1500)
-relatedPages: /de/frameforge/
+relatedPages: /de/frameforge/,/de/blog/pinterest-profilcover-groesse/
+sourceUrls: https://help.pinterest.com/en-gb/article/review-pin-specs,https://help.pinterest.com/en/business/article/pin-performance-and-distribution
 ---
 
-Der Algorithmus von Pinterest bevorzugt vertikale Pins. Wenn Sie Bilder für die Plattform anpassen, konkurrieren Sie mit Tausenden anderen Pins um Platz in den Feeds der Benutzer – und die falschen Abmessungen werden beschnitten oder gestreckt.
+Pinterest unterstützt mehrere Pin-Formate. Die [offizielle Pin-Anleitung](https://help.pinterest.com/en-gb/article/review-pin-specs) veröffentlicht formatspezifische Sicherheitsbereiche; die [Business-Anleitung](https://help.pinterest.com/en/business/article/pin-performance-and-distribution) empfiehlt für Bild- und Video-Pins von 15 bis 60 Sekunden ein Verhältnis von 2:3. Die folgende Fläche 1000 × 1500 ist ein praktisches 2:3-Ziel, aber keine universelle Vorgabe für jeden Pin.
 
-Die Standardgröße für Pinterest-Pins beträgt **1000×1500 px** (Seitenverhältnis 2:3). Einige Ersteller verwenden 1000×1200 Pixel oder 1000×1300 Pixel, aber das 1000×1500-Format wird sowohl auf Mobil- als auch auf Desktop-Feeds ohne automatisches Zuschneiden perfekt angezeigt.
+Verwenden Sie **1000 × 1500 Pixel**, wenn Sie einen sauberen Bild-Pin im Verhältnis 2:3 erstellen möchten. Halten Sie wichtige Texte und Bildelemente vom Rand fern, da Pinterest Sicherheitsbereiche veröffentlicht und die Darstellung je nach Gerät variieren kann. Für ein Cover eines Unternehmensprofils gibt es den separaten [Leitfaden zur Pinterest-Profilcover-Größe](/de/blog/pinterest-profilcover-groesse/).
 
 ## Der schnellste Weg: FrameForge
 

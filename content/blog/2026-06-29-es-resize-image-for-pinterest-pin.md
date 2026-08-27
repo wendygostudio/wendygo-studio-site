@@ -14,12 +14,13 @@ contentType: how-to
 primaryKeyword: >-
   cómo cambiar el tamaño de una imagen para pines de Pinterest en Chrome
   (1000×1500)
-relatedPages: /es/frameforge/
+relatedPages: /es/frameforge/,/es/blog/tamano-portada-perfil-pinterest/
+sourceUrls: https://help.pinterest.com/es/article/review-pin-specs,https://help.pinterest.com/en/business/article/pin-performance-and-distribution
 ---
 
-El algoritmo de Pinterest favorece los pines verticales. Cuando dimensionas imágenes para la plataforma, estás compitiendo con miles de otros pines por espacio en los feeds de los usuarios, y las dimensiones incorrectas se recortan o estiran.
+Pinterest admite varios formatos de pin. Su [guía oficial de especificaciones](https://help.pinterest.com/es/article/review-pin-specs) publica zonas seguras según el formato, y su [guía para empresas](https://help.pinterest.com/en/business/article/pin-performance-and-distribution) recomienda una relación 2:3 para imágenes y vídeos Pin de entre 15 y 60 segundos. El lienzo 1000×1500 de abajo es un objetivo práctico 2:3, no un requisito universal para todos los pines.
 
-El tamaño estándar del pin de Pinterest es **1000×1500 px** (relación de aspecto 2:3). Algunos creadores utilizan 1000×1200 px o 1000×1300 px, pero el formato 1000×1500 se muestra perfectamente tanto en feeds móviles como de escritorio sin recorte automático.
+Usa **1000×1500 px** cuando quieras un pin de imagen limpio en 2:3. Mantén el texto y los elementos importantes alejados de los bordes, porque Pinterest publica zonas seguras y la presentación final puede variar según el dispositivo. Si preparas la portada de un perfil empresarial, consulta la [guía independiente del tamaño de portada de Pinterest](/es/blog/tamano-portada-perfil-pinterest/).
 
 ## La forma más rápida: FrameForge
 

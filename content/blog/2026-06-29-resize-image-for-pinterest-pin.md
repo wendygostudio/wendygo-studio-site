@@ -9,12 +9,13 @@ translationKey: resize-image-for-pinterest-pin
 product: frameforge
 contentType: how-to
 primaryKeyword: "how to resize an image for pinterest pins in chrome (1000×1500)"
-relatedPages: /frameforge/,/blog/resize-image-for-tiktok-profile-picture/,/blog/resize-image-for-x-twitter-post/
+relatedPages: /frameforge/,/blog/resize-image-for-tiktok-profile-picture/,/blog/resize-image-for-x-twitter-post/,/blog/pinterest-profile-cover-size/
+sourceUrls: https://help.pinterest.com/en-gb/article/review-pin-specs,https://help.pinterest.com/en/business/article/pin-performance-and-distribution
 ---
 
-Pinterest's algorithm favors vertical pins. When you size images for the platform, you are competing with thousands of other pins for space in users' feeds — and the wrong dimensions get cropped or stretched.
+Pinterest supports several Pin formats. Its [official Pin guidance](https://help.pinterest.com/en-gb/article/review-pin-specs) publishes format-specific safe zones, while its [business guidance](https://help.pinterest.com/en/business/article/pin-performance-and-distribution) recommends a 2:3 ratio for image and video Pins between 15 and 60 seconds. The 1000×1500 canvas below is a practical 2:3 export target, not a universal requirement for every Pin.
 
-The standard Pinterest pin size is **1000×1500 px** (2:3 aspect ratio). Some creators use 1000×1200 px or 1000×1300 px, but the 1000×1500 format displays perfectly on both mobile and desktop feeds with no auto-cropping.
+Use **1000×1500 px** when you want a clean 2:3 image Pin. Keep important text and visual elements away from the edges, because Pinterest publishes safe-zone guidance and the final presentation can vary by device. If you are preparing a business profile cover instead, use the separate [Pinterest profile cover size guide](/blog/pinterest-profile-cover-size/).
 
 ## The Fastest Way: FrameForge
 
