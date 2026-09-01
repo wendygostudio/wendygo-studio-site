@@ -56,6 +56,8 @@ A gamificação � o objetivo: apès 5 sessões focadas de 60 minutos, o teu sl
 
 O temporizador não bloqueia sites (ao contrário do Strict Workflow). Motiva através de recompensa, não de restrição. Continua responsável por encerrar as distrações; a extensão apenas torna o foco visível e gratificante.
 
+Para programação assistida por IA, transforme a sessão num resultado que possa rever: defina uma alteração pequena, peça um patch limitado e reserve tempo para ler o diff e executar o teste relevante. [Veja o fluxo Pomodoro com revisão para programação assistida por IA](/pt/blog/pomodoro-programacao-assistida-ia/).
+
 ## Comparando opções
 
 Se pretender uma contagem decrescente mínima, utilize o Marinara Timer num separador do navegador. Se pretende bloquear sites, o Strict Workflow. Mas se quiser um temporizador, vai abri-lo todos os dias porque algo que lhe interessa vive nele - um slime que é seu, uma sequência que não quer quebrar - o SlimeForge foi criado para isso.

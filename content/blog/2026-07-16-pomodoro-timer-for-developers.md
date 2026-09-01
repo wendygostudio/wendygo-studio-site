@@ -48,6 +48,8 @@ The gamification is the point: after 5 focused 60-minute sessions, your slime re
 
 The timer doesn't block sites (unlike Strict Workflow). It motivates through reward, not restriction. You stay responsible for closing distractions; the extension just makes focus visible and rewarding.
 
+For AI-assisted coding, make the session outcome reviewable: define one small change, ask for a narrow patch, then reserve time to read the diff and run the relevant test. [See the full review-first Pomodoro workflow for AI-assisted coding](/blog/ai-assisted-coding-pomodoro-workflow/).
+
 ## Comparing Options
 
 If you want a minimal countdown, use Marinara Timer in a browser tab. If you want site blocking, Strict Workflow. But if you want a timer you'll actually open every day because something you care about lives in it — a slime that's yours, a streak you don't want to break — SlimeForge is built for that.

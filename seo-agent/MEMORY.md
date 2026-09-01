@@ -1,5 +1,45 @@
 # Memoria del Proyecto — Wendygo Studio
 
+## Monthly 2026-09-01
+
+- GSC exacto 28d: 249 impresiones/1 clic/CTR 0,4016 %/posición 59,67 frente a 3.844/17/0,4422 %/42,97. La ruptura empieza el 02-08; es una regresión crítica sin causa probada.
+- No hay bloqueo global: las seis homes, Forest y PDF pasan URL Inspection; robots, fetch y canonicals correctos. Producción tiene 798 URLs y local 816; quedan 18 URLs (tres grupos × seis idiomas) sin exposición.
+- Puerta técnica: 882 HTML, 816 canónicas, seis locales, tests 7/7 y validadores independientes 0; global bloqueada por 9 hubs, 12 páginas de producto y 636/843 switchers desincronizados. Encoding: 26 fuentes/199 `U+FFFD`, 30 HTML/234.
+- GA4 403 + `invalid_grant`; CWS sin exports; Plausible realmente no configurada (clave y site ID vacíos); PageSpeed 429. No afirmar instalaciones, activación, sesiones o CWV actual.
+- Catálogo: ScrubForge público 1.15.0 vs local 1.13.1; claims de FrameForge/ScrubForge y “GA4 actual” de SlimeForge necesitan paridad. Precios no cambian.
+- Ciclo 02-09→01-10: recuperación, medición y catálogo antes de nuevas URLs. Informe: `journal/monthly-2026-09-01.md`.
+
+## Weekly 2026-09-01
+
+- GSC final 2026-08-23–29 frente a 2026-08-16–22: 45 vs 53 impresiones (−15,1 %), 0 clics en ambos, CTR 0 % y posición 63,47 vs 70,45. Reclamación UE subió 9→16; PDF francés 9→0; Forest 7→4; Instagram perfil debutó con 3 impresiones. Sin consulta multipágina visible.
+- GA4 continúa en 403 + `invalid_grant`; Plausible volvió a 401 y CWS no tiene exports. No afirmar sesiones, conversiones, instalaciones ni activación.
+- Superficie final tras una entrega Daily concurrente: 882 HTML/0 incidencias, 816 canónicas/6 locales/0 errores, enlaces internos rotos 0 y tests 7/7. La puerta global está bloqueada por 9 hubs; check directo: 636 switchers desincronizados. Encoding bloquea por 22 HTML. Las seis páginas concurrentes del 1 de septiembre no pertenecen a la Weekly.
+- CWS público: cinco versiones coinciden; ScrubForge 1.15.0/6 idiomas sigue frente a catálogo 1.13.1. SlimeForge público 1.9.13; ZIP local 2.2.0 no publicado y paridad 746/746 en seis locales.
+- Experimentos siguientes: recuperar baseline GA4/Plausible/CWS; restaurar puerta de entrega; reconciliar ScrubForge. Forest se observa sin cambios hasta 2026-09-07. Outreach PomoPals revalidado y no enviado. Informe: `journal/weekly-2026-09-01.md`.
+
+## Weekly 2026-08-24
+
+- GSC final 2026-08-15–21 frente a 2026-08-08–14: 58 vs 94 impresiones, 0 vs 1 clic, CTR 0 % vs 1,06 % y posición 69,57 vs 60,81. Forest fue la mayor caída visible (28→7 impresiones); imagen subió 13→17 en filas por página. No hay canibalización semanal concluyente.
+- Ventana GSC de 28 días hasta el 21-08: Forest 233 impresiones/posición 25,3, Pomodoro 54/24,3, garantía UE 42/16,2, desistimiento 22/29, X 17/14,9 e Instagram 12/17. No apilar cambios sobre contenido reciente; la guía Forest del 23-08 aún está fuera del periodo final.
+- GA4 continúa en 403 + `invalid_grant`; CWS no tiene exports; Plausible respondió HTTP 401. No afirmar instalaciones, activación, conversiones ni sesiones.
+- Superficie final observada: 852 HTML, 786 canónicas, seis locales, validadores independientes en 0, tests 7/7 y enlaces internos rotos 0. `npm run validate` quedó bloqueado porque los seis índices de blog no se regeneraron tras una entrega concurrente del 24-08; excluir esa entrega de la autoría de la Weekly.
+- Deuda histórica de encoding: 26 fuentes/199 `U+FFFD`, 30 HTML/234; lint bloquea por 23 archivos. Último Lighthouse es del 11-08 y ya no es actual porque la home cambió el 19-08.
+- Catálogo CWS: cinco productos coinciden; ScrubForge público 1.15.0/6 idiomas frente a catálogo local 1.13.1. SlimeForge público sigue 1.9.13 y el artefacto local 2.2.0 no se trata como publicado; paridad local 746/746 por seis locales.
+- Experimentos: recuperar baseline GA4/Plausible/CWS; reconciliar ScrubForge 1.15.0; medir separación de intención Forest tras 14 días finales. Outreach PomoPals actualizado, no enviado. Informe: `journal/weekly-2026-08-24.md`.
+
+## Daily 2026-08-20
+
+- GSC final 2026-07-21–17: 50 consultas, 50 páginas y 250 pares. Oportunidad seleccionada: CloudConvert (68 impresiones, posición 43,5); se creó comparación CloudConvert vs conversor local en seis idiomas y se actualizaron las seis guías existentes con límites oficiales actuales.
+- Validación: 834 HTML, 768 canónicas, 6 locales, 0 errores, tests 7/7, auditoría estática 0. GA4/CWS/Plausible bloqueados; DEV.to bloqueado por SSL; Bluesky publicó una nota útil en `3mtjgp6yxee24`. Encoding lint: 23 archivos históricos con deuda.
+
+## Baseline Weekly 2026-08-18
+
+- GSC final 2026-08-09–15 frente a 2026-08-02–08: 98 vs 53 impresiones, 1 vs 0 clics, CTR 1,02 % vs 0 % y posición media 61,26 vs 42,72. El aumento procede en gran parte de descubrimiento en posiciones bajas; no declararlo como mejora general de ranking.
+- Foco/productividad es el clúster más consistente: 22→28 impresiones y posición ponderada 39,55→35,79. Consumo UE y conversión crecieron en posiciones 66–99.
+- GA4 sigue bloqueado (403 + OAuth `invalid_grant`), CWS no tiene exports y Plausible no está configurado. La línea base GA4 manual hasta el 12-08 es histórica y sus CSV ya no están en el workspace.
+- Deuda oculta de codificación: 26 fuentes con 199 `U+FFFD`; 30 HTML públicos con 234. Los validadores actuales no la detectan.
+- Experimentos siguientes: recuperar baseline GA4/CWS; alinear intención de `how-to-file-consumer-complaint-eu`; outreach individual a PomoPals solo con aprobación.
+
 ## LÃ­nea base GA4 manual (2026-08-13)
 
 - Seis exportaciones `Informe_panorÃ¡mico*.csv` cubren 2026-05-15â€“2026-08-12.
@@ -139,8 +179,8 @@ Formato:
     resize-image-for-pinterest-pin / redimensionar-imagen-pinterest en la
     siguiente lectura de Search Console."
   measurement_date: 2026-08-26
-  status: pending
-  result: ""
+  status: inconclusive
+  result: "Sin lift observado en la fecha prevista: lectura final hasta 2026-08-24 = 21 impresiones y posición 22,3 frente al baseline 36/17,0. La página recibió cambios adicionales el 2026-08-27, por lo que no existe una ventana limpia posterior para atribuir el resultado al enlazado del 27 de julio."
 - id: 2
   date: 2026-08-14
   hypothesis: "Una comparación Forest vs Pomodoro con intención propia y enlaces recíprocos puede ampliar el cluster de foco sin canibalizar las guías existentes. El baseline observado es 337 impresiones/posición 23,2 para forest-app-alternatives-chrome y 59 impresiones/posición 23,5 para pomodoro-timer-chrome-extension."
@@ -148,12 +188,39 @@ Formato:
   expected: "Primeras impresiones para la URL nueva y mejora de impresiones o posición en al menos una de las dos páginas soporte, sin caída simultánea atribuible a canibalización."
   measurement_date: 2026-09-11
   status: pending
-  result: ""
+  result: "Primera señal observada: 2 impresiones y posición 54 para la URL EN en la ventana final hasta 2026-08-29. Sigue pendiente hasta 2026-09-11; no apilar cambios."
+- id: 3
+  date: 2026-08-28
+  hypothesis: "Una guía separada sobre Kubernetes Secret data frente a stringData puede captar la intención de elección de manifiesto alrededor de la página Base64 existente sin canibalizar la codificación ni el saneamiento."
+  action: "Publicadas localmente seis URLs de kubernetes-secret-data-vs-stringdata con fuentes oficiales, FAQ schema y enlaces recíprocos desde las seis guías Base64."
+  expected: "Primeras impresiones para las seis URLs nuevas y mejora o mejor reparto de consultas del cluster Base64, sin enlaces rotos ni caída atribuible en las guías soporte."
+  measurement_date: 2026-09-11
+  status: pending
+  result: "Sin exposición externa al 2026-09-01: la URL EN devuelve 404 y el grupo no está en el sitemap live. Mantener pendiente; medir 14 días después de una publicación aprobada."
+- id: 4
+  date: 2026-09-01
+  hypothesis: "Una guía de Pomodoro centrada en programación asistida por IA puede captar una intención adyacente de control y revisión, respaldada por una discusión reciente de desarrolladores, sin duplicar la guía general para desarrolladores."
+  action: "Publicadas localmente seis URLs de ai-assisted-coding-pomodoro-workflow con fuentes de la Técnica Pomodoro y la discusión de Hacker News; añadidos enlaces recíprocos desde las seis versiones de pomodoro-timer-for-developers."
+  expected: "Primeras impresiones para las seis URLs nuevas y mejor distribución del cluster Pomodoro/desarrolladores, sin canibalización ni enlaces internos rotos."
+  measurement_date: 2026-09-15
+  status: pending
+  result: "Sin exposición externa al 2026-09-01: el grupo está solo en local. Mantener pendiente; medir 14 días después de una publicación aprobada."
 ```
 
 ---
 
 ## 3. Historial de ejecuciones recientes (rolling log)
+
+Una línea por ejecución, más reciente arriba. Mantén máximo 15 líneas; al
+añadir una nueva, elimina la más antigua si ya hay 15.
+
+- **2026-09-01 (weekly)**: GSC final 45 impresiones/0 clics/posición 63,47 vs 53/0/70,45. GA4/Plausible/CWS siguen bloqueados. Validación final tras una entrega Daily concurrente: 882 HTML, 816 canónicas, seis locales, 0 errores, tests 7/7 y enlaces rotos 0; puerta global bloqueada por 9 hubs y 636 switchers desincronizados. ScrubForge público 1.15.0 frente a catálogo 1.13.1. Tres prioridades: medición, puerta técnica y reconciliación ScrubForge. Sin commit, push ni publicaciones; informe `journal/weekly-2026-09-01.md`.
+
+- **2026-09-01 (daily)**: GSC refrescado para 2026-08-02→2026-08-29 (50 páginas, 50 consultas, 55 pares; 45 impresiones/0 clics/posición 63,47; semana final 45/0/63,47 frente a 53/0/70,45). Oportunidad basada en pain scan reciente de desarrolladores y el cluster Pomodoro: nueva guía de programación asistida por IA en seis idiomas, con enlaces recíprocos desde `pomodoro-timer-for-developers`. Tests 7/7, 882 HTML/816 canónicas, validadores independientes 0; `npm run validate` bloqueado por 9 hubs históricos y encoding por 22 HTML. DEV.to bloqueado por TLS; Bluesky revisado sin conversación accionable y sin publicación. Sin commit/push por la puerta global; journal en `seo-agent/journal/2026-09-01.md`.
+
+- **2026-08-28 (daily)**: GSC final 2026-07-29→2026-08-25 (50 consultas, 50 páginas, 185 pares; 40 impresiones/0 clics/posición 73,70 frente a 80/1/71,51). Oportunidad Base64/Kubernetes (12 impresiones, posición 31,9): nueva guía `data` vs `stringData` en seis idiomas y enlaces recíprocos desde las seis guías Base64. Tests 7/7, 876 HTML/810 canónicas y validadores independientes 0; `npm run validate` bloqueado por 9 hubs históricos y encoding por 22 HTML. DEV.to bloqueado por TLS y sin duplicado público; Bluesky recibió un único like relevante. Sin commit/push por la puerta global; journal en `seo-agent/journal/2026-08-28.md`.
+
+- **2026-08-18 (weekly)**: GSC semanal final 98 impresiones/1 clic vs 53/0; foco mejora modestamente, el crecimiento restante es descubrimiento en posiciones bajas. Baseline 816 HTML/750 canónicas; validación final con cambios concurrentes ajenos 822/756, 0 errores, tests 7/7. GA4/CWS/Plausible bloqueados; 26 fuentes mantienen 199 caracteres de sustitución. Tres experimentos definidos; sin publicación, commit ni push.
 
 - **2026-08-14 (daily)**: GSC refrescado (2026-07-15→2026-08-11); creada la comparación Forest vs Pomodoro en seis idiomas y mejoradas las guías Forest, Pomodoro FR y carrusel LinkedIn ES. Validación 804 HTML/738 canónicas, 0 errores, tests 7/7. GA4/CWS/Plausible siguen bloqueados; detectada deuda de codificación en 32 fuentes. DEV.to y Bluesky solo lectura, sin publicación.
 - **2026-08-11 (resolución de bloqueos)**: retiradas y archivadas 28 fuentes localizadas duplicadas del 26-07; la deuda de traducción queda cerrada y la validación pasa con 790 URLs canónicas/792 HTML. Añadido `analytics:refresh` en Node; Search Console y GA4 devuelven `invalid_grant`, y PageSpeed público respondió 429.
@@ -173,14 +240,3 @@ Formato:
 
 - **2026-07-31 (daily)**: mejorado el snippet de `cyberchef-alternatives` (53 impresiones, posición 13,2, CTR 1,89 %) con un título y una meta description orientados a herramientas de texto de uso diario; corregida además una colisión de slug en la traducción ES de `free-config-sanitizer-alternatives`. Validación completa: 0 errores y 7/7 tests.
 - **2026-07-31 (daily 2)**: mejorado el snippet de `forest-app-alternatives-chrome` (163 impresiones, posición 21,4, CTR 0 %) con un título y una descripción completos orientados a alternativas de Forest para Chrome. En la misma ejecución se completaron las traducciones ES estructuradas de Forest y CyberChef; no se creó URL nueva de producto.
-- **2026-07-31 (paridad EN/ES)**: corregidas las seis páginas públicas EN que no tenían destino ES recíproco. Se añadieron cinco traducciones ES desde fuentes estructuradas y se normalizó el artículo heredado de secretos de Kubernetes con fuente EN/ES. Resultado: 86/86 páginas EN con `hreflang` ES y validación sin errores.
-
-- **2026-07-29 (daily)**: mejorado el snippet de `resize-image-for-tiktok-profile-picture` (128 impresiones, posición 15,3, CTR 0,78 %) con un título y una meta description más específicos para 400x400/512x512 y procesamiento local. No se publicó URL nueva; validación 465 HTML/462 canónicas/6 idiomas sin errores.
-- **2026-07-29 (daily 2)**: segunda pasada secuencial del día; mejorado el snippet de `eu-warranty-rights-explained` (55 impresiones, posición 15,4, 0 clics) con un título más corto y una descripción orientada a reparación/reemplazo. Sin URL nueva; validación completa sin errores.
-
-Una línea por ejecución, más reciente arriba. Mantén máximo 15 líneas — al
-añadir una nueva, elimina la más antigua si ya hay 15.
-
-- **2026-07-28 (daily)**: enlazado interno hacia `credit-card-chargeback-eu` (pos 15.4, solo 2 enlaces reales) añadiendo 4 links naturales (2 EN + 2 ES) desde artículos ClaimForge que ya mencionaban "chargeback" en texto de escalada. Publicado artículo SlimeForge sobre "gamified pomodoro timer" (gap no cubierto, 700+ palabras, 3 schemas, 3 internal links, validación OK). `ensure-language-switchers.mjs` requiere ejecución manual antes de `validate` — situación pre-existente al día.
-- **2026-07-27 (weekly)**: auditoría técnica completa (0 errores en toda la cadena de validación + 7/7 tests). Hallazgo crítico: 25 artículos de ClaimForge (GDPR/garantía/reparación, sobre todo DE/FR/IT/PT) sin aviso legal por un bug de casing (`ClaimForge` vs `claimforge`) en `render-blog.mjs`, agravado porque `validate-governance.mjs` solo comprobaba en/es. Ambos corregidos y verificados. Observación de contenido: 0 artículos de tipo `comparison` (existe como categoría distinta de `alternatives` mas no se usa). Sin gap competitivo nuevo ni outreach preparado esta semana — no es la palanca de mayor retorno todavía. Informe completo en `journal/weekly-2026-07-27.md`.
-- **2026-07-27 (daily)**: primera ejecución con el prompt Growth Engineer. Corregida codificación rota de `analytics-data.json` (5 bytes Latin-1 sueltos). `analytics-fetch.py` no puede correr desde este sandbox (deps + ruta Windows hardcodeada) — pendiente de refrescar datos desde la máquina real. Detectado hueco real de enlazado interno en `resize-image-for-pinterest-pin` (0 enlaces entrantes) vs. otras páginas en posición 8-20 ya bien enlazadas; añadidos 6 enlaces (3 EN + 3 ES). Experimento `id: 1` registrado, medir 2026-08-26. No se publicó artículo nuevo — sin justificación de mayor impacto que el enlazado.

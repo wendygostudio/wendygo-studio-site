@@ -30,6 +30,10 @@
 
 ## Editorial sources
 - Cite the original article URL when summarizing a guide; keep product claims aligned with the product landing page.
+- Pomodoro for AI-Assisted Coding: A Review-First Workflow: https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/ — Use focused coding intervals to keep AI-assisted work reviewable: define one task, inspect small changes, take real breaks and stop on time.
+- Kubernetes Secret data vs stringData: When Base64 Is Required: https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/ — Learn when Kubernetes Secret manifests need Base64 in data, when stringData is simpler, and how to choose a safe local workflow without treating encoding as encryption.
+- Chrome Extension Permissions: A Safe-Install Checklist: https://wendygostudio.com/blog/chrome-extension-permissions-checklist/ — Learn how to read Chrome extension permission warnings, compare them with the feature you need, and test a focus tool before granting access.
+- Pinterest Profile Cover Size: 800×450 and 16:9 Guide: https://wendygostudio.com/blog/pinterest-profile-cover-size/ — Prepare a Pinterest business profile cover at least 800×450 pixels with a practical 16:9 crop. Keep important branding visible and resize locally in Chrome.
 - Instagram Profile Picture Size: Square Crop and Safe Area Guide: https://wendygostudio.com/blog/instagram-profile-picture-size-safe-area/ — Prepare an Instagram profile picture as a sharp square with a circular safe area. Learn what Instagram publishes, what is only a practical target, and how to crop locally in Chrome.
 - X (Twitter) Profile Picture and Header Size Guide: https://wendygostudio.com/blog/x-twitter-profile-header-image-size/ — Prepare an X profile picture and header that stay readable: official dimensions, crop-safe composition and a local Chrome workflow.
 - Does Forest Work on Chrome? What the Browser Extension Does: https://wendygostudio.com/blog/forest-chrome-extension-guide/ — Learn what the official Forest Chrome extension can do, how its focus loop differs from a Pomodoro timer, and which privacy claims to verify before installing.
@@ -50,10 +54,6 @@
 - Focus Timer with a Virtual Pet: A More Visible Way to Build a Habit: https://wendygostudio.com/blog/focus-timer-virtual-pet-chrome-extension/ — A focus timer with a virtual pet turns completed sessions into visible progress. Learn when this loop helps and how to use it without distraction.
 - Remove Secrets from Kubernetes Config Files: https://wendygostudio.com/blog/remove-secrets-kubernetes-config/ — Sanitize Kubernetes YAML before sharing it with support or AI assistants. Remove API keys, credentials and tokens locally with ScrubForge.
 - How to Sanitize an Arista EOS Config Before Sharing: https://wendygostudio.com/blog/sanitize-arista-config/ — Arista EOS 'show running-config' output carries enable secrets, SNMP communities, BGP neighbor passwords, and MLAG shared secrets. Here's what to strip before pasting into an AI chat or a support case.
-- How to Sanitize a Check Point Config Before Sharing: https://wendygostudio.com/blog/sanitize-checkpoint-config/ — A Check Point Gaia/SmartConsole config export carries admin password hashes, SIC activation keys, VPN pre-shared secrets, and RADIUS/TACACS shared secrets. Here's what to strip before pasting into an AI chat or a TAC case.
-- How to Sanitize a Huawei VRP Config Before Sharing: https://wendygostudio.com/blog/sanitize-huawei-config/ — Huawei VRP 'display current-configuration' output carries irreversible-cipher password hashes, SNMP communities, and OSPF/BGP MD5 authentication keys. Here's what to strip before pasting into an AI chat or a support case.
-- How to Sanitize a Juniper JunOS Config Before Sharing: https://wendygostudio.com/blog/sanitize-juniper-config/ — JunOS 'show configuration' output carries root-authentication hashes, SNMP communities, and BGP/OSPF authentication keys. Here's what to strip before pasting into an AI chat or a ticket.
-- How to Sanitize a Palo Alto PAN-OS Config Before Sharing: https://wendygostudio.com/blog/sanitize-paloalto-config/ — A PAN-OS 'show config running' or set-format export carries admin password hashes, IKE pre-shared keys, and RADIUS/LDAP bind secrets. Here's what to strip before pasting into an AI chat or a support case.
 
 ## Retrieval map
 

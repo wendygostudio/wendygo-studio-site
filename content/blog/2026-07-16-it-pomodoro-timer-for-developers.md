@@ -56,6 +56,8 @@ Il punto è la gamification: dopo 5 sessioni mirate da 60 minuti, il tuo slime r
 
 Il timer non blocca i siti (a differenza di Strict Workflow). Motiva attraverso la ricompensa, non la restrizione. Rimani responsabile della chiusura delle distrazioni; l'estensione rende semplicemente visibile e gratificante l'attenzione.
 
+Per la programmazione assistita dall'IA, rendi il risultato della sessione verificabile: definisci una piccola modifica, chiedi una patch limitata e lascia tempo per leggere il diff ed eseguire il test pertinente. [Scopri il flusso Pomodoro con revisione per la programmazione assistita dall'IA](/it/blog/pomodoro-programmazione-assistita-ia/).
+
 ## Confronto delle opzioni
 
 Se desideri un conto alla rovescia minimo, utilizza Marinara Timer in una scheda del browser. Se desideri il blocco del sito, Strict Workflow. Ma se vuoi un timer che aprirai davvero ogni giorno perché qualcosa a cui tieni ci vive dentro - uno slime che è tuo, una serie che non vuoi interrompere - SlimeForge è costruito per questo.

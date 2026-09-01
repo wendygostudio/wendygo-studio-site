@@ -10,9 +10,10 @@ product: slimeforge
 contentType: how-to
 primaryKeyword: "mon extension Chrome m'espionne-t-elle"
 relatedPages: /slimeforge/
+sourceUrls: https://support.google.com/chrome_webstore/answer/186213?hl=en,https://developer.chrome.com/docs/extensions/develop/security-privacy/user-privacy?hl=en
 ---
 
-Si tu utilises une extension Chrome ou Edge pour gérer ta concentration, tes en-têtes, tes mots de passe ou autre chose, le retrait de ModHeader mérite cinq minutes de ton temps. Pas parce que ModHeader était un outil marginal — elle comptait 1,6 million d'installations et une décennie de confiance —, mais à cause de la manière précise dont elle cachait ce qu'elle faisait.
+Si tu utilises une extension Chrome ou Edge pour gérer ta concentration, tes en-têtes, tes mots de passe ou autre chose, le retrait de ModHeader mérite cinq minutes de ton temps. Pas parce que ModHeader était un outil marginal — elle comptait 1,6 million d'installations et une décennie de confiance —, mais à cause de la manière précise dont elle cachait ce qu'elle faisait. Pour vérifier une installation avant d’accorder l’accès, consulte aussi la nouvelle [checklist des permissions d’une extension Chrome](/blog/chrome-extension-permissions-checklist/).
 
 > **Ce qui s'est réellement passé**
 > Le 3 juillet 2026, Microsoft a retiré ModHeader du magasin de modules complémentaires d'Edge. Le 10 juillet, Google a fait de même en la retirant du Chrome Web Store. La société de sécurité [Stripe OLT](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html) a découvert que l'extension officielle, signée cryptographiquement, contenait un collecteur complet d'historique de navigation : il générait une empreinte de l'appareil, chiffrait le domaine de chaque page visitée, et était conçu pour envoyer la liste quotidiennement à un serveur externe. Le collecteur n'était pas actif — une liste d'autorisation interne vide le maintenait désactivé — mais l'activer n'aurait nécessité qu'une mise à jour de routine, sans nouvelle permission, sans aucun clic de l'utilisateur.

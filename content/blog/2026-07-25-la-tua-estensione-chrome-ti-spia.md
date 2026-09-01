@@ -10,9 +10,10 @@ product: slimeforge
 contentType: how-to
 primaryKeyword: "la mia estensione Chrome mi spia"
 relatedPages: /slimeforge/
+sourceUrls: https://support.google.com/chrome_webstore/answer/186213?hl=en,https://developer.chrome.com/docs/extensions/develop/security-privacy/user-privacy?hl=en
 ---
 
-Se usi un'estensione Chrome o Edge per gestire la tua concentrazione, le tue intestazioni HTTP, le tue password o altro, la rimozione di ModHeader merita cinque minuti del tuo tempo. Non perché ModHeader fosse uno strumento marginale — aveva 1,6 milioni di installazioni e un decennio di fiducia — ma per il modo esatto in cui nascondeva ciò che faceva.
+Se usi un'estensione Chrome o Edge per gestire la tua concentrazione, le tue intestazioni HTTP, le tue password o altro, la rimozione di ModHeader merita cinque minuti del tuo tempo. Non perché ModHeader fosse uno strumento marginale — aveva 1,6 milioni di installazioni e un decennio di fiducia — ma per il modo esatto in cui nascondeva ciò che faceva. Per controllare un’installazione prima di concedere l’accesso, consulta anche la nuova [checklist sui permessi delle estensioni Chrome](/blog/chrome-extension-permissions-checklist/).
 
 > **Cosa è successo realmente**
 > Il 3 luglio 2026, Microsoft ha rimosso ModHeader dallo store di componenti aggiuntivi di Edge. Il 10 luglio, Google ha fatto lo stesso rimuovendola dal Chrome Web Store. La società di sicurezza [Stripe OLT](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html) ha scoperto che l'estensione ufficiale, firmata crittograficamente, conteneva un raccoglitore completo di cronologia di navigazione: generava un'impronta del dispositivo, cifrava il dominio di ogni pagina visitata, ed era progettata per caricare l'elenco quotidianamente su un server esterno. Il raccoglitore non era attivo — una lista di autorizzazione interna vuota lo teneva disattivato — ma attivarla avrebbe richiesto solo un aggiornamento di routine, senza nuovi permessi, senza alcun clic da parte dell'utente.

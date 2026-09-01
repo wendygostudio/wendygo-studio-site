@@ -12,7 +12,7 @@ translationKey: base64-encode-kubernetes-secrets
 product: textforge
 contentType: how-to
 primaryKeyword: comment encoder en base64 les secrets de Kubernetes sans outil Web
-relatedPages: /textforge/
+relatedPages: /fr/textforge/,/fr/blog/secret-kubernetes-data-vs-stringdata/
 ---
 
 # Comment encoder en Base64 les secrets Kubernetes sans outil Web
@@ -20,6 +20,8 @@ relatedPages: /textforge/
 Kubernetes stocke les valeurs sensibles dans les manifestes secrets. Contrairement aux ConfigMaps, qui acceptent le texte brut, les champs de « données » secrets nécessitent des valeurs codées en Base64. De nombreux développeurs collent des mots de passe bruts et des clés API dans des outils Base64 en ligne, qui envoient ces informations d'identification à un serveur tiers.
 
 Il existe une option plus sûre : encodez directement dans votre navigateur à l'aide d'une extension Chrome qui ne transmet jamais vos données.
+
+Si vous hésitez entre `data` et `stringData`, consultez d'abord le [guide data ou stringData](/fr/blog/secret-kubernetes-data-vs-stringdata/) avant d'encoder une valeur manuellement.
 
 ## Pourquoi Kubernetes utilise Base64
 

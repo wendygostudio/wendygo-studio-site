@@ -40,6 +40,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/adhd-pomodoro-timer-chrome-extension/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/blog/alternatives-to-hiring-a-lawyer-consumer-claims-eu/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,6 +129,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/bulk-text-cleaner/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/bulk-text-cleaner/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/bulk-text-cleaner/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/chrome-extension-permissions-checklist/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/permisos-extensiones-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/chrome-erweiterungs-berechtigungen-checkliste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/permissions-extension-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/permessi-estensioni-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/permissoes-extensoes-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/clean-copied-table-text/</loc>
@@ -768,6 +794,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/is-your-chrome-extension-spying-on-you/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/datos-vs-stringdata-secret-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/blog/linkedin-carousel-image-size/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -844,6 +883,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pdf-converter-alternatives/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pdf-converter-alternatives/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pdf-converter-alternatives/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/blog/pinterest-profile-cover-size/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tamano-portada-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-profilcover-groesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-couverture-profil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-copertina-profilo-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-capa-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/blog/pomodoro-focus-shield-chrome/</loc>
@@ -1522,6 +1574,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-checkpoint-config/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/de/blog/chrome-erweiterungs-berechtigungen-checkliste/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/permisos-extensiones-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/chrome-erweiterungs-berechtigungen-checkliste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/permissions-extension-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/permessi-estensioni-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/permissoes-extensoes-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/de/blog/cisco-ios-konfiguration-bereinigen/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2146,6 +2211,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/free-config-sanitizer-alternatives-2026/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/de/blog/kubernetes-secret-data-vs-stringdata/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/datos-vs-stringdata-secret-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/de/blog/linkedin-carousel-image-size/</loc>
     <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -2276,6 +2354,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/de/blog/pinterest-profilcover-groesse/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tamano-portada-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-profilcover-groesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-couverture-profil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-copertina-profilo-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-capa-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/de/blog/pomodoro-focus-shield-chrome/</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -2300,6 +2391,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/de/blog/pomodoro-timer-chrome-extension/</loc>
@@ -3485,6 +3589,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/cyberchef-vs-textforge/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/datos-vs-stringdata-secret-kubernetes/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/datos-vs-stringdata-secret-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/decode-jwt-online/</loc>
     <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -3901,6 +4018,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pdf-converter-alternatives/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/es/blog/permisos-extensiones-chrome-checklist/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/permisos-extensiones-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/chrome-erweiterungs-berechtigungen-checkliste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/permissions-extension-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/permessi-estensioni-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/permissoes-extensoes-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/es/blog/plataforma-odr-ue-cerrada-que-usar-ahora/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -3938,6 +4068,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/pomodoro-timer-chrome-extension/</loc>
@@ -4367,6 +4510,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-foto-profilo-instagram-area-sicura/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-foto-perfil-instagram-area-segura/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/instagram-profile-picture-size-safe-area/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/es/blog/tamano-portada-perfil-pinterest/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tamano-portada-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-profilcover-groesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-couverture-profil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-copertina-profilo-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-capa-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/es/blog/tiktok-profile-picture-safe-area/</loc>
@@ -5718,6 +5874,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/permissions-extension-chrome-checklist/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/permisos-extensiones-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/chrome-erweiterungs-berechtigungen-checkliste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/permissions-extension-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/permessi-estensioni-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/permissoes-extensoes-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/plateforme-rlc-ue-fermee-alternative/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -5729,6 +5898,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/piattaforma-odr-ue-chiusa-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/plataforma-rlc-ue-encerrada-alternativa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/blog/pomodoro-focus-shield-chrome/</loc>
@@ -6043,6 +6225,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/fr/blog/secret-kubernetes-data-vs-stringdata/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/datos-vs-stringdata-secret-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/fr/blog/share-network-config-reddit-safely/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -6080,6 +6275,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sort-lines-alphabetically-online/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sort-lines-alphabetically-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/fr/blog/taille-couverture-profil-pinterest/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tamano-portada-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-profilcover-groesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-couverture-profil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-copertina-profilo-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-capa-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/fr/blog/taille-photo-profil-banniere-x-twitter/</loc>
@@ -6960,6 +7168,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/decode-jwt-online/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/dimensioni-copertina-profilo-pinterest/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tamano-portada-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-profilcover-groesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-couverture-profil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-copertina-profilo-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-capa-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/dimensioni-foto-profilo-instagram-area-sicura/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -7350,6 +7571,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/it/blog/permessi-estensioni-chrome-checklist/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/permisos-extensiones-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/chrome-erweiterungs-berechtigungen-checkliste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/permissions-extension-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/permessi-estensioni-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/permissoes-extensoes-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/it/blog/piattaforma-odr-ue-chiusa-alternativa/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -7387,6 +7621,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/blog/pomodoro-timer-chrome-extension/</loc>
@@ -7816,6 +8063,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/scrubforge-claude-ai-network-troubleshooting/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/scrubforge-claude-ai-network-troubleshooting/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/it/blog/secret-kubernetes-data-vs-stringdata/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/datos-vs-stringdata-secret-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/it/blog/share-network-config-reddit-safely/</loc>
@@ -9066,6 +9326,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/convert-pdf-to-text-free/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/pt/blog/permissoes-extensoes-chrome-checklist/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/permisos-extensiones-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/chrome-erweiterungs-berechtigungen-checkliste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/permissions-extension-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/permessi-estensioni-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/permissoes-extensoes-chrome-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/chrome-extension-permissions-checklist/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/pt/blog/plataforma-rlc-ue-encerrada-alternativa/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -9103,6 +9376,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-for-studying-chrome-extension/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/pomodoro-timer-chrome-extension/</loc>
@@ -9495,6 +9781,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/scrubforge-claude-ai-network-troubleshooting/"/>
   </url>
   <url>
+    <loc>https://wendygostudio.com/pt/blog/secret-kubernetes-data-vs-stringdata/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/datos-vs-stringdata-secret-kubernetes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/kubernetes-secret-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/secret-kubernetes-data-vs-stringdata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/kubernetes-secret-data-vs-stringdata/"/>
+  </url>
+  <url>
     <loc>https://wendygostudio.com/pt/blog/share-network-config-reddit-safely/</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -9532,6 +9831,19 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sort-lines-alphabetically-online/"/>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sort-lines-alphabetically-online/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sort-lines-alphabetically-online/"/>
+  </url>
+  <url>
+    <loc>https://wendygostudio.com/pt/blog/tamanho-capa-perfil-pinterest/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/tamano-portada-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pinterest-profilcover-groesse/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/taille-couverture-profil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/dimensioni-copertina-profilo-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/tamanho-capa-perfil-pinterest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/pinterest-profile-cover-size/"/>
   </url>
   <url>
     <loc>https://wendygostudio.com/pt/blog/tamanho-foto-perfil-cabecalho-x-twitter/</loc>

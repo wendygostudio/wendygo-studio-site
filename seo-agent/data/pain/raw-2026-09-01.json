@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T14:58:08.895Z",
+  "items": [
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "so annoying",
+      "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+      "text": "Hi HN, I&#x27;m Kushagra, one of three founders of Almanac, a Hermes with a brain that knows everything about your company.<p>We started our journey with setting up Hermes for our company, thinking it must be easy. We wanted an agent that would know every context about our company, so we could ask questions and get context-appropriate responses to.<p>This started a very annoying and difficult journey. Setting up Hermes, getting it to talk right, building OAuth apps for every connector myself, then feeding it context myself, and ultimately struggling with Hermes&#x27;s default memory. At the same time, we saw our YC batchmates struggling with the same problem, and we saw an opportunity.<p>So we built Almanac. This is how it works. You sign up, you get a Hermes agent straight out of the box. You have a one-click connect to any account (Gmail, Calendar, Granola, PostHog, etc). You have personal accounts (only accessible by you) and also shared accounts (accessible by everyone in the company). The consequence being I can never see my cofounders&#x27; accounts.<p>The “brain” of this agent is wikis. We pull in information from your connected sources, and start organizing this information in two wikis. A personal one, for you, which understands who you are, what your preferences are, the people in your life, and the things going on in your life. The second wiki is a company wiki, which includes what the company is, what you’re working on, what the roadmap is, and what the blockers o",
+      "score": 56,
+      "comments": 47,
+      "created": "2026-08-31T15:34:34Z",
+      "url": "https://news.ycombinator.com/item?id=49511007"
+    },
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "frustrated with",
+      "title": "Ask HN: How to break Claude Code addiction?",
+      "text": "TL;DR: How can I break my workaholic Claude Code  addiction?<p>Hello HN users, I really appreciate you reading this. I can&#x27;t think of a better audience for this question. If this issue has affected you in any way, I would be really thankful to you if you could leave a comment on this post.<p>MY GOAL:\nto be able to consistently do an acceptable day&#x27;s work as a professional software engineer, keeping a reasonably good understanding of the parts of the code that I changed that day, ending the day roughly on time, feeling like I did enough, feeling like I can forget about work until the next workday.<p>MY PROBLEM:\nI find that as the workday goes on and time runs out, my style of programming gets further from LLM-assisted coding (me designing and writing code, talking to Claude Code only when I get stuck) and closer to pure vibe-coding (where I don&#x27;t even review the code it writes until a big chunk has built up at which point I&#x27;m likely to abandon it, unless it&#x27;s really useful in which case I&#x27;ll painstakingly review it and try to understand it and usually have to make a lot of changes to get it how I want it - sometimes I&#x27;ll still have to abandon it if it&#x27;s too confusing or large). This leads to me spending hours and hours on vibe-coding sessions on workday evenings, after the workday is over. In the pre-Claude-Code era, working that late (with no external pressure) was much rarer for me. This leaves me feeling drained, frustrated, and with ",
+      "score": 17,
+      "comments": 24,
+      "created": "2026-08-29T17:43:13Z",
+      "url": "https://news.ycombinator.com/item?id=49491745"
+    }
+  ]
+}

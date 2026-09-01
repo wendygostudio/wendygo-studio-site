@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Wendygo structured content" />
+  <title>Pomodoro para programação assistida por IA: um fluxo com revisão</title>
+  <meta name="description" content="Use intervalos de concentração para manter a programação assistida por IA verificável: limite a tarefa, inspecione mudanças pequenas, faça pausas reais e termine a horas." />
+  <link rel="canonical" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/pomodoro-para-programar-con-ia/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/pomodoro-codage-assiste-ia/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/pomodoro-programmazione-assistita-ia/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/ai-assisted-coding-pomodoro-workflow/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Pomodoro para programação assistida por IA: um fluxo com revisão","description":"Use intervalos de concentração para manter a programação assistida por IA verificável: limite a tarefa, inspecione mudanças pequenas, faça pausas reais e termine a horas.","datePublished":"2026-09-01","dateModified":"2026-09-01","inLanguage":"pt-PT","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/"},"wordCount":762,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://wendygostudio.com/pt/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/pt/blog/"},{"@type":"ListItem","position":3,"name":"Pomodoro para programação assistida por IA: um fluxo com revisão"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Uma sessão de programação com IA deve durar um Pomodoro inteiro?","acceptedAnswer":{"@type":"Answer","text":"Use um intervalo para um resultado que consiga rever, não para um ciclo ilimitado de prompts. Pode incluir planeamento, uma implementação pequena e revisão, ou terminar mais cedo."}},{"@type":"Question","name":"O que faço se o temporizador terminar durante uma alteração gerada por IA?","acceptedAnswer":{"@type":"Answer","text":"Guarde o estado, registe o próximo passo e reveja ou teste a alteração antes de iniciar outro intervalo. Não faça merge de código que ainda não compreende."}},{"@type":"Question","name":"Um temporizador Pomodoro substitui a revisão de código?","acceptedAnswer":{"@type":"Answer","text":"Não. Cria um limite para foco e revisão, mas não verifica correção, segurança ou manutenção. Use testes e revisão humana adequados."}}]}</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:    #13151a;
+      --surf:   #1c1f26;
+      --surf2:  #232831;
+      --line:   #2e343f;
+      --text:   #e7e9ee;
+      --muted:  #8b93a3;
+      --faint:  #4e5768;
+      --amber:  #e8a33d;
+      --amber2: #f0b75a;
+      --on-a:   #13151a;
+      --r:      9px;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ink); color: var(--text);
+      font-family: var(--sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(19,21,26,.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px,5vw,60px); height: 56px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px; background: var(--amber);
+      display: grid; place-items: center; font-size: 13px; color: var(--on-a); font-weight: 900;
+    }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .article-wrap {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px,8vw,80px) clamp(20px,5vw,40px) 80px;
+    }
+
+    .breadcrumb { font-size: 13px; color: var(--faint); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--faint); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--muted); }
+    .breadcrumb span { margin: 0 6px; }
+
+    .article-meta { margin-bottom: 40px; }
+    .article-tag {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+    }
+    .article-meta h1 {
+      font-size: clamp(26px,4.5vw,40px); font-weight: 800; line-height: 1.15;
+      letter-spacing: -.7px; margin-bottom: 16px;
+    }
+    .article-intro { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .article-date { font-size: 12px; color: var(--faint); }
+
+    .divider { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .legal-review {
+      margin: 28px 0 8px; padding: 18px 20px; background: var(--surf);
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 10px 10px 0; color: var(--muted); font-size: 13px;
+    }
+    .legal-review strong { color: var(--text); }
+    .legal-review a { color: var(--amber); }
+    .legal-review p { margin: 4px 0; }
+
+    .article-body { line-height: 1.75; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.3px;
+      margin: 48px 0 16px; color: var(--text);
+    }
+    .article-body h3 {
+      font-size: 17px; font-weight: 700;
+      margin: 32px 0 12px; color: var(--text);
+    }
+    .article-body strong { color: var(--text); }
+    .article-body a { color: var(--amber); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color .15s; }
+    .article-body a:hover { text-decoration-color: var(--amber); }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 6px; color: var(--muted); }
+    .article-body li strong { color: var(--text); }
+
+    /* Editorial rhythm for structured Markdown articles */
+    .article-body blockquote {
+      position: relative; margin: 28px 0; padding: 20px 22px 20px 24px;
+      background: linear-gradient(135deg, rgba(232,163,61,.10), var(--surf));
+      border: 1px solid var(--line); border-left: 4px solid var(--amber);
+      border-radius: 0 12px 12px 0; color: var(--muted);
+    }
+    .article-body blockquote p { margin: 0; }
+    .article-body blockquote strong {
+      display: block; margin-bottom: 5px; color: var(--amber2);
+      font-size: 12px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body table {
+      width: 100%; border-collapse: collapse; margin: 28px 0;
+      display: block; overflow-x: auto; font-size: 14px;
+    }
+    .article-body th {
+      padding: 10px 12px; text-align: left; white-space: nowrap;
+      color: var(--muted); border-bottom: 1px solid var(--line);
+      font-size: 11px; letter-spacing: .7px; text-transform: uppercase;
+    }
+    .article-body td { padding: 11px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .article-body td:first-child { color: var(--text); font-weight: 600; }
+    .article-body code {
+      padding: 2px 6px; border-radius: 5px; background: var(--surf2);
+      border: 1px solid var(--line); color: var(--amber2); font-family: var(--mono);
+      font-size: .88em;
+    }
+    .article-body hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .article-body .step-card,
+    .article-body .key-points {
+      margin: 24px 0; padding: 20px 22px; background: var(--surf);
+      border: 1px solid var(--line); border-radius: 12px;
+    }
+    .article-body .step-card { border-left: 4px solid var(--amber); }
+    .article-body .step-label {
+      display: block; margin-bottom: 7px; color: var(--amber);
+      font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .article-body .key-points h3 { margin: 0 0 12px; }
+    .article-body .key-points ul { margin: 0; }
+
+    .tool-card {
+      background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+      padding: 24px; margin: 24px 0;
+    }
+    .tool-card-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    }
+    .tool-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+    }
+    .badge-local { background: rgba(232,163,61,.15); color: var(--amber); }
+    .badge-cloud { background: rgba(139,147,163,.12); color: var(--muted); }
+    .tool-card h3 {
+      font-size: 18px; font-weight: 700; margin: 0; color: var(--text);
+    }
+    .tool-card .best-for {
+      font-size: 12px; color: var(--faint); font-weight: 600;
+      letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .tool-card p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+    .tool-card p:last-child { margin-bottom: 0; }
+    .tool-card strong { color: var(--text); }
+    .tool-formats {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0;
+    }
+    .format-pill {
+      font-size: 12px; padding: 3px 9px; border-radius: 20px;
+      background: var(--surf2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .tool-limit {
+      font-size: 13px; color: var(--faint); padding: 10px 14px;
+      background: var(--surf2); border-radius: 7px; border-left: 3px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; overflow-x: auto; display: block; }
+    .comp-table th {
+      text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--muted);
+      border-bottom: 1px solid var(--line); padding: 8px 12px; white-space: nowrap;
+    }
+    .comp-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--line);
+      color: var(--text); vertical-align: top;
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td:first-child { color: var(--amber2); font-weight: 600; white-space: nowrap; }
+    .check { color: #5cb85c; }
+    .cross { color: var(--faint); }
+
+    .decision-grid {
+      margin: 24px 0; display: flex; flex-direction: column; gap: 10px;
+    }
+    .decision-row {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .decision-if { font-size: 14px; color: var(--muted); flex: 1; }
+    .decision-then { font-size: 14px; font-weight: 600; color: var(--amber2); min-width: 160px; text-align: right; }
+
+    .faq-list { margin: 24px 0; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+    }
+    .faq-q { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .related { margin: 48px 0 0; }
+    .related-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--faint); margin-bottom: 14px;
+    }
+    .related-links { display: flex; flex-direction: column; gap: 10px; }
+    .related-link {
+      display: block; padding: 14px 16px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 10px;
+      text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .related-link:hover { border-color: var(--faint); }
+    .related-link span { display: block; font-size: 12px; color: var(--faint); font-weight: 400; margin-top: 2px; }
+
+    .cta-box {
+      margin-top: 48px; padding: 32px;
+      background: var(--surf); border: 1px solid var(--line); border-radius: 14px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber); color: var(--on-a);
+      font-size: 14px; font-weight: 700; text-decoration: none;
+      padding: 11px 24px; border-radius: 8px; transition: background .15s;
+    }
+    .cta-btn:hover { background: var(--amber2); }
+
+    footer {
+      padding: 36px clamp(20px,5vw,60px); border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 16px; max-width: 1180px; margin: 0 auto;
+    }
+    .footer-brand { font-size: 14px; color: var(--muted); }
+    .footer-brand strong { color: var(--text); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--faint); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--muted); }
+
+    .nav-toggle { display: none; }
+    .nav-burger { display: none; cursor: pointer; padding: 8px; margin: -8px; z-index: 21; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+    @media (max-width: 600px) {
+      nav { position: relative; flex-wrap: wrap; }
+      .nav-burger { display: flex; }
+      .nav-links {
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--ink); border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height .25s ease, opacity .2s ease;
+        padding: 0 clamp(20px,5vw,60px);
+      }
+      .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--text); }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-toggle:checked ~ .nav-links { max-height: 70vh; opacity: 1; padding: 8px clamp(20px,5vw,60px) 16px; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+      .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .decision-row { flex-direction: column; }
+      .decision-then { text-align: left; }
+      .article-body blockquote,
+      .article-body .step-card,
+      .article-body .key-points { padding: 18px; }
+      .legal-review { padding: 16px; }
+    }
+</style>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Wendygo Studio" />
+  <meta property="og:title" content="Pomodoro para programação assistida por IA: um fluxo com revisão" />
+  <meta property="og:description" content="Use intervalos de concentração para manter a programação assistida por IA verificável: limite a tarefa, inspecione mudanças pequenas, faça pausas reais e termine a horas." />
+  <meta property="og:url" content="https://wendygostudio.com/pt/blog/pomodoro-programacao-assistida-ia/" />
+  <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pomodoro para programação assistida por IA: um fluxo com revisão" />
+  <meta name="twitter:description" content="Use intervalos de concentração para manter a programação assistida por IA verificável: limite a tarefa, inspecione mudanças pequenas, faça pausas reais e termine a horas." />
+  <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/pt/"><div class="nav-mark">W</div>Wendygo Studio</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="/pt/#products">Extensões</a><a href="/pt/blog/">Blog</a><a href="/pt/tools/">Ferramentas</a><a href="/pt/#privacy">Privacidade</a><a class="nav-lang" href="/blog/ai-assisted-coding-pomodoro-workflow/">EN</a><a class="nav-lang" href="/es/blog/pomodoro-para-programar-con-ia/">ES</a><a class="nav-lang" href="/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/">DE</a><a class="nav-lang" href="/fr/blog/pomodoro-codage-assiste-ia/">FR</a><a class="nav-lang" href="/it/blog/pomodoro-programmazione-assistita-ia/">IT</a>
+    </div>
+  </nav>
+  <div class="article-wrap">
+    <div class="breadcrumb"><a href="/pt/">Início</a><span>&#8250;</span><a href="/pt/blog/">Blog</a><span>&#8250;</span>Pomodoro para programação assistida por IA: um fluxo com revisão</div>
+    <div class="article-meta"><div class="article-tag">how-to · slimeforge</div><h1>Pomodoro para programação assistida por IA: um fluxo com revisão</h1><p class="article-intro">Use intervalos de concentração para manter a programação assistida por IA verificável: limite a tarefa, inspecione mudanças pequenas, faça pausas reais e termine a horas.</p><div class="article-date">1 de setembro de 2026</div></div>
+    
+    <hr class="divider" />
+    <div class="article-body"><h2>Pomodoro para programação assistida por IA: um fluxo com revisão</h2>
+<p>A programação assistida por IA pode transformar uma tarefa pequena numa sessão sem fim: pede uma alteração, pede uma correção, envia outro prompt e só depois percebe que acumulou um patch grande e difícil de rever. Uma discussão recente de programadores no Hacker News descreveu esse padrão: noites que se prolongam e alterações geradas cada vez mais difíceis de verificar.</p>
+<p>Um temporizador não resolve o problema sozinho. Pode criar um limite útil para um fluxo em que continua responsável pela tarefa, pelo diff e pela decisão de continuar.</p>
+<h2>A unidade útil é um resultado que possa rever</h2>
+<p>Não comece com “deixe o assistente programar durante 25 minutos”. Comece com um resultado pequeno o suficiente para inspecionar:</p>
+<ul>
+<li>acrescentar uma regra de validação e os respetivos testes;</li>
+<li>explicar um teste falhado e propor uma correção mínima;</li>
+<li>refatorar uma função sem alterar o seu comportamento público;</li>
+<li>escrever um plano curto e verificar o primeiro passo.</li>
+</ul>
+<p>A <a href="https://www.pomodorotechnique.com/">Técnica Pomodoro®</a> oficial é mais do que uma contagem decrescente. O seu valor está num ciclo repetível de planeamento, trabalho concentrado, pausas e reflexão. Na programação assistida por IA, a revisão faz parte do ciclo.</p>
+<h2>Um intervalo de programação com IA em quatro partes</h2>
+<h3>1. Defina o limite antes do prompt</h3>
+<p>Descreva a tarefa numa frase e indique os ficheiros ou o comportamento incluídos. Acrescente uma condição de saída: “consigo explicar o diff e os testes relevantes”. Se o assistente propuser uma reformulação mais ampla, guarde-a para depois.</p>
+<h3>2. Peça um passo pequeno e verificável</h3>
+<p>Dê o contexto necessário, mas peça uma alteração limitada. Solicite as hipóteses e os ficheiros que pretende alterar. É você quem decide se o âmbito é seguro.</p>
+<h3>3. Reserve tempo para inspecionar</h3>
+<p>Antes de o intervalo terminar, leia o diff completo. Execute o teste ou verificação relevante mais pequeno. Procure alterações fora da tarefa, tratamento de erros em falta, segredos nos logs e testes que passam pelo motivo errado. Se não conseguir resumir a alteração, o intervalo não terminou.</p>
+<h3>4. Feche o ciclo</h3>
+<p>Registe o que mudou, o que verificou e o que falta. Depois faça a pausa longe do editor. Um fecho limpo facilita o próximo intervalo e evita um bloco de prompts sem revisão.</p>
+<h2>Quando o temporizador interrompe</h2>
+<p>O temporizador marca um limite, mas não exige uma paragem arriscada. Se uma alteração gerada estiver a meio:</p>
+<ol>
+<li>guarde o estado de trabalho;</li>
+<li>registe a próxima verificação ou decisão exata;</li>
+<li>não faça merge nem deploy de código não revisto;</li>
+<li>continue depois da pausa apenas se a tarefa ainda merecer o tempo.</li>
+</ol>
+<p>Se uma tarefa precisar regularmente de vários intervalos, divida-a por comportamento ou artefacto. Um bloco de 45 ou 60 minutos pode ser adequado para trabalho profundo, mantendo pontos claros de revisão.</p>
+<h2>Um modelo simples de sessão</h2>
+<pre><code class="language-text">Resultado: acrescentar validação do parser e testes
+Âmbito: parser.ts, parser.test.ts
+Assistente: propor o patch mínimo e explicar hipóteses
+Revisão: ler diff, executar testes, verificar entradas inválidas
+Fim: conseguir explicar comportamento e resultado
+Nota: caso limite ou próximo passo
+</code></pre>
+<p>Este formato funciona com qualquer assistente de programação e mantém visíveis as decisões humanas. Também facilita retomar o trabalho depois de uma pausa sem reconstruir uma conversa cada vez maior.</p>
+<h2>Escolher um temporizador</h2>
+<p>Use um intervalo curto para tarefas bem definidas ou para recuperar a concentração. Use um intervalo mais longo quando carregar o contexto do código for o verdadeiro custo, mantendo a mesma estrutura de revisão. Um temporizador local como <a href="/pt/slimeforge/">SlimeForge</a> pode marcar o intervalo; o importante é o limite e o hábito de rever, não uma duração específica.</p>
+<p>Se trabalha frequentemente além da hora prevista, reduza o tamanho da tarefa, defina um limite firme para o fim do dia ou faça da revisão o primeiro passo do intervalo seguinte. O objetivo é progresso sustentável e compreensível, não o maior patch possível antes da meia-noite.</p>
+<h2>Perguntas frequentes</h2>
+<h3>Uma sessão de programação com IA deve durar um Pomodoro inteiro?</h3>
+<p>Use um intervalo para um resultado que possa rever, não para um ciclo infinito de prompts. Pode incluir planeamento, implementação e revisão, ou terminar antes.</p>
+<h3>O que faço quando o temporizador termina durante uma alteração gerada?</h3>
+<p>Guarde o estado, registe o próximo passo e reveja ou teste a alteração antes de outro intervalo. Não faça merge de código que não compreende.</p>
+<h3>Um temporizador Pomodoro substitui a revisão de código?</h3>
+<p>Não. Cria um limite, mas não verifica correção, segurança ou manutenção. Use testes e revisão humana adequados.</p>
+</div>
+  </div>
+  <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Ilhas Canárias</div><div class="footer-links"><a href="/pt/">Início</a><a href="/pt/blog/">Blog</a><a href="/pt/tools/">Ferramentas</a><a href="/pt/privacidade">Privacidade</a></div></footer>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"e5e5861ded154e779510bf3f84cdd7fd"}'></script>
+</body>
+</html>

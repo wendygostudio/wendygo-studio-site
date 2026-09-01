@@ -56,6 +56,8 @@ La gamificación es el punto: después de 5 sesiones concentradas de 60 minutos,
 
 El temporizador no bloquea sitios (a diferencia de Strict Workflow). Motiva a través de la recompensa, no de la restricción. Eres responsable de cerrar las distracciones; la extensión simplemente hace que el enfoque sea visible y gratificante.
 
+Para programar con IA, convierte la sesión en un resultado revisable: define un cambio pequeño, pide un parche acotado y reserva tiempo para leer el diff y ejecutar la prueba relevante. [Consulta el flujo Pomodoro basado en revisión para programar con IA](/es/blog/pomodoro-para-programar-con-ia/).
+
 ## Comparando opciones
 
 Si desea una cuenta regresiva mínima, use Marinara Timer en una pestaña del navegador. Si desea bloquear el sitio, utilice un flujo de trabajo estricto. Pero si quieres un temporizador que podrás abrir todos los días porque en él vive algo que te importa (una baba que es tuya, una racha que no quieres romper), SlimeForge está diseñado para eso.

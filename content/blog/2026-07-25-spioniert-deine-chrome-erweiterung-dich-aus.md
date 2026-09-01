@@ -10,9 +10,10 @@ product: slimeforge
 contentType: how-to
 primaryKeyword: "spioniert meine Chrome-Erweiterung mich aus"
 relatedPages: /slimeforge/
+sourceUrls: https://support.google.com/chrome_webstore/answer/186213?hl=en,https://developer.chrome.com/docs/extensions/develop/security-privacy/user-privacy?hl=en
 ---
 
-Wenn du eine Chrome- oder Edge-Erweiterung für deinen Fokus, deine Header, deine Passwörter oder irgendetwas anderes nutzt, lohnt sich die ModHeader-Entfernung fünf Minuten deiner Zeit. Nicht weil ModHeader ein Nischentool war — es hatte 1,6 Millionen Installationen und ein Jahrzehnt Vertrauen —, sondern wegen der Art, wie es versteckte, was es tat.
+Wenn du eine Chrome- oder Edge-Erweiterung für deinen Fokus, deine Header, deine Passwörter oder irgendetwas anderes nutzt, lohnt sich die ModHeader-Entfernung fünf Minuten deiner Zeit. Nicht weil ModHeader ein Nischentool war — es hatte 1,6 Millionen Installationen und ein Jahrzehnt Vertrauen —, sondern wegen der Art, wie es versteckte, was es tat. Für die Prüfung vor der Installation hilft zusätzlich die neue [Checkliste zu Berechtigungen von Chrome-Erweiterungen](/blog/chrome-extension-permissions-checklist/).
 
 > **Was tatsächlich passierte**
 > Am 3. Juli 2026 entfernte Microsoft ModHeader aus dem Edge-Add-ons-Store. Am 10. Juli folgte Google und entfernte es aus dem Chrome Web Store. Die Sicherheitsfirma [Stripe OLT](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html) fand heraus, dass die offizielle, kryptografisch signierte Erweiterung einen kompletten Browserverlauf-Sammler enthielt: Er erstellte einen Geräte-Fingerprint, verschlüsselte die Domain jeder besuchten Seite und war darauf ausgelegt, die Liste täglich an einen externen Server zu senden. Der Sammler war nicht aktiv — eine leere interne Positivliste hielt ihn ausgeschaltet —, aber das Befüllen dieser Liste hätte nur ein routinemäßiges Update gebraucht, keine neuen Berechtigungen, keinen Klick des Nutzers.

@@ -1,0 +1,759 @@
+{
+  "generated_at": "2026-09-01T14:58:42.626Z",
+  "data_state": "final",
+  "periods": {
+    "current": {
+      "period": {
+        "start": "2026-08-23",
+        "end": "2026-08-29"
+      },
+      "total": {
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 63.47
+      },
+      "dates": [
+        {
+          "date": "2026-08-23",
+          "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        {
+          "date": "2026-08-24",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 74.8
+        },
+        {
+          "date": "2026-08-25",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 70.83
+        },
+        {
+          "date": "2026-08-26",
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 63.33
+        },
+        {
+          "date": "2026-08-27",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 63.5
+        },
+        {
+          "date": "2026-08-28",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 64.5
+        },
+        {
+          "date": "2026-08-29",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 50.5
+        }
+      ],
+      "pages": [
+        {
+          "page": "https://wendygostudio.com/",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 37.6
+        },
+        {
+          "page": "https://wendygostudio.com/blog/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "page": "https://wendygostudio.com/blog/clean-copied-table-text/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 57
+        },
+        {
+          "page": "https://wendygostudio.com/blog/convert-heic-to-jpg-free/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "page": "https://wendygostudio.com/blog/convert-heic-to-png-free/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "page": "https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 87
+        },
+        {
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 58.5
+        },
+        {
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 65.31
+        },
+        {
+          "page": "https://wendygostudio.com/blog/instagram-profile-picture-size-safe-area/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 87.33
+        },
+        {
+          "page": "https://wendygostudio.com/blog/local-file-converter-chrome-extension/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 3
+        },
+        {
+          "page": "https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 87
+        },
+        {
+          "page": "https://wendygostudio.com/blog/right-to-repair-eu-law/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "page": "https://wendygostudio.com/blog/safe-margins-social-media-images-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "page": "https://wendygostudio.com/blog/sanitize-fortigate-config/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 52
+        },
+        {
+          "page": "https://wendygostudio.com/blog/sanitize-paloalto-config/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 63
+        },
+        {
+          "page": "https://wendygostudio.com/de/blog/eu-gewaehrleistung-vs-herstellergarantie/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 89.33
+        },
+        {
+          "page": "https://wendygostudio.com/de/blog/eu-odr-plattform-geschlossen-alternative/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "page": "https://wendygostudio.com/es/blog/convert-video-to-audio-free/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 71
+        },
+        {
+          "page": "https://wendygostudio.com/es/blog/sanitizar-configuracion-mikrotik/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "page": "https://wendygostudio.com/es/blog/tamano-foto-perfil-instagram-zona-segura/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "page": "https://wendygostudio.com/it/blog/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 44.5
+        },
+        {
+          "page": "https://wendygostudio.com/use-cases/gdpr-rights-tool/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 96
+        }
+      ],
+      "queries": [
+        {
+          "query": "como hacer un video en audio",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 71
+        },
+        {
+          "query": "consumer commission complaints",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 89
+        },
+        {
+          "query": "consumer grievance",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 73
+        },
+        {
+          "query": "eu consumer protection complaint",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 52
+        },
+        {
+          "query": "eu customer complaints",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 52
+        },
+        {
+          "query": "eu recht gewährleistung",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 89
+        },
+        {
+          "query": "gewährleistung eu recht",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "query": "margenes seguridad instagram",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "query": "wendy go",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 54.5
+        }
+      ],
+      "query_pages": [
+        {
+          "query": "como hacer un video en audio",
+          "page": "https://wendygostudio.com/es/blog/convert-video-to-audio-free/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 71
+        },
+        {
+          "query": "consumer commission complaints",
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 89
+        },
+        {
+          "query": "consumer grievance",
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 73
+        },
+        {
+          "query": "eu consumer protection complaint",
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 52
+        },
+        {
+          "query": "eu customer complaints",
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 52
+        },
+        {
+          "query": "eu recht gewährleistung",
+          "page": "https://wendygostudio.com/de/blog/eu-gewaehrleistung-vs-herstellergarantie/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 89
+        },
+        {
+          "query": "gewährleistung eu recht",
+          "page": "https://wendygostudio.com/de/blog/eu-gewaehrleistung-vs-herstellergarantie/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "query": "margenes seguridad instagram",
+          "page": "https://wendygostudio.com/es/blog/tamano-foto-perfil-instagram-zona-segura/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "query": "wendy go",
+          "page": "https://wendygostudio.com/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 54.5
+        }
+      ]
+    },
+    "previous": {
+      "period": {
+        "start": "2026-08-16",
+        "end": "2026-08-22"
+      },
+      "total": {
+        "clicks": 0,
+        "impressions": 53,
+        "ctr": 0,
+        "position": 70.45
+      },
+      "dates": [
+        {
+          "date": "2026-08-16",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 72.75
+        },
+        {
+          "date": "2026-08-17",
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 59
+        },
+        {
+          "date": "2026-08-18",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 75.29
+        },
+        {
+          "date": "2026-08-19",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 82.9
+        },
+        {
+          "date": "2026-08-20",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 55.75
+        },
+        {
+          "date": "2026-08-21",
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 74
+        },
+        {
+          "date": "2026-08-22",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 69.67
+        }
+      ],
+      "pages": [
+        {
+          "page": "https://wendygostudio.com/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 3
+        },
+        {
+          "page": "https://wendygostudio.com/blog/eu-odr-platform-shutdown-what-to-use-instead/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 57
+        },
+        {
+          "page": "https://wendygostudio.com/blog/extract-emails-from-text/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 95
+        },
+        {
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 46.43
+        },
+        {
+          "page": "https://wendygostudio.com/blog/forest-app-vs-pomodoro-timer/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 54
+        },
+        {
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 71.22
+        },
+        {
+          "page": "https://wendygostudio.com/blog/pomodoro-focus-shield-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 78
+        },
+        {
+          "page": "https://wendygostudio.com/blog/pomodoro-for-studying-chrome-extension/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 77
+        },
+        {
+          "page": "https://wendygostudio.com/blog/resize-image-for-pinterest-pin/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 61.67
+        },
+        {
+          "page": "https://wendygostudio.com/blog/resize-image-youtube-thumbnail-chrome/",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 67.2
+        },
+        {
+          "page": "https://wendygostudio.com/blog/sanitize-mikrotik-router-config/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 97
+        },
+        {
+          "page": "https://wendygostudio.com/blog/tiktok-profile-picture-safe-area/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 55
+        },
+        {
+          "page": "https://wendygostudio.com/de/blog/resize-image-for-pinterest-pin/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 49
+        },
+        {
+          "page": "https://wendygostudio.com/fr/blog/offline-pomodoro-timer-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 60
+        },
+        {
+          "page": "https://wendygostudio.com/fr/blog/pdf-converter-alternatives/",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 96.44
+        },
+        {
+          "page": "https://wendygostudio.com/guides/eu-consumer-rights/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 65.5
+        },
+        {
+          "page": "https://wendygostudio.com/privacy",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "page": "https://wendygostudio.com/pt/blog/pdf-converter-alternatives/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 100
+        },
+        {
+          "page": "https://wendygostudio.com/pt/blog/resize-image-youtube-thumbnail-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 83
+        },
+        {
+          "page": "https://wendygostudio.com/pt/blog/safe-margins-social-media-images-chrome/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "page": "https://wendygostudio.com/slimeforge/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "page": "https://wendygostudio.com/terms",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "page": "https://wendygostudio.com/use-cases/local-file-converter-chrome-extension/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 55
+        }
+      ],
+      "queries": [
+        {
+          "query": "consumer rights complaints",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 91
+        },
+        {
+          "query": "convertisseur pdf gratuit",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 95.86
+        },
+        {
+          "query": "customer consumer complaint",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 93
+        },
+        {
+          "query": "forest app chrome",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 34
+        },
+        {
+          "query": "forest chrome extension",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 47
+        },
+        {
+          "query": "margem de segurança reels",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 88
+        },
+        {
+          "query": "margem story",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 78
+        },
+        {
+          "query": "melhor conversor de pdf",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 100
+        },
+        {
+          "query": "outil de conversion pdf",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 100
+        },
+        {
+          "query": "pdf gratuit convertisseur",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 97
+        },
+        {
+          "query": "tamanho thumbnail",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 83
+        }
+      ],
+      "query_pages": [
+        {
+          "query": "consumer rights complaints",
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 91
+        },
+        {
+          "query": "convertisseur pdf gratuit",
+          "page": "https://wendygostudio.com/fr/blog/pdf-converter-alternatives/",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 95.86
+        },
+        {
+          "query": "customer consumer complaint",
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 93
+        },
+        {
+          "query": "forest app chrome",
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 34
+        },
+        {
+          "query": "forest chrome extension",
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 47
+        },
+        {
+          "query": "margem de segurança reels",
+          "page": "https://wendygostudio.com/pt/blog/safe-margins-social-media-images-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 88
+        },
+        {
+          "query": "margem story",
+          "page": "https://wendygostudio.com/pt/blog/safe-margins-social-media-images-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 78
+        },
+        {
+          "query": "melhor conversor de pdf",
+          "page": "https://wendygostudio.com/pt/blog/pdf-converter-alternatives/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 100
+        },
+        {
+          "query": "outil de conversion pdf",
+          "page": "https://wendygostudio.com/fr/blog/pdf-converter-alternatives/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 100
+        },
+        {
+          "query": "pdf gratuit convertisseur",
+          "page": "https://wendygostudio.com/fr/blog/pdf-converter-alternatives/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 97
+        },
+        {
+          "query": "tamanho thumbnail",
+          "page": "https://wendygostudio.com/pt/blog/resize-image-youtube-thumbnail-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 83
+        }
+      ]
+    }
+  }
+}

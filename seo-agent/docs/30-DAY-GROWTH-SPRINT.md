@@ -5,6 +5,27 @@ Motor: Codex
 Objetivo: aumentar descubrimiento orgánico, instalaciones y activación sin
 crear deuda técnica, lingüística o de medición.
 
+## Revisión Monthly — 2026-09-01
+
+El ciclo cambia a recuperación hasta 2026-10-01. GSC cayó de 3.844 a 249
+impresiones y de 17 a 1 clic entre ventanas exactas de 28 días. URL Inspection
+mantiene las seis homes y dos páginas críticas indexadas, de modo que no se
+asume desindexación global. La entrega local tiene 816 URLs frente a 798 en
+producción y la validación global falla por 9 hubs, 12 páginas de producto y
+636 selectores de idioma desincronizados.
+
+Orden del siguiente ciclo:
+
+1. poner validación, encoding y paridad local/producción en verde;
+2. acotar la regresión orgánica del 1–2 de agosto sin apilar cambios;
+3. recuperar GA4, CWS y Plausible;
+4. reconciliar catálogo y claims públicos;
+5. reanudar URLs nuevas solo tras las cuatro puertas anteriores.
+
+Excepción estratégica: durante la fase de recuperación no se aplica la cuota
+de artículo nuevo. La acción de mayor impacto es restaurar entrega y medición.
+El detalle y la matriz ICE están en `../journal/monthly-2026-09-01.md`.
+
 ## Presupuesto y cadencia
 
 | Cadencia | Máximo | Función |

@@ -10,9 +10,10 @@ product: slimeforge
 contentType: how-to
 primaryKeyword: "is my chrome extension spying on me"
 relatedPages: /slimeforge/,/blog/pomodoro-timer-chrome-extension/,/blog/offline-pomodoro-timer-chrome/
+sourceUrls: https://support.google.com/chrome_webstore/answer/186213?hl=en,https://developer.chrome.com/docs/extensions/develop/security-privacy/user-privacy?hl=en
 ---
 
-If you use a Chrome or Edge extension to manage your focus, your headers, your passwords, or anything else, the ModHeader takedown is worth five minutes of your time. Not because ModHeader itself was a fringe tool, it had 1.6 million installs and a decade of trust, but because of exactly how it hid what it was doing.
+If you use a Chrome or Edge extension to manage your focus, your headers, your passwords, or anything else, the ModHeader takedown is worth five minutes of your time. Not because ModHeader itself was a fringe tool, it had 1.6 million installs and a decade of trust, but because of exactly how it hid what it was doing. For the install-time version of this review, use the new [Chrome extension permissions checklist](/blog/chrome-extension-permissions-checklist/) before granting access.
 
 > **What actually happened**
 > On July 3, 2026, Microsoft removed ModHeader from the Edge Add-ons store. On July 10, Google followed and pulled it from the Chrome Web Store. Security firm [Stripe OLT](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html) found that the official, cryptographically signed extension contained a complete browsing-history collector: it fingerprinted the device, encrypted the domain of every page visited, and was built to upload the list daily to an external server. The collector had not shipped active, an empty internal allow-list kept it switched off, but populating that list required nothing more than a routine update, no new permissions, no click from the user.

@@ -10,9 +10,10 @@ product: slimeforge
 contentType: how-to
 primaryKeyword: "a minha extensão Chrome está a espiar-me"
 relatedPages: /slimeforge/
+sourceUrls: https://support.google.com/chrome_webstore/answer/186213?hl=en,https://developer.chrome.com/docs/extensions/develop/security-privacy/user-privacy?hl=en
 ---
 
-Se usas uma extensão do Chrome ou do Edge para gerir o teu foco, os teus cabeçalhos HTTP, as tuas palavras-passe ou outra coisa qualquer, a retirada do ModHeader merece cinco minutos do teu tempo. Não porque o ModHeader fosse uma ferramenta marginal — tinha 1,6 milhões de instalações e uma década de confiança — mas pela forma exata como escondia o que fazia.
+Se usas uma extensão do Chrome ou do Edge para gerir o teu foco, os teus cabeçalhos HTTP, as tuas palavras-passe ou outra coisa qualquer, a retirada do ModHeader merece cinco minutos do teu tempo. Não porque o ModHeader fosse uma ferramenta marginal — tinha 1,6 milhões de instalações e uma década de confiança — mas pela forma exata como escondia o que fazia. Para rever uma instalação antes de conceder acesso, consulta também o novo [checklist de permissões das extensões Chrome](/blog/chrome-extension-permissions-checklist/).
 
 > **O que realmente aconteceu**
 > A 3 de julho de 2026, a Microsoft retirou o ModHeader da loja de extras do Edge. A 10 de julho, a Google fez o mesmo, retirando-o da Chrome Web Store. A empresa de segurança [Stripe OLT](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html) descobriu que a extensão oficial, assinada criptograficamente, continha um recoletor completo de histórico de navegação: gerava uma impressão digital do dispositivo, cifrava o domínio de cada página visitada, e estava preparada para carregar a lista diariamente para um servidor externo. O recoletor não estava ativo — uma lista de permissões interna vazia mantinha-o desligado — mas ativá-lo só precisaria de uma atualização de rotina, sem novas permissões, sem qualquer clique do utilizador.

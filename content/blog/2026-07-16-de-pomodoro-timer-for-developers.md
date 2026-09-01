@@ -54,6 +54,8 @@ Die Gamifizierung ist der Punkt: Nach 5 konzentrierten 60-minütigen Sitzungen e
 
 Der Timer blockiert keine Websites (im Gegensatz zu Strict Workflow). Es motiviert durch Belohnung, nicht durch Einschränkung. Sie bleiben dafür verantwortlich, Ablenkungen zu beseitigen; Die Erweiterung macht die Konzentration einfach sichtbar und lohnend.
 
+Beim KI-gestützten Programmieren sollte das Sitzungsergebnis überprüfbar sein: eine kleine Änderung festlegen, einen begrenzten Patch anfordern und Zeit für Diff-Review und den passenden Test reservieren. [Zum vollständigen Pomodoro-Workflow mit Review für KI-gestütztes Programmieren](/de/blog/pomodoro-fuer-ki-gestuetztes-programmieren/).
+
 ## Optionen vergleichen
 
 Wenn Sie einen minimalen Countdown wünschen, verwenden Sie Marinara Timer in einem Browser-Tab. Wenn Sie eine Site-Blockierung wünschen, verwenden Sie einen strikten Workflow. Aber wenn Sie einen Timer möchten, öffnen Sie ihn tatsächlich jeden Tag, weil darin etwas lebt, das Ihnen am Herzen liegt – ein Schleim, der Ihnen gehört, ein Streak, den Sie nicht unterbrechen möchten – SlimeForge ist dafür konzipiert.

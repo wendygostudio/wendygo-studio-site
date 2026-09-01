@@ -53,6 +53,8 @@ La gamification est au rendez-vous : après 5 séances ciblées de 60 minutes, v
 
 Le minuteur ne bloque pas les sites (contrairement à Strict Workflow). Cela motive par la récompense et non par la restriction. Vous restez responsable de la fermeture des distractions ; l'extension rend simplement la concentration visible et enrichissante.
 
+Pour le codage assisté par IA, faites de la session un résultat vérifiable : définissez une petite modification, demandez un patch limité, puis gardez du temps pour lire le diff et lancer le test pertinent. [Voir le flux Pomodoro avec revue pour le codage assisté par IA](/fr/blog/pomodoro-codage-assiste-ia/).
+
 ## Comparaison des options
 
 Si vous souhaitez un compte à rebours minimal, utilisez Marinara Timer dans un onglet du navigateur. Si vous souhaitez bloquer le site, Strict Workflow. Mais si vous voulez une minuterie, vous l'ouvrirez tous les jours parce que quelque chose qui vous tient à cœur y vit - un slime qui vous appartient, une séquence que vous ne voulez pas briser - SlimeForge est conçu pour cela.
