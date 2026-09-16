@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content="Wendygo structured content" />
-  <title>How to Sanitize a Palo Alto PAN-OS Config Before Sharing</title>
-  <meta name="description" content="A PAN-OS 'show config running' or set-format export carries admin password hashes, IKE pre-shared keys, and RADIUS/LDAP bind secrets. Here's what to strip before pasting into an AI chat or a support case." />
-  <link rel="canonical" href="https://wendygostudio.com/blog/sanitize-paloalto-config/" />
-  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-paloalto-config/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-paloalto-config/">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Sanitize a Palo Alto PAN-OS Config Before Sharing","description":"A PAN-OS 'show config running' or set-format export carries admin password hashes, IKE pre-shared keys, and RADIUS/LDAP bind secrets. Here's what to strip before pasting into an AI chat or a support case.","datePublished":"2026-07-30","dateModified":"2026-07-30","inLanguage":"en","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/blog/sanitize-paloalto-config/"},"wordCount":290,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Sanitize a Palo Alto PAN-OS Config Before Sharing"}]}</script>
-  
+  <title>How to Sanitize GitHub Logs Before Sharing</title>
+  <meta name="description" content="A practical checklist for removing tokens, repository URLs and private context from GitHub logs before sharing them with support or an AI tool." />
+  <link rel="canonical" href="https://wendygostudio.com/blog/sanitize-github-logs-before-sharing/" />
+  <link rel="alternate" hreflang="en" href="https://wendygostudio.com/blog/sanitize-github-logs-before-sharing/"><link rel="alternate" hreflang="es" href="https://wendygostudio.com/es/blog/sanitizar-logs-github-antes-compartir/"><link rel="alternate" hreflang="de" href="https://wendygostudio.com/de/blog/github-logs-vor-dem-teilen-bereinigen/"><link rel="alternate" hreflang="fr" href="https://wendygostudio.com/fr/blog/nettoyer-logs-github-avant-partage/"><link rel="alternate" hreflang="it" href="https://wendygostudio.com/it/blog/sanificare-log-github-prima-condivisione/"><link rel="alternate" hreflang="pt-PT" href="https://wendygostudio.com/pt/blog/sanitizar-logs-github-antes-partilhar/"><link rel="alternate" hreflang="x-default" href="https://wendygostudio.com/blog/sanitize-github-logs-before-sharing/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Sanitize GitHub Logs Before Sharing","description":"A practical checklist for removing tokens, repository URLs and private context from GitHub logs before sharing them with support or an AI tool.","datePublished":"2026-09-16","dateModified":"2026-09-16","inLanguage":"en","image":"https://wendygostudio.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://wendygostudio.com/blog/sanitize-github-logs-before-sharing/"},"wordCount":825,"author":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"},"publisher":{"@type":"Organization","name":"Wendygo Studio","url":"https://wendygostudio.com/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wendygostudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://wendygostudio.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Sanitize GitHub Logs Before Sharing"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is deleting a token from a GitHub log enough?","acceptedAnswer":{"@type":"Answer","text":"No. Treat an exposed active secret as compromised, revoke or rotate it with the provider, then remove or redact the copy you are sharing."}},{"@type":"Question","name":"Does GitHub redact every secret in Actions logs?","acceptedAnswer":{"@type":"Answer","text":"No. GitHub documents automatic redaction for supported values, but transformed or structured values may not be masked; review logs and register generated sensitive values."}},{"@type":"Question","name":"What should I remove before sharing a GitHub log?","acceptedAnswer":{"@type":"Answer","text":"Remove tokens, authorization headers, private repository URLs, internal hostnames, personal data, and payloads not needed to reproduce the issue."}},{"@type":"Question","name":"Can I sanitize GitHub logs locally?","acceptedAnswer":{"@type":"Answer","text":"Yes. A local text and configuration workflow can reduce upload exposure, but you must manually review the result and handle active secrets separately."}}]}</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -286,13 +286,13 @@
 </style>
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Wendygo Studio" />
-  <meta property="og:title" content="How to Sanitize a Palo Alto PAN-OS Config Before Sharing" />
-  <meta property="og:description" content="A PAN-OS 'show config running' or set-format export carries admin password hashes, IKE pre-shared keys, and RADIUS/LDAP bind secrets. Here's what to strip before pasting into an AI chat or a support case." />
-  <meta property="og:url" content="https://wendygostudio.com/blog/sanitize-paloalto-config/" />
+  <meta property="og:title" content="How to Sanitize GitHub Logs Before Sharing" />
+  <meta property="og:description" content="A practical checklist for removing tokens, repository URLs and private context from GitHub logs before sharing them with support or an AI tool." />
+  <meta property="og:url" content="https://wendygostudio.com/blog/sanitize-github-logs-before-sharing/" />
   <meta property="og:image" content="https://wendygostudio.com/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How to Sanitize a Palo Alto PAN-OS Config Before Sharing" />
-  <meta name="twitter:description" content="A PAN-OS 'show config running' or set-format export carries admin password hashes, IKE pre-shared keys, and RADIUS/LDAP bind secrets. Here's what to strip before pasting into an AI chat or a support case." />
+  <meta name="twitter:title" content="How to Sanitize GitHub Logs Before Sharing" />
+  <meta name="twitter:description" content="A practical checklist for removing tokens, repository URLs and private context from GitHub logs before sharing them with support or an AI tool." />
   <meta name="twitter:image" content="https://wendygostudio.com/og-image.png" />
 <style id="wg-language-style">.wg-language-switcher{display:inline-flex;align-items:center;gap:7px;margin-left:auto;flex:0 0 auto;color:#9ca4b4;font:600 12px/1.2 system-ui,sans-serif}nav .nav-brand{flex:0 0 auto;margin-right:10px}.wg-language-switcher select{max-width:132px;padding:6px 27px 6px 8px;border:1px solid #3a414e;border-radius:7px;background:#232831;color:#f0f1f4;font:600 12px system-ui,sans-serif}.wg-language-switcher select:focus-visible{outline:2px solid #e8a33d;outline-offset:2px}@media(max-width:1120px){nav .nav-links{gap:16px}.wg-language-switcher label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}@media(max-width:520px){.wg-language-switcher{margin-left:0}}</style></head>
 <body>
@@ -303,40 +303,59 @@
     <div class="nav-links">
       <a href="/#products">Extensions</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/#privacy">Privacy</a>
     </div>
-  <div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/sanitize-paloalto-config/" selected>English</option><option value="https://wendygostudio.com/es/blog/sanitizar-configuracion-paloalto/">Español</option><option value="https://wendygostudio.com/de/blog/paloalto-konfiguration-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-configuration-paloalto/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-configurazione-paloalto/">Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-configuracao-paloalto/">Português</option></select></div></nav>
+  <div class="wg-language-switcher"><label for="wg-language-select">Language</label><select id="wg-language-select" aria-label="Choose language" onchange="if(this.value)location.href=this.value"><option value="https://wendygostudio.com/blog/sanitize-github-logs-before-sharing/" selected>English</option><option value="https://wendygostudio.com/es/blog/sanitizar-logs-github-antes-compartir/">Español</option><option value="https://wendygostudio.com/de/blog/github-logs-vor-dem-teilen-bereinigen/">Deutsch</option><option value="https://wendygostudio.com/fr/blog/nettoyer-logs-github-avant-partage/">Français</option><option value="https://wendygostudio.com/it/blog/sanificare-log-github-prima-condivisione/">Italiano</option><option value="https://wendygostudio.com/pt/blog/sanitizar-logs-github-antes-partilhar/">Português</option></select></div></nav>
   <div class="article-wrap">
-    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>How to Sanitize a Palo Alto PAN-OS Config Before Sharing</div>
-    <div class="article-meta"><div class="article-tag">how-to · scrubforge</div><h1>How to Sanitize a Palo Alto PAN-OS Config Before Sharing</h1><p class="article-intro">A PAN-OS 'show config running' or set-format export carries admin password hashes, IKE pre-shared keys, and RADIUS/LDAP bind secrets. Here's what to strip before pasting into an AI chat or a support case.</p><div class="article-date">July 30, 2026</div></div>
+    <div class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><a href="/blog/">Blog</a><span>&#8250;</span>How to Sanitize GitHub Logs Before Sharing</div>
+    <div class="article-meta"><div class="article-tag">how-to · scrubforge</div><h1>How to Sanitize GitHub Logs Before Sharing</h1><p class="article-intro">A practical checklist for removing tokens, repository URLs and private context from GitHub logs before sharing them with support or an AI tool.</p><div class="article-date">September 16, 2026</div></div>
     
     <hr class="divider" />
-    <div class="article-body"><p>Exporting a Palo Alto firewall config for a support case or an AI-assisted troubleshooting session pulls everything in the candidate or running config at once — zone structure, security rules, NAT, and every secret PAN-OS stores alongside them. Before that goes anywhere outside the box, it&#39;s worth knowing exactly what&#39;s in it.</p>
-<h2>What a PAN-OS Config Actually Contains</h2>
+    <div class="article-body"><h2>How to Sanitize GitHub Logs Before Sharing</h2>
+<p>GitHub Actions logs are useful evidence when a build fails, but they can also contain more context than a support engineer or AI assistant needs. A log may include a repository URL, branch name, internal hostname, file path, pull-request title, email address, authorization header, or a token printed by a noisy command.</p>
+<p>The safest workflow is to create a copy, remove unnecessary private context, inspect the result, and only then share it. This is a disclosure-reduction step, not a substitute for incident response: if an active secret appears in a log, revoke or rotate it with the provider first.</p>
+<h2>What to check before sharing</h2>
+<p>Use this short inventory on the copied log:</p>
 <ul>
-<li><code>phash</code> — the local administrator password hash under <code>mgt-config users</code></li>
-<li>IKE Gateway <code>pre-shared-key</code> values for every VPN tunnel</li>
-<li>SNMP <code>snmp-setting</code> community strings (v1/v2c) or v3 auth/privacy passwords</li>
-<li>RADIUS, LDAP, and Kerberos <code>server-profile</code> secrets and bind passwords used for admin/GlobalProtect authentication</li>
-<li>GlobalProtect portal and gateway pre-shared secrets and certificate passphrases</li>
-<li>API keys embedded in automation scripts pasted alongside the config</li>
+<li>access tokens, API keys, JWTs, private keys and <code>Authorization</code> headers;</li>
+<li>cloud account IDs, private repository URLs, internal hostnames and file paths;</li>
+<li>deployment names, cluster addresses, database names and environment variables;</li>
+<li>email addresses, usernames, issue text or payloads containing personal data;</li>
+<li>generated reports or request bodies that are not needed to reproduce the failure.</li>
 </ul>
-<h2>Before and After</h2>
-<p>The same pre-shared key or bind password always maps to the same token throughout the sanitized output, so relationships between VPN tunnels, zones, and authentication profiles stay readable — only the literal secret is replaced.</p>
-<h2>Steps</h2>
+<p>Keep the error message, command exit code, relevant tool versions and the smallest input needed to explain the problem. Replacing a value with a stable placeholder such as <code>&lt;GITHUB_TOKEN&gt;</code> or <code>&lt;INTERNAL_HOST&gt;</code> preserves the shape of the failure without exposing the literal value.</p>
+<h2>A safe local workflow</h2>
 <ol>
-<li>Install ScrubForge from the Chrome Web Store (free)</li>
-<li>Export with <code>show config running</code> (or the <code>set</code>-format equivalent) from the PAN-OS CLI or Panorama</li>
-<li>Paste the output into ScrubForge</li>
-<li>Review the sanitized result — password hashes, pre-shared keys, and bind secrets are tokenized, structure is untouched</li>
-<li>Copy and share, or continue in ScrubForge&#39;s built-in AI chat</li>
+<li>Download or copy the log into a temporary local working file. Keep the original in the secure environment where it was produced.</li>
+<li>Search the copy for <code>token</code>, <code>secret</code>, <code>password</code>, <code>Authorization</code>, <code>BEGIN PRIVATE KEY</code>, URLs, hostnames and email addresses. Also inspect long opaque strings; not every secret has an obvious name.</li>
+<li>Replace sensitive values with typed placeholders. Use the same placeholder for repeated values so a reviewer can still follow the sequence.</li>
+<li>Remove unrelated job steps, request bodies and environment dumps. A shorter log is easier to audit and less likely to reveal context accidentally.</li>
+<li>Read the final file from top to bottom and check nearby lines, code blocks and attached artifacts. Do not rely only on a regex or a masking feature.</li>
+<li>Share the sanitized copy through the approved support channel and record which values were removed.</li>
 </ol>
-<h2>Why Local Processing Matters</h2>
-<p>An IKE pre-shared key or an admin password hash pasted into a support ticket or a shared AI chat log sits there indefinitely, outside your control. ScrubForge sanitizes entirely inside the browser tab — nothing is uploaded before you decide to share it.</p>
-<h2>Related</h2>
-<ul>
-<li><a href="/blog/sanitize-network-config-before-sharing/">Sanitize a network config before sharing</a></li>
-<li><a href="/blog/sanitize-github-logs-before-sharing/">Sanitize GitHub logs before sharing</a></li>
-<li><a href="/scrubforge/">ScrubForge</a></li>
-</ul>
+<p>ScrubForge can help with the local text-cleaning pass for a copied log or configuration. It keeps the draft inside the browser tab until you choose to copy the result. Review the output yourself; no automated sanitizer can know which internal identifier is safe for your organization to disclose.</p>
+<h2>What GitHub masking does — and does not — guarantee</h2>
+<p>GitHub&#39;s <a href="https://docs.github.com/en/actions/reference/security/secrets">Secrets reference</a> documents automatic redaction for supported secret values in workflow logs, but masking is not a complete review. Transformed, encoded, split or structured values may not be recognized. GitHub also recommends masking sensitive values that are not stored as GitHub secrets and avoiding commands that print secrets.</p>
+<p>If a workflow needs to expose a non-GitHub secret to a log-safe diagnostic, mask that value before any command can print it. Even then, treat the log as potentially sensitive and inspect it before exporting it. A masked log can still disclose repository names, topology, user data or a value reconstructed by a transformation.</p>
+<h2>If a secret was already exposed</h2>
+<p>Stop treating the log as a redaction-only problem. Follow the credential provider&#39;s process to revoke or rotate the secret, determine where the log was retained, and review access. Deleting a line from the current view does not remove copies in job artifacts, caches, tickets, chat exports or repository history. If the secret entered Git history, GitHub&#39;s <a href="https://docs.github.com/en/code-security/tutorials/remediate-leaked-secrets/remediating-a-leaked-secret">leaked-secret remediation guidance</a> covers the additional coordination and history-rewrite steps required after revocation.</p>
+<h2>Final review checklist</h2>
+<p>Before pressing send, confirm:</p>
+<ol>
+<li>Every credential-like value has been removed or replaced.</li>
+<li>Any exposed active credential has been revoked or rotated.</li>
+<li>Internal URLs, hostnames and personal data are necessary for the diagnosis.</li>
+<li>Artifacts, screenshots and pasted commands received the same review as the main log.</li>
+<li>The sanitized copy still includes the error, versions and reproduction context.</li>
+</ol>
+<p>For a related infrastructure example, see <a href="/blog/sanitize-paloalto-config/">how to sanitize a Palo Alto PAN-OS config before sharing</a>. For the browser-side workflow, see <a href="/scrubforge/">ScrubForge</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is deleting a token from a GitHub log enough?</h3>
+<p>No. Treat an exposed active secret as compromised, revoke or rotate it with the provider, then remove or redact the copy you are sharing.</p>
+<h3>Does GitHub redact every secret in Actions logs?</h3>
+<p>No. Supported values may be masked, but transformed or structured values can escape automatic masking. Review logs and mask generated sensitive values explicitly when needed.</p>
+<h3>What should I remove before sharing a GitHub log?</h3>
+<p>Remove tokens, authorization headers, private repository URLs, internal hostnames, personal data and payloads that are not needed to reproduce the issue.</p>
+<h3>Can I sanitize GitHub logs locally?</h3>
+<p>Yes. A local text and configuration workflow can reduce upload exposure, but manually review the result and handle active secrets separately.</p>
 </div>
   </div>
   <footer><div class="footer-brand"><strong>Wendygo Studio</strong> · Tenerife, Canary Islands</div><div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a><a href="/privacy">Privacy</a></div></footer>

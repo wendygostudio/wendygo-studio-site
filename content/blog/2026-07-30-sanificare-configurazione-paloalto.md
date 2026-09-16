@@ -9,7 +9,7 @@ translationKey: sanitize-paloalto-config
 product: scrubforge
 contentType: how-to
 primaryKeyword: "sanificare configurazione palo alto pan-os"
-relatedPages: /scrubforge/
+relatedPages: /scrubforge/,/it/blog/sanificare-log-github-prima-condivisione/
 ---
 
 Esportare la configurazione di un firewall Palo Alto per un caso di supporto o una sessione di troubleshooting assistita da IA porta con sé tutto ciò che si trova nella config candidata o in esecuzione — struttura delle zone, regole di sicurezza, NAT, e ogni segreto che PAN-OS conserva accanto ad esse. Prima che questo esca dal dispositivo, conviene sapere esattamente cosa contiene.
@@ -42,4 +42,5 @@ Una chiave precondivisa IKE o un hash della password admin incollati in un ticke
 ## Correlati
 
 - [Sanificare una config di rete prima di condividerla](/it/blog/sanificare-configurazione-rete/)
+- [Come sanificare i log GitHub prima di condividerli](/it/blog/sanificare-log-github-prima-condivisione/)
 - [ScrubForge](/it/scrubforge/)

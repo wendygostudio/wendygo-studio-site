@@ -9,7 +9,7 @@ translationKey: sanitize-paloalto-config
 product: scrubforge
 contentType: how-to
 primaryKeyword: "palo alto pan-os konfiguration bereinigen"
-relatedPages: /scrubforge/
+relatedPages: /scrubforge/,/de/blog/github-logs-vor-dem-teilen-bereinigen/
 ---
 
 Der Export einer Palo-Alto-Firewall-Konfiguration für einen Support-Fall oder eine KI-gestützte Fehlersuche zieht alles aus der Kandidaten- oder laufenden Konfiguration auf einmal: Zonenstruktur, Sicherheitsregeln, NAT und jedes Secret, das PAN-OS daneben speichert. Bevor das die Box verlässt, lohnt es sich zu wissen, was genau drin ist.
@@ -42,4 +42,5 @@ Ein IKE-Pre-Shared-Key oder ein Admin-Passwort-Hash, der in ein Support-Ticket o
 ## Verwandte Artikel
 
 - [Netzwerkkonfiguration vor dem Teilen bereinigen](/de/blog/netzwerkkonfiguration-bereinigen/)
+- [GitHub-Logs vor dem Teilen bereinigen](/de/blog/github-logs-vor-dem-teilen-bereinigen/)
 - [ScrubForge](/de/scrubforge/)

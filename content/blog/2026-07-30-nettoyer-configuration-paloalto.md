@@ -9,7 +9,7 @@ translationKey: sanitize-paloalto-config
 product: scrubforge
 contentType: how-to
 primaryKeyword: "nettoyer configuration palo alto pan-os"
-relatedPages: /scrubforge/
+relatedPages: /scrubforge/,/fr/blog/nettoyer-logs-github-avant-partage/
 ---
 
 Exporter la configuration d'un pare-feu Palo Alto pour un ticket de support ou une session de dépannage assistée par IA récupère d'un coup tout ce qui se trouve dans la configuration candidate ou active — structure des zones, règles de sécurité, NAT, et chaque secret que PAN-OS stocke à côté. Avant que cela ne quitte l'équipement, mieux vaut savoir exactement ce qu'il contient.
@@ -42,4 +42,5 @@ Une clé pré-partagée IKE ou un hash de mot de passe admin collé dans un tick
 ## À lire aussi
 
 - [Nettoyer une configuration réseau avant de la partager](/fr/blog/nettoyer-configuration-reseau/)
+- [Nettoyer des logs GitHub avant de les partager](/fr/blog/nettoyer-logs-github-avant-partage/)
 - [ScrubForge](/fr/scrubforge/)
