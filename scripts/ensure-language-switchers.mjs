@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const check = process.argv.includes('--check');
+const pathArg = process.argv.indexOf('--path');
+const pathFilter = pathArg >= 0 && process.argv[pathArg + 1] ? path.resolve(process.argv[pathArg + 1]) : null;
 const root = path.resolve('public');
 const labels = { en: 'English', es: 'Español', de: 'Deutsch', fr: 'Français', it: 'Italiano', 'pt-PT': 'Português' };
 const ui = {
@@ -21,6 +23,7 @@ function alternates(html) {
 }
 
 for (const file of walk(root)) {
+  if (pathFilter && path.resolve(file) !== pathFilter) continue;
   let html = fs.readFileSync(file, 'utf8');
   const routes = alternates(html);
   const languages = Object.keys(labels).filter((language) => routes[language]);

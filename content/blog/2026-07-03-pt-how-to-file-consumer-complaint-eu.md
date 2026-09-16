@@ -95,7 +95,7 @@ Para compras a um comerciante noutro país da UE, na Islândia ou na Noruega, co
 ## Perguntas frequentes
 
 **Posso apresentar uma queixa do consumidor se comprei na Amazon?**
-A sua reclamação � normalmente contra o vendedor individual, não contra a Amazon. A garantia A-to-z da própria Amazon também pode estar disponível. Para um litígio transfronteiri�o com um comerciante da UE, da Islândia ou da Noruega, o seu Centro Europeu do Consumidor nacional poderá ajudar.
+A sua reclamação é normalmente contra o vendedor individual, não contra a Amazon. A garantia A-to-z da própria Amazon também pode estar disponível. Para um litígio transfronteiriço com um comerciante da UE, da Islândia ou da Noruega, o seu Centro Europeu do Consumidor nacional poderá ajudar.
 
 **Uma decisão de RAL é juridicamente vinculativa?**
 Depende do órgão de RAL, da legislação nacional e do acordo das partes para participar. Verifique as regras atuais do organismo antes de registar e não presuma que todos os resultados da RAL têm o mesmo efeito jurídico.

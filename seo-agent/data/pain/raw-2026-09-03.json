@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T12:12:38.221Z",
+  "items": [
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "why is there no tool",
+      "title": "Did Vibe Coders win? Is this our end?",
+      "text": "As much as I hate writing this, this has been bothering me for a while.<p>I keep seeing experienced software engineers, people who have been coding for 20 or 30 years, saying that software engineering isn’t going anywhere and that AI replacing engineers is nowhere close to reality.<p>I really want to believe them.<p>But a lot of the arguments sound familiar.<p>Two or three years ago, people said AI couldn’t really code. It couldn’t maintain context, understand large codebases, work sequentially, debug its own mistakes, or make changes across an entire repository.<p>And then coding agents happened.<p>They’re obviously not perfect, but in an incredibly short amount of time, many of those problems have gotten dramatically better.<p>So what makes the remaining problems fundamentally different?<p>The argument I hear now is that someone still needs to review the code, design the architecture, think about security, test everything, and supervise the agents.<p>But why does that “someone” necessarily have to be human?<p>Why couldn’t we have one agent writing code, another reviewing it, another handling architecture, another checking security, another testing, with a higher-level agent coordinating all of them?<p>We put enormous resources into making AI good at coding. What happens when we put the same effort into everything surrounding coding?<p>That’s what scares me.<p>I can imagine a future where you tell one agent what you want to build. It coordinates the other agents, builds the ",
+      "score": 2,
+      "comments": 5,
+      "created": "2026-09-02T23:18:07Z",
+      "url": "https://news.ycombinator.com/item?id=49543923"
+    },
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "frustrated with",
+      "title": "Kids go from curious to frustrated playing with AI-stuffed toys, UW study finds",
+      "text": "",
+      "score": 9,
+      "comments": 7,
+      "created": "2026-09-03T08:20:51Z",
+      "url": "https://news.ycombinator.com/item?id=49547334"
+    },
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "no tool does this",
+      "title": "Launch HN: RonanRX (YC S26) – Personalized Peptides and GLP-1s",
+      "text": "Hi HN,<p>I’m Lloyd, one of two founders of RonanRx (<a href=\"https:&#x2F;&#x2F;ronanrx.com&#x2F;\">https:&#x2F;&#x2F;ronanrx.com&#x2F;</a>). We are building a vertically integrated pharmaceutical company with software for prescribing, telehealth, compounding, manufacturing, and delivery. We are starting with GLP-1s and peptides.<p>The path to RonanRx is fairly unconventional. During the pandemic, I built one of the largest mask manufacturing factories in the US. We could make a million masks in a day. We converted raw polypropylene pellets into finished pallets of masks.<p>I had a background in software from my YC W10 company, so we took a software approach to building our factory. We used machine learning and computer vision to optimize production. We also vertically integrated almost everything. It worked. We built an efficient manufacturing operation and grew the business to 50 million dollars in revenue. Then people actually stopped caring about masks. Fair enough.<p>Around the same time, I decided to try and lose the weight I had gained while building the factory. I ate nothing but chicken for six months. While this diet got some results, I plateaued. My doctor suggested tirzepatide, a GLP-1 medication.<p>For me, losing weight was only the beginning. &quot;Food noise&quot; was gone. I showed less interest in other compulsive behavior. I stopped scrolling Instagram and quit biting my nails. But that was just the beginning. I was born with a congenital heart defect called a",
+      "score": 70,
+      "comments": 73,
+      "created": "2026-09-02T22:36:04Z",
+      "url": "https://news.ycombinator.com/item?id=49543530"
+    }
+  ]
+}

@@ -23,7 +23,7 @@ Une pause Pomodoro peut échouer de deux manières opposées. Soit vous restez a
 
 ## À quoi sert réellement une pause de cinq minutes
 
-La courte pause nest pas suffisante pour accomplir une autre tâche significative. Son objectif est de créer une fronti�re entre les sessions de focus. Cela peut signifier bouger après �tre restá assis, changer la distance visuelle après avoir regard� un �cran ou effacer la dernière tâche de votre attention.
+La courte pause n’est pas suffisante pour accomplir une autre tâche significative. Son objectif est de créer une frontière entre les sessions de focus. Cela peut signifier bouger après être resté assis, changer la distance visuelle après avoir regardé un écran ou effacer la dernière tâche de votre attention.
 
 Si vous êtes encore en train de décider quelle structure d'intervalle correspond à votre travail, notre comparaison de [Pomodoro et le blocage du temps](/blog/pomodoro-vs-time-blocking/) explique comment une minuterie peut protéger la concentration à l'intérieur d'un bloc de calendrier plus grand.
 
@@ -55,7 +55,7 @@ Choisissez une ou deux options plutôt que d"essayer de compléter la liste enti
 
 ## Interrompre les activités qui volent généralement la prochaine session
 
-Évitez les activités conçues autour de la continuation�: vidéos courtes, flux d'actualitès, bo�tes de r�ception, jeux multijoueurs et ��juste une tâche rapide��. Aucune nest intrinsèquement mauvaise, mais chacune introduit de nouvelles décisions ou un rèsultat impr�visible.
+Évitez les activités conçues autour de la continuation : vidéos courtes, flux d'actualités, boîtes de réception, jeux multijoueurs et « juste une tâche rapide ». Aucune n’est intrinsèquement mauvaise, mais chacune introduit de nouvelles décisions ou un résultat imprévisible.
 
 | Break choice | Why it expands | Bounded alternative |
 |---|---|---|

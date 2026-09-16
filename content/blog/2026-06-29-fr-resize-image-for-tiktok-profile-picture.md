@@ -54,7 +54,7 @@ Une image correctement dimensionnée se charge instantanément et semble nette s
 **Erreur 1 :** Utiliser une image rectangulaire et laisser TikTok se recadrer automatiquement
 → Résultat : visage ou branding décentré
 
-**Erreur 2 :** Téléchargement d'une image basse résolution (100 × 100 ou moins)
+**Erreur 2 :** Téléchargement d'une image basse résolution (100 נ100 ou moins)
 → Résultat : Apparence pixélisée sur mobile
 
 **Erreur 3 :** Utiliser une photo avec du texte ou des logos près des bords

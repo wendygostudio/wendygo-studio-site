@@ -22,7 +22,7 @@ relatedPages: >-
 
 # Comment redimensionner une image pour les publications LinkedIn dans Chrome (1200 × 627)
 
-LinkedIn restitue les images de flux selon un recadrage horizontal étroit, similaire à X et Facebook. Les photos carrées perdent les bords verticaux. Les portraits sont compressés. Le correctif : publiez à 1 200 × 627 px (environ 1,9 : 1) et l'image s'affiche en intégralité dans l'aperçu du flux LinkedIn sans recadrage inattendu.
+LinkedIn restitue les images de flux selon un recadrage horizontal étroit, similaire à X et Facebook. Les photos carrées perdent les bords verticaux. Les portraits sont compressés. Le correctif : publiez à 1 200 נ627 px (environ 1,9 : 1) et l'image s'affiche en intégralité dans l'aperçu du flux LinkedIn sans recadrage inattendu.
 
 ## Exigences de taille d’image LinkedIn
 

@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T13:24:07.087Z",
+  "items": [
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "why is there no tool",
+      "title": "Ask HN: Career paths to consider if I am better at supporting than creating?",
+      "text": "I have a BS&#x2F;MS in computer science and somewhere around 9 years of experience, where the first half was spent working as a backend developer and the second half I&#x27;ve been working in product owner roles. I switched from development to product because I simply realized that I wasn&#x27;t very good at implementation and system design work to be honest. I wanted to work with tech from a more overarching level, and let the experts who were much more skilled than me handle the implementation work.<p>Around 8 months ago I switched companies and am still working as a PO, but this organization I am working in is a terrible fit for me. I don&#x27;t want to go too far into why I really dislike this job, but a big part of it is that the organization wants me to make technical design decisions which I am just really not good at, since the development team doesn’t have this experience themselves. This is making it completely impossible to deliver on the project I’m responsible for.<p>This has really made me think about what I should do for my next role. I fully admit that I was and still am a mediocre developer, which is why I moved into a PO role in the first place around 4 years ago. I have such a huge amount of respect for people who are great developers and architects. It&#x27;s a challenging role and I can imagine it&#x27;s exciting if you are creative and like to build new things. But I am just not cut out for it. I am not very creative, and I often have no clue where to ev",
+      "score": 18,
+      "comments": 17,
+      "created": "2026-09-13T11:47:23Z",
+      "url": "https://news.ycombinator.com/item?id=49682920"
+    },
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "frustrated with",
+      "title": "I was so frustrated with GitHub that I rebuilt it as a Chrome extension",
+      "text": "",
+      "score": 5,
+      "comments": 1,
+      "created": "2026-09-13T02:07:51Z",
+      "url": "https://news.ycombinator.com/item?id=49679235"
+    }
+  ]
+}

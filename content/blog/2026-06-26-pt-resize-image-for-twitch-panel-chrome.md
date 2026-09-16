@@ -19,7 +19,7 @@ primaryKeyword: >-
 relatedPages: /pt/frameforge/
 ---
 
-Os painéis do Twitch estáo abaixo da biografia do seu canal – pequenas caixas retangulares onde os streamers colocam miniaturas, chamadas à ação e links rápidos. Têm 320×160 px, que � uma das proporções mais difíceis de trabalhar. A maioria dos editores de imagem assume formatos quadrados ou largos. Uma fotografia de origem que parece boa em 16:9 fica distorcida quando se tenta comprimi-la num retângulo ultralargo de 2:1.
+Os painéis do Twitch estáo abaixo da biografia do seu canal – pequenas caixas retangulares onde os streamers colocam miniaturas, chamadas à ação e links rápidos. Têm 320×160 px, que é uma das proporções mais difíceis de trabalhar. A maioria dos editores de imagem assume formatos quadrados ou largos. Uma fotografia de origem que parece boa em 16:9 fica distorcida quando se tenta comprimi-la num retângulo ultralargo de 2:1.
 
 Este guia mostra como redimensionar imagens para painéis do Twitch utilizando o **FrameForge**, uma extensão do Chrome que faz a matemática por si e mantém as suas imagens locais (sem carregamento para um servidor).
 

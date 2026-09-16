@@ -18,7 +18,7 @@ La plupart des gens qui essaient une minuterie Pomodoro s'arrêtent après une s
 
 Un minuteur Pomodoro gamifié résout ce problème en ajoutant une boucle de rétroaction : chaque session que vous terminez vous rapporte quelque chose de tangible. Il ne s'agit pas d'un badge de notification, mais d'un compagnon virtuel en pleine croissance qui reflète la quantité de travail que vous avez réellement effectué.
 
-## Ce que signifie « gamifié » pour un minuteur de concentration
+## Ce que signifie « gamifi頻 pour un minuteur de concentration
 
 Une simple minuterie Pomodoro compte à rebours et sonne. C'est ça. Un système gamifié relie vos efforts concentrés à des progrès visibles dans un système distinct – généralement via de la monnaie gagnée, du contenu à débloquer ou un compagnon qui évolue.
 

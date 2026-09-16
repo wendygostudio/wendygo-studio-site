@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T19:43:43.990Z",
+  "items": [
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "so annoying",
+      "title": "A mnemonic-free wallet where the private key never leaves the phone's TEE",
+      "text": "The phone is designed as part of the chain — a cornerstone of it. All on-chain truth lives on the phone side.<p>The chain isn&#x27;t deployed yet. The bigger it gets, the more unwieldy it becomes — 3 million lines of Rust, 312 crates. It&#x27;s starting to feel like it could collapse under its own weight.<p>The wallet generates keys directly inside the phone&#x27;s chip TEE. The private key never leaves the TEE. That genuinely lets you say goodbye to annoying private keys and mnemonics for good.<p>I put up a preview of the wallet client on GitHub:<p>https:&#x2F;&#x2F;github.com&#x2F;niumeta-TZ&#x2F;niumeta&#x2F;releases&#x2F;tag&#x2F;NiuMeta-Mobile-Client-APK-Preview-Multilingual.apk<p>It&#x27;s open source now — 1.5 million lines of code. The consensus and core business logic aren&#x27;t open sourced yet.<p>https:&#x2F;&#x2F;github.com&#x2F;niumeta-TZ&#x2F;niumeta<p>0 stars. The original repo had 200+ stars. GitHub said it triggered an AI risk-control flag and 404&#x27;d it. I appealed for 10 days, no resolution, so I just deleted it and rebuilt a new one. I feel like GitHub is outdated now — you can&#x27;t update at the pace of &quot;old-school programming&quot; anymore. Every update has to be a massive batch, and even then it still gets flagged. Speechless.",
+      "score": 3,
+      "comments": 0,
+      "created": "2026-09-16T01:07:33Z",
+      "url": "https://news.ycombinator.com/item?id=49720965"
+    },
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "why is there no tool",
+      "title": "Tell HN: An inside view of Montana's new biotech law",
+      "text": "Montana passed a law called SB535. It builds on right-to-try (pre-approval access with informed consent, Phase 1 safety data etc.) but goes much further, fixing problems with those laws.<p>Alex Tabarrok called it &quot;the most important regulatory innovation in drug approval in my lifetime&quot; (https:&#x2F;&#x2F;marginalrevolution.com&#x2F;marginalrevolution&#x2F;2026&#x2F;06&#x2F;montanas-sb535-and-a-potential-biotech-renaissance-in-america.html). Was posted here but died in &#x2F;new (https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48559525). The mods suggested this post.<p>I contributed ideas to the law and am now implementing it through my company. I invested in biotech for years and watched companies struggle. I built the biotech ecosystem in Prospera as an alternative, concluded it was too early, and now think Montana is the best place to prove this.<p><i>Why this exists:</i> When FDA approves a bad drug, heads roll. When it delays a good one, the deaths are statistical and nobody gets blamed (&quot;invisible graveyard&quot;). So the incentive is overcaution, which is why the cost per approved drug has roughly doubled every 9 years for decades (&quot;Eroom&#x27;s Law&quot;). Founders are in the &quot;Valley of Death&quot; around Phase 1: grants are no longer available, and commercial money wants assurance the drug will pass the next trial. Only ~10% of post-Phase 1 drugs get approved, but 68% of failed trials don’t stop because they found lack of safety or effica",
+      "score": 2,
+      "comments": 0,
+      "created": "2026-09-16T18:43:57Z",
+      "url": "https://news.ycombinator.com/item?id=49731216"
+    },
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "frustrated with",
+      "title": "I was so frustrated with GitHub that I rebuilt it as a Chrome extension",
+      "text": "",
+      "score": 5,
+      "comments": 2,
+      "created": "2026-09-13T02:07:51Z",
+      "url": "https://news.ycombinator.com/item?id=49679235"
+    }
+  ]
+}

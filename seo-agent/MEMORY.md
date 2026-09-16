@@ -1,5 +1,45 @@
 # Memoria del Proyecto — Wendygo Studio
 
+## Daily 2026-09-16
+
+- GSC refrescado para 2026-08-17–2026-09-13: 50 páginas, 26 consultas y 26 pares. El informe semanal 2026-09-07–13 registra 24 impresiones/1 clic/CTR 4,1667 %/posición 24,25 frente a 22/0/0 %/27,82; muestra pequeña. En la ventana de 28 días, los únicos pares en posición 10–30 fueron la página francesa de banner X/Twitter (3 impresiones, posición 14,3) y Forest en portugués (1, posición 30); no hay edición segura.
+- Pain scan: tres señales HN no accionables; no se creó URL ni se editó contenido porque la recuperación sigue vigente hasta 2026-10-01. La segunda pasada contrastó homepage, ScrubForge/Palo Alto, X/Twitter, garantía UE, Forest y Ubiquiti sin evidencia suficiente para apilar cambios.
+- `npm run validate` pasa con 882 HTML, 816 canónicas, seis locales y 0 errores; `npm test` 7/7 y SEO audit 0. Sitemap live 200 con 816 URLs y homes revisadas 200. Siguen bloqueadas las puertas históricas: 45 `U+FFFD` en dos HTML franceses, `product:check` 12/12 y `blog:check` 636/636 fuera de sync.
+- GA4 sigue en 403 + `invalid_grant`; Plausible no tiene credenciales; CWS no tiene export oficial. DEV.to API pública 200 con 37 artículos y cobertura reciente, sin publicación redundante. Bluesky autenticado: un like relevante a `at://did:plc:metot5dtmlxgs7d4abx5cc53/app.bsky.feed.post/3mvnuq6jfhs2i`; sin post/follow.
+- Artefactos propios: `analytics-data.json`, `seo-agent/reports/weekly-gsc-2026-09-16.json`, `seo-agent/data/pain/raw-2026-09-16.json` y `seo-agent/journal/2026-09-16.md`. Commit propio preparado para publicar la cola Daily de septiembre; push directo a `origin/main` bloqueado por aprobación explícita pendiente. Telemetría de tokens: no expuesta.
+
+## Weekly 2026-09-15
+
+- GSC final 2026-09-06–12 frente a 2026-08-30–2026-09-05: 33/1 impresiones/clics frente a 23/0, CTR 3,03 % frente a 0 % y posición 26,45 frente a 44,13. Muestra pequeña: no declarar recuperación. El clic está en `/use-cases/network-config-anonymizer-for-ai/` y no en consultas visibles; las filas por página no reconcilian con el total de fechas.
+- Forest EN sube 1→6 impresiones, sin clic y posición actual 42,67; Instagram ES 1→3 y posición 90; X/Twitter FR 1→2, posición 15. No editar por CTR con estos tamaños ni declarar canibalización. Export y revisión: `reports/weekly-gsc-2026-09-15.json` y `journal/weekly-2026-09-15.md`.
+- `npm run validate` ya pasa: 882 HTML, 816 canónicas, seis locales, 0 errores; 42 hubs/843 switchers sincronizados, tests 7/7, auditoría SEO 0. Sitemap local/live 816/816 idéntico; enlaces internos faltantes 0. El experimento anterior de hubs queda logrado.
+- Recuperación aún bloqueada: 45 `U+FFFD` en dos HTML franceses; `product:check` 12/12 y `blog:check` 636/636 fuera de sync. Python no está disponible en el shell para ejecutar lint. PSI 429, sin CWV nuevo.
+- GA4 403 + `invalid_grant`; Plausible sin clave/site ID/URL; CWS sin exports. Catálogo: ScrubForge público 1.15.0 frente a 1.13.1 local; las otras cinco fichas coinciden. Sin sesiones, conversiones, instalaciones o activación válidas.
+- Experimentos: aislar regresión orgánica por cohortes, cerrar encoding/renderer selectivamente y recuperar medición de producto. ScrubForge en backlog verificable; outreach PomoPals no enviado. Sin commit, push ni publicación.
+
+## Daily 2026-09-12
+
+- GSC refrescado para 2026-08-13→2026-09-09: 50 consultas, 50 páginas y 250 pares; las candidatas en posición 10–30 suman 14 impresiones/0 clics. No se creó URL ni se editó contenido por la recuperación vigente.
+- Paridad sitemap local/live confirmada 816/816 con 0 diferencias; las seis homes responden 200 y pasan H1/canonical/hreflang/schema. `npm run validate` pasa con 882 HTML, 816 canónicas, 6 locales y 0 errores; tests 7/7 y SEO audit 0.
+- Encoding sigue bloqueado por 43 + 2 `U+FFFD` en dos HTML franceses sin original limpio; product render 12/12 y blog render 636/636 siguen fuera de sync. Headers live de seguridad ausentes; no se tocó hosting no representado en el repo.
+- GA4 403 + `invalid_grant`, CWS sin exportación y Plausible sin configuración. DEV.to API/público revisado con 37 posts y sin publicación redundante; Bluesky autenticado, un like relevante registrado, sin post/follow. Sin commit/push por gates de recuperación. Journal: `seo-agent/journal/2026-09-12.md`.
+
+## Daily 2026-09-03
+
+- GSC refrescado para 2026-08-04→2026-08-31: 50 páginas, 49 consultas y 50 pares; filas visibles suman 193 impresiones/1 clic, posición ponderada 52,94. Forest sigue primero con 51 impresiones/posición 39,9; no se apilan cambios antes del 2026-09-07.
+- La regresión del 1–2 de agosto queda acotada a despliegues de alternates/rutas duplicadas (48/78 HTML) y la tanda del 3 de agosto (407 HTML/76 fuentes), sin causalidad probada. Sitemap local/producción 816/816, 0 diferencias.
+- Se repararon 11 fuentes con doble UTF-8 y seis fuentes/páginas recuperables desde producción limpia; se redujo el HTML con `U+FFFD` de 277 a 234. Quedan 199 `U+FFFD` en 26 fuentes y 234 en 30 HTML; `content-lint.py` ahora los detecta y bloquea explícitamente.
+- `npm run validate` OK con 882 HTML/816 canónicas/6 locales/0 errores; tests 7/7, SEO audit 0 y enlaces internos 0 faltantes. Checks históricos: productos 12/12 y blog 636/636 fuera de sync; no se regeneraron masivamente. No commit/push por la puerta de encoding.
+- Se añadieron filtros selectivos al renderer de blog y al reparador de switchers. DEV.to volvió a bloquear lectura por TLS; Bluesky autenticado sin conversación accionable; sin publicación/interacción. GA4 403 + `invalid_grant`, CWS/Plausible siguen bloqueados. Journal: `seo-agent/journal/2026-09-03.md`.
+
+## Daily 2026-09-02
+
+- GSC refrescado para 2026-08-03→2026-08-30: 50 páginas, 50 consultas y 54 pares; filas visibles suman 198 impresiones/1 clic. Sin nueva URL por la excepción de recuperación del sprint.
+- Paridad sitemap local/producción confirmada: 816/816, 0 diferencias; permisos Chrome, Kubernetes y coding asistido por IA responden 200 en producción.
+- `npm run validate` OK con 882 HTML/816 canónicas/6 locales/0 errores; tests 7/7, SEO audit 0 y enlaces internos 0 faltantes. Se reparó doble encoding en 22 HTML históricos y se sincronizaron artefactos dependientes.
+- Deuda de encoding real: 277 `U+FFFD` en 36 HTML públicos y 199 en 26 fuentes Markdown. Render histórico sigue fuera de sync en 12/12 productos y 636/636 artículos; no se regeneró masivamente.
+- DEV.to sigue bloqueado por TLS; Bluesky autenticado sin conversación accionable. Sin publicación ni interacción. No commit/push por la puerta de encoding pendiente. Journal: `seo-agent/journal/2026-09-02.md`.
+
 ## Monthly 2026-09-01
 
 - GSC exacto 28d: 249 impresiones/1 clic/CTR 0,4016 %/posición 59,67 frente a 3.844/17/0,4422 %/42,97. La ruptura empieza el 02-08; es una regresión crítica sin causa probada.

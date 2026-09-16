@@ -31,7 +31,7 @@ Avant de supprimer vos données ou de déposer une plainte, vous devez savoir ce
 ## Comment soumettre une demande d'accès aux données RGPD (étape par étape)
 
 **Étape 1 : Localisez le responsable du traitement**
-Ouvrez la politique de confidentialité ou le centre de confidentialité de l'entreprise. Recherchez un e-mail de « délégué à la protection des données » (DPO) ou un contact « Demandes de confidentialité ». Si aucun n’est répertorié, envoyez un e-mail à leur boîte de réception principale juridique ou d’assistance.
+Ouvrez la politique de confidentialité ou le centre de confidentialité de l'entreprise. Recherchez un e-mail de « délégué à la protection des données » (DPO) ou un contact « Demandes de confidentialit頻. Si aucun n’est répertorié, envoyez un e-mail à leur boîte de réception principale juridique ou d’assistance.
 
 **Étape 2 : Rédigez votre demande d'accès**
 Écrivez un e-mail clair et bref :

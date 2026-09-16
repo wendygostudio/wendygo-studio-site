@@ -6,7 +6,7 @@ title: >-
 description: >-
   Cuando un vendedor rechaza su reclamo de garantía o ignora una solicitud de
   reembolso, lo último que desea hacer es contratar a un abogado. Honorarios
-  legales por 200�...
+  legales por 200 €...
 date: 2026-07-04T00:00:00.000Z
 slug: alternatives-to-hiring-a-lawyer-consumer-claims-eu
 locale: es
@@ -21,7 +21,7 @@ reviewDue: 2026-12-31T00:00:00.000Z
 sourceUrls: 'https://europa.eu/youreurope/citizens/consumers/index_en.htm'
 ---
 
-Cuando un vendedor rechaza su reclamo de garantía o ignora una solicitud de reembolso, lo último que desea hacer es contratar a un abogado. Los honorarios legales por una disputa de 200 € costarían más que la disputa en s�. La buena noticia: la legislaci�n del consumidor de la UE se diseñó deliberadamente para que no se necesite un abogado, pero sí es necesario conocer las alternativas.
+Cuando un vendedor rechaza su reclamo de garantía o ignora una solicitud de reembolso, lo último que desea hacer es contratar a un abogado. Los honorarios legales por una disputa de 200 € costarían más que la disputa en sí. La buena noticia: la legislación del consumidor de la UE se diseñó deliberadamente para que no se necesite un abogado, pero sí es necesario conocer las alternativas.
 
 ## Por qué usted (casi con seguridad) no necesita un abogado
 
@@ -79,7 +79,7 @@ ClaimForge es una extensión gratuita de Chrome que muestra el derecho específi
 ## Cuando un abogado realmente vale la pena
 
 Hay casos en los que la representación legal tiene sentido:
-- La disputa supera los 2000 � y el vendedor se muestra evasivo después de que se han agotado todos los canales.
+- La disputa supera los 2000 € y el vendedor se muestra evasivo después de que se han agotado todos los canales.
 - Hay signos de fraude deliberado, no sólo de negligencia
 - Debe hacer cumplir un ADR vinculante o una decisión judicial que el vendedor está ignorando
 - Es posible una acción colectiva (varios consumidores con la misma queja)
@@ -103,4 +103,4 @@ Sí, en la mayoría de los casos. Los organismos de ADR certificados por la UE d
 Depende de quién sea el vendedor y dónde esté establecido ese comerciante. La Garantía de la A a la Z de Amazon también puede estar disponible. Para una disputa transfronteriza elegible, comuníquese con el Centro Europeo del Consumidor de su propio país después de intentar resolverla con el comerciante.
 
 **¿Cuándo tiene sentido contratar un abogado para un reclamo de consumo?**
-Cuando la cantidad en juego es elevada (más de 2.000 �) y se han agotado todos los demès canales, o cuando hay indicios de fraude deliberado que requieren aplicación judicial. Para disputas sobre garantía estándar, devoluciones o GDPR, las alternativas gratuitas casi siempre son suficientes.
+Cuando la cantidad en juego es elevada (más de 2.000 €) y se han agotado todos los demès canales, o cuando hay indicios de fraude deliberado que requieren aplicación judicial. Para disputas sobre garantía estándar, devoluciones o GDPR, las alternativas gratuitas casi siempre son suficientes.

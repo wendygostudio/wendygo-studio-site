@@ -71,7 +71,7 @@ Exemple d'invite :
 
 ## Ce que Claude fait bien avec des configurations aseptisées
 
-Les atouts de Claude correspondent bien aux tâches de dépannage réseau�:
+Les atouts de Claude correspondent bien aux tâches de dépannage réseau :
 
 **Analyse de grandes configurations.** Claude peut gérer une exportation complète (pas seulement un extrait de code), ce qui est important lorsque le bogue réside dans l'interaction entre les politiques plutôt que dans un bloc isolé.
 

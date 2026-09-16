@@ -5,6 +5,12 @@ import {marked} from 'marked';
 import {defaultLocale, localeOrder, locales, alternateLinks} from './lib/i18n.mjs';
 
 const check = process.argv.includes('--check');
+const argValue = flag => {
+  const index = process.argv.indexOf(flag);
+  return index >= 0 ? process.argv[index + 1] || null : null;
+};
+const slugFilter = argValue('--slug');
+const localeFilter = argValue('--locale');
 const root = path.resolve('content/blog');
 const template = fs.readFileSync('src/blog/article.html', 'utf8');
 const styles = fs.readFileSync('src/blog/shared/article.css', 'utf8');
@@ -65,9 +71,10 @@ const documents = fs.readdirSync(root).filter(file => file.endsWith('.md')).map(
 
 for (const document of documents) {
   const {parsed, data} = document;
-  managed++;
-
   const locale = data.locale || 'en';
+  if (slugFilter && data.slug !== slugFilter) continue;
+  if (localeFilter && locale !== localeFilter) continue;
+  managed++;
   const loc = STRINGS.menu[locale] ? locale : 'en';
   const canonicalPath = routePath(locale, data.slug);
   const canonical = `https://wendygostudio.com${canonicalPath}`;

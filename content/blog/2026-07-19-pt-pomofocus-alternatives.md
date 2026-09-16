@@ -23,7 +23,7 @@ O Pomofocus é um temporizador Pomodoro limpo baseado no browser – mas é um w
 - Capacidade offline
 - Estatísticas e sequências de sessões
 - Durações de temporizador personalizáveis
-- Mec�nica da motivação para além de uma simples contagem decrescente
+- Mecânica da motivação para além de uma simples contagem decrescente
 
 ## Melhores alternativas ao Pomofocus em 2026
 

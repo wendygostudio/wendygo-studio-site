@@ -41,9 +41,9 @@ Plantez un arbre virtuel lorsque vous démarrez une session ; il meurt si vous 
 
 Aucune extension Chrome officielle. Idéalement, si votre téléphone est votre principale source de distraction.
 
-### 3. Focus To-Do – Idéal pour l'int�gration de la gestion des tâches
+### 3. Focus To-Do – Idéal pour l'intégration de la gestion des tâches
 
-Combine une minuterie Pomodoro avec une liste de tâches. Attribuez des sessions � des tâches sp�cifiques et suivez le nombre de sessions que chaque tâche a nécessitées. Disponible sur Windows, Mac, iOS, Android et en tant qu'extension Chrome.
+Combine une minuterie Pomodoro avec une liste de tâches. Attribuez des sessions à des tâches spécifiques et suivez le nombre de sessions que chaque tâche a nécessitées. Disponible sur Windows, Mac, iOS, Android et en tant qu'extension Chrome.
 
 ### 4. Soyez concentré – Idéal pour Mac et iOS
 
@@ -69,7 +69,7 @@ Principalement un outil de suivi du temps pour les indépendants et les équipes
 Pomofocus lui-même ne propose pas d'extension Chrome officielle. Il fonctionne dans n'importe quel onglet du navigateur, mais ne persiste pas dans les onglets et n'apparaît pas dans la barre d'outils.
 
 **Quelle est la meilleure extension Chrome gratuite de minuterie Pomodoro en 2026 ?**
-SlimeForge et Focus To-Do sont les options gratuites les plus puissantes. SlimeForge comprend un minuteur complet, un animal de compagnie virtuel et des s�quences sans frais. Focus To-Do propose des plans gratuits avec int�gration de tâches.
+SlimeForge et Focus To-Do sont les options gratuites les plus puissantes. SlimeForge comprend un minuteur complet, un animal de compagnie virtuel et des séquences sans frais. Focus To-Do propose des plans gratuits avec intégration de tâches.
 
 **Qu'est-ce qui manque à Pomofocus par rapport aux extensions Chrome ?**
 Pomofocus est basé sur des onglets : il ne s'exécute pas dans la barre d'outils et ne vous suit pas entre les pages. Il n"a pas de mode hors ligne, de système de séquences ou de gamification. Une extension dédiée résout les trois.

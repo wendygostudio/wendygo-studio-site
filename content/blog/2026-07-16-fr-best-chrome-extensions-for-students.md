@@ -1,7 +1,7 @@
 ---
 schemaVersion: 1
 title: "Meilleures extensions Chrome pour les étudiants en 2026"
-description: "Les étudiants passent plus de temps dans Chrome que dans n'importe quelle autre application�: cours, recherches, devoirs, tout cela. Les..."
+description: "Les étudiants passent plus de temps dans Chrome que dans n'importe quelle autre application : cours, recherches, devoirs, tout cela. Les..."
 date: 2026-07-16
 slug: best-chrome-extensions-for-students
 locale: fr
@@ -12,7 +12,7 @@ primaryKeyword: "meilleures extensions Chrome pour les étudiants"
 relatedPages: /slimeforge/
 ---
 
-Les étudiants passent plus de temps dans Chrome que dans n'importe quelle autre application�: cours, recherches, devoirs, tout cela. Les distractions aussi. Ces cinq extensions ciblent les véritables points de friction de l'étude�: rester concentr� sur la tâche, mieux écrire, garder un Sil sous contrôle et prot�ger votre attention.
+Les étudiants passent plus de temps dans Chrome que dans n'importe quelle autre application : cours, recherches, devoirs, tout cela. Les distractions aussi. Ces cinq extensions ciblent les véritables points de friction de l'étude : rester concentré sur la tâche, mieux écrire, garder un Slime sous contrôle et protéger votre attention.
 
 ## 1. SlimeForge – Gamified Focus Timer (choix de l'éditeur)
 

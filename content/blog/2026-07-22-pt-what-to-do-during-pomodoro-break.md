@@ -22,7 +22,7 @@ Uma pausa Pomodoro pode falhar de duas formas opostas. Ou fica na secretária e 
 
 ## Para que serve realmente uma pausa de cinco minutos
 
-A breve pausa não � tempo suficiente para completar outra tarefa significativa. O seu objetivo � criar um limite entre as sessões focais. Isto pode significar mover-se depois de estar im�vel, alterar a distância visual depois de olhar para um ecr� ou eliminar a �ltima tarefa da sua aten��o.
+A breve pausa não é tempo suficiente para completar outra tarefa significativa. O seu objetivo é criar um limite entre as sessões focais. Isto pode significar mover-se depois de estar imóvel, alterar a distância visual depois de olhar para um ecrã ou eliminar a última tarefa da sua atenção.
 
 Se ainda está a decidir qual a estrutura de intervalo que se adapta ao seu trabalho, a nossa comparação de [Pomodoro e bloqueio de tempo](/blog/pomodoro-vs-time-blocking/) explica como um temporizador pode proteger o foco dentro de um bloco de calendário maior.
 

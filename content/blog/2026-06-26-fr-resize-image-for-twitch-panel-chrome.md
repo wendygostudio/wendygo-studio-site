@@ -67,7 +67,7 @@ Chaque panneau est petit, mais collectivement, ils remplissent l'espace situé s
 
 ## Utilisations courantes du panneau Twitch
 
-- **Logo ou icône de chaîne** – 320 × 160 fonctionne bien pour une version légèrement en forme de boîte aux lettres de votre logo
+- **Logo ou icône de chaîne** – 320 נ160 fonctionne bien pour une version légèrement en forme de boîte aux lettres de votre logo
 - **Liens sociaux** — Texte + icône (Discord, Twitter, Instagram)
 - **Parrainage ou produit** — Couverture du jeu, interface du logiciel, photo de marchandise
 - **Planification ou compte à rebours** — Superposition de texte sur un arrière-plan uni (bien que FrameForge n'ajoute pas de texte ; vous le feriez dans un autre outil)

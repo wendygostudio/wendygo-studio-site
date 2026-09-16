@@ -3,7 +3,7 @@ schemaVersion: 1
 title: "Minuteur Pomodoro pour le TDAH\_: Pourquoi la gamification vous aide à démarrer (et terminer) des sessions"
 description: >-
   Comment les minuteries Pomodoro gamifiées aident les cerveaux atteints de TDAH
-  � démarrer des tâches�: des récompenses externes, des sessions courtes et un
+  À démarrer des tâches : des récompenses externes, des sessions courtes et un
   animal de compagnie virtuel qui donne l'impression que la concentration en
   vaut la peine.
 date: 2026-07-18T00:00:00.000Z
@@ -23,7 +23,7 @@ La partie la plus difficile d"une séance de concentration pour un cerveau attei
 
 Le TDAH se caractérise par un dysfonctionnement exécutif et une dérégulation de la dopamine – et non par la paresse ou le manque de désir de travailler. Le système de récompense du cerveau ne libère pas de dopamine en prévision de récompenses futures de la même manière qu"un cerveau neurotypique. Cela signifie que « pensez simplement à quel point vous vous sentirez bien quand ce sera fait » ne crée pas le signal chimique nécessaire pour démarrer.
 
-Les longues séances aggravent la situation. Un bloc de deux heures semble impossible avant de commencer, alors vous ne commencez pas. La récompense interne résultant de l’accomplissement de la tâche arrive trop tard et de mani�re trop abstraite pour conduire à linitiation.
+Les longues séances aggravent la situation. Un bloc de deux heures semble impossible avant de commencer, alors vous ne commencez pas. La récompense interne résultant de l’accomplissement de la tâche arrive trop tard et de manière trop abstraite pour conduire à l’initiation.
 
 ## Comment la technique Pomodoro répond aux défis du TDAH
 
@@ -31,7 +31,7 @@ La technique Pomodoro déplace la structure hors de votre tête. Une minuterie e
 
 Une minuterie Pomodoro gamifiée pour Chrome comme [SlimeForge](/slimeforge/) prend en charge quatre durées de session – 15, 25, 45 et 60 minutes – afin que vous puissiez adapter la minuterie à votre capacité réelle ce jour-là. Commencer par 15 minutes les jours difficiles ne signifie pas abandonner ; cela supprime l'obstacle à la première séance, qui est presque toujours la plus difficile.
 
-Les pauses structur�es sont �galement importantes. Une pause de 5 minutes toutes les 25 minutes réduit la fatigue décisionnelle qui s'aggrave tout au long de la journée et donne � votre cerveau atteint de TDAH une raison socialement acceptable de s'arr�ter avant que l'hyperconcentration ne vous �loigne compl�tement de la tâche.
+Les pauses structurées sont également importantes. Une pause de 5 minutes toutes les 25 minutes réduit la fatigue décisionnelle qui s'aggrave tout au long de la journée et donne à votre cerveau atteint de TDAH une raison socialement acceptable de s'arrêter avant que l'hyperconcentration ne vous éloigne complètement de la tâche.
 
 ## Ce que la gamification ajoute en plus
 
@@ -48,7 +48,7 @@ Les [meilleures extensions Chrome de minuterie Pomodoro](/blog/pomodoro-timer-ch
 Toutes les sessions Pomodoro ne devraient pas durer 25 minutes.
 
 - **15 minutes** – idéal pour tout ce qui semble accablant avant de commencer. Une fois que vous avez commencé, vous pouvez toujours continuer.
-- **25 minutes** — le classique�; fonctionne bien une fois que vous avez un élan et une tâche d�finie.
+- **25 minutes** — le classique ; fonctionne bien une fois que vous avez un élan et une tâche définie.
 - **45 à 60 minutes** — à utiliser uniquement après avoir déjà établi le flux. Commencer ici est plus difficile pour les cerveaux atteints de TDAH.
 
 Une règle pratique : si vous redoutez de commencer, fixez-vous 15 minutes. Le but de la première séance est simplement de commencer. Les séances suivantes peuvent être plus longues.
@@ -73,7 +73,7 @@ Commencez par 15 minutes les jours difficiles et 25 minutes lorsque vous avez de
 
 **Qu'est-ce qui différencie Pomodoro gamifié pour le TDAH ?**
 
-La gamification ajoute une récompense imm�diate qui ne dépend pas de la tâche elle-même. Terminer une session rapporte quelque chose de visible – un animal de compagnie en pleine croissance, de la monnaie, du contenu � d�bloquer – ce qui donne au syst�me de récompense du TDAH un signal concret de dopamine � court terme, pas seulement après des heures de travail.
+La gamification ajoute une récompense immédiate qui ne dépend pas de la tâche elle-même. Terminer une session rapporte quelque chose de visible – un animal de compagnie en pleine croissance, de la monnaie, du contenu à débloquer – ce qui donne au système de récompense du TDAH un signal concret de dopamine à court terme, pas seulement après des heures de travail.
 
 **Puis-je utiliser une minuterie Pomodoro sans Internet ?**
 

@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-09",
+  "generated_at": "2026-09-09T07:03:59.678Z",
+  "items": [
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "so annoying",
+      "title": "I killed every houseplant I owned, so I built an app to stop doing that",
+      "text": "I&#x27;ve killed more houseplants than I&#x27;d like to admit. Not from neglect exactly — from the specific, stupid way I neglect them: I water everything on the same day because I can&#x27;t keep track of which plant wants what, so half of them rot and the other half go thirsty.<p>So a few months ago I started building GrowBook. A plant care tracker. Flutter, offline-first, Android first.<p>I know. There are already a hundred plant apps. I want to be honest about why I built another one instead of just downloading one of those.<p>I tried them. The good-looking ones are subscription walls with a plant drawing on top — you can&#x27;t add a second plant without paying. The free ones drown you in a feed and a shop and &quot;plant coins.&quot; And almost all of them assume you&#x27;re online, all the time, which is a weird assumption for an app whose entire job is to remind you to do a thing at home.<p>What I actually wanted was small and boring:<p>- A list of my plants with a photo of each real one, not a stock image of the species.\n- Per-plant watering &#x2F; fertilizing &#x2F; pruning schedules, because my snake plant and my fern do not live on the same clock.\n- A reminder that actually fires, even with no internet, even after I reboot my phone.\n- The whole thing usable without an account. Cloud sync should be a thing I opt into, not the price of entry.<p>That last point turned into the spine of the whole architecture. GrowBook is offline-first: everything lives in a local SQL",
+      "score": 2,
+      "comments": 2,
+      "created": "2026-09-08T01:41:59Z",
+      "url": "https://news.ycombinator.com/item?id=49604776"
+    },
+    {
+      "source": "hn",
+      "type": "story",
+      "query": "frustrated with",
+      "title": "Ask HN: Why does free time become another thing you have to use correctly?",
+      "text": "Picture this, it’s evening and you are casually relaxing on the couch, but then a striking thought crosses your mind… You aren’t productive, you are not working towards your goals, the rest feels undeserved and such… What happens is that in the time meant for you to wind down, to let the machinery cool down, you are still thinking of it as something that it is NOT meant to be. We know everyone needs rest. It’s something literally necessary and something you can’t skip under any circumstances if you want to be properly functioning individual.<p>But then why are you feeling so frustrated at the very moment your energy has to replenish? It almost, if not directly, makes you experience guilt for doing so.<p>In my opinion, not only from observing people in my surroundings, but from personal viewpoint, it has to do with one of the three things:<p>—You have to do something really big really quick, because of some perceived sense of danger if you fail to accomplish it. Think about, and I know it’s gonna sound bad, but this actually perfectly illustrates what I am trying to say, you took money from someone without their knowledge, there is a high chance they got to know quite soon and you are worried about facing terrible consequences and now you have to do shit tones of work to restore the missing money in time.<p>—You’ve formed an identity of a person who is always busy with something that usually feels like a burden to other people. Most of the time, we are talking about workaholic",
+      "score": 3,
+      "comments": 0,
+      "created": "2026-09-03T19:08:08Z",
+      "url": "https://news.ycombinator.com/item?id=49555089"
+    }
+  ]
+}

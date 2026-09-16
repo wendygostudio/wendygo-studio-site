@@ -112,6 +112,12 @@ def lint_file(path: Path, fix: bool) -> list[str]:
             path.write_bytes(raw)
         return issues
 
+    replacement_count = text.count("\ufffd")
+    if replacement_count:
+        issues.append(
+            f"{replacement_count} caracteres U+FFFD sin original recuperable — IRREPARABLE automáticamente"
+        )
+
     if MOJIBAKE_SEQ.search(text):
         if fix:
             text, nrep = repair_mojibake(text)

@@ -37,7 +37,7 @@ Une minuterie Pomodoro standard vous donne un début, une fin et un enregistreme
 
 Cette approche fonctionne mieux lorsque le problème principal est le démarrage ou le retour. Une durée de session claire réduit la taille de l'engagement, tandis que le compagnon vous donne une raison de terminer un bloc supplémentaire demain. Cela peut être particulièrement utile pour l"étude, l"écriture, le codage et le travail répétitif sur navigateur où les progrès sont réels mais difficiles à voir.
 
-C'est moins utile lorsque la couche de récompense devient une autre source de vérification. Si vous passez plus de temps à ouvrir des menus qu'� travailler, gardez le minuteur visible et reportez les soins du compagnon jusqu'à la pause. Un bon syst�me doit r�duire les frictions et non ajouter une deuxi�me liste de tâches.
+C'est moins utile lorsque la couche de récompense devient une autre source de vérification. Si vous passez plus de temps à ouvrir des menus qu'à travailler, gardez le minuteur visible et reportez les soins du compagnon jusqu'à la pause. Un bon système doit réduire les frictions et non ajouter une deuxième liste de tâches.
 
 ## Comment utiliser SlimeForge sans se concentrer sur l'administrateur
 
@@ -69,7 +69,7 @@ Non, il utilise toujours un bloc de focus et une pause. Le compagnon est une cou
 Cela peut être le cas si vous y parvenez pendant le blocage. Gardez les interactions pendant la pause et considérez la session terminée comme la réalisation principale.
 
 ### Puis-je choisir une durée personnalisée ?
-SlimeForge comprend des séances de 15, 25, 45 et 60 minutes. Utilisez loption la plus courte qui correspond à la tâche et renforcez la coh�rence avant de l�tendre.
+SlimeForge comprend des séances de 15, 25, 45 et 60 minutes. Utilisez l’option la plus courte qui correspond à la tâche et renforcez la cohérence avant de l’étendre.
 
 ### SlimeForge a-t-il besoin d'un compte ?
 Non. L"extension est d"abord locale et ne nécessite pas de compte pour son minuterie principale et son expérience compagnon.

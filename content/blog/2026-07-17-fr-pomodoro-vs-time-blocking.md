@@ -23,17 +23,17 @@ Pomodoro et le blocage du temps vous aident à travailler avec plus d'intention,
 
 La technique Pomodoro divise le travail en séances chronométrées – classiquement 25 minutes de travail ciblé suivi d'une pause de 5 minutes. Après quatre séances, une pause plus longue vous réinitialise. L"essentiel : la minuterie est externe. Vous ne comptez pas sur la volonté pour arrêter une navigation distraite ; il y a un compte à rebours en cours, et quand il atteint zéro, vous vous arrêtez.
 
-La durée des sessions courantes varie selon la profondeur de la tâche�: 15 minutes pour l'administrateur, 25 minutes pour le Pomodoro classique, 45 ou 60�minutes pour le travail en profondeur.
+La durée des sessions courantes varie selon la profondeur de la tâche : 15 minutes pour l'administrateur, 25 minutes pour le Pomodoro classique, 45 ou 60 minutes pour le travail en profondeur.
 
-**Idéal pour :** tâches uniques et bien définies�; travail de concentration profonde; les personnes qui perdent la notion du temps ou qui ont du mal � démarrer.
+**Idéal pour :** tâches uniques et bien définies ; travail de concentration profonde; les personnes qui perdent la notion du temps ou qui ont du mal à démarrer.
 
 ## Qu"est-ce que le blocage du temps ?
 
-Le blocage du temps signifie attribuer des tâches � des cr�neaux sp�cifiques de votre calendrier. Votre journée est structur�e à lavance. Il n'y a pas de minuterie int�gr�e : vous d�cidez quand vous arr�ter en fonction de l'horloge et de ce qui reste.
+Le blocage du temps signifie attribuer des tâches à des créneaux spécifiques de votre calendrier. Votre journée est structurée à l'avance. Il n'y a pas de minuterie intégrée : vous décidez quand vous arrêter en fonction de l'horloge et de ce qui reste.
 
 La structure se déroule au niveau de la journée, pas au niveau de la session.
 
-**Idéal pour :** les gestionnaires et les cadres�; des journées qui mélangent réunions et travail en profondeur ; rôles exigeant beaucoup de planification�; flux de travail avec de nombreux types de tâches.
+**Idéal pour :** les gestionnaires et les cadres ; des journées qui mélangent réunions et travail en profondeur ; rôles exigeant beaucoup de planification ; flux de travail avec de nombreux types de tâches.
 
 ## Différences clés
 
@@ -49,11 +49,11 @@ Pomodoro protège contre les distractions pendant la session. Le blocage du temp
 
 ## Quand Pomodoro fonctionne mieux
 
-Utilisez la technique Pomodoro lorsque vous effectuez un travail approfondi et monotâche�: écrire, coder, étudier. C'est particuli�rement efficace si vous avez tendance � vous laisser entra�ner dans des terriers de lapin ou si vous avez du mal � démarrer. La minuterie crée une fonction de for�age�: la fin de la session vous donne un moment naturel pour �valuer et réinitialiser.
+Utilisez la technique Pomodoro lorsque vous effectuez un travail approfondi et monotâche : écrire, coder, étudier. C'est particulièrement efficace si vous avez tendance à vous laisser entraîner dans des terriers de lapin ou si vous avez du mal à démarrer. La minuterie crée une fonction de forçage : la fin de la session vous donne un moment naturel pour évaluer et réinitialiser.
 
 ## Quand le blocage du temps fonctionne mieux
 
-Utilisez le blocage du temps lorsque votre journée comprend de nombreux types de tâches ou lorsque des réunions externes limitent votre emploi du temps. Cela fonctionne bien pour les chefs de projet qui ont besoin de défendre leur temps de concentration dans un calendrier partag�, et pour tous ceux qui perdent des matin�es � cause d'un travail r�actif parce qu'il n'y avait pas de plan.
+Utilisez le blocage du temps lorsque votre journée comprend de nombreux types de tâches ou lorsque des réunions externes limitent votre emploi du temps. Cela fonctionne bien pour les chefs de projet qui ont besoin de défendre leur temps de concentration dans un calendrier partagé, et pour tous ceux qui perdent des matinées à cause d'un travail réactif parce qu'il n'y avait pas de plan.
 
 ## Combiner les deux méthodes
 
@@ -72,7 +72,7 @@ Oui. Bloquez votre calendrier pour les périodes de travail approfondies, puis e
 Pomodoro a tendance à mieux fonctionner pour le TDAH car le minuteur externe fournit une structure sans nécessiter une discipline interne soutenue. Le blocage du temps nécessite plus d"autorégulation à maintenir tout au long de la journée.
 
 **Combien de temps doit durer une séance Pomodoro ?**
-15 minutes pour l'administration, 25 minutes pour les tâches de concentration modérée, 45 � 60 minutes pour le travail en profondeur. Exp�rimentez sur une semaine.
+15 minutes pour l'administration, 25 minutes pour les tâches de concentration modérée, 45 à 60 minutes pour le travail en profondeur. Expérimentez sur une semaine.
 
 **Qu'est-ce qui différencie Pomodoro gamifié du Pomodoro classique ?**
 Une minuterie régulière compte à rebours et vous avertit. Un système gamifié ajoute un système de récompense : terminer des sessions rapporte quelque chose. Cela crée une incitation supplémentaire à commencer les séances et à les terminer plutôt que de s'arrêter plus tôt.

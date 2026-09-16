@@ -30,7 +30,7 @@ relatedPages: /pt/slimeforge/
 
 ## Resumo
 
-Artigo de variação que enfatiza o ângulo de estudantes e exames. O principal (adhd-pomodoro-timer) cubri� PHDA + dopamina + culpa. Esta variação cubre estudantes + estrutura + motivação sustentada durante semanas de estádio.
+Artigo de variação que enfatiza o ângulo de estudantes e exames. O principal (adhd-pomodoro-timer) cobre PHDA + dopamina + culpa. Esta variação cobre estudantes + estrutura + motivação sustentada durante semanas de estudo.
 
 Contém:
 - Problema: estudantes estudian mal (sessões longas que caem)
