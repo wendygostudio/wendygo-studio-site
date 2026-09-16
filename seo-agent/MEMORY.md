@@ -6,7 +6,7 @@
 - Pain scan: tres señales HN no accionables; no se creó URL ni se editó contenido porque la recuperación sigue vigente hasta 2026-10-01. La segunda pasada contrastó homepage, ScrubForge/Palo Alto, X/Twitter, garantía UE, Forest y Ubiquiti sin evidencia suficiente para apilar cambios.
 - `npm run validate` pasa con 882 HTML, 816 canónicas, seis locales y 0 errores; `npm test` 7/7 y SEO audit 0. Sitemap live 200 con 816 URLs y homes revisadas 200. Siguen bloqueadas las puertas históricas: 45 `U+FFFD` en dos HTML franceses, `product:check` 12/12 y `blog:check` 636/636 fuera de sync.
 - GA4 sigue en 403 + `invalid_grant`; Plausible no tiene credenciales; CWS no tiene export oficial. DEV.to API pública 200 con 37 artículos y cobertura reciente, sin publicación redundante. Bluesky autenticado: un like relevante a `at://did:plc:metot5dtmlxgs7d4abx5cc53/app.bsky.feed.post/3mvnuq6jfhs2i`; sin post/follow.
-- Artefactos propios: `analytics-data.json`, `seo-agent/reports/weekly-gsc-2026-09-16.json`, `seo-agent/data/pain/raw-2026-09-16.json` y `seo-agent/journal/2026-09-16.md`. Commit propio preparado para publicar la cola Daily de septiembre; push directo a `origin/main` bloqueado por aprobación explícita pendiente. Telemetría de tokens: no expuesta.
+- Artefactos propios: `analytics-data.json`, `seo-agent/reports/weekly-gsc-2026-09-16.json`, `seo-agent/data/pain/raw-2026-09-16.json` y `seo-agent/journal/2026-09-16.md`. Commit `1b769a08` publicado en `origin/main`; el cierre documental se añadirá en un commit posterior. Telemetría de tokens: no expuesta.
 
 ## Weekly 2026-09-15
 
