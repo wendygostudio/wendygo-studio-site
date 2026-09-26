@@ -1,0 +1,386 @@
+{
+  "generated_at": "2026-09-26T09:02:00.972Z",
+  "data_state": "final",
+  "periods": {
+    "current": {
+      "period": {
+        "start": "2026-09-17",
+        "end": "2026-09-23"
+      },
+      "total": {
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 10.55
+      },
+      "dates": [
+        {
+          "date": "2026-09-17",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 4.17
+        },
+        {
+          "date": "2026-09-18",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 16
+        },
+        {
+          "date": "2026-09-19",
+          "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        {
+          "date": "2026-09-20",
+          "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        {
+          "date": "2026-09-21",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 25.5
+        },
+        {
+          "date": "2026-09-22",
+          "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        {
+          "date": "2026-09-23",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
+        }
+      ],
+      "pages": [
+        {
+          "page": "https://wendygostudio.com/blog/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 47
+        },
+        {
+          "page": "https://wendygostudio.com/blog/openai-privacy-filter-network-configs/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "page": "https://wendygostudio.com/blog/remove-sensitive-data-cisco-config/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 26
+        },
+        {
+          "page": "https://wendygostudio.com/blog/sanitize-juniper-config/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "page": "https://wendygostudio.com/blog/sanitize-paloalto-config/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "page": "https://wendygostudio.com/de/blog/eu-right-to-repair-refurbished-parts/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "page": "https://wendygostudio.com/fr/blog/openai-privacy-filter-configurations-reseau/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "page": "https://wendygostudio.com/guides/base64-encoding/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "page": "https://wendygostudio.com/it/blog/openai-privacy-filter-configurazioni-rete/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 3.5
+        }
+      ],
+      "queries": [
+        {
+          "query": "forest chrome extension",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 47
+        }
+      ],
+      "query_pages": [
+        {
+          "query": "forest chrome extension",
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 47
+        }
+      ]
+    },
+    "previous": {
+      "period": {
+        "start": "2026-09-10",
+        "end": "2026-09-16"
+      },
+      "total": {
+        "clicks": 1,
+        "impressions": 16,
+        "ctr": 6.25,
+        "position": 25.94
+      },
+      "dates": [
+        {
+          "date": "2026-09-10",
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 33.33,
+          "position": 7
+        },
+        {
+          "date": "2026-09-11",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 40
+        },
+        {
+          "date": "2026-09-12",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 30.2
+        },
+        {
+          "date": "2026-09-13",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 45
+        },
+        {
+          "date": "2026-09-14",
+          "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        },
+        {
+          "date": "2026-09-15",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "date": "2026-09-16",
+          "clicks": 0,
+          "impressions": 0,
+          "ctr": 0,
+          "position": 0
+        }
+      ],
+      "pages": [
+        {
+          "page": "https://wendygostudio.com/use-cases/network-config-anonymizer-for-ai/",
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 100,
+          "position": 2
+        },
+        {
+          "page": "https://wendygostudio.com/",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 3.4
+        },
+        {
+          "page": "https://wendygostudio.com/blog/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "page": "https://wendygostudio.com/blog/eu-legal-guarantee-vs-commercial-warranty/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "page": "https://wendygostudio.com/blog/extract-emails-from-text/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 3.5
+        },
+        {
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 42.5
+        },
+        {
+          "page": "https://wendygostudio.com/blog/gdpr-data-access-request/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "page": "https://wendygostudio.com/blog/gdpr-rights-tool/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "page": "https://wendygostudio.com/blog/how-to-file-consumer-complaint-eu/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 10
+        },
+        {
+          "page": "https://wendygostudio.com/blog/sanitize-paloalto-config/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 8.5
+        },
+        {
+          "page": "https://wendygostudio.com/es/blog/garantia-legal-ue-vs-garantia-comercial/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 11
+        },
+        {
+          "page": "https://wendygostudio.com/es/blog/tamano-foto-perfil-instagram-zona-segura/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "page": "https://wendygostudio.com/privacy",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "page": "https://wendygostudio.com/pt/blog/sanitizar-configuracao-router-mikrotik/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 10
+        },
+        {
+          "page": "https://wendygostudio.com/terms",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "page": "https://wendygostudio.com/use-cases/gdpr-rights-tool/",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 5
+        }
+      ],
+      "queries": [
+        {
+          "query": "forest chrome extension",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 45
+        },
+        {
+          "query": "forest extension chrome",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 40
+        },
+        {
+          "query": "margenes seguridad instagram",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 90
+        }
+      ],
+      "query_pages": [
+        {
+          "query": "forest chrome extension",
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 45
+        },
+        {
+          "query": "forest extension chrome",
+          "page": "https://wendygostudio.com/blog/forest-app-alternatives-chrome/",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 40
+        },
+        {
+          "query": "margenes seguridad instagram",
+          "page": "https://wendygostudio.com/es/blog/tamano-foto-perfil-instagram-zona-segura/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 90
+        }
+      ]
+    }
+  }
+}

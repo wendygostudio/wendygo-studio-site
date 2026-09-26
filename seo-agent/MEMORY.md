@@ -1,5 +1,14 @@
 # Memoria del Proyecto — Wendygo Studio
 
+## Daily 2026-09-26
+
+- GSC refrescado para 2026-08-27–2026-09-23: 50 páginas, 13 consultas y 13 pares. La comparación final 2026-09-20–26 frente a 2026-09-13–19 registra 3/0 impresiones/clics/posición 19,67 frente a 10/0/10,90; ningún par consulta–página quedó en posiciones 10–30. No se creó URL ni se editó contenido por la recuperación vigente hasta 2026-10-01.
+- Pain scan: 0 señales HN/Bluesky accionables. La segunda pasada revisó Forest, sanitización Palo Alto/Juniper, enlaces, schema, hreflang, sitemap, encoding, renderer y catálogo sin encontrar una edición segura.
+- `npm run validate` pasó con 888 HTML/822 canónicas/seis locales/0 errores; `npm test` 7/7 y SEO audit 0. Sitemap local/live 822/822; seis homes live 200 con una H1, canonical, siete alternates y JSON-LD.
+- Siguen bloqueadas las puertas históricas: 45 `U+FFFD` en dos HTML franceses; `product:check` 12/12 y `blog:check` 642/642 fuera de sync. El lint Python no se pudo ejecutar por falta de `python`, pero el conteo directo confirmó los 45 caracteres.
+- GA4 continúa en 403 + `invalid_grant`; Plausible sin configuración; CWS sin export oficial. DEV.to API pública 200 con 37 artículos y cobertura reciente, sin publicación. Bluesky autenticado: un like relevante a `at://did:plc:a3ul5x5rkrk4im4sesowx4b3/app.bsky.feed.post/3mvluw2r7432a`; sin post/follow.
+- Artefactos propios: `seo-agent/reports/weekly-gsc-2026-09-26.json`, `seo-agent/data/pain/raw-2026-09-26.json` y `seo-agent/journal/2026-09-26.md`. Telemetría de tokens: no expuesta.
+
 ## Daily 2026-09-16
 
 - GSC refrescado para 2026-08-17–2026-09-13: 50 páginas, 26 consultas y 26 pares. El informe semanal 2026-09-07–13 registra 24 impresiones/1 clic/CTR 4,1667 %/posición 24,25 frente a 22/0/0 %/27,82; muestra pequeña. En la ventana de 28 días, los únicos pares en posición 10–30 fueron la página francesa de banner X/Twitter (3 impresiones, posición 14,3) y Forest en portugués (1, posición 30); no hay edición segura.
