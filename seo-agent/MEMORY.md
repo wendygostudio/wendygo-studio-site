@@ -7,7 +7,7 @@
 - `npm run validate` pasó con 888 HTML/822 canónicas/seis locales/0 errores; `npm test` 7/7 y SEO audit 0. Sitemap local/live 822/822; seis homes live 200 con una H1, canonical, siete alternates y JSON-LD.
 - Siguen bloqueadas las puertas históricas: 45 `U+FFFD` en dos HTML franceses; `product:check` 12/12 y `blog:check` 642/642 fuera de sync. El lint Python no se pudo ejecutar por falta de `python`, pero el conteo directo confirmó los 45 caracteres.
 - GA4 continúa en 403 + `invalid_grant`; Plausible sin configuración; CWS sin export oficial. DEV.to API pública 200 con 37 artículos y cobertura reciente, sin publicación. Bluesky autenticado: un like relevante a `at://did:plc:a3ul5x5rkrk4im4sesowx4b3/app.bsky.feed.post/3mvluw2r7432a`; sin post/follow.
-- Artefactos propios: `seo-agent/reports/weekly-gsc-2026-09-26.json`, `seo-agent/data/pain/raw-2026-09-26.json` y `seo-agent/journal/2026-09-26.md`. Telemetría de tokens: no expuesta.
+- Artefactos propios: `seo-agent/reports/weekly-gsc-2026-09-26.json`, `seo-agent/data/pain/raw-2026-09-26.json` y `seo-agent/journal/2026-09-26.md`. Commit `e55548f3` publicado en `origin/main`; el cierre documental se añadirá en un commit posterior. Telemetría de tokens: no expuesta.
 
 ## Daily 2026-09-16
 
